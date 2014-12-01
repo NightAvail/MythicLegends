@@ -13,7 +13,6 @@ decisions = {
     #######################################################
     ml_decision_mage_study_magic = {
         is_high_prio = yes
-        has_dlc = "Rajas of India"
 
         potential = {
             ai = no
@@ -37,7 +36,6 @@ decisions = {
             hidden_tooltip = {
                 character_event = {
                     id = "ml_events_mage.1"
-                    days = 1
                 }
             }
         }
@@ -62,7 +60,6 @@ decisions = {
             hidden_tooltip = {
                 character_event = {
                     id = "ml_events_mage.2"
-                    days = 1
                 }
             }
         }
@@ -87,7 +84,6 @@ decisions = {
             hidden_tooltip = {
                 character_event = {
                     id = "ml_events_mage.3"
-                    days = 1
                 }
             }
         }
@@ -112,7 +108,6 @@ decisions = {
             hidden_tooltip = {
                 character_event = {
                     id = "ml_events_mage.4"
-                    days = 1
                 }
             }
         }
@@ -137,7 +132,6 @@ decisions = {
             hidden_tooltip = {
                 character_event = {
                     id = "ml_events_mage.5"
-                    days = 1
                 }
             }
         }
@@ -177,7 +171,6 @@ decisions = {
             hidden_tooltip = {
                 character_event = {
                     id = "ml_events_mage.6"
-                    days = 1
                 }
             }
         }

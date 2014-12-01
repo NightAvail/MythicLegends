@@ -1,0 +1,33 @@
+#######################################################
+# Mythic Legends
+# Interface
+#
+# Author:  NightAvail
+#######################################################
+
+spriteTypes = {
+    # Immortal trait
+    spriteType = {
+        name = "GFX_trait_ml_trait_immortal"
+        texturefile = "gfx/traits/immortal.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    # Lich King trait
+    spriteType = {
+        name = "GFX_trait_ml_trait_lichking"
+        texturefile = "gfx/traits/lichking.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    # Magical Bloodline trait
+    spriteType = {
+        name = "GFX_trait_ml_trait_magical_blood"
+        texturefile = "gfx/traits/magic_blood.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

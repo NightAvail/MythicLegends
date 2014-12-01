@@ -1,0 +1,14 @@
+ml_decision_mage_unknown;Unknown;;;;;;;;;;;;;x
+ml_decision_mage_unknown_desc;Unknown;;;;;;;;;;;;;x
+ml_decision_mage_study_magic;Make decision on magic;;;;;;;;;;;;;x
+ml_decision_mage_study_magic_desc;Choose to become a mage or not.;;;;;;;;;;;;;x
+ml_decision_mage_quest;Mage quest;;;;;;;;;;;;;x
+ml_decision_mage_quest_desc;Risk your life on a quest to improve your ability as a mage or to find treasure!;;;;;;;;;;;;;x
+ml_decision_mage_choose_air_element;Become an air mage;;;;;;;;;;;;;x
+ml_decision_mage_choose_air_element_desc;Learn to master the elemental power of air!;;;;;;;;;;;;;x
+ml_decision_mage_choose_earth_element;Become an earth mage;;;;;;;;;;;;;x
+ml_decision_mage_choose_earth_element_desc;Learn to master the elemental power of earth!;;;;;;;;;;;;;x
+ml_decision_mage_choose_fire_element;Become a fire mage;;;;;;;;;;;;;x
+ml_decision_mage_choose_fire_element_desc;Learn to master the elemental power of fire!;;;;;;;;;;;;;x
+ml_decision_mage_choose_water_element;Become a water mage;;;;;;;;;;;;;x
+ml_decision_mage_choose_water_element_desc;Learn to master the elemental power of water!;;;;;;;;;;;;;x

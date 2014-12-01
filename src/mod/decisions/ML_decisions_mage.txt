@@ -1,0 +1,185 @@
+#######################################################
+# Mythic Legends
+# Decisions
+#
+# Author:  NightAvail
+#######################################################
+
+decisions = {
+    #######################################################
+    # Study magic to become a mage!
+    #
+    # NOTE: AI characters will no study magic.
+    #######################################################
+    ml_decision_mage_study_magic = {
+        is_high_prio = yes
+        has_dlc = "Rajas of India"
+
+        potential = {
+            ai = no
+            prisoner = no
+
+            NOT = { trait = ml_trait_magical_blood }
+            NOT = {
+                OR = {
+                    has_character_flag = ml_flag_choose_mage
+                    has_character_flag = ml_flag_choose_not_mage
+                }
+            }
+        }
+
+        allow = {
+            age = 16
+            in_command = no
+        }
+
+        effect = {
+            hidden_tooltip = {
+                character_event = {
+                    id = "ml_events_mage.1"
+                    days = 1
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Become an air mage.
+    #######################################################
+    ml_decision_mage_choose_air_element = {
+        is_high_prio = yes
+
+        potential = {
+            prisoner = no
+
+            # We must have magical blood to go on a mage quest.
+            trait = ml_trait_magical_blood
+
+            NOT = { has_character_flag = ml_flag_choose_mage_class }
+        }
+
+        effect = {
+            hidden_tooltip = {
+                character_event = {
+                    id = "ml_events_mage.2"
+                    days = 1
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Become an earth mage.
+    #######################################################
+    ml_decision_mage_choose_earth_element = {
+        is_high_prio = yes
+
+        potential = {
+            prisoner = no
+
+            # We must have magical blood to go on a mage quest.
+            trait = ml_trait_magical_blood
+
+            NOT = { has_character_flag = ml_flag_choose_mage_class }
+        }
+
+        effect = {
+            hidden_tooltip = {
+                character_event = {
+                    id = "ml_events_mage.3"
+                    days = 1
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Become an fire mage.
+    #######################################################
+    ml_decision_mage_choose_fire_element = {
+        is_high_prio = yes
+
+        potential = {
+            prisoner = no
+
+            # We must have magical blood to go on a mage quest.
+            trait = ml_trait_magical_blood
+
+            NOT = { has_character_flag = ml_flag_choose_mage_class }
+        }
+
+        effect = {
+            hidden_tooltip = {
+                character_event = {
+                    id = "ml_events_mage.4"
+                    days = 1
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Become an water mage.
+    #######################################################
+    ml_decision_mage_choose_water_element = {
+        is_high_prio = yes
+
+        potential = {
+            prisoner = no
+
+            # We must have magical blood to go on a mage quest.
+            trait = ml_trait_magical_blood
+
+            NOT = { has_character_flag = ml_flag_choose_mage_class }
+        }
+
+        effect = {
+            hidden_tooltip = {
+                character_event = {
+                    id = "ml_events_mage.5"
+                    days = 1
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Go on quest to improve your ability as
+    # a mage or for treasure!
+    #
+    # NOTE: AI characters will have a chance
+    # to improve their skill through a random
+    # event.
+    #######################################################
+    ml_decision_mage_quest = {
+        potential = {
+            ai = no
+            prisoner = no
+
+            # We must have magical blood to go on a mage quest.
+            trait = ml_trait_magical_blood
+
+            NOT = { has_character_flag = ml_flag_on_mage_quest }
+            NOT = { has_character_flag = ml_flag_recent_mage_quest }
+        }
+
+        allow = {
+            age = 16
+            war = no
+            in_command = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            hidden_tooltip = {
+                character_event = {
+                    id = "ml_events_mage.6"
+                    days = 1
+                }
+            }
+        }
+    }
+}

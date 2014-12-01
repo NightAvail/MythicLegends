@@ -1,0 +1,66 @@
+#######################################################
+# Mythic Legends
+# Traits
+#
+# Author:  NightAvail
+#######################################################
+
+#######################################################
+# General Traits
+#######################################################
+
+# Immortal Traits
+ml_trait_immortal = {
+    opposites = {
+        lichking
+    }
+
+    immortal = yes
+
+    fertility = -5000.0
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+
+ml_trait_lichking = {
+    opposites = {
+        immortal
+    }
+
+    # You're undead, so no one likes you. Worse yet,
+    # as a lichking you don't like your own kind!
+    church_opinion = -40
+    general_opinion = -20
+
+    immortal = yes
+
+    fertility = -5000.0
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+
+# Bloodline traits
+
+ml_trait_magical_blood = {
+    learning    = 1
+
+    opposites = {
+    }
+
+    same_opinion = 10
+
+    # A child will not always have
+    # magic.
+    inherit_chance = 50
+
+    # Magic bloodline can run out.
+    agnatic = yes
+
+    random      = yes
+    ruler_designer_cost = 0
+    customizer = no
+}

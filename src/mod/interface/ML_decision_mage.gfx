@@ -1,0 +1,39 @@
+#######################################################
+# Mythic Legends
+# Interface
+#
+# Author:  NightAvail
+#######################################################
+
+spriteTypes = {
+    # Study magic.
+    spriteType = {
+        name = "GFX_ml_decision_mage_study_magic"
+        texturefile = "gfx/decisions/study_decision.png"
+    }
+    # Mage quest.
+    spriteType = {
+        name = "GFX_ml_decision_mage_quest"
+        texturefile = "gfx/decisions/mage_quest_decision.png"
+    }
+    # Become air mage.
+    spriteType = {
+        name = "GFX_ml_decision_mage_choose_air_element"
+        texturefile = "gfx/decisions/air_mage.png"
+    }
+    # Become earth mage.
+    spriteType = {
+        name = "GFX_ml_decision_mage_choose_earth_element"
+        texturefile = "gfx/decisions/earth_mage.png"
+    }
+    # Become fire mage.
+    spriteType = {
+        name = "GFX_ml_decision_mage_choose_fire_element"
+        texturefile = "gfx/decisions/fire_mage.png"
+    }
+    # Become water mage.
+    spriteType = {
+        name = "GFX_ml_decision_mage_choose_water_element"
+        texturefile = "gfx/decisions/water_mage.png"
+    }
+}

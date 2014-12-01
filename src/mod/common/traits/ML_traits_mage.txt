@@ -1,0 +1,606 @@
+#######################################################
+# Mythic Legends
+# Traits
+#
+# Author:  NightAvail
+#######################################################
+
+#######################################################
+# Mage Classes
+#######################################################
+
+#######################################################
+# Air mage
+#######################################################
+ml_trait_air_mage_beginner = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    intrigue   = 1
+    learning    = 1
+
+    random = no
+    cannot_inherit = yes
+    customizer = yes
+}
+ml_trait_air_mage_apprentice = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    intrigue   = 2
+    learning    = 2
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+ml_trait_air_mage_expert = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    intrigue   = 4
+    learning    = 4
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 10
+    ai_rationality = -5
+
+    command_modifier = {
+        morale_offence = 0.4
+        morale_defence = 0.4
+    }
+}
+ml_trait_air_mage_master = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    intrigue   = 6
+    learning    = 6
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 20
+    ai_rationality = -10
+
+    command_modifier = {
+        morale_offence = 0.8
+        morale_defence = 0.8
+    }
+}
+
+#######################################################
+# Earth mage
+#######################################################
+ml_trait_earth_mage_beginner = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    stewardship       = 1
+    learning        = 1
+
+    random = no
+    cannot_inherit = yes
+    customizer = yes
+}
+ml_trait_earth_mage_apprentice = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    stewardship       = 2
+    learning        = 2
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+ml_trait_earth_mage_expert = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    stewardship       = 4
+    learning        = 4
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 10
+    ai_rationality = -5
+
+    command_modifier = {
+        morale_offence = 0.4
+        morale_defence = 0.4
+    }
+}
+ml_trait_earth_mage_master = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    stewardship       = 6
+    learning        = 6
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 20
+    ai_rationality = -10
+
+    command_modifier = {
+        morale_offence = 0.8
+        morale_defence = 0.8
+    }
+}
+
+#######################################################
+# Fire mage
+#######################################################
+ml_trait_fire_mage_beginner = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    martial           = 1
+
+    random = no
+    cannot_inherit = yes
+    customizer = yes
+
+    command_modifier = {
+        morale_offence = 0.1
+        morale_defence = 0.1
+    }
+}
+ml_trait_fire_mage_apprentice = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    martial               = 2
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    command_modifier = {
+        morale_offence = 0.2
+        morale_defence = 0.2
+    }
+}
+ml_trait_fire_mage_expert = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    martial           = 4
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 10
+    ai_rationality = -5
+
+    command_modifier = {
+        morale_offence = 0.4
+        morale_defence = 0.4
+    }
+}
+ml_trait_fire_mage_master = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    martial           = 6
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 20
+    ai_rationality = -10
+
+    command_modifier = {
+        morale_offence = 0.8
+        morale_defence = 0.8
+    }
+}
+
+#######################################################
+# Water mage
+#######################################################
+ml_trait_water_mage_beginner = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    diplomacy           = 1
+    learning        = 1
+
+    random = no
+    cannot_inherit = yes
+    customizer = yes
+}
+ml_trait_water_mage_apprentice = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    diplomacy           = 2
+    learning        = 2
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+ml_trait_water_mage_expert = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_master
+    }
+
+    diplomacy           = 4
+    learning        = 4
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 10
+    ai_rationality = -5
+
+    command_modifier = {
+        morale_offence = 0.4
+        morale_defence = 0.4
+    }
+}
+ml_trait_water_mage_master = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+    }
+
+    diplomacy           = 6
+    learning        = 6
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 20
+    ai_rationality = -10
+
+    command_modifier = {
+        morale_offence = 0.8
+        morale_defence = 0.8
+    }
+}
+
+#######################################################
+# Mage spell-level traits
+#
+# In combat a mage can cast spells to harm
+# their opponent.
+#######################################################
+ml_trait_arcane_spell_beginner = {
+
+}
+ml_trait_arcane_spell_apprentice = {
+
+}
+ml_trait_arcane_spell_expert = {
+
+}
+ml_trait_arcane_spell_master = {
+
+}
+
+#######################################################
+# Mage quest
+#######################################################
+ml_trait_mage_quest = {
+    pilgrimage = yes
+
+    random = no
+    customizer = no
+    cannot_inherit = yes
+}

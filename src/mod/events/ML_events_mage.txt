@@ -1,0 +1,176 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_mage
+namespace = ml_events_common
+
+# Choose to study magic!
+character_event = {
+    id = "ml_events_mage.1"
+    desc = "ml_events_mage.1desc"
+    picture = GFX_evt_meditating_in_temple
+
+    is_triggered_only = yes
+
+    # We should not have magical blood!
+    trigger = {
+        NOT = { trait = ml_trait_magical_blood }
+    }
+
+    # Choose to become a mage with magical blood.
+    option = {
+        name = "ml_events_mage.1a"
+
+        add_trait = ml_trait_magical_blood
+
+        set_character_flag = ml_flag_choose_mage
+    }
+
+    # Choose not to become a mage.
+    option = {
+        name = "ml_events_mage.1b"
+
+        set_character_flag = ml_flag_choose_not_mage
+    }
+}
+
+# Choose to become an air mage!
+character_event = {
+    id = "ml_events_mage.2"
+    desc = "ml_events_mage.2desc"
+    picture = GFX_evt_meditating_in_temple
+
+    is_triggered_only = yes
+
+    # We should have magical blood and not
+    # have choosen a class!
+    trigger = {
+        trait = ml_trait_magical_blood
+        NOT = { has_character_flag = ml_flag_choose_mage_class }
+    }
+
+    option = {
+        name = "ml_events_mage.2a"
+
+        add_trait = ml_trait_air_mage_beginner
+        add_trait = ml_trait_arcane_spell_beginner
+
+        set_character_flag = ml_flag_choose_mage_class
+    }
+    option = {
+        name = "ml_events_mage.nevermind"
+    }
+}
+
+# Choose to become an earth mage!
+character_event = {
+    id = "ml_events_mage.3"
+    desc = "ml_events_mage.3desc"
+    picture = GFX_evt_meditating_in_temple
+
+    is_triggered_only = yes
+
+    # We should have magical blood and not
+    # have choosen a class!
+    trigger = {
+        trait = ml_trait_magical_blood
+        NOT = { has_character_flag = ml_flag_choose_mage_class }
+    }
+
+    option = {
+        name = "ml_events_mage.3a"
+
+        add_trait = ml_trait_earth_mage_beginner
+        add_trait = ml_trait_arcane_spell_beginner
+
+        set_character_flag = ml_flag_choose_mage_class
+    }
+    option = {
+        name = "ml_events_common.nevermind"
+    }
+}
+
+# Choose to become a fire mage!
+character_event = {
+    id = "ml_events_mage.4"
+    desc = "ml_events_mage.4desc"
+    picture = GFX_evt_meditating_in_temple
+
+    is_triggered_only = yes
+
+    # We should have magical blood and not
+    # have choosen a class!
+    trigger = {
+        trait = ml_trait_magical_blood
+        NOT = { has_character_flag = ml_flag_choose_mage_class }
+    }
+
+    option = {
+        name = "ml_events_mage.4a"
+
+        add_trait = ml_trait_fire_mage_beginner
+        add_trait = ml_trait_arcane_spell_beginner
+
+        set_character_flag = ml_flag_choose_mage_class
+    }
+    option = {
+        name = "ml_events_common.nevermind"
+    }
+}
+
+# Choose to become a water mage!
+character_event = {
+    id = "ml_events_mage.5"
+    desc = "ml_events_mage.5desc"
+    picture = GFX_evt_meditating_in_temple
+
+    is_triggered_only = yes
+
+    # We should have magical blood and not
+    # have choosen a class!
+    trigger = {
+        trait = ml_trait_magical_blood
+        NOT = { has_character_flag = ml_flag_choose_mage_class }
+    }
+
+    option = {
+        name = "ml_events_mage.5a"
+
+        add_trait = ml_trait_water_mage_beginner
+        add_trait = ml_trait_arcane_spell_beginner
+
+        set_character_flag = ml_flag_choose_mage_class
+    }
+    option = {
+        name = "ml_events_common.nevermind"
+    }
+}
+
+# Go on a mage quest!
+character_event = {
+    id = "ml_events_mage.6"
+    desc = "ml_events_mage.6desc"
+    picture = GFX_evt_comet
+    border = GFX_event_normal_frame_war
+
+    is_triggered_only = yes
+
+    trigger = {
+        trait = ml_trait_magical_blood
+        NOT = { trait = ml_trait_mage_quest }
+
+        has_character_flag = ml_flag_choose_mage_class
+    }
+
+    option = {
+        name = "ml_events_common.getstarted"
+
+        add_trait = ml_trait_mage_quest
+
+        
+    }
+}

@@ -1,0 +1,179 @@
+#######################################################
+# Mythic Legends
+# Interface
+#
+# Author:  NightAvail
+#######################################################
+
+spriteTypes = {
+    #######################################################
+    # Air mage trait
+    #######################################################
+    spriteType = {
+        name = "GFX_trait_ml_trait_air_mage_beginner"
+        texturefile = "gfx/traits/air_mage_beginner.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_air_mage_apprentice"
+        texturefile = "gfx/traits/air_mage_apprentice.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_air_mage_expert"
+        texturefile = "gfx/traits/air_mage_expert.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_air_mage_master"
+        texturefile = "gfx/traits/air_mage_master.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    #######################################################
+    # Earth mage trait
+    #######################################################
+    spriteType = {
+        name = "GFX_trait_ml_trait_earth_mage_beginner"
+        texturefile = "gfx/traits/earth_mage_beginner.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_earth_mage_apprentice"
+        texturefile = "gfx/traits/earth_mage_apprentice.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_earth_mage_expert"
+        texturefile = "gfx/traits/earth_mage_expert.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_earth_mage_master"
+        texturefile = "gfx/traits/earth_mage_master.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    #######################################################
+    # Fire mage trait
+    #######################################################
+    spriteType = {
+        name = "GFX_trait_ml_trait_fire_mage_beginner"
+        texturefile = "gfx/traits/fire_mage_beginner.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_fire_mage_apprentice"
+        texturefile = "gfx/traits/fire_mage_apprentice.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_fire_mage_expert"
+        texturefile = "gfx/traits/fire_mage_expert.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_fire_mage_master"
+        texturefile = "gfx/traits/fire_mage_master.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    #######################################################
+    # Water mage trait
+    #######################################################
+    spriteType = {
+        name = "GFX_trait_ml_trait_water_mage_beginner"
+        texturefile = "gfx/traits/water_mage_beginner.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_water_mage_apprentice"
+        texturefile = "gfx/traits/water_mage_apprentice.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_water_mage_expert"
+        texturefile = "gfx/traits/water_mage_expert.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_water_mage_master"
+        texturefile = "gfx/traits/water_mage_master.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    #######################################################
+    # Mage spell-level trait
+    #######################################################
+    spriteType = {
+        name = "GFX_trait_ml_trait_arcane_spell_beginner"
+        texturefile = "gfx/traits/arcane_spells_beginner.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_arcane_spell_apprentice"
+        texturefile = "gfx/traits/arcane_spells_apprentice.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_arcane_spell_expert"
+        texturefile = "gfx/traits/arcane_spells_expert.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_trait_arcane_spell_master"
+        texturefile = "gfx/traits/arcane_spells_master.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    #######################################################
+    # Mage quest trait
+    #######################################################
+    spriteType = {
+        name = "GFX_trait_ml_trait_mage_quest"
+        texturefile = "gfx/traits/mage_quest.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

@@ -155,6 +155,8 @@ decisions = {
 
             NOT = { has_character_flag = ml_flag_on_mage_quest }
             NOT = { has_character_flag = ml_flag_recent_mage_quest }
+
+            has_character_flag = ml_flag_choose_mage_class
         }
 
         allow = {

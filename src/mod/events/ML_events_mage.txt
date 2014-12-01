@@ -157,6 +157,7 @@ character_event = {
     picture = GFX_evt_comet
     border = GFX_event_normal_frame_war
 
+    ai = no
     is_triggered_only = yes
 
     trigger = {
@@ -171,6 +172,66 @@ character_event = {
 
         add_trait = ml_trait_mage_quest
 
-        
+        # Random chance to stop at an inn to pick up
+        # some friends.
+        random_list = {
+            50 = {
+                character_event = {
+                    id = "ml_events_mage.6q1"
+                    days = 30
+                }
+            }
+
+            50 = {
+                character_event = {
+                    id = "ml_events_mage.6q2"
+                    days = 30
+                }
+            }
+        }
+    }
+}
+
+# Mage stops by inn and finds friends.
+character_event = {
+    id = "ml_events_mage.6q1"
+    desc = "ml_events_mage.6q1desc"
+    picture = GFX_evt_brothel
+    border = "GFX_event_narrative_frame_religion"
+
+    ai = no
+    is_triggered_only = yes
+
+    option = {
+        name = "ml_events_mage.6q1a"
+
+        set_character_flag = ml_flag_questing_with_friends
+    }
+
+    option = {
+        name = "ml_events_mage.6q1b"
+
+        clr_character_flag = ml_flag_questing_with_friends
+    }
+}
+
+# Mage discovers dungeon.
+character_event = {
+    id = "ml_events_mage.6q2"
+    desc = "ml_events_mage.6q2desc"
+    picture = GFX_evt_brothel
+    border = "GFX_event_narrative_frame_religion"
+
+    ai = no
+    is_triggered_only = yes
+
+    # There might be treasure!
+    option = {
+        name = "ml_events_mage.6q1a"
+
+        random = {
+            chance = 10
+            add_trait = content
+        }
     }
 }

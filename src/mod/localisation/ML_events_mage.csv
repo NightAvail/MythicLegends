@@ -17,3 +17,8 @@ ml_events_mage.4a;Yes! I will master the element of fire!;;;;;;;;;;;;;x
 ml_events_mage.5;Become Water Mage;;;;;;;;;;;;;x
 ml_events_mage.5desc;Do you wish to learn the secrets of the water element?;;;;;;;;;;;;;x
 ml_events_mage.5a;Yes! I will master the element of water!;;;;;;;;;;;;;x
+ml_events_mage.6;Time to go on a quest!;;;;;;;;;;;;;x
+ml_events_mage.6desc;Great riches and magical knowledge await me!;;;;;;;;;;;;;x
+
+ml_events_mage.6q1;You stop by an inn;;;;;;;;;;;;;x
+ml_events_mage.6q1desc;Your journey takes you to an inn to rest up for a bit after being on the road for so long.;;;;;;;;;;;;;x

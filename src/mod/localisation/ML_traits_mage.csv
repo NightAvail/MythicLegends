@@ -40,3 +40,5 @@ ml_trait_arcane_spell_expert;Expert spellbook;;;;;;;;;;;;;x
 ml_trait_arcane_spell_expert_desc;The spellbook of this mage is expert level.;;;;;;;;;;;;;x
 ml_trait_arcane_spell_master;Master spellbook;;;;;;;;;;;;;x
 ml_trait_arcane_spell_master_desc;The spellbook of this mage is master level.;;;;;;;;;;;;;x
+ml_trait_mage_quest;Mage Quest;;;;;;;;;;;;;x
+ml_trait_mage_quest_desc;This character is currently on a dangerous quest for knowledge and power!;;;;;;;;;;;;;x

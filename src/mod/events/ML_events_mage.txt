@@ -234,4 +234,9 @@ character_event = {
             add_trait = content
         }
     }
+
+    # I need to end my quest.
+    option = {
+        name = "ml_events_mage.6q2b"
+    }
 }

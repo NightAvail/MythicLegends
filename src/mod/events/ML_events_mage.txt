@@ -172,22 +172,32 @@ character_event = {
 
         add_trait = ml_trait_mage_quest
 
-        # Random chance to stop at an inn to pick up
-        # some friends.
-        random_list = {
-            50 = {
-                character_event = {
-                    id = "ml_events_mage.6q1"
-                    days = 30
-                }
-            }
+        character_event = {
+            id = "ml_events_mage.6q0"
+            days = 10
+        }
+    }
+}
 
-            50 = {
-                character_event = {
-                    id = "ml_events_mage.6q2"
-                    days = 30
-                }
-            }
+# Stop at an inn.
+character_Event = {
+    id = "ml_events_mage.6q0"
+    desc = "ml_events_mage.6q0desc"
+    picture = GFX_evt_midwinter_blot_oldgods
+    border = "GFX_event_narrative_frame_religion"
+
+    ai = no
+    is_triggered_only = yes
+
+    option = {
+        name = "ml_events_common.getstarted"
+
+        add_trait = ml_trait_mage_quest
+
+        # Meet some friends at the inn.
+        character_event = {
+            id = "ml_events_mage.6q1"
+            days = 30
         }
     }
 }
@@ -215,28 +225,94 @@ character_event = {
     }
 }
 
-# Mage discovers dungeon.
+# Mage fights off bandits with friends.
 character_event = {
     id = "ml_events_mage.6q2"
     desc = "ml_events_mage.6q2desc"
-    picture = GFX_evt_brothel
+    picture = GFX_evt_bandits
     border = "GFX_event_narrative_frame_religion"
 
     ai = no
-    is_triggered_only = yes
 
-    # There might be treasure!
+    trigger = {
+        trait = ml_trait_mage_quest
+        has_character_flag = ml_flag_questing_with_friends
+    }
+
+    mean_time_to_happen = {
+        days = 10
+    }
+
+    # Fight the bandits!
     option = {
-        name = "ml_events_mage.6q1a"
+        name = "ml_events_mage.6q2a"
 
-        random = {
-            chance = 10
-            add_trait = content
+        random_list = {
+            10 = {
+                add_trait = wounded
+            }
+
+            5 = {
+                add_trait = brave
+                remove_trait = craven
+            }
+
+            1 = {
+                add_trait = maimed
+            }
         }
+
+        wealth = 50
     }
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.6q2b"
+        name = "ml_events_mage.questEndOpt"
+    }
+}
+
+# Mage fights off bandits alone.
+character_event = {
+    id = "ml_events_mage.6q3"
+    desc = "ml_events_mage.6q3desc"
+    picture = GFX_evt_bandits
+    border = "GFX_event_narrative_frame_religion"
+
+    ai = no
+
+    trigger = {
+        trait = ml_trait_mage_quest
+        has_character_flag = ml_flag_questing_with_friends
+    }
+
+    mean_time_to_happen = {
+        days = 10
+    }
+
+    # Fight the bandits!
+    option = {
+        name = "ml_events_mage.6q3a"
+
+        random_list = {
+            20 = {
+                add_trait = wounded
+            }
+
+            5 = {
+                add_trait = brave
+                remove_trait = craven
+            }
+
+            10 = {
+                add_trait = maimed
+            }
+        }
+
+        wealth = 250
+    }
+
+    # I need to end my quest.
+    option = {
+        name = "ml_events_mage.questEndOpt"
     }
 }

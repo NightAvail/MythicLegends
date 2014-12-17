@@ -19,7 +19,7 @@ ml_events_mage.5desc;Do you wish to learn the secrets of the water element?;;;;;
 ml_events_mage.5a;Yes! I will master the element of water!;;;;;;;;;;;;;x
 ml_events_mage.questEnd;Finally home;;;;;;;;;;;;;x
 ml_events_mage.questEndDesc;After an enlightening journey I'm finally home!;;;;;;;;;;;;;x
-ml_events_mage.questEndOpt;I need to head back home!;;;;;;;;;;;;;x
+ml_events_mage.questEndDangerOpt;This is dangerous and I need to head back home!;;;;;;;;;;;;;x
 ml_events_mage.6;Time to go on a quest!;;;;;;;;;;;;;x
 ml_events_mage.6desc;Great riches and magical knowledge await me!;;;;;;;;;;;;;x
 ml_events_mage.6q0;You see an inn close by;;;;;;;;;;;;;x

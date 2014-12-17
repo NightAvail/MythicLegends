@@ -267,7 +267,7 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.questEndOpt"
+        name = "ml_events_mage.questEndDangerOpt"
     }
 }
 
@@ -313,6 +313,6 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.questEndOpt"
+        name = "ml_events_mage.questEndDangerOpt"
     }
 }

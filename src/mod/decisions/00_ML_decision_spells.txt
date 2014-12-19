@@ -6,6 +6,33 @@
 #######################################################
 
 decisions = {
+    # Open the spellbook.
+    ml_decision_spells_open_spellbook = {
+        min_age = 16
+
+        potential = {
+            trait = ml_trait_magical_blood
+            
+            has_trait = ml_flag_chose_mage_class
+
+            NOT = {
+                has_character_flag = ml_flag_spellbook_open
+            }
+        }
+    }
+
+    # Close the spellbook.
+    ml_decision_spells_close_spellbook = {
+        is_high_prio = yes
+
+        potential = {
+            trait = ml_trait_magical_blood
+
+            has_trait = ml_flag_chose_mage_class
+            has_character_flag = ml_flag_spellbook_open
+        }
+    }
+
     # Activate buff spell.
     ml_decision_spells_activate_buff = {
 

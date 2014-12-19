@@ -40,7 +40,7 @@ ml_trait_air_mage_beginner = {
 
     random = no
     cannot_inherit = yes
-    customizer = yes
+    customizer = no
 }
 ml_trait_air_mage_apprentice = {
     opposites = {
@@ -180,7 +180,7 @@ ml_trait_earth_mage_beginner = {
 
     random = no
     cannot_inherit = yes
-    customizer = yes
+    customizer = no
 }
 ml_trait_earth_mage_apprentice = {
     opposites = {
@@ -319,7 +319,7 @@ ml_trait_fire_mage_beginner = {
 
     random = no
     cannot_inherit = yes
-    customizer = yes
+    customizer = no
 
     command_modifier = {
         morale_offence = 0.1
@@ -470,7 +470,7 @@ ml_trait_water_mage_beginner = {
 
     random = no
     cannot_inherit = yes
-    customizer = yes
+    customizer = no
 }
 ml_trait_water_mage_apprentice = {
     opposites = {
@@ -586,16 +586,20 @@ ml_trait_water_mage_master = {
 # their opponent.
 #######################################################
 ml_trait_arcane_spell_beginner = {
-
+    inherit_chance = 0
+    customizer = no
 }
 ml_trait_arcane_spell_apprentice = {
-
+    inherit_chance = 0
+    customizer = no
 }
 ml_trait_arcane_spell_expert = {
-
+    inherit_chance = 0
+    customizer = no
 }
 ml_trait_arcane_spell_master = {
-
+    inherit_chance = 0
+    customizer = no
 }
 
 #######################################################

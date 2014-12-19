@@ -6,6 +6,18 @@
 #######################################################
 
 spriteTypes = {
+    # Open spellbook.
+    spriteType = {
+        name = "GFX_ml_decision_spells_open_spellbook"
+        texturefile = "gfx/decisions/study_decision.png"
+    }
+
+    # Close spellbook.
+    spriteType = {
+        name = "GFX_ml_decision_spells_close_spellbook"
+        texturefile = "gfx/decisions/study_decision.png"
+    }
+
     # Buff spell.
     spriteType = {
         name = "GFX_ml_decision_spells_activate_buff"

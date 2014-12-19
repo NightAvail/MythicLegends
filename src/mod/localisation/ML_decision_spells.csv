@@ -12,3 +12,7 @@ ml_decision_spells_activate_life_change;Activate Life Change Ritual;;;;;;;;;;;;;
 ml_decision_spells_activate_life_change_desc;Deactivates current spell and allows the player to switch titles with another character;;;;;;;;;;;;;x
 ml_decision_spells_summon;Summon Troops;;;;;;;;;;;;;x
 ml_decision_spells_summon_desc;Summons troops while at war depending on arcane level. Earth mages summon an additional 500 heavy troops. This spell has a 2-year cooldown.;;;;;;;;;;;;;x
+ml_decision_spells_open_spellbook;Open up spellbook;;;;;;;;;;;;;x
+ml_decision_spells_open_spellbook_desc;Open up your spellbook to perform a list of spells;;;;;;;;;;;;;x
+ml_decision_spells_close_spellbook;Close spellbook;;;;;;;;;;;;;x
+ml_decision_spells_close_spellbook_desc;Close your spellbook;;;;;;;;;;;;;x

@@ -1,0 +1,39 @@
+#######################################################
+# Mythic Legends
+# Interface
+#
+# Author:  NightAvail
+#######################################################
+
+spriteTypes = {
+    # Buff spell.
+    spriteType = {
+        name = "GFX_ml_decision_spells_activate_buff"
+        texturefile = "gfx/decisions/buff_spell.png"
+    }
+    # Healing spell.
+    spriteType = {
+        name = "GFX_ml_decision_spells_cast_healing"
+        texturefile = "gfx/decisions/healing_spell.png"
+    }
+    # Plague spell.
+    spriteType = {
+        name = "GFX_ml_decision_spells_activate_plague"
+        texturefile = "gfx/decisions/plague_spell.png"
+    }
+    # Prosper spell.
+    spriteType = {
+        name = "GFX_ml_decision_spells_activate_prosper"
+        texturefile = "gfx/decisions/prosper_spell.png"
+    }
+    # Life change spell.
+    spriteType = {
+        name = "GFX_ml_decision_spells_activate_life_change"
+        texturefile = "gfx/decisions/soul_transfer_spell.png"
+    }
+    # Summon spell.
+    spriteType = {
+        name = "GFX_ml_decision_spells_summon"
+        texturefile = "gfx/decisions/summon_spell.png"
+    }
+}

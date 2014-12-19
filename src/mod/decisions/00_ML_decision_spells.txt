@@ -6,4 +6,33 @@
 #######################################################
 
 decisions = {
+    # Activate buff spell.
+    ml_decision_spells_activate_buff = {
+
+    }
+
+    # Cast healing spell.
+    ml_decision_spells_cast_healing = {
+
+    }
+
+    # Activate plague spell.
+    ml_decision_spells_activate_plague = {
+
+    }
+
+    # Activate prosper spell.
+    ml_decision_spells_activate_prosper = {
+
+    }
+
+    # Activate life change spell.
+    ml_decision_spells_activate_life_change = {
+
+    }
+
+    # Cast summoning spell.
+    ml_decision_spells_summon = {
+
+    }
 }

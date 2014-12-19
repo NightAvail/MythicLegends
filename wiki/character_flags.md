@@ -34,3 +34,6 @@ Various flags used to determine the state of the character.
 
 - **ml_flag_water_mage**
     - Flag telling us that we are an water mage
+
+- **ml_flag_spellbook_open**
+    - Spellbook is open

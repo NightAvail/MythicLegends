@@ -50,7 +50,7 @@ character_event = {
     # have choosen a class!
     trigger = {
         trait = ml_trait_magical_blood
-        NOT = { has_character_flag = ml_flag_choose_mage_class }
+        NOT = { has_character_flag = ml_flag_chose_mage_class }
     }
 
     option = {
@@ -59,7 +59,8 @@ character_event = {
         add_trait = ml_trait_air_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
 
-        set_character_flag = ml_flag_choose_mage_class
+        set_character_flag = ml_flag_chose_mage_class
+        set_character_flag = ml_flag_air_mage
     }
     option = {
         name = "ml_events_mage.nevermind"
@@ -78,7 +79,7 @@ character_event = {
     # have choosen a class!
     trigger = {
         trait = ml_trait_magical_blood
-        NOT = { has_character_flag = ml_flag_choose_mage_class }
+        NOT = { has_character_flag = ml_flag_chose_mage_class }
     }
 
     option = {
@@ -87,7 +88,8 @@ character_event = {
         add_trait = ml_trait_earth_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
 
-        set_character_flag = ml_flag_choose_mage_class
+        set_character_flag = ml_flag_chose_mage_class
+        set_character_flag = ml_flag_earth_mage
     }
     option = {
         name = "ml_events_common.nevermind"
@@ -106,7 +108,7 @@ character_event = {
     # have choosen a class!
     trigger = {
         trait = ml_trait_magical_blood
-        NOT = { has_character_flag = ml_flag_choose_mage_class }
+        NOT = { has_character_flag = ml_flag_chose_mage_class }
     }
 
     option = {
@@ -115,7 +117,8 @@ character_event = {
         add_trait = ml_trait_fire_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
 
-        set_character_flag = ml_flag_choose_mage_class
+        set_character_flag = ml_flag_chose_mage_class
+        set_character_flag = ml_flag_fire_mage
     }
     option = {
         name = "ml_events_common.nevermind"
@@ -134,7 +137,7 @@ character_event = {
     # have choosen a class!
     trigger = {
         trait = ml_trait_magical_blood
-        NOT = { has_character_flag = ml_flag_choose_mage_class }
+        NOT = { has_character_flag = ml_flag_chose_mage_class }
     }
 
     option = {
@@ -143,7 +146,8 @@ character_event = {
         add_trait = ml_trait_water_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
 
-        set_character_flag = ml_flag_choose_mage_class
+        set_character_flag = ml_flag_chose_mage_class
+        set_character_flag = ml_flag_water_mage
     }
     option = {
         name = "ml_events_common.nevermind"
@@ -155,25 +159,29 @@ character_event = {
     id = "ml_events_mage.6"
     desc = "ml_events_mage.6desc"
     picture = GFX_evt_comet
-    border = GFX_event_normal_frame_war
 
     ai = no
     is_triggered_only = yes
 
     trigger = {
         trait = ml_trait_magical_blood
-        NOT = { trait = ml_trait_mage_quest }
+        NOT = {
+            trait = ml_trait_mage_quest
+        }
 
-        has_character_flag = ml_flag_choose_mage_class
+        has_character_flag = ml_flag_chose_mage_class
     }
 
     option = {
         name = "ml_events_common.getstarted"
-
         add_trait = ml_trait_mage_quest
+        set_character_flag = ml_flag_on_mage_quest
+
+        # Pause as the player makes their way to the inn.
+        set_character_flag = ml_flag_pause_events
 
         character_event = {
-            id = "ml_events_mage.6q0"
+            id = "ml_events_mage.7"
             days = 10
         }
     }
@@ -181,10 +189,9 @@ character_event = {
 
 # Stop at an inn.
 character_Event = {
-    id = "ml_events_mage.6q0"
-    desc = "ml_events_mage.6q0desc"
+    id = "ml_events_mage.7"
+    desc = "ml_events_mage.7desc"
     picture = GFX_evt_midwinter_blot_oldgods
-    border = "GFX_event_narrative_frame_religion"
 
     ai = no
     is_triggered_only = yes
@@ -192,11 +199,9 @@ character_Event = {
     option = {
         name = "ml_events_common.getstarted"
 
-        add_trait = ml_trait_mage_quest
-
         # Meet some friends at the inn.
         character_event = {
-            id = "ml_events_mage.6q1"
+            id = "ml_events_mage.8"
             days = 30
         }
     }
@@ -204,48 +209,52 @@ character_Event = {
 
 # Mage stops by inn and finds friends.
 character_event = {
-    id = "ml_events_mage.6q1"
-    desc = "ml_events_mage.6q1desc"
+    id = "ml_events_mage.8"
+    desc = "ml_events_mage.8desc"
     picture = GFX_evt_brothel
-    border = "GFX_event_narrative_frame_religion"
 
     ai = no
     is_triggered_only = yes
 
     option = {
-        name = "ml_events_mage.6q1a"
+        name = "ml_events_mage.8a"
 
         set_character_flag = ml_flag_questing_with_friends
+        clr_character_flag = ml_flag_pause_events
     }
 
     option = {
-        name = "ml_events_mage.6q1b"
+        name = "ml_events_mage.8b"
 
         clr_character_flag = ml_flag_questing_with_friends
+        clr_character_flag = ml_flag_pause_events
     }
 }
 
 # Mage fights off bandits with friends.
 character_event = {
-    id = "ml_events_mage.6q2"
-    desc = "ml_events_mage.6q2desc"
+    id = "ml_events_mage.9"
+    desc = "ml_events_mage.9desc"
     picture = GFX_evt_bandits
-    border = "GFX_event_narrative_frame_religion"
 
     ai = no
+    is_triggered_only = yes
 
     trigger = {
         trait = ml_trait_mage_quest
         has_character_flag = ml_flag_questing_with_friends
+
+        NOT = { has_character_flag = ml_flag_pause_events }
     }
 
-    mean_time_to_happen = {
-        days = 10
+    immediate = {
+        # Pause other events.
+        set_character_flag = ml_flag_pause_events
     }
 
     # Fight the bandits!
     option = {
-        name = "ml_events_mage.6q2a"
+        name = "ml_events_mage.9a"
 
         random_list = {
             10 = {
@@ -257,41 +266,60 @@ character_event = {
                 remove_trait = craven
             }
 
+            # Increase skill of the mage
+            5 = {
+                character_event = {
+                    id = "ml_events_mage_progress.1"
+                }
+            }
+
             1 = {
                 add_trait = maimed
             }
         }
 
         wealth = 50
+        clr_character_flag = ml_flag_pause_events
     }
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.questEndDangerOpt"
+        name = "ml_events_mage.13b"
+
+        character_event = {
+            id = "ml_events_mage.13"
+            days = 10
+        }
     }
 }
 
 # Mage fights off bandits alone.
 character_event = {
-    id = "ml_events_mage.6q3"
-    desc = "ml_events_mage.6q3desc"
+    id = "ml_events_mage.10"
+    desc = "ml_events_mage.10desc"
     picture = GFX_evt_bandits
-    border = "GFX_event_narrative_frame_religion"
 
     ai = no
+    is_triggered_only = yes
 
     trigger = {
         trait = ml_trait_mage_quest
-        has_character_flag = ml_flag_questing_with_friends
+        NOT = {
+            has_character_flag = ml_flag_questing_with_friends
+        }
+        NOT = {
+            has_character_flag = ml_flag_pause_events
+        }
     }
 
-    mean_time_to_happen = {
-        days = 10
+    immediate = {
+        # Pause other events.
+        set_character_flag = ml_flag_pause_events
     }
 
     # Fight the bandits!
     option = {
-        name = "ml_events_mage.6q3a"
+        name = "ml_events_mage.10a"
 
         random_list = {
             20 = {
@@ -303,16 +331,298 @@ character_event = {
                 remove_trait = craven
             }
 
+            # Increase skill of the mage
+            10 = {
+                character_event = {
+                    id = "ml_events_mage_progress.1"
+                }
+            }
+
             10 = {
                 add_trait = maimed
             }
         }
 
         wealth = 250
+        clr_character_flag = ml_flag_pause_events
     }
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.questEndDangerOpt"
+        name = "ml_events_mage.13b"
+
+        character_event = {
+            id = "ml_events_mage.13"
+            days = 10
+        }
+    }
+}
+
+# Mage explores area with friends.
+character_event = {
+    id = "ml_events_mage.11"
+    desc = "ml_events_mage.11desc"
+    picture = GFX_evt_desert
+
+    ai = no
+    is_triggered_only = yes
+
+    trigger = {
+        trait = ml_trait_mage_quest
+        has_character_flag = ml_flag_questing_with_friends
+
+        NOT = {
+            has_character_flag = ml_flag_pause_events
+        }
+    }
+
+    immediate = {
+        # Pause other events.
+        set_character_flag = ml_flag_pause_events
+    }
+
+    option = {
+        name = "ml_events_mage.11a"
+
+        random_list = {
+            20 = {
+                add_trait = wounded
+            }
+
+            5 = {
+                add_trait = brave
+                remove_trait = craven
+            }
+
+            # Increase skill of the mage
+            10 = {
+                character_event = {
+                    id = "ml_events_mage_progress.1"
+                }
+            }
+
+            10 = {
+                add_trait = maimed
+            }
+        }
+
+        wealth = 250
+        clr_character_flag = ml_flag_pause_events
+    }
+
+    # I need to end my quest.
+    option = {
+        name = "ml_events_mage.13b"
+
+        character_event = {
+            id = "ml_events_mage.13"
+            days = 10
+        }
+    }
+}
+
+# Mage explores area alone.
+character_event = {
+    id = "ml_events_mage.12"
+    desc = "ml_events_mage.12desc"
+    picture = GFX_evt_desert
+
+    ai = no
+    is_triggered_only = yes
+
+    trigger = {
+        trait = ml_trait_mage_quest
+        NOT = {
+            has_character_flag = ml_flag_questing_with_friends
+        }
+
+        NOT = {
+            has_character_flag = ml_flag_pause_events
+        }
+    }
+
+    immediate = {
+        # Pause other events.
+        set_character_flag = ml_flag_pause_events
+    }
+
+    option = {
+        name = "ml_events_mage.12a"
+
+        random_list = {
+            20 = {
+                add_trait = wounded
+            }
+
+            5 = {
+                add_trait = brave
+                remove_trait = craven
+            }
+
+            # Increase skill of the mage
+            10 = {
+                character_event = {
+                    id = "ml_events_mage_progress.1"
+                }
+            }
+
+            10 = {
+                add_trait = maimed
+            }
+        }
+
+        wealth = 550
+        clr_character_flag = ml_flag_pause_events
+    }
+
+    # I need to end my quest.
+    option = {
+        name = "ml_events_mage.13b"
+
+        character_event = {
+            id = "ml_events_mage.13"
+            days = 10
+        }
+    }
+}
+
+# Mage journey comes to an end.
+character_event = {
+    id = "ml_events_mage.13"
+    desc = "ml_events_mage.13desc"
+    picture = GFX_evt_garden
+
+    ai = no
+    is_triggered_only = yes
+
+    trigger = {
+        trait = ml_trait_mage_quest
+        has_character_flag = ml_flag_on_mage_quest
+    }
+
+    immediate = {
+        # Pause other events.
+        set_character_flag = ml_flag_pause_events
+    }
+
+    option = {
+        name = "ml_events_mage.13a"
+
+        remove_trait = ml_trait_mage_quest
+
+        clr_character_flag = ml_flag_questing_with_friends
+        clr_character_flag = ml_flag_on_mage_quest
+        clr_character_flag = ml_flag_pause_events
+
+        set_character_flag = ml_flag_recent_mage_quest
+
+        # Remove the recent mage quest flag.
+        character_event = {
+            id = "ml_events_mage.14"
+            days = 180
+        }
+    }
+}
+
+# Clear the recent quest flag.
+character_event = {
+    id = "ml_events_mage.14"
+    picture = GFX_evt_garden
+    hide_window = yes
+
+    ai = no
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_recent_mage_quest
+    }
+
+    option = {
+        name = "ml_events_mage.14a"
+
+        clr_character_flag = ml_flag_recent_mage_quest
+    }
+}
+
+# Handle selecting a random quest event.
+character_event = {
+    id = "ml_events_mage.15"
+    picture = GFX_evt_garden
+    hide_window = yes
+
+    ai = no
+
+    trigger = {
+        trait = ml_trait_mage_quest
+        has_character_flag = ml_flag_on_mage_quest
+
+        NOT = {
+            has_character_flag = ml_flag_pause_events
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        random_list = {
+            # Bandit attack
+            25 = {
+                if = {
+                    limit = {
+                        has_character_flag = ml_flag_questing_with_friends
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.9"
+                    }
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            has_character_flag = ml_flag_questing_with_friends
+                        }
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.10"
+                    }
+                }
+            }
+
+            # Explore area
+            25 = {
+                if = {
+                    limit = {
+                        has_character_flag = ml_flag_questing_with_friends
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.11"
+                    }
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            has_character_flag = ml_flag_questing_with_friends
+                        }
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.12"
+                    }
+                }
+            }
+
+            # End Quest
+            15 = {
+                character_event = {
+                    id = "ml_events_mage.13"
+                }
+            }
+        }
     }
 }

@@ -32,6 +32,14 @@ decisions = {
             in_command = no
         }
 
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
         effect = {
             hidden_tooltip = {
                 character_event = {
@@ -53,8 +61,16 @@ decisions = {
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
 
-            NOT = { has_character_flag = ml_flag_choose_mage_class }
+            NOT = { has_character_flag = ml_flag_chose_mage_class }
         }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+			always = no
+		}
 
         effect = {
             hidden_tooltip = {
@@ -77,8 +93,16 @@ decisions = {
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
 
-            NOT = { has_character_flag = ml_flag_choose_mage_class }
+            NOT = { has_character_flag = ml_flag_chose_mage_class }
         }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+			always = no
+		}
 
         effect = {
             hidden_tooltip = {
@@ -101,8 +125,16 @@ decisions = {
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
 
-            NOT = { has_character_flag = ml_flag_choose_mage_class }
+            NOT = { has_character_flag = ml_flag_chose_mage_class }
         }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+			always = no
+		}
 
         effect = {
             hidden_tooltip = {
@@ -125,8 +157,16 @@ decisions = {
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
 
-            NOT = { has_character_flag = ml_flag_choose_mage_class }
+            NOT = { has_character_flag = ml_flag_chose_mage_class }
         }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+			always = no
+		}
 
         effect = {
             hidden_tooltip = {
@@ -153,10 +193,14 @@ decisions = {
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
 
-            NOT = { has_character_flag = ml_flag_on_mage_quest }
-            NOT = { has_character_flag = ml_flag_recent_mage_quest }
+            has_character_flag = ml_flag_chose_mage_class
 
-            has_character_flag = ml_flag_choose_mage_class
+            NOT = {
+                OR = {
+                    has_character_flag = ml_flag_on_mage_quest
+                    has_character_flag = ml_flag_recent_mage_quest
+                }
+            }
         }
 
         allow = {
@@ -168,6 +212,10 @@ decisions = {
         ai_will_do = {
             factor = 0
         }
+
+        revoke_allowed = {
+			always = no
+		}
 
         effect = {
             hidden_tooltip = {

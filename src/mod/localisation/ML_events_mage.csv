@@ -17,16 +17,29 @@ ml_events_mage.4a;Yes! I will master the element of fire!;;;;;;;;;;;;;x
 ml_events_mage.5;Become Water Mage;;;;;;;;;;;;;x
 ml_events_mage.5desc;Do you wish to learn the secrets of the water element?;;;;;;;;;;;;;x
 ml_events_mage.5a;Yes! I will master the element of water!;;;;;;;;;;;;;x
-ml_events_mage.questEnd;Finally home;;;;;;;;;;;;;x
-ml_events_mage.questEndDesc;After an enlightening journey I'm finally home!;;;;;;;;;;;;;x
-ml_events_mage.questEndDangerOpt;This is dangerous and I need to head back home!;;;;;;;;;;;;;x
 ml_events_mage.6;Time to go on a quest!;;;;;;;;;;;;;x
 ml_events_mage.6desc;Great riches and magical knowledge await me!;;;;;;;;;;;;;x
-ml_events_mage.6q0;You see an inn close by;;;;;;;;;;;;;x
-ml_events_mage.6q0desc;You've been on your journey for a few days and see an inn close by.;;;;;;;;;;;;;x
-ml_events_mage.6q1;Meet some fellow adventurers;;;;;;;;;;;;;x
-ml_events_mage.6q1desc;While at the inn you meet a warrior and a rouge who offer to join you on your quest.;;;;;;;;;;;;;x
-ml_events_mage.6q1a;Sure! We'll be safer if we work together!;;;;;;;;;;;;;x
-ml_events_mage.6q1b;I don't need help!;;;;;;;;;;;;;x
-ml_events_mage.6q2;You stop by an inn;;;;;;;;;;;;;x
-ml_events_mage.6q2desc;Your journey takes you to an inn to rest up for a bit after being on the road for so long.;;;;;;;;;;;;;x
+ml_events_mage.7;You see an inn close by;;;;;;;;;;;;;x
+ml_events_mage.7desc;You've been on your journey for a few days and see an inn close by.;;;;;;;;;;;;;x
+ml_events_mage.8;Meet some fellow adventurers;;;;;;;;;;;;;x
+ml_events_mage.8desc;While at the inn you meet a warrior and a rouge who offer to join you on your quest.;;;;;;;;;;;;;x
+ml_events_mage.8a;Sure! We'll be safer if we work together!;;;;;;;;;;;;;x
+ml_events_mage.8b;I don't need help!;;;;;;;;;;;;;x
+ml_events_mage.9;Attacked by bandits!;;;;;;;;;;;;;x
+ml_events_mage.9desc;You and your companions are attacked by bandits! You all work together to counter their ambush!;;;;;;;;;;;;;x
+ml_events_mage.9a;We fought well!;;;;;;;;;;;;;x
+ml_events_mage.10;Attacked by bandits!;;;;;;;;;;;;;x
+ml_events_mage.10desc;You are attacked by bandits! You quickly put up a magical defense to counter their attack!;;;;;;;;;;;;;x
+ml_events_mage.10a;I fought well!;;;;;;;;;;;;;x
+ml_events_mage.11;Adventure!;;;;;;;;;;;;;x
+ml_events_mage.11desc;Your party has travelled far and encountered a mysterious area!;;;;;;;;;;;;;x
+ml_events_mage.11a;We will explore the mysteries of this place!;;;;;;;;;;;;;x
+ml_events_mage.12;Adventure!;;;;;;;;;;;;;x
+ml_events_mage.12desc;You have travelled far and encountered a mysterious area!;;;;;;;;;;;;;x
+ml_events_mage.12a;I will unlock the secrets of this place!;;;;;;;;;;;;;x
+ml_events_mage.13;Finally home;;;;;;;;;;;;;x
+ml_events_mage.13desc;After an enlightening journey I'm finally home!;;;;;;;;;;;;;x
+ml_events_mage.13a;I have learned from my travels!;;;;;;;;;;;;;x
+ml_events_mage.13b;This is dangerous and I need to head back home!;;;;;;;;;;;;;x
+ml_events_mage.14;You can go on another quest!;;;;;;;;;;;;;x
+ml_events_mage.15;Select a random quest!;;;;;;;;;;;;;x

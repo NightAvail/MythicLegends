@@ -26,11 +26,11 @@ ml_trait_immortal = {
 
 ml_trait_lichking = {
     opposites = {
-        immortal
+        ml_trait_immortal
     }
 
-    # You're undead, so no one likes you. Worse yet,
-    # as a lichking you don't like your own kind!
+    # You're undead, so no one likes you, especially
+    # the church!
     church_opinion = -40
     general_opinion = -20
 

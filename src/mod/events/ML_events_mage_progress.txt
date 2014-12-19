@@ -1,0 +1,219 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_mage_progress
+namespace = ml_events_common
+
+# Mage progresses in their talent.
+character_event = {
+    id = "ml_events_mage_progress.1"
+    desc = "ml_events_mage_progress.1desc"
+    picture = GFX_evt_comet
+
+    is_triggered_only = yes
+
+    min_age = 16
+
+    # We not already have progressed to the end
+    # of our abilities.
+    trigger = {
+        trait = ml_trait_magical_blood
+        has_character_flag = ml_flag_choose_mage
+
+        NOT = { trait = ml_trait_air_mage_master }
+        NOT = { trait = ml_trait_earth_mage_master }
+        NOT = { trait = ml_trait_fire_mage_master }
+        NOT = { trait = ml_trait_water_mage_master }
+    }
+
+    immediate = {
+        # Progress as an air mage.
+        if = {
+            limit = {
+                has_character_flag = ml_flag_air_mage
+            }
+
+            character_event = {
+                id = "ml_events_mage_progress.1air"
+            }
+        }
+
+        # Progress as an earth mage.
+        if = {
+            limit = {
+                has_character_flag = ml_flag_earth_mage
+            }
+
+            character_event = {
+                id = "ml_events_mage_progress.1earth"
+            }
+        }
+
+        # Progress as a fire mage.
+        if = {
+            limit = {
+                has_character_flag = ml_flag_fire_mage
+            }
+
+            character_event = {
+                id = "ml_events_mage_progress.1fire"
+            }
+        }
+
+        # Progress as a water mage.
+        if = {
+            limit = {
+                has_character_flag = ml_flag_water_mage
+            }
+
+            character_event = {
+                id = "ml_events_mage_progress.1water"
+            }
+        }
+    }
+
+    # We have progress!
+    option = {
+        name = "ml_events_mage_progress.1a"
+    }
+}
+
+# Mage progresses as an air mage.
+character_event = {
+    id = "ml_events_mage_progress.1air"
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_air_mage_expert }
+
+            remove_trait = ml_trait_air_mage_expert
+            add_trait = ml_trait_air_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_air_mage_apprentice }
+
+            remove_trait = ml_trait_air_mage_apprentice
+            add_trait = ml_trait_air_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_air_mage_beginner }
+
+            remove_trait = ml_trait_air_mage_beginner
+            add_trait = ml_trait_air_mage_apprentice
+        }
+    }
+}
+
+# Mage progresses as an earth mage.
+character_event = {
+    id = "ml_events_mage_progress.1earth"
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_earth_mage_expert }
+
+            remove_trait = ml_trait_earth_mage_expert
+            add_trait = ml_trait_earth_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_earth_mage_apprentice }
+
+            remove_trait = ml_trait_earth_mage_apprentice
+            add_trait = ml_trait_earth_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_earth_mage_beginner }
+
+            remove_trait = ml_trait_earth_mage_beginner
+            add_trait = ml_trait_earth_mage_apprentice
+        }
+    }
+}
+
+# Mage progresses as an fire mage.
+character_event = {
+    id = "ml_events_mage_progress.1fire"
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_fire_mage_expert }
+
+            remove_trait = ml_trait_fire_mage_expert
+            add_trait = ml_trait_fire_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_fire_mage_apprentice }
+
+            remove_trait = ml_trait_fire_mage_apprentice
+            add_trait = ml_trait_fire_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_fire_mage_beginner }
+
+            remove_trait = ml_trait_fire_mage_beginner
+            add_trait = ml_trait_fire_mage_apprentice
+        }
+    }
+}
+
+# Mage progresses as an water mage.
+character_event = {
+    id = "ml_events_mage_progress.1water"
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_water_mage_expert }
+
+            remove_trait = ml_trait_water_mage_expert
+            add_trait = ml_trait_water_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_water_mage_apprentice }
+
+            remove_trait = ml_trait_water_mage_apprentice
+            add_trait = ml_trait_water_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_water_mage_beginner }
+
+            remove_trait = ml_trait_water_mage_beginner
+            add_trait = ml_trait_water_mage_apprentice
+        }
+    }
+}

@@ -465,8 +465,11 @@ ml_trait_water_mage_beginner = {
         ml_trait_water_mage_master
     }
 
-    diplomacy           = 1
-    learning        = 1
+    diplomacy               = 1
+    learning                = 1
+
+    fertility               = 0.1
+    general_opinion         = 5
 
     random = no
     cannot_inherit = yes
@@ -495,8 +498,11 @@ ml_trait_water_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    diplomacy           = 2
-    learning        = 2
+    diplomacy               = 2
+    learning                = 2
+
+    fertility               = 0.1
+    general_opinion         = 10
 
     random = no
     cannot_inherit = yes
@@ -525,8 +531,11 @@ ml_trait_water_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    diplomacy           = 4
-    learning        = 4
+    diplomacy               = 4
+    learning                = 4
+
+    fertility               = 0.15
+    general_opinion         = 15
 
     random = no
     cannot_inherit = yes
@@ -563,8 +572,11 @@ ml_trait_water_mage_master = {
         ml_trait_water_mage_expert
     }
 
-    diplomacy           = 6
-    learning        = 6
+    diplomacy               = 6
+    learning                = 6
+
+    fertility               = 0.15
+    general_opinion         = 20
 
     random = no
     cannot_inherit = yes

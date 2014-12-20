@@ -21,3 +21,5 @@ and water.
 **Water Mages**
     - Increase to diploymacy ability
     - Can cast illusion for a person to like them more (apprentice and above)
+    - Increased fertility
+    - Increased opinion

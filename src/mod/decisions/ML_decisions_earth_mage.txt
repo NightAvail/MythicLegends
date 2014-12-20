@@ -15,9 +15,9 @@ targetted_decisions = {
             trait = ml_trait_magical_blood
 
             OR = {
-                ml_trait_earth_mage_apprentice
-                ml_trait_earth_mage_expert
-                ml_trait_earth_mage_master
+                trait = ml_trait_earth_mage_apprentice
+                trait = ml_trait_earth_mage_expert
+                trait = ml_trait_earth_mage_master
             }
         }
 

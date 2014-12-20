@@ -270,6 +270,32 @@ targetted_decisions = {
         }
     }
 
+    # Bless family member with the gift of immortality.
+    ml_targetted_decision_mage_give_immortality = {
+        ai_target_filter = dynasty
+
+        from_potential = {
+            is_playable = yes
+
+            trait = ml_trait_magical_blood
+            trait = ml_trait_immortal
+        }
+
+        potential = {
+            is_alive = yes
+
+            NOT = { trait = ml_trait_immortal }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        effect = {
+            add_trait = ml_trait_immortal
+        }
+    }
+
     # Change life with a dynasty member!
     # ml_targetted_decision_mage_change_life = {
     #     ai_target_filter = realm #dynasty

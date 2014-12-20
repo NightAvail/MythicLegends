@@ -22,3 +22,5 @@ ml_targetted_decision_mage_change_life;Start new life!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_change_life_desc;Start a new life by taking the targets titles and abdicating your titles to the target!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_give_plague;Plague with sickness!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_give_plague_desc;Plague the target with a terrible sickness!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_give_immortality;Gift Immortality;;;;;;;;;;;;;x
+ml_targetted_decision_mage_give_immortality_desc;Bestow the gift of immortality to this mortal!;;;;;;;;;;;;;x

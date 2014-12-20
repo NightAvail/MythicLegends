@@ -258,8 +258,12 @@ character_event = {
 
         random_list = {
             10 = {
-                add_trait = wounded
-            }
+                if = {
+                    limit = {
+                        NOT = { trait = maimed }
+                    }
+                    add_trait = wounded
+                }
 
             5 = {
                 add_trait = brave
@@ -267,7 +271,7 @@ character_event = {
             }
 
             # Increase skill of the mage
-            5 = {
+            10 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
@@ -323,7 +327,12 @@ character_event = {
 
         random_list = {
             20 = {
-                add_trait = wounded
+                if = {
+                    limit = {
+                        NOT = { trait = maimed }
+                    }
+                    add_trait = wounded
+                }
             }
 
             5 = {
@@ -332,7 +341,7 @@ character_event = {
             }
 
             # Increase skill of the mage
-            10 = {
+            20 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
@@ -386,7 +395,12 @@ character_event = {
 
         random_list = {
             20 = {
-                add_trait = wounded
+                if = {
+                    limit = {
+                        NOT = { trait = maimed }
+                    }
+                    add_trait = wounded
+                }
             }
 
             5 = {
@@ -395,7 +409,7 @@ character_event = {
             }
 
             # Increase skill of the mage
-            10 = {
+            15 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
@@ -451,7 +465,12 @@ character_event = {
 
         random_list = {
             20 = {
-                add_trait = wounded
+                if = {
+                    limit = {
+                        NOT = { trait = maimed }
+                    }
+                    add_trait = wounded
+                }
             }
 
             5 = {
@@ -460,13 +479,13 @@ character_event = {
             }
 
             # Increase skill of the mage
-            10 = {
+            25 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
             }
 
-            10 = {
+            15 = {
                 add_trait = maimed
             }
         }

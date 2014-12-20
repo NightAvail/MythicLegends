@@ -271,7 +271,7 @@ character_event = {
             }
 
             # Increase skill of the mage
-            10 = {
+            5 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
@@ -341,7 +341,7 @@ character_event = {
             }
 
             # Increase skill of the mage
-            20 = {
+            10 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
@@ -409,7 +409,7 @@ character_event = {
             }
 
             # Increase skill of the mage
-            15 = {
+            10 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
@@ -464,7 +464,7 @@ character_event = {
         name = "ml_events_mage.12a"
 
         random_list = {
-            20 = {
+            25 = {
                 if = {
                     limit = {
                         NOT = { trait = maimed }
@@ -479,13 +479,13 @@ character_event = {
             }
 
             # Increase skill of the mage
-            25 = {
+            15 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
             }
 
-            15 = {
+            25 = {
                 add_trait = maimed
             }
         }

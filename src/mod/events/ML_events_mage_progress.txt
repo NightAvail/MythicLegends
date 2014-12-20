@@ -16,13 +16,11 @@ character_event = {
 
     is_triggered_only = yes
 
-    min_age = 16
-
     # We not already have progressed to the end
     # of our abilities.
     trigger = {
         trait = ml_trait_magical_blood
-        has_character_flag = ml_flag_choose_mage
+        has_character_flag = ml_flag_chose_mage_class
 
         NOT = { trait = ml_trait_air_mage_master }
         NOT = { trait = ml_trait_earth_mage_master }
@@ -38,7 +36,7 @@ character_event = {
             }
 
             character_event = {
-                id = "ml_events_mage_progress.1air"
+                id = "ml_events_mage_progress.2"
             }
         }
 
@@ -49,7 +47,7 @@ character_event = {
             }
 
             character_event = {
-                id = "ml_events_mage_progress.1earth"
+                id = "ml_events_mage_progress.3"
             }
         }
 
@@ -60,7 +58,7 @@ character_event = {
             }
 
             character_event = {
-                id = "ml_events_mage_progress.1fire"
+                id = "ml_events_mage_progress.4"
             }
         }
 
@@ -71,7 +69,7 @@ character_event = {
             }
 
             character_event = {
-                id = "ml_events_mage_progress.1water"
+                id = "ml_events_mage_progress.5"
             }
         }
     }
@@ -84,7 +82,7 @@ character_event = {
 
 # Mage progresses as an air mage.
 character_event = {
-    id = "ml_events_mage_progress.1air"
+    id = "ml_events_mage_progress.2"
     hide_window = yes
 
     is_triggered_only = yes
@@ -118,7 +116,7 @@ character_event = {
 
 # Mage progresses as an earth mage.
 character_event = {
-    id = "ml_events_mage_progress.1earth"
+    id = "ml_events_mage_progress.3"
     hide_window = yes
 
     is_triggered_only = yes
@@ -152,7 +150,7 @@ character_event = {
 
 # Mage progresses as an fire mage.
 character_event = {
-    id = "ml_events_mage_progress.1fire"
+    id = "ml_events_mage_progress.4"
     hide_window = yes
 
     is_triggered_only = yes
@@ -186,7 +184,7 @@ character_event = {
 
 # Mage progresses as an water mage.
 character_event = {
-    id = "ml_events_mage_progress.1water"
+    id = "ml_events_mage_progress.5"
     hide_window = yes
 
     is_triggered_only = yes
@@ -220,8 +218,8 @@ character_event = {
 
 # Mage progresses in arcane knowledge.
 character_event = {
-    id = "ml_events_mage_progress.2"
-    desc = "ml_events_mage_progress.2desc"
+    id = "ml_events_mage_progress.6"
+    desc = "ml_events_mage_progress.6desc"
     picture = GFX_evt_library
 
     ai = no

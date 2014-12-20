@@ -37,3 +37,6 @@ Various flags used to determine the state of the character.
 
 - **ml_flag_spellbook_open**
     - Spellbook is open
+
+- **ml_flag_has_active_spell**
+    - Flag telling us we currently have an active spell activated

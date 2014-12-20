@@ -37,8 +37,8 @@ decisions = {
         }
 
         revoke_allowed = {
-			always = no
-		}
+            always = no
+        }
 
         effect = {
             hidden_tooltip = {
@@ -69,8 +69,8 @@ decisions = {
         }
 
         revoke_allowed = {
-			always = no
-		}
+            always = no
+        }
 
         effect = {
             hidden_tooltip = {
@@ -101,8 +101,8 @@ decisions = {
         }
 
         revoke_allowed = {
-			always = no
-		}
+            always = no
+        }
 
         effect = {
             hidden_tooltip = {
@@ -133,8 +133,8 @@ decisions = {
         }
 
         revoke_allowed = {
-			always = no
-		}
+            always = no
+        }
 
         effect = {
             hidden_tooltip = {
@@ -165,8 +165,8 @@ decisions = {
         }
 
         revoke_allowed = {
-			always = no
-		}
+            always = no
+        }
 
         effect = {
             hidden_tooltip = {
@@ -214,8 +214,8 @@ decisions = {
         }
 
         revoke_allowed = {
-			always = no
-		}
+            always = no
+        }
 
         effect = {
             hidden_tooltip = {

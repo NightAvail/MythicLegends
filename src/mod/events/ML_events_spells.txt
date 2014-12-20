@@ -1,0 +1,58 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_spell
+namespace = ml_events_common
+
+# Activate the buff spell
+character_event = {
+    id = "ml_events_spells.1"
+    desc = "ml_events_spells.1desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should not have magical blood!
+    trigger = {
+        trait = ml_trait_magical_blood
+    }
+
+    # Choose to become a mage with magical blood.
+    option = {
+        name = "ml_events_mage.1a"
+
+        add_trait = ml_trait_magical_blood
+
+        set_character_flag = ml_flag_choose_mage
+    }
+
+    # Choose not to become a mage.
+    option = {
+        name = "ml_events_mage.1b"
+
+        set_character_flag = ml_flag_choose_not_mage
+    }
+}
+
+# Deactivate active spells
+character_event = {
+    id = "ml_events_spells.0"
+    desc = "ml_events_spells.0desc"
+
+    hide_window = yes
+
+    trigger = {
+        trait = ml_trait_magical_blood
+
+        has_character_flag = ml_flag_has_active_spell
+    }
+
+    option = {        
+        clr_character_flag = ml_flag_has_active_spell
+    }
+}

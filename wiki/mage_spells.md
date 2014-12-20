@@ -22,9 +22,9 @@ once another **active** spell is cast.
         - Once set to active will allow the player to curse someone else with
           a plague.
     - Prosper Spell ```active spell```
-        - Increases local tax modifier (up to 40%)
+        - Increases global tax modifier (up to 40%)
     - Life Change Spell ```active spell```
-        - Has a 2-year cooldown
+        - Has a 10-year cooldown
         - Once set to active will allow the player to take another player's
           titles and then give up all their titles to an heir. Starts a whole
           new life for the player.

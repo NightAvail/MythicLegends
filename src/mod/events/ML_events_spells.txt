@@ -5,13 +5,12 @@
 # Author:  NightAvail
 #######################################################
 
-namespace = ml_events_spell
+namespace = ml_events_spells
 namespace = ml_events_common
 
 # Activate the buff spell
 character_event = {
     id = "ml_events_spells.1"
-    desc = "ml_events_spells.1desc"
 
     hide_window = yes
 
@@ -23,14 +22,13 @@ character_event = {
     }
 
     # Activate the spell based on arcane level.
-    option = {
-        name = "ml_events_spells.1a"
-
+    immediate = {
         # Beginner
         if = {
             limit = { trait = ml_trait_arcane_spell_beginner }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_buff_1"
+                days = -1
             }
         }
 
@@ -39,6 +37,7 @@ character_event = {
             limit = { trait = ml_trait_arcane_spell_apprentice }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_buff_2"
+                days = -1
             }
         }
 
@@ -47,6 +46,7 @@ character_event = {
             limit = { trait = ml_trait_arcane_spell_expert }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_buff_3"
+                days = -1
             }
         }
 
@@ -55,17 +55,22 @@ character_event = {
             limit = { trait = ml_trait_arcane_spell_master }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_buff_4"
+                days = -1
             }
         }
 
         set_character_flag = ml_flag_active_buff_spell
     }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Activate the healing spell
 character_event = {
-    id = "ml_events_spells.1"
-    desc = "ml_events_spells.1desc"
+    id = "ml_events_spells.2"
 
     hide_window = yes
 
@@ -77,8 +82,8 @@ character_event = {
     }
 
     # Activate the spell based on arcane level.
-    option = {
-        name = "ml_events_spells.1a"
+    immediate = {
+        set_character_flag = ml_flag_recent_healing_spell
 
         # Beginner
         if = {
@@ -157,9 +162,6 @@ character_event = {
         # Expert
         if = {
             limit = { trait = ml_trait_arcane_spell_expert }
-            add_character_modifier = {
-                name = "ml_event_modifiers_spells_buff_3"
-            }
 
             # Remove Sickness
             if = {
@@ -273,9 +275,6 @@ character_event = {
         # Master
         if = {
             limit = { trait = ml_trait_arcane_spell_master }
-            add_character_modifier = {
-                name = "ml_event_modifiers_spells_buff_4"
-            }
 
             # Remove Sickness
             if = {
@@ -419,41 +418,42 @@ character_event = {
                 remove_trait = scarred
             }
         }
+    }
 
-        set_character_flag = ml_flag_active_healing_spell
+    # Default option
+    option = {
+        name = ml_events_common.ok
 
         # Spell cooldown
         character_event = {
             id = "ml_events_spells.3"
-            years = 1
+            days = 365
         }
     }
 }
 
 # Clear healing cooldown
 character_event = {
-    id = "ml_events_spell.3"
-    desc = "ml_events_spell.3desc"
+    id = "ml_events_spells.3"
 
     hide_window = yes
 
     is_triggered_only = yes
 
     trigger = {
-        has_character_flag = ml_flag_active_healing_spell
+        has_character_flag = ml_flag_recent_healing_spell
     }
 
-    immediate = {
-        clr_character_flag = ml_flag_active_healing_spell
+    # Default option
+    option = {
+        clr_character_flag = ml_flag_recent_healing_spell
+        name = ml_events_common.ok
     }
-
-    option = {}
 }
 
 # Player activates plague spell.
 character_event = {
-    id = "ml_events_spell.4"
-    desc = "ml_events_spell.4desc"
+    id = "ml_events_spells.4"
 
     hide_window = yes
 
@@ -464,24 +464,26 @@ character_event = {
         trait = ml_trait_magical_blood
     }
 
-    option = {
-        name = "ml_events_spell.4a"
-
+    immediate = {
         set_character_flag = ml_flag_active_plague_spell
         set_character_flag = ml_flag_recent_plague_spell
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
 
         # Spell cooldown
         character_event = {
             id = "ml_events_spells.5"
-            years = 2
+            days = 730
         }
     }
 }
 
 # Clear plague spell cooldown
 character_event = {
-    id = "ml_events_spell.5"
-    desc = "ml_events_spell.5desc"
+    id = "ml_events_spells.5"
 
     hide_window = yes
 
@@ -495,13 +497,15 @@ character_event = {
         clr_character_flag = ml_flag_recent_plague_spell
     }
 
-    option = {}
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Activate the prosper spell
 character_event = {
     id = "ml_events_spells.6"
-    desc = "ml_events_spells.6desc"
 
     hide_window = yes
 
@@ -513,14 +517,13 @@ character_event = {
     }
 
     # Activate the spell based on arcane level.
-    option = {
-        name = "ml_events_spells.6a"
-
+    immediate = {
         # Beginner
         if = {
             limit = { trait = ml_trait_arcane_spell_beginner }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_prosper_1"
+                days = -1
             }
         }
 
@@ -529,6 +532,7 @@ character_event = {
             limit = { trait = ml_trait_arcane_spell_apprentice }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_prosper_2"
+                days = -1
             }
         }
 
@@ -537,6 +541,7 @@ character_event = {
             limit = { trait = ml_trait_arcane_spell_expert }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_prosper_3"
+                days = -1
             }
         }
 
@@ -545,17 +550,22 @@ character_event = {
             limit = { trait = ml_trait_arcane_spell_master }
             add_character_modifier = {
                 name = "ml_event_modifiers_spells_prosper_4"
+                days = -1
             }
         }
 
         set_character_flag = ml_flag_active_prosper_spell
     }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Player activates life change spell.
 character_event = {
-    id = "ml_events_spell.7"
-    desc = "ml_events_spell.7desc"
+    id = "ml_events_spells.7"
 
     hide_window = yes
 
@@ -566,24 +576,26 @@ character_event = {
         trait = ml_trait_magical_blood
     }
 
-    option = {
-        name = "ml_events_spell.7a"
-
+    immediate = {
         set_character_flag = ml_flag_active_lifechange_spell
         set_character_flag = ml_flag_recent_lifechange_spell
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
 
         # Spell cooldown
         character_event = {
             id = "ml_events_spells.8"
-            years = 2
+            days = 3650
         }
     }
 }
 
 # Clear life change spell cooldown
 character_event = {
-    id = "ml_events_spell.8"
-    desc = "ml_events_spell.8desc"
+    id = "ml_events_spells.8"
 
     hide_window = yes
 
@@ -597,13 +609,15 @@ character_event = {
         clr_character_flag = ml_flag_recent_lifechange_spell
     }
 
-    option = {}
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Player casts summoning spell.
 character_event = {
-    id = "ml_events_spell.9"
-    desc = "ml_events_spell.9desc"
+    id = "ml_events_spells.9"
 
     hide_window = yes
 
@@ -766,25 +780,25 @@ character_event = {
                 }
             }
         }
-    }
-
-    option = {
-        name = "ml_events_spell.9a"
 
         set_character_flag = ml_flag_recent_summon_spell
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
 
         # Spell cooldown
         character_event = {
             id = "ml_events_spells.10"
-            years = 4
+            days = 1460
         }
     }
 }
 
 # Clear summoning spell cooldown
 character_event = {
-    id = "ml_events_spell.10"
-    desc = "ml_events_spell.10desc"
+    id = "ml_events_spells.10"
 
     hide_window = yes
 
@@ -798,13 +812,15 @@ character_event = {
         clr_character_flag = ml_flag_recent_summon_spell
     }
 
-    option = {}
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Deactivate active spells
 character_event = {
     id = "ml_events_spells.0"
-    desc = "ml_events_spells.0desc"
 
     hide_window = yes
 
@@ -869,6 +885,8 @@ character_event = {
         clr_character_flag = ml_flag_active_lifechange_spell
     }
 
+    # Default option
     option = {
+        name = ml_events_common.ok
     }
 }

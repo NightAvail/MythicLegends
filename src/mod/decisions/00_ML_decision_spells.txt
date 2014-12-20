@@ -13,7 +13,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
-            has_trait = ml_flag_chose_mage_class
+            has_character_flag = ml_flag_chose_mage_class
 
             NOT = {
                 has_character_flag = ml_flag_spellbook_open
@@ -40,7 +40,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
-            has_trait = ml_flag_chose_mage_class
+            has_character_flag = ml_flag_chose_mage_class
             has_character_flag = ml_flag_spellbook_open
         }
 
@@ -62,6 +62,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
+            has_character_flag = ml_flag_chose_mage_class
             has_character_flag = ml_flag_spellbook_open
 
             NOT = { has_character_flag = ml_flag_active_buff_spell }
@@ -78,14 +79,12 @@ decisions = {
         effect = {
             # Deactivate current spells.
             character_event = {
-                id = "ml_events_spell.0"
-                days = 1
+                id = "ml_events_spells.0"
             }
 
             # Activate spell.
             character_event = {
-                id = "ml_events_spell.1"
-                days = 5
+                id = "ml_events_spells.1"
             }
         }
     }
@@ -95,6 +94,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
+            has_character_flag = ml_flag_chose_mage_class
             has_character_flag = ml_flag_spellbook_open
 
             NOT = { has_character_flag = ml_flag_recent_healing_spell }
@@ -110,7 +110,7 @@ decisions = {
 
         effect = {
             character_event = {
-                id = "ml_events_spell.2"
+                id = "ml_events_spells.2"
             }
         }
     }
@@ -120,6 +120,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
+            has_character_flag = ml_flag_chose_mage_class
             has_character_flag = ml_flag_spellbook_open
 
             NOT = { has_character_flag = ml_flag_active_plague_spell }
@@ -141,14 +142,12 @@ decisions = {
         effect = {
             # Deactivate current spells.
             character_event = {
-                id = "ml_events_spell.0"
-                days = 1
+                id = "ml_events_spells.0"
             }
 
             # Activate spell.
             character_event = {
-                id = "ml_events_spell.4"
-                days = 5
+                id = "ml_events_spells.4"
             }
         }
     }
@@ -158,6 +157,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
+            has_character_flag = ml_flag_chose_mage_class
             has_character_flag = ml_flag_spellbook_open
 
             NOT = { has_character_flag = ml_flag_active_prosper_spell }
@@ -174,14 +174,12 @@ decisions = {
         effect = {
             # Deactivate current spells.
             character_event = {
-                id = "ml_events_spell.0"
-                days = 1
+                id = "ml_events_spells.0"
             }
 
             # Activate spell.
             character_event = {
-                id = "ml_events_spell.6"
-                days = 5
+                id = "ml_events_spells.6"
             }
         }
     }
@@ -191,6 +189,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
+            has_character_flag = ml_flag_chose_mage_class
             has_character_flag = ml_flag_spellbook_open
 
             NOT = { has_character_flag = ml_flag_active_lifechange_spell }
@@ -212,14 +211,12 @@ decisions = {
         effect = {
             # Deactivate current spells.
             character_event = {
-                id = "ml_events_spell.0"
-                days = 1
+                id = "ml_events_spells.0"
             }
 
             # Activate spell.
             character_event = {
-                id = "ml_events_spell.7"
-                days = 5
+                id = "ml_events_spells.7"
             }
         }
     }
@@ -229,6 +226,7 @@ decisions = {
         potential = {
             trait = ml_trait_magical_blood
 
+            has_character_flag = ml_flag_chose_mage_class
             has_character_flag = ml_flag_spellbook_open
 
             NOT = { has_character_flag = ml_flag_recent_summon_spell }
@@ -244,7 +242,7 @@ decisions = {
 
         effect = {
             character_event = {
-                id = "ml_events_spell.9"
+                id = "ml_events_spells.9"
             }
         }
     }

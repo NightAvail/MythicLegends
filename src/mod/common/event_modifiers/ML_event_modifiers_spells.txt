@@ -68,27 +68,27 @@ ml_event_modifiers_spells_buff_4 = {
 # Active prosper spell modifier.
 # Level 1 Arcane Knowledge
 ml_event_modifiers_spells_prosper_1 = {
-    local_tax_modifier      = 0.2
+    global_tax_modifier     = 0.2
     icon                    = 6
 }
 
 # Active prosper spell modifier.
 # Level 2 Arcane Knowledge
 ml_event_modifiers_spells_prosper_2 = {
-    local_tax_modifier      = 0.25
+    global_tax_modifier     = 0.25
     icon                    = 6
 }
 
 # Active prosper spell modifier.
 # Level 3 Arcane Knowledge
 ml_event_modifiers_spells_prosper_3 = {
-    local_tax_modifier      = 0.35
+    global_tax_modifier     = 0.35
     icon                    = 6
 }
 
 # Active prosper spell modifier.
 # Level 4 Arcane Knowledge
 ml_event_modifiers_spells_prosper_4 = {
-    local_tax_modifier      = 0.4
+    global_tax_modifier     = 0.4
     icon                    = 6
 }

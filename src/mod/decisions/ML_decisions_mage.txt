@@ -271,42 +271,49 @@ targetted_decisions = {
     }
 
     # Change life with a dynasty member!
-    ml_targetted_decision_mage_change_life = {
-        ai_target_filter = realm #dynasty
-
-        from_potential = {
-            is_playable = yes
-            trait = ml_trait_magical_blood
-
-            has_character_flag = ml_flag_active_lifechange_spell
-
-            NOT = {
-                has_character_flag = ml_flag_recent_lifechange_spell
-            }
-        }
-
-        potential = {
-            is_alive = yes
-        }
-
-        revoke_allowed = {
-			always = no
-		}
-
-        effect = {
-            FROM = {
-                abdicate = yes
-
-                gain_all_occupied_titles = ROOT
-
-                set_character_flag = ml_flag_recent_lifechange_spell
-
-                # Spell cooldown
-                character_event = {
-                    id = "ml_events_spells.8"
-                    days = 3650
-                }
-            }
-        }
-    }
+    # ml_targetted_decision_mage_change_life = {
+    #     ai_target_filter = realm #dynasty
+    #
+    #     from_potential = {
+    #         is_playable = yes
+    #         trait = ml_trait_magical_blood
+    #
+    #         has_character_flag = ml_flag_active_lifechange_spell
+    #
+    #         NOT = {
+    #             has_character_flag = ml_flag_recent_lifechange_spell
+    #         }
+    #     }
+    #
+    #     potential = {
+    #         is_alive = yes
+    #     }
+    #
+    #     revoke_allowed = {
+	# 		always = no
+	# 	}
+    #
+    #     effect = {
+    #         FROM = {
+    #             abdicate = yes
+    #
+    #             gain_all_occupied_titles = ROOT
+    #
+    #             # create_title = {
+    #             #     name = "K_MLTEMPTITLE"
+    #             #     tier = KING
+    #             #     holder = THIS
+    #             #     landess = yes
+    #             # }
+    #
+    #             set_character_flag = ml_flag_recent_lifechange_spell
+    #
+    #             # Spell cooldown
+    #             character_event = {
+    #                 id = "ml_events_spells.8"
+    #                 days = 3650
+    #             }
+    #         }
+    #     }
+    # }
 }

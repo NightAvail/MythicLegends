@@ -217,3 +217,47 @@ character_event = {
         }
     }
 }
+
+# Mage progresses in arcane knowledge.
+character_event = {
+    id = "ml_events_mage_progress.2"
+    desc = "ml_events_mage_progress.2desc"
+    picture = GFX_evt_library
+
+    ai = no
+
+    # Every 4 years.
+    mean_time_to_happen = {
+        months = 48
+    }
+
+    immediate = {
+        # Master arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_expert }
+
+            remove_trait = ml_trait_arcane_spell_expert
+            add_trait = ml_trait_arcane_spell_master
+        }
+
+        # Expert arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_apprentice }
+
+            remove_trait = ml_trait_arcane_spell_apprentice
+            add_trait = ml_trait_arcane_spell_expert
+        }
+
+        # Apprentice arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_beginner }
+
+            remove_trait = ml_trait_arcane_spell_beginner
+            add_trait = ml_trait_arcane_spell_apprentice
+        }
+    }
+
+    option = {
+        name = "ml_events_common.great"
+    }
+}

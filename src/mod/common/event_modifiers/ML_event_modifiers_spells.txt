@@ -6,6 +6,31 @@
 #######################################################
 
 #######################################################
+# Combat Modifiers
+#######################################################
+
+# Cursed during battle
+ml_event_modifiers_combat_cursed = {
+    health          = -2
+	fertility       = -0.5
+	martial         = -10
+	diplomacy       = -5
+	stewardship     = -5
+	intrigue        = -5
+	learning        = -5
+
+    icon            = 40
+}
+
+# Firestorm during battle
+# ml_event_modifiers_combat_firestorm = {
+#     martial         = 5
+#     morale_offence  = 0.9
+#     siege_speed     = 0.3
+#     icon            = 1
+# }
+
+#######################################################
 # Buff Spell Modifiers
 #######################################################
 

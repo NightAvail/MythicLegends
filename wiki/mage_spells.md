@@ -23,12 +23,6 @@ once another **active** spell is cast.
           a plague.
     - Prosper Spell ```active spell```
         - Increases global tax modifier (up to 40%)
-    - Life Change Spell ```active spell```
-        - **Can only target dynasty members!!!**
-        - Has a 10-year cooldown
-        - Once set to active will allow the player to take another player's
-          titles and then give up all their titles to an heir. Starts a whole
-          new life for the player.
     - Summon Spell
         - Can only cast during war-time
         - Has a 4-year cooldown

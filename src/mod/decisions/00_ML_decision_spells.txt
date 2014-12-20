@@ -230,41 +230,41 @@ decisions = {
     }
 
     # Activate life change spell.
-    ml_decision_spells_activate_life_change = {
-        potential = {
-            trait = ml_trait_magical_blood
-
-            has_character_flag = ml_flag_chose_mage_class
-            has_character_flag = ml_flag_spellbook_open
-
-            NOT = { has_character_flag = ml_flag_active_lifechange_spell }
-            NOT = { has_character_flag = ml_flag_recent_lifechange_spell }
-        }
-
-        allow = {
-            prisoner = no
-        }
-
-        ai_will_do = {
-            factor = 0
-        }
-
-        revoke_allowed = {
-            always = no
-        }
-
-        effect = {
-            # Deactivate current spells.
-            character_event = {
-                id = "ml_events_spells.0"
-            }
-
-            # Activate spell.
-            character_event = {
-                id = "ml_events_spells.7"
-            }
-        }
-    }
+    # ml_decision_spells_activate_life_change = {
+    #     potential = {
+    #         trait = ml_trait_magical_blood
+    #
+    #         has_character_flag = ml_flag_chose_mage_class
+    #         has_character_flag = ml_flag_spellbook_open
+    #
+    #         NOT = { has_character_flag = ml_flag_active_lifechange_spell }
+    #         NOT = { has_character_flag = ml_flag_recent_lifechange_spell }
+    #     }
+    #
+    #     allow = {
+    #         prisoner = no
+    #     }
+    #
+    #     ai_will_do = {
+    #         factor = 0
+    #     }
+    #
+    #     revoke_allowed = {
+    #         always = no
+    #     }
+    #
+    #     effect = {
+    #         # Deactivate current spells.
+    #         character_event = {
+    #             id = "ml_events_spells.0"
+    #         }
+    #
+    #         # Activate spell.
+    #         character_event = {
+    #             id = "ml_events_spells.7"
+    #         }
+    #     }
+    # }
 
     # Cast summoning spell.
     ml_decision_spells_summon = {

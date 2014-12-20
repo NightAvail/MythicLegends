@@ -7,3 +7,7 @@ ml_event_modifiers_spells_prosper_1;Activated Prosper Spell;;;;;;;;;;;;;x
 ml_event_modifiers_spells_prosper_2;Activated Prosper Spell;;;;;;;;;;;;;x
 ml_event_modifiers_spells_prosper_3;Activated Prosper Spell;;;;;;;;;;;;;x
 ml_event_modifiers_spells_prosper_4;Activated Prosper Spell;;;;;;;;;;;;;x
+ml_event_modifiers_combat_cursed;Cursed!;;;;;;;;;;;;;x
+ml_event_modifiers_combat_cursed_desc;This person was cursed by a mage!;;;;;;;;;;;;;x
+ml_event_modifiers_combat_firestorm;Firestorm Combat;;;;;;;;;;;;;x
+ml_event_modifiers_combat_firestorm_desc;This mage has summoned a firestorm for combat!;;;;;;;;;;;;;x

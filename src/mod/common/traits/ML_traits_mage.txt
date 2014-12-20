@@ -325,7 +325,6 @@ ml_trait_fire_mage_beginner = {
     command_modifier = {
         morale_offence = 0.1
         morale_defence = 0.1
-        siege_speed = 0.1
     }
 }
 ml_trait_fire_mage_apprentice = {
@@ -361,7 +360,6 @@ ml_trait_fire_mage_apprentice = {
     command_modifier = {
         morale_offence = 0.2
         morale_defence = 0.2
-        siege_speed = 0.2
     }
 }
 ml_trait_fire_mage_expert = {
@@ -400,7 +398,6 @@ ml_trait_fire_mage_expert = {
     command_modifier = {
         morale_offence = 0.4
         morale_defence = 0.4
-        siege_speed = 0.3
     }
 }
 ml_trait_fire_mage_master = {
@@ -439,7 +436,6 @@ ml_trait_fire_mage_master = {
     command_modifier = {
         morale_offence = 0.8
         morale_defence = 0.8
-        siege_speed = 0.4
     }
 }
 

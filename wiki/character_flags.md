@@ -68,3 +68,11 @@ Various flags used to determine the state of the character.
 - **ml_flag_recent_healing_spell**
     - Flag letting us know we recently activated the healing spell
     - Has 1-year cooldown
+
+- **ml_flag_recent_cast_sickness**
+    - Flag for air mages that have casted the sickness spell
+    - Has 1-year cooldown
+
+- **ml_flag_recent_cast_illusion**
+    - Flag for water mages that have casted the illusion (charm) spell
+    - Has 1-year cooldown

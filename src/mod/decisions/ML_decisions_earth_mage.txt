@@ -1,0 +1,105 @@
+#######################################################
+# Mythic Legends
+# Decisions
+#
+# Author:  NightAvail
+#######################################################
+
+targetted_decisions = {
+    # Heal another person
+    ml_targetted_decision_mage_heal_sick = {
+        ai_target_filter = realm
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+
+            OR = {
+                ml_trait_earth_mage_apprentice
+                ml_trait_earth_mage_expert
+                ml_trait_earth_mage_master
+            }
+        }
+
+        potential = {
+            OR = {
+                trait = ill
+                trait = wounded
+                trait = pneumonic
+                trait = syphilitic
+                trait = leper
+                trait = has_tuberculosis
+                trait = has_typhoid_fever
+                trait = has_typhus
+                trait = has_measles
+                trait = has_small_pox
+            }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            opinion = {
+                modifier = ml_opinion_modifiers_recently_healed
+                WHO = FROM
+                days = 730
+            }
+
+            if = {
+                limit = { trait = ill }
+                remove_trait = ill
+            }
+
+            if = {
+                limit = { trait = wounded }
+                remove_trait = wounded
+            }
+
+            if = {
+                limit = { trait = pneumonic }
+                remove_trait = pneumonic
+            }
+
+            if = {
+                limit = { trait = syphilitic }
+                remove_trait = syphilitic
+            }
+
+            if = {
+                limit = { trait = leper }
+                remove_trait = leper
+            }
+
+            if = {
+                limit = { trait = has_tuberculosis }
+                remove_trait = has_tuberculosis
+            }
+
+            if = {
+                limit = { trait = has_typhoid_fever }
+                remove_trait = has_typhoid_fever
+            }
+
+            if = {
+                limit = { trait = has_typhus }
+                remove_trait = has_typhus
+            }
+
+            if = {
+                limit = { trait = has_measles }
+                remove_trait = has_measles
+            }
+
+            if = {
+                limit = { trait = has_small_pox }
+                remove_trait = has_small_pox
+            }
+        }
+    }
+}

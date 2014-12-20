@@ -12,3 +12,13 @@ ml_decision_mage_choose_fire_element;Become a fire mage;;;;;;;;;;;;;x
 ml_decision_mage_choose_fire_element_desc;Learn to master the destructive power of fire!;;;;;;;;;;;;;x
 ml_decision_mage_choose_water_element;Become a water mage;;;;;;;;;;;;;x
 ml_decision_mage_choose_water_element_desc;Learn to master the healing power of water!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_cast_sickness;Curse with illness!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_cast_sickness_desc;Curse target to be ill!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_sick;Cure wounds and illness!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_sick_desc;Cure target of wounds and most illnesses!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_cast_illusion;Cast charm spell!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_cast_illusion_desc;Charm target with an illusion!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_change_life;Start new life!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_change_life_desc;Start a new life by taking the targets titles and abdicating your titles to the target!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_give_plague;Plague with sickness!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_give_plague_desc;Plague the target with a terrible sickness!;;;;;;;;;;;;;x

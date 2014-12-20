@@ -1,0 +1,51 @@
+#######################################################
+# Mythic Legends
+# Decisions
+#
+# Author:  NightAvail
+#######################################################
+
+targetted_decisions = {
+    # Cast sickness on a target
+    ml_targetted_decision_mage_cast_sickness = {
+        ai_target_filter = realm
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+
+            OR = {
+                ml_trait_air_mage_apprentice
+                ml_trait_air_mage_expert
+                ml_trait_air_mage_master
+            }
+
+            NOT = {
+                has_character_flag = ml_flag_recent_cast_sickness
+            }
+        }
+
+        potential = {
+            NOT = {
+                trait = ill
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        effect = {
+            add_trait = ill
+
+            FROM = {
+                set_character_flag = ml_flag_recent_cast_sickness
+
+                character_event = {
+                    id = "ml_events_spells.12"
+                    days = 365
+                }
+            }
+        }
+    }
+}

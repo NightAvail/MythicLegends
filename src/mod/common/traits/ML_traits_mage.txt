@@ -316,6 +316,7 @@ ml_trait_fire_mage_beginner = {
     }
 
     martial           = 1
+    health            = 1
 
     random = no
     cannot_inherit = yes
@@ -351,6 +352,7 @@ ml_trait_fire_mage_apprentice = {
     }
 
     martial               = 2
+    health                = 2
 
     random = no
     cannot_inherit = yes
@@ -386,6 +388,7 @@ ml_trait_fire_mage_expert = {
     }
 
     martial           = 4
+    health            = 3
 
     random = no
     cannot_inherit = yes
@@ -424,6 +427,7 @@ ml_trait_fire_mage_master = {
     }
 
     martial           = 6
+    health            = 4
 
     random = no
     cannot_inherit = yes

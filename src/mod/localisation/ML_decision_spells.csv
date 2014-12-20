@@ -1,5 +1,7 @@
 ml_decision_spells_unknown;Unknown;;;;;;;;;;;;;x
 ml_decision_spells_unknown_desc;Unknown;;;;;;;;;;;;;x
+ml_decision_spells_immortal;Become Immortal!;;;;;;;;;;;;;x
+ml_decision_spells_immortal_desc;Perform spell to become an immortal!;;;;;;;;;;;;;x
 ml_decision_spells_activate_buff;Activate Buff Spell;;;;;;;;;;;;;x
 ml_decision_spells_activate_buff_desc;Deactivates current spell and increases all base stats depending on arcane level;;;;;;;;;;;;;x
 ml_decision_spells_cast_healing;Cast Healing Spell;;;;;;;;;;;;;x

@@ -1,0 +1,52 @@
+#######################################################
+# Mythic Legends
+# Decisions
+#
+# Author:  NightAvail
+#######################################################
+
+targetted_decisions = {
+    # Cast illusion to make person like you more!
+    ml_targetted_decision_mage_cast_illusion = {
+        ai_target_filter = realm
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+
+            OR = {
+                ml_trait_water_mage_apprentice
+                ml_trait_water_mage_expert
+                ml_trait_water_mage_master
+            }
+
+            NOT = {
+                has_character_flag = ml_flag_recent_cast_illusion
+            }
+        }
+
+        potential = {
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        effect = {
+            opinion = {
+                modifier = ml_opinion_modifiers_illusion_charm
+                WHO = FROM
+                days = 730
+            }
+
+            FROM = {
+                set_character_flag = ml_flag_recent_cast_illusion
+
+                character_event = {
+                    id = "ml_events_spells.13"
+                    days = 365
+                }
+            }
+        }
+    }
+}

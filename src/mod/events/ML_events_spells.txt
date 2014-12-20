@@ -8,6 +8,27 @@
 namespace = ml_events_spells
 namespace = ml_events_common
 
+# Become immortal
+character_event = {
+    id = "ml_events_spells.11"
+    desc = "ml_events_spells.11desc"
+    picture = GFX_evt_garden
+
+    is_triggered_only = yes
+
+    trigger = {
+        trait = ml_trait_magical_blood
+
+        NOT = { trait = ml_trait_immortal }
+    }
+
+    option = {
+        name = "ml_events_spells.11a"
+
+        add_trait = ml_trait_immortal
+    }
+}
+
 # Activate the buff spell
 character_event = {
     id = "ml_events_spells.1"
@@ -466,18 +487,11 @@ character_event = {
 
     immediate = {
         set_character_flag = ml_flag_active_plague_spell
-        set_character_flag = ml_flag_recent_plague_spell
     }
 
     # Default option
     option = {
-        name = ml_events_common.ok
-
-        # Spell cooldown
-        character_event = {
-            id = "ml_events_spells.5"
-            days = 730
-        }
+        name = ml_events_common.ok        
     }
 }
 
@@ -578,18 +592,11 @@ character_event = {
 
     immediate = {
         set_character_flag = ml_flag_active_lifechange_spell
-        set_character_flag = ml_flag_recent_lifechange_spell
     }
 
     # Default option
     option = {
         name = ml_events_common.ok
-
-        # Spell cooldown
-        character_event = {
-            id = "ml_events_spells.8"
-            days = 3650
-        }
     }
 }
 
@@ -810,6 +817,50 @@ character_event = {
 
     immediate = {
         clr_character_flag = ml_flag_recent_summon_spell
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
+}
+
+# Clear air mage sickness spell cooldown
+character_event = {
+    id = "ml_events_spells.12"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_recent_cast_sickness
+    }
+
+    immediate = {
+        clr_character_flag = ml_flag_recent_cast_sickness
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
+}
+
+# Clear water mage illusion charm spell cooldown
+character_event = {
+    id = "ml_events_spells.13"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_recent_cast_illusion
+    }
+
+    immediate = {
+        clr_character_flag = ml_flag_recent_cast_illusion
     }
 
     # Default option

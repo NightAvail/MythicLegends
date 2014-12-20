@@ -1,0 +1,17 @@
+#######################################################
+# Mythic Legends
+# Opinion Modifiers
+#
+# Author:  NightAvail
+#######################################################
+
+# Recently healed by earth mage
+ml_opinion_modifiers_recently_healed = {
+    opinion = 20
+}
+
+
+# Illusion charm spell for water mages.
+ml_opinion_modifiers_illusion_charm = {
+    opinion = 50    
+}

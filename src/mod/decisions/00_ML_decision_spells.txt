@@ -57,6 +57,51 @@ decisions = {
         }
     }
 
+    #######################################################
+    # Become immortal
+    #######################################################
+    ml_decision_spells_immortal = {
+        potential = {
+            trait = ml_trait_magical_blood
+
+            OR = {
+                trait = ml_trait_air_mage_expert
+                trait = ml_trait_air_mage_master
+
+                trait = ml_trait_earth_mage_expert
+                trait = ml_trait_earth_mage_master
+
+                trait = ml_trait_fire_mage_expert
+                trait = ml_trait_fire_mage_master
+
+                trait = ml_trait_water_mage_expert
+                trait = ml_trait_water_mage_master
+            }
+
+            has_character_flag = ml_flag_chose_mage_class
+            has_character_flag = ml_flag_spellbook_open
+
+            NOT = {
+                trait = ml_trait_immortal
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        effect = {
+            # Activate spell.
+            character_event = {
+                id = "ml_events_spells.11"
+            }
+        }
+    }
+
     # Activate buff spell.
     ml_decision_spells_activate_buff = {
         potential = {

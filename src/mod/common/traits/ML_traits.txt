@@ -21,6 +21,8 @@ ml_trait_immortal = {
 
     inherit_chance = 0
 
+    landless = yes
+
     random = no
     cannot_inherit = yes
     customizer = no
@@ -41,6 +43,8 @@ ml_trait_lichking = {
     fertility = -5000.0
 
     inherit_chance = 0
+
+    landless = yes
 
     random = no
     cannot_inherit = yes

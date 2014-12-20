@@ -18,6 +18,12 @@ spriteTypes = {
         texturefile = "gfx/decisions/study_decision.png"
     }
 
+    # Immortality spell.
+    spriteType = {
+        name = "GFX_ml_decision_spells_immortal"
+        texturefile = "gfx/decisions/immortal_decision.png"
+    }
+
     # Buff spell.
     spriteType = {
         name = "GFX_ml_decision_spells_activate_buff"

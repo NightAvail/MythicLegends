@@ -286,21 +286,6 @@ character_event = {
     option = {
         name = "ml_events_mage.13b"
 
-        # Chance you will become craven.
-        random = {
-            chance = 5
-
-            if = {
-                limit = { trait = brave }
-                remove_trait = brave
-            }
-
-            if = {
-                limit = { NOT = { trait = craven } }
-                add_trait = craven
-            }
-        }
-
         character_event = {
             id = "ml_events_mage.13"
             days = 10
@@ -366,21 +351,6 @@ character_event = {
     option = {
         name = "ml_events_mage.13b"
 
-        # Chance you will become craven.
-        random = {
-            chance = 5
-
-            if = {
-                limit = { trait = brave }
-                remove_trait = brave
-            }
-
-            if = {
-                limit = { NOT = { trait = craven } }
-                add_trait = craven
-            }
-        }
-
         character_event = {
             id = "ml_events_mage.13"
             days = 10
@@ -443,21 +413,6 @@ character_event = {
     # I need to end my quest.
     option = {
         name = "ml_events_mage.13b"
-
-        # Chance you will become craven.
-        random = {
-            chance = 5
-
-            if = {
-                limit = { trait = brave }
-                remove_trait = brave
-            }
-
-            if = {
-                limit = { NOT = { trait = craven } }
-                add_trait = craven
-            }
-        }
 
         character_event = {
             id = "ml_events_mage.13"
@@ -523,21 +478,6 @@ character_event = {
     # I need to end my quest.
     option = {
         name = "ml_events_mage.13b"
-
-        # Chance you will become craven.
-        random = {
-            chance = 5
-
-            if = {
-                limit = { trait = brave }
-                remove_trait = brave
-            }
-
-            if = {
-                limit = { NOT = { trait = craven } }
-                add_trait = craven
-            }
-        }
 
         character_event = {
             id = "ml_events_mage.13"

@@ -6,11 +6,11 @@ and water.
 **Air Mages**
     - Increased intrigue and learning abilities
     - Escape Prison ability by turning into mist
-    - Assassinate leader ability
+    - Cast mage sickness ability on a character
 
 **Earth Mages**
     - Increased stewardship and learning abilities
-    - Can summon 500 stone golems with the summon troops spell
+    - Can summon extra stone golems with the summon troops spell
     - Ability to heal another
 
 **Fire Mages**

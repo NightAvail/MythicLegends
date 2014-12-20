@@ -63,6 +63,12 @@ decisions = {
             trait = ml_trait_magical_blood
 
             has_character_flag = ml_flag_spellbook_open
+
+            NOT = { has_character_flag = ml_flag_active_buff_spell }
+        }
+
+        allow = {
+            prisoner = no
         }
 
         revoke_allowed = {
@@ -70,8 +76,16 @@ decisions = {
         }
 
         effect = {
+            # Deactivate current spells.
+            character_event = {
+                id = "ml_events_spell.0"
+                days = 1
+            }
+
+            # Activate spell.
             character_event = {
                 id = "ml_events_spell.1"
+                days = 5
             }
         }
     }
@@ -82,6 +96,22 @@ decisions = {
             trait = ml_trait_magical_blood
 
             has_character_flag = ml_flag_spellbook_open
+
+            NOT = { has_character_flag = ml_flag_recent_healing_spell }
+        }
+
+        allow = {
+            prisoner = no
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        effect = {
+            character_event = {
+                id = "ml_events_spell.2"
+            }
         }
     }
 
@@ -91,6 +121,35 @@ decisions = {
             trait = ml_trait_magical_blood
 
             has_character_flag = ml_flag_spellbook_open
+
+            NOT = { has_character_flag = ml_flag_active_plague_spell }
+            NOT = { has_character_flag = ml_flag_recent_plague_spell }
+        }
+
+        allow = {
+            prisoner = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        effect = {
+            # Deactivate current spells.
+            character_event = {
+                id = "ml_events_spell.0"
+                days = 1
+            }
+
+            # Activate spell.
+            character_event = {
+                id = "ml_events_spell.4"
+                days = 5
+            }
         }
     }
 
@@ -100,6 +159,30 @@ decisions = {
             trait = ml_trait_magical_blood
 
             has_character_flag = ml_flag_spellbook_open
+
+            NOT = { has_character_flag = ml_flag_active_prosper_spell }
+        }
+
+        allow = {
+            prisoner = no
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        effect = {
+            # Deactivate current spells.
+            character_event = {
+                id = "ml_events_spell.0"
+                days = 1
+            }
+
+            # Activate spell.
+            character_event = {
+                id = "ml_events_spell.6"
+                days = 5
+            }
         }
     }
 
@@ -109,6 +192,35 @@ decisions = {
             trait = ml_trait_magical_blood
 
             has_character_flag = ml_flag_spellbook_open
+
+            NOT = { has_character_flag = ml_flag_active_lifechange_spell }
+            NOT = { has_character_flag = ml_flag_recent_lifechange_spell }
+        }
+
+        allow = {
+            prisoner = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        effect = {
+            # Deactivate current spells.
+            character_event = {
+                id = "ml_events_spell.0"
+                days = 1
+            }
+
+            # Activate spell.
+            character_event = {
+                id = "ml_events_spell.7"
+                days = 5
+            }
         }
     }
 
@@ -118,6 +230,22 @@ decisions = {
             trait = ml_trait_magical_blood
 
             has_character_flag = ml_flag_spellbook_open
+
+            NOT = { has_character_flag = ml_flag_recent_summon_spell }
+        }
+
+        allow = {
+            war = yes
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        effect = {
+            character_event = {
+                id = "ml_events_spell.9"
+            }
         }
     }
 }

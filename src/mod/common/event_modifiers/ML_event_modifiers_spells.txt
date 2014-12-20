@@ -1,0 +1,94 @@
+#######################################################
+# Mythic Legends
+# Event Modifiers
+#
+# Author:  NightAvail
+#######################################################
+
+#######################################################
+# Buff Spell Modifiers
+#######################################################
+
+# Active buff spell modifier.
+# Level 1 Arcane Knowledge
+ml_event_modifiers_spells_buff_1 = {
+    health      = 2
+    martial     = 2
+    diplomacy   = 2
+    stewardship = 2
+    intrigue    = 2
+    learning    = 2
+
+    icon        = 1
+}
+
+# Active buff spell modifier.
+# Level 2 Arcane Knowledge
+ml_event_modifiers_spells_buff_2 = {
+    health      = 3
+    martial     = 3
+    diplomacy   = 3
+    stewardship = 3
+    intrigue    = 3
+    learning    = 3
+
+    icon        = 1
+}
+
+# Active buff spell modifier.
+# Level 3 Arcane Knowledge
+ml_event_modifiers_spells_buff_3 = {
+    health      = 4
+    martial     = 4
+    diplomacy   = 4
+    stewardship = 4
+    intrigue    = 4
+    learning    = 4
+
+    icon        = 1
+}
+
+# Active buff spell modifier.
+# Level 4 Arcane Knowledge
+ml_event_modifiers_spells_buff_4 = {
+    health      = 5
+    martial     = 5
+    diplomacy   = 5
+    stewardship = 5
+    intrigue    = 5
+    learning    = 5
+
+    icon        = 1
+}
+
+#######################################################
+# Prosper Spell Modifiers
+#######################################################
+
+# Active prosper spell modifier.
+# Level 1 Arcane Knowledge
+ml_event_modifiers_spells_prosper_1 = {
+    local_tax_modifier      = 0.2
+    icon                    = 6
+}
+
+# Active prosper spell modifier.
+# Level 2 Arcane Knowledge
+ml_event_modifiers_spells_prosper_2 = {
+    local_tax_modifier      = 0.25
+    icon                    = 6
+}
+
+# Active prosper spell modifier.
+# Level 3 Arcane Knowledge
+ml_event_modifiers_spells_prosper_3 = {
+    local_tax_modifier      = 0.35
+    icon                    = 6
+}
+
+# Active prosper spell modifier.
+# Level 4 Arcane Knowledge
+ml_event_modifiers_spells_prosper_4 = {
+    local_tax_modifier      = 0.4
+    icon                    = 6
+}

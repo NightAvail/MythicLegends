@@ -40,3 +40,31 @@ Various flags used to determine the state of the character.
 
 - **ml_flag_has_active_spell**
     - Flag telling us we currently have an active spell activated
+
+- **ml_flag_active_buff_spell**
+    - Flag letting us know that the buff spell is active
+
+- **ml_flag_active_prosper_spell**
+    - Flag letting us know that the prosper spell is active
+
+- **ml_flag_active_plague_spell**
+    - Flag letting us know that the plague spell is active
+
+- **ml_flag_active_lifechange_spell**
+    - Flag letting us know that the life change spell is active
+
+- **ml_flag_recent_plague_spell**
+    - Flag letting us we recently activated the plague spell
+    - Has 2-year cooldown
+
+- **ml_flag_recent_lifechange_spell**
+    - Flag letting us we recently activated the life change spell
+    - Has 2-year cooldown
+
+- **ml_flag_recent_summon_spell**
+    - Flag letting us we recently activated the summon spell
+    - Has 2-year cooldown
+
+- **ml_flag_recent_healing_spell**
+    - Flag letting us know we recently activated the healing spell
+    - Has 1-year cooldown

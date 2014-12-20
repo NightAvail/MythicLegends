@@ -17,26 +17,788 @@ character_event = {
 
     is_triggered_only = yes
 
-    # We should not have magical blood!
+    # We should have magical blood!
     trigger = {
         trait = ml_trait_magical_blood
     }
 
-    # Choose to become a mage with magical blood.
+    # Activate the spell based on arcane level.
     option = {
-        name = "ml_events_mage.1a"
+        name = "ml_events_spells.1a"
 
-        add_trait = ml_trait_magical_blood
+        # Beginner
+        if = {
+            limit = { trait = ml_trait_arcane_spell_beginner }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_buff_1"
+            }
+        }
 
-        set_character_flag = ml_flag_choose_mage
+        # Apprentice
+        if = {
+            limit = { trait = ml_trait_arcane_spell_apprentice }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_buff_2"
+            }
+        }
+
+        # Expert
+        if = {
+            limit = { trait = ml_trait_arcane_spell_expert }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_buff_3"
+            }
+        }
+
+        # Master
+        if = {
+            limit = { trait = ml_trait_arcane_spell_master }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_buff_4"
+            }
+        }
+
+        set_character_flag = ml_flag_active_buff_spell
+    }
+}
+
+# Activate the healing spell
+character_event = {
+    id = "ml_events_spells.1"
+    desc = "ml_events_spells.1desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have magical blood!
+    trigger = {
+        trait = ml_trait_magical_blood
     }
 
-    # Choose not to become a mage.
+    # Activate the spell based on arcane level.
     option = {
-        name = "ml_events_mage.1b"
+        name = "ml_events_spells.1a"
 
-        set_character_flag = ml_flag_choose_not_mage
+        # Beginner
+        if = {
+            limit = { trait = ml_trait_arcane_spell_beginner }
+
+            # Remove Sickness
+            if = {
+                limit = { trait = ill }
+                remove_trait = ill
+            }
+
+            # Heal Body
+            if = {
+                limit = { trait = wounded }
+                remove_trait = wounded
+            }
+        }
+
+        # Apprentice
+        if = {
+            limit = { trait = ml_trait_arcane_spell_apprentice }
+
+            # Remove Sickness
+            if = {
+                limit = { trait = ill }
+                remove_trait = ill
+            }
+            if = {
+                limit = { trait = pneumonic }
+                remove_trait = pneumonic
+            }
+            if = {
+                limit = { trait = syphilitic }
+                remove_trait = syphilitic
+            }
+            if = {
+                limit = { trait = has_tuberculosis }
+                remove_trait = has_tuberculosis
+            }
+            if = {
+                limit = { trait = has_typhoid_fever }
+                remove_trait = has_typhoid_fever
+            }
+            if = {
+                limit = { trait = has_typhus }
+                remove_trait = has_typhus
+            }
+            if = {
+                limit = { trait = has_bubonic_plague }
+                remove_trait = has_bubonic_plague
+            }
+            if = {
+                limit = { trait = has_measles }
+                remove_trait = has_measles
+            }
+            if = {
+                limit = { trait = has_small_pox }
+                remove_trait = has_small_pox
+            }
+            if = {
+                limit = { trait = has_aztec_disease }
+                remove_trait = has_aztec_disease
+            }
+            if = {
+                limit = { trait = leper }
+                remove_trait = leper
+            }
+
+            # Heal Body
+            if = {
+                limit = { trait = wounded }
+                remove_trait = wounded
+            }
+        }
+
+        # Expert
+        if = {
+            limit = { trait = ml_trait_arcane_spell_expert }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_buff_3"
+            }
+
+            # Remove Sickness
+            if = {
+                limit = { trait = ill }
+                remove_trait = ill
+            }
+            if = {
+                limit = { trait = pneumonic }
+                remove_trait = pneumonic
+            }
+            if = {
+                limit = { trait = syphilitic }
+                remove_trait = syphilitic
+            }
+            if = {
+                limit = { trait = has_tuberculosis }
+                remove_trait = has_tuberculosis
+            }
+            if = {
+                limit = { trait = has_typhoid_fever }
+                remove_trait = has_typhoid_fever
+            }
+            if = {
+                limit = { trait = has_typhus }
+                remove_trait = has_typhus
+            }
+            if = {
+                limit = { trait = has_bubonic_plague }
+                remove_trait = has_bubonic_plague
+            }
+            if = {
+                limit = { trait = has_measles }
+                remove_trait = has_measles
+            }
+            if = {
+                limit = { trait = has_small_pox }
+                remove_trait = has_small_pox
+            }
+            if = {
+                limit = { trait = has_aztec_disease }
+                remove_trait = has_aztec_disease
+            }
+            if = {
+                limit = { trait = leper }
+                remove_trait = leper
+            }
+
+            # Heal Body
+            if = {
+                limit = { trait = wounded }
+                remove_trait = wounded
+            }
+            if = {
+                limit = { trait = infirm }
+                remove_trait = infirm
+            }
+            if = {
+                limit = { trait = blinded }
+                remove_trait = blinded
+            }
+            if = {
+                limit = { trait = eunuch }
+                remove_trait = eunuch
+            }
+            if = {
+                limit = { trait = incapable }
+                remove_trait = incapable
+            }
+            if = {
+                limit = { trait = crippled }
+                remove_trait = crippled
+            }
+            if = {
+                limit = { trait = lunatic }
+                remove_trait = lunatic
+            }
+            if = {
+                limit = { trait = stressed }
+                remove_trait = stressed
+            }
+            if = {
+                limit = { trait = depressed }
+                remove_trait = depressed
+            }
+            if = {
+                limit = { trait = possessed }
+                remove_trait = possessed
+            }
+            if = {
+                limit = { trait = has_bloody_flux }
+                remove_trait = has_bloody_flux
+            }
+            if = {
+                limit = { trait = has_grey_plague }
+                remove_trait = has_grey_plague
+            }
+            if = {
+                limit = { trait = has_greyscale }
+                remove_trait = has_greyscale
+            }
+            if = {
+                limit = { trait = inbred }
+                remove_trait = inbred
+            }
+            if = {
+                limit = { trait = blinded_age }
+                remove_trait = blinded_age
+            }
+        }
+
+        # Master
+        if = {
+            limit = { trait = ml_trait_arcane_spell_master }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_buff_4"
+            }
+
+            # Remove Sickness
+            if = {
+                limit = { trait = ill }
+                remove_trait = ill
+            }
+            if = {
+                limit = { trait = pneumonic }
+                remove_trait = pneumonic
+            }
+            if = {
+                limit = { trait = syphilitic }
+                remove_trait = syphilitic
+            }
+            if = {
+                limit = { trait = has_tuberculosis }
+                remove_trait = has_tuberculosis
+            }
+            if = {
+                limit = { trait = has_typhoid_fever }
+                remove_trait = has_typhoid_fever
+            }
+            if = {
+                limit = { trait = has_typhus }
+                remove_trait = has_typhus
+            }
+            if = {
+                limit = { trait = has_bubonic_plague }
+                remove_trait = has_bubonic_plague
+            }
+            if = {
+                limit = { trait = has_measles }
+                remove_trait = has_measles
+            }
+            if = {
+                limit = { trait = has_small_pox }
+                remove_trait = has_small_pox
+            }
+            if = {
+                limit = { trait = has_aztec_disease }
+                remove_trait = has_aztec_disease
+            }
+            if = {
+                limit = { trait = leper }
+                remove_trait = leper
+            }
+
+            # Heal Body
+            if = {
+                limit = { trait = wounded }
+                remove_trait = wounded
+            }
+            if = {
+                limit = { trait = infirm }
+                remove_trait = infirm
+            }
+            if = {
+                limit = { trait = blinded }
+                remove_trait = blinded
+            }
+            if = {
+                limit = { trait = eunuch }
+                remove_trait = eunuch
+            }
+            if = {
+                limit = { trait = incapable }
+                remove_trait = incapable
+            }
+            if = {
+                limit = { trait = crippled }
+                remove_trait = crippled
+            }
+            if = {
+                limit = { trait = lunatic }
+                remove_trait = lunatic
+            }
+            if = {
+                limit = { trait = stressed }
+                remove_trait = stressed
+            }
+            if = {
+                limit = { trait = depressed }
+                remove_trait = depressed
+            }
+            if = {
+                limit = { trait = possessed }
+                remove_trait = possessed
+            }
+            if = {
+                limit = { trait = has_bloody_flux }
+                remove_trait = has_bloody_flux
+            }
+            if = {
+                limit = { trait = has_grey_plague }
+                remove_trait = has_grey_plague
+            }
+            if = {
+                limit = { trait = has_greyscale }
+                remove_trait = has_greyscale
+            }
+            if = {
+                limit = { trait = inbred }
+                remove_trait = inbred
+            }
+            if = {
+                limit = { trait = blinded_age }
+                remove_trait = blinded_age
+            }
+
+            # Regenerate Body
+            if = {
+                limit = { trait = maimed }
+                remove_trait = maimed
+            }
+            if = {
+                limit = { trait = harelip }
+                remove_trait = harelip
+            }
+            if = {
+                limit = { trait = hunchback }
+                remove_trait = hunchback
+            }
+            if = {
+                limit = { trait = lisp }
+                remove_trait = lisp
+            }
+            if = {
+                limit = { trait = stutter }
+                remove_trait = stutter
+            }
+            if = {
+                limit = { trait = ugly }
+                remove_trait = ugly
+            }
+            if = {
+                limit = { trait = dwarf }
+                remove_trait = dwarf
+            }
+            if = {
+                limit = { trait = scarred }
+                remove_trait = scarred
+            }
+        }
+
+        set_character_flag = ml_flag_active_healing_spell
+
+        # Spell cooldown
+        character_event = {
+            id = "ml_events_spells.3"
+            years = 1
+        }
     }
+}
+
+# Clear healing cooldown
+character_event = {
+    id = "ml_events_spell.3"
+    desc = "ml_events_spell.3desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_active_healing_spell
+    }
+
+    immediate = {
+        clr_character_flag = ml_flag_active_healing_spell
+    }
+
+    option = {}
+}
+
+# Player activates plague spell.
+character_event = {
+    id = "ml_events_spell.4"
+    desc = "ml_events_spell.4desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have magical blood!
+    trigger = {
+        trait = ml_trait_magical_blood
+    }
+
+    option = {
+        name = "ml_events_spell.4a"
+
+        set_character_flag = ml_flag_active_plague_spell
+        set_character_flag = ml_flag_recent_plague_spell
+
+        # Spell cooldown
+        character_event = {
+            id = "ml_events_spells.5"
+            years = 2
+        }
+    }
+}
+
+# Clear plague spell cooldown
+character_event = {
+    id = "ml_events_spell.5"
+    desc = "ml_events_spell.5desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_recent_plague_spell
+    }
+
+    immediate = {
+        clr_character_flag = ml_flag_recent_plague_spell
+    }
+
+    option = {}
+}
+
+# Activate the prosper spell
+character_event = {
+    id = "ml_events_spells.6"
+    desc = "ml_events_spells.6desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have magical blood!
+    trigger = {
+        trait = ml_trait_magical_blood
+    }
+
+    # Activate the spell based on arcane level.
+    option = {
+        name = "ml_events_spells.6a"
+
+        # Beginner
+        if = {
+            limit = { trait = ml_trait_arcane_spell_beginner }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_prosper_1"
+            }
+        }
+
+        # Apprentice
+        if = {
+            limit = { trait = ml_trait_arcane_spell_apprentice }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_prosper_2"
+            }
+        }
+
+        # Expert
+        if = {
+            limit = { trait = ml_trait_arcane_spell_expert }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_prosper_3"
+            }
+        }
+
+        # Master
+        if = {
+            limit = { trait = ml_trait_arcane_spell_master }
+            add_character_modifier = {
+                name = "ml_event_modifiers_spells_prosper_4"
+            }
+        }
+
+        set_character_flag = ml_flag_active_prosper_spell
+    }
+}
+
+# Player activates life change spell.
+character_event = {
+    id = "ml_events_spell.7"
+    desc = "ml_events_spell.7desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have magical blood!
+    trigger = {
+        trait = ml_trait_magical_blood
+    }
+
+    option = {
+        name = "ml_events_spell.7a"
+
+        set_character_flag = ml_flag_active_lifechange_spell
+        set_character_flag = ml_flag_recent_lifechange_spell
+
+        # Spell cooldown
+        character_event = {
+            id = "ml_events_spells.8"
+            years = 2
+        }
+    }
+}
+
+# Clear life change spell cooldown
+character_event = {
+    id = "ml_events_spell.8"
+    desc = "ml_events_spell.8desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_recent_lifechange_spell
+    }
+
+    immediate = {
+        clr_character_flag = ml_flag_recent_lifechange_spell
+    }
+
+    option = {}
+}
+
+# Player casts summoning spell.
+character_event = {
+    id = "ml_events_spell.9"
+    desc = "ml_events_spell.9desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have magical blood!
+    trigger = {
+        trait = ml_trait_magical_blood
+    }
+
+    immediate = {
+        # Beginner
+        if = {
+            limit = { trait = ml_trait_arcane_spell_beginner }
+
+            # Earth mages will summon extra golem troops!
+            if = {
+                limit = { has_character_flag = ml_flag_earth_mage }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 500 500 }
+                        heavy_infantry = { 500 500 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+
+            if = {
+                limit = { NOT = { has_character_flag = ml_flag_earth_mage } }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 500 500 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+        }
+
+        # Apprentice
+        if = {
+            limit = { trait = ml_trait_arcane_spell_apprentice }
+
+            # Earth mages will summon extra golem troops!
+            if = {
+                limit = { has_character_flag = ml_flag_earth_mage }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 1000 1000 }
+                        heavy_infantry = { 1000 1000 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+
+            if = {
+                limit = { NOT = { has_character_flag = ml_flag_earth_mage } }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 1000 1000 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+        }
+
+        # Expert
+        if = {
+            limit = { trait = ml_trait_arcane_spell_expert }
+
+            # Earth mages will summon extra golem troops!
+            if = {
+                limit = { has_character_flag = ml_flag_earth_mage }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 1000 1000 }
+                        heavy_infantry = { 1500 1500 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+
+            if = {
+                limit = { NOT = { has_character_flag = ml_flag_earth_mage } }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 1000 1000 }
+                        heavy_infantry = { 500 500 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+        }
+
+        # Master
+        if = {
+            limit = { trait = ml_trait_arcane_spell_master }
+
+            # Earth mages will summon extra golem troops!
+            if = {
+                limit = { has_character_flag = ml_flag_earth_mage }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 1000 1000 }
+                        heavy_infantry = { 2000 2000 }
+                        light_cavalry  = { 500 500 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+
+            if = {
+                limit = { NOT = { has_character_flag = ml_flag_earth_mage } }
+                spawn_unit = {
+                    owner = ROOT
+                    province = ROOT
+                    home = ROOT
+                    troops = {
+                        light_infantry = { 1000 1000 }
+                        heavy_infantry = { 1000 1000 }
+                        light_cavalry  = { 500 500 }
+                    }
+                    attrition = 1.0
+                    disband_on_peace = yes
+                    maintenance_multiplier = 0
+                }
+            }
+        }
+    }
+
+    option = {
+        name = "ml_events_spell.9a"
+
+        set_character_flag = ml_flag_recent_summon_spell
+
+        # Spell cooldown
+        character_event = {
+            id = "ml_events_spells.10"
+            years = 4
+        }
+    }
+}
+
+# Clear summoning spell cooldown
+character_event = {
+    id = "ml_events_spell.10"
+    desc = "ml_events_spell.10desc"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_recent_summon_spell
+    }
+
+    immediate = {
+        clr_character_flag = ml_flag_recent_summon_spell
+    }
+
+    option = {}
 }
 
 # Deactivate active spells
@@ -46,13 +808,67 @@ character_event = {
 
     hide_window = yes
 
+    is_triggered_only = yes
+
     trigger = {
         trait = ml_trait_magical_blood
-
-        has_character_flag = ml_flag_has_active_spell
     }
 
-    option = {        
+    immediate = {
+        # Remove all modifiers
+
+        # Buff Spell
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_buff_1 }
+            remove_character_modifier = ml_event_modifiers_spells_buff_1
+        }
+
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_buff_2 }
+            remove_character_modifier = ml_event_modifiers_spells_buff_2
+        }
+
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_buff_3 }
+            remove_character_modifier = ml_event_modifiers_spells_buff_3
+        }
+
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_buff_4 }
+            remove_character_modifier = ml_event_modifiers_spells_buff_4
+        }
+
+        # Propser Spell
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_prosper_1 }
+            remove_character_modifier = ml_event_modifiers_spells_prosper_1
+        }
+
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_prosper_2 }
+            remove_character_modifier = ml_event_modifiers_spells_prosper_2
+        }
+
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_prosper_3 }
+            remove_character_modifier = ml_event_modifiers_spells_prosper_3
+        }
+
+        if = {
+            limit = { has_character_modifier = ml_event_modifiers_spells_prosper_4 }
+            remove_character_modifier = ml_event_modifiers_spells_prosper_4
+        }
+
+        # Clear active flag.
         clr_character_flag = ml_flag_has_active_spell
+
+        # Clear active spell flags.
+        clr_character_flag = ml_flag_active_buff_spell
+        clr_character_flag = ml_flag_active_prosper_spell
+        clr_character_flag = ml_flag_active_plague_spell
+        clr_character_flag = ml_flag_active_lifechange_spell
+    }
+
+    option = {
     }
 }

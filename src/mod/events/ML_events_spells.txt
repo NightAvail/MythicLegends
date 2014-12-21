@@ -92,8 +92,9 @@ character_event = {
 # Activate the healing spell
 character_event = {
     id = "ml_events_spells.2"
-
-    hide_window = yes
+    desc = "ml_events_spells.2desc"
+    picture = GFX_evt_recovery
+    #hide_window = yes
 
     is_triggered_only = yes
 
@@ -103,8 +104,16 @@ character_event = {
     }
 
     # Activate the spell based on arcane level.
-    immediate = {
+    option = {
         set_character_flag = ml_flag_recent_healing_spell
+
+        name = ml_events_common.feelgreat
+
+        # Spell cooldown
+        character_event = {
+            id = "ml_events_spells.3"
+            days = 365
+        }
 
         # Beginner
         if = {
@@ -441,16 +450,21 @@ character_event = {
         }
     }
 
-    # Default option
+    # Cancle operation
     option = {
-        name = ml_events_common.ok
-
-        # Spell cooldown
-        character_event = {
-            id = "ml_events_spells.3"
-            days = 365
-        }
+        name = ml_events_common.nevermind
     }
+
+    # Default option
+    # option = {
+    #     name = ml_events_common.ok
+    #
+    #     # Spell cooldown
+    #     character_event = {
+    #         id = "ml_events_spells.3"
+    #         days = 365
+    #     }
+    # }
 }
 
 # Clear healing cooldown
@@ -491,7 +505,7 @@ character_event = {
 
     # Default option
     option = {
-        name = ml_events_common.ok        
+        name = ml_events_common.ok
     }
 }
 

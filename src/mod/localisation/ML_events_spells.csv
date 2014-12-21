@@ -1,6 +1,8 @@
 ml_events_spells.0;Unknown;;;;;;;;;;;;;x
 ml_events_spells.0desc;Unknown;;;;;;;;;;;;;x
 ml_events_spells.0a;Unknown;;;;;;;;;;;;;x
+ml_events_spells.2;Heal sickness and wounds!;;;;;;;;;;;;;x
+ml_events_spells.2desc;You have used your arcane knowledge to cast a spell and heal yourself.;;;;;;;;;;;;;x
 ml_events_spells.11;You are immortal!;;;;;;;;;;;;;x
 ml_events_spells.11desc;You have become more than just a mere mortal, you've achieved immortality!;;;;;;;;;;;;;x
 ml_events_spells.11a;I feel the power within me!;;;;;;;;;;;;;x

@@ -282,7 +282,7 @@ character_event = {
             }
         }
 
-        wealth = 20
+        wealth = 10
         clr_character_flag = ml_flag_pause_events
     }
 
@@ -352,7 +352,7 @@ character_event = {
             }
         }
 
-        wealth = 50
+        wealth = 20
         clr_character_flag = ml_flag_pause_events
     }
 
@@ -420,7 +420,7 @@ character_event = {
             }
         }
 
-        wealth = 50
+        wealth = 20
         clr_character_flag = ml_flag_pause_events
     }
 
@@ -490,7 +490,7 @@ character_event = {
             }
         }
 
-        wealth = 100
+        wealth = 50
         clr_character_flag = ml_flag_pause_events
     }
 
@@ -587,7 +587,7 @@ character_event = {
     option = {
         random_list = {
             # Bandit attack
-            50 = {
+            40 = {
                 if = {
                     limit = {
                         has_character_flag = ml_flag_questing_with_friends
@@ -637,7 +637,7 @@ character_event = {
             }
 
             # End Quest
-            15 = {
+            25 = {
                 character_event = {
                     id = "ml_events_mage.13"
                 }

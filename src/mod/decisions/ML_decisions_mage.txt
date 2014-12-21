@@ -248,7 +248,7 @@ targetted_decisions = {
         }
 
         potential = {
-            NOT = { trait = pneumonic }
+            NOT = { trait = has_tuberculosis }
         }
 
         revoke_allowed = {
@@ -256,7 +256,7 @@ targetted_decisions = {
 		}
 
         effect = {
-            add_trait = pneumonic
+            add_trait = has_tuberculosis
 
             FROM = {
                 set_character_flag = ml_flag_recent_plague_spell

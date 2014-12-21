@@ -73,7 +73,10 @@ targetted_decisions = {
 
             # Prevent from multiple curses.
             NOT = {
-                has_opinion_modifier = ml_opinion_modifiers_recently_cursed
+                has_opinion_modifier = {
+                    who = FROM
+                    modifier = ml_opinion_modifiers_recently_cursed
+                }
             }
         }
 
@@ -97,7 +100,7 @@ targetted_decisions = {
                 }
 
                 character_event = {
-                    id = "ml_events_spells.12"
+                    id = "ml_events_spells.14"
                     days = 730
                 }
             }

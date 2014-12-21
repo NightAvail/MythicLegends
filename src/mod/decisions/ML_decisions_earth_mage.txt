@@ -37,7 +37,10 @@ targetted_decisions = {
 
             # Prevent multiple heals.
             NOT = {
-                has_opinion_modifier = ml_opinion_modifiers_recently_healed
+                has_opinion_modifier = {
+                    who = FROM
+                    modifier = ml_opinion_modifiers_recently_healed
+                }
             }
         }
 

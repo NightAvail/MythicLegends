@@ -883,6 +883,28 @@ character_event = {
     }
 }
 
+# Clear air mage magically cursed spell
+character_event = {
+    id = "ml_events_spells.14"
+
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_character_flag = ml_flag_recent_cast_magical_curse
+    }
+
+    immediate = {
+        clr_character_flag = ml_flag_recent_cast_magical_curse
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
+}
+
 # Deactivate active spells
 character_event = {
     id = "ml_events_spells.0"

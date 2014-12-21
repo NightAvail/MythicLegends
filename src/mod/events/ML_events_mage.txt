@@ -712,7 +712,7 @@ character_event = {
 
     trigger = {
         prisoner = yes
-        
+
         OR = {
             trait = ml_trait_air_mage_apprentice
             trait = ml_trait_air_mage_expert

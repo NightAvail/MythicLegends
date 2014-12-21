@@ -16,6 +16,17 @@ character_event = {
 
     trigger = {
         trait = ml_trait_immortal
+
+        OR = {
+            trait = ill
+            trait = syphilitic
+            trait = leper
+            trait = infirm
+            trait = incapable
+            trait = lunatic
+            trait = depressed
+            trait = possessed
+        }
     }
 
     weight_multiplier = {
@@ -29,7 +40,7 @@ character_event = {
         name = ml_events_common.feelgreat
 
         # Master
-        if = {            
+        if = {
             # Remove Sickness
             if = {
                 limit = { trait = ill }

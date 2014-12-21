@@ -233,9 +233,9 @@ character_event = {
         NOT = { trait = ml_trait_arcane_spell_master }
     }
 
-    # Every 4 years.
+    # Every 10 years.
     mean_time_to_happen = {
-        months = 48
+        months = 120
     }
 
     immediate = {

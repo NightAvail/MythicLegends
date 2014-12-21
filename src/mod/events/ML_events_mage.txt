@@ -264,7 +264,7 @@ character_event = {
 
     # Fight the bandits!
     option = {
-        name = "ml_events_mage.9a"
+        name = "ml_events_mage.opt9a"
 
         random_list = {
             10 = {
@@ -274,6 +274,7 @@ character_event = {
                     }
                     add_trait = wounded
                 }
+            }
 
             5 = {
                 add_trait = brave
@@ -298,11 +299,12 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.9b"
+        name = "ml_events_mage.opt13b"
+
+        clr_character_flag = ml_flag_pause_events
 
         character_event = {
             id = "ml_events_mage.13"
-            days = 10
         }
     }
 }
@@ -336,7 +338,7 @@ character_event = {
 
     # Fight the bandits!
     option = {
-        name = "ml_events_mage.10a"
+        name = "ml_events_mage.opt10a"
 
         random_list = {
             20 = {
@@ -371,11 +373,12 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.10b"
+        name = "ml_events_mage.opt13b"
+
+        clr_character_flag = ml_flag_pause_events
 
         character_event = {
             id = "ml_events_mage.13"
-            days = 10
         }
     }
 }
@@ -407,7 +410,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.11a"
+        name = "ml_events_mage.opt11a"
 
         random_list = {
             20 = {
@@ -442,11 +445,12 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.11b"
+        name = "ml_events_mage.opt13b"
+
+        clr_character_flag = ml_flag_pause_events
 
         character_event = {
             id = "ml_events_mage.13"
-            days = 10
         }
     }
 }
@@ -480,7 +484,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.12a"
+        name = "ml_events_mage.opt12a"
 
         random_list = {
             25 = {
@@ -515,11 +519,12 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.12b"
+        name = "ml_events_mage.opt13b"
+
+        clr_character_flag = ml_flag_pause_events
 
         character_event = {
             id = "ml_events_mage.13"
-            days = 10
         }
     }
 }
@@ -536,6 +541,8 @@ character_event = {
     trigger = {
         trait = ml_trait_mage_quest
         has_character_flag = ml_flag_on_mage_quest
+
+        NOT = { has_character_flag = ml_flag_pause_events }
     }
 
     immediate = {
@@ -547,7 +554,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.13a"
+        name = "ml_events_mage.opt13a"
 
         remove_trait = ml_trait_mage_quest
 
@@ -579,7 +586,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.14a"
+        name = "ml_events_mage.opt14a"
 
         clr_character_flag = ml_flag_recent_mage_quest
     }
@@ -608,33 +615,15 @@ character_event = {
 
     option = {
         random_list = {
-            # Bandit attack
-            40 = {
-                if = {
-                    limit = {
-                        has_character_flag = ml_flag_questing_with_friends
-                    }
-
-                    character_event = {
-                        id = "ml_events_mage.9"
-                    }
-                }
-
-                if = {
-                    limit = {
-                        NOT = {
-                            has_character_flag = ml_flag_questing_with_friends
-                        }
-                    }
-
-                    character_event = {
-                        id = "ml_events_mage.10"
-                    }
+            # End Quest
+            15 = {
+                character_event = {
+                    id = "ml_events_mage.13"
                 }
             }
 
             # Explore area
-            35 = {
+            40 = {
                 if = {
                     limit = {
                         has_character_flag = ml_flag_questing_with_friends
@@ -658,10 +647,28 @@ character_event = {
                 }
             }
 
-            # End Quest
-            25 = {
-                character_event = {
-                    id = "ml_events_mage.13"
+            # Bandit attack
+            45 = {
+                if = {
+                    limit = {
+                        has_character_flag = ml_flag_questing_with_friends
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.9"
+                    }
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            has_character_flag = ml_flag_questing_with_friends
+                        }
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.10"
+                    }
                 }
             }
         }

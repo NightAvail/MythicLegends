@@ -260,6 +260,7 @@ targetted_decisions = {
 
             FROM = {
                 set_character_flag = ml_flag_recent_plague_spell
+                clr_character_flag = ml_flag_active_plague_spell
 
                 # Spell cooldown
                 character_event = {

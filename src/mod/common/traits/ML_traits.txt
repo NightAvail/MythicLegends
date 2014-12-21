@@ -17,6 +17,8 @@ ml_trait_immortal = {
 
     immortal = yes
 
+    health   = 100
+
     fertility = -5000.0
 
     inherit_chance = 0
@@ -35,6 +37,8 @@ ml_trait_lichking = {
     # the church!
     church_opinion = -40
     general_opinion = -20
+
+    health   = 100
 
     immortal = yes
 

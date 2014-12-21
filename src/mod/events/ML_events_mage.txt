@@ -175,10 +175,17 @@ character_event = {
     option = {
         name = "ml_events_common.getstarted"
         add_trait = ml_trait_mage_quest
-        set_character_flag = ml_flag_on_mage_quest
+
+        if = {
+            limit = { NOT = { has_character_flag = ml_flag_on_mage_quest } }
+            set_character_flag = ml_flag_on_mage_quest
+        }
 
         # Pause as the player makes their way to the inn.
-        set_character_flag = ml_flag_pause_events
+        if = {
+            limit = { NOT = { has_character_flag = ml_flag_pause_events } }
+            set_character_flag = ml_flag_pause_events
+        }
 
         character_event = {
             id = "ml_events_mage.7"
@@ -249,7 +256,10 @@ character_event = {
 
     immediate = {
         # Pause other events.
-        set_character_flag = ml_flag_pause_events
+        if = {
+            limit = { NOT = { has_character_flag = ml_flag_pause_events } }
+            set_character_flag = ml_flag_pause_events
+        }
     }
 
     # Fight the bandits!
@@ -318,7 +328,10 @@ character_event = {
 
     immediate = {
         # Pause other events.
-        set_character_flag = ml_flag_pause_events
+        if = {
+            limit = { NOT = { has_character_flag = ml_flag_pause_events } }
+            set_character_flag = ml_flag_pause_events
+        }
     }
 
     # Fight the bandits!
@@ -387,7 +400,10 @@ character_event = {
 
     immediate = {
         # Pause other events.
-        set_character_flag = ml_flag_pause_events
+        if = {
+            limit = { NOT = { has_character_flag = ml_flag_pause_events } }
+            set_character_flag = ml_flag_pause_events
+        }
     }
 
     option = {
@@ -457,7 +473,10 @@ character_event = {
 
     immediate = {
         # Pause other events.
-        set_character_flag = ml_flag_pause_events
+        if = {
+            limit = { NOT = { has_character_flag = ml_flag_pause_events } }
+            set_character_flag = ml_flag_pause_events
+        }
     }
 
     option = {
@@ -521,7 +540,10 @@ character_event = {
 
     immediate = {
         # Pause other events.
-        set_character_flag = ml_flag_pause_events
+        if = {
+            limit = { NOT = { has_character_flag = ml_flag_pause_events } }
+            set_character_flag = ml_flag_pause_events
+        }
     }
 
     option = {

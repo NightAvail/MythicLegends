@@ -282,7 +282,7 @@ character_event = {
             }
         }
 
-        wealth = 50
+        wealth = 20
         clr_character_flag = ml_flag_pause_events
     }
 
@@ -352,7 +352,7 @@ character_event = {
             }
         }
 
-        wealth = 250
+        wealth = 50
         clr_character_flag = ml_flag_pause_events
     }
 
@@ -420,7 +420,7 @@ character_event = {
             }
         }
 
-        wealth = 250
+        wealth = 50
         clr_character_flag = ml_flag_pause_events
     }
 
@@ -490,7 +490,7 @@ character_event = {
             }
         }
 
-        wealth = 550
+        wealth = 100
         clr_character_flag = ml_flag_pause_events
     }
 

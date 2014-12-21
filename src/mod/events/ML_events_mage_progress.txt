@@ -224,6 +224,15 @@ character_event = {
 
     ai = no
 
+    # We not already have progressed to the end
+    # of our abilities.
+    trigger = {
+        trait = ml_trait_magical_blood
+        has_character_flag = ml_flag_chose_mage_class
+
+        NOT = { trait = ml_trait_arcane_spell_master }
+    }
+
     # Every 4 years.
     mean_time_to_happen = {
         months = 48

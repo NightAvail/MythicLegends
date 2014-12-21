@@ -35,8 +35,8 @@ targetted_decisions = {
         effect = {
             opinion = {
                 modifier = ml_opinion_modifiers_illusion_charm
-                WHO = FROM
-                days = 730
+                who = FROM
+                years = 2
             }
 
             FROM = {

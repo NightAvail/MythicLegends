@@ -202,7 +202,7 @@ character_Event = {
         # Meet some friends at the inn.
         character_event = {
             id = "ml_events_mage.8"
-            days = 30
+            days = 5
         }
     }
 }
@@ -587,7 +587,7 @@ character_event = {
     option = {
         random_list = {
             # Bandit attack
-            25 = {
+            50 = {
                 if = {
                     limit = {
                         has_character_flag = ml_flag_questing_with_friends
@@ -612,7 +612,7 @@ character_event = {
             }
 
             # Explore area
-            25 = {
+            35 = {
                 if = {
                     limit = {
                         has_character_flag = ml_flag_questing_with_friends

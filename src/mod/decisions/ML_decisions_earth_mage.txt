@@ -47,8 +47,8 @@ targetted_decisions = {
         effect = {
             opinion = {
                 modifier = ml_opinion_modifiers_recently_healed
-                WHO = FROM
-                days = 730
+                who = FROM
+                years = 2
             }
 
             if = {

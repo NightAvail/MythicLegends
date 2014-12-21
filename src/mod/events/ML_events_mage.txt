@@ -298,7 +298,7 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.13b"
+        name = "ml_events_mage.9b"
 
         character_event = {
             id = "ml_events_mage.13"
@@ -371,7 +371,7 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.13b"
+        name = "ml_events_mage.10b"
 
         character_event = {
             id = "ml_events_mage.13"
@@ -442,7 +442,7 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.13b"
+        name = "ml_events_mage.11b"
 
         character_event = {
             id = "ml_events_mage.13"
@@ -515,7 +515,7 @@ character_event = {
 
     # I need to end my quest.
     option = {
-        name = "ml_events_mage.13b"
+        name = "ml_events_mage.12b"
 
         character_event = {
             id = "ml_events_mage.13"
@@ -665,5 +665,34 @@ character_event = {
                 }
             }
         }
+    }
+}
+
+# Set character flag for those with magical blood.
+character_event = {
+    id = "ml_events_mage.16"
+    desc = "ml_events_mage.16desc"
+
+    hide_window = yes
+
+    trigger = {
+        NOT = {
+            OR = {
+                has_character_flag = ml_flag_choose_mage
+                has_character_flag = ml_flag_choose_not_mage
+            }
+        }
+    }
+
+    weight_multiplier = {
+        days = 1
+    }
+
+    immediate = {
+        set_character_flag = ml_flag_choose_mage
+    }
+
+    option = {
+        name = "ml_events_common.ok"
     }
 }

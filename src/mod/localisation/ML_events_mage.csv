@@ -28,15 +28,19 @@ ml_events_mage.8b;I don't need help!;;;;;;;;;;;;;x
 ml_events_mage.9;Attacked by bandits!;;;;;;;;;;;;;x
 ml_events_mage.9desc;You and your companions are attacked by bandits! You all work together to counter their ambush!;;;;;;;;;;;;;x
 ml_events_mage.9a;We fought well!;;;;;;;;;;;;;x
+ml_events_mage.9b;This is dangerous and I need to head back home!;;;;;;;;;;;;;x
 ml_events_mage.10;Attacked by bandits!;;;;;;;;;;;;;x
 ml_events_mage.10desc;You are attacked by bandits! You quickly put up a magical defense to counter their attack!;;;;;;;;;;;;;x
 ml_events_mage.10a;I fought well!;;;;;;;;;;;;;x
+ml_events_mage.10b;This is dangerous and I need to head back home!;;;;;;;;;;;;;x
 ml_events_mage.11;Adventure!;;;;;;;;;;;;;x
 ml_events_mage.11desc;Your party has travelled far and encountered a mysterious area!;;;;;;;;;;;;;x
 ml_events_mage.11a;We will explore the mysteries of this place!;;;;;;;;;;;;;x
+ml_events_mage.11b;This is dangerous and I need to head back home!;;;;;;;;;;;;;x
 ml_events_mage.12;Adventure!;;;;;;;;;;;;;x
 ml_events_mage.12desc;You have travelled far and encountered a mysterious area!;;;;;;;;;;;;;x
 ml_events_mage.12a;I will unlock the secrets of this place!;;;;;;;;;;;;;x
+ml_events_mage.12b;This is dangerous and I need to head back home!;;;;;;;;;;;;;x
 ml_events_mage.13;Finally home;;;;;;;;;;;;;x
 ml_events_mage.13desc;After an enlightening journey I'm finally home!;;;;;;;;;;;;;x
 ml_events_mage.13a;I have learned from my travels!;;;;;;;;;;;;;x

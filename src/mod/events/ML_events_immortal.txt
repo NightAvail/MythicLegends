@@ -29,9 +29,7 @@ character_event = {
         name = ml_events_common.feelgreat
 
         # Master
-        if = {
-            limit = { trait = ml_trait_arcane_spell_master }
-
+        if = {            
             # Remove Sickness
             if = {
                 limit = { trait = ill }

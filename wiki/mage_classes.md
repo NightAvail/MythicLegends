@@ -7,15 +7,17 @@ and water.
     - Increased intrigue and learning abilities
     - Escape Prison ability by turning into mist
     - Cast mage sickness ability on a character (apprentice and above)
+    - Offensive/defensive bonuses at expert/master level
 
 **Earth Mages**
     - Increased stewardship and learning abilities
     - Can summon extra stone golems with the summon troops spell
     - Ability to heal another (apprentice and above)
+    - Slightly better offensive and defensive bonuses at expert/master level
 
 **Fire Mages**
     - Increase to martial ability
-    - Starts off with offensive and defensive bonuses
+    - Very good offensive and defensive bonuses at all levels
     - Boosted health
 
 **Water Mages**
@@ -23,3 +25,4 @@ and water.
     - Can cast illusion for a person to like them more (apprentice and above)
     - Increased fertility
     - Increased opinion
+    - Offensive/defensive bonuses at expert/master level

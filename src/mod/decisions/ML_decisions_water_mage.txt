@@ -26,6 +26,10 @@ targetted_decisions = {
         }
 
         potential = {
+            # Prevent multiple charms.
+            NOT = {
+                has_opinion_modifier = ml_opinion_modifiers_illusion_charm
+            }
         }
 
         revoke_allowed = {

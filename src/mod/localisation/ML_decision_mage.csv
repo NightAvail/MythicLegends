@@ -14,6 +14,8 @@ ml_decision_mage_choose_water_element;Become a water mage;;;;;;;;;;;;;x
 ml_decision_mage_choose_water_element_desc;Learn to master the healing power of water!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_sickness;Curse with illness!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_sickness_desc;Curse target to be ill!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_cast_magical_curse;Cast magicial curse!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_cast_magical_curse_desc;The target will be magically cursed with a deadly spell!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_sick;Cure wounds and illness!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_sick_desc;Cure target of wounds and most illnesses!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_illusion;Cast charm spell!;;;;;;;;;;;;;x

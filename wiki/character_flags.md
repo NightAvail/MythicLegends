@@ -70,9 +70,13 @@ Various flags used to determine the state of the character.
     - Has 1-year cooldown
 
 - **ml_flag_recent_cast_sickness**
-    - Flag for air mages that have casted the sickness spell
+    - Flag for air mages that have cast the sickness spell
     - Has 1-year cooldown
 
+- **ml_flag_recent_cast_magical_curse**
+    - Flag for air mages that have cast the magically cursed spell
+    - Has 2-year cooldown
+
 - **ml_flag_recent_cast_illusion**
-    - Flag for water mages that have casted the illusion (charm) spell
+    - Flag for water mages that have cast the illusion (charm) spell
     - Has 1-year cooldown

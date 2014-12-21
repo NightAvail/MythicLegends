@@ -34,6 +34,11 @@ targetted_decisions = {
                 trait = has_measles
                 trait = has_small_pox
             }
+
+            # Prevent multiple heals.
+            NOT = {
+                has_opinion_modifier = ml_opinion_modifiers_recently_healed
+            }
         }
 
         revoke_allowed = {

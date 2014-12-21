@@ -703,3 +703,32 @@ character_event = {
         name = "ml_events_common.ok"
     }
 }
+
+# Air mages will automatically escape prison!
+character_event = {
+    id = "ml_events_mage.17"
+    desc = "ml_events_mage.17desc"
+    picture = GFX_evt_shadow
+
+    trigger = {
+        prisoner = yes
+        
+        OR = {
+            trait = ml_trait_air_mage_apprentice
+            trait = ml_trait_air_mage_expert
+            trait = ml_trait_air_mage_master
+        }
+    }
+
+    weight_multiplier = {
+        days = 1
+    }
+
+    immediate = {
+        prisoner = no
+    }
+
+    option = {
+        name = "ml_events_common.noonecanholdme"
+    }
+}

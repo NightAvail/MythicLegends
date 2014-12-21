@@ -48,4 +48,59 @@ targetted_decisions = {
             }
         }
     }
+
+    # Cast magical curse!
+    ml_targetted_decision_mage_cast_magical_curse = {
+        ai_target_filter = realm
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+
+            OR = {
+                trait = ml_trait_air_mage_master
+            }
+
+            NOT = {
+                has_character_flag = ml_flag_recent_cast_magical_curse
+            }
+        }
+
+        potential = {
+            NOT = {
+                has_character_modifier = ml_event_modifiers_magically_cursed
+            }
+
+            # Prevent from multiple curses.
+            NOT = {
+                has_opinion_modifier = ml_opinion_modifiers_recently_cursed
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        effect = {
+            add_character_modifier = {
+                name = "ml_event_modifiers_magically_cursed"
+                days = 365
+            }
+
+            FROM = {
+                set_character_flag = ml_flag_recent_cast_magical_curse
+
+                opinion = {
+                    modifier = ml_opinion_modifiers_recently_cursed
+                    who = FROM
+                    years = 10
+                }
+
+                character_event = {
+                    id = "ml_events_spells.12"
+                    days = 730
+                }
+            }
+        }
+    }
 }

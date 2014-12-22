@@ -11,7 +11,7 @@ ml_decision_mage_choose_earth_element_desc;Learn to master the summoning powers 
 ml_decision_mage_choose_fire_element;Become a fire mage;;;;;;;;;;;;;x
 ml_decision_mage_choose_fire_element_desc;Learn to master the destructive power of fire!;;;;;;;;;;;;;x
 ml_decision_mage_choose_water_element;Become a water mage;;;;;;;;;;;;;x
-ml_decision_mage_choose_water_element_desc;Learn to master the healing power of water!;;;;;;;;;;;;;x
+ml_decision_mage_choose_water_element_desc;Learn to master the manipulating power of water!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_sickness;Curse with illness!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_sickness_desc;Curse target to be ill!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_magical_curse;Cast magicial curse!;;;;;;;;;;;;;x

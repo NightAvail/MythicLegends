@@ -10,7 +10,6 @@ once another **active** spell is cast.
 
 - Buff Spell ```active spell```
     - Increases all base stats by +2 (up to +5 with Arcane mastery)
-    - +10% fertility
     - Active spell
 - Healing Spell
     - Healing has a 1-year cooldown to perform again.
@@ -23,6 +22,9 @@ once another **active** spell is cast.
     - Once set to active will allow the player to curse someone else with
       a plague.
 - Prosper Spell ```active spell```
+    - Increased fertility
+    - Increased general opinion
+    - Increased sex appeal
     - Increase local tax modifier
     - Increases global tax modifier (up to 40%)
 - Summon Spell

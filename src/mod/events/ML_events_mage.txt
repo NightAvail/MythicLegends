@@ -63,7 +63,7 @@ character_event = {
         set_character_flag = ml_flag_air_mage
     }
     option = {
-        name = "ml_events_mage.nevermind"
+        name = "ml_events_common.nevermind"
     }
 }
 
@@ -683,6 +683,8 @@ character_event = {
     hide_window = yes
 
     trigger = {
+        trait = ml_trait_magical_blood
+
         NOT = {
             OR = {
                 has_character_flag = ml_flag_choose_mage
@@ -730,5 +732,44 @@ character_event = {
 
     option = {
         name = "ml_events_common.noonecanholdme"
+    }
+}
+
+# Magical blood will clean unbarren modifiers.
+character_event = {
+    id = "ml_events_mage.18"
+    desc = "ml_events_mage.18desc"
+
+    ai = no
+    hide_window = yes
+
+    trigger = {
+        trait = ml_trait_magical_blood
+
+        OR = {
+            has_character_modifier = infertile
+            has_character_modifier = barren
+        }
+
+    }
+
+    weight_multiplier = {
+        days = 1
+    }
+
+    immediate = {
+        if = {
+            limit = { has_character_modifier = infertile }
+            remove_character_modifier = infertile
+        }
+
+        if = {
+            limit = { has_character_modifier = barren }
+            remove_character_modifier = barren
+        }
+    }
+
+    option = {
+        name = "ml_events_common.ok"
     }
 }

@@ -265,7 +265,7 @@ targetted_decisions = {
                 # Spell cooldown
                 character_event = {
                     id = "ml_events_spells.5"
-                    days = 730
+                    days = 365
                 }
             }
         }

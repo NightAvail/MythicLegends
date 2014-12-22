@@ -56,10 +56,7 @@ targetted_decisions = {
         from_potential = {
             is_playable = yes
             trait = ml_trait_magical_blood
-
-            OR = {
-                trait = ml_trait_air_mage_master
-            }
+            trait = ml_trait_air_mage_master
 
             NOT = {
                 has_character_flag = ml_flag_recent_cast_magical_curse
@@ -101,7 +98,7 @@ targetted_decisions = {
 
                 character_event = {
                     id = "ml_events_spells.14"
-                    days = 730
+                    days = 365
                 }
             }
         }

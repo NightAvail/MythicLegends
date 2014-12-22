@@ -18,7 +18,7 @@ once another **active** spell is cast.
     - Level 3: Cures incapable, leper, and infirm traits
     - Level 4: Regenerate limbs, make attractive, increase strength, remove inbred trait.
 - Plague Spell ```active spell```
-    - Has a 2-year cooldown
+    - Has a 1-year cooldown
     - Once set to active will allow the player to curse someone else with
       a plague.
 - Prosper Spell ```active spell```

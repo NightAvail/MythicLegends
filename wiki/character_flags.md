@@ -2,26 +2,13 @@
 
 Various flags used to determine the state of the character.
 
+## Mage Class Flags
+
 - **ml_flag_choose_mage**
     - Flag letting us know that we choose to become a mage with the current character
 
 - **ml_flag_choose_not_mage**
     - Flag letting us know that we choose **NOT** to become a mage with the current character
-
-- **ml_flag_recent_mage_quest**
-    - Character has recently been on a mage quest
-
-- **ml_flag_on_mage_quest**
-    - Character is currently on a mage quest
-
-- **ml_flag_chose_mage_class**
-    - Character has choosen a mage class
-
-- **ml_flag_questing_with_friends**
-    - Character is on a quest with friends
-
-- **ml_flag_pause_events**
-    - Pause event flag as the user figures out the next move
 
 - **ml_flag_air_mage**
     - Flag telling us that we are an air mage
@@ -34,6 +21,8 @@ Various flags used to determine the state of the character.
 
 - **ml_flag_water_mage**
     - Flag telling us that we are an water mage
+
+## Mage Spell Flags
 
 - **ml_flag_spellbook_open**
     - Spellbook is open
@@ -80,3 +69,29 @@ Various flags used to determine the state of the character.
 - **ml_flag_recent_cast_illusion**
     - Flag for water mages that have cast the illusion (charm) spell
     - Has 1-year cooldown
+
+
+## Mage Quest Flags
+
+### General
+
+- **ml_flag_recent_mage_quest**
+    - Character has recently been on a mage quest
+
+- **ml_flag_on_mage_quest**
+    - Character is currently on a mage quest
+
+- **ml_flag_chose_mage_class**
+    - Character has choosen a mage class
+
+- **ml_flag_questing_with_friends**
+    - Character is on a quest with friends
+
+- **ml_flag_pause_events**
+    - Pause event flag as the user figures out the next move
+
+### Mage Tower Flags
+
+### Mad Mage Flags
+
+### Mage Duel Flags

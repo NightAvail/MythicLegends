@@ -35,6 +35,10 @@ targetted_decisions = {
 			always = no
 		}
 
+        ai_will_do = {
+            factor = 0
+        }
+
         effect = {
             add_trait = ill
 
@@ -80,6 +84,10 @@ targetted_decisions = {
         revoke_allowed = {
 			always = no
 		}
+
+        ai_will_do = {
+            factor = 0
+        }
 
         effect = {
             add_character_modifier = {

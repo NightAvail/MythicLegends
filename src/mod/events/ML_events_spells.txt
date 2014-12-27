@@ -109,12 +109,6 @@ character_event = {
 
         name = ml_events_common.feelgreat
 
-        # Spell cooldown
-        character_event = {
-            id = "ml_events_spells.3"
-            days = 365
-        }
-
         # Beginner
         if = {
             limit = { trait = ml_trait_arcane_spell_beginner }
@@ -448,23 +442,18 @@ character_event = {
                 remove_trait = scarred
             }
         }
+
+        # Spell cooldown
+        character_event = {
+            id = "ml_events_spells.3"
+            days = 365
+        }
     }
 
     # Cancle operation
     option = {
         name = ml_events_common.nevermind
     }
-
-    # Default option
-    # option = {
-    #     name = ml_events_common.ok
-    #
-    #     # Spell cooldown
-    #     character_event = {
-    #         id = "ml_events_spells.3"
-    #         days = 365
-    #     }
-    # }
 }
 
 # Clear healing cooldown

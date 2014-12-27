@@ -26,3 +26,5 @@ ml_targetted_decision_mage_give_plague;Plague with sickness!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_give_plague_desc;Plague the target with a terrible sickness!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_give_immortality;Gift Immortality;;;;;;;;;;;;;x
 ml_targetted_decision_mage_give_immortality_desc;Bestow the gift of immortality to this mortal!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_remove_illness;Cure illness;;;;;;;;;;;;;x
+ml_targetted_decision_mage_remove_illness_desc;Cure the illness of this mortal.;;;;;;;;;;;;;x

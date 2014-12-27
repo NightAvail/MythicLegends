@@ -301,6 +301,41 @@ targetted_decisions = {
         }
     }
 
+    # Heal another person of their illness.
+    ml_targetted_decision_mage_remove_illness = {
+        ai_target_filter = realm
+
+        from_potential = {
+            is_playable = yes
+
+            trait = ml_trait_magical_blood
+
+            OR = {
+                trait = ml_trait_arcane_spell_expert
+                trait = ml_trait_arcane_spell_master
+            }
+        }
+
+        potential = {
+            is_alive = yes
+
+            trait = ill
+            NOT = { trait = ml_trait_immortal }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_trait = ill
+        }
+    }
+
     # Change life with a dynasty member!
     # ml_targetted_decision_mage_change_life = {
     #     ai_target_filter = realm #dynasty

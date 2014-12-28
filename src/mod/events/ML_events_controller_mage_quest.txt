@@ -1,0 +1,112 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_controller_mage_quest
+namespace = ml_events_common
+
+#######################################################
+# Handle selecting a random quest event.
+#######################################################
+character_event = {
+    id = "ml_events_controller_mage_quest.1"
+    picture = GFX_evt_garden
+    hide_window = yes
+
+    ai = no
+
+    trigger = {
+        trait = ml_trait_mage_quest
+        has_character_flag = ml_flag_on_mage_quest
+
+        NOT = {
+            has_character_flag = ml_flag_pause_events
+        }
+
+        # We're not in the mysterious tower.
+        NOT = {
+            has_character_flag = ml_flag_quest_mysterious_tower
+        }
+
+        # We've not encountered the mad mage.
+        NOT = {
+            has_character_flag = ml_flag_quest_mad_mage
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+    option = {
+        random_list = {
+            # End Quest
+            15 = {
+                character_event = {
+                    id = "ml_events_mage.13"
+                }
+            }
+
+            # Explore area
+            40 = {
+                if = {
+                    limit = {
+                        has_character_flag = ml_flag_questing_with_friends
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.11"
+                    }
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            has_character_flag = ml_flag_questing_with_friends
+                        }
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.12"
+                    }
+                }
+            }
+
+            # Bandit attack
+            45 = {
+                if = {
+                    limit = {
+                        has_character_flag = ml_flag_questing_with_friends
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.9"
+                    }
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            has_character_flag = ml_flag_questing_with_friends
+                        }
+                    }
+
+                    character_event = {
+                        id = "ml_events_mage.10"
+                    }
+                }
+            }
+        }
+    }
+}
+
+#######################################################
+# Handle mage tower quest events.
+#######################################################
+
+#######################################################
+# Handle mad mage quest events.
+#######################################################

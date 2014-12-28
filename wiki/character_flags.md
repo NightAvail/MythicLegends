@@ -90,6 +90,18 @@ Various flags used to determine the state of the character.
 - **ml_flag_pause_events**
     - Pause event flag as the user figures out the next move
 
+- **ml_flag_quest_mysterious_tower**
+    - Flags that we're currently in the mysterious tower
+
+- **ml_flag_quest_mysterious_tower_completed**
+    - Flags that we have completed the mysterious tower in our current mage quest
+
+- **ml_flag_quest_mad_mage**
+    - Flags that we're currently encountered the mad mage
+
+- **ml_flag_quest_mad_mage_completed**
+    - Flags that we have completed the mad mage encounter in our current mage quest
+
 ### Mage Tower Flags
 
 ### Mad Mage Flags

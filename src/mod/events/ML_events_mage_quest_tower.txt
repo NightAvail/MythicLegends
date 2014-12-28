@@ -6,3 +6,77 @@
 #######################################################
 # Mysterious tower storyline for mage quest
 #######################################################
+
+namespace = ml_events_mage_quest_tower
+namespace = ml_events_common
+
+# Find a mysterious tower!
+character_event = {
+    id = "ml_events_mage_quest_tower.1"
+    desc = "ml_events_mage_quest_tower.1desc"
+    picture = GFX_evt_garden
+
+    is_triggered_only = yes
+
+    # We should be on a quest.
+    trigger = {
+        trait = ml_trait_mage_quest
+        has_character_flag = ml_flag_on_mage_quest
+
+        # We're not currently in the mysterious tower.
+        NOT = {
+            has_character_flag = ml_flag_quest_mysterious_tower
+        }
+    }
+
+    # Choose to enter the tower.
+    option = {
+        name = "ml_events_mage_quest_tower.opt1a"
+
+        add_trait = ml_trait_magical_blood
+
+        set_character_flag = ml_flag_choose_mage
+    }
+
+    # Choose to leave the tower alone.
+    option = {
+        name = "ml_events_mage_quest_tower.opt1b"
+
+        set_character_flag = ml_flag_choose_not_mage
+    }
+}
+
+# Leave the mysterious tower.
+character_event = {
+
+}
+
+# Fight a group of adventurers.
+character_event = {
+
+}
+
+# Find book on arcane knowledge.
+character_event = {
+
+}
+
+# Find great treasure.
+character_event = {
+
+}
+
+# Find healing potion.
+character_event = {
+
+}
+
+# Find potion of strength.
+character_event = {
+
+}
+
+# Find potion of wisdom.
+character_event = {
+
+}

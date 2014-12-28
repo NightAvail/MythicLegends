@@ -562,6 +562,9 @@ character_event = {
         clr_character_flag = ml_flag_on_mage_quest
         clr_character_flag = ml_flag_pause_events
 
+        clr_character_flag = ml_flag_quest_mysterious_tower_completed
+        clr_character_flag = ml_flag_quest_mad_mage_completed
+
         set_character_flag = ml_flag_recent_mage_quest
 
         # Remove the recent mage quest flag.
@@ -589,89 +592,6 @@ character_event = {
         name = "ml_events_mage.opt14a"
 
         clr_character_flag = ml_flag_recent_mage_quest
-    }
-}
-
-# Handle selecting a random quest event.
-character_event = {
-    id = "ml_events_mage.15"
-    picture = GFX_evt_garden
-    hide_window = yes
-
-    ai = no
-
-    trigger = {
-        trait = ml_trait_mage_quest
-        has_character_flag = ml_flag_on_mage_quest
-
-        NOT = {
-            has_character_flag = ml_flag_pause_events
-        }
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-    option = {
-        random_list = {
-            # End Quest
-            15 = {
-                character_event = {
-                    id = "ml_events_mage.13"
-                }
-            }
-
-            # Explore area
-            40 = {
-                if = {
-                    limit = {
-                        has_character_flag = ml_flag_questing_with_friends
-                    }
-
-                    character_event = {
-                        id = "ml_events_mage.11"
-                    }
-                }
-
-                if = {
-                    limit = {
-                        NOT = {
-                            has_character_flag = ml_flag_questing_with_friends
-                        }
-                    }
-
-                    character_event = {
-                        id = "ml_events_mage.12"
-                    }
-                }
-            }
-
-            # Bandit attack
-            45 = {
-                if = {
-                    limit = {
-                        has_character_flag = ml_flag_questing_with_friends
-                    }
-
-                    character_event = {
-                        id = "ml_events_mage.9"
-                    }
-                }
-
-                if = {
-                    limit = {
-                        NOT = {
-                            has_character_flag = ml_flag_questing_with_friends
-                        }
-                    }
-
-                    character_event = {
-                        id = "ml_events_mage.10"
-                    }
-                }
-            }
-        }
     }
 }
 

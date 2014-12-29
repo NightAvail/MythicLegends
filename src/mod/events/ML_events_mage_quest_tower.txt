@@ -48,35 +48,70 @@ character_event = {
 
 # Leave the mysterious tower.
 character_event = {
+    id = "ml_events_mage_quest_tower.2"
+    is_triggered_only = yes
 
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Fight a group of adventurers.
 character_event = {
+    id = "ml_events_mage_quest_tower.3"
+    is_triggered_only = yes
 
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Find book on arcane knowledge.
 character_event = {
+    id = "ml_events_mage_quest_tower.4"
+    is_triggered_only = yes
 
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Find great treasure.
 character_event = {
+    id = "ml_events_mage_quest_tower.5"
+    is_triggered_only = yes
 
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Find healing potion.
 character_event = {
+    id = "ml_events_mage_quest_tower.6"
+    is_triggered_only = yes
 
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Find potion of strength.
 character_event = {
+    id = "ml_events_mage_quest_tower.7"
+    is_triggered_only = yes
 
+    option = {
+        name = ml_events_common.ok
+    }
 }
 
 # Find potion of wisdom.
 character_event = {
+    id = "ml_events_mage_quest_tower.8"
+    is_triggered_only = yes
 
+    option = {
+        name = ml_events_common.ok
+    }
 }

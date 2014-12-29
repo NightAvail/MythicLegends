@@ -61,6 +61,15 @@ decisions = {
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
 
+            NOT = {
+                OR = {
+                    trait = ml_trait_air_mage_beginner
+                    trait = ml_trait_air_mage_apprentice
+                    trait = ml_trait_air_mage_expert
+                    trait = ml_trait_air_mage_master
+                }
+            }
+
             NOT = { has_character_flag = ml_flag_chose_mage_class }
         }
 
@@ -92,6 +101,15 @@ decisions = {
 
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
+
+            NOT = {
+                OR = {
+                    trait = ml_trait_earth_mage_beginner
+                    trait = ml_trait_earth_mage_apprentice
+                    trait = ml_trait_earth_mage_expert
+                    trait = ml_trait_earth_mage_master
+                }
+            }
 
             NOT = { has_character_flag = ml_flag_chose_mage_class }
         }
@@ -125,6 +143,15 @@ decisions = {
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
 
+            NOT = {
+                OR = {
+                    trait = ml_trait_fire_mage_beginner
+                    trait = ml_trait_fire_mage_apprentice
+                    trait = ml_trait_fire_mage_expert
+                    trait = ml_trait_fire_mage_master
+                }
+            }
+
             NOT = { has_character_flag = ml_flag_chose_mage_class }
         }
 
@@ -156,6 +183,15 @@ decisions = {
 
             # We must have magical blood to go on a mage quest.
             trait = ml_trait_magical_blood
+
+            NOT = {
+                OR = {
+                    trait = ml_trait_water_mage_beginner
+                    trait = ml_trait_water_mage_apprentice
+                    trait = ml_trait_water_mage_expert
+                    trait = ml_trait_water_mage_master
+                }
+            }
 
             NOT = { has_character_flag = ml_flag_chose_mage_class }
         }

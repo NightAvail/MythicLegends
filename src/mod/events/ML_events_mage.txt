@@ -23,7 +23,7 @@ character_event = {
 
     # Choose to become a mage with magical blood.
     option = {
-        name = "ml_events_mage.1a"
+        name = "ml_events_mage.opt1a"
 
         add_trait = ml_trait_magical_blood
 
@@ -32,7 +32,7 @@ character_event = {
 
     # Choose not to become a mage.
     option = {
-        name = "ml_events_mage.1b"
+        name = "ml_events_mage.opt1b"
 
         set_character_flag = ml_flag_choose_not_mage
     }
@@ -54,7 +54,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.2a"
+        name = "ml_events_mage.opt2a"
 
         add_trait = ml_trait_air_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
@@ -83,7 +83,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.3a"
+        name = "ml_events_mage.opt3a"
 
         add_trait = ml_trait_earth_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
@@ -112,7 +112,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.4a"
+        name = "ml_events_mage.opt4a"
 
         add_trait = ml_trait_fire_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
@@ -141,7 +141,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_mage.5a"
+        name = "ml_events_mage.opt5a"
 
         add_trait = ml_trait_water_mage_beginner
         add_trait = ml_trait_arcane_spell_beginner
@@ -224,14 +224,14 @@ character_event = {
     is_triggered_only = yes
 
     option = {
-        name = "ml_events_mage.8a"
+        name = "ml_events_mage.opt8a"
 
         set_character_flag = ml_flag_questing_with_friends
         clr_character_flag = ml_flag_pause_events
     }
 
     option = {
-        name = "ml_events_mage.8b"
+        name = "ml_events_mage.opt8b"
 
         clr_character_flag = ml_flag_questing_with_friends
         clr_character_flag = ml_flag_pause_events

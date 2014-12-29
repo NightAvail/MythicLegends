@@ -23,7 +23,7 @@ character_event = {
     }
 
     option = {
-        name = "ml_events_spells.11a"
+        name = "ml_events_spells.opt11a"
 
         add_trait = ml_trait_immortal
     }

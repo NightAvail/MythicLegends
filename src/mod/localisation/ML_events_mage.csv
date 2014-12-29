@@ -3,28 +3,28 @@ ml_events_mage.0desc;Unknown;;;;;;;;;;;;;x
 ml_events_mage.opt0a;Unknown;;;;;;;;;;;;;x
 ml_events_mage.1;Become a mage!;;;;;;;;;;;;;x
 ml_events_mage.1desc;Do you wish to become a mage with magical powers or continue your mundane life as a normal mortal. Choose wisely!;;;;;;;;;;;;;x
-ml_events_mage.1a;Yes, I want magic flowing through my blood!;;;;;;;;;;;;;x
-ml_events_mage.1b;Leave me be, I don't believe in magic!;;;;;;;;;;;;;x
+ml_events_mage.opt1a;Yes, I want magic flowing through my blood!;;;;;;;;;;;;;x
+ml_events_mage.opt1b;Leave me be, I don't believe in magic!;;;;;;;;;;;;;x
 ml_events_mage.2;Become Air Mage;;;;;;;;;;;;;x
 ml_events_mage.2desc;Do you wish to learn the secrets of the air element?;;;;;;;;;;;;;x
-ml_events_mage.2a;Yes! I will master the element of air!;;;;;;;;;;;;;x
+ml_events_mage.opt2a;Yes! I will master the element of air!;;;;;;;;;;;;;x
 ml_events_mage.3;Become Earth Mage;;;;;;;;;;;;;x
 ml_events_mage.3desc;Do you wish to learn the secrets of the earth element?;;;;;;;;;;;;;x
-ml_events_mage.3a;Yes! I will master the element of earth!;;;;;;;;;;;;;x
+ml_events_mage.opt3a;Yes! I will master the element of earth!;;;;;;;;;;;;;x
 ml_events_mage.4;Become Fire Mage;;;;;;;;;;;;;x
 ml_events_mage.4desc;Do you wish to learn the secrets of the fire element?;;;;;;;;;;;;;x
-ml_events_mage.4a;Yes! I will master the element of fire!;;;;;;;;;;;;;x
+ml_events_mage.opt4a;Yes! I will master the element of fire!;;;;;;;;;;;;;x
 ml_events_mage.5;Become Water Mage;;;;;;;;;;;;;x
 ml_events_mage.5desc;Do you wish to learn the secrets of the water element?;;;;;;;;;;;;;x
-ml_events_mage.5a;Yes! I will master the element of water!;;;;;;;;;;;;;x
+ml_events_mage.opt5a;Yes! I will master the element of water!;;;;;;;;;;;;;x
 ml_events_mage.6;Time to go on a quest!;;;;;;;;;;;;;x
 ml_events_mage.6desc;Great riches and magical knowledge await me!;;;;;;;;;;;;;x
 ml_events_mage.7;You see an inn close by;;;;;;;;;;;;;x
 ml_events_mage.7desc;You've been on your journey for a few days and see an inn close by.;;;;;;;;;;;;;x
 ml_events_mage.8;Meet some fellow adventurers;;;;;;;;;;;;;x
 ml_events_mage.8desc;While at the inn you meet a warrior and a rouge who offer to join you on your quest.;;;;;;;;;;;;;x
-ml_events_mage.8a;Sure! We'll be safer if we work together!;;;;;;;;;;;;;x
-ml_events_mage.8b;I don't need help!;;;;;;;;;;;;;x
+ml_events_mage.opt8a;Sure! We'll be safer if we work together!;;;;;;;;;;;;;x
+ml_events_mage.opt8b;I don't need help!;;;;;;;;;;;;;x
 ml_events_mage.9;Attacked by bandits!;;;;;;;;;;;;;x
 ml_events_mage.9desc;You and your companions are attacked by bandits! You all work together to counter their ambush!;;;;;;;;;;;;;x
 ml_events_mage.opt9a;We fought well!;;;;;;;;;;;;;x

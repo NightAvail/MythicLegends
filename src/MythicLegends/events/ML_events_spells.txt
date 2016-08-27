@@ -51,6 +51,11 @@ character_event = {
                 name = "ml_event_modifiers_spells_buff_1"
                 days = -1
             }
+
+            add_trait = ml_trait_buff_spell_1
+            remove_trait = ml_trait_buff_spell_2
+            remove_trait = ml_trait_buff_spell_3
+            remove_trait = ml_trait_buff_spell_4
         }
 
         # Apprentice
@@ -60,6 +65,11 @@ character_event = {
                 name = "ml_event_modifiers_spells_buff_2"
                 days = -1
             }
+
+            remove_trait = ml_trait_buff_spell_1
+            add_trait = ml_trait_buff_spell_2
+            remove_trait = ml_trait_buff_spell_3
+            remove_trait = ml_trait_buff_spell_4
         }
 
         # Expert
@@ -69,6 +79,11 @@ character_event = {
                 name = "ml_event_modifiers_spells_buff_3"
                 days = -1
             }
+
+            remove_trait = ml_trait_buff_spell_1
+            remove_trait = ml_trait_buff_spell_2
+            add_trait = ml_trait_buff_spell_3
+            remove_trait = ml_trait_buff_spell_4
         }
 
         # Master
@@ -78,6 +93,11 @@ character_event = {
                 name = "ml_event_modifiers_spells_buff_4"
                 days = -1
             }
+
+            remove_trait = ml_trait_buff_spell_1
+            remove_trait = ml_trait_buff_spell_2
+            remove_trait = ml_trait_buff_spell_3
+            add_trait = ml_trait_buff_spell_4
         }
 
         set_character_flag = ml_flag_active_buff_spell
@@ -1086,6 +1106,15 @@ character_event = {
         clr_character_flag = ml_flag_active_prosper_spell
         clr_character_flag = ml_flag_active_plague_spell
         clr_character_flag = ml_flag_active_lifechange_spell
+
+        # Remove buff traits.
+        remove_trait = ml_trait_buff_spell_1
+        remove_trait = ml_trait_buff_spell_2
+        remove_trait = ml_trait_buff_spell_3
+        remove_trait = ml_trait_buff_spell_4
+
+        # Some bug with the health spell clearing...
+        clr_character_flag = ml_flag_recent_healing_spell
     }
 
     # Default option

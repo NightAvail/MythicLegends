@@ -107,6 +107,14 @@ character_event = {
     option = {
         set_character_flag = ml_flag_recent_healing_spell
 
+        clr_character_flag = developing_illness
+        clr_character_flag = got_typhoid_fever
+        clr_character_flag = got_cancer
+        clr_character_flag = 3_year_physician_cooldown
+        clr_character_flag = recent_treatment
+        clr_character_flag = manifest_cancer
+        clr_character_flag = being_treated
+
         name = ml_events_common.feelgreat
 
         # Spell cooldown
@@ -182,10 +190,118 @@ character_event = {
                 remove_trait = leper
             }
 
+            # Reaper's Due DLC Symptoms            
+            if = {
+                limit = { trait = cough }
+                remove_trait = cough
+            }            
+            if = {
+                limit = { trait = fever }
+                remove_trait = fever
+            }            
+            if = {
+                limit = { trait = diarrhea }
+                remove_trait = diarrhea
+            }            
+            if = {
+                limit = { trait = vomiting }
+                remove_trait = vomiting
+            }            
+            if = {
+                limit = { trait = chest_pain }
+                remove_trait = chest_pain
+            }            
+            if = {
+                limit = { trait = cramps }
+                remove_trait = cramps
+            }            
+            if = {
+                limit = { trait = rash }
+                remove_trait = rash
+            }            
+            if = {
+                limit = { trait = headache }
+                remove_trait = headache
+            }            
+            if = {
+                limit = { trait = abdominal_pain }
+                remove_trait = abdominal_pain
+            }            
+            if = {
+                limit = { trait = fatigue }
+                remove_trait = fatigue
+            }            
+            if = {
+                limit = { trait = malaise }
+                remove_trait = malaise
+            }            
+            if = {
+                limit = { trait = infection }
+                remove_trait = infection
+            }            
+            if = {
+                limit = { trait = flu }
+                remove_trait = flu
+            }            
+            if = {
+                limit = { trait = dysentery }
+                remove_trait = dysentery
+            }            
+            if = {
+                limit = { trait = gout }
+                remove_trait = gout
+            }            
+            if = {
+                limit = { trait = food_poisoning }
+                remove_trait = food_poisoning
+            }            
+            if = {
+                limit = { trait = rabies }
+                remove_trait = rabies
+            }            
+            if = {
+                limit = { trait = cancer }
+                remove_trait = cancer
+            }            
+            if = {
+                limit = { trait = scurvy }
+                remove_trait = scurvy
+            }            
+            if = {
+                limit = { trait = sick_incapable }
+                remove_trait = sick_incapable
+            }
+            
             # Heal Body
             if = {
                 limit = { trait = wounded }
                 remove_trait = wounded
+            }
+
+            # Reaper's Due DLC
+            if = {
+                limit = { trait = one_eyed }
+                remove_trait = one_eyed
+            }
+            if = {
+                limit = { trait = one_handed }
+                remove_trait = one_handed
+            }
+            if = {
+                limit = { trait = one_legged }
+                remove_trait = one_legged
+            }
+            if = {
+                limit = { trait = disfigured }
+                remove_trait = disfigured
+            }
+            if = {
+                limit = { trait = mangled }
+                remove_trait = mangled
+            }
+            if = {
+                limit = { trait = severely_injured }
+                remove_trait = severely_injured
             }
         }
 

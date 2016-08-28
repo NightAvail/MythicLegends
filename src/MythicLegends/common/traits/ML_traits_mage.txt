@@ -592,6 +592,62 @@ ml_trait_water_mage_master = {
 }
 
 #######################################################
+# White mage
+#######################################################
+ml_trait_white_mage = {
+    opposites = {
+        # Mage opposites
+        ml_trait_air_mage_beginner
+        ml_trait_air_mage_apprentice
+        ml_trait_air_mage_expert
+        ml_trait_air_mage_master
+
+        ml_trait_earth_mage_beginner
+        ml_trait_earth_mage_apprentice
+        ml_trait_earth_mage_expert
+        ml_trait_earth_mage_master
+
+        ml_trait_fire_mage_beginner
+        ml_trait_fire_mage_apprentice
+        ml_trait_fire_mage_expert
+        ml_trait_fire_mage_master
+
+        ml_trait_water_mage_beginner
+        ml_trait_water_mage_apprentice
+        ml_trait_water_mage_expert
+        ml_trait_water_mage_master
+    }
+
+    stewardship             = 3
+    diplomacy               = 3
+    intrigue                = 3
+    learning                = 3
+    martial                 = 3
+
+    health                  = 100
+    fertility               = 0.25
+    general_opinion         = 20
+    immortal                = yes
+
+    random = no
+    inherit_chance = 0
+    cannot_inherit = yes
+    customizer = no
+
+    ai_greed = 20
+    ai_rationality = -10
+
+    command_modifier = {
+        morale_offence = 0.5
+        morale_defence = 0.5
+        damage = 0.5
+        defense = 0.5
+        speed = 0.2
+        siege = 0.5
+    }
+}
+
+#######################################################
 # Mage spell-level traits
 #
 # In combat a mage can cast spells to harm

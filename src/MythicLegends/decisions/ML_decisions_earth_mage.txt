@@ -18,6 +18,7 @@ targetted_decisions = {
                 trait = ml_trait_earth_mage_apprentice
                 trait = ml_trait_earth_mage_expert
                 trait = ml_trait_earth_mage_master
+                trait = ml_trait_white_mage
             }
         }
 
@@ -33,6 +34,7 @@ targetted_decisions = {
                 trait = has_typhus
                 trait = has_measles
                 trait = has_small_pox
+                trait = eunuch
 
                 # Reaper's Due DLC
                 trait = cough
@@ -81,6 +83,27 @@ targetted_decisions = {
         }
 
         effect = {
+            clr_character_flag = developing_illness
+            clr_character_flag = 3_year_physician_cooldown
+            clr_character_flag = recent_treatment
+            clr_character_flag = manifest_cancer
+            clr_character_flag = being_treated
+
+            clr_character_flag = got_typhoid_fever
+            clr_character_flag = got_cancer
+            clr_character_flag = got_bubonic_plague
+            clr_character_flag = got_aztec_disease
+            clr_character_flag = got_smallpox
+            clr_character_flag = got_measles
+            clr_character_flag = got_typhus
+            clr_character_flag = got_syphilis
+            clr_character_flag = got_pneumonia
+            clr_character_flag = got_rabies
+            clr_character_flag = got_gout
+            clr_character_flag = got_flu
+            clr_character_flag = got_dysentery
+            clr_character_flag = got_food_poisoning
+
             opinion = {
                 modifier = ml_opinion_modifiers_recently_healed
                 who = FROM
@@ -135,6 +158,11 @@ targetted_decisions = {
             if = {
                 limit = { trait = has_small_pox }
                 remove_trait = has_small_pox
+            }
+
+            if = {
+                limit = { trait = eunuch }
+                remove_trait = eunuch
             }
 
             # Reaper's Due DLC Symptoms            

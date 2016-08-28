@@ -40,7 +40,7 @@
 
 # Magically Cursed!
 ml_event_modifiers_magically_cursed = {
-    health          = -2
+    health          = -5
     fertility       = -0.5
     martial         = -10
     diplomacy       = -5
@@ -173,4 +173,20 @@ ml_event_modifiers_spells_prosper_4 = {
     general_opinion         = 20
 
     icon                    = 6
+}
+
+#######################################################
+# Magical Protection Spell Modifiers
+#######################################################
+ml_event_modifiers_spells_protection_ward_1 = {
+    icon                    = 8
+}
+ml_event_modifiers_spells_protection_ward_2 = {
+    icon                    = 8
+}
+ml_event_modifiers_spells_protection_ward_3 = {
+    icon                    = 8
+}
+ml_event_modifiers_spells_protection_ward_4 = {
+    icon                    = 8
 }

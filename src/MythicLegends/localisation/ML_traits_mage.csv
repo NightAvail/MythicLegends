@@ -32,6 +32,8 @@ ml_trait_water_mage_expert;Water Mage;;;;;;;;;;;;;x
 ml_trait_water_mage_expert_desc;This mage has mastered the basic skills of water magic and is consider an expert.;;;;;;;;;;;;;x
 ml_trait_water_mage_master;Water Mage;;;;;;;;;;;;;x
 ml_trait_water_mage_master_desc;This mage is considered a master at using water magic.;;;;;;;;;;;;;x
+ml_trait_white_mage;White mage;;;;;;;;;;;;;x
+ml_trait_white_mage_desc;This person is the most powerful being in existance.;;;;;;;;;;;;;x
 ml_trait_arcane_spell_beginner;Beginner Arcane Knowledge;;;;;;;;;;;;;x
 ml_trait_arcane_spell_beginner_desc;The arcane knowledge of this mage is beginner level.;;;;;;;;;;;;;x
 ml_trait_arcane_spell_apprentice;Apprentice Arcane Knowledge;;;;;;;;;;;;;x

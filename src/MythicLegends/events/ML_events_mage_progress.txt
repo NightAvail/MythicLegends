@@ -268,3 +268,56 @@ character_event = {
         name = "ml_events_common.great"
     }
 }
+
+# Immortal event for curing infirm and incappable.
+character_event = {
+    id = "ml_events_mage_progress.7"
+    desc = "ml_events_mage_progress.7desc"
+    picture = GFX_evt_library
+
+    ai = no
+
+    trigger = {
+        # You will need to survive long enough if you
+        # choose not to be an immortal.
+        age = 100
+
+        OR = {
+            # Any master mage.
+            trait = ml_trait_air_mage_master
+            trait = ml_trait_earth_mage_master
+            trait = ml_trait_fire_mage_master
+            trait = ml_trait_water_mage_master
+        }
+        AND = {
+            trait = ml_trait_arcane_spell_master
+        }
+        NOT = {
+            trait = ml_trait_white_mage
+        }
+    }
+
+    mean_time_to_happen = {
+        months = 120
+    }
+
+    immediate = {
+        # Master arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_master }
+
+            remove_trait = ml_trait_air_mage_master
+            remove_trait = ml_trait_earth_mage_master
+            remove_trait = ml_trait_fire_mage_master
+            remove_trait = ml_trait_water_mage_master
+
+            add_trait = ml_trait_white_mage
+        }
+    }
+
+    # Activate the spell based on arcane level.
+    option = {
+        name = "ml_events_common.great"
+    }
+}
+

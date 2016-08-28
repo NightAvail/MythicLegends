@@ -128,12 +128,25 @@ character_event = {
         set_character_flag = ml_flag_recent_healing_spell
 
         clr_character_flag = developing_illness
-        clr_character_flag = got_typhoid_fever
-        clr_character_flag = got_cancer
         clr_character_flag = 3_year_physician_cooldown
         clr_character_flag = recent_treatment
         clr_character_flag = manifest_cancer
         clr_character_flag = being_treated
+
+        clr_character_flag = got_typhoid_fever
+        clr_character_flag = got_cancer
+        clr_character_flag = got_bubonic_plague
+        clr_character_flag = got_aztec_disease
+        clr_character_flag = got_smallpox
+        clr_character_flag = got_measles
+        clr_character_flag = got_typhus
+        clr_character_flag = got_syphilis
+        clr_character_flag = got_pneumonia
+        clr_character_flag = got_rabies
+        clr_character_flag = got_gout
+        clr_character_flag = got_flu
+        clr_character_flag = got_dysentery
+        clr_character_flag = got_food_poisoning
 
         name = ml_events_common.feelgreat
 
@@ -208,6 +221,10 @@ character_event = {
             if = {
                 limit = { trait = leper }
                 remove_trait = leper
+            }
+            if = {
+                limit = { trait = eunuch }
+                remove_trait = eunuch
             }
 
             # Reaper's Due DLC Symptoms            
@@ -1033,6 +1050,118 @@ character_event = {
 
     immediate = {
         clr_character_flag = ml_flag_recent_cast_magical_curse
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
+}
+
+# Magically protected someone.
+character_event = {
+    id = "ml_events_spells.15"
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        NOR = { 
+            trait = ml_trait_magical_protection_1
+            trait = ml_trait_magical_protection_2
+            trait = ml_trait_magical_protection_3
+            trait = ml_trait_magical_protection_4 
+        }
+    }
+
+    immediate = {
+        # if = {
+        #     limit = {
+        #         FROM = {
+        #             trait = ml_trait_arcane_spell_beginner
+        #         } 
+        #     }
+        #     add_character_modifier = {
+        #         name = ml_event_modifiers_spells_protection_ward_1
+        #     }
+        #     add_trait = ml_trait_magical_protection_1
+        # }
+        # if = {
+        #     limit = {
+        #         FROM = {
+        #             trait = ml_trait_arcane_spell_apprentice
+        #         } 
+        #     }
+        #     add_character_modifier = {
+        #         name = ml_event_modifiers_spells_protection_ward_2
+        #     }
+        #     add_trait = ml_trait_magical_protection_2
+        # }
+        # if = {
+        #     limit = {
+        #         FROM = {
+        #             trait = ml_trait_arcane_spell_expert
+        #         } 
+        #     }
+        #     add_character_modifier = {
+        #         name = ml_event_modifiers_spells_protection_ward_3
+        #     }
+        #     add_trait = ml_trait_magical_protection_3
+        # }
+        # if = {
+            # limit = {
+            #     FROM = {
+            #         trait = ml_trait_arcane_spell_master
+            #     } 
+            # }
+            add_character_modifier = {
+                modifier = ml_event_modifiers_spells_protection_ward_4
+                duration = -1
+            }
+            add_trait = ml_trait_magical_protection_4
+        # }
+    }
+
+    # Default option
+    option = {
+        name = ml_events_common.ok
+    }
+}
+# Revoke magical protection.
+character_event = {
+    id = "ml_events_spells.16"
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        OR = {
+            trait = ml_trait_magical_protection_1
+            trait = ml_trait_magical_protection_2
+            trait = ml_trait_magical_protection_3
+            trait = ml_trait_magical_protection_4
+        }
+    }
+
+    immediate = {
+        # if = {
+        #     limit = { has_character_modifier = ml_event_modifiers_spells_protection_ward_1 }
+        #     remove_character_modifier = ml_event_modifiers_spells_protection_ward_1
+        #     remove_trait = ml_trait_magical_protection_1
+        # }
+        # if = {
+        #     limit = { has_character_modifier = ml_event_modifiers_spells_protection_ward_2 }
+        #     remove_character_modifier = ml_event_modifiers_spells_protection_ward_2
+        #     remove_trait = ml_trait_magical_protection_2
+        # }
+        # if = {
+        #     limit = { has_character_modifier = ml_event_modifiers_spells_protection_ward_3 }
+        #     remove_character_modifier = ml_event_modifiers_spells_protection_ward_3
+        #     remove_trait = ml_trait_magical_protection_3
+        # }
+        # if = {
+            # limit = { has_character_modifier = ml_event_modifiers_spells_protection_ward_4 }
+            remove_character_modifier = ml_event_modifiers_spells_protection_ward_4
+            remove_trait = ml_trait_magical_protection_4
+        # }
     }
 
     # Default option

@@ -167,6 +167,17 @@ spriteTypes = {
     }
 
     #######################################################
+    # White mage trait
+    #######################################################
+    spriteType = {
+        name = "GFX_trait_ml_trait_white_mage"
+        texturefile = "gfx/traits/white_mage.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    #######################################################
     # Mage quest trait
     #######################################################
     spriteType = {

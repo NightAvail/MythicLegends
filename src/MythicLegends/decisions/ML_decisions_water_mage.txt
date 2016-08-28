@@ -18,6 +18,7 @@ targetted_decisions = {
                 trait = ml_trait_water_mage_apprentice
                 trait = ml_trait_water_mage_expert
                 trait = ml_trait_water_mage_master
+                trait = ml_trait_white_mage
             }
 
             NOT = {

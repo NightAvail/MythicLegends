@@ -18,8 +18,3 @@ ml_decision_spells_open_spellbook;Open up spellbook;;;;;;;;;;;;;x
 ml_decision_spells_open_spellbook_desc;Open up your spellbook to perform a list of spells;;;;;;;;;;;;;x
 ml_decision_spells_close_spellbook;Close spellbook;;;;;;;;;;;;;x
 ml_decision_spells_close_spellbook_desc;Close your spellbook;;;;;;;;;;;;;x
-
-ml_trait_buff_spell_1;;;;;;;;;;;;;;x
-ml_trait_buff_spell_2;;;;;;;;;;;;;;x
-ml_trait_buff_spell_3;;;;;;;;;;;;;;x
-ml_trait_buff_spell_4;;;;;;;;;;;;;;x

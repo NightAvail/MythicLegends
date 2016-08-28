@@ -17,6 +17,7 @@ targetted_decisions = {
     #######################################################
 	ml_decision_magical_conception = {
 		filter = all
+        ai_target_filter = court
 		
 		from_potential = {
 			trait = ml_trait_arcane_spell_master
@@ -61,7 +62,6 @@ targetted_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
-		ai_target_filter = court
 	}
 
 	#######################################################
@@ -69,7 +69,8 @@ targetted_decisions = {
     # immortality.
     #######################################################
     ml_targetted_decision_mage_give_immortality = {
-        ai_target_filter = realm
+        filter = all
+        ai_target_filter = court
 
         from_potential = {
             is_playable = yes
@@ -101,7 +102,8 @@ targetted_decisions = {
     # Revoke the gift of immortality.
     #######################################################
     ml_targetted_decision_mage_revoke_immortality = {
-        ai_target_filter = realm
+        filter = all
+        ai_target_filter = court
 
         from_potential = {
             is_playable = yes
@@ -125,6 +127,112 @@ targetted_decisions = {
 
         effect = {
             remove_trait = ml_trait_immortal
+        }
+    }
+
+    #######################################################
+    # Grant a person magical protection.
+    #######################################################
+    ml_targetted_decision_mage_magical_protection = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+        }
+
+        potential = {
+            is_alive = yes
+
+            NOR = { 
+                trait = ml_trait_magical_protection_1
+                trait = ml_trait_magical_protection_2
+                trait = ml_trait_magical_protection_3
+                trait = ml_trait_magical_protection_4
+            }
+            NOT = { character = FROM }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            character_event = {
+                id = "ml_events_spells.15"
+            }
+        }
+    }
+
+    #######################################################
+    # Revoke magical protection.
+    #######################################################
+    ml_targetted_decision_mage_revoke_magical_protection = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+        }
+
+        potential = {
+            is_alive = yes
+            
+            OR = {
+                trait = ml_trait_magical_protection_1
+                trait = ml_trait_magical_protection_2
+                trait = ml_trait_magical_protection_3
+                trait = ml_trait_magical_protection_4
+            }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            character_event = {
+                id = "ml_events_spells.16"
+            }
+        }
+    }
+
+    #######################################################
+    # Create a lich king in the world.
+    #######################################################
+    ml_targetted_decision_mage_create_lich_king = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_white_mage
+        }
+
+        potential = {
+            is_alive = yes
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            add_trait = ml_trait_lichking
         }
     }
 }

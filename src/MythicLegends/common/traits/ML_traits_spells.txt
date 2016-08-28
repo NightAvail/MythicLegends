@@ -9,6 +9,10 @@
 # Buff Traits
 #######################################################
 ml_trait_buff_spell_1 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
 	command_modifier = {
         morale_offence = 0.2
         morale_defence = 0.2
@@ -18,6 +22,10 @@ ml_trait_buff_spell_1 = {
     }
 }
 ml_trait_buff_spell_2 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
 	command_modifier = {
         morale_offence = 0.5
         morale_defence = 0.5
@@ -27,6 +35,10 @@ ml_trait_buff_spell_2 = {
     }
 }
 ml_trait_buff_spell_3 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
 	command_modifier = {
         morale_offence = 1.0
         morale_defence = 1.0
@@ -36,6 +48,10 @@ ml_trait_buff_spell_3 = {
     }
 }
 ml_trait_buff_spell_4 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
 	command_modifier = {
         morale_offence = 2.0
         morale_defence = 2.0
@@ -43,4 +59,44 @@ ml_trait_buff_spell_4 = {
         speed = 1.0
         siege = 0.1
     }
+}
+
+#######################################################
+# Magical Protection Traits
+#######################################################
+ml_trait_magical_protection_1 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 1
+    health = 1
+    intrigue = 1
+}
+ml_trait_magical_protection_2 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 2
+    health = 2
+    intrigue = 2
+}
+ml_trait_magical_protection_3 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 3
+    health = 3
+    intrigue = 3
+}
+ml_trait_magical_protection_4 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+    
+    combat_rating = 4
+    health = 4
+    intrigue = 4
 }

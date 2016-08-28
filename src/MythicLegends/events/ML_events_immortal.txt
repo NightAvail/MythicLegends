@@ -26,6 +26,7 @@ character_event = {
             trait = lunatic
             trait = depressed
             trait = possessed
+            trait = eunuch
 
             # Reaper's Due DLC
             trait = cough
@@ -58,15 +59,29 @@ character_event = {
     }
 
     weight_multiplier = {
-        days = 365
+        days = 1095
     }
 
     # Activate the spell based on arcane level.
     option = {
         set_character_flag = ml_flag_recent_healing_spell
         clr_character_flag = developing_illness
+        
         clr_character_flag = got_typhoid_fever
         clr_character_flag = got_cancer
+        clr_character_flag = got_bubonic_plague
+        clr_character_flag = got_aztec_disease
+        clr_character_flag = got_smallpox
+        clr_character_flag = got_measles
+        clr_character_flag = got_typhus
+        clr_character_flag = got_syphilis
+        clr_character_flag = got_pneumonia
+        clr_character_flag = got_rabies
+        clr_character_flag = got_gout
+        clr_character_flag = got_flu
+        clr_character_flag = got_dysentery
+        clr_character_flag = got_food_poisoning
+
         clr_character_flag = 3_year_physician_cooldown
         clr_character_flag = recent_treatment
         clr_character_flag = manifest_cancer
@@ -74,7 +89,41 @@ character_event = {
 
         name = ml_events_common.feelgreat
 
-        # Master
+        # Add immunities
+        if = {
+            limit = { NOT = { has_character_flag = immune_tuberculosis } }
+            set_character_flag = immune_tuberculosis
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_typhoid_fever } }
+            set_character_flag = immune_typhoid_fever
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_typhus } }
+            set_character_flag = immune_typhus
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_bubonic_plague } }
+            set_character_flag = immune_bubonic_plague
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_measles } }
+            set_character_flag = immune_measles
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_smallpox } }
+            set_character_flag = immune_smallpox
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_aztec_disease } }
+            set_character_flag = immune_aztec_disease
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_dancing_plague } }
+            set_character_flag = immune_dancing_plague
+        }
+
+        # Heal traits.
         if = {
             # Remove Sickness
             if = {
@@ -110,6 +159,10 @@ character_event = {
             if = {
                 limit = { trait = possessed }
                 remove_trait = possessed
+            }
+            if = {
+                limit = { trait = eunuch }
+                remove_trait = eunuch
             }
 
             # Reaper's Due DLC Symptoms            

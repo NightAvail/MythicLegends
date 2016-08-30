@@ -235,4 +235,33 @@ targetted_decisions = {
             add_trait = ml_trait_lichking
         }
     }
+    #######################################################
+    # Revoke a lich king's power in the world.
+    #######################################################
+    ml_targetted_decision_mage_revoke_lich_king = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_white_mage
+        }
+
+        potential = {
+            is_alive = yes
+            trait = ml_trait_lichking
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_trait = ml_trait_lichking
+        }
+    }
 }

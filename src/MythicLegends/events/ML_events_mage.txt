@@ -616,14 +616,14 @@ character_event = {
     option = {
         random_list = {
             # End Quest
-            15 = {
-                character_event = {
-                    id = "ml_events_mage.13"
-                }
-            }
+            #15 = {
+            #    character_event = {
+            #        id = "ml_events_mage.13"
+            #    }
+            #}
 
             # Explore area
-            40 = {
+            55 = {
                 if = {
                     limit = {
                         has_character_flag = ml_flag_questing_with_friends

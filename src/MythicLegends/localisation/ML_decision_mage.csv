@@ -34,3 +34,7 @@ ml_targetted_decision_mage_magical_protection;Magically protect this person;;;;;
 ml_targetted_decision_mage_magical_protection_desc;Place a magical protection around this person.;;;;;;;;;;;;;x
 ml_targetted_decision_mage_revoke_magical_protection;Revoke magical protection;;;;;;;;;;;;;x
 ml_targetted_decision_mage_revoke_magical_protection_desc;Revoke magical protection on this person.;;;;;;;;;;;;;x
+ml_targetted_decision_mage_create_lich_king;Turn into Lich King;;;;;;;;;;;;;x
+ml_targetted_decision_mage_create_lich_king_desc;This mortal will turn into an undead lich king.;;;;;;;;;;;;;x
+ml_targetted_decision_mage_revoke_lich_king;Revoke Lich King Power;;;;;;;;;;;;;x
+ml_targetted_decision_mage_revoke_lich_king_desc;Removes the power of a lich king.;;;;;;;;;;;;;x

@@ -38,6 +38,8 @@ ml_trait_lichking = {
     church_opinion = -40
     general_opinion = -20
 
+    martial  = 10
+    intrigue = 10
     health   = 100
 
     immortal = yes
@@ -51,11 +53,11 @@ ml_trait_lichking = {
     customizer = no
 
     command_modifier = {
-        morale_offence = 0.2
-        morale_defence = 0.2
-        damage = 0.5
-        speed = 0.1
-        siege = 0.1
+        morale_offence = 0.3
+        morale_defence = 0.3
+        damage = 0.3
+        speed = 0.2
+        siege = 0.2
     }
 }
 

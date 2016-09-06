@@ -312,4 +312,77 @@ targetted_decisions = {
             remove_trait = drunkard
         }
     }
+
+    #######################################################
+    # Join war as a battlemage.
+    #######################################################
+    ml_targetted_decision_mage_join_war = {
+        filter = all
+        ai_target_filter = court
+        
+        from_potential = {
+            is_ruler = yes
+            higher_tier_than = BARON
+            OR = {
+                trait = ml_trait_air_mage_master                
+                trait = ml_trait_earth_mage_master
+                trait = ml_trait_fire_mage_master
+                trait = ml_trait_water_mage_master
+                trait = ml_trait_white_mage
+            }
+            #is_within_diplo_range = ROOT
+        }
+
+        potential = {
+            is_landed = yes
+            higher_tier_than = BARON
+        }
+
+        allow = {
+            NOT = { FROM = { war = yes } }
+            NOT = { FROM = { liege = { character = ROOT } } }
+            #is_within_diplo_range = FROM
+
+            ROOT = { 
+                war = yes 
+                any_war = { OR = { is_primary_war_attacker = yes
+                            is_primary_war_defender = yes } 
+
+                    NOT = { OR = { any_defender = { AND = { NOT = { character = ROOT }
+                                        any_vassal = { character = FROM } } } 
+                            any_attacker = { AND = { NOT = { character = ROOT }
+                                        any_vassal = { character = FROM } } } #Cannot join a war when your liege is already involved in it
+                            } 
+                        }
+
+                    NOT = { OR = { any_defender = { OR = { using_cb = peasant_revolt
+                                        using_cb = heretic_revolt
+                                        using_cb = religious_revolt
+                                        using_cb = liberation_revolt
+                                         } } 
+                            any_attacker = { OR = { using_cb = peasant_revolt
+                                        using_cb = heretic_revolt
+                                        using_cb = religious_revolt
+                                        using_cb = liberation_revolt 
+                                         } } #Cannot join if the target is tangled in a rebellion
+                            } 
+                        } 
+                    }
+                }
+        }
+        effect = {
+            FROM = { 
+                join_defender_wars = ROOT
+                join_attacker_wars = ROOT
+                prestige = 75
+                piety = 25 
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
 }

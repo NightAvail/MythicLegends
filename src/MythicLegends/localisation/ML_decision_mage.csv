@@ -38,3 +38,5 @@ ml_targetted_decision_mage_create_lich_king;Turn into Lich King;;;;;;;;;;;;;x
 ml_targetted_decision_mage_create_lich_king_desc;This mortal will turn into an undead lich king.;;;;;;;;;;;;;x
 ml_targetted_decision_mage_revoke_lich_king;Revoke Lich King Power;;;;;;;;;;;;;x
 ml_targetted_decision_mage_revoke_lich_king_desc;Removes the power of a lich king.;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_mind;Heal the mind;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_mind_desc;Heal the mind of this person.;;;;;;;;;;;;;x

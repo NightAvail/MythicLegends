@@ -41,7 +41,7 @@ targetted_decisions = {
 						}
 					is_female = no
 				}
-				FROM = { impregnate = PREV }
+				FROM = { impregnate_cuckoo = PREV }
 			}
 			if = {
 				limit = {
@@ -53,7 +53,7 @@ targetted_decisions = {
 						}
 					}
 				}
-				impregnate = FROM
+				impregnate_cuckoo = FROM
 			}
 		}
 		revoke_allowed = {
@@ -75,14 +75,19 @@ targetted_decisions = {
         from_potential = {
             is_playable = yes
 
-            trait = ml_trait_magical_blood
-            trait = ml_trait_immortal
+            OR = {
+                trait = ml_trait_immortal
+                trait = ml_trait_white_mage
+            }
         }
 
         potential = {
             is_alive = yes
 
-            NOT = { trait = ml_trait_immortal }
+            NOR = { 
+                trait = ml_trait_immortal 
+                trait = ml_trait_white_mage
+            }
         }
 
         revoke_allowed = {
@@ -108,8 +113,10 @@ targetted_decisions = {
         from_potential = {
             is_playable = yes
 
-            trait = ml_trait_magical_blood
-            trait = ml_trait_immortal
+            OR = {
+                trait = ml_trait_immortal
+                trait = ml_trait_white_mage
+            }
         }
 
         potential = {
@@ -221,6 +228,8 @@ targetted_decisions = {
 
         potential = {
             is_alive = yes
+
+            NOT = { character = FROM }
         }
 
         revoke_allowed = {
@@ -262,6 +271,45 @@ targetted_decisions = {
 
         effect = {
             remove_trait = ml_trait_lichking
+        }
+    }
+    #######################################################
+    # Heal mental mind.
+    #######################################################
+    ml_targetted_decision_mage_heal_mind = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+        }
+
+        potential = {
+            is_alive = yes
+            OR = {
+                trait = lunatic
+                trait = possessed
+                trait = depressed
+                trait = stressed
+                trait = drunkard
+            }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_trait = lunatic
+            remove_trait = possessed
+            remove_trait = depressed
+            remove_trait = stressed
+            remove_trait = drunkard
         }
     }
 }

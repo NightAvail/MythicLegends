@@ -297,10 +297,6 @@ character_event = {
         }
     }
 
-    mean_time_to_happen = {
-        months = 120
-    }
-
     immediate = {
         # Master arcane knowledge.
         if = {

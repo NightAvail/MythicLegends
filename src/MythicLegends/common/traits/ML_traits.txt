@@ -38,8 +38,8 @@ ml_trait_lichking = {
     church_opinion = -40
     general_opinion = -20
 
-    martial  = 10
-    intrigue = 10
+    martial  = 25
+    intrigue = 20
     health   = 100
 
     immortal = yes
@@ -48,17 +48,24 @@ ml_trait_lichking = {
 
     inherit_chance = 0
 
+    cached = yes
     random = no
     cannot_inherit = yes
     customizer = no
 
+    combat_rating = 15
     command_modifier = {
-        morale_offence = 0.3
-        morale_defence = 0.3
-        damage = 0.3
-        speed = 0.2
-        siege = 0.2
+        morale_offence = 0.8
+        morale_defence = 0.8
+        damage = 1.8
+        speed = 0.5
+        siege = 0.5
     }
+
+    ai_ambition = 1000
+    
+    land_morale = 0.25
+    ambition_opinion = -30 # Give them what they want
 }
 
 # Bloodline traits

@@ -719,6 +719,7 @@ character_event = {
             trait = ml_trait_air_mage_apprentice
             trait = ml_trait_air_mage_expert
             trait = ml_trait_air_mage_master
+            trait = ml_trait_white_mage
         }
     }
 

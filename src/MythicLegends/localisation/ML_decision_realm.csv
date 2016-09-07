@@ -1,0 +1,14 @@
+ml_decision_abdicate_throne;Abdicate the Throne;;;;;;;;;;;;;x
+ml_decision_abdicate_throne_desc;As absolute monarch, you may abdicate your throne and all of your titles to your current heir, provided they are of your dynasty. Once the abdication is complete, you will continue playing as your current heir.;;;;;;;;;;;;;x
+abd_ask;Will gain all of your titles and ascend the throne;;;;;;;;;;;;;x
+ml_events_realm.1desc;Choose how you wish to abdicate your throne.;;;;;;;;;;;;;x
+ml_events_realm.1a;Give away all titles.;;;;;;;;;;;;;x
+ml_events_realm.1b;Give only the primary title.;;;;;;;;;;;;;x
+ml_events_realm.1c;Oh dear, this was a mistake!;;;;;;;;;;;;;x
+ml_events_realm.2desc;Your liege has decided to offer you the throne as they have chosen to abdicate;;;;;;;;;;;;;x
+ml_events_realm.2a;I accept this tremendous honour;;;;;;;;;;;;;x
+ml_events_realm.3desc;Your liege has decided to offer you the throne as they have chosen to abdicate, but they still want to retain a single title.;;;;;;;;;;;;;x
+ml_events_realm.3a;I accept this tremendous honour;;;;;;;;;;;;;x
+ml_events_realm.4desc;[From.GetTitledName] has accepted your gracious offer of abdication, and assumes your throne and all titles forthwith;;;;;;;;;;;;;x
+ml_events_realm.5desc;[From.GetTitledName] has accepted your gracious offer of abdication, and assumes your throne and all titles forthwith;;;;;;;;;;;;;x
+ml_events_realm.sbi;So be it;;;;;;;;;;;;;x

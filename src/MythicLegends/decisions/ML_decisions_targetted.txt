@@ -384,5 +384,5 @@ targetted_decisions = {
         ai_will_do = {
             factor = 0
         }
-    }
+    }    
 }

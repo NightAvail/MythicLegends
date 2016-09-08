@@ -1,0 +1,19 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_mage
+namespace = ml_events_common
+
+#######################################################
+# Version 0.03
+#
+# Quests will now serve the purpose of advancing both
+# your elemental powers and your arcane knowledge.
+#
+# You will also be able to meet others during quests
+# to help you.
+#######################################################

@@ -1,0 +1,18 @@
+#######################################################
+# Mythic Legends
+# Special Troops
+#
+# Author:  NightAvail
+#######################################################
+
+ml_battlemages = {
+	morale = 50
+	maintenance = 75
+	phase_skirmish_attack = 10
+	phase_melee_attack = 30
+	phase_pursue_attack = 15.5
+	phase_skirmish_defense = 50
+	phase_melee_defense = 100
+	phase_pursue_defense = 20
+	base_type = heavy_infantry
+}

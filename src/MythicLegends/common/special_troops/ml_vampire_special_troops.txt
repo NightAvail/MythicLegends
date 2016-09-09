@@ -1,0 +1,22 @@
+ml_vampire_undead = {
+	morale = 8
+	maintenance = 5
+	phase_skirmish_attack = 5
+	phase_melee_attack = 2.5
+	phase_pursue_attack = 3.5
+	phase_skirmish_defense = 6
+	phase_melee_defense = 4
+	phase_pursue_defense = 5.5
+	base_type = light_infantry
+}
+ml_vampire_knights = {
+	morale = 50
+	maintenance = 75
+	phase_skirmish_attack = 10
+	phase_melee_attack = 30
+	phase_pursue_attack = 15.5
+	phase_skirmish_defense = 50
+	phase_melee_defense = 100
+	phase_pursue_defense = 20
+	base_type = heavy_infantry
+}

@@ -95,8 +95,8 @@ ml_trait_air_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 4
-    learning    = 4
+    intrigue   = 3
+    learning    = 3
 
     random = no
     cannot_inherit = yes
@@ -133,8 +133,8 @@ ml_trait_air_mage_master = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 6
-    learning    = 6
+    intrigue   = 3
+    learning    = 3
     combat_rating = 2
 
     random = no
@@ -236,8 +236,8 @@ ml_trait_earth_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 4
-    learning        = 4
+    stewardship       = 3
+    learning        = 3
 
     random = no
     cannot_inherit = yes
@@ -274,8 +274,8 @@ ml_trait_earth_mage_master = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 6
-    learning        = 6
+    stewardship       = 3
+    learning        = 3
     combat_rating = 3
 
     random = no
@@ -389,7 +389,7 @@ ml_trait_fire_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    martial           = 4
+    martial           = 3
     health            = 3
     combat_rating = 3
 
@@ -428,7 +428,7 @@ ml_trait_fire_mage_master = {
         ml_trait_water_mage_master
     }
 
-    martial           = 6
+    martial           = 3
     health            = 4
     combat_rating = 4
 
@@ -537,8 +537,8 @@ ml_trait_water_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    diplomacy               = 4
-    learning                = 4
+    diplomacy               = 3
+    learning                = 3
 
     fertility               = 0.15
     general_opinion         = 15
@@ -578,8 +578,8 @@ ml_trait_water_mage_master = {
         ml_trait_water_mage_expert
     }
 
-    diplomacy               = 6
-    learning                = 6
+    diplomacy               = 3
+    learning                = 3
     combat_rating = 2
 
     fertility               = 0.15

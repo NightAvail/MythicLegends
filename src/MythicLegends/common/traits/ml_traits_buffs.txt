@@ -1,1 +1,162 @@
-ml_traits_
+#######################################################
+# Mythic Legends
+# Traits
+#
+# Author:  NightAvail
+#######################################################
+
+#######################################################
+# Battlemage Buff Traits
+#######################################################
+ml_trait_buff_spell_1 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    martial = 2
+    combat_rating           = 1
+
+    command_modifier = {
+        morale_offence = 0.2
+        morale_defence = 0.2
+        damage = 0.1
+        speed = 0.1
+        siege = 0.1
+    }
+}
+ml_trait_buff_spell_2 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    martial = 4
+    combat_rating           = 2
+
+    command_modifier = {
+        morale_offence = 0.5
+        morale_defence = 0.5
+        damage = 0.2
+        speed = 0.2
+        siege = 0.2
+    }
+}
+ml_trait_buff_spell_3 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    martial = 6
+    combat_rating           = 3
+
+    command_modifier = {
+        morale_offence = 1.0
+        morale_defence = 1.0
+        damage = 0.5
+        speed = 0.5
+        siege = 0.5
+    }
+}
+ml_trait_buff_spell_4 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    martial = 8
+    combat_rating           = 4
+
+    command_modifier = {
+        morale_offence = 2.0
+        morale_defence = 2.0
+        damage = 1.0
+        speed = 1.0
+        siege = 0.1
+    }
+}
+
+#######################################################
+# Intelligence Buff Traits
+#######################################################
+ml_trait_int_buff_spell_1 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    stewardship             = 1
+    diplomacy               = 1
+    intrigue                = 1
+    learning                = 1
+    health                  = 1
+}
+ml_trait_int_buff_spell_2 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    stewardship             = 2
+    diplomacy               = 2
+    intrigue                = 2
+    learning                = 2
+    health                  = 2
+}
+ml_trait_int_buff_spell_3 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    stewardship             = 3
+    diplomacy               = 3
+    intrigue                = 3
+    learning                = 3
+    health                  = 3
+}
+ml_trait_int_buff_spell_4 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    stewardship             = 4
+    diplomacy               = 4
+    intrigue                = 4
+    learning                = 4
+    health                  = 4
+}
+
+#######################################################
+# Magical Protection Traits
+#######################################################
+ml_trait_magical_protection_1 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 1
+    health = 1
+    intrigue = 1
+}
+ml_trait_magical_protection_2 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 2
+    health = 2
+    intrigue = 2
+}
+ml_trait_magical_protection_3 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 3
+    health = 3
+    intrigue = 3
+}
+ml_trait_magical_protection_4 = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 4
+    health = 4
+    intrigue = 4
+}

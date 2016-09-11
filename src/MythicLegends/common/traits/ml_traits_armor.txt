@@ -1,0 +1,132 @@
+#######################################################
+# Mythic Legends
+# Traits
+#
+# Author:  NightAvail
+#######################################################
+
+#######################################################
+# Mage armor that grants the users abilities
+# to be nearly invincible.
+#######################################################
+
+#######################################################
+# Light Armor
+#######################################################
+ml_trait_light_helmet = {
+    opposites = {
+        ml_trait_dark_helmet
+    }
+
+    stewardship = 10
+    learning = 5
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+ml_trait_light_armor = {
+    opposites = {
+        ml_trait_dark_armor
+    }
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    combat_rating = 10
+    command_modifier = {
+        speed = 0.2
+    }
+    land_morale = 0.35
+}
+ml_trait_light_shield = {
+    opposites = {
+        ml_trait_dark_shield
+    }
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    combat_rating = 10
+    command_modifier = {
+        morale_defence = 0.5
+        defense = 0.5
+    }
+}
+ml_trait_light_sword = {
+    opposites = {
+        ml_trait_dark_sword
+    }
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    command_modifier = {
+        morale_offence = 0.1
+        damage = 0.1
+        siege = 0.1
+    }
+}
+
+#######################################################
+# Dark Armor
+#######################################################
+ml_trait_dark_helmet = {
+    opposites = {
+        ml_trait_light_helmet
+    }
+
+    martial = 10
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+ml_trait_dark_armor = {
+    opposites = {
+        ml_trait_light_armor
+    }
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    combat_rating = 10
+    command_modifier = {
+        speed = 0.2
+    }
+    land_morale = 0.35
+}
+ml_trait_dark_shield = {
+    opposites = {
+        ml_trait_light_shield
+    }
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    combat_rating = 10
+    command_modifier = {
+        morale_defence = 0.1
+        defense = 0.1
+    }
+}
+ml_trait_dark_sword = {
+    opposites = {
+        ml_trait_light_sword
+    }
+
+    random = no
+    cannot_inherit = yes
+    customizer = no
+
+    command_modifier = {
+        morale_offence = 0.5
+        damage = 0.5
+        siege = 0.5
+    }
+}

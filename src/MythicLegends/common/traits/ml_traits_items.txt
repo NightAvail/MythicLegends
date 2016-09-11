@@ -1,0 +1,24 @@
+#######################################################
+# Mythic Legends
+# Traits
+#
+# Author:  NightAvail
+#######################################################
+
+#######################################################
+# Eternal youth until you discover immortality
+#######################################################
+ml_trait_item_eternal_youth = {
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}
+
+#######################################################
+# Healing potion (will heal anything!)
+#######################################################
+ml_trait_item_healing_potion = {
+    random = no
+    cannot_inherit = yes
+    customizer = no
+}

@@ -1,0 +1,604 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+#######################################################
+# Various healing events.
+#######################################################
+
+namespace = ml_events_healing
+namespace = ml_events_common
+
+#######################################################
+# Healing ability check.
+#######################################################
+character_event = {
+    id = "ml_events_healing.1"
+    desc = "ml_events_healing.1desc"
+    picture = GFX_evt_recovery
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    immediate = {
+        # Basic healing wounds only.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_beginner }
+            character_event = { id = "ml_events_healing.2" }
+        }
+        # Heal wounds and cure desease.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_apprentice }
+            character_event = { id = "ml_events_healing.3" }
+        }
+        # Heal wounds, cure desease, improve genetics.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_expert }
+            character_event = { id = "ml_events_healing.4" }
+        }
+        # Heal wounds, cure desease, improve genetics, regenerate limbs.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_master }
+            character_event = { id = "ml_events_healing.5" }
+        }
+    }
+}
+
+#######################################################
+# Heal options (2 - 5)
+#######################################################
+
+# Heal wounds.
+character_event = {
+    id = "ml_events_healing.2"
+    desc = "ml_events_healing.2desc"
+    picture = GFX_evt_recovery
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    # Basic wounds healing.
+    option = {
+        name = "ml_events_healing.2a"
+        character_event = { id = "ml_events_healing.6" }
+    }
+
+    # Nevermind...
+    option = {
+        name = "ml_events_common.nvm"
+    }
+}
+
+# Heal wounds and cure desease.
+character_event = {
+    id = "ml_events_healing.3"
+    desc = "ml_events_healing.3desc"
+    picture = GFX_evt_recovery
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+    # Basic wounds healing.
+    option = {
+        name = "ml_events_healing.2a"
+        character_event = { id = "ml_events_healing.6" }
+    }
+    # Cure deseases.
+    option = {
+        name = "ml_events_healing.3a"
+        character_event = { id = "ml_events_healing.7" }
+    }
+
+    # Nevermind...
+    option = {
+        name = "ml_events_common.nvm"
+    }
+}
+
+# Heal wounds, cure desease, fix genetics.
+character_event = {
+    id = "ml_events_healing.4"
+    desc = "ml_events_healing.4desc"
+    picture = GFX_evt_recovery
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    # Basic wounds healing.
+    option = {
+        name = "ml_events_healing.2a"
+        character_event = { id = "ml_events_healing.6" }
+    }
+    # Cure deseases.
+    option = {
+        name = "ml_events_healing.3a"
+        character_event = { id = "ml_events_healing.7" }
+    }
+    # Improve genetics.
+    option = {
+        name = "ml_events_healing.4a"
+        character_event = { id = "ml_events_healing.8" }
+    }
+
+    # Nevermind...
+    option = {
+        name = "ml_events_common.nvm"
+    }
+}
+
+# Heal all.
+character_event = {
+    id = "ml_events_healing.5"
+    desc = "ml_events_healing.5desc"
+    picture = GFX_evt_recovery
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    # Basic wounds healing.
+    option = {
+        name = "ml_events_healing.2a"
+        character_event = { id = "ml_events_healing.6" }
+    }
+    # Cure deseases.
+    option = {
+        name = "ml_events_healing.3a"
+        character_event = { id = "ml_events_healing.7" }
+    }
+    # Improve and regenerate limbs.
+    option = {
+        name = "ml_events_healing.5a"
+        character_event = { id = "ml_events_healing.9" }
+    }
+
+    # Nevermind...
+    option = {
+        name = "ml_events_common.nvm"
+    }
+}
+
+#######################################################
+# Healing events (6 - 9)
+#
+# 6 - Basic healing
+# 7 - Cure desease.
+# 8 - Improve genetics.
+# 9 - Improve genetics and regenerate limbs.
+#######################################################
+
+# Basic healing.
+character_event = {
+    id = "ml_events_healing.6"
+    desc = "ml_events_healing.6desc"
+    picture = GFX_evt_recovery
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    immediate = {
+        # Remove wounds and scars.
+        if = {
+            limit = { trait = wounded }
+            remove_trait = wounded
+        }
+        if = {
+            limit = { trait = scarred }
+            remove_trait = scarred
+        }
+        if = {
+            limit = { trait = severely_injured }
+            remove_trait = severely_injured
+        }
+    }
+}
+
+# Cure desease.
+character_event = {
+    id = "ml_events_healing.7"
+    desc = "ml_events_healing.7desc"
+    picture = GFX_evt_recovery
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    immediate = {
+        # Clear flags for illness.
+        clr_character_flag = recent_treatment
+        clr_character_flag = being_treated
+        clr_character_flag = bedridden_illness
+
+        clr_character_flag = developing_illness
+        clr_character_flag = got_syphilis
+        clr_character_flag = got_tuberculosis
+        clr_character_flag = got_typhoid_fever
+        clr_character_flag = got_typhus
+        clr_character_flag = got_bubonic_plague
+        clr_character_flag = got_measles
+        clr_character_flag = got_smallpox
+        clr_character_flag = got_aztec_disease
+        clr_character_flag = got_flu
+        clr_character_flag = got_dysentery
+        clr_character_flag = got_gout
+        clr_character_flag = got_food_poisoning
+        clr_character_flag = got_rabies
+        clr_character_flag = got_cancer
+        clr_character_flag = got_pneumonia
+        clr_character_flag = manifest_syphilis
+        clr_character_flag = manifest_tuberculosis
+        clr_character_flag = manifest_typhoid_fever
+        clr_character_flag = manifest_typhus
+        clr_character_flag = manifest_bubonic_plague
+        clr_character_flag = manifest_measles
+        clr_character_flag = manifest_smallpox
+        clr_character_flag = manifest_aztec_disease
+        clr_character_flag = manifest_flu
+        clr_character_flag = manifest_dysentery
+        clr_character_flag = manifest_gout
+        clr_character_flag = manifest_food_poisoning
+        clr_character_flag = manifest_rabies
+        clr_character_flag = manifest_cancer
+        clr_character_flag = manifest_pneumonia
+
+        # Remove Sickness
+        if = {
+            limit = { trait = ill }
+            remove_trait = ill
+        }
+        if = {
+            limit = { trait = infirm }
+            remove_trait = infirm
+        }
+        if = {
+            limit = { trait = incapable }
+            remove_trait = incapable
+        }
+        if = {
+            limit = { trait = pneumonic }
+            remove_trait = pneumonic
+        }
+        if = {
+            limit = { trait = syphilitic }
+            remove_trait = syphilitic
+        }
+        if = {
+            limit = { trait = has_tuberculosis }
+            remove_trait = has_tuberculosis
+        }
+        if = {
+            limit = { trait = has_typhoid_fever }
+            remove_trait = has_typhoid_fever
+        }
+        if = {
+            limit = { trait = has_typhus }
+            remove_trait = has_typhus
+        }
+        if = {
+            limit = { trait = has_bubonic_plague }
+            remove_trait = has_bubonic_plague
+        }
+        if = {
+            limit = { trait = has_measles }
+            remove_trait = has_measles
+        }
+        if = {
+            limit = { trait = has_small_pox }
+            remove_trait = has_small_pox
+        }
+        if = {
+            limit = { trait = has_aztec_disease }
+            remove_trait = has_aztec_disease
+        }
+        if = {
+            limit = { trait = leper }
+            remove_trait = leper
+        }
+        if = {
+            limit = { trait = has_bloody_flux }
+            remove_trait = has_bloody_flux
+        }
+        if = {
+            limit = { trait = has_grey_plague }
+            remove_trait = has_grey_plague
+        }
+        if = {
+            limit = { trait = has_greyscale }
+            remove_trait = has_greyscale
+        }
+
+        # Reaper's Due DLC Symptoms
+        if = {
+            limit = { trait = cough }
+            remove_trait = cough
+        }
+        if = {
+            limit = { trait = fever }
+            remove_trait = fever
+        }
+        if = {
+            limit = { trait = diarrhea }
+            remove_trait = diarrhea
+        }
+        if = {
+            limit = { trait = vomiting }
+            remove_trait = vomiting
+        }
+        if = {
+            limit = { trait = chest_pain }
+            remove_trait = chest_pain
+        }
+        if = {
+            limit = { trait = cramps }
+            remove_trait = cramps
+        }
+        if = {
+            limit = { trait = rash }
+            remove_trait = rash
+        }
+        if = {
+            limit = { trait = headache }
+            remove_trait = headache
+        }
+        if = {
+            limit = { trait = abdominal_pain }
+            remove_trait = abdominal_pain
+        }
+        if = {
+            limit = { trait = fatigue }
+            remove_trait = fatigue
+        }
+        if = {
+            limit = { trait = malaise }
+            remove_trait = malaise
+        }
+        if = {
+            limit = { trait = infection }
+            remove_trait = infection
+        }
+        if = {
+            limit = { trait = flu }
+            remove_trait = flu
+        }
+        if = {
+            limit = { trait = dysentery }
+            remove_trait = dysentery
+        }
+        if = {
+            limit = { trait = gout }
+            remove_trait = gout
+        }
+        if = {
+            limit = { trait = food_poisoning }
+            remove_trait = food_poisoning
+        }
+        if = {
+            limit = { trait = rabies }
+            remove_trait = rabies
+        }
+        if = {
+            limit = { trait = cancer }
+            remove_trait = cancer
+        }
+        if = {
+            limit = { trait = scurvy }
+            remove_trait = scurvy
+        }
+        if = {
+            limit = { trait = sick_incapable }
+            remove_trait = sick_incapable
+        }
+    }
+}
+
+# Improve genetics.
+character_event = {
+    id = "ml_events_healing.8"
+    desc = "ml_events_healing.8desc"
+    picture = GFX_evt_recovery
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = { trait = inbred }
+            remove_trait = inbred
+        }
+        if = {
+            limit = { trait = harelip }
+            remove_trait = harelip
+        }
+        if = {
+            limit = { trait = hunchback }
+            remove_trait = hunchback
+        }
+        if = {
+            limit = { trait = lisp }
+            remove_trait = lisp
+        }
+        if = {
+            limit = { trait = stutter }
+            remove_trait = stutter
+        }
+        if = {
+            limit = { trait = ugly }
+            remove_trait = ugly
+        }
+        if = {
+            limit = { trait = dwarf }
+            remove_trait = dwarf
+        }
+    }
+}
+
+# Improve genetics and regenerate limbs.
+character_event = {
+    id = "ml_events_healing.9"
+    desc = "ml_events_healing.9desc"
+    picture = GFX_evt_recovery
+    hide_window = yes
+
+    is_triggered_only = yes
+
+    # We should have some arcane knowledge.
+    trigger = {
+        OR = {
+            trait = ml_trait_arcane_spell_beginner
+            trait = ml_trait_arcane_spell_apprentice
+            trait = ml_trait_arcane_spell_expert
+            trait = ml_trait_arcane_spell_master
+        }
+    }
+
+    immediate = {
+        # Remove Sickness
+        if = {
+            limit = { trait = blinded }
+            remove_trait = blinded
+        }
+        if = {
+            limit = { trait = eunuch }
+            remove_trait = eunuch
+        }
+        if = {
+            limit = { trait = crippled }
+            remove_trait = crippled
+        }
+        if = {
+            limit = { trait = inbred }
+            remove_trait = inbred
+        }
+        if = {
+            limit = { trait = blinded_age }
+            remove_trait = blinded_age
+        }
+        if = {
+            limit = { trait = maimed }
+            remove_trait = maimed
+        }
+        if = {
+            limit = { trait = harelip }
+            remove_trait = harelip
+        }
+        if = {
+            limit = { trait = hunchback }
+            remove_trait = hunchback
+        }
+        if = {
+            limit = { trait = lisp }
+            remove_trait = lisp
+        }
+        if = {
+            limit = { trait = stutter }
+            remove_trait = stutter
+        }
+        if = {
+            limit = { trait = ugly }
+            remove_trait = ugly
+        }
+        if = {
+            limit = { trait = dwarf }
+            remove_trait = dwarf
+        }
+        if = {
+            limit = { trait = scarred }
+            remove_trait = scarred
+        }
+        if = {
+            limit = { trait = one_eyed }
+            remove_trait = one_eyed
+        }
+        if = {
+            limit = { trait = one_handed }
+            remove_trait = one_handed
+        }
+        if = {
+            limit = { trait = one_legged }
+            remove_trait = one_legged
+        }
+        if = {
+            limit = { trait = disfigured }
+            remove_trait = disfigured
+        }
+        if = {
+            limit = { trait = mangled }
+            remove_trait = mangled
+        }
+    }
+}

@@ -1,0 +1,200 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_aimage_progress
+
+# Mage progresses as an air mage.
+character_event = {
+    id = "ml_events_aimage_progress.1"
+    hide_window = yes
+
+    # We not already have progressed to the end
+    # of our abilities.
+    trigger = {
+        has_character_flag = ml_flag_is_air_mage
+
+        NOT = { trait = ml_trait_air_mage_master }
+        NOT = { trait = ml_trait_earth_mage_master }
+        NOT = { trait = ml_trait_fire_mage_master }
+        NOT = { trait = ml_trait_water_mage_master }
+    }
+
+    # Every 10 years.
+    mean_time_to_happen = {
+        months = 120
+    }
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_air_mage_expert }
+
+            remove_trait = ml_trait_air_mage_expert
+            add_trait = ml_trait_air_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_air_mage_apprentice }
+
+            remove_trait = ml_trait_air_mage_apprentice
+            add_trait = ml_trait_air_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_air_mage_beginner }
+
+            remove_trait = ml_trait_air_mage_beginner
+            add_trait = ml_trait_air_mage_apprentice
+        }
+    }
+}
+
+# Mage progresses as an earth mage.
+character_event = {
+    id = "ml_events_aimage_progress.2"
+    hide_window = yes
+
+    # We not already have progressed to the end
+    # of our abilities.
+    trigger = {
+        has_character_flag = ml_flag_is_earth_mage
+
+        NOT = { trait = ml_trait_air_mage_master }
+        NOT = { trait = ml_trait_earth_mage_master }
+        NOT = { trait = ml_trait_fire_mage_master }
+        NOT = { trait = ml_trait_water_mage_master }
+    }
+
+    # Every 10 years.
+    mean_time_to_happen = {
+        months = 120
+    }
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_earth_mage_expert }
+
+            remove_trait = ml_trait_earth_mage_expert
+            add_trait = ml_trait_earth_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_earth_mage_apprentice }
+
+            remove_trait = ml_trait_earth_mage_apprentice
+            add_trait = ml_trait_earth_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_earth_mage_beginner }
+
+            remove_trait = ml_trait_earth_mage_beginner
+            add_trait = ml_trait_earth_mage_apprentice
+        }
+    }
+}
+
+# Mage progresses as an fire mage.
+character_event = {
+    id = "ml_events_aimage_progress.3"
+    hide_window = yes
+
+    # We not already have progressed to the end
+    # of our abilities.
+    trigger = {
+        has_character_flag = ml_flag_is_fire_mage
+
+        NOT = { trait = ml_trait_air_mage_master }
+        NOT = { trait = ml_trait_earth_mage_master }
+        NOT = { trait = ml_trait_fire_mage_master }
+        NOT = { trait = ml_trait_water_mage_master }
+    }
+
+    # Every 10 years.
+    mean_time_to_happen = {
+        months = 120
+    }
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_fire_mage_expert }
+
+            remove_trait = ml_trait_fire_mage_expert
+            add_trait = ml_trait_fire_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_fire_mage_apprentice }
+
+            remove_trait = ml_trait_fire_mage_apprentice
+            add_trait = ml_trait_fire_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_fire_mage_beginner }
+
+            remove_trait = ml_trait_fire_mage_beginner
+            add_trait = ml_trait_fire_mage_apprentice
+        }
+    }
+}
+
+# Mage progresses as an water mage.
+character_event = {
+    id = "ml_events_aimage_progress.4"
+    hide_window = yes
+
+    # We not already have progressed to the end
+    # of our abilities.
+    trigger = {
+        has_character_flag = ml_flag_is_water_mage
+
+        NOT = { trait = ml_trait_air_mage_master }
+        NOT = { trait = ml_trait_earth_mage_master }
+        NOT = { trait = ml_trait_fire_mage_master }
+        NOT = { trait = ml_trait_water_mage_master }
+    }
+
+    # Every 10 years.
+    mean_time_to_happen = {
+        months = 120
+    }
+
+    immediate = {
+        # Master mage.
+        if = {
+            limit = { trait = ml_trait_water_mage_expert }
+
+            remove_trait = ml_trait_water_mage_expert
+            add_trait = ml_trait_water_mage_master
+        }
+
+        # Expert mage.
+        if = {
+            limit = { trait = ml_trait_water_mage_apprentice }
+
+            remove_trait = ml_trait_water_mage_apprentice
+            add_trait = ml_trait_water_mage_expert
+        }
+
+        # Apprentice mage.
+        if = {
+            limit = { trait = ml_trait_water_mage_beginner }
+
+            remove_trait = ml_trait_water_mage_beginner
+            add_trait = ml_trait_water_mage_apprentice
+        }
+    }
+}

@@ -1,0 +1,99 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_arcane_progress
+namespace = ml_events_common
+
+# Mage progresses in arcane knowledge.
+character_event = {
+    id = "ml_events_arcane_progress.1"
+    desc = "ml_events_arcane_progress.1desc"
+    picture = GFX_evt_library
+
+    ai = no
+
+    # We not already have progressed to the end
+    # of our abilities.
+    trigger = {
+        NOT = { trait = ml_trait_arcane_spell_master }
+    }
+
+    # Every 10 years.
+    mean_time_to_happen = {
+        months = 120
+    }
+
+    immediate = {
+        # Master arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_expert }
+
+            remove_trait = ml_trait_arcane_spell_expert
+            add_trait = ml_trait_arcane_spell_master
+        }
+
+        # Expert arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_apprentice }
+
+            remove_trait = ml_trait_arcane_spell_apprentice
+            add_trait = ml_trait_arcane_spell_expert
+        }
+
+        # Apprentice arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_beginner }
+
+            remove_trait = ml_trait_arcane_spell_beginner
+            add_trait = ml_trait_arcane_spell_apprentice
+        }
+    }
+
+    option = {
+        name = "ml_events_common.great"
+    }
+}
+
+# Mage becomes the legendary mage.
+character_event = {
+    id = "ml_events_arcane_progress.2"
+    desc = "ml_events_arcane_progress.2desc"
+    picture = GFX_evt_library
+
+    ai = no
+
+    trigger = {
+        # You will need to survive long enough.
+        age = 80
+
+        trait = ml_trait_arcane_spell_master
+
+        NOT = {
+            trait = ml_trait_legendary_mage
+        }
+    }
+
+    immediate = {
+        # Master arcane knowledge.
+        if = {
+            limit = { trait = ml_trait_arcane_spell_master }
+
+            remove_trait = ml_trait_air_mage_master
+            remove_trait = ml_trait_earth_mage_master
+            remove_trait = ml_trait_fire_mage_master
+            remove_trait = ml_trait_water_mage_master
+
+            add_trait = ml_trait_legendary_mage
+        }
+    }
+
+    # Activate the spell based on arcane level.
+    option = {
+        name = "ml_events_common.great"
+    }
+}
+

@@ -1,3 +1,10 @@
+#######################################################
+# Mythic Legends
+# Special Troops
+#
+# Author:  NightAvail
+#######################################################
+
 ml_vampire_undead = {
 	morale = 8
 	maintenance = 5

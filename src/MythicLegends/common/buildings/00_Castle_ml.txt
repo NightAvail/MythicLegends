@@ -1,0 +1,83 @@
+castle = {
+    # All cultural buildings follow the same pattern:
+    # tech required is 0, 1, 2, 4 for the levels of the buildings
+    # cost is 200 + 100 per level
+    # 60 maintenance of troops + 20 per level
+    # + 0.15 bonus in either offensive, defensive or morale sometimes split over different units or stats same on all levels
+
+    # Culture building names MUST start with ca_culture
+
+    # Battlemage Spire
+    ca_battlemage_spire_1 = {
+        desc = ca_battlemage_spire_desc
+        potential = {
+            FROM = {
+                OR = {
+                    trait = ml_trait_arcane_spell_expert
+                    trait = ml_trait_arcane_spell_master
+                }
+            }
+        }
+
+        gold_cost = 1000
+        build_time = 100
+        ml_battlemages = 50
+        tax_income = 5
+        ai_creation_factor = 101
+    }
+
+    # Great Battlemage Spire
+    ca_battlemage_spire_2 = {
+        desc = ca_great_battlemage_spire_desc
+        potential = {
+            FROM = {
+                OR = {
+                    trait = ml_trait_arcane_spell_master
+                }
+            }
+        }
+
+        upgrades_from = ca_battlemage_spire_1
+        gold_cost = 5000
+        build_time = 100
+        ml_battlemages = 500
+        tax_income = 10
+        ai_creation_factor = 101
+    }
+
+    # Vampire Graveyard
+    ca_vampire_graveyard_1 = {
+        desc = ca_vampire_graveyard_desc
+        potential = {
+            FROM = {
+                OR = {
+                    trait = ml_trait_creature_vampire
+                }
+            }
+        }
+
+        upgrades_from = ca_battlemage_spire_1
+        gold_cost = 100
+        build_time = 100
+        ml_vampire_undead = 1000
+        ai_creation_factor = 101
+    }
+
+    # Vampire Castle
+    ca_vampire_castle_1 = {
+        desc = ca_vampire_castle_desc
+        potential = {
+            FROM = {
+                OR = {
+                    trait = ml_trait_creature_vampire
+                    trait = ml_trait_creature_lich_king
+                }
+            }
+        }
+
+        gold_cost = 5000
+        build_time = 100
+        ml_vampire_knights = 200
+        ai_creation_factor = 101
+    }
+}

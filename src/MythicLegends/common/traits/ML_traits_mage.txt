@@ -39,7 +39,6 @@ ml_trait_air_mage_beginner = {
     learning    = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 }
 ml_trait_air_mage_apprentice = {
@@ -65,11 +64,10 @@ ml_trait_air_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 2
-    learning    = 2
+    intrigue   = 1
+    learning    = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 }
 ml_trait_air_mage_expert = {
@@ -95,19 +93,18 @@ ml_trait_air_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 3
-    learning    = 3
+    intrigue   = 1
+    learning    = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 10
     ai_rationality = -5
 
     command_modifier = {
-        morale_offence = 0.2
-        morale_defence = 0.2
+        morale_offence = 0.015
+        morale_defence = 0.015
     }
 }
 ml_trait_air_mage_master = {
@@ -133,20 +130,19 @@ ml_trait_air_mage_master = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 3
-    learning    = 3
-    combat_rating = 2
+    intrigue   = 2
+    learning    = 2
+    combat_rating = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 20
     ai_rationality = -10
 
     command_modifier = {
-        morale_offence = 0.5
-        morale_defence = 0.5
+        morale_offence = 0.05
+        morale_defence = 0.05
     }
 }
 
@@ -180,7 +176,6 @@ ml_trait_earth_mage_beginner = {
     learning        = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 }
 ml_trait_earth_mage_apprentice = {
@@ -206,11 +201,10 @@ ml_trait_earth_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 2
-    learning        = 2
+    stewardship       = 1
+    learning        = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 }
 ml_trait_earth_mage_expert = {
@@ -236,19 +230,18 @@ ml_trait_earth_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 3
-    learning        = 3
+    stewardship       = 1
+    learning        = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 10
     ai_rationality = -5
 
     command_modifier = {
-        morale_offence = 0.3
-        morale_defence = 0.3
+        morale_offence = 0.015
+        morale_defence = 0.015
     }
 }
 ml_trait_earth_mage_master = {
@@ -274,20 +267,19 @@ ml_trait_earth_mage_master = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 3
-    learning        = 3
-    combat_rating = 3
+    stewardship       = 1
+    learning        = 1
+    combat_rating = 2
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 20
     ai_rationality = -10
 
     command_modifier = {
-        morale_offence = 0.6
-        morale_defence = 0.6
+        morale_offence = 0.025
+        morale_defence = 0.025
     }
 }
 
@@ -322,12 +314,11 @@ ml_trait_fire_mage_beginner = {
     combat_rating = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     command_modifier = {
-        morale_offence = 0.1
-        morale_defence = 0.1
+        morale_offence = 0.01
+        morale_defence = 0.01
     }
 }
 ml_trait_fire_mage_apprentice = {
@@ -353,17 +344,16 @@ ml_trait_fire_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    martial               = 2
-    health                = 2
-    combat_rating = 2
+    martial               = 1
+    health                = 1
+    combat_rating = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     command_modifier = {
-        morale_offence = 0.2
-        morale_defence = 0.2
+        morale_offence = 0.01
+        morale_defence = 0.01
     }
 }
 ml_trait_fire_mage_expert = {
@@ -389,20 +379,19 @@ ml_trait_fire_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    martial           = 3
-    health            = 3
-    combat_rating = 3
+    martial           = 1
+    health            = 1
+    combat_rating = 1
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 10
     ai_rationality = -5
 
     command_modifier = {
-        morale_offence = 0.4
-        morale_defence = 0.4
+        morale_offence = 0.01
+        morale_defence = 0.01
     }
 }
 ml_trait_fire_mage_master = {
@@ -428,20 +417,19 @@ ml_trait_fire_mage_master = {
         ml_trait_water_mage_master
     }
 
-    martial           = 3
-    health            = 4
-    combat_rating = 4
+    martial           = 2
+    health            = 1
+    combat_rating = 2
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 20
     ai_rationality = -10
 
     command_modifier = {
-        morale_offence = 0.8
-        morale_defence = 0.8
+        morale_offence = 0.05
+        morale_defence = 0.05
     }
 }
 
@@ -478,7 +466,6 @@ ml_trait_water_mage_beginner = {
     general_opinion         = 5
 
     random = no
-    cannot_inherit = yes
     customizer = no
 }
 ml_trait_water_mage_apprentice = {
@@ -504,14 +491,13 @@ ml_trait_water_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    diplomacy               = 2
-    learning                = 2
+    diplomacy               = 1
+    learning                = 1
 
     fertility               = 0.1
     general_opinion         = 10
 
     random = no
-    cannot_inherit = yes
     customizer = no
 }
 ml_trait_water_mage_expert = {
@@ -537,22 +523,21 @@ ml_trait_water_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    diplomacy               = 3
-    learning                = 3
+    diplomacy               = 1
+    learning                = 1
 
     fertility               = 0.15
     general_opinion         = 15
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 10
     ai_rationality = -5
 
     command_modifier = {
-        morale_offence = 0.2
-        morale_defence = 0.2
+        morale_offence = 0.015
+        morale_defence = 0.015
     }
 }
 ml_trait_water_mage_master = {
@@ -578,23 +563,22 @@ ml_trait_water_mage_master = {
         ml_trait_water_mage_expert
     }
 
-    diplomacy               = 3
-    learning                = 3
-    combat_rating = 2
+    diplomacy               = 2
+    learning                = 1
+    combat_rating = 1
 
     fertility               = 0.15
-    general_opinion         = 20
+    general_opinion         = 15
 
     random = no
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 20
     ai_rationality = -10
 
     command_modifier = {
-        morale_offence = 0.5
-        morale_defence = 0.5
+        morale_offence = 0.015
+        morale_defence = 0.015
     }
 }
 
@@ -625,36 +609,35 @@ ml_trait_white_mage = {
         ml_trait_water_mage_master
     }
 
-    stewardship             = 5
-    diplomacy               = 5
-    intrigue                = 5
-    learning                = 5
-    martial                 = 5
-    combat_rating           = 15
+    stewardship             = 2
+    diplomacy               = 2
+    intrigue                = 2
+    learning                = 2
+    martial                 = 2
+    combat_rating           = 5
 
     health                  = 100
-    fertility               = 0.25
-    general_opinion         = 20
+    #fertility               = 0.25
+    #general_opinion         = 20
     immortal                = yes
 
     random = no
     inherit_chance = 0
-    cannot_inherit = yes
     customizer = no
 
     ai_greed = 20
     ai_rationality = -10
 
     command_modifier = {
-        morale_offence = 0.5
-        morale_defence = 0.5
-        damage = 0.5
-        defense = 0.5
-        speed = 0.2
-        siege = 0.5
+        morale_offence = 0.05
+        morale_defence = 0.05
+        damage = 0.05
+        defense = 0.05
+        speed = 0.02
+        siege = 0.05
     }
 
-    land_morale = 0.35
+    land_morale = 0.05
 }
 
 #######################################################
@@ -688,5 +671,4 @@ ml_trait_mage_quest = {
 
     random = no
     customizer = no
-    cannot_inherit = yes
 }

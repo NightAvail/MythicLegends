@@ -1,0 +1,172 @@
+focus_magic = {
+	type = character
+	
+	modifier_name = "MAGIC_FOCUS"
+	
+	potential = {
+		is_playable = yes
+	}
+	
+	allow = {
+		is_adult = yes
+		NOT = { trait = incapable }
+		OR = {
+			trait = novice_mage
+			trait = eldritch_scholar
+			trait = veteran_wizard
+			trait = arcane_master
+		}
+	}
+	
+	# AI Pick chance
+	chance = {
+		factor = 100
+		
+		modifier = {
+			factor = 0
+			trait = imbecile
+		}
+		modifier = {
+			factor = 0
+			trait = inbred
+		}
+		modifier = {
+			factor = 0
+			trait = cynical
+		}
+		modifier = {
+			factor = 0.25
+			trait = wroth
+		}
+		modifier = {
+			factor = 0.25
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0.25
+			trait = brave
+		}
+		modifier = {
+			factor = 1.5
+			trait = craven
+		}
+		modifier = {
+			factor = 1.5
+			trait = content
+		}
+		modifier = {
+			factor = 2.0
+			trait = patient
+		}
+		modifier = {
+			factor = 2.0
+			OR = {
+				trait = novice_mage
+				trait = eldritch_scholar
+				trait = veteran_wizard
+				trait = arcane_master
+			}
+		}
+		modifier = {
+			factor = 3.0
+			trait = mystic
+		}
+		modifier = {
+			factor = 3.0
+			trait = zealous
+		}
+		modifier = {
+			factor = 3.0
+			is_theocracy = yes
+		}
+	}
+	
+	# Focuses have no success conditions
+	success = {
+		always = no
+	}
+	
+	abort = {
+		OR = {
+			trait = incapable
+			is_playable = no
+		}
+	}
+	
+	abort_effect = {
+	}
+	
+	# MODIFIERS
+	learning = 2
+	health = 1
+}
+focus_ch_magic = {
+	type = character
+	
+	modifier_name = "CHILDHOOD_FOCUS_MAGIC"
+	
+	potential = {
+		NOT = { age = 12 }
+	}
+	
+	allow = {
+	}
+	
+	# AI Pick chance
+	chance = {
+		factor = 100
+
+	}
+	
+	# Focuses have no success conditions
+	success = {
+		always = no
+	}
+	
+	abort = {
+		age = 12
+	}
+	
+	abort_effect = {
+	}
+	
+
+	potential_traits = {
+		curious
+		brooding
+	}
+}
+focus_ed_magic = {
+	type = character
+	
+	modifier_name = "EDUCATION_FOCUS_MAGIC"
+	
+	potential = {
+		age = 12
+		is_adult = no
+	}
+	
+	allow = {
+	}
+	
+	# AI Pick chance
+	chance = {
+		factor = 100
+
+	}
+	
+	# Focuses have no success conditions
+	success = {
+		always = no
+	}
+	
+	abort = {
+		is_adult = yes
+	}
+	
+	abort_effect = {
+	}
+	
+	# MODIFIERS
+	learning = 1
+}

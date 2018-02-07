@@ -1,0 +1,41 @@
+#######################################################
+# Mythic Legends
+# Interface
+#
+# Author:  NightAvail
+#######################################################
+
+spriteTypes = {
+    # Armor of Light.
+    spriteType = {
+        name = "GFX_trait_ml_trait_armor_of_light"
+        texturefile = "gfx/traits/thegods/Gold_Armor.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    # Armor of Darkness.
+    spriteType = {
+        name = "GFX_trait_ml_trait_armor_of_darkness"
+        texturefile = "gfx/traits/thegods/Dark_Armor.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    # Sword of Light.
+    spriteType = {
+        name = "GFX_trait_ml_trait_sword_of_light"
+        texturefile = "gfx/traits/thegods/Gold_Sword.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    # Sword of Darkness.
+    spriteType = {
+        name = "GFX_trait_ml_trait_sword_of_darkness"
+        texturefile = "gfx/traits/thegods/Dark_Sword.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

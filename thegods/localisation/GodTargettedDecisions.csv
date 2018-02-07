@@ -1,0 +1,16 @@
+transform_into_god;Transform into God;;;;;;
+transform_into_god_desc;Transform this mortal man into a God!;;;;;;
+transform_into_goddess;Transform into Goddess;;;;;;
+transform_into_goddess_desc;Transform this mortal woman into a Goddess!;;;;;;
+transform_to_demigod;Transform into a Demi God;;;;;;
+transform_to_demigod_desc;Transform this mortal man into a Demi God!;;;;;;
+transform_to_demigodess;Transform into a Demi Goddess;;;;;;
+transform_to_demigodess_desc;Transform this mortal woman into a Demi Goddess!;;;;;;
+god_heal_body;Heal the body;;;;;;
+god_heal_body_desc;Heals the body of the individual from all deformities and deseases.;;;;;;
+EVTDESCthegods.6;The body has been healed!;;;;;;
+godrevoke_ability;Revoke godly abilities;;;;;;
+godrevoke_ability_desc;As the first god you can revoke god-like powers from others.;;;;;;
+smite_mortal;Smite mortal with death;;;;;;
+smite_mortal_desc;Instantly kill this mortal with your godly powers.;;;;;;
+

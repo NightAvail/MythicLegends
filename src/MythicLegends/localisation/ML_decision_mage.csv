@@ -18,6 +18,8 @@ ml_targetted_decision_mage_cast_magical_curse;Cast magicial curse!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_magical_curse_desc;The target will be magically cursed with a deadly spell!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_sick;Cure wounds and illness!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_sick_desc;Cure target of wounds and most illnesses!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_sick_other;Cure wounds and illness!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_sick_other_desc;Cure target of wounds and most illnesses!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_illusion;Cast charm spell!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_cast_illusion_desc;Charm target with an illusion!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_change_life;Start new life!;;;;;;;;;;;;;x
@@ -28,6 +30,8 @@ ml_targetted_decision_mage_give_immortality;Gift Immortality;;;;;;;;;;;;;x
 ml_targetted_decision_mage_give_immortality_desc;Bestow the gift of immortality to this mortal!;;;;;;;;;;;;;x
 ml_targetted_decision_mage_revoke_immortality;Revoke Immortality;;;;;;;;;;;;;x
 ml_targetted_decision_mage_revoke_immortality_desc;Revoke the gift of immortality for this immortal!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_revoke_immortality_other;Revoke Immortality;;;;;;;;;;;;;x
+ml_targetted_decision_mage_revoke_immortality_other_desc;Revoke the gift of immortality for this immortal!;;;;;;;;;;;;;x
 ml_decision_magical_conception;Magical conception;;;;;;;;;;;;;x
 ml_decision_magical_conception_desc;Perform a magical conception;;;;;;;;;;;;;x
 ml_targetted_decision_mage_magical_protection;Magically protect this person;;;;;;;;;;;;;x
@@ -40,3 +44,15 @@ ml_targetted_decision_mage_revoke_lich_king;Revoke Lich King Power;;;;;;;;;;;;;x
 ml_targetted_decision_mage_revoke_lich_king_desc;Removes the power of a lich king.;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_mind;Heal the mind;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_mind_desc;Heal the mind of this person.;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_mind_other;Heal the mind;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_mind_other_desc;Heal the mind of this person.;;;;;;;;;;;;;x
+ml_telport_out_of_prison;Teleport out of prison;;;;;;;;;;;;;x
+ml_telport_out_of_prison_desc;Use divine powers to teleport this person out of prison!;;;;;;;;;;;;;x
+ml_telport_out_of_prison_other;Teleport out of prison;;;;;;;;;;;;;x
+ml_telport_out_of_prison_other_desc;Use divine powers to teleport this person out of prison!;;;;;;;;;;;;;x
+ml_telport_to_court;Teleport to court;;;;;;;;;;;;;x
+ml_telport_to_court_desc;Use divine powers to teleport this person to your court!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_all;Heal all issues;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_all_desc;Perform a powerful healing spell for all issues on the character.;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_all_other;Heal all issues;;;;;;;;;;;;;x
+ml_targetted_decision_mage_heal_all_other_desc;Perform a powerful healing spell for all issues on the character.;;;;;;;;;;;;;x

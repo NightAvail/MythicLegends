@@ -1,0 +1,91 @@
+cast_spell = {
+	diplomacy = -1
+	learning = -1
+	icon = 8
+}
+challenged_emperor = {
+	icon = 1
+}
+has_quested = {
+	icon = 8
+	monthly_character_prestige = 0.1
+}
+golden_fleece = {
+	icon = 1
+	monthly_character_prestige = 1
+	global_tax_modifier = 0.3
+}
+medusa_head = {
+	icon = 1
+	martial = 3
+	land_morale = 0.3
+}
+minor_aura = {
+	general_opinion = 10
+	intrigue = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	icon = 1
+}
+persuasive_aura = {
+	general_opinion = 20
+	intrigue = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	icon = 1
+}
+powerful_aura = {
+	general_opinion = 30
+	intrigue = -1
+	stewardship = -1
+	intrigue = -1
+	learning = -1
+	icon = 1
+}
+expelled_satanists = {
+	icon = 8
+	diplomacy = -1
+}
+owl_familiar = {
+	learning = 2
+	icon = 7
+}
+dove_familiar = {
+	diplomacy = 2
+	general_opinion = 5
+	icon = 7
+}
+crow_familiar = {
+	stewardship = 2
+	global_tax_modifier = 0.1
+	icon = 7
+}
+wolf_familiar = {
+	martial = 2
+	combat_rating = 1
+	icon = 7
+}
+rat_familiar = {
+	intrigue = 3
+	icon = 7
+}
+known_monster = {
+	icon = 36
+	general_opinion = -10
+}
+scorched_land = {
+	local_revolt_risk = 0.1
+	levy_size = -0.3
+	local_tax_modifier = -0.3
+	icon = 32	
+}
+recently_scorched_land = {
+	local_revolt_risk = 0.3
+	icon = 32	
+}
+recently_scorched_land_not_owner = {
+	icon = 32
+	local_revolt_risk = 0.1
+}

@@ -1,0 +1,396 @@
+castle = {
+
+#vampire
+	ca_vampire_citadel_1 = {
+		desc = ca_vampire_citadel_1_desc
+		
+		potential = { FROM = { trait = vampire } }	
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			is_capital = yes 
+		}
+		
+		prerequisites = { ca_wall_2 }
+		ai_creation_factor = 100
+		
+		fort_level = 2
+		tax_income = 1
+		monthly_character_prestige = 0.25
+		gold_cost = 495
+		
+		build_time = 1095
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_vampire_citadel_2 = {
+		desc = ca_vampire_citadel_2_desc
+		
+		potential = { FROM = { trait = vampire } }
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+			is_capital = yes					 
+		}
+		
+		upgrades_from = ca_vampire_citadel_1
+		ai_creation_factor = 99
+		
+		fort_level = 4
+		tax_income = 2
+		knights = 25
+		knights_offensive = 0.15
+		monthly_character_prestige = 0.5
+		
+		gold_cost = 750
+		build_time = 1825
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_vampire_catacomb = {
+		desc = ca_vampire_catacomb_desc
+		
+		potential = { 
+			FROM = { 
+				trait = vampire
+				culture = vampire_culture
+			} 
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		
+		ai_creation_factor = 99
+		
+		monthly_character_piety = 0.05
+		vampires = 100
+		vampires_defensive = 0.15
+		
+		gold_cost = 225
+		build_time = 400
+		
+		extra_tech_building_start = 10.0
+	}
+
+#werewolf
+	ca_werewolf_pits = {
+		desc = ca_werewolf_pits_desc
+		
+		potential = { 
+			FROM = { 
+				trait = werewolf
+				culture = werewolf_culture
+			} 
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		
+		ai_creation_factor = 100
+		
+		tax_income = 1.5
+		lycan_berzerkers = 150
+		lycan_berzerkers_offensive = 0.15
+		
+		gold_cost = 225
+		build_time = 350
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_werewolf_lodge = {
+		desc = ca_werewolf_lodge_desc
+		
+		potential = { FROM = { trait = werewolf } }
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			is_capital = yes					 
+		}
+		
+		prerequisites = { ca_wall_1 }
+		ai_creation_factor = 99
+		
+		fort_level = 2
+		archers = 150
+		archers_offensive = 0.15
+		monthly_character_prestige = 0.5
+		
+		gold_cost = 450
+		build_time = 400
+		
+		extra_tech_building_start = 10.0
+	}
+	
+#Giant
+	ca_giant_arena = {
+		desc = ca_giant_arena_desc
+		
+		potential = { 
+			FROM = {
+				OR = {
+				trait = giant
+				trait = half_giant
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		
+		ai_creation_factor = 100
+		
+		heavy_infantry = 50
+		heavy_infantry_offensive = 0.15
+		heavy_infantry_morale = 0.15
+		
+		gold_cost = 225
+		build_time = 350
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_giant_shield = {
+		desc = ca_giant_shield_desc
+		
+		potential = { 
+			FROM = {
+				OR = {
+				trait = giant
+				trait = half_giant
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1}
+			
+		prerequisites = { ca_wall_1 }
+		ai_creation_factor = 100
+		
+		monthly_character_prestige = 1.0
+		
+		gold_cost = 275
+		build_time = 400
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_giant_hall = {
+		desc = ca_giant_hall_desc
+		
+		potential = { 
+			FROM = {
+				OR = {
+				trait = giant
+				trait = half_giant
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+			is_capital = yes					 
+		}
+		
+		prerequisites = { ca_giant_shield }
+		ai_creation_factor = 100
+		
+		tax_income = 1
+		monthly_character_prestige = 1.0
+		heavy_infantry = 50
+		levy_reinforce_rate = 0.1
+		
+		gold_cost = 350
+		build_time = 550
+		
+		extra_tech_building_start = 10.0
+	}
+
+#Gods
+	ca_god_pantheon = {
+		desc = ca_god_pantheon_desc
+		
+		potential = { 
+			FROM = {
+				OR = {
+				trait = god
+				trait = demi_god
+				}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }		 
+		
+		prerequisites = { ca_wall_1 }
+		ai_creation_factor = 100
+		
+		fort_level = 1
+		tax_income = 1.5
+		monthly_character_prestige = 1.0
+		land_morale = 0.1
+		
+		gold_cost = 300
+		build_time = 350
+		
+		extra_tech_building_start = 10.0
+	}
+	
+#dragons
+	ca_dragon_vault_1 = {
+		desc = ca_dragon_vault_1_desc
+		
+		potential = { FROM = { trait = dragon } }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		
+		prerequisites = { ca_wall_1 }
+		ai_creation_factor = 101
+		
+		tax_income = 2
+		monthly_character_prestige = 0.25
+		gold_cost = 300
+		build_time = 350
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_dragon_vault_2 = {
+		desc = ca_dragon_vault_2_desc
+		
+		potential = { FROM = { trait = dragon } }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		
+		upgrades_from = ca_dragon_vault_1
+		ai_creation_factor = 99
+		
+		fort_level = 1
+		tax_income = 4
+		monthly_character_prestige = 0.75
+		
+		gold_cost = 500
+		build_time = 630
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_dragon_tower_1 = {
+		desc = ca_dragon_vault_1_desc
+		
+		potential = { FROM = { trait = dragon } }
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1 	
+			is_capital = yes					 
+		}
+		
+		prerequisites = { ca_wall_2 }
+		ai_creation_factor = 101
+		
+		fort_level = 2
+		monthly_character_prestige = 0.15
+		
+		gold_cost = 300
+		build_time = 350
+		
+		dragon_cavalry = 10
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_dragon_tower_2 = {
+		desc = ca_dragon_tower_2_desc
+		
+		potential = { FROM = { trait = dragon } }
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 3 	
+			is_capital = yes					 
+		}
+		
+		upgrades_from = ca_dragon_tower_1
+		ai_creation_factor = 100
+		
+		fort_level = 3
+		monthly_character_prestige = 0.25
+		land_morale = 0.1
+		
+		gold_cost = 425
+		build_time = 625
+		
+		dragon_cavalry = 10
+		dragon_cavalry_offensive = 0.05
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_dragon_tower_3 = {
+		desc = ca_dragon_tower_3_desc
+		
+		potential = { FROM = { trait = dragon } }
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 5	
+			is_capital = yes					 
+		}
+		
+		upgrades_from = ca_dragon_tower_2
+		ai_creation_factor = 99
+		
+		fort_level = 4
+		monthly_character_prestige = 0.60
+		land_morale = 0.2
+		
+		gold_cost = 600
+		build_time = 1020
+		
+		dragon_cavalry = 15
+		dragon_cavalry_offensive = 0.05
+		
+		extra_tech_building_start = 10.0
+	}
+	
+#mages
+	ca_mage_college = {
+		desc = ca_mage_college_desc
+		
+		potential = {
+		FROM = {
+				OR = {
+					trait = novice_mage
+					trait = eldritch_scholar
+					trait = veteran_wizard
+					trait = arcane_master
+					}
+			}
+		}
+		trigger = { 	
+			TECH_CASTLE_CONSTRUCTION = 1
+			is_capital = yes					 
+		}
+		
+		prerequisites = { ca_wall_1 }
+		ai_creation_factor = 95
+		
+		fort_level = 3
+		land_morale = 0.3
+		levy_reinforce_rate = 0.3
+		monthly_character_prestige = 0.25
+		
+		gold_cost = 500
+		build_time = 750
+		
+		extra_tech_building_start = 10.0
+	}
+	
+	ca_mage_library = {
+		desc = ca_mage_library_desc
+		
+		potential = {
+		FROM = {
+				OR = {
+					trait = novice_mage
+					trait = eldritch_scholar
+					trait = veteran_wizard
+					trait = arcane_master
+					}
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		
+		ai_creation_factor = 95
+		
+		fort_level = 1
+		land_morale = 0.1
+		levy_reinforce_rate = 0.1
+		monthly_character_prestige = 0.15
+		
+		gold_cost = 250
+		build_time = 450
+		
+		extra_tech_building_start = 10.0
+	}
+}
+

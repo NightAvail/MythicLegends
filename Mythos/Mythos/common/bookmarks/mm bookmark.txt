@@ -1,0 +1,106 @@
+bm_mythandmagic = {
+	name = "BM_MYTH_AND_MAGIC"
+	desc = "BM_MYTH_AND_MAGIC_DESC"
+	date = 867.1.1
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_mythos
+	
+	selectable_character = {
+		id = 268287 # Velnias
+		age = 32
+		name = Velnias
+		title = d_samogitia
+		title_name = Samogitia
+		
+		character = {
+			dna = bdedirmbfcy
+			properties = ak00bd00000
+			religion="baltic_pagan"
+			culture="lithuanian"
+			government = feudal_government
+			dynasty=1048999
+		}
+	}
+
+	selectable_character = {
+		id = 268366 # Brynjolf
+		age = 17
+		name = Brynjolf
+		title = c_nordland
+		title_name = Nordland
+		
+		character = {
+			dna = bcedirmbfcy
+			properties = a000bd00000
+			religion="jotnar"
+			culture="jotunn"
+			government = tribal_government
+			dynasty=1049001
+		}
+	}
+	selectable_character = {
+		id = 268286 # Vlad
+		age = 32
+		name = Vlad
+		title = c_severin
+		title_name = Severin
+		
+		character = {
+			dna = bcedirmaaay
+			properties = be000d00000
+			religion="satanist"
+			culture="romanian"
+			government = feudal_government
+			dynasty=1049000
+		}
+	} 
+	selectable_character = {
+		id = 268290 # Rhodric
+		age = 26
+		name = Rhodric
+		title = c_dyfed
+		title_name = Dyfed
+		
+		character = {
+			dna = bcedirmbfcy
+			properties = ae00bd00000
+			religion="druidic"
+			culture="welsh"
+			government = feudal_government
+			dynasty=1049003
+		}
+	}
+	selectable_character = {
+		id = 145182 # Argos
+		age = 25
+		name = Argos
+		title = d_achaia
+		title_name = Achaia
+		
+		character = {
+			dna = bcedirmbfcy
+			properties = am00bd00000
+			religion="hellenic_pagan"
+			culture="greek"
+			government = feudal_government
+			dynasty=1022161
+		}
+	}
+	selectable_character = {
+		id = 268299 # Rugarth
+		age = 29
+		name = Rugarth
+		title = c_faereyar
+		title_name = Faereyar
+		
+		character = {
+			dna = bcedirmbfcy
+			properties = da00b000000
+			religion="norse_pagan"
+			culture="draconic"
+			government = tribal_government
+			dynasty=1049007
+		}
+	}
+}

@@ -9,7 +9,7 @@
 #	realm: all characters in the same top realm as the AI
 #	dynasty: all members of the same dynasty (including the dead!)
 #	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
-#	
+#
 
 targetted_decisions = {
 	#######################################################
@@ -18,7 +18,7 @@ targetted_decisions = {
 	ml_decision_magical_conception = {
 		filter = all
         ai_target_filter = court
-		
+
 		from_potential = {
 			trait = ml_trait_arcane_spell_master
 			ai = no
@@ -65,7 +65,7 @@ targetted_decisions = {
 	}
 
 	#######################################################
-    # Bless a member of the realm with the gift of 
+    # Bless a member of the realm with the gift of
     # immortality.
     #######################################################
     ml_targetted_decision_mage_give_immortality = {
@@ -84,8 +84,8 @@ targetted_decisions = {
         potential = {
             is_alive = yes
 
-            NOR = { 
-                trait = ml_trait_immortal 
+            NOR = {
+                trait = ml_trait_immortal
                 trait = ml_trait_white_mage
             }
         }
@@ -107,6 +107,40 @@ targetted_decisions = {
     # Revoke the gift of immortality.
     #######################################################
     ml_targetted_decision_mage_revoke_immortality = {
+        filter = self
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+
+            OR = {
+                trait = ml_trait_immortal
+                trait = ml_trait_white_mage
+            }
+        }
+
+        potential = {
+            is_alive = yes
+            trait = ml_trait_immortal
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_trait = ml_trait_immortal
+        }
+    }
+
+    #######################################################
+    # Revoke the gift of immortality.
+    #######################################################
+    ml_targetted_decision_mage_revoke_immortality_other = {
         filter = all
         ai_target_filter = court
 
@@ -152,7 +186,7 @@ targetted_decisions = {
         potential = {
             is_alive = yes
 
-            NOR = { 
+            NOR = {
                 trait = ml_trait_magical_protection_1
                 trait = ml_trait_magical_protection_2
                 trait = ml_trait_magical_protection_3
@@ -190,7 +224,7 @@ targetted_decisions = {
 
         potential = {
             is_alive = yes
-            
+
             OR = {
                 trait = ml_trait_magical_protection_1
                 trait = ml_trait_magical_protection_2
@@ -277,7 +311,7 @@ targetted_decisions = {
     # Heal mental mind.
     #######################################################
     ml_targetted_decision_mage_heal_mind = {
-        filter = all
+        filter = self
         ai_target_filter = court
 
         from_potential = {
@@ -293,6 +327,10 @@ targetted_decisions = {
                 trait = depressed
                 trait = stressed
                 trait = drunkard
+                trait = craven
+                trait = dull
+                trait = slothful
+                trait = arbritary
             }
         }
 
@@ -310,7 +348,146 @@ targetted_decisions = {
             remove_trait = depressed
             remove_trait = stressed
             remove_trait = drunkard
+            remove_trait = craven
+            remove_trait = dull
+            remove_trait = slothful
+            remove_trait = arbritary
         }
+    }
+    #######################################################
+    # Heal mental mind.
+    #######################################################
+    ml_targetted_decision_mage_heal_mind_other = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_magical_blood
+        }
+
+        potential = {
+            is_alive = yes
+            OR = {
+                trait = lunatic
+                trait = possessed
+                trait = depressed
+                trait = stressed
+                trait = drunkard
+                trait = craven
+                trait = dull
+                trait = slothful
+                trait = arbritary
+            }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_trait = lunatic
+            remove_trait = possessed
+            remove_trait = depressed
+            remove_trait = stressed
+            remove_trait = drunkard
+            remove_trait = craven
+            remove_trait = dull
+            remove_trait = slothful
+            remove_trait = arbritary
+        }
+    }
+
+    #######################################################
+    # Teleport out of prison.
+    #######################################################
+    ml_telport_out_of_prison = {
+        filter = self
+        from_potential = {
+            OR = {
+                trait = ml_trait_magical_blood
+            }
+            ai = no
+        }
+        potential = {
+            prisoner = yes
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            prisoner = no
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+
+    #######################################################
+    # Teleport out of prison.
+    #######################################################
+    ml_telport_out_of_prison_other = {
+        filter = all
+        from_potential = {
+            OR = {
+                trait = ml_trait_magical_blood
+            }
+            ai = no
+        }
+        potential = {
+            prisoner = yes
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            prisoner = no
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+
+    #######################################################
+    # Teleport to court.
+    #######################################################
+    ml_telport_to_court = {
+        filter = all
+        from_potential = {
+            OR = {
+                trait = ml_trait_magical_blood
+            }
+            ai = no
+        }
+        potential = {
+            is_playable = no
+            is_landed = no
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            move_character = FROM
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
     }
 
     #######################################################
@@ -319,12 +496,12 @@ targetted_decisions = {
     ml_targetted_decision_mage_join_war = {
         filter = all
         ai_target_filter = court
-        
+
         from_potential = {
             is_ruler = yes
             higher_tier_than = BARON
             OR = {
-                trait = ml_trait_air_mage_master                
+                trait = ml_trait_air_mage_master
                 trait = ml_trait_earth_mage_master
                 trait = ml_trait_fire_mage_master
                 trait = ml_trait_water_mage_master
@@ -343,39 +520,39 @@ targetted_decisions = {
             NOT = { FROM = { liege = { character = ROOT } } }
             #is_within_diplo_range = FROM
 
-            ROOT = { 
-                war = yes 
+            ROOT = {
+                war = yes
                 any_war = { OR = { is_primary_war_attacker = yes
-                            is_primary_war_defender = yes } 
+                            is_primary_war_defender = yes }
 
                     NOT = { OR = { any_defender = { AND = { NOT = { character = ROOT }
-                                        any_vassal = { character = FROM } } } 
+                                        any_vassal = { character = FROM } } }
                             any_attacker = { AND = { NOT = { character = ROOT }
                                         any_vassal = { character = FROM } } } #Cannot join a war when your liege is already involved in it
-                            } 
+                            }
                         }
 
                     NOT = { OR = { any_defender = { OR = { using_cb = peasant_revolt
                                         using_cb = heretic_revolt
                                         using_cb = religious_revolt
                                         using_cb = liberation_revolt
-                                         } } 
+                                         } }
                             any_attacker = { OR = { using_cb = peasant_revolt
                                         using_cb = heretic_revolt
                                         using_cb = religious_revolt
-                                        using_cb = liberation_revolt 
+                                        using_cb = liberation_revolt
                                          } } #Cannot join if the target is tangled in a rebellion
-                            } 
-                        } 
+                            }
+                        }
                     }
                 }
         }
         effect = {
-            FROM = { 
+            FROM = {
                 join_defender_wars = ROOT
                 join_attacker_wars = ROOT
                 prestige = 75
-                piety = 25 
+                piety = 25
             }
         }
         revoke_allowed = {
@@ -384,5 +561,112 @@ targetted_decisions = {
         ai_will_do = {
             factor = 0
         }
-    }    
+    }
+
+    #######################################################
+    # Grant magical armor
+    #######################################################
+    ml_targetted_decision_mage_grant_magical_armor = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_white_mage
+        }
+
+        potential = {
+            is_alive = yes
+            NOT = { character = FROM }
+            NOR = {
+                trait = ml_trait_armor_of_light
+                trait = ml_trait_armor_of_darkness
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            save_event_target_as = target_person
+            FROM = {
+                character_event = {
+                    id = "ml_events_thegods.1"
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Grant magical sword
+    #######################################################
+    ml_targetted_decision_mage_grant_magical_sword = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            trait = ml_trait_white_mage
+        }
+
+        potential = {
+            is_alive = yes
+            NOT = { character = FROM }
+            NOR = {
+                trait = ml_trait_sword_of_light
+                trait = ml_trait_sword_of_darkness
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            save_event_target_as = target_person
+            FROM = {
+                character_event = {
+                    id = "ml_events_thegods.2"
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Clear Claims
+    #######################################################
+    ml_clear_claims = {
+        filter = self
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+        }
+
+        potential = {
+            is_alive = yes
+            AND = { character = FROM }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            character_event = { id = "ml_events_realm.6" }
+        }
+    }
 }

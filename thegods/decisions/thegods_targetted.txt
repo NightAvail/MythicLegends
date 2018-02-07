@@ -1,0 +1,1338 @@
+# Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (self MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
+# #ai_target_filter  = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+#	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	vassals: direct vassal rulers of the AI's employer
+#	sub_realm: all characters below the AI's employer
+#	realm: all characters in the same top realm as the AI
+#	dynasty: all members of the same dynasty (including the dead!)
+#	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
+#
+
+targetted_decisions = {
+	divine_conception = {
+		filter = all
+
+		from_potential = {
+			religion_group = god_group
+			OR = {
+				trait = God
+				trait = Fallen_God
+				}
+			ai = no
+			is_pregnant = no
+		}
+		potential = {
+			is_pregnant = no
+			is_female = yes
+			age = 16
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+							is_female = yes
+							is_pregnant = no
+						}
+					is_female = no
+				}
+				FROM = { impregnate_cuckoo = PREV }
+			}
+			if = {
+				limit = {
+					is_female = yes
+					NOT = {
+						is_pregnant = yes
+						FROM = {
+							is_female = yes
+						}
+					}
+				}
+				impregnate_cuckoo = FROM
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = court
+	}
+	# divine_seduction = {
+	# 	filter = all
+
+	# 	from_potential = {
+	# 		religion_group = god_group
+	# 		OR = {
+	# 			trait = Goddess
+	# 			trait = Fallen_Goddess
+	# 			}
+	# 		ai = no
+	# 		is_pregnant = no
+	# 	}
+	# 	potential = {
+	# 		is_pregnant = no
+	# 		is_female = no
+	# 		age = 16
+	# 	}
+	# 	allow = {
+	# 		always = yes
+	# 	}
+	# 	effect = {
+	# 			FROM = { impregnate = ROOT }
+	# 		}
+	# 	revoke_allowed = {
+	# 		always = no
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# 	ai_target_filter = court
+	# }
+	god_duel = {
+		ai_target_filter = rivals
+		from_potential = {
+			is_adult = yes
+			prisoner = no
+			has_dlc = "Way of Life"
+			OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+				trait = Demi_God
+				trait = Demi_Goddess
+				}
+			has_regent = no
+		}
+
+		potential = {
+			is_adult = yes
+			prisoner = no
+			OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+				trait = Demi_God
+				trait = Demi_Goddess
+				}
+			NOT = { character = FROM }
+			NOT = { trait = incapable }
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = WoL.11000 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_character_modifier = declined_prestige_duel_timer
+			}
+			modifier = {
+				factor = 0.01
+			}
+		}
+	}
+	god_king = {
+		is_high_prio = yes
+		filter = self
+
+		from_potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			prisoner = no
+			trait = God
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			has_regent = no
+		}
+
+		potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			prisoner = no
+			trait = God
+			has_regent = no
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = kingsqueens.1 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = self
+	}
+	god_queen = {
+		is_high_prio = yes
+		filter = self
+		from_potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			prisoner = no
+			trait = Goddess
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			has_regent = no
+		}
+
+		potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			prisoner = no
+			trait = Goddess
+			has_regent = no
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = kingsqueens.2 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = self
+	}
+	evilgod_king = {
+		is_high_prio = yes
+		filter = self
+		from_potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			prisoner = no
+			trait = Fallen_God
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			has_regent = no
+		}
+
+		potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			prisoner = no
+			trait = Fallen_God
+			has_regent = no
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = kingsqueens.3 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = self
+	}
+	evilgod_queen = {
+		is_high_prio = yes
+		filter = self
+		from_potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			prisoner = no
+			trait = Fallen_Goddess
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			has_regent = no
+		}
+
+		potential = {
+			is_adult = yes
+			is_ruler = yes
+			primary_title = {
+				OR = {
+					tier = king
+					tier = emperor
+				}
+			}
+			NOT = {
+				trait = kingofthegods
+				trait = queenofthegods
+				trait = evilking
+				trait = evilqueen
+			}
+			prisoner = no
+			trait = Fallen_Goddess
+			has_regent = no
+		}
+
+		allow = {
+		}
+
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = kingsqueens.4 }
+			}
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = self
+	}
+
+	#######################################################
+    # Heal mental mind.
+    #######################################################
+    god_heal_mind = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+            OR = {
+            	trait = lunatic
+            	trait = possessed
+            	trait = depressed
+            	trait = stressed
+            	trait = drunkard
+				trait = craven
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_trait = lunatic
+            remove_trait = possessed
+            remove_trait = depressed
+            remove_trait = stressed
+            remove_trait = drunkard
+			remove_trait = craven
+        }
+    }
+    #######################################################
+    # Heal the body.
+    #######################################################
+    god_heal_body = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+                trait = Goddess
+                trait = Fallen_Goddess
+                trait = God
+                trait = Fallen_God
+            }
+        }
+
+        potential = {
+            is_alive = yes
+            OR = {
+                trait = ill
+                trait = pneumonic
+                trait = has_tuberculosis
+                trait = has_typhoid_fever
+                trait = has_typhus
+                trait = has_bubonic_plague
+                trait = has_measles
+                trait = has_small_pox
+                trait = syphilitic
+                trait = leper
+                trait = infirm
+                trait = incapable
+                trait = maimed
+                trait = wounded
+				trait = scarred
+                trait = inbred
+                trait = clubfooted
+                trait = harelip
+                trait = hunchback
+                trait = lisp
+                trait = stutter
+                trait = ugly
+                trait = dwarf
+                trait = slow
+                trait = imbecile
+                trait = weak
+				trait = feeble
+
+                # New
+                trait = eunuch
+
+                # Reaper's Due DLC
+                trait = cough
+                trait = fever
+                trait = diarrhea
+                trait = vomiting
+                trait = chest_pain
+                trait = cramps
+                trait = rash
+                trait = headache
+                trait = abdominal_pain
+                trait = fatigue
+                trait = malaise
+                trait = infection
+                trait = flu
+                trait = dysentery
+                trait = gout
+                trait = food_poisoning
+                trait = rabies
+                trait = cancer
+                trait = scurvy
+                trait = sick_incapable
+                trait = one_eyed
+                trait = one_handed
+                trait = one_legged
+                trait = disfigured
+                trait = mangled
+                trait = severely_injured
+            }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            hidden_tooltip = {
+                character_event = { id = "thegods.6" }
+            }
+        }
+    }
+    #######################################################
+    # Curse with sickness.
+    #######################################################
+    god_curse_sickness = {
+    	filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+            NOR = {
+            	trait = dysentery
+            	trait = flu
+            }
+            NOT = { character = FROM }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            set_character_flag = got_dysentery
+            set_character_flag = manifest_dysentery
+            add_trait = dysentery
+
+            set_character_flag = got_flu
+            set_character_flag = manifest_flu
+            add_trait = flu
+
+            set_character_flag = manifest_cancer
+            add_trait = cancer
+        }
+    }
+
+    smite_mortal = {
+		filter = all
+		
+		from_potential = {
+			#religion_group = god_group
+			OR = {
+				trait = God
+				trait = Fallen_God
+				trait = Goddess
+				trait = Fallen_Goddess
+				}
+			ai = no
+		}
+		potential = {
+		NOT = { character = FROM }
+		NOT = { OR = {
+				trait = God
+				trait = Fallen_God
+				trait = Goddess
+				trait = Fallen_Goddess
+				} }
+		}
+		allow = {
+			from = { piety = 3000 }
+		}
+		effect = {
+				ROOT = { death = { death_execution_trigger = yes killer=FROM } }
+				FROM = { piety = -3000 }
+			}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = court
+	}
+
+    #######################################################
+    # Grant blessing.
+    #######################################################
+    god_grant_blessing = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+
+            NOT = {
+                trait = godblessing_trait
+            }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            add_character_modifier = {
+                modifier = god_blessing_modifier
+                duration = -1
+            }
+            add_trait = godblessing_trait
+        }
+    }
+
+    #######################################################
+    # Revoke Blessing
+    #######################################################
+    god_revoke_blessing = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+            trait = godblessing_trait
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_character_modifier = god_blessing_modifier
+            remove_trait = godblessing_trait
+        }
+    }
+
+    #######################################################
+    # Grant chosen blessing.
+    #######################################################
+    god_grant_chosen = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+
+            NOT = {
+                trait = godchoosenblessing_trait
+            }
+            NOT = { character = FROM }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+		allow = {
+			from = { piety = 200 }
+		}
+        effect = {
+			FROM = { piety = -200 }
+            add_character_modifier = {
+                modifier = godchosenblessing_modifier
+                duration = -1
+            }
+            add_trait = godchoosenblessing_trait
+        }
+    }
+
+    #######################################################
+    # Revoke chosen blessing
+    #######################################################
+    god_revoke_chosen = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+            trait = godchoosenblessing_trait
+
+            NOT = { character = FROM }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_character_modifier = godchosenblessing_modifier
+            remove_trait = godchoosenblessing_trait
+        }
+    }
+
+    #######################################################
+    # Smite with curse
+    #######################################################
+    god_smite_curse = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+
+            NOT = {
+                has_character_modifier = god_curse_modifier
+            }
+            NOT = { character = FROM }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+		allow = {
+			from = { piety = 500 }
+		}
+        effect = {
+			FROM = { piety = -500 }
+            add_character_modifier = {
+                modifier = god_curse_modifier
+                duration = -1
+            }
+        }
+    }
+
+    #######################################################
+    # Revoke curse
+    #######################################################
+    god_revoke_curse = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = God
+				trait = Fallen_God
+			}
+        }
+
+        potential = {
+            is_alive = yes
+            has_character_modifier = god_curse_modifier
+            NOT = { character = FROM }
+        }
+
+        revoke_allowed = {
+            always = no
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            remove_character_modifier = god_curse_modifier
+        }
+    }
+
+    #######################################################
+    # Transform a man into a god.
+    #######################################################
+    transform_into_god = {
+		filter = all
+
+		from_potential = {
+			religion_group = god_group
+			OR = {
+				trait = God
+				trait = Fallen_God
+			}
+			ai = no
+		}
+		potential = {
+			NOT = {
+				trait = God
+				trait = Fallen_God
+				trait = Young_God
+				trait = Young_Fallen_God
+			}
+			#OR = {
+			#	trait = Demi_God
+			#	trait = Demi_Goddess
+			#	trait = God_Blood
+			#}
+			is_female = no
+			age = 16
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			religion = the_light
+			# culture = FROM
+			add_trait = Young_God
+			add_trait = kind
+			add_trait = zealous
+			add_trait = fair
+
+			remove_trait = Demi_God
+			remove_trait = Demi_Goddess
+			remove_trait = God_Blood
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = court
+	}
+
+	#######################################################
+    # Transform a woman into a goddess.
+    #######################################################
+    transform_into_goddess = {
+		filter = all
+
+		from_potential = {
+			religion_group = god_group
+			OR = {
+				trait = God
+				trait = Fallen_God
+			}
+			ai = no			
+		}
+		potential = {
+			NOT = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = Young_Goddess
+				trait = Young_Fallen_Goddess
+			}
+			is_female = yes
+			age = 16
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			religion = the_light
+			# culture = FROM
+			female = yes
+			add_trait = Young_Goddess
+			add_trait = kind
+			add_trait = zealous
+			add_trait = fair
+
+			remove_trait = Demi_God
+			remove_trait = Demi_Goddess
+			remove_trait = God_Blood
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = court
+	}
+
+	#######################################################
+    # Transform a mortal into a demigod.
+    #######################################################
+    transform_to_demigod = {
+		filter = all
+
+		from_potential = {
+			religion_group = god_group
+			OR = {
+				trait = God
+				trait = Fallen_God
+			}
+			ai = no
+		}
+		potential = {
+			NOT = {
+				trait = God
+				trait = Fallen_God
+				trait = Young_God
+				trait = Young_Fallen_God
+				trait = Demi_God
+			}
+			is_female = no
+			age = 16
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			# religion = the_light
+			add_trait = Demi_God
+
+			remove_trait = God
+			remove_trait = Young_God
+			remove_trait = Fallen_God
+			remove_trait = Young_Fallen_God
+			remove_trait = God_Blood
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = court
+	}
+
+	#######################################################
+    # Transform a mortal into a demigodess.
+    #######################################################
+    transform_to_demigodess = {
+		filter = all
+
+		from_potential = {
+			religion_group = god_group
+			OR = {
+				trait = God
+				trait = Fallen_God
+			}
+			ai = no			
+		}
+		potential = {
+			NOT = {
+				trait = Goddess
+				trait = Fallen_Goddess
+				trait = Young_Goddess
+				trait = Young_Fallen_Goddess
+				trait = Demi_Goddess
+			}
+			#OR = {
+			#	trait = Demi_God
+			#	trait = Demi_Goddess
+			#	trait = God_Blood
+			#}
+			is_female = yes
+			age = 16
+		}
+		allow = {
+			always = yes
+		}
+		effect = {
+			# religion = the_light
+			# culture = FROM
+			female = yes
+			add_trait = Demi_Goddess
+
+			remove_trait = Demi_Goddess
+			remove_trait = God_Blood
+			remove_trait = Young_Goddess
+			remove_trait = Fallen_Goddess
+			remove_trait = Young_Fallen_Goddess
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = court
+	}
+
+    #######################################################
+    # Teleport out of prison.
+    #######################################################
+    godtelport_out_of_prison = {
+        filter = all
+        from_potential = {
+            OR = {
+                trait = God
+                trait = Fallen_God
+            }
+            ai = no
+        }
+        potential = {
+            prisoner = yes
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            prisoner = no
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+    #######################################################
+    # Teleport to court.
+    #######################################################
+    godtelport_to_court = {
+        filter = all
+        from_potential = {
+            OR = {
+                trait = God
+                trait = Fallen_God
+            }
+            ai = no
+        }
+        potential = {
+            is_playable = no
+            is_landed = no
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            move_character = FROM
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+    #######################################################
+    # Revoke god or demi-god or demi-god blood.
+    #######################################################
+    godrevoke_ability = {
+        filter = all
+        from_potential = {
+            OR = {
+                trait = God
+                trait = Fallen_God
+            }
+            ai = no
+        }
+        potential = {
+            OR = {
+                trait = God
+                trait = Fallen_God
+                trait = Demi_God
+                trait = Goddess
+                trait = Fallen_Goddess
+                trait = Demi_Goddess
+                trait = Angel
+                trait = Arcangel
+                trait = Dark_Angel
+                trait = Dark_Arcangel
+                trait = God_Blood
+                trait = Angel_Blood
+                trait = Young_Demi_Baby
+            }
+            NOT = { character = FROM }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            remove_trait = God
+            remove_trait = Fallen_God
+            remove_trait = Demi_God
+            remove_trait = Goddess
+            remove_trait = Fallen_Goddess
+            remove_trait = Demi_Goddess
+            remove_trait = Angel
+            remove_trait = Arcangel
+            remove_trait = Dark_Angel
+            remove_trait = Dark_Arcangel
+            remove_trait = God_Blood
+            remove_trait = Angel_Blood
+            remove_trait = Young_Demi_Baby
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+	#######################################################
+    # Join war as a battlemage.
+    #######################################################
+    godtargetted_decision_god_join_war = {
+        filter = all
+        ai_target_filter = court
+        
+        from_potential = {
+            is_ruler = yes
+            higher_tier_than = BARON
+            OR = {
+                trait = God
+                trait = Fallen_God
+            }
+            #is_within_diplo_range = ROOT
+        }
+
+        potential = {
+            is_landed = yes
+            higher_tier_than = BARON
+        }
+
+        allow = {
+            NOT = { FROM = { war = yes } }
+            NOT = { FROM = { liege = { character = ROOT } } }
+            #is_within_diplo_range = FROM
+
+            ROOT = { 
+                war = yes 
+                any_war = { OR = { is_primary_war_attacker = yes
+                            is_primary_war_defender = yes } 
+
+                    NOT = { OR = { any_defender = { AND = { NOT = { character = ROOT }
+                                        any_vassal = { character = FROM } } } 
+                            any_attacker = { AND = { NOT = { character = ROOT }
+                                        any_vassal = { character = FROM } } } #Cannot join a war when your liege is already involved in it
+                            } 
+                        }
+
+                    NOT = { OR = { any_defender = { OR = { using_cb = peasant_revolt
+                                        using_cb = heretic_revolt
+                                        using_cb = religious_revolt
+                                        using_cb = liberation_revolt
+                                         } } 
+                            any_attacker = { OR = { using_cb = peasant_revolt
+                                        using_cb = heretic_revolt
+                                        using_cb = religious_revolt
+                                        using_cb = liberation_revolt 
+                                         } } #Cannot join if the target is tangled in a rebellion
+                            } 
+                        } 
+                    }
+                }
+        }
+        effect = {
+            FROM = { 
+                join_defender_wars = ROOT
+                join_attacker_wars = ROOT
+                prestige = 75
+                piety = 25 
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }    
+
+    #######################################################
+    # Grant magical armor
+    #######################################################
+    godtargetted_decision_god_grant_magical_armor = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+                trait = God
+                trait = Fallen_God
+            }
+        }
+
+        potential = {
+            is_alive = yes
+            NOT = { character = FROM }
+            NOR = {
+                trait = god_trait_armor_of_light
+                trait = god_trait_armor_of_darkness
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            save_event_target_as = target_person
+            FROM = {
+                character_event = {
+                    id = "goditems_events.1"
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Grant magical sword
+    #######################################################
+    godtargetted_decision_god_grant_magical_sword = {
+        filter = all
+        ai_target_filter = court
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+                trait = God
+                trait = Fallen_God
+            }
+        }
+
+        potential = {
+            is_alive = yes
+            NOT = { character = FROM }
+            NOR = {
+                trait = god_trait_sword_of_light
+                trait = god_trait_sword_of_darkness
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            save_event_target_as = target_person
+            FROM = {
+                character_event = {
+                    id = "goditems_events.2"
+                }
+            }
+        }
+    }
+}

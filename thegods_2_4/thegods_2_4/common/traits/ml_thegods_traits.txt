@@ -1,0 +1,88 @@
+#######################################################
+# Blessing
+#######################################################
+godblessing_trait = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    combat_rating = 10
+    health = 5
+    diplomacy = 5
+    martial = 5
+    stewardship = 5
+    intrigue = 5
+    learning = 5
+    fertility = 3.5
+    monthly_character_wealth = 2
+
+    general_opinion = 100
+}
+
+#######################################################
+# God-Chosen Blessing
+#######################################################
+godchoosenblessing_trait = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+
+    general_opinion = 50
+
+    health   = 100
+    diplomacy = 15
+    martial = 15
+    stewardship = 15
+    intrigue = 15
+    learning = 15
+
+    cached = no
+    random = no
+    customizer = no
+
+    combat_rating = 15
+    command_modifier = {
+        morale_offence = 0.8
+        morale_defence = 0.8
+        damage = 1.8
+        speed = 0.5
+        siege = 0.5
+    }
+
+    ai_ambition = 1000
+    land_morale = 0.25
+}
+
+#######################################################
+# God-Chosen Blessing
+#######################################################
+godpower_trait = {
+    inherit_chance = 0
+    customizer = no
+    random = no
+    general_opinion = 150
+    health   = 100
+    diplomacy = 25
+    martial = 25
+    stewardship = 25
+    intrigue = 25
+    learning = 25
+    monthly_character_wealth = 5
+    fertility = 3.5
+
+    cached = no
+    random = no
+    customizer = no
+
+    combat_rating = 25
+    command_modifier = {
+        morale_offence = 1.8
+        morale_defence = 1.8
+        damage = 1.8
+        speed = 1.5
+        siege = 1.5
+    }
+
+    ai_ambition = 1000
+    land_morale = 1.25
+}

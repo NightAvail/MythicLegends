@@ -141,7 +141,7 @@ ml_event_modifiers_spells_prosper_2 = {
     monthly_character_wealth    = 3
 
     fertility               = 0.15
-    sex_appeal_opinion      = 6
+    sex_appeal_opinion      = 10
     general_opinion         = 10
 
     icon                    = 6
@@ -155,8 +155,8 @@ ml_event_modifiers_spells_prosper_3 = {
     monthly_character_wealth    = 4
 
     fertility               = 0.20
-    sex_appeal_opinion      = 7
-    general_opinion         = 15
+    sex_appeal_opinion      = 15
+    general_opinion         = 20
 
     icon                    = 6
 }
@@ -169,8 +169,8 @@ ml_event_modifiers_spells_prosper_4 = {
     monthly_character_wealth    = 5
 
     fertility               = 0.25
-    sex_appeal_opinion      = 8
-    general_opinion         = 20
+    sex_appeal_opinion      = 20
+    general_opinion         = 30
 
     icon                    = 6
 }

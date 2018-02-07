@@ -235,7 +235,7 @@ character_event = {
 
     # Every 10 years.
     mean_time_to_happen = {
-        months = 120
+        years = 5
     }
 
     immediate = {
@@ -274,6 +274,7 @@ character_event = {
     id = "ml_events_mage_progress.7"
     desc = "ml_events_mage_progress.7desc"
     picture = GFX_evt_library
+    is_triggered_only = no
 
     ai = no
 

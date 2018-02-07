@@ -17,47 +17,47 @@ decisions = {
             is_ruler = yes
             is_feudal = yes
         }
-        potential = { 
+        potential = {
             # Flags that will not allow the abidcate button to display and prevents spamming of the button between 2 characters in the realm
-            # NOT = { 
-            #     has_character_flag = wants_to_abdicate 
-            #     has_character_flag = has_abdicated_throne 
+            # NOT = {
+            #     has_character_flag = wants_to_abdicate
+            #     has_character_flag = has_abdicated_throne
             # }
             # condtions for the heir (must 16 and has not abdicated a throne before) if condtions are not met button will not display (might wanna to remove the is_adult condition)
-            current_heir = { 
-                # is_adult = yes 
+            current_heir = {
+                # is_adult = yes
                 dynasty = ROOT
                 # NOT = { has_character_flag = has_abdicated_throne }
                 # primary_title = { higher_tier_than = BARON }
             }
 
             # No gavelkind succession
-            OR = {
-                AND = {
-                    primary_title = { tier = KING }
-                    NOT = {
-                        any_demesne_title = {
-                            kingdom = { has_law = succ_gavelkind }
-                        }
-                    }
-                }
-                AND = {
-                    primary_title = { tier = EMPEROR }
-                    NOT = {
-                        any_demesne_title = {
-                            empire = { has_law = succ_gavelkind }
-                        }
-                    }
-                }
-                AND = {
-                    NOT = { primary_title = { higher_tier_than = DUKE } }
-                    NOT = {
-                        primary_title = {
-                            has_law = succ_gavelkind
-                        }
-                    }
-                }
-            }
+            # OR = {
+            #     AND = {
+            #         primary_title = { tier = KING }
+            #         NOT = {
+            #             any_demesne_title = {
+            #                 kingdom = { has_law = succ_gavelkind }
+            #             }
+            #         }
+            #     }
+            #     AND = {
+            #         primary_title = { tier = EMPEROR }
+            #         NOT = {
+            #             any_demesne_title = {
+            #                 empire = { has_law = succ_gavelkind }
+            #             }
+            #         }
+            #     }
+            #     AND = {
+            #         NOT = { primary_title = { higher_tier_than = DUKE } }
+            #         NOT = {
+            #             primary_title = {
+            #                 has_law = succ_gavelkind
+            #             }
+            #         }
+            #     }
+            # }
             # Traits checks
             NOT = { trait = lunatic }
             NOT = { trait = possessed }
@@ -69,12 +69,12 @@ decisions = {
                     trait = envious
                     trait = greedy
                 }
-            }           
-        }       
+            }
+        }
         allow = {
             war = no
-            prisoner = no           
-            
+            prisoner = no
+
             # Age checks
             OR = {
                 AND = {
@@ -113,7 +113,7 @@ decisions = {
                     current_heir = { age = 16 }
                 }
             }
-            
+
             # Costs
             prestige = 750
         }

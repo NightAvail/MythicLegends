@@ -12,7 +12,7 @@
 # Immortal Traits
 ml_trait_immortal = {
     opposites = {
-        lichking
+        ml_trait_lichking
     }
 
     immortal = yes
@@ -24,19 +24,19 @@ ml_trait_immortal = {
     inherit_chance = 0
 
     random = no
-    cannot_inherit = yes
     customizer = no
 }
 
 ml_trait_lichking = {
     opposites = {
         ml_trait_immortal
+        ml_trait_white_mage
     }
 
     # You're undead, so no one likes you, especially
     # the church!
     church_opinion = -40
-    general_opinion = -20
+    general_opinion = -5
 
     martial  = 25
     intrigue = 20
@@ -50,20 +50,19 @@ ml_trait_lichking = {
 
     cached = yes
     random = no
-    cannot_inherit = yes
     customizer = no
 
     combat_rating = 15
     command_modifier = {
-        morale_offence = 0.8
-        morale_defence = 0.8
+        morale_offence = 1.0
+        morale_defence = 1.0
         damage = 1.8
         speed = 0.5
         siege = 0.5
     }
 
     ai_ambition = 1000
-    
+
     land_morale = 0.25
     ambition_opinion = -30 # Give them what they want
 }
@@ -71,13 +70,22 @@ ml_trait_lichking = {
 # Bloodline traits
 
 ml_trait_magical_blood = {
-    health      = 1
-    learning    = 1
+    health      = 3
+    martial     = 2
+
+    ai_ambition = 50
+
+    combat_rating = 5
+    command_modifier = {
+        morale_offence = 0.15
+        morale_defence = 0.15
+    }
 
     opposites = {
     }
 
     same_opinion = 10
+    general_opinion = 10
 
     # A child will not always have
     # magic.
@@ -86,6 +94,7 @@ ml_trait_magical_blood = {
     # Magic bloodline can run out.
     agnatic = yes
 
+    cached = yes
     random      = yes
     ruler_designer_cost = 0
     customizer = no

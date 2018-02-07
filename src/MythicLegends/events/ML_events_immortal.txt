@@ -5,286 +5,298 @@
 # Author:  NightAvail
 #######################################################
 
-namespace = ml_events_immortal
-namespace = ml_events_common
+# namespace = ml_events_immortal
+# namespace = ml_events_common
 
-# Immortal event for curing infirm and incappable.
-character_event = {
-    id = "ml_events_immortal.1"
-    desc = "ml_events_immortal.1desc"
-    picture = GFX_evt_recovery
+# # Immortal event for curing infirm and incappable.
+# character_event = {
+#     id = "ml_events_immortal.1"
+#     desc = "ml_events_immortal.1desc"
+#     picture = GFX_evt_recovery
 
-    trigger = {
-        trait = ml_trait_immortal
+#     trigger = {
+#         trait = ml_trait_immortal
 
-        OR = {
-            trait = ill
-            trait = syphilitic
-            trait = leper
-            trait = infirm
-            trait = incapable
-            trait = lunatic
-            trait = depressed
-            trait = possessed
-            trait = eunuch
+#         OR = {
+#             trait = ill
+#             trait = syphilitic
+#             trait = leper
+#             trait = infirm
+#             trait = incapable
+#             trait = lunatic
+#             trait = depressed
+#             trait = possessed
+#             trait = eunuch
 
-            # Reaper's Due DLC
-            trait = cough
-            trait = fever
-            trait = diarrhea
-            trait = vomiting
-            trait = chest_pain
-            trait = cramps
-            trait = rash
-            trait = headache
-            trait = abdominal_pain
-            trait = fatigue
-            trait = malaise
-            trait = infection
-            trait = flu 
-            trait = dysentery
-            trait = gout
-            trait = food_poisoning
-            trait = rabies
-            trait = cancer
-            trait = scurvy
-            trait = sick_incapable
-            trait = one_eyed
-            trait = one_handed
-            trait = one_legged
-            trait = disfigured
-            trait = mangled
-            trait = severely_injured
-        }
-    }
+#             # Reaper's Due DLC
+#             trait = cough
+#             trait = fever
+#             trait = diarrhea
+#             trait = vomiting
+#             trait = chest_pain
+#             trait = cramps
+#             trait = rash
+#             trait = headache
+#             trait = abdominal_pain
+#             trait = fatigue
+#             trait = malaise
+#             trait = infection
+#             trait = flu
+#             trait = dysentery
+#             trait = gout
+#             trait = food_poisoning
+#             trait = rabies
+#             trait = cancer
+#             trait = scurvy
+#             trait = sick_incapable
+#             trait = one_eyed
+#             trait = one_handed
+#             trait = one_legged
+#             trait = disfigured
+#             trait = mangled
+#             trait = severely_injured
+#         }
+#     }
 
-    weight_multiplier = {
-        days = 1095
-    }
+#     weight_multiplier = {
+#         days = 1095
+#     }
 
-    # Activate the spell based on arcane level.
-    option = {
-        set_character_flag = ml_flag_recent_healing_spell
-        
-        clr_character_flag = 3_year_physician_cooldown
-        clr_character_flag = recent_treatment
-        clr_character_flag = being_treated
+#     # Activate the spell based on arcane level.
+#     option = {
+#         set_character_flag = ml_flag_recent_healing_spell
 
-        clr_character_flag = developing_illness
-        clr_character_flag = got_syphilis
-        clr_character_flag = got_tuberculosis
-        clr_character_flag = got_typhoid_fever
-        clr_character_flag = got_typhus
-        clr_character_flag = got_bubonic_plague
-        clr_character_flag = got_measles
-        clr_character_flag = got_smallpox
-        clr_character_flag = got_aztec_disease
-        clr_character_flag = got_flu
-        clr_character_flag = got_dysentery
-        clr_character_flag = got_gout
-        clr_character_flag = got_food_poisoning
-        clr_character_flag = got_rabies
-        clr_character_flag = got_cancer
-        clr_character_flag = got_pneumonia
-        clr_character_flag = manifest_syphilis
-        clr_character_flag = manifest_tuberculosis
-        clr_character_flag = manifest_typhoid_fever
-        clr_character_flag = manifest_typhus
-        clr_character_flag = manifest_bubonic_plague
-        clr_character_flag = manifest_measles
-        clr_character_flag = manifest_smallpox
-        clr_character_flag = manifest_aztec_disease
-        clr_character_flag = manifest_flu
-        clr_character_flag = manifest_dysentery
-        clr_character_flag = manifest_gout
-        clr_character_flag = manifest_food_poisoning
-        clr_character_flag = manifest_rabies
-        clr_character_flag = manifest_cancer
-        clr_character_flag = manifest_pneumonia
+#         clr_character_flag = 3_year_physician_cooldown
+#         clr_character_flag = recent_treatment
+#         clr_character_flag = being_treated
 
-        name = ml_events_common.feelgreat
+#         clr_character_flag = developing_illness
+#         clr_character_flag = got_syphilis
+#         clr_character_flag = got_tuberculosis
+#         clr_character_flag = got_typhoid_fever
+#         clr_character_flag = got_typhus
+#         clr_character_flag = got_bubonic_plague
+#         clr_character_flag = got_measles
+#         clr_character_flag = got_smallpox
+#         clr_character_flag = got_aztec_disease
+#         clr_character_flag = got_flu
+#         clr_character_flag = got_dysentery
+#         clr_character_flag = got_gout
+#         clr_character_flag = got_food_poisoning
+#         clr_character_flag = got_rabies
+#         clr_character_flag = got_cancer
+#         clr_character_flag = got_pneumonia
+#         clr_character_flag = manifest_syphilis
+#         clr_character_flag = manifest_tuberculosis
+#         clr_character_flag = manifest_typhoid_fever
+#         clr_character_flag = manifest_typhus
+#         clr_character_flag = manifest_bubonic_plague
+#         clr_character_flag = manifest_measles
+#         clr_character_flag = manifest_smallpox
+#         clr_character_flag = manifest_aztec_disease
+#         clr_character_flag = manifest_flu
+#         clr_character_flag = manifest_dysentery
+#         clr_character_flag = manifest_gout
+#         clr_character_flag = manifest_food_poisoning
+#         clr_character_flag = manifest_rabies
+#         clr_character_flag = manifest_cancer
+#         clr_character_flag = manifest_pneumonia
 
-        # Add immunities
-        if = {
-            limit = { NOT = { has_character_flag = immune_tuberculosis } }
-            set_character_flag = immune_tuberculosis
-        }
-        if = {
-            limit = { NOT = { has_character_flag = immune_typhoid_fever } }
-            set_character_flag = immune_typhoid_fever
-        }
-        if = {
-            limit = { NOT = { has_character_flag = immune_typhus } }
-            set_character_flag = immune_typhus
-        }
-        if = {
-            limit = { NOT = { has_character_flag = immune_bubonic_plague } }
-            set_character_flag = immune_bubonic_plague
-        }
-        if = {
-            limit = { NOT = { has_character_flag = immune_measles } }
-            set_character_flag = immune_measles
-        }
-        if = {
-            limit = { NOT = { has_character_flag = immune_smallpox } }
-            set_character_flag = immune_smallpox
-        }
-        if = {
-            limit = { NOT = { has_character_flag = immune_aztec_disease } }
-            set_character_flag = immune_aztec_disease
-        }
-        if = {
-            limit = { NOT = { has_character_flag = immune_dancing_plague } }
-            set_character_flag = immune_dancing_plague
-        }
+#         name = ml_events_common.feelgreat
 
-        # Heal traits.
-        if = {
-            # Remove Sickness
-            if = {
-                limit = { trait = ill }
-                remove_trait = ill
-            }
-            if = {
-                limit = { trait = syphilitic }
-                remove_trait = syphilitic
-            }
-            if = {
-                limit = { trait = leper }
-                remove_trait = leper
-            }
+#         if = {
+# 			limit = { has_character_modifier = severe_illness }
+# 			remove_character_modifier = severe_illness
+# 		}
+# 		if = {
+# 			limit = { has_character_modifier = bedridden_illness }
+# 			remove_character_modifier = bedridden_illness
+# 			hidden_tooltip = {
+# 				remove_trait = sick_incapable
+# 			}
+# 		}
 
-            # Heal Body
-            if = {
-                limit = { trait = infirm }
-                remove_trait = infirm
-            }
-            if = {
-                limit = { trait = incapable }
-                remove_trait = incapable
-            }
-            if = {
-                limit = { trait = lunatic }
-                remove_trait = lunatic
-            }
-            if = {
-                limit = { trait = depressed }
-                remove_trait = depressed
-            }
-            if = {
-                limit = { trait = possessed }
-                remove_trait = possessed
-            }
-            if = {
-                limit = { trait = eunuch }
-                remove_trait = eunuch
-            }
+#         # Add immunities
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_tuberculosis } }
+#             set_character_flag = immune_tuberculosis
+#         }
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_typhoid_fever } }
+#             set_character_flag = immune_typhoid_fever
+#         }
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_typhus } }
+#             set_character_flag = immune_typhus
+#         }
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_bubonic_plague } }
+#             set_character_flag = immune_bubonic_plague
+#         }
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_measles } }
+#             set_character_flag = immune_measles
+#         }
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_smallpox } }
+#             set_character_flag = immune_smallpox
+#         }
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_aztec_disease } }
+#             set_character_flag = immune_aztec_disease
+#         }
+#         if = {
+#             limit = { NOT = { has_character_flag = immune_dancing_plague } }
+#             set_character_flag = immune_dancing_plague
+#         }
 
-            # Reaper's Due DLC Symptoms            
-            if = {
-                limit = { trait = cough }
-                remove_trait = cough
-            }            
-            if = {
-                limit = { trait = fever }
-                remove_trait = fever
-            }            
-            if = {
-                limit = { trait = diarrhea }
-                remove_trait = diarrhea
-            }            
-            if = {
-                limit = { trait = vomiting }
-                remove_trait = vomiting
-            }            
-            if = {
-                limit = { trait = chest_pain }
-                remove_trait = chest_pain
-            }            
-            if = {
-                limit = { trait = cramps }
-                remove_trait = cramps
-            }            
-            if = {
-                limit = { trait = rash }
-                remove_trait = rash
-            }            
-            if = {
-                limit = { trait = headache }
-                remove_trait = headache
-            }            
-            if = {
-                limit = { trait = abdominal_pain }
-                remove_trait = abdominal_pain
-            }            
-            if = {
-                limit = { trait = fatigue }
-                remove_trait = fatigue
-            }            
-            if = {
-                limit = { trait = malaise }
-                remove_trait = malaise
-            }            
-            if = {
-                limit = { trait = infection }
-                remove_trait = infection
-            }            
-            if = {
-                limit = { trait = flu }
-                remove_trait = flu
-            }            
-            if = {
-                limit = { trait = dysentery }
-                remove_trait = dysentery
-            }            
-            if = {
-                limit = { trait = gout }
-                remove_trait = gout
-            }            
-            if = {
-                limit = { trait = food_poisoning }
-                remove_trait = food_poisoning
-            }            
-            if = {
-                limit = { trait = rabies }
-                remove_trait = rabies
-            }            
-            if = {
-                limit = { trait = cancer }
-                remove_trait = cancer
-            }            
-            if = {
-                limit = { trait = scurvy }
-                remove_trait = scurvy
-            }            
-            if = {
-                limit = { trait = sick_incapable }
-                remove_trait = sick_incapable
-            }
-            if = {
-                limit = { trait = one_eyed }
-                remove_trait = one_eyed
-            }
-            if = {
-                limit = { trait = one_handed }
-                remove_trait = one_handed
-            }
-            if = {
-                limit = { trait = one_legged }
-                remove_trait = one_legged
-            }
-            if = {
-                limit = { trait = disfigured }
-                remove_trait = disfigured
-            }
-            if = {
-                limit = { trait = mangled }
-                remove_trait = mangled
-            }
-            if = {
-                limit = { trait = severely_injured }
-                remove_trait = severely_injured
-            }
-        }
-    }
-}
+#         # Heal traits.
+#         if = {
+#             # Remove Sickness
+#             if = {
+#                 limit = { trait = ill }
+#                 remove_trait = ill
+#             }
+#             if = {
+#                 limit = { trait = syphilitic }
+#                 remove_trait = syphilitic
+#             }
+#             if = {
+#                 limit = { trait = leper }
+#                 remove_trait = leper
+#             }
+
+#             # Heal Body
+#             if = {
+#                 limit = { trait = infirm }
+#                 remove_trait = infirm
+#             }
+#             if = {
+#                 limit = { trait = incapable }
+#                 remove_trait = incapable
+#             }
+#             if = {
+#                 limit = { trait = lunatic }
+#                 remove_trait = lunatic
+#             }
+#             if = {
+#                 limit = { trait = depressed }
+#                 remove_trait = depressed
+#             }
+#             if = {
+#                 limit = { trait = possessed }
+#                 remove_trait = possessed
+#             }
+#             if = {
+#                 limit = { trait = eunuch }
+#                 remove_trait = eunuch
+#             }
+
+#             # Reaper's Due DLC Symptoms
+#             if = {
+#                 limit = { trait = cough }
+#                 remove_trait = cough
+#             }
+#             if = {
+#                 limit = { trait = fever }
+#                 remove_trait = fever
+#             }
+#             if = {
+#                 limit = { trait = diarrhea }
+#                 remove_trait = diarrhea
+#             }
+#             if = {
+#                 limit = { trait = vomiting }
+#                 remove_trait = vomiting
+#             }
+#             if = {
+#                 limit = { trait = chest_pain }
+#                 remove_trait = chest_pain
+#             }
+#             if = {
+#                 limit = { trait = cramps }
+#                 remove_trait = cramps
+#             }
+#             if = {
+#                 limit = { trait = rash }
+#                 remove_trait = rash
+#             }
+#             if = {
+#                 limit = { trait = headache }
+#                 remove_trait = headache
+#             }
+#             if = {
+#                 limit = { trait = abdominal_pain }
+#                 remove_trait = abdominal_pain
+#             }
+#             if = {
+#                 limit = { trait = fatigue }
+#                 remove_trait = fatigue
+#             }
+#             if = {
+#                 limit = { trait = malaise }
+#                 remove_trait = malaise
+#             }
+#             if = {
+#                 limit = { trait = infection }
+#                 remove_trait = infection
+#             }
+#             if = {
+#                 limit = { trait = flu }
+#                 remove_trait = flu
+#             }
+#             if = {
+#                 limit = { trait = dysentery }
+#                 remove_trait = dysentery
+#             }
+#             if = {
+#                 limit = { trait = gout }
+#                 remove_trait = gout
+#             }
+#             if = {
+#                 limit = { trait = food_poisoning }
+#                 remove_trait = food_poisoning
+#             }
+#             if = {
+#                 limit = { trait = rabies }
+#                 remove_trait = rabies
+#             }
+#             if = {
+#                 limit = { trait = cancer }
+#                 remove_trait = cancer
+#             }
+#             if = {
+#                 limit = { trait = scurvy }
+#                 remove_trait = scurvy
+#             }
+#             if = {
+#                 limit = { trait = sick_incapable }
+#                 remove_trait = sick_incapable
+#             }
+#             if = {
+#                 limit = { trait = one_eyed }
+#                 remove_trait = one_eyed
+#             }
+#             if = {
+#                 limit = { trait = one_handed }
+#                 remove_trait = one_handed
+#             }
+#             if = {
+#                 limit = { trait = one_legged }
+#                 remove_trait = one_legged
+#             }
+#             if = {
+#                 limit = { trait = disfigured }
+#                 remove_trait = disfigured
+#             }
+#             if = {
+#                 limit = { trait = mangled }
+#                 remove_trait = mangled
+#             }
+#             if = {
+#                 limit = { trait = severely_injured }
+#                 remove_trait = severely_injured
+#             }
+#         }
+#     }
+# }

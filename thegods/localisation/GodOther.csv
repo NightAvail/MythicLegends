@@ -1,0 +1,53 @@
+god_government;God Government;;;;;;
+god_government_desc;This is the government of Gods. The only real rulers are the Gods. Humanity is futile.;;;;;;
+god_heal_mind;Heal the mind;;;;;;
+god_heal_mind_desc;Use godly powers to heal the mind.;;;;;;
+god_curse_sickness;Curse Sickness;;;;;;
+god_curse_sickness_desc;Curse this person with a terrible sickness.;;;;;;
+god_blessing_modifier;Granted a blessing;;;;;;
+god_blessing_modifier_desc;This person has been granted a blessing by a god!;;;;;;
+godblessing_trait;Granted blessing;;;;;;
+godblessing_trait_desc;This person has been granted a blessing by the gods.;;;;;;
+god_grant_blessing;Grant Blessing;;;;;;
+god_grant_blessing_desc;Grant this person your blessing;;;;;;
+god_revoke_blessing;Revoke Blessing;;;;;;
+god_revoke_blessing_desc;Revoke your blessing from this person.;;;;;;
+godchosenblessing_modifier;Chosen by God;;;;;;
+godchosenblessing_modifier_desc;This person has been chosen by god and granted great power!;;;;;;
+godchoosenblessing_trait;Chosen by God;;;;;;
+godchoosenblessing_trait_desc;Blessed and chosen by God;;;;;;
+god_grant_chosen;Grant Chosen by God;;;;;;
+god_grant_chosen_desc;Make this person your divine chosen!;;;;;;
+god_revoke_chosen;Revoke Chosen by God;;;;;;
+god_revoke_chosen_desc;Revoke this person as your divine chosen!;;;;;;
+god_curse_modifier;Cursed by God;;;;;;
+god_curse_modifier_desc;This person has been cursed by god.;;;;;;
+god_smite_curse;Smite with Curse;;;;;;
+god_smite_curse_desc;Smite this person with a terrible curse!;;;;;;
+god_revoke_curse;Revoke Curse;;;;;;
+god_revoke_curse_desc;Revoke your terrible curse from this person.;;;;;;
+godtelport_out_of_prison;Teleport out of prison;;;;;;
+godtelport_out_of_prison_desc;Use divine powers to teleport this person out of prison!;;;;;;
+godtelport_to_court;Teleport to court;;;;;;
+godtelport_to_court_desc;Use divine powers to teleport this person to your court!;;;;;;
+godtargetted_decision_god_grant_magical_armor;Forge magical armor;;;;;;;;;;;;;x
+godtargetted_decision_god_grant_magical_armor_desc;Forge a powerful and magical armor for this mortal to use!;;;;;;;;;;;;;x
+godtargetted_decision_god_grant_magical_sword;Forge magical sword;;;;;;;;;;;;;x
+godtargetted_decision_god_grant_magical_sword_desc;Forge a powerful and magical sword for this mortal to use!;;;;;;;;;;;;;x
+godtargetted_decision_god_join_war;Join the war;;;;;;;;;;;;;x
+godtargetted_decision_god_join_war_desc;Assist as a God to lend your power in the war!;;;;;;;;;;;;;x
+god_trait_armor_of_light;Armor of Light;;;;;;;;;;;;;x
+god_trait_armor_of_light_desc;Forged by the Gods, this armor gives the kind and gentle soul the power to banish darkness!;;;;;;;;;;;;;x
+god_trait_armor_of_darkness;Armor of Darkness;;;;;;;;;;;;;x
+god_trait_armor_of_darkness_desc;Forged by the Gods, this armor gives the corrupt soul the immortal power to banish the light!;;;;;;;;;;;;;x
+god_trait_sword_of_light;Sword of Light;;;;;;;;;;;;;x
+god_trait_sword_of_light_desc;Forged by the Gods, this sword was meant to fight the darkness!;;;;;;;;;;;;;x
+god_trait_sword_of_darkness;Sword of Darkness;;;;;;;;;;;;;x
+god_trait_sword_of_darkness_desc;Forged by the Gods, this sword was meant to banish the light!;;;;;;;;;;;;;x
+goditems_events.1desc;Forge a powerful and magical armor for a mortal.;;;;;;;;;;;;;x
+goditems_events.1a;Armor of Light;;;;;;;;;;;;;x
+goditems_events.1b;Armor of Darkness;;;;;;;;;;;;;x
+goditems_events.1c;This mortal is not worthy!;;;;;;;;;;;;;x
+goditems_events.2desc;Forge a powerful and magical sword for a mortal.;;;;;;;;;;;;;x
+goditems_events.2a;Sword of Light;;;;;;;;;;;;;x
+goditems_events.2b;Sword of Darkness;;;;;;;;;;;;;x

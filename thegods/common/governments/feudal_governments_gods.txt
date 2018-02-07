@@ -1,0 +1,50 @@
+feudal_governments = {
+
+	god_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = {
+			CASTLE
+			CITY
+			TEMPLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			tribal_government
+			feudal_government
+			muslim_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		potential = {
+			NAND = {
+				controls_religion = yes
+				NOT = { religion_group = muslim }
+				NOT = { religion = norse_pagan_reformed }
+				NOT = { religion_group = god_group }
+				NOT = { religion = the_light }
+				NOT = { religion = the_darkness }
+			}
+			NOT = {	religion_group = muslim	}
+			religion_group = god_group
+			is_patrician = no
+		}
+
+		color = { 255 255 255 }
+
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		uses_decadence = no
+
+		can_build_tribal = no
+
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+	}
+}

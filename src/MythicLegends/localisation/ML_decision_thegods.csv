@@ -1,0 +1,11 @@
+ml_targetted_decision_mage_grant_magical_armor;Forge magical armor;;;;;;;;;;;;;x
+ml_targetted_decision_mage_grant_magical_armor_desc;Forge a powerful and magical armor for this mortal to use!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_grant_magical_sword;Forge magical sword;;;;;;;;;;;;;x
+ml_targetted_decision_mage_grant_magical_sword_desc;Forge a powerful and magical sword for this mortal to use!;;;;;;;;;;;;;x
+ml_events_thegods.1desc;Forge a powerful and magical armor for a mortal.;;;;;;;;;;;;;x
+ml_events_thegods.1a;Armor of Light;;;;;;;;;;;;;x
+ml_events_thegods.1b;Armor of Darkness;;;;;;;;;;;;;x
+ml_events_thegods.1c;This mortal is not worthy!;;;;;;;;;;;;;x
+ml_events_thegods.2desc;Forge a powerful and magical sword for a mortal.;;;;;;;;;;;;;x
+ml_events_thegods.2a;Sword of Light;;;;;;;;;;;;;x
+ml_events_thegods.2b;Sword of Darkness;;;;;;;;;;;;;x

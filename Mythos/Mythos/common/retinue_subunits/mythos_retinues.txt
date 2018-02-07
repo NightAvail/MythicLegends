@@ -1,0 +1,56 @@
+RETTYPE_CUL_ZOMBIE =  {
+	first_type = 6
+	first_amount = 500
+	
+	special_troops = zombies
+
+	hire_cost = 1
+	
+	maintenance_multiplier = 0.5
+	
+	potential = {
+		culture = zombie_culture
+	}
+}
+RETTYPE_CUL_VAMPIRE =  {
+	first_type = 6
+	first_amount = 200
+	
+	special_troops = vampires
+
+	hire_cost = 100
+	
+	maintenance_multiplier = 0.5
+	
+	potential = {
+		culture = vampire_culture
+	}
+}
+RETTYPE_CUL_WEREWOLF =  {
+	first_type = 6
+	first_amount = 200
+	
+	special_troops = lycan_berzerkers
+
+	hire_cost = 100
+	
+	maintenance_multiplier = 0.5
+	
+	potential = {
+		culture = werewolf_culture
+	}
+}
+RETTYPE_CUL_DRAGON =  {
+	first_type = 6
+	first_amount = 50
+	
+	special_troops = dragon_cavalry
+
+	hire_cost = 100
+	
+	maintenance_multiplier = 0.5
+	
+	potential = {
+		culture = draconic
+	}
+}

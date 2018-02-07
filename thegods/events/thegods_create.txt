@@ -1,0 +1,369 @@
+namespace = godscreate
+
+########################
+# Create a god.
+########################
+character_event = {
+	id = "godscreate.1"
+	desc = "EVTDESCgodscreate.1"
+	picture = GFX_evt_god_01
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+
+	# We should be a god.
+    trigger = {
+        OR = {
+        	trait = God
+        	trait = Goddess
+        	trait = Fallen_God
+        	trait = Fallen_Goddess
+        }
+    }
+
+    # Create a god of high god culture.
+	option = {
+        name = "godscreate.1a"
+
+        wealth = -100
+		create_character = {
+			religion = the_light
+			culture = High_God
+			female = no
+			age = 16
+			fertility = 0.5
+			trait = Young_God
+			trait = diligent
+			trait = kind
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Warrior
+			trait = strong
+		}
+    }
+    # Create a norse god
+    option = {
+        name = "godscreate.1b"
+
+        wealth = -100
+		create_character = {
+			religion = the_light
+			culture = Norse_God
+			female = no
+			age = 16
+			fertility = 0.5
+			trait = Young_God
+			trait = diligent
+			trait = kind
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Warrior
+			trait = strong
+		}
+    }
+    # Create a olympian god
+    option = {
+        name = "godscreate.1c"
+
+        wealth = -100
+		create_character = {
+			religion = the_light
+			culture = Olympic_God
+			female = no
+			age = 16
+			fertility = 0.5
+			trait = Young_God
+			trait = diligent
+			trait = kind
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Warrior
+			trait = strong
+		}
+    }
+    # Nevermind
+    option = {
+        name = "godscreate.nevermind"
+    }
+}
+
+########################
+# Create a fallen god.
+########################
+character_event = {
+	id = "godscreate.2"
+	desc = "EVTDESCgodscreate.2"
+	picture = GFX_evt_god_01
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+
+	# We should be a god.
+    trigger = {
+        OR = {
+        	trait = God
+        	trait = Goddess
+        	trait = Fallen_God
+        	trait = Fallen_Goddess
+        }
+    }
+
+    # Create a god of fallen god culture.
+	option = {
+        name = "godscreate.2a"
+
+        wealth = -100
+		create_character = {
+			religion = the_darkness
+			culture = Fallen_God
+			female = no
+			age = 16
+			fertility = 0.5
+			trait = Young_Fallen_God
+			trait = diligent
+			trait = cruel
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Warrior
+			trait = strong
+		}
+    }
+    # Create a fallen norse god
+    option = {
+        name = "godscreate.2b"
+
+        wealth = -100
+		create_character = {
+			religion = the_darkness
+			culture = Norse_God
+			female = no
+			age = 16
+			fertility = 0.5
+			trait = Young_Fallen_God
+			trait = diligent
+			trait = cruel
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Warrior
+			trait = strong
+		}
+    }
+    # Create a fallen olympian god
+    option = {
+        name = "godscreate.2c"
+
+        wealth = -100
+		create_character = {
+			religion = the_darkness
+			culture = Olympic_God
+			female = no
+			age = 16
+			fertility = 0.5
+			trait = Young_Fallen_God
+			trait = diligent
+			trait = cruel
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Warrior
+			trait = strong
+		}
+    }
+    # Nevermind
+    option = {
+        name = "godscreate.nevermind"
+    }
+}
+
+########################
+# Create a goddess.
+########################
+character_event = {
+	id = "godscreate.3"
+	desc = "EVTDESCgodscreate.3"
+	picture = GFX_evt_god_01
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+
+	# We should be a god.
+    trigger = {
+        OR = {
+        	trait = God
+        	trait = Goddess
+        	trait = Fallen_God
+        	trait = Fallen_Goddess
+        }
+    }
+
+    # Create a god of high god culture.
+	option = {
+        name = "godscreate.3a"
+
+        wealth = -100
+		create_character = {
+			religion = the_light
+			culture = High_God
+			female = yes
+			age = 16
+			fertility = 0.5
+			trait = Young_Goddess
+			trait = diligent
+			trait = kind
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Steward
+			trait = fair
+		}
+    }
+    # Create a norse god
+    option = {
+        name = "godscreate.3b"
+
+        wealth = -100
+		create_character = {
+			religion = the_light
+			culture = Norse_God
+			female = yes
+			age = 16
+			fertility = 0.5
+			trait = Young_Goddess
+			trait = diligent
+			trait = kind
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Steward
+			trait = fair
+		}
+    }
+    # Create a olympian god
+    option = {
+        name = "godscreate.3c"
+
+        wealth = -100
+		create_character = {
+			religion = the_light
+			culture = Olympic_God
+			female = yes
+			age = 16
+			fertility = 0.5
+			trait = Young_Goddess
+			trait = diligent
+			trait = kind
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Steward
+			trait = fair
+		}
+    }
+    # Nevermind
+    option = {
+        name = "godscreate.nevermind"
+    }
+}
+
+########################
+# Create a fallen goddess.
+########################
+character_event = {
+	id = "godscreate.4"
+	desc = "EVTDESCgodscreate.4"
+	picture = GFX_evt_god_01
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+
+	# We should be a god.
+    trigger = {
+        OR = {
+        	trait = God
+        	trait = Goddess
+        	trait = Fallen_God
+        	trait = Fallen_Goddess
+        }
+    }
+
+    # Create a god of fallen god culture.
+	option = {
+        name = "godscreate.4a"
+
+        wealth = -100
+		create_character = {
+			religion = the_darkness
+			culture = Fallen_God
+			female = yes
+			age = 16
+			fertility = 0.5
+			trait = Young_Fallen_Goddess
+			trait = diligent
+			trait = cruel
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Steward
+			trait = fair
+		}
+    }
+    # Create a fallen norse god
+    option = {
+        name = "godscreate.4b"
+
+        wealth = -100
+		create_character = {
+			religion = the_darkness
+			culture = Norse_God
+			female = yes
+			age = 16
+			fertility = 0.5
+			trait = Young_Fallen_Goddess
+			trait = diligent
+			trait = cruel
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Steward
+			trait = fair
+		}
+    }
+    # Create a fallen olympian god
+    option = {
+        name = "godscreate.4c"
+
+        wealth = -100
+		create_character = {
+			religion = the_darkness
+			culture = Olympic_God
+			female = yes
+			age = 16
+			fertility = 0.5
+			trait = Young_Fallen_Goddess
+			trait = diligent
+			trait = cruel
+			trait = temperate
+			trait = patient
+			trait = zealous
+			trait = scholar
+			trait = Divine_Steward
+			trait = fair
+		}
+    }
+    # Nevermind
+    option = {
+        name = "godscreate.nevermind"
+    }
+}

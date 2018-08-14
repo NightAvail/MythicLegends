@@ -1,15 +1,3 @@
-angels = {
-	morale = 25
-	maintenance = 2
-	phase_skirmish_attack = 15
-	phase_melee_attack = 20
-	phase_pursue_attack = 25
-	phase_skirmish_defense = 25
-	phase_melee_defense = 20
-	phase_pursue_defense = 15
-	base_type = heavy_infantry
-}
-
 youkai = {
 	morale = 25
 	maintenance = 2
@@ -19,19 +7,7 @@ youkai = {
 	phase_skirmish_defense = 25
 	phase_melee_defense = 20
 	phase_pursue_defense = 15
-	base_type = heavy_infantry
-}
-
-dark_angels = {
-	morale = 25
-	maintenance = 2
-	phase_skirmish_attack = 15
-	phase_melee_attack = 20
-	phase_pursue_attack = 25
-	phase_skirmish_defense = 25
-	phase_melee_defense = 20
-	phase_pursue_defense = 15
-	base_type = heavy_infantry
+	base_type = knights
 }
 
 jotnar = {
@@ -43,7 +19,31 @@ jotnar = {
 	phase_skirmish_defense = 100
 	phase_melee_defense = 100
 	phase_pursue_defense = 80
-	base_type = heavy_infantry
+	base_type = knights
+}
+
+dark_angels = {
+	morale = 25
+	maintenance = 2
+	phase_skirmish_attack = 15
+	phase_melee_attack = 20
+	phase_pursue_attack = 25
+	phase_skirmish_defense = 25
+	phase_melee_defense = 20
+	phase_pursue_defense = 15
+	base_type = knights
+}
+
+angelic = {
+	morale = 25
+	maintenance = 2
+	phase_skirmish_attack = 15
+	phase_melee_attack = 20
+	phase_pursue_attack = 25
+	phase_skirmish_defense = 25
+	phase_melee_defense = 20
+	phase_pursue_defense = 15
+	base_type = knights
 }
 
 titans = {
@@ -55,5 +55,5 @@ titans = {
 	phase_skirmish_defense = 100
 	phase_melee_defense = 100
 	phase_pursue_defense = 80
-	base_type = heavy_infantry
+	base_type = knights
 }

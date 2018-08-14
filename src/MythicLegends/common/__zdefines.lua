@@ -1474,7 +1474,7 @@ NDefines = {
 
 	NTechnology = {
 		DONT_EXECUTE_TECH_BEFORE = 769,				-- Set this to your earliest starting year
-		POINTS_PER_ATTRIBUTE = 0.001,
+		POINTS_PER_ATTRIBUTE = 0.015,
 
 		BASE_NEIGHBOUR_SPREAD_BONUS = 0.15, 		-- bonus for each neighbour with the tech
 		NEIGHBOUR_SAME_RELIGON_GROUP_MULT = 0.001, 	-- multiplier to the above bonus if neighbour is of your religious group

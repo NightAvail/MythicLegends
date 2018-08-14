@@ -56,3 +56,5 @@ ml_targetted_decision_mage_heal_all;Heal all issues;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_all_desc;Perform a powerful healing spell for all issues on the character.;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_all_other;Heal all issues;;;;;;;;;;;;;x
 ml_targetted_decision_mage_heal_all_other_desc;Perform a powerful healing spell for all issues on the character.;;;;;;;;;;;;;x
+ml_clear_claims;Clear all claims;;;;;;;;;;;;;x
+ml_clear_claims_desc;Remove all claims you hold.;;;;;;;;;;;;;x

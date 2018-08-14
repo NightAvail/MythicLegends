@@ -5,8 +5,144 @@
 # Author:  NightAvail
 #######################################################
 
-# namespace = ml_events_immortal
-# namespace = ml_events_common
+namespace = ml_events_immortal
+namespace = ml_events_common
+
+# Immortal event for curing infirm and incappable.
+character_event = {
+    id = "ml_events_immortal.1"
+    desc = "ml_events_immortal.1desc"
+    picture = GFX_evt_recovery
+    hide_window = yes
+
+    trigger = {
+        trait = ml_trait_immortal
+
+        OR = {
+            trait = syphilitic
+            trait = leper
+            trait = infirm
+            trait = incapable
+            trait = lunatic
+            trait = depressed
+            trait = possessed
+            trait = eunuch
+            trait = stressed
+
+            # Reaper's Due DLC
+            trait = gout
+            trait = rabies
+            trait = cancer
+            trait = sick_incapable
+        }
+    }
+
+    weight_multiplier = {
+        years = 1
+    }
+
+    # Activate the spell based on arcane level.
+    option = {
+        clr_character_flag = 3_year_physician_cooldown
+        clr_character_flag = recent_treatment
+        clr_character_flag = being_treated
+
+        clr_character_flag = got_syphilis
+        clr_character_flag = got_gout
+        clr_character_flag = got_rabies
+        clr_character_flag = got_cancer
+        clr_character_flag = manifest_syphilis
+        clr_character_flag = manifest_gout
+        clr_character_flag = manifest_rabies
+        clr_character_flag = manifest_cancer
+
+        # Add immunities
+        if = {
+            limit = { NOT = { has_character_flag = immune_tuberculosis } }
+            set_character_flag = immune_tuberculosis
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_typhoid_fever } }
+            set_character_flag = immune_typhoid_fever
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_typhus } }
+            set_character_flag = immune_typhus
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_bubonic_plague } }
+            set_character_flag = immune_bubonic_plague
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_measles } }
+            set_character_flag = immune_measles
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_smallpox } }
+            set_character_flag = immune_smallpox
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_aztec_disease } }
+            set_character_flag = immune_aztec_disease
+        }
+        if = {
+            limit = { NOT = { has_character_flag = immune_dancing_plague } }
+            set_character_flag = immune_dancing_plague
+        }
+
+        # Heal traits.
+        if = {
+            limit = { trait = lunatic }
+            remove_trait = lunatic
+        }
+        if = {
+            limit = { trait = depressed }
+            remove_trait = depressed
+        }
+        if = {
+            limit = { trait = possessed }
+            remove_trait = possessed
+        }
+        if = {
+            limit = { trait = stressed }
+            remove_trait = stressed
+        }
+
+        # Remove Sickness
+        if = {
+            limit = { trait = syphilitic }
+            remove_trait = syphilitic
+        }
+        if = {
+            limit = { trait = leper }
+            remove_trait = leper
+        }
+
+        # Heal Body
+        if = {
+            limit = { trait = infirm }
+            remove_trait = infirm
+        }
+        if = {
+            limit = { trait = incapable }
+            remove_trait = incapable
+        }
+
+        # Reaper's Due DLC Symptoms
+        if = {
+            limit = { trait = gout }
+            remove_trait = gout
+        }
+        if = {
+            limit = { trait = rabies }
+            remove_trait = rabies
+        }
+        if = {
+            limit = { trait = cancer }
+            remove_trait = cancer
+        }
+    }
+}
 
 # # Immortal event for curing infirm and incappable.
 # character_event = {

@@ -12,3 +12,15 @@ gods_seed_darkness;Seed Darkness;;;;;;;;;;;;;x
 gods_seed_darkness_desc;Bring darkness into the heart of a god.;;;;;;;;;;;;;x
 gods_seed_light;Seed Light;;;;;;;;;;;;;x
 gods_seed_light_desc;Bring light into the heart of a god.;;;;;;;;;;;;;x
+god_immune_to_evil_modifier;Immune to Evil Influence;;;;;;;;;;;;;x
+god_immune_to_evil_modifier_desc;Make this god immuned to the influences of evil.;;;;;;;;;;;;;x
+god_immune_to_good_modifier;Immune to Good Influence;;;;;;;;;;;;;x
+god_immune_to_good_modifier_desc;Make this god immuned to the influences of good.;;;;;;;;;;;;;x
+gods_grant_immunity_to_evil;Grant Immunity to Evil;;;;;;;;;;;;;x
+gods_grant_immunity_to_evil_desc;Grants god immunity from all evil influences.;;;;;;;;;;;;;x
+gods_revoke_immunity_to_evil;Revoke Immunity to Evil;;;;;;;;;;;;;x
+gods_revoke_immunity_to_evil_desc;Revokes god's immunity from all evil influences.;;;;;;;;;;;;;x
+gods_grant_immunity_to_good;Grant Immunity to Good;;;;;;;;;;;;;x
+gods_grant_immunity_to_good_desc;Grants god immunity from all good influences.;;;;;;;;;;;;;x
+gods_revoke_immunity_to_good;Revoke Immunity to Good;;;;;;;;;;;;;x
+gods_revoke_immunity_to_good_desc;Revokes god's immunity from all good influences.;;;;;;;;;;;;;x

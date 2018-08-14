@@ -28,6 +28,7 @@ character_event = {
         add_trait = ml_trait_magical_blood
 
         set_character_flag = ml_flag_choose_mage
+        set_character_flag = ml_flag_mage_bloodline
     }
 
     # Choose not to become a mage.
@@ -267,7 +268,7 @@ character_event = {
         name = "ml_events_mage.opt9a"
 
         random_list = {
-            2 = {
+            10 = {
                 if = {
                     limit = {
                         NOT = { trait = maimed }
@@ -276,19 +277,19 @@ character_event = {
                 }
             }
 
-            5 = {
+            50 = {
                 add_trait = brave
                 remove_trait = craven
             }
 
             # Increase skill of the mage
-            5 = {
+            38 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
             }
 
-            1 = {
+            2 = {
                 add_trait = maimed
             }
         }
@@ -341,7 +342,7 @@ character_event = {
         name = "ml_events_mage.opt10a"
 
         random_list = {
-            5 = {
+            15 = {
                 if = {
                     limit = {
                         NOT = { trait = maimed }
@@ -350,19 +351,19 @@ character_event = {
                 }
             }
 
-            5 = {
+            50 = {
                 add_trait = brave
                 remove_trait = craven
             }
 
             # Increase skill of the mage
-            10 = {
+            30 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
             }
 
-            10 = {
+            5 = {
                 add_trait = maimed
             }
         }
@@ -413,7 +414,7 @@ character_event = {
         name = "ml_events_mage.opt11a"
 
         random_list = {
-            20 = {
+            4 = {
                 if = {
                     limit = {
                         NOT = { trait = maimed }
@@ -422,19 +423,19 @@ character_event = {
                 }
             }
 
-            5 = {
+            50 = {
                 add_trait = brave
                 remove_trait = craven
             }
 
             # Increase skill of the mage
-            10 = {
+            40 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
             }
 
-            4 = {
+            6 = {
                 add_trait = maimed
             }
         }
@@ -487,7 +488,7 @@ character_event = {
         name = "ml_events_mage.opt12a"
 
         random_list = {
-            25 = {
+            4 = {
                 if = {
                     limit = {
                         NOT = { trait = maimed }
@@ -496,19 +497,19 @@ character_event = {
                 }
             }
 
-            5 = {
+            50 = {
                 add_trait = brave
                 remove_trait = craven
             }
 
             # Increase skill of the mage
-            15 = {
+            38 = {
                 character_event = {
                     id = "ml_events_mage_progress.1"
                 }
             }
 
-            6 = {
+            8 = {
                 add_trait = maimed
             }
         }

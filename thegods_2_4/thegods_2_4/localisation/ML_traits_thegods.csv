@@ -1,0 +1,19 @@
+ml_trait_armor_of_light;Armor of Light;;;;;;;;;;;;;x
+ml_trait_armor_of_light_desc;Forged by the gods, this armor gives the kind and gentle soul the power to banish darkness!;;;;;;;;;;;;;x
+ml_trait_armor_of_darkness;Armor of Darkness;;;;;;;;;;;;;x
+ml_trait_armor_of_darkness_desc;Forged by the gods, this armor gives the corrupt soul the immortal power to banish the light!;;;;;;;;;;;;;x
+ml_trait_sword_of_light;Sword of Light;;;;;;;;;;;;;x
+ml_trait_sword_of_light_desc;Forged by the gods, this sword was meant to fight the darkness!;;;;;;;;;;;;;x
+ml_trait_sword_of_darkness;Sword of Darkness;;;;;;;;;;;;;x
+ml_trait_sword_of_darkness_desc;Forged by the gods, this sword was meant to banish the light!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_grant_magical_armor;Forge magical armor;;;;;;;;;;;;;x
+ml_targetted_decision_mage_grant_magical_armor_desc;Forge a powerful and magical armor for this mortal to use!;;;;;;;;;;;;;x
+ml_targetted_decision_mage_grant_magical_sword;Forge magical sword;;;;;;;;;;;;;x
+ml_targetted_decision_mage_grant_magical_sword_desc;Forge a powerful and magical sword for this mortal to use!;;;;;;;;;;;;;x
+ml_events_thegods.1desc;Forge a powerful and magical armor for a mortal.;;;;;;;;;;;;;x
+ml_events_thegods.1a;Armor of Light;;;;;;;;;;;;;x
+ml_events_thegods.1b;Armor of Darkness;;;;;;;;;;;;;x
+ml_events_thegods.1c;This mortal is not worthy!;;;;;;;;;;;;;x
+ml_events_thegods.2desc;Forge a powerful and magical sword for a mortal.;;;;;;;;;;;;;x
+ml_events_thegods.2a;Sword of Light;;;;;;;;;;;;;x
+ml_events_thegods.2b;Sword of Darkness;;;;;;;;;;;;;x

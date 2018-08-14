@@ -2,10 +2,10 @@
 # If adding new groups or cultures, make sure they are unique.
 
 God_group = {
-	graphical_cultures = { southerngfx }
-	
+	graphical_cultures = { germangfx }
+
 	High_God = {
-		graphical_cultures = { southerngfx }
+		graphical_cultures = { germangfx }
 		modifier = default_culture_modifier
 		color = { 255 255 255 }
 
@@ -35,13 +35,13 @@ God_group = {
 		pat_grf_name_chance = 50
 		mat_grf_name_chance = 0
 		father_name_chance = 50
-		
+
 		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
 		pat_grm_name_chance = 50
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
 	}
-	
+
 	Fallen_God = {
 		graphical_cultures = { westerngfx }
 		modifier = default_culture_modifier
@@ -73,13 +73,13 @@ God_group = {
 		pat_grf_name_chance = 50
 		mat_grf_name_chance = 0
 		father_name_chance = 50
-		
+
 		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
 		pat_grm_name_chance = 50
 		mat_grm_name_chance = 50
 		mother_name_chance = 0
 	}
-	
+
 	Norse_God = {
 		graphical_cultures = { norsegfx }
 		modifier = default_culture_modifier
@@ -89,7 +89,7 @@ God_group = {
 			Baldr Bragi Dellingr Forseti Freyr Yngvi Ing Heimdallr Hermóðr Höðr Hœnir Lóðurr Loki Máni Meili Njörðr Odin Óðr Saxnōt Thor Týr Ullr Váli Viðarr Vé Vili
 		}
 		female_names = {
-			Baduhenna Bil Beyla Eir Ēostre Freyja Frigg Fulla Gefjun Gersemi Gerðr Gná Gullveig Hariasa Hlín Hretha Hnoss Ilmr Iðunn Irpa Lofn Nanna Nerthus Njörun Rán Rindr 
+			Baduhenna Bil Beyla Eir Ēostre Freyja Frigg Fulla Gefjun Gersemi Gerðr Gná Gullveig Hariasa Hlín Hretha Hnoss Ilmr Iðunn Irpa Lofn Nanna Nerthus Njörun Rán Rindr
 			Sága Sandraudiga Sif Sigyn Sinthgunt Sjöfn Skaði Snotra Sól Sunna Syn Tanfana Þrúðr Þorgerðr Hölgabrúðr Vár Vör Zisa
 		}
 		from_dynasty_prefix = "of "
@@ -98,7 +98,7 @@ God_group = {
 		pat_grf_name_chance = 15
 		mat_grf_name_chance = 0
 		father_name_chance = 15
-		
+
 		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
 		pat_grm_name_chance = 15
 		mat_grm_name_chance = 15
@@ -110,13 +110,13 @@ God_group = {
 		color = { 200 200 200 }
 
 		male_names = {
-			Achelous Aeolus Aether Alastor Apollo Ares Aristaeus Asclepius Atlas Attis Boreas Caerus Castor Cerus Chaos Charon Chronos Crios Cronus Dinlas Dionysus 
+			Achelous Aeolus Aether Alastor Apollo Ares Aristaeus Asclepius Atlas Attis Boreas Caerus Castor Cerus Chaos Charon Chronos Crios Cronus Dinlas Dionysus
 			Erebus Eros Eurus Glaucus Hades Helios Hephaestus Heracles Hermes Hesperus Hymenaios Hypnos Kratos Momus Morpheus Nereus Notus Oceanus Pallas Pan Phosphorus
 			Plutus Pollux Pontus Poseidon Priapus Pricus Proteus Tartarus Thanatos Triton Typhon Uranus Zelus Zephyrus Zeus
 		}
 		female_names = {
 			Achelois Alcyone Alectrona Amphitrite Antheia Aphaea Aphrodite Artemis Astraea Até Athena Atropos Bia Brizo Calliope Calypso Celaeno Ceto Circe Clio
-			Clotho Cybele Demeter Doris Eileithyia Electra Elpis Enyo Eos Erato Eris Euterpe Gaia Harmonia Hebe Hecate Hemera Hera Hestia Hygea Iris Kotys Lacheses 
+			Clotho Cybele Demeter Doris Eileithyia Electra Elpis Enyo Eos Erato Eris Euterpe Gaia Harmonia Hebe Hecate Hemera Hera Hestia Hygea Iris Kotys Lacheses
 			Maia Mania Melpomene Merope Metis Nemesis Nike Nyx Peitha Persephone Pheme Polyhymnia Rhea Selene Sterope Styx Taygete Terpsichore Thalia Themis Thetis Tyche Urania
 		}
 		from_dynasty_prefix = "of "
@@ -125,7 +125,7 @@ God_group = {
 		pat_grf_name_chance = 0
 		mat_grf_name_chance = 0
 		father_name_chance = 0
-		
+
 		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
 		pat_grm_name_chance = 0
 		mat_grm_name_chance = 0
@@ -137,11 +137,11 @@ God_group = {
 		color = { 200 200 200 }
 
 		male_names = {
-			Haruto Yuto Sota Yuki Hayato Haruki Ryusei Koki Sora Sosuke Riku Soma Ryota Rui Kaito Haru Kota Yusei Yuito Yuma Ren Takumi Minato Eita Shota Daiki 
-			Hiroto Kosei Takeru Hinata Toma Manato Ryuki Rikuto Aoto Ibuki Tatsuki Haruma Yamato Ryuto Taisei Yuta Itsuki Soshi Taiga Kosuke Shoma Yushin Ryuga Ryo Rento 
+			Haruto Yuto Sota Yuki Hayato Haruki Ryusei Koki Sora Sosuke Riku Soma Ryota Rui Kaito Haru Kota Yusei Yuito Yuma Ren Takumi Minato Eita Shota Daiki
+			Hiroto Kosei Takeru Hinata Toma Manato Ryuki Rikuto Aoto Ibuki Tatsuki Haruma Yamato Ryuto Taisei Yuta Itsuki Soshi Taiga Kosuke Shoma Yushin Ryuga Ryo Rento
 		}
 		female_names = {
-			Yui Rio Yuna Hina Koharu Hinata Mei Mio Saki Miyu Kokona Haruka Rin Akari Kairi Honoka Momoka Aoi Ichika Sakura Himari Yume Airi Sara Nanami Ayaka 
+			Yui Rio Yuna Hina Koharu Hinata Mei Mio Saki Miyu Kokona Haruka Rin Akari Kairi Honoka Momoka Aoi Ichika Sakura Himari Yume Airi Sara Nanami Ayaka
 			Yuka Riko Noa Mao Yua Ayane Hiyori Misaki Yuzuki Rina Sana Ría Ruka Kanon Kaho Hana Karin Risa Shiori Fuka Rino Anna Natsuki Nana Reina
 		}
 		from_dynasty_prefix = "no "
@@ -150,7 +150,7 @@ God_group = {
 		pat_grf_name_chance = 0
 		mat_grf_name_chance = 0
 		father_name_chance = 0
-		
+
 		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
 		pat_grm_name_chance = 0
 		mat_grm_name_chance = 0

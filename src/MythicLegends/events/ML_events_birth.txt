@@ -1,0 +1,135 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_birth
+
+character_event = {
+    id = "ml_events_birth.0"
+    desc = "ml_events_birth.0desc"
+
+    hide_window = yes
+
+    trigger = {
+        AND = {
+            age <= 5
+            NOT = { has_character_flag = ml_flag_mage_bloodline }
+        }
+    }
+
+    immediate = {
+        IF = {
+            LIMIT = {
+                OR = {
+                    father = {
+                        has_character_flag = ml_flag_mage_bloodline
+                    }
+                    mother = {
+                        has_character_flag = ml_flag_mage_bloodline
+                    }
+                }
+            }
+            random_list = {
+                65 = {}
+                35 = {
+                    add_trait = ml_trait_magical_blood
+                }
+            }
+            set_character_flag = ml_flag_mage_bloodline
+        }
+    }
+}
+
+character_event = {
+    id = "ml_events_birth.1"
+    desc = "ml_events_birth.1desc"
+
+    hide_window = yes
+
+    trigger = {
+        AND = {
+            trait = ml_trait_magical_blood
+            age <= 5
+            NOT = { has_character_flag = ml_flag_chose_mage_class }
+        }
+    }
+
+    immediate = {
+        IF = {
+            LIMIT = {
+                OR = {
+                    father = {
+                        has_character_flag = ml_flag_mage_bloodline
+                    }
+                    mother = {
+                        has_character_flag = ml_flag_mage_bloodline
+                    }
+                }
+            }
+
+            random_list = {
+                20 = {}
+
+                # AIR
+                5 = {
+                    add_trait = ml_trait_air_mage_beginner
+                }
+                5 = {
+                    add_trait = ml_trait_air_mage_apprentice
+                }
+                5 = {
+                    add_trait = ml_trait_air_mage_expert
+                }
+                5 = {
+                    add_trait = ml_trait_air_mage_master
+                }
+
+                # EARTH
+                5 = {
+                    add_trait = ml_trait_earth_mage_beginner
+                }
+                5 = {
+                    add_trait = ml_trait_earth_mage_apprentice
+                }
+                5 = {
+                    add_trait = ml_trait_earth_mage_expert
+                }
+                5 = {
+                    add_trait = ml_trait_earth_mage_master
+                }
+
+                # FIRE
+                5 = {
+                    add_trait = ml_trait_fire_mage_beginner
+                }
+                5 = {
+                    add_trait = ml_trait_fire_mage_apprentice
+                }
+                5 = {
+                    add_trait = ml_trait_fire_mage_expert
+                }
+                5 = {
+                    add_trait = ml_trait_fire_mage_master
+                }
+
+                # WATER
+                5 = {
+                    add_trait = ml_trait_water_mage_beginner
+                }
+                5 = {
+                    add_trait = ml_trait_water_mage_apprentice
+                }
+                5 = {
+                    add_trait = ml_trait_water_mage_expert
+                }
+                5 = {
+                    add_trait = ml_trait_water_mage_master
+                }
+            }
+            set_character_flag = ml_flag_chose_mage_class
+        }
+    }
+}

@@ -1,0 +1,68 @@
+#######################################################
+# Mythic Legends
+# Events
+#
+# Author:  NightAvail
+#######################################################
+
+namespace = ml_events_thegods
+
+# Forge magical armor.
+character_event = {
+    id = "ml_events_thegods.1"
+    desc = "ml_events_thegods.1desc"
+    picture = GFX_evt_comet
+
+    is_triggered_only = yes
+	
+	# Forge armor of light!
+	option = {
+		name = "ml_events_thegods.1a"
+		event_target:target_person = {
+            add_trait = ml_trait_armor_of_light
+        }
+	}
+
+	# Forge armor of darkness!
+	option = {
+		name = "ml_events_thegods.1b"
+		event_target:target_person = {
+            add_trait = ml_trait_armor_of_darkness
+        }
+	}
+
+	# This was a mistake!
+	option = {
+		name = "ml_events_thegods.1c"
+	}
+}
+
+# Forge magical sword.
+character_event = {
+    id = "ml_events_thegods.2"
+    desc = "ml_events_thegods.2desc"
+    picture = GFX_evt_comet
+
+    is_triggered_only = yes
+	
+	# Forge sword of light!
+	option = {
+		name = "ml_events_thegods.2a"
+		event_target:target_person = {
+            add_trait = ml_trait_sword_of_light
+        }
+	}
+
+	# Forge sword of darkness!
+	option = {
+		name = "ml_events_thegods.2b"
+		event_target:target_person = {
+            add_trait = ml_trait_sword_of_darkness
+        }
+	}
+
+	# This was a mistake!
+	option = {
+		name = "ml_events_thegods.1c"
+	}
+}

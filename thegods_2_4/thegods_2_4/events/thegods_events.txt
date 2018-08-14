@@ -1488,6 +1488,13 @@ character_event = { #cruel makes you convert to evil god
 			trait = Young_God
 			trait = Young_Goddess
 			}
+		NOT = {
+			OR = {
+				trait = kingofthegods
+				trait = queenofthegods
+			}
+		}
+		NOT = { has_character_modifier = god_immune_to_evil_modifier }
 		trait = cruel
 		has_game_rule = { name = wartoggle value = on }
 	}
@@ -1527,6 +1534,13 @@ character_event = { #cruel makes you convert to evil god
 			trait = God
 			trait = Goddess
 			}
+		NOT = {
+			OR = {
+				trait = kingofthegods
+				trait = queenofthegods
+			}
+		}
+		NOT = { has_character_modifier = god_immune_to_evil_modifier }
 		trait = cruel
 		has_game_rule = { name = wartoggle value = on }
 	}
@@ -1615,6 +1629,13 @@ character_event = {
 			trait = Young_Fallen_God
 			trait = Young_Fallen_Goddess
 			}
+		NOT = {
+			OR = {
+				trait = kingofthegods
+				trait = queenofthegods
+			}
+		}
+		NOT = { has_character_modifier = god_immune_to_good_modifier }
 		trait = kind
 		NOT = { has_game_rule = { name = wartoggle value = off } }
 	}
@@ -1654,6 +1675,13 @@ character_event = {
 			trait = Fallen_God
 			trait = Fallen_Goddess
 			}
+		NOT = {
+			OR = {
+				trait = kingofthegods
+				trait = queenofthegods
+			}
+		}
+		NOT = { has_character_modifier = god_immune_to_good_modifier }
 		trait = kind
 		NOT = { has_game_rule = { name = wartoggle value = off } }
 	}

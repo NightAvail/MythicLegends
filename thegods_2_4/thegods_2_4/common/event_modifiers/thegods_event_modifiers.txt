@@ -50,6 +50,16 @@ god_blessing_modifier = {
     icon                    = 8
 }
 
+# Immunity to evil.
+god_immune_to_evil_modifier = {
+    icon                    = 8
+}
+
+# Immunity to good.
+god_immune_to_good_modifier = {
+    icon                    = 26
+}
+
 # God chosen blessing.
 godchosenblessing_modifier = {
     icon                    = 8

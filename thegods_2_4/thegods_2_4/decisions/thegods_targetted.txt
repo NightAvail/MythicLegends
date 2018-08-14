@@ -1455,6 +1455,258 @@ targetted_decisions = {
         ai_target_filter = court
     }
 
+	#######################################################
+    # Grant magical armor
+    #######################################################
+    ml_targetted_decision_mage_grant_magical_armor = {
+        filter = all					# Only those under me
+		ai_target_filter = court		# Only those under me
+		ai_check_interval = 10000
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+                trait = Fallen_God
+                trait = Fallen_Goddess
+                trait = God
+                trait = Goddess
+            }
+            ai = no
+        }
+
+        potential = {
+            is_alive = yes
+            NOR = {
+                trait = ml_trait_armor_of_light
+                trait = ml_trait_armor_of_darkness
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            save_event_target_as = target_person
+            FROM = {
+                character_event = {
+                    id = "ml_events_thegods.1"
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Grant magical sword
+    #######################################################
+    ml_targetted_decision_mage_grant_magical_sword = {
+        filter = all					# Only those under me
+		ai_target_filter = court		# Only those under me
+		ai_check_interval = 10000
+
+        from_potential = {
+            is_playable = yes
+            OR = {
+                trait = Fallen_God
+                trait = Fallen_Goddess
+                trait = God
+                trait = Goddess
+            }
+            ai = no
+        }
+
+        potential = {
+            is_alive = yes
+            NOR = {
+                trait = ml_trait_sword_of_light
+                trait = ml_trait_sword_of_darkness
+            }
+        }
+
+        revoke_allowed = {
+			always = no
+		}
+
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            save_event_target_as = target_person
+            FROM = {
+                character_event = {
+                    id = "ml_events_thegods.2"
+                }
+            }
+        }
+    }
+
+    #######################################################
+    # Grant immunity to evil.
+    #######################################################
+    gods_grant_immunity_to_evil = {
+        only_playable = yes
+		filter = all					# Only those under me
+		ai_target_filter = court		# Only those under me
+		ai_check_interval = 10000
+
+        from_potential = {
+            OR = {
+                trait = Fallen_God
+                trait = Fallen_Goddess
+                trait = God
+                trait = Goddess
+            }
+            ai = no
+        }
+        potential = {
+            OR = {
+                trait = God
+                trait = Goddess
+                trait = Young_God
+                trait = Young_Goddess
+            }
+            NOT = { has_character_modifier = god_immune_to_evil_modifier }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            add_character_modifier = {
+                modifier = god_immune_to_evil_modifier
+                duration = -1
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+
+    #######################################################
+    # Revoke immunity to evil.
+    #######################################################
+    gods_revoke_immunity_to_evil = {
+        only_playable = yes
+		filter = all					# Only those under me
+		ai_target_filter = court		# Only those under me
+		ai_check_interval = 10000
+
+        from_potential = {
+            OR = {
+                trait = Fallen_God
+                trait = Fallen_Goddess
+                trait = God
+                trait = Goddess
+            }
+            ai = no
+        }
+        potential = {
+            has_character_modifier = god_immune_to_evil_modifier
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            remove_character_modifier = god_immune_to_evil_modifier
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+
+    #######################################################
+    # Grant immunity to good.
+    #######################################################
+    gods_grant_immunity_to_good = {
+        only_playable = yes
+		filter = all					# Only those under me
+		ai_target_filter = court		# Only those under me
+		ai_check_interval = 10000
+
+        from_potential = {
+            OR = {
+                trait = Fallen_God
+                trait = Fallen_Goddess
+                trait = God
+                trait = Goddess
+            }
+            ai = no
+        }
+        potential = {
+            OR = {
+                trait = Fallen_God
+                trait = Fallen_Goddess
+                trait = Young_Fallen_God
+                trait = Young_Fallen_Goddess
+            }
+            NOT = { has_character_modifier = god_immune_to_good_modifier }
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            add_character_modifier = {
+                modifier = god_immune_to_good_modifier
+                duration = -1
+            }
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+
+    #######################################################
+    # Revoke immunity to good.
+    #######################################################
+    gods_revoke_immunity_to_good = {
+        only_playable = yes
+		filter = all					# Only those under me
+		ai_target_filter = court		# Only those under me
+		ai_check_interval = 10000
+
+        from_potential = {
+            OR = {
+                trait = Fallen_God
+                trait = Fallen_Goddess
+                trait = God
+                trait = Goddess
+            }
+            ai = no
+        }
+        potential = {
+            has_character_modifier = god_immune_to_good_modifier
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            remove_character_modifier = god_immune_to_good_modifier
+        }
+        revoke_allowed = {
+            always = no
+        }
+        ai_will_do = {
+            factor = 0
+        }
+        ai_target_filter = court
+    }
+
     #######################################################
     # Join war as a god.
     #######################################################

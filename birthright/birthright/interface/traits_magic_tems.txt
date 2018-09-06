@@ -1,0 +1,122 @@
+	spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_trait_sword_1"
+		texturefile = "gfx/traits/sword_1.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_sword_2"
+		texturefile = "gfx/traits/sword_2.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_sword_3"
+		texturefile = "gfx/traits/sword_3.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_sword_4"
+		texturefile = "gfx/traits/sword_4.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_sword_5"
+		texturefile = "gfx/traits/sword_5.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_holy_avenger_sword"
+		texturefile = "gfx/traits/holy_avenger_sword.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_sword_of_roele"
+		texturefile = "gfx/traits/sword_of_roele.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+	spriteType = {
+		name = "GFX_trait_ring_of_persuasion"
+		texturefile = "gfx/traits/ring_of_persuasion.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_ring_of_invisibility"
+		texturefile = "gfx/traits/ring_of_invisibility.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_ring_of_command"
+		texturefile = "gfx/traits/ring_of_command.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+	spriteType = {
+		name = "GFX_trait_ring_of_speed"
+		texturefile = "gfx/traits/ring_of_speed.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}			
+	spriteType = {
+		name = "GFX_trait_amulet_of_protection_1"
+		texturefile = "gfx/traits/amulet_of_protection_1.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_amulet_of_protection_3"
+		texturefile = "gfx/traits/amulet_of_protection_3.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_amulet_of_protection_5"
+		texturefile = "gfx/traits/amulet_of_protection_5.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_elixir_of_eternal_youth"
+		texturefile = "gfx/traits/elixir_of_eternal_youth.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_potion_of_beauty"
+		texturefile = "gfx/traits/potion_of_beauty.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_potion_of_healing"
+		texturefile = "gfx/traits/potion_of_healing.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+}

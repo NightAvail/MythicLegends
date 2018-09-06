@@ -1,0 +1,169 @@
+bloodline_anduireas = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_azrai
+    bloodline_basaia
+    bloodline_brenna
+    bloodline_masela
+    bloodline_reynir
+    bloodline_vorynn
+  }
+
+  random = no
+
+}
+
+bloodline_azrai = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_anduireas
+    bloodline_basaia
+    bloodline_brenna
+    bloodline_masela
+    bloodline_reynir
+    bloodline_vorynn
+  }
+
+  random = no
+
+}
+
+bloodline_basaia = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_anduireas
+    bloodline_azrai
+    bloodline_brenna
+    bloodline_masela
+    bloodline_reynir
+    bloodline_vorynn
+  }
+
+  random = no
+
+}
+
+bloodline_brenna = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_anduireas
+    bloodline_azrai
+    bloodline_basaia 
+    bloodline_masela
+    bloodline_reynir
+    bloodline_vorynn
+  }
+
+  random = no
+
+}
+
+bloodline_masela = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_anduireas
+    bloodline_azrai
+    bloodline_basaia
+    bloodline_brenna
+    bloodline_reynir
+    bloodline_vorynn
+  }
+
+  random = no
+
+}
+
+bloodline_reynir = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_anduireas
+    bloodline_azrai
+    bloodline_basaia
+    bloodline_brenna
+    bloodline_masela
+    bloodline_vorynn
+  }
+
+  random = no
+
+}
+
+bloodline_vorynn = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_anduireas
+    bloodline_azrai
+    bloodline_basaia
+    bloodline_brenna
+    bloodline_masela
+    bloodline_reynir
+  }
+
+  random = no
+
+}
+
+bloodline_tainted = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_minor
+    bloodline_major
+    bloodline_great
+    bloodline_true
+  }
+monthly_character_piety = 0.5
+  random = no
+
+}
+
+bloodline_minor = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_tainted
+    bloodline_major
+    bloodline_great
+    bloodline_true
+  }
+monthly_character_piety = 1.0
+  random = no
+
+}
+
+bloodline_major = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_tainted
+    bloodline_minor
+    bloodline_great
+    bloodline_true
+  }
+monthly_character_piety = 1.5
+  random = no
+
+}
+
+bloodline_great = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_tainted
+    bloodline_minor
+    bloodline_major
+    bloodline_true
+  }
+monthly_character_piety = 2.0
+  random = no
+
+}
+
+bloodline_true = {
+inherit_chance = 100
+  opposites =  {
+    bloodline_tainted
+    bloodline_minor
+    bloodline_major
+    bloodline_great
+  }
+monthly_character_piety = 2.5
+  random = no
+
+}

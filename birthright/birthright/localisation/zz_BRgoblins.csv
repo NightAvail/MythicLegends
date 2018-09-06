@@ -1,0 +1,13 @@
+goblins.1.desc;By ancient traditions, the ruler of Kal Kalathor must be chosen from among all the clans.  As favored of the former [Root.GetTitle], I am the foremost candidate - but there are still two other strong competitors vying for the position whom I must defeat.;;;;;;;;;;;;;x
+goblins.1.a;Anyone could see I'm better than these fools.;;;;;;;;;;;;;x
+goblins.1.b;I should offer some encouragement...;;;;;;;;;;;;;x
+goblins.1.c;A Khan's ransom to anyone who will support me!;;;;;;;;;;;;;x
+offer_gifts;Anyone who votes for you will be given 50 gold from your coffers;;;;;;;;;;;;;x
+offer_big_gifts;Anyone who votes for you will be given 100 gold from your coffers;;;;;;;;;;;;;x
+goblins.2.desc;By ancient traditions, the ruler of Kal Kalathor must be chosen from among all the clans.  In the final round of voting, three competitors remain to vie for the position.  Who shall receive your support?;;;;;;;;;;;;;x
+goblins.2.a;[Root.Liege.GetFirstName], favored by the prior [Root.Liege.GetTitle];;;;;;;;;;;;;x
+goblins.2.b;The first challenger;;;;;;;;;;;;;x
+goblins.2.c;The second challenger;;;;;;;;;;;;;x
+goblins.4.desc;You have won the election!  Kal Kalathor is yours to rule!;;;;;;;;;;;;;x
+goblins.5.desc;Sadly, the clans have failed to recognize your genius.  Another will be ruling Kal Kalathor - poorly, no doubt.;;;;;;;;;;;;;x
+goblins.6.desc;By ancient traditions, the ruler of Kal Kalathor must be chosen from among all the clans.  I have advanced to the final round of voting, and will surely win the crown for myself.;;;;;;;;;;;;;x

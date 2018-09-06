@@ -1,0 +1,1483 @@
+namespace = goblins
+
+#Kal Kalathor ruler dies
+character_event = {
+    id = goblins.0
+    desc = goblins.0.desc
+    picture = "GFX_evt_into_the_dungeon"
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		culture = Goblin
+		k_kal_kalathor = { owner = { character = ROOT } }
+	}
+	
+	immediate = {
+		current_heir = {
+			character_event = { id = goblins.1 days = 4 }
+		}
+	}
+}
+
+#New ruler gets event - trigger with on_new_holder_inheritance?
+character_event = {
+    id = goblins.1
+    desc = "goblins.1.desc"
+    picture = "GFX_evt_tribal_shrine"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { real_tier = EMPEROR }
+		k_kal_kalathor = {
+			owner = { character = ROOT }
+			NOT = {
+				has_law = crown_authority_3
+				has_law = crown_authority_4
+			}
+		}
+		any_vassal = {
+			culture = Goblin
+			higher_real_tier_than = BARON
+			is_adult = yes
+			count = 2
+		}
+	}
+	
+	immediate = {
+		hidden_tooltip = {
+		if = {
+			limit = {
+				any_vassal = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 1000
+					is_adult = yes
+					count = 2
+				}
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 1000
+					is_adult = yes
+				}
+				set_character_flag = candidate_one
+				character_event = { id = goblins.6 }
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 1000
+					is_adult = yes
+					NOT = { has_character_flag = candidate_one }
+				}
+				set_character_flag = candidate_two
+				character_event = { id = goblins.6 }
+			}
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				any_vassal = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 500
+					is_adult = yes
+					count = 2
+				}
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 500
+					is_adult = yes
+				}
+				set_character_flag = candidate_one
+				character_event = { id = goblins.6 }
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 500
+					is_adult = yes
+					NOT = { has_character_flag = candidate_one }
+				}
+				set_character_flag = candidate_two
+				character_event = { id = goblins.6 }
+			}
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				any_vassal = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 100
+					is_adult = yes
+					count = 2
+				}
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 100
+					is_adult = yes
+				}
+				set_character_flag = candidate_one
+				character_event = { id = goblins.6 }
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 100
+					is_adult = yes
+					NOT = { has_character_flag = candidate_one }
+				}
+				set_character_flag = candidate_two
+				character_event = { id = goblins.6 }
+			}
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				any_vassal = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 50
+					is_adult = yes
+					count = 2
+				}
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 50
+					is_adult = yes
+				}
+				set_character_flag = candidate_one
+				character_event = { id = goblins.6 }
+			}
+			random_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					prestige = 50
+					is_adult = yes
+					NOT = { has_character_flag = candidate_one }
+				}
+				set_character_flag = candidate_two
+				character_event = { id = goblins.6 }
+			}
+			break = yes
+		}
+		
+		random_vassal = {
+			limit = {
+				culture = Goblin
+				higher_real_tier_than = BARON
+				is_adult = yes
+			}
+			set_character_flag = candidate_one
+			character_event = { id = goblins.6 }
+		}
+		random_vassal = {
+			limit = {
+				culture = Goblin
+				higher_real_tier_than = BARON
+				is_adult = yes
+				NOT = { has_character_flag = candidate_one }
+			}
+			set_character_flag = candidate_two
+			character_event = { id = goblins.6 }
+		}
+		}
+	}
+				
+	option = {
+		name = goblins.1.a		#Default
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+		}
+		
+		random_vassal = {
+			limit = { has_character_flag = candidate_one }
+			set_character_flag = nothing
+			clr_character_flag = nothing
+		}
+		random_vassal = {
+			limit = { has_character_flag = candidate_two }
+			set_character_flag = nothing
+			clr_character_flag = nothing
+		}
+		hidden_tooltip = {
+			set_variable = { which = votes value = 0 }
+			any_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					NOT = {
+						has_character_flag = candidate_one
+						has_character_flag = candidate_two
+					}
+				}
+				character_event = { id = goblins.2 days = 3 }
+			}
+			character_event = { id = goblins.3 days = 7 }
+		}
+	}
+	
+	option = {
+		name = goblins.1.b		#Offer gifts for their support!
+		custom_tooltip = { text = offer_gifts }
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { 
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 11
+						}
+					}
+					wealth = 300
+				}
+				AND = {
+					any_vassal = {
+						culture = Goblin
+						higher_real_tier_than = BARON
+						count = 11
+					}
+					NOT = { 
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 21
+						}
+					}
+					wealth = 750
+				}
+				AND = {
+					any_vassal = {
+						culture = Goblin
+						higher_real_tier_than = BARON
+						count = 21
+					}
+					NOT = { 
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 31
+						}
+					}
+					wealth = 1200
+				}
+				AND = {
+					any_vassal = {
+						culture = Goblin
+						higher_real_tier_than = BARON
+						count = 31
+					}
+					wealth = 1500
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+				
+				
+		hidden_tooltip = {
+			set_character_flag = offer_gifts
+			set_variable = { which = votes value = 0 }
+			any_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					NOT = {
+						has_character_flag = candidate_one
+						has_character_flag = candidate_two
+					}
+				}
+				character_event = { id = goblins.2 days = 3 }
+			}
+			character_event = { id = goblins.3 days = 7 }
+		}
+	}
+	
+	option = {
+		name = goblins.1.c		#Offer generous gifts
+		custom_tooltip = { text = offer_big_gifts }
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = generous
+			}
+		}
+		
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { 
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 11
+						}
+					}
+					wealth = 600
+				}
+				AND = {
+					any_vassal = {
+						culture = Goblin
+						higher_real_tier_than = BARON
+						count = 11
+					}
+					NOT = { 
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 21
+						}
+					}
+					wealth = 1500
+				}
+				AND = {
+					any_vassal = {
+						culture = Goblin
+						higher_real_tier_than = BARON
+						count = 21
+					}
+					NOT = { 
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 31
+						}
+					}
+					wealth = 2400
+				}
+				AND = {
+					any_vassal = {
+						culture = Goblin
+						higher_real_tier_than = BARON
+						count = 31
+					}
+					wealth = 3000
+				}
+			}
+		}
+				
+				
+		hidden_tooltip = {
+			set_character_flag = offer_big_gifts
+			set_variable = { which = votes value = 0 }
+			any_vassal = {
+				limit = {
+					culture = Goblin
+					higher_real_tier_than = BARON
+					NOT = {
+						has_character_flag = candidate_one
+						has_character_flag = candidate_two
+					}
+				}
+				character_event = { id = goblins.2 days = 3 }
+			}
+			character_event = { id = goblins.3 days = 7 }
+		}
+	}
+}
+
+
+#Each goblin vassal gets to vote
+character_event = {
+    id = goblins.2
+    desc = goblins.2.desc
+    picture = GFX_evt_tribal_shrine
+	
+	is_triggered_only = yes
+
+	option = {
+		name = goblins.2.a	#Vote for liege
+		ai_chance = {
+			factor = 15
+			
+			modifier = {
+				factor = 2
+				liege = { has_character_flag = offer_gifts }
+			}
+			
+			modifier = {
+				factor = 0.5
+				liege = { is_adult = no }
+			}
+			
+			modifier = {
+				factor = 3
+				liege = { has_character_flag = offer_big_gifts }
+			}
+				
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -90 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -80 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -70 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -60 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -50 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -40 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -30 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -20 } }
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { personal_opinion = { who = LIEGE value = -10 } }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 10 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 20 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 30 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 40 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 50 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 60 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 70 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 80 }
+			}
+			modifier = {
+				factor = 1.33
+				personal_opinion = { who = LIEGE value = 90 }
+			}
+			
+			modifier = {
+				factor = 0.5
+				NOT = { liege = { prestige = 0 } }
+			}
+			modifier = {
+				factor = 1.33
+				liege = { prestige = 10 }
+			}
+			modifier = {
+				factor = 1.33
+				liege = { prestige = 50 }
+			}
+			modifier = {
+				factor = 1.33
+				liege = { prestige = 100 }
+			}
+			modifier = {
+				factor = 1.33
+				liege = { prestige = 500 }
+			}
+			modifier = {
+				factor = 1.33
+				liege = { prestige = 1000 }
+			}
+			modifier = {
+				factor = 1.33
+				liege = { prestige = 5000 }
+			}
+		}
+		
+		if = {
+			limit = { liege = { has_character_flag = offer_gifts } }
+			liege = { wealth = -50 }
+			wealth = 50
+		}
+		
+		if = {
+			limit = { liege = { has_character_flag = offer_big_gifts } }
+			liege = { wealth = -100 }
+			wealth = 100
+		}
+		
+		liege = { change_variable = { which = votes value = 1 } }
+	}
+	
+	option = {
+		name = goblins.2.b		#Vote for candidate one
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 2
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						has_character_flag = offer_gifts
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 3
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						has_character_flag = offer_big_gifts
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -90 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -80 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -70 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -60 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -50 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -40 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -30 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -20 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { reverse_personal_opinion = { who = ROOT value = -10 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 10 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 20 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 30 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 40 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 50 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 60 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 70 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 80 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						reverse_personal_opinion = { who = ROOT value = 90 }
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						NOT = { prestige = 0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						prestige = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						prestige = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						prestige = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						prestige = 500
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						prestige = 1000
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_one
+						prestige = 5000
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = { 
+				liege = { 
+					any_vassal = {
+						has_character_flag = candidate_one
+						has_character_flag = offer_gifts 
+					}
+				} 
+			}
+			liege = { 
+				random_vassal = {
+					limit = { has_character_flag = candidate_one }
+					wealth = -50 
+				}
+			}
+			wealth = 50
+		}
+		
+		if = {
+			limit = { 
+				liege = { 
+					any_vassal = {
+						has_character_flag = candidate_one
+						has_character_flag = offer_big_gifts 
+					}
+				} 
+			}
+			liege = { 
+				random_vassal = {
+					limit = { has_character_flag = candidate_one }
+					wealth = -100
+				}
+			}
+			wealth = 100
+		}
+		
+		liege = {
+			random_vassal = {
+				limit = { has_character_flag = candidate_one }
+				change_variable = { which = votes value = 1 }
+			}
+		}
+	}
+	
+	option = {
+		name = goblins.2.c	#Vote for candidate two
+		ai_chance = {
+			factor = 10
+			
+			modifier = {
+				factor = 2
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						has_character_flag = offer_gifts
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 3
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						has_character_flag = offer_big_gifts
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -90 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -80 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -70 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -60 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -50 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -40 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -30 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -20 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 0.75
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { reverse_personal_opinion = { who = ROOT value = -10 } }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 10 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 20 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 30 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 40 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 50 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 60 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 70 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 80 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						reverse_personal_opinion = { who = ROOT value = 90 }
+					}
+				}
+			}
+			
+			modifier = {
+				factor = 0.5
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { prestige = 0 }
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						prestige = 10
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						prestige = 50
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						prestige = 100
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						prestige = 500
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						prestige = 1000
+					}
+				}
+			}
+			modifier = {
+				factor = 1.33
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						prestige = 5000
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = { 
+				liege = { 
+					any_vassal = {
+						has_character_flag = candidate_two
+						has_character_flag = offer_gifts 
+					}
+				} 
+			}
+			liege = { 
+				random_vassal = {
+					limit = { has_character_flag = candidate_two }
+					wealth = -50 
+				}
+			}
+			wealth = 50
+		}
+		
+		if = {
+			limit = { 
+				liege = { 
+					any_vassal = {
+						has_character_flag = candidate_two
+						has_character_flag = offer_big_gifts 
+					}
+				} 
+			}
+			liege = { 
+				random_vassal = {
+					limit = { has_character_flag = candidate_two }
+					wealth = -100
+				}
+			}
+			wealth = 100
+		}
+		
+		liege = { 
+			random_vassal = {
+				limit = { has_character_flag = candidate_two }
+				change_variable = { which = votes value = 1 }
+			}
+		}
+	}
+}
+
+
+#Tally votes - VERY CLEVER(!) recursive event
+character_event = {
+    id = goblins.3
+    desc = goblins.3.desc
+    picture = "GFX_evt_into_the_dungeon"
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		
+		if = {	#If I still have positive votes, knock one off everybody and try again
+			limit = { check_variable = { which = votes value = 1 } }
+			
+			k_kal_kalathor = {		#Knock one off everybody's vote totals
+				holder_scope = {
+					subtract_variable = { which = votes value = 1 }
+					random_vassal = {
+						limit = { has_character_flag = candidate_one }
+						subtract_variable = { which = votes value = 1 }
+					}
+					random_vassal = {
+						limit = { has_character_flag = candidate_two }
+						subtract_variable = { which = votes value = 1 }
+					}
+				}
+			}
+			
+			character_event = { id = goblins.3 }
+			break = yes
+		}
+		
+		#Otherwise, my vote tally stands at 0
+		if = {
+			limit = { NOT = { has_character_flag = candidate_one } }	#If I am the current king
+			
+			if = {
+				limit = {
+					any_vassal = {										#and Candidate 1 does not have positive votes remaining
+						has_character_flag = candidate_one
+						NOT = { check_variable = { which = votes value = 1 } }
+					}
+					any_vassal = {										#and Candidate 2 does not have positive votes remaining
+						has_character_flag = candidate_two
+						NOT = { check_variable = { which = votes value = 1 } }
+					}
+				}
+				character_event = { id = goblins.4 }					#Then I win!
+				random_vassal = {
+					limit = { has_character_flag = candidate_one }
+					character_event = { id = goblins.5 }
+				}
+				random_vassal = {
+					limit = { has_character_flag = candidate_two }
+					character_event = { id = goblins.5 }
+				}
+				break = yes
+			}
+			#Otherwise, 1 or 2 DOES have votes left - kick event over to 1, and inform loss
+			character_event = { id = goblins.5 }
+			random_vassal = {
+				limit = { has_character_flag = candidate_one }
+				character_event = { id = goblins.3 }
+			}
+			break = yes
+		}
+		
+		#I am candidate one, with a 0 tally, and the current king's tally is sub-zero
+		if = {					#If candidate two is also 0 or lower
+			limit = {									
+				liege = {
+					any_vassal = {
+						has_character_flag = candidate_two
+						NOT = { check_variable = { which = votes value = 1 } }
+					}
+				}
+			}
+			character_event = { id = goblins.4 }		#Then I win!
+			liege = {
+				random_vassal = {
+					limit = { has_character_flag = candidate_two }
+					character_event = { id = goblins.5 }	#Let #2 know he lost
+				}
+			}
+			break = yes
+		}
+		
+		#Otherwise, candidate two wins
+		
+		liege = {
+			random_vassal = {
+				limit = { has_character_flag = candidate_two }
+				character_event = { id = goblins.4 }
+			}
+		}
+		character_event = { id = goblins.5 }
+	}
+}
+
+
+
+character_event = {
+    id = goblins.4
+    desc = goblins.4.desc
+    picture = "GFX_evt_throne_room"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		if = {		#Not already king
+			limit = {
+				OR = {
+					has_character_flag = candidate_one
+					has_character_flag = candidate_two
+				}
+			}
+			k_kal_kalathor = { 
+				owner = {
+					any_demesne_title = {
+						limit = { tier = KING }
+						grant_title = ROOT 
+					}
+				}
+			}
+		}
+		clr_character_flag = candidate_one
+		clr_character_flag = candidate_two
+		hidden_tooltip = { set_variable = { which = votes value = 0 } }
+		clr_character_flag = offer_gifts
+		clr_character_flag = offer_big_gifts
+	}
+}
+
+character_event = {
+    id = goblins.5
+    desc = goblins.5.desc
+    picture = "GFX_evt_bad_news"
+	#hide_window = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = CURSES
+		clr_character_flag = candidate_one
+		clr_character_flag = candidate_two
+		hidden_tooltip = { set_variable = { which = votes value = 0 } }
+		clr_character_flag = offer_gifts
+		clr_character_flag = offer_big_gifts
+	}
+}
+
+
+character_event = {
+    id = goblins.6
+    desc = goblins.6.desc
+    picture = "GFX_evt_throne_room"
+	#hide_window = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = goblins.1.a
+		hidden_tooltip = { set_variable = { which = votes value = 0 } }
+	}
+	
+	option = {
+		name = goblins.1.b		#Offer gifts for their support!
+		custom_tooltip = { text = offer_gifts }
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						liege = {
+							any_vassal = {
+								culture = Goblin
+								higher_real_tier_than = BARON
+								count = 11
+							}
+						}
+					}
+					wealth = 300
+				}
+				AND = {
+					liege = {
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 11
+						}
+					}
+					NOT = { 
+						liege = {
+							any_vassal = {
+								culture = Goblin
+								higher_real_tier_than = BARON
+								count = 21
+							}
+						}
+					}
+					wealth = 750
+				}
+				AND = {
+					liege = {
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 21
+						}
+					}
+					NOT = { 
+						liege = {
+							any_vassal = {
+								culture = Goblin
+								higher_real_tier_than = BARON
+								count = 31
+							}
+						}
+					}
+					wealth = 1200
+				}
+				AND = {
+					liege = {
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 31
+						}
+					}
+					wealth = 1500
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+				
+				
+		hidden_tooltip = {
+			set_character_flag = offer_gifts
+			set_variable = { which = votes value = 0 }
+		}
+	}
+	
+	option = {
+		name = goblins.1.c		#Offer generous gifts
+		custom_tooltip = { text = offer_big_gifts }
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				trait = generous
+			}
+		}
+		
+		trigger = {
+			OR = {
+				AND = {
+					NOT = {
+						liege = {
+							any_vassal = {
+								culture = Goblin
+								higher_real_tier_than = BARON
+								count = 11
+							}
+						}
+					}
+					wealth = 600
+				}
+				AND = {
+					liege = {
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 11
+						}
+					}
+					NOT = { 
+						liege = {
+							any_vassal = {
+								culture = Goblin
+								higher_real_tier_than = BARON
+								count = 21
+							}
+						}
+					}
+					wealth = 1500
+				}
+				AND = {
+					liege = {
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 21
+						}
+					}
+					NOT = { 
+						liege = {
+							any_vassal = {
+								culture = Goblin
+								higher_real_tier_than = BARON
+								count = 31
+							}
+						}
+					}
+					wealth = 2400
+				}
+				AND = {
+					liege = {
+						any_vassal = {
+							culture = Goblin
+							higher_real_tier_than = BARON
+							count = 31
+						}
+					}
+					wealth = 3000
+				}
+			}
+		}
+				
+				
+		hidden_tooltip = {
+			set_character_flag = offer_big_gifts
+			set_variable = { which = votes value = 0 }
+		}
+	}
+}

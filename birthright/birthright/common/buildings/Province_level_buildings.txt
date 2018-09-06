@@ -1,0 +1,496 @@
+##Castles##
+
+castle = {
+	
+	ca_province_0 = {
+		desc = ca_province_0_desc
+		trigger = { 
+		always = no 
+		TECH_CASTLE_CONSTRUCTION = 5
+		}
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 5
+
+	}
+	ca_province_1 = {
+		desc = ca_province_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_0 }
+		upgrades_from = ca_province_0
+		gold_cost = 25		#5% of 500
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_2 = {
+		desc = ca_province_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_1 }
+		upgrades_from = ca_province_1
+		gold_cost = 375		#50% of 750
+		build_time = 1825
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 10.0
+	}
+	ca_province_3 = {
+		desc = ca_province_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_2 }
+		upgrades_from = ca_province_2
+		gold_cost = 937		#75% of 1250
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_4 = {
+		desc = ca_province_4_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_3 }
+		upgrades_from = ca_province_3
+		gold_cost = 1500
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_5 = {
+		desc = ca_province_5_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_4 }
+		upgrades_from = ca_province_4
+		gold_cost = 1750
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_6 = {
+		desc = ca_province_6_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_5 }
+		upgrades_from = ca_province_5
+		gold_cost = 2500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_7 = {
+		desc = ca_province_7_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_6 }
+		upgrades_from = ca_province_6
+		gold_cost = 3000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_8 = {
+		desc = ca_province_8_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_7 }
+		upgrades_from = ca_province_7
+		gold_cost = 3500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_9 = {
+		desc = ca_province_9_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_8 }
+		upgrades_from = ca_province_8
+		gold_cost = 4000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ca_province_10 = {
+		desc = ca_province_10_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_province_9 }
+		upgrades_from = ca_province_9
+		gold_cost = 5000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	
+	}
+	
+city = {
+	
+	ct_province_0 = {
+		desc = ct_province_0_desc
+		trigger = { 
+		always = no
+		 TECH_CITY_CONSTRUCTION = 5
+		}
+		gold_cost = 1000
+		build_time = 365
+		ai_creation_factor = 5
+	}
+	ct_province_1 = {
+		desc = ct_province_1_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_province_0 }
+		upgrades_from = ct_province_0
+		gold_cost = 37
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_2 = {
+		desc = ct_province_2_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_province_1 }
+		upgrades_from = ct_province_1
+		gold_cost = 500
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_3 = {
+		desc = ct_province_3_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_province_2 }
+		upgrades_from = ct_province_2
+		gold_cost = 937
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_4 = {
+		desc = ct_province_4_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_province_3 }
+		upgrades_from = ct_province_3
+		gold_cost = 1500
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_5 = {
+		desc = ct_province_5_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_province_4 }
+		upgrades_from = ct_province_4
+		gold_cost = 1750
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_6 = {
+		desc = ct_province_6_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0  }
+		prerequisites = { ct_province_5 }
+		upgrades_from = ct_province_5
+		gold_cost = 2500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_7 = {
+		desc = ct_province_7_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0  }
+		prerequisites = { ct_province_6 }
+		upgrades_from = ct_province_6
+		gold_cost = 3000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_8 = {
+		desc = ct_province_8_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0  }
+		prerequisites = { ct_province_7 }
+		upgrades_from = ct_province_7
+		gold_cost = 3500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_9 = {
+		desc = ct_province_9_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0  }
+		prerequisites = { ct_province_8 }
+		upgrades_from = ct_province_8
+		gold_cost = 4000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	ct_province_10 = {
+		desc = ct_province_10_desc
+		trigger = {  TECH_CITY_CONSTRUCTION = 0 }
+		prerequisites = { ct_province_9 }
+		upgrades_from = ct_province_9
+		gold_cost = 5000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	
+	}
+	
+temple = {
+	
+tp_province_0 = {
+		desc = tp_province_0_desc
+		trigger = { 
+		always = no 
+		TECH_CASTLE_CONSTRUCTION = 5
+		}
+		gold_cost = 1000
+		build_time = 365
+		ai_creation_factor = 5
+	}
+	tp_province_1 = {
+		desc = tp_province_1_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 5 }
+		prerequisites = { tp_province_0 }
+		upgrades_from = tp_province_0
+		gold_cost = 37
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_2 = {
+		desc = tp_province_2_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_1 }
+		upgrades_from = tp_province_1
+		gold_cost = 500
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_3 = {
+		desc = tp_province_3_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_2 }
+		upgrades_from = tp_province_2
+		gold_cost = 937
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_4 = {
+		desc = tp_province_4_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_3 }
+		upgrades_from = tp_province_3
+		gold_cost = 1500
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_5 = {
+		desc = tp_province_5_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_4 }
+		upgrades_from = tp_province_4
+		gold_cost = 1750
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_6 = {
+		desc = tp_province_6_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_5 }
+		upgrades_from = tp_province_5
+		gold_cost = 2500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_7 = {
+		desc = tp_province_7_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_6 }
+		upgrades_from = tp_province_6
+		gold_cost = 3000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_8 = {
+		desc = tp_province_8_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_7 }
+		upgrades_from = tp_province_7
+		gold_cost = 3500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_9 = {
+		desc = tp_province_9_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_8 }
+		upgrades_from = tp_province_8
+		gold_cost = 4000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	tp_province_10 = {
+		desc = tp_province_10_desc
+		trigger = { TECH_TEMPLE_CONSTRUCTION = 0 }
+		prerequisites = { tp_province_9 }
+		upgrades_from = tp_province_9
+		gold_cost = 5000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+	}
+	
+	}
+	
+tribal = {
+	
+tr_province_0 = {
+		desc = tr_province_0_desc
+		trigger = { 
+		always = no 
+		TECH_CASTLE_CONSTRUCTION = 5
+		}
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 5
+		
+		convert_to_city = ct_province_0
+		convert_to_castle = ca_province_0
+	}
+	tr_province_1 = {
+		desc = tr_province_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_0 }
+		upgrades_from = tr_province_0
+		gold_cost = 25
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_1
+		convert_to_castle = ca_province_1
+	}
+	tr_province_2 = {
+		desc = tr_province_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_1 }
+		upgrades_from = tr_province_1
+		gold_cost = 375
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_2
+		convert_to_castle = ca_province_2
+	}
+	tr_province_3 = {
+		desc = tr_province_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_2 }
+		upgrades_from = tr_province_2
+		gold_cost = 937
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_3
+		convert_to_castle = ca_province_3
+	}
+	tr_province_4 = {
+		desc = tr_province_4_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_3 }
+		upgrades_from = tr_province_3
+		gold_cost = 1500
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_4
+		convert_to_castle = ca_province_4
+	}
+	tr_province_5 = {
+		desc = tr_province_5_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_4 }
+		upgrades_from = tr_province_4
+		gold_cost = 1750
+		build_time = 1825
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+			
+		convert_to_city = ct_province_5
+		convert_to_castle = ca_province_5
+	}
+	tr_province_6 = {
+		desc = tr_province_6_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_5 }
+		upgrades_from = tr_province_5
+		gold_cost = 2500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_6
+		convert_to_castle = ca_province_6
+	}
+	tr_province_7 = {
+		desc = tr_province_7_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_6 }
+		upgrades_from = tr_province_6
+		gold_cost = 3000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_7
+		convert_to_castle = ca_province_7
+	}
+	tr_province_8 = {
+		desc = tr_province_8_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_7 }
+		upgrades_from = tr_province_7
+		gold_cost = 3500
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_8
+		convert_to_castle = ca_province_8
+	}
+	tr_province_9 = {
+		desc = tr_province_9_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_8 }
+		upgrades_from = tr_province_8
+		gold_cost = 4000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_9
+		convert_to_castle = ca_province_9
+	}
+	tr_province_10 = {
+		desc = tr_province_10_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { tr_province_9 }
+		upgrades_from = tr_province_9
+		gold_cost = 5000
+		build_time = 3650
+		ai_creation_factor = 100
+		extra_tech_building_start = 10.0
+		
+		convert_to_city = ct_province_10
+		convert_to_castle = ca_province_10
+	}
+	
+	}

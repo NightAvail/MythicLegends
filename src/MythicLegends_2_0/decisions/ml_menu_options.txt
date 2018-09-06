@@ -1,0 +1,63 @@
+#######################################################
+# Mythic Legends
+#
+# Menu Decisions
+#######################################################
+
+decisions = {
+    # Open Training Menu
+    ml_open_training_menu = {
+        potential = {
+            NOT = { has_character_flag = mlflag_menu_training }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            set_character_flag = mlflag_menu_training
+        }
+    }
+
+    # Open Spellbook Menu
+    ml_open_spellbook_menu = {
+        potential = {
+            NOT = { has_character_flag = mlflag_menu_spellbook }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            set_character_flag = mlflag_menu_spellbook
+        }
+    }
+
+    # Open Crafting Menu
+    ml_open_craft_menu = {
+        potential = {
+            NOT = { has_character_flag = mlflag_menu_crafting }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            set_character_flag = mlflag_menu_crafting
+        }
+    }
+
+    # Open Adventure Menu
+    ml_open_adventure_menu = {
+        potential = {
+            NOT = { has_character_flag = mlflag_menu_adventure }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            ROOT = { character_event = { id = mlevent_adventure.0 } }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+decisions = {
+
+change_religion={
+
+potential = {
+AND = {
+age = 16
+}
+}
+
+allow = {
+AND = {
+age = 16
+NOT = { has_character_flag = changedreligion }
+}
+}
+
+effect = {
+ROOT = { character_event = { id = religion.1 } }
+		}
+		
+	ai_will_do = {
+	factor = 0
+	}
+	
+	}
+	
+	}

@@ -33,7 +33,7 @@ character_event = {
 			AND = {
 				has_game_rule = { name = regod value = off }
 				NOT = { has_global_flag = regodded }
-				} 
+				}
 			has_game_rule = { name = regod value = on }
 		}
 	}
@@ -188,8 +188,8 @@ character_event = {
 	}
 	option = {
 		name ="EVTOPTAbecomeagod.4"
-		random = { 
-			chance = 70 
+		random = {
+			chance = 70
 			add_trait = kind
 			remove_trait = cruel
 			remove_trait = deceitful
@@ -231,9 +231,9 @@ character_event = {
 	}
 	option = {
 		name ="EVTOPTAbecomeagod.5"
-		random = { 
-			chance = 60 
-			add_trait = strong 
+		random = {
+			chance = 60
+			add_trait = strong
 		}
 	}
 }
@@ -272,8 +272,8 @@ character_event = {
 	}
 	option = {
 		name ="EVTOPTAbecomeagod.6"
-		random = { 
-			chance = 50 
+		random = {
+			chance = 50
 			add_trait = internallight
 			remove_trait = studentlight
 			}
@@ -364,8 +364,8 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTAbecomeagod.8"
-		random = { 
-			chance = 70 
+		random = {
+			chance = 70
 			add_trait = cruel
 			remove_trait = kind
 		}
@@ -408,7 +408,7 @@ character_event = {
 	option = {
 		name = "EVTOPTAbecomeagod.9"
 		random = { chance = 60 add_trait = strong }
-		
+
 	}
 }
 
@@ -447,8 +447,8 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTAbecomeagod.10"
-		random = { 
-			chance = 50 
+		random = {
+			chance = 50
 			add_trait = internaldarkness
 			remove_trait = studentdark
 			}
@@ -541,8 +541,8 @@ character_event = {
 	}
 	option = {
 		name ="EVTOPTAbecomeagod.12"
-		random = { 
-			chance = 70 
+		random = {
+			chance = 70
 			add_trait = cruel
 			remove_trait = kind
 		}
@@ -632,7 +632,7 @@ character_event = {
 	option = {
 		name = "EVTOPTAbecomeagod.14"
 		random = { chance = 60 add_trait = strong }
-		
+
 	}
 }
 character_event = {
@@ -670,8 +670,8 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTAbecomeagod.15"
-		random = { 
-			chance = 50 
+		random = {
+			chance = 50
 			add_trait = internaldarkness
 			remove_trait = studentdark
 			}
@@ -686,10 +686,10 @@ character_event = { #autogod on
 	only_independent = yes
 	war = no
 	min_age = 16
-	
+
 	trigger = {
 		has_game_rule = { name = autogod value = on }
-		NOT = { 
+		NOT = {
 			OR = {
 					trait = God
 					trait = Goddess
@@ -724,6 +724,7 @@ character_event = { #autogod on
 		religion = the_light
 		remove_trait = Angel_Blood
 		remove_trait = God_Blood
+		remove_trait = hasmagicseer
 	}
 	option = {
 		name = "EVTOPTDbecomeagod.17"
@@ -733,6 +734,7 @@ character_event = { #autogod on
 		religion = the_darkness
 		remove_trait = Angel_Blood
 		remove_trait = God_Blood
+		remove_trait = hasmagicseer
 	}
 	option = {
 		name = "EVTOPTBbecomeagod.17"
@@ -742,6 +744,7 @@ character_event = { #autogod on
 		religion = the_light
 		remove_trait = Angel_Blood
 		remove_trait = God_Blood
+		remove_trait = hasmagicseer
 	}
 	option = {
 		name = "EVTOPTCbecomeagod.17"
@@ -758,5 +761,6 @@ character_event = { #autogod on
 		}
 		remove_trait = Angel_Blood
 		remove_trait = God_Blood
+		remove_trait = hasmagicseer
 	}
 }

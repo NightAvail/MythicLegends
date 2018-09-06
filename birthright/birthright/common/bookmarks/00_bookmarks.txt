@@ -1,0 +1,30 @@
+bm_charlemagne = {
+	name = "BM_CHARLEMAGNE"
+	desc = "BM_BM_CHARLEMAGNE_DESC"
+	date = 1524.1.1
+	
+	era = yes						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_1
+	
+}
+
+bm_the_old_gods = {
+	name = "BM_THE_OLD_GODS"
+	desc = "BM_THE_OLD_GODS_DESC"
+	date = 867.1.1
+	
+	era = no						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_2
+
+}
+
+bm_fate_of_england = {
+	name = "BM_FATE_OF_ENGLAND"
+	desc = "BM_FATE_OF_ENGLAND_DESC"
+	date = 1066.9.15
+	
+	era = no						## Will be shown on Era screen.
+	picture = GFX_pick_era_image_3
+	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+
+}

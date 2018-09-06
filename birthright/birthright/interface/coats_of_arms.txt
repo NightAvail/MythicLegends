@@ -1,0 +1,387 @@
+culture = {
+	religion = {
+		"Haelyn"
+		"Haelyns_Aegis"
+		"Haelyns_Bastion_of_Truth"
+		"Avani"
+		"Fiery_Dawn_of_Avani"
+		"Sera"
+		"Seras_Perfekt_Symmetri"
+		"Erik"
+		"Old_Father_of_the_Forests"
+		"Ruornil"
+		"Nesirie"
+		"Cuiraecen"
+		"Eloele"
+		"Laerme"
+		"Belinik"
+		"Kriesha"
+		"Azrai"
+		"Nature"
+		"Gheallie_Sidhe"
+		"DwarvenPantheon"
+		"HalflingPantheon"
+		"Serpent"
+		"Outlaw"
+	}
+	
+	templates = { 
+		"coa_plain:1"
+	}
+	
+	color = {
+		{ 244 195 0 } #0				Or
+		{ 255 255 255 } #1			Argent
+		{ 0 122 186 } #2				Azur
+		{ 223 0 36 } #3				Gueules 
+		{ 0 159 61 } #4				Sinople
+		{ 0 0 0  } #5						Sable
+		{ 128 0 128 } #6				Pourpre
+		{ 244 195 0 } #7				Or
+		{ 255 255 255 } #8			Argent
+		{ 0 122 186  } #9				Azur
+		{ 223 0 36 } #10				Gueules 
+	}
+	
+	rebel_colors = { 3 5 7 }
+
+	banned_colors = 
+	{ 
+		{ 0 1 7 8 }			#0		
+		{ 0 1 7 8 }			#1		
+		{ 2 3 4 6 9 10 }	#2		
+		{ 2 3 4 6 9 10 }	#3		
+		{ 2 3 4 6 9 10 }	#4		
+		{ 5 }				#5		
+		{ 2 3 6 9 10 }		#6		
+		#{ 0 3 6 7 10 }		#ex7	
+		{ 0 1 7 8 }			#7		
+		{ 0 1 7 8 }			#8		
+		{ 2 3 4 6 9 10 }	#9		
+		{ 2 3 4 6 9 10 }	#10	
+		#{ 5 11 }			#11			
+	}
+	
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	textures = {
+	
+		# Birthright
+		texture = { # texture = 0
+			file = "gfx\\coats_of_arms\\00001_anuirean_dynasties.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 0
+			random = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties_hedgeknightone.tga"
+			size = { x = 10 y = 7 }
+			noOfFrames = 70
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties_hedgeknighttwo.tga"
+			size = { x = 10 y = 7 }
+			noOfFrames = 70
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties_hedgeknightthree.tga"
+			size = { x = 10 y = 7 }
+			noOfFrames = 70
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties_hedgeknightfour.tga"
+			size = { x = 10 y = 7 }
+			noOfFrames = 70
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\dynasties_hedgeknightfive.tga"
+			size = { x = 10 y = 7 }
+			noOfFrames = 70
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+		##########
+		
+		#texture = { # texture = 
+		#	file = "gfx\\coats_of_arms\\pattern_1.tga"
+		#	size = { x = 10 y = 6 }
+		#	noOfFrames = 60
+		#	color = 3
+		#	emblem = no
+		#}
+		#texture = { # texture = 
+		#	file = "gfx\\coats_of_arms\\pattern_2.tga"
+		#	size = { x = 10 y = 6 }
+		#	noOfFrames = 60
+		#	color = 3
+		#	emblem = no
+		#}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_3.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_4.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_5.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_6.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_7.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_8.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_9.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_10.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_11.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_12.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_13.tga"
+			size = { x = 10 y = 6 }
+			noOfFrames = 60
+			color = 3
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_14.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 32
+			color = 2
+			emblem = no
+		}
+		texture = { # texture = 
+			file = "gfx\\coats_of_arms\\pattern_15.tga"
+			size = { x = 10 y = 2 }
+			noOfFrames = 17
+			color = 3
+			emblem = no
+		}
+
+		# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	}
+}
+
+culture = {
+	religion = {
+		"GiantPantheon"
+		"GoblinPantheon"
+		"OrogPantheon"
+		"GnollPantheon"
+		"Drake_Cult"
+	}
+	
+	templates = { 
+		"coa_plain_pagan:1"
+	}
+
+	color = {
+		{ 250 250 250 }	#0  Silver
+		{ 245 195 10 }	#1  Gold
+		{ 255 155 100 }	#2  Tenne
+		{ 220 120 45 }	#3  Orange
+		{ 180 5 5 }	#4  Red
+		{ 120 25 25 }	#5  Sanguine
+		{ 160 25 70 }	#6  Mulberry
+		{ 100 50 115 }	#7  Purple
+		{ 55 85 165 }	#8  Blue
+		{ 110 165 215 }	#9  Sky-Blue
+		{ 0 135 110 }	#10  Turqoise
+		{ 40 130 40 }	#11  Green
+		{ 115 115 115 }	#12  Grey
+		{ 45 45 45 }	#13  Black
+		{ 125 70 35 }	#14  Brown
+
+	}
+	
+	rebel_colors = { 12 13 14 }
+
+	banned_colors = 
+	{ 
+		{ 0 }					#0
+		{ 1 2 }					#1
+		{ 1 2 3 7 9 10 12 14 }					#2
+		{ 3 2 4 5 6 7 8 9 10 11 14 }					#3
+		{ 4 3 5 6 7 9 10 11 14 }					#4
+		{ 5 4 3 6 7 8 9 10 11 14 }					#5
+		{ 6 5 4 7 8 9 10 11 14 }					#6
+		{ 7 2 3 4 5 6 8 9 10 11 14 }					#7
+		{ 8 11 10 9 7 6 5 3 }					#8
+		{ 9 11 12 10 8 7 6 5 4 3 2 }					#9
+		{ 10 11 12 9 8 7 6 5 4 3 2 }					#10
+		{ 11 10 9 8 7 6 5 4 3 }					#11
+		{ 12 10 9 2 }					#12
+		{ 13 }					#13
+		{ 14 2 3 4 5 9 10 }					#14
+
+	}
+
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END
+	textures = {
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_westafrican.tga"
+			size = { x = 10  y = 4 }
+			noOfFrames = 40
+			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2_westafrican.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 40
+			color = 3
+			emblem = no
+		}
+		texture = {
+		# Jylland, Kiev, Livonia, Meath, Novgorod, Orkney, Ostlandet, Sjaelland, The Isles, Trondelag, Uppland, Vastergotland, York
+			file = "gfx\\coats_of_arms\\pagans.tga"
+			size = { x = 13 y = 1 }
+			noOfFrames = 13
+			color = 0
+			random = no # Do not use for random CoAs
+		}
+	}
+}
+
+culture = {
+	religion = {
+		"Shadowworld"
+		"Lamia"
+	}
+
+	templates = { 
+		"coa_plain:1"
+		# "coa_party_per_fess:2"
+		# "coa_party_per_pale:2"
+		# "coa_party_per_cross:4"
+		# "coa_party_triangle:3"
+	}
+
+	color = {
+		{ 255 231 93 }		# 0		Gold
+		{ 245 245 245 } 	# 1 	White
+		{ 35 101 29 } 		# 2 	Dark Green
+		{ 176 0 0 } 		# 3		Red
+		{ 83 141 39 } 		# 4 	Green
+		{ 20 20 20 }		# 5 	Black
+		{ 80 40 0 }			# 6 	Brown
+		{ 130 0 0 }			# 7 	Dark Red
+		{ 205 87 10 }		# 8 	Orange
+		{ 225 50 50 } 		# 9 	Light Red
+		{ 128 0 40 }		# 10 	Mulberry
+		{ 15 15 204 }		# 11  	Deep Blue
+		{ 50 153 162 }		# 12	Turqouise
+		{ 195 195 195 }		# 13	Silver
+	}
+	
+	rebel_colors = { 3 5 7 }
+	
+	banned_colors = 
+	{
+		{ 0 1 4 13 }				# Gold
+		{ 1 0 13 }				# White
+		{ 2 4 6 8 10 11 12 }		# Dark Green
+		{ 3 4 6 7 8 9 10 11 }			# Red
+		{ 4 0 2 3 6 8 9 11 12 }		# Green
+		{ 5 6 }						# Black
+		{ 6 2 3 4 5 7 8 9 10 11 12 } # Brown
+		{ 7 3 6 8 9 10 11 }			# Dark Red
+		{ 8 2 3 4 6 7 9 10 12 }		# Orange
+		{ 9 3 4 6 7 8 10 11 }		# Light Red
+		{ 10 2 3 6 7 8 9 11 }			# Mulberry
+		{ 11 2 3 4 6 7 9 10 }			# Deep Blue
+		{ 12 2 4 6 8   }			# Turqouise
+		{ 13 0 1 }				# Silver
+	}
+	
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem.tga"
+		noOfFrames = 25
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!11111
+	textures = {
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_valyrian.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
+			color = 2
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern2_valyrian.tga"
+			size = { x = 10 y = 1 }
+			noOfFrames = 10
+			color = 3
+			emblem = no
+		}
+	}
+}

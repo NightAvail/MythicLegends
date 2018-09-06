@@ -1,0 +1,1431 @@
+namespace = class
+
+##########Events for assigning character classes, and leveling them up######
+
+	#choose a class#
+	character_event = {
+    id = class.0
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.0"
+    picture = "GFX_evt_carriage"
+
+	is_triggered_only = yes
+	
+	option = { 
+	name = SEE_MORE_CLASSES
+	trigger = { ai = no }
+	character_event = { id = class.19 }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_FIGHTER
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				martial = 8
+			}
+		}
+	add_trait = amateur_fighter
+	father = { character_event = { id = class.1 } }
+	mother = { character_event = { id = class.1 } }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_PRIEST
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				trait = zealous
+			}
+		}
+	add_trait = amateur_priest
+	father = { character_event = { id = class.2 } }
+	mother = { character_event = { id = class.2 } }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_ROGUE
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				intrigue = 8
+			}
+		}
+	add_trait = amateur_rogue
+	father = { character_event = { id = class.3 } }
+	mother = { character_event = { id = class.3 } }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_RANGER # I will train as a ranger.
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				trait = elf
+			}
+		}
+	add_trait = amateur_ranger
+	father = { character_event = { id = class.4 } }
+	mother = { character_event = { id = class.4 } }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_BARD
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				trait = beautiful
+			}
+		}
+	add_trait = amateur_bard
+	father = { character_event = { id = class.4 } }
+	mother = { character_event = { id = class.4 } }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_MAGE
+	trigger = {
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = quick
+	trait = smart
+	trait = bright
+    }
+	}
+	ai_chance = {
+			factor = 5
+				modifier = {
+				factor = 10
+				trait = bright
+			}
+				modifier = {
+				factor = 20
+				trait = smart
+			}
+				modifier = {
+				factor = 25
+				trait = quick
+			}
+				modifier = {
+				factor = 35
+				trait = brilliant
+			}
+				modifier = {
+				factor = 50
+				trait = genius
+			}
+		}
+	add_trait = amateur_mage
+	father = { character_event = { id = class.5 } }
+	mother = { character_event = { id = class.5 } }
+            }
+		
+		}
+
+	#choose a class#
+	character_event = {
+    id = class.19
+    title = EVTNAMECLASS.19 # Adventuring Class - More options
+    desc = "EVTDESCCLASS.0"
+    picture = "GFX_evt_carriage"
+
+	is_triggered_only = yes
+
+	option = {
+	name = I_WILL_TRAIN_AS_A_RANGER # I will train as a ranger.
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				trait = elf
+			}
+		}
+	add_trait = amateur_ranger
+	father = { character_event = { id = class.4 } }
+	mother = { character_event = { id = class.4 } }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_BARD
+	ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				trait = beautiful
+			}
+		}
+	add_trait = amateur_bard
+	father = { character_event = { id = class.4 } }
+	mother = { character_event = { id = class.4 } }
+	}
+	
+	option = {
+	name = I_WILL_TRAIN_AS_A_MAGE
+	trigger = {
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = quick
+	trait = smart
+	trait = bright
+    }
+	}
+	ai_chance = {
+			factor = 5
+				modifier = {
+				factor = 10
+				trait = bright
+			}
+				modifier = {
+				factor = 20
+				trait = smart
+			}
+				modifier = {
+				factor = 25
+				trait = quick
+			}
+				modifier = {
+				factor = 35
+				trait = brilliant
+			}
+				modifier = {
+				factor = 50
+				trait = genius
+			}
+		}
+	add_trait = amateur_mage
+	father = { character_event = { id = class.5 } }
+	mother = { character_event = { id = class.5 } }
+            }
+			
+	option = {
+	name = NEVER_MIND
+	} 
+	
+	}
+	
+	#parents informed - fighter#
+	character_event = {
+    id = class.1
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.1"
+    picture = "GFX_evt_son_asking_father"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = I_APPROVE
+		ai_chance = {
+			factor = 3
+			}
+	}
+	
+	option = {
+	trigger = {
+	FROM = {
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = quick
+	}
+	}
+	}
+	name = STUDY_MAGIC_INSTEAD
+	FROM = { remove_trait = amateur_fighter }
+	FROM = { add_trait = amateur_mage }
+	}
+	
+	option = {
+	name = TRAIN_AS_A_RANGER_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_fighter }
+	FROM = { add_trait = amateur_ranger }
+	}
+
+	option = {
+	name = TRAIN_AS_A_PRIEST_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_fighter }
+	FROM = { add_trait = amateur_priest }
+	}
+
+	option = {
+	name = TRAIN_AS_A_ROGUE_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_fighter }
+	FROM = { add_trait = amateur_rogue }
+	}
+	
+	
+	}
+	
+	#parents informed - priest#
+	character_event = {
+    id = class.2
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.2"
+    picture = "GFX_evt_son_asking_father"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = I_APPROVE
+			ai_chance = {
+			factor = 5
+			}
+	}
+	
+	option = {
+	trigger = {
+	FROM = {
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = quick
+	}
+	}
+	}
+	name = STUDY_MAGIC_INSTEAD
+	FROM = { remove_trait = amateur_priest }
+	FROM = { add_trait = amateur_mage }
+	}
+	
+	option = {
+	name = TRAIN_AS_A_RANGER_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_priest }
+	FROM = { add_trait = amateur_ranger }
+	}
+
+	option = {
+	name = TRAIN_AS_A_FIGHTER_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_priest }
+	FROM = { add_trait = amateur_fighter }
+	}
+
+	option = {
+	name = TRAIN_AS_A_ROGUE_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_priest }
+	FROM = { add_trait = amateur_rogue }
+	}
+
+	}
+	
+	#parents informed - rogue#
+	character_event = {
+    id = class.3
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.3"
+    picture = "GFX_evt_son_asking_father"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = I_APPROVE
+			ai_chance = {
+			factor = 3
+			}
+	}
+	
+	option = {
+	trigger = {
+	FROM = {
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = quick
+	}
+	}
+	}
+	name = STUDY_MAGIC_INSTEAD
+	FROM = { remove_trait = amateur_rogue }
+	FROM = { add_trait = amateur_mage }
+	}
+	
+	option = {
+	name = TRAIN_AS_A_RANGER_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_rogue }
+	FROM = { add_trait = amateur_ranger }
+	}
+
+	option = {
+	name = TRAIN_AS_A_PRIEST_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_rogue }
+	FROM = { add_trait = amateur_priest }
+	}
+
+	option = {
+	name = TRAIN_AS_A_FIGHTER_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_rogue }
+	FROM = { add_trait = amateur_fighter }
+	}
+
+	}
+	
+	#parents informed - ranger#
+	character_event = {
+    id = class.4
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.4"
+    picture = "GFX_evt_son_asking_father"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = I_APPROVE
+			ai_chance = {
+			factor = 3
+			}
+	}
+	
+	option = {
+	trigger = {
+	FROM = {
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = quick
+	}
+	}
+	}
+	name = STUDY_MAGIC_INSTEAD
+	FROM = { remove_trait = amateur_ranger }
+	FROM = { add_trait = amateur_mage }
+	}
+	
+	option = {
+	name = TRAIN_AS_A_ROGUE_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_ranger }
+	FROM = { add_trait = amateur_rogue }
+	}
+
+	option = {
+	name = TRAIN_AS_A_PRIEST_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_ranger }
+	FROM = { add_trait = amateur_priest }
+	}
+
+	option = {
+	name = TRAIN_AS_A_FIGHTER_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_ranger }
+	FROM = { add_trait = amateur_priest }
+	}
+
+	option = {
+	name = TRAIN_AS_A_BARD_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_ranger }
+	FROM = { add_trait = amateur_bard }
+	}
+	}
+	
+	#parents informed - mage#
+	character_event = {
+    id = class.5
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.5"
+    picture = "GFX_evt_son_asking_father"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = I_APPROVE
+			ai_chance = {
+			factor = 3
+			}
+	}
+	
+	option = {
+	name = TRAIN_AS_A_ROGUE_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_mage }
+	FROM = { add_trait = amateur_rogue }
+	}
+
+	option = {
+	name = TRAIN_AS_A_PRIEST_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_mage }
+	FROM = { add_trait = amateur_priest }
+	}
+
+	option = {
+	name = TRAIN_AS_A_FIGHTER_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_mage }
+	FROM = { add_trait = amateur_fighter }
+	}
+
+	option = {
+	name = TRAIN_AS_A_BARD_INSTEAD
+	trigger = { ai = no }
+	FROM = { remove_trait = amateur_mage }
+	FROM = { add_trait = amateur_bard }
+	}
+	}
+	
+	###now for the training events##
+	
+	##fighter training amateur - AI##
+	character_event = {
+    id = class.6
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.6"
+    picture = "GFX_evt_melee"
+
+	trigger = {
+	trait = amateur_fighter
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = strong
+		}	
+	modifier = {
+			factor = 0.6
+			trait = tough
+		}	
+	modifier = {
+			factor = 0.7
+			trait = hardy
+		}
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 3.0
+			trait = weak
+		}
+	modifier = {
+			factor = 2.0
+			trait = fragile
+		}
+	modifier = {
+			factor = 2.0
+			trait = soft
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = amateur_fighter
+	add_trait = novice_fighter
+	}
+	
+	}
+	
+	##fighter training novice - AI##
+	character_event = {
+    id = class.7
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.7"
+    picture = "GFX_evt_melee"
+
+	trigger = {
+	trait = novice_fighter
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = strong
+		}	
+	modifier = {
+			factor = 0.6
+			trait = tough
+		}	
+	modifier = {
+			factor = 0.7
+			trait = hardy
+		}
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 3.0
+			trait = weak
+		}
+	modifier = {
+			factor = 2.0
+			trait = fragile
+		}
+	modifier = {
+			factor = 2.0
+			trait = soft
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = novice_fighter
+	add_trait = trained_fighter
+	}
+	
+	}
+	
+	##priest training amateur - AI##
+	character_event = {
+    id = class.8
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.8"
+    picture = "GFX_evt_heretic"
+
+	trigger = {
+	trait = amateur_priest
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = zealous
+		}	
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = amateur_priest
+	add_trait = novice_priest
+	}
+	
+	}
+	
+	##priest training amateur - AI##
+	character_event = {
+    id = class.9
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.9"
+    picture = "GFX_evt_heretic"
+
+	trigger = {
+	trait = novice_priest
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = zealous
+		}	
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = novice_priest
+	add_trait = trained_priest
+	}
+	
+	}
+	
+	##rogue training amateur - AI##
+	character_event = {
+    id = class.10
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.10"
+    picture = "GFX_evt_shadowy_cabal"
+
+	trigger = {
+	trait = amateur_rogue
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = greedy
+		}
+	modifier = {
+			factor = 0.6
+			trait = diligent
+		}	
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = amateur_rogue
+	add_trait = novice_rogue
+	}
+	
+	}
+	
+	##rogue training amateur - AI##
+	character_event = {
+    id = class.11
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.11"
+    picture = "GFX_evt_shadowy_cabal"
+
+	trigger = {
+	trait = novice_rogue
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = greedy
+		}
+	modifier = {
+			factor = 0.6
+			trait = diligent
+		}	
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = novice_rogue
+	add_trait = trained_rogue
+	}
+	
+	}
+	
+	##ranger training amateur - AI##
+	character_event = {
+    id = class.12
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.12"
+    picture = "GFX_evt_hunt"
+
+	trigger = {
+	trait = amateur_ranger
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = strong
+		}	
+	modifier = {
+			factor = 0.6
+			trait = tough
+		}	
+	modifier = {
+			factor = 0.7
+			trait = hardy
+		}
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 3.0
+			trait = weak
+		}
+	modifier = {
+			factor = 2.0
+			trait = fragile
+		}
+	modifier = {
+			factor = 2.0
+			trait = soft
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = amateur_ranger
+	add_trait = novice_ranger
+	}
+	
+	}
+	
+	##ranger training amateur - AI##
+	character_event = {
+    id = class.13
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.13"
+    picture = "GFX_evt_hunt"
+
+	trigger = {
+	trait = novice_ranger
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = strong
+		}	
+	modifier = {
+			factor = 0.6
+			trait = tough
+		}	
+	modifier = {
+			factor = 0.7
+			trait = hardy
+		}
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 3.0
+			trait = weak
+		}
+	modifier = {
+			factor = 2.0
+			trait = fragile
+		}
+	modifier = {
+			factor = 2.0
+			trait = soft
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = novice_ranger
+	add_trait = trained_ranger
+	}
+	
+	}
+	
+		##bard training amateur - AI##
+	character_event = {
+    id = class.14
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.14"
+    picture = "GFX_evt_jugglers"
+
+	trigger = {
+	trait = amateur_bard
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+	modifier = {
+			factor = 0.6
+			trait = pretty
+		}
+	modifier = {
+			factor = 0.65
+			trait = fair
+		}
+	modifier = {
+			factor = 0.6
+			trait = diligent
+		}	
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = amateur_bard
+	add_trait = novice_bard
+	}
+	
+	}
+	
+	##bard training novice - AI##
+	character_event = {
+    id = class.15
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.15"
+    picture = "GFX_evt_jugglers"
+
+	trigger = {
+	trait = novice_bard
+	age = 14
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = beautiful
+		}
+	modifier = {
+			factor = 0.6
+			trait = pretty
+		}
+	modifier = {
+			factor = 0.65
+			trait = fair
+		}
+	modifier = {
+			factor = 0.6
+			trait = diligent
+		}	
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = novice_bard
+	add_trait = trained_bard
+	}
+	
+	}
+	
+	##mage training amateur - AI##
+	character_event = {
+    id = class.16
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.16"
+    picture = "GFX_evt_monk"
+
+	trigger = {
+	trait = amateur_mage
+	age = 14
+	NOT = { trait = genius }
+	NOT = { trait = smart }
+	NOT = { trait = quick }
+	NOT = { trait = bright }
+	NOT = { has_character_flag = magetrainingover }
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = zealous
+		}	
+	modifier = {
+			factor = 0.5
+			trait = genius
+		}
+	modifier = {
+			factor = 0.6
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.7
+			trait = quick
+		}
+	modifier = {
+			factor = 0.75
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = "DAMNIT"
+	set_character_flag = magetrainingover
+	}
+	
+	}
+	
+	##mage training amateur2 - AI##
+	character_event = {
+    id = class.17
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.17"
+    picture = "GFX_evt_monk"
+
+	trigger = {
+	trait = amateur_mage
+	age = 14
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = smart
+	trait = quick
+	trait = bright
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = zealous
+		}	
+	modifier = {
+			factor = 0.2
+			trait = genius
+		}
+	modifier = {
+			factor = 0.3
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.4
+			trait = quick
+		}
+	modifier = {
+			factor = 0.5
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = amateur_mage
+	add_trait = trained_mage
+	}
+	
+	}
+	
+	##mage training amateur2 - AI##
+	character_event = {
+    id = class.18
+    title = ADVENTURING_CLASS # Adventuring Class
+    desc = "EVTDESCCLASS.18"
+    picture = "GFX_evt_monk"
+
+	trigger = {
+	trait = novice_mage
+	age = 14
+	OR = {
+	trait = genius
+	trait = brilliant
+	trait = quick
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 3650
+	modifier = {
+			factor = 0.7
+			trait = ambitious
+		}
+	modifier = {
+			factor = 0.5
+			trait = zealous
+		}	
+	modifier = {
+			factor = 0.2
+			trait = genius
+		}
+	modifier = {
+			factor = 0.3
+			trait = brilliant
+		}
+	modifier = {
+			factor = 0.4
+			trait = quick
+		}
+	modifier = {
+			factor = 0.5
+			trait = smart
+		}
+	modifier = {
+			factor = 0.8
+			trait = bright
+		}
+	modifier = {
+			factor = 5.0
+			trait = imbecile
+		}
+	modifier = {
+			factor = 4.0
+			trait = idiot
+		}
+	modifier = {
+			factor = 3.0
+			trait = slow
+		}
+	modifier = {
+			factor = 2.0
+			trait = dumb
+		}
+	}
+	
+	option = {
+	name = EXCELLENT
+	remove_trait = novice_mage
+	add_trait = trained_mage
+	}
+	
+	}
+	
+	##class.19 used above##

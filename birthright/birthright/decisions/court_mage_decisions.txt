@@ -1,0 +1,26 @@
+decisions = {
+
+command_cm={
+
+potential = {
+age = 16
+}
+
+allow = {
+age = 16
+any_realm_character = {
+has_minor_title = title_court_mage
+}
+}
+
+effect = {
+ROOT = { character_event = { id = courtmage.0 } }
+		}
+		
+	ai_will_do = {
+	factor = 0
+	}
+	
+	}
+	
+	}

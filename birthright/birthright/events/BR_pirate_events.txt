@@ -1,0 +1,75 @@
+
+namespace = pirate
+
+character_event = {
+id = pirate.0
+title = YOUR_FORCES # Your forces
+desc = "EVTDESCPIRATE.0"
+picture = "GFX_evt_longships_at_sea_oldgods"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+has_landed_title = d_zweilund
+NOT = { has_character_flag = pirate0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = pirate0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 2000 2000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 500 500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 1000 1000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			archers = { 1000 1000 }
+						}
+					}
+				}
+			}
+		spawn_fleet = {
+			province = closest # closest sea zone
+			owner = ROOT
+			disband_on_peace = no
+			troops =
+			{
+				galleys = { 100 100 }
+			}
+		}
+}
+
+}

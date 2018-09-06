@@ -1,0 +1,30 @@
+decisions = {
+
+have_children = {
+is_high_prio = yes
+
+	potential = {
+   trait = awn_white_witch
+			}
+		
+		allow = {
+		prestige=500
+		NOT = { num_of_children = 3 }
+		NOT = { trait = casting_realm_magic }
+			}
+		
+		effect = {
+		ROOT = { character_event = { id = whitewitch.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_pregnant = yes
+			}
+			
+		}			
+			}
+			
+			}

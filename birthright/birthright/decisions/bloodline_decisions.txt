@@ -1,0 +1,169 @@
+targetted_decisions = {
+
+perform_bloodtheft={
+	filter = home_court
+	ai_target_filter = court
+	
+	from_potential = {
+		is_ruler = yes
+	}
+	
+	potential = {
+		prisoner = yes
+		OR = {
+			trait=bloodline_tainted
+			trait=bloodline_minor
+			trait=bloodline_major
+			trait=bloodline_great
+			trait=bloodline_true
+		}
+		host = { character = FROM }
+	}
+	
+	allow = {
+		month = 11
+		FROM = {
+			OR = {
+				religion = Azrai
+				religion_group = gods_of_evil
+				religion = Outlaw
+				religion_group = Demihuman
+				religion = GnollPantheon
+				religion_group = Awnsheighleen
+				religion = Serpent
+				trait = cruel
+				trait = impaler
+			}
+		}
+	}
+
+	effect = {
+		FROM = { character_event = { id = bloodtheft.0 } }
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+}
+
+
+decisions = {
+
+increase_your_bloodline_t={
+	potential = {
+		trait = bloodline_tainted
+	}
+	allow = {
+		piety = 1000
+	}
+	effect = {
+		ROOT = { character_event = { id = bloodline.2 } }
+	}	
+	ai_will_do = {
+		factor = 1
+	}
+}		
+
+increase_your_bloodline_m= {
+	potential = {
+		trait = bloodline_minor
+	}
+
+	allow = {
+		piety = 2000
+		prestige = 2000
+	}
+
+	effect = {
+		ROOT = { character_event = { id = bloodline.3 } }
+	}
+
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+increase_bloodscore={
+
+	potential = {
+		piety = 1
+		check_variable = { which = bloodline_score value = 1 }
+		NOT =  { check_variable = { which = bloodline_score value = 100 }}
+	}
+
+	allow = {
+		piety = 1000
+		check_variable = { which = bloodline_score value = 1 }
+		NOT =  { check_variable = { which = bloodline_score value = 100 }}
+	}
+
+	effect = {
+
+		if = {
+			limit = { learning = 1 }    
+			change_learning = 1
+		}
+    
+		hidden_tooltip = {
+
+			set_variable = { which = bloodline_score_temp which = bloodline_score }#temp variable
+			
+			change_variable = { which = bloodline_score value = 1 }    
+			
+			if = {                                                      
+				limit = { check_variable = { which = bloodline_score_temp value = 50 }}
+				piety = -500
+				change_variable = { which = bloodline_score_temp value = -50 } 
+			}
+			if = {                                                    
+				limit = { check_variable = { which = bloodline_score_temp value = 20 }}
+				piety = -200
+				change_variable = { which = bloodline_score_temp value = -20 } 
+			}
+			if = {                                                    
+				limit = { check_variable = { which = bloodline_score_temp value = 20 }}
+				piety = -200
+				change_variable = { which = bloodline_score_temp value = -20 } 
+			}
+			if = {                                                
+				limit = { check_variable = { which = bloodline_score_temp value = 10 }}
+				piety = -100
+				change_variable = { which = bloodline_score_temp value = -10 } 
+			}
+			if = {                                                       
+				limit = { check_variable = { which = bloodline_score_temp value = 5 }}
+				piety = -50
+				change_variable = { which = bloodline_score_temp value = -5 } 
+			}
+			if = {                                                      
+				limit = { check_variable = { which = bloodline_score_temp value = 2 }}
+				piety = -20
+				change_variable = { which = bloodline_score_temp value = -2 } 
+			}
+			if = {                                                      
+				limit = { check_variable = { which = bloodline_score_temp value = 2 }}
+				piety = -20
+				change_variable = { which = bloodline_score_temp value = -2 } 
+			}
+			if = {                                                         
+				limit = { check_variable = { which = bloodline_score_temp value = 1 }}
+				piety = -10
+				change_variable = { which = bloodline_score_temp value = -1 } 
+			}    
+		}
+	}
+		
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { piety = 3000 }
+		}
+	}
+}	
+
+##make decision to ascend to demi-godhood for true bloodlines if they have 10,000 regency/piety##
+
+}	

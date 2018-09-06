@@ -1,0 +1,425 @@
+namespace = realmpriestmagic
+
+	#main realm magic spellbook event#
+	character_event = {
+    id = realmpriestmagic.0
+    title = PRIESTLY_REALM_MAGIC # Priestly Realm Magic
+    desc = "EVTDESCREALMPRIESTMAGIC.0"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	option={
+	name=I_WILL_BLESS_SOME_PROVINCES # I will bless some provinces.
+	trigger = {
+	piety = 100
+	wealth = 20
+	}
+	character_event = { id = realmpriestmagic.9 }	
+	}	
+	
+	option={
+	name=realmspell.0.c # I will cast province ward/dispel magic.
+	trigger = {
+	piety = 50
+	wealth = 10
+	}
+	character_event = { id = realmpriestmagic.1 }	
+	}	
+	
+	option={
+	name=realmspell.0.b # I will cast a summoning spell.
+	trigger = {
+	piety = 100
+	wealth = 25
+	}
+	character_event = { id = realmpriestmagic.4 }
+	}
+	
+	
+	option={
+	name=NEVER_MIND
+	trigger = { ai = no }
+	}
+	
+	}
+	
+	#ward/dispel spell list#
+	character_event = {
+    id = realmpriestmagic.1
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.8"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=realmspell.8.a # I will ward a province against enemy spells.
+	character_event = { id = realmpriestmagic.2 days = 7 }
+	add_trait = casting_realm_magic
+	piety = -50
+	wealth = -10
+	}
+	
+		option={
+	name=realmspell.8.b # I will ward a region against enemy spells.
+	trigger = {
+	OR = {
+	trait = master_priest
+	trait = legendary_priest
+	}
+	}
+	character_event = { id = realmpriestmagic.3 days = 30 }
+	add_trait = casting_realm_magic
+	piety = -150
+	wealth = -30
+	}
+	
+	
+	option={
+	name=NEVER_MIND
+	trigger= { ai = no }
+	}
+	
+	}
+	
+	#the single province ward spell is cast#
+	character_event = {
+    id = realmpriestmagic.2
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.9"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = province_ward duration = 9999 }  
+	}
+	}
+	}
+	
+	option={
+	name=CAST_AT_IT_A_RANDOM_PROVINCE
+	remove_trait = casting_realm_magic
+	random_realm_province = {
+	add_province_modifier = { name = province_ward duration = 9999 }
+	}
+	}
+	
+	}
+	
+	#the multiple province ward spell is cast#
+	character_event = {
+    id = realmpriestmagic.3
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.10"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+		option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = province_ward duration = 9999 }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = province_ward duration = 9999 } 
+	}
+	}
+	}
+	}
+	
+	option={
+	name=CAST_AT_IT_A_RANDOM_REGION
+	remove_trait = casting_realm_magic
+	random_vassal = {
+	limit = { higher_tier_than = BARON }
+	any_realm_province = {
+	add_province_modifier = { name = province_ward duration = 9999 }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = province_ward duration = 9999 } 
+	}
+	}
+	}
+	}
+	}
+	
+		#summoning spell list#
+	character_event = {
+    id = realmpriestmagic.4
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.3"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=I_WILL_RAISE_SOME_ZOMBIES # I will raise some zombies.
+	character_event = { id = realmpriestmagic.5 days = 30 }
+	add_trait = casting_realm_magic
+	piety = -100
+	wealth = -25
+	}
+	
+	option={
+	name=I_WILL_RAISE_SOME_SKELETONS
+	character_event = { id = realmpriestmagic.6 days = 30 }
+	add_trait = casting_realm_magic
+	piety = -100
+	wealth = -40
+	}	
+	
+	option={
+	name=realmspell.3.c # I will raise some undead cavalry.
+	trigger = {
+	OR = {
+	trait = trained_priest
+	trait = master_priest
+	trait = legendary_priest
+	}
+	}
+	character_event = { id = realmpriestmagic.7 days = 30 }
+	add_trait = casting_realm_magic
+	piety = -100
+	wealth = -50
+	}	
+	
+	option={
+	name=realmspell.3.d # I will summon some lesser daemons.
+	trigger = {
+	OR = {
+	trait = master_priest
+	trait = legendary_priest
+	}
+	}
+	character_event = { id = realmpriestmagic.8 days = 30 }
+	add_trait = casting_realm_magic
+	piety = -100
+	wealth = -75
+	}	
+	
+	option = {
+	name=NEVER_MIND
+	}
+	}
+	
+	#raise zombie spell is ready#
+	character_event = {
+    id = realmpriestmagic.5
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.4"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=RISE_MY_NEW_MINIONS_RISE # Rise, my new minions - rise!
+	remove_trait = casting_realm_magic
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 100 100 }
+						}
+					}
+				}
+			}			
+			}		
+	}
+	
+	#raise skeleton spell is ready#
+	character_event = {
+    id = realmpriestmagic.6
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.5"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=RISE_MY_NEW_MINIONS_RISE # Rise, my new minions - rise!
+	remove_trait = casting_realm_magic
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 100 100 }
+						}
+					}
+				}
+			}			
+			}		
+	}
+	
+	#raise skeleton cavalry spell is ready#
+	character_event = {
+    id = realmpriestmagic.7
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.6"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=RISE_MY_NEW_MINIONS_RISE # Rise, my new minions - rise!
+	remove_trait = casting_realm_magic
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_cavalry = { 100 100 }
+						}
+					}
+				}
+			}			
+			}		
+	}
+	
+	#summon lesser daemon spell is ready#
+	character_event = {
+    id = realmpriestmagic.8
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMSPELL.7"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=WELCOME_MY_NEW_MINIONS_WELCOME # Welcome, my new minions - welcome!
+	remove_trait = casting_realm_magic
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			horse_archers = { 100 100 }
+						}
+					}
+				}
+			}			
+			}		
+	}
+	
+	#ward/dispel spell list#
+	character_event = {
+    id = realmpriestmagic.9
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMPRIESTMAGIC.9"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=I_WILL_BLESS_A_PROVINCE # I will bless a province.
+	character_event = { id = realmpriestmagic.10 days = 7 }
+	add_trait = casting_realm_magic
+	piety = -50
+	wealth = -10
+	}
+	
+		option={
+	name=I_WILL_BLESS_A_REGION
+	trigger = {
+	OR = {
+	trait = master_priest
+	trait = legendary_priest
+	}
+	}
+	character_event = { id = realmpriestmagic.11 days = 30 }
+	add_trait = casting_realm_magic
+	piety = -150
+	wealth = -30
+	}
+	
+	
+	option={
+	name=NEVER_MIND
+	trigger= { ai = no }
+	}
+	
+	}
+	
+	#the single province ward bless is cast#
+	character_event = {
+    id = realmpriestmagic.10
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMPRIESTMAGIC.10"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = province_bless duration = 9999 }  
+	}
+	}
+	}
+	
+	option={
+	name=CAST_AT_IT_A_RANDOM_PROVINCE
+	remove_trait = casting_realm_magic
+	random_realm_province = {
+	add_province_modifier = { name = province_bless duration = 9999 }
+	}
+	}
+	
+	}
+	
+	#the multiple province bless spell is cast#
+	character_event = {
+    id = realmpriestmagic.11
+    title = REALM_MAGIC # Realm Magic
+    desc = "EVTDESCREALMPRIESTMAGIC.11"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+		option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = province_bless duration = 1800 }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = province_bless duration = 1800 } 
+	}
+	}
+	}
+	}
+	
+	option={
+	name=CAST_AT_IT_A_RANDOM_REGION
+	remove_trait = casting_realm_magic
+	random_vassal = {
+	limit = { higher_tier_than = BARON }
+	any_realm_province = {
+	add_province_modifier = { name = province_bless duration = 1800 }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = province_bless duration = 1800 } 
+	}
+	}
+	}
+	}
+	}

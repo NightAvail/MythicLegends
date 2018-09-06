@@ -1,0 +1,1135 @@
+namespace = ransom
+character_event = {
+	id = ransom.0
+	desc = "ransom.0.desc"
+	picture = "GFX_evt_into_the_dungeon"
+	
+	is_triggered_only = yes
+	
+	trigger = { prisoner = yes }
+
+	option = {
+		name = "ransom.0.a" # Will pay		
+		ai_chance = { factor = 100 }				
+		#require money for ransom
+		if = {
+            limit = {
+				tier = emperor
+				wealth = 385
+			} 
+			wealth = -385
+			host = { wealth = 385 }
+			prisoner = no
+        }                
+		if = {
+            limit = {
+				tier = king
+				wealth = 250
+			} 		
+			wealth = -250
+			host = { wealth = 250 }
+			prisoner = no
+        }		
+        if = {
+            limit = {
+				tier = duke
+				wealth = 145
+			} 		
+			wealth = -145
+			host = { wealth = 145 }
+			prisoner = no
+        }				
+        if = {
+            limit = {
+				tier = count
+				wealth = 70
+			} 		
+			wealth = -70
+			host = { wealth = 70 }
+			prisoner = no
+        }				
+        if = {
+            limit = {
+				tier = baron
+				wealth = 25
+			} 	
+			wealth = -25
+			host = { wealth = 25 }
+			prisoner = no
+        }				
+        if = {
+            limit = { is_ruler = no } 
+			if = {
+				limit = {
+					wealth = 110
+					OR = {
+						mother_even_if_dead = { tier = EMPEROR }
+						father_even_if_dead = { tier = EMPEROR }
+					}
+				}
+				wealth = -110
+				host = { wealth = 110 }
+				prisoner = no
+				set_character_flag = random_found
+			}
+			if = {
+				limit = {
+					wealth = 75
+					OR = {
+						mother_even_if_dead = { tier = KING }
+						father_even_if_dead = { tier = KING }
+					}
+					NOT = { has_character_flag = random_found }
+				}
+				wealth = -75
+				host = { wealth = 75 }
+				prisoner = no
+				set_character_flag = random_found
+			}
+			if = {
+				limit = {
+					wealth = 46
+					OR = {
+						mother_even_if_dead = { tier = DUKE }
+						father_even_if_dead = { tier = DUKE }
+					}
+					NOT = { has_character_flag = random_found }
+				}
+				wealth = -46
+				host = { wealth = 46 }
+				prisoner = no
+				set_character_flag = random_found
+			}
+			if = {
+				limit = {
+					wealth = 25
+					OR = {
+						mother_even_if_dead = { tier = COUNT }
+						father_even_if_dead = { tier = COUNT }
+					}
+					NOT = { has_character_flag = random_found }
+				}
+				wealth = -25
+				host = { wealth = 25 }
+				prisoner = no
+				set_character_flag = random_found
+			}
+			if = {
+				limit = {
+					wealth = 10
+					NOT = { has_character_flag = random_found }
+				}
+				wealth = -10
+				host = { wealth = 10 }
+				prisoner = no
+				set_character_flag = random_found
+			}
+			if = {
+				limit = {
+					NOT = { has_character_flag = random_found }
+					liege = { 
+						wealth = 10 
+						NOT = { character = FROM }
+					}
+				}
+				liege = { character_event = { id = ransom.1 } }
+			}
+			clr_character_flag = random_found
+        }	
+	}
+	
+	option = {
+		name = "ransom.0.b" # will not pay
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+
+character_event = {
+	id = ransom.1
+	desc = "ransom.0.w"
+	picture = "GFX_evt_into_the_dungeon"
+	
+	is_triggered_only = yes
+	
+	trigger = { 
+		FROM = {
+			prisoner = yes 
+			NOT = { host = { character = ROOT } }
+		}	
+		NOT = { FROM = { FROM = { character = ROOT } } }
+	}
+
+	option = {
+		name = "ransom.0.w1" # Will pay	
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { opinion = { who = FROM value = 15 } }
+				NOT = { is_close_relative = FROM }
+			}
+			modifier = {
+				factor = 2 
+				trait = charitable
+			}
+			modifier = {
+				factor = 2 
+				trait = kind
+			}
+			modifier = {
+				factor = 2 
+				trait = just
+			}
+			modifier = {
+				factor = 2
+				dynasty = FROM
+			}			
+			modifier = {
+				factor = 3
+				OR = {
+					is_friend = FROM
+					is_close_relative = FROM
+				}	
+			}
+			modifier = {
+				factor = 100
+				trait = familyperson
+				OR = {
+					dynasty = FROM
+					is_close_relative = FROM
+				}	
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = FROM value = 40 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = FROM value = 60 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = FROM value = 80 }
+			}
+			modifier = {
+				factor = 1.5
+				opinion = { who = FROM value = 100 }
+			}
+		}
+		if = {
+			limit = {
+				wealth = 110
+				FROM = {
+					OR = {
+						mother_even_if_dead = { tier = EMPEROR }
+						father_even_if_dead = { tier = EMPEROR }
+					}
+				}	
+			}
+			wealth = -110
+			FROMFROM = { wealth = 110 }
+			FROM = { prisoner = no }
+			set_character_flag = random_found
+		}
+		if = {
+			limit = {
+				wealth = 75
+				FROM = {
+					OR = {
+						mother_even_if_dead = { tier = EMPEROR }
+						father_even_if_dead = { tier = EMPEROR }
+					}
+				}
+				NOT = { has_character_flag = random_found }
+			}
+			wealth = -75
+			FROMFROM = { wealth = 75 }
+			FROM = { prisoner = no }
+			set_character_flag = random_found
+		}
+		if = {
+			limit = {
+				wealth = 46
+				FROM = {
+					OR = {
+						mother_even_if_dead = { tier = EMPEROR }
+						father_even_if_dead = { tier = EMPEROR }
+					}
+				}
+				NOT = { has_character_flag = random_found }
+			}
+			wealth = -46
+			FROMFROM = { wealth = 46 }
+			FROM = { prisoner = no }
+			set_character_flag = random_found
+		}
+		if = {
+			limit = {
+				wealth = 25
+				FROM = {
+					OR = {
+						mother_even_if_dead = { tier = EMPEROR }
+						father_even_if_dead = { tier = EMPEROR }
+					}
+				}
+				NOT = { has_character_flag = random_found }
+			}
+			wealth = -25
+			FROMFROM = { wealth = 25 }
+			FROM = { prisoner = no }
+			set_character_flag = random_found
+		}
+		if = {
+			limit = {
+				wealth = 10
+				NOT = { has_character_flag = random_found }
+			}
+			wealth = -10
+			FROMFROM = { wealth = 10 }
+			FROM = { prisoner = no }
+			set_character_flag = random_found
+		}
+		clr_character_flag = random_found
+	}
+	option = {
+		name = "ransom.0.w2" #will not
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				is_close_relative = FROM
+				OR = {
+					any_child = { character = FROM }
+					opinion = { who = FROM value = 0 }
+				}
+			}
+			modifier = {
+				factor = 2 
+				trait = greedy
+			}
+			modifier = {
+				factor = 2 
+				trait = cruel
+			}
+			modifier = {
+				factor = 2 
+				trait = arbitrary
+			}			
+		}
+	}
+}
+### Unlanded character offers own ransom ###
+character_event = {
+	id = ransom.2
+	
+	capable_only = yes
+	prisoner = yes
+	
+	trigger = {
+		is_ruler = no
+		NOT = { has_character_modifier = the_oubliette }
+		host = {
+			NOT = { 
+				any_current_enemy = { 
+					OR = {
+						is_close_relative = ROOT
+						is_liege_of = ROOT
+					}	
+				}
+			}	
+		}
+		OR = {
+			wealth = 10
+			father_even_if_dead = { wealth = 10 }
+			mother_even_if_dead = { wealth = 10 }
+		}
+		OR = {
+			NOT = { has_character_flag = asked_for_ransom }
+			had_character_flag = { flag = asked_for_ransom days = 750 }
+		}	
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = { 
+		set_character_flag = asked_for_ransom 
+		clr_character_flag = ransom_10
+		clr_character_flag = ransom_25
+		clr_character_flag = ransom_46
+		clr_character_flag = ransom_75
+		clr_character_flag = ransom_110
+		if = {
+			limit = {
+				OR = {
+					wealth = 440
+					father_even_if_dead = {			
+						OR = {
+							tier = EMPEROR
+							father_even_if_dead = { tier = EMPEROR }
+							mother_even_if_dead = { tier = EMPEROR }
+						}
+					}
+					mother_even_if_dead = {
+						OR = {
+							tier = EMPEROR
+							father_even_if_dead = { tier = EMPEROR }
+							mother_even_if_dead = { tier = EMPEROR }
+						}
+					}
+				}
+			}
+			set_character_flag = ransom_110
+		}
+		if = {
+			limit = {
+				NOT = { has_character_flag = ransom_110 }
+				OR = {
+					wealth = 300
+					father_even_if_dead = {					
+						OR = {
+							tier = KING
+							father_even_if_dead = { tier = KING }
+							mother_even_if_dead = { tier = KING }
+						}
+					}
+					mother_even_if_dead = {
+						OR = {
+							tier = KING
+							father_even_if_dead = { tier = KING }
+							mother_even_if_dead = { tier = KING }
+						}
+					}
+				}
+			}
+			set_character_flag = ransom_75
+		}
+		if = {
+			limit = {
+				NOT = { has_character_flag = ransom_110 }
+				NOT = { has_character_flag = ransom_75 }
+				OR = {
+					wealth = 184
+					father_even_if_dead = {				
+						OR = {
+							tier = DUKE
+							father_even_if_dead = { tier = DUKE }
+							mother_even_if_dead = { tier = DUKE }
+						}
+					}
+					mother_even_if_dead = {
+						OR = {
+							tier = DUKE
+							father_even_if_dead = { tier = DUKE }
+							mother_even_if_dead = { tier = DUKE }
+						}
+					}
+				}
+			}
+			set_character_flag = ransom_46
+		}
+		if = {
+			limit = {
+				NOT = { has_character_flag = ransom_110 }
+				NOT = { has_character_flag = ransom_75 }
+				NOT = { has_character_flag = ransom_46 }
+				OR = {
+					wealth = 100
+					father_even_if_dead = {					
+						OR = {
+							tier = COUNT
+							father_even_if_dead = { tier = COUNT }
+							mother_even_if_dead = { tier = COUNT }
+						}
+					}
+					mother_even_if_dead = {
+						OR = {
+							tier = COUNT
+							father_even_if_dead = { tier = COUNT }
+							mother_even_if_dead = { tier = COUNT }
+						}
+					}
+				}
+			}
+			set_character_flag = ransom_25
+		}
+		if = {
+			limit = {
+				NOT = { has_character_flag = ransom_110 }
+				NOT = { has_character_flag = ransom_75 }
+				NOT = { has_character_flag = ransom_46 }
+				NOT = { has_character_flag = ransom_25 }
+			}
+			set_character_flag = ransom_10
+		}
+	}
+		
+	option = {
+		name = PAY_FOR_SELF
+		trigger = {
+			age = 12
+			OR = {
+				AND = {
+					has_character_flag = ransom_10
+					wealth = 10
+				}
+				AND = {
+					has_character_flag = ransom_25
+					wealth = 25
+				}
+				AND = {
+					has_character_flag = ransom_46
+					wealth = 46
+				}
+				AND = {
+					has_character_flag = ransom_75
+					wealth = 75
+				}
+				AND = {
+					has_character_flag = ransom_110
+					wealth = 110
+				}
+			}
+		}
+		ai_chance = { factor = 5000 }
+		host = { character_event = { id = ransom.3 } }
+	}
+	
+	option = {
+		name = "FATHER"
+		trigger = {
+			father = { 
+				is_alive = yes 
+				NOT = { is_liege_of = ROOT }
+				prisoner = no
+				NOT = { ROOT = { host = { character = PREVPREV } } }
+			}
+			OR = {
+				AND = {
+					has_character_flag = ransom_10
+					father = { wealth = 10 }
+				}
+				AND = {
+					has_character_flag = ransom_25
+					father = { wealth = 25 }
+				}
+				AND = {
+					has_character_flag = ransom_46
+					father = { wealth = 46 }
+				}
+				AND = {
+					has_character_flag = ransom_75
+					father = { wealth = 75 }
+				}
+				AND = {
+					has_character_flag = ransom_110
+					father = { wealth = 110 }
+				}
+			}			
+		}
+		ai_chance = { factor = 10 }
+		father = { character_event = { id = ransom.4 } }
+	}
+	
+	option = {
+		name = "MOTHER"
+		trigger = {
+			mother = { 
+				is_alive = yes 
+				NOT = { is_liege_of = ROOT }
+				prisoner = no
+				NOT = { ROOT = { host = { character = PREVPREV } } }
+			}
+			OR = {
+				AND = {
+					has_character_flag = ransom_10
+					mother = { wealth = 10 }
+				}
+				AND = {
+					has_character_flag = ransom_25
+					mother = { wealth = 25 }
+				}
+				AND = {
+					has_character_flag = ransom_46
+					mother = { wealth = 46 }
+				}
+				AND = {
+					has_character_flag = ransom_75
+					mother = { wealth = 75 }
+				}
+				AND = {
+					has_character_flag = ransom_110
+					mother = { wealth = 110 }
+				}
+			}			
+		}
+		ai_chance = { factor = 10 }
+		mother = { character_event = { id = ransom.4 } }
+	}
+	
+	option = {
+		name = "SPOUSE"
+		trigger = {
+			spouse = { 
+				is_alive = yes 
+				NOT = { is_liege_of = ROOT }
+				prisoner = no
+				NOT = { ROOT = { host = { character = PREVPREV } } }
+			}
+			OR = {
+				AND = {
+					has_character_flag = ransom_10
+					spouse = {  wealth = 10 }
+				}
+				AND = {
+					has_character_flag = ransom_25
+					spouse = { wealth = 25 }
+				}
+				AND = {
+					has_character_flag = ransom_46
+					spouse = { wealth = 46 }
+				}
+				AND = {
+					has_character_flag = ransom_75
+					spouse = { wealth = 75 }
+				}
+				AND = {
+					has_character_flag = ransom_110
+					spouse = { wealth = 110 }
+				}
+			}			
+		}
+		ai_chance = { factor = 1 }
+		spouse = { character_event = { id = ransom.4 } }
+	}
+	
+	option = {
+		name = "SIBLING"
+		trigger = {
+			any_sibling = { 
+				is_alive = yes 
+				NOT = { is_liege_of = ROOT }
+				opinion = { who = ROOT value = 25 }
+				prisoner = no
+				NOT = { ROOT = { host = { character = PREVPREV } } }
+				OR = {
+					AND = {
+						ROOT = { has_character_flag = ransom_10 }
+						wealth = 10
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_25 }
+						wealth = 25
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_46 }
+						wealth = 46
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_75 }
+						wealth = 75
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_110 }
+						wealth = 110
+					}
+				}
+			}
+						
+		}
+		ai_chance = { factor = 1 }
+		random_sibling = {
+			limit = {
+				is_alive = yes 
+				NOT = { is_liege_of = ROOT }
+				opinion = { who = ROOT value = 25 }
+				prisoner = no
+				NOT = { ROOT = { host = { character = PREVPREV } } }
+				OR = {
+					AND = {
+						ROOT = { has_character_flag = ransom_10 }
+						wealth = 10
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_25 }
+						wealth = 25
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_46 }
+						wealth = 46
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_75 }
+						wealth = 75
+					}
+					AND = {
+						ROOT = { has_character_flag = ransom_110 }
+						wealth = 110
+					}
+				}
+			}
+			character_event = { id = ransom.4 }			
+		}
+	}
+	
+	option = {
+		name = "CANNOT AFFORD"
+		ai_chance = { factor = 0.01 }
+		clr_character_flag = ransom_10
+		clr_character_flag = ransom_25
+		clr_character_flag = ransom_46
+		clr_character_flag = ransom_75
+		clr_character_flag = ransom_110
+	}
+}	
+#Host responds to the ransom request
+character_event = {
+	id = ransom.3
+	desc = "EVTDESCransom.3"
+	
+	is_triggered_only = yes
+	
+	trigger = { 
+		FROM = { 
+			prisoner = yes
+			host = { character = ROOT }
+			OR = {
+				AND = {
+					has_character_flag = ransom_10
+					wealth = 10
+				}
+				AND = {
+					has_character_flag = ransom_25
+					wealth = 25
+				}
+				AND = {
+					has_character_flag = ransom_46
+					wealth = 46
+				}
+				AND = {
+					has_character_flag = ransom_75
+					wealth = 75
+				}
+				AND = {
+					has_character_flag = ransom_110
+					wealth = 110
+				}
+			}
+		} 
+	}
+	
+	option = {
+		name = "EVTOPTBransom.3" # Granted
+		ai_chance = { 
+			factor = 66	
+			
+			modifier = {
+				factor = 0.05
+				FROM = { 
+					any_claim = {
+						OR = {
+							holder_scope = { character = ROOT }
+							current_heir = { character = ROOT }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = paranoid
+				FROM = { 
+					any_claim = {
+						OR = {
+							holder_scope = { character = ROOT }
+							current_heir = { character = ROOT }
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			prisoner = no
+			if = {
+				limit = { has_character_flag = ransom_10 }
+				clr_character_flag = ransom_10
+				wealth = -10
+				ROOT = { wealth = 10 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_25 }
+				clr_character_flag = ransom_25
+				wealth = -25
+				ROOT = { wealth = 25 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_46 }
+				clr_character_flag = ransom_46
+				wealth = -46
+				ROOT = { wealth = 46 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_75 }
+				clr_character_flag = ransom_75
+				wealth = -75
+				ROOT = { wealth = 75 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_110 }
+				clr_character_flag = ransom_110
+				wealth = -110
+				ROOT = { wealth = 110 }
+			}
+		}		
+	}
+	
+	option = {
+		name = "EVTOPTAransom.3" # Denied
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 0.5
+				opinion = { who = FROM value = 25 }	
+			}		
+			modifier = {
+				factor = 0.05
+				opinion = { who = FROM value = 50 }	
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -24 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -74 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+							
+			modifier = {
+				factor = 0.5
+				FROM = { has_character_flag = ransom_110 }
+			}
+			modifier = {
+				factor = 0.7
+				FROM = { has_character_flag = ransom_75 }
+			}
+			modifier = {
+				factor = 0.9
+				FROM = { has_character_flag = ransom_46 }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_character_flag = ransom_10 }
+			}
+			
+			modifier = {
+				factor = 0.66
+				trait = greedy	
+			}
+			modifier = {
+				factor = 0.66
+				trait = just
+			}
+			modifier = {
+				factor = 0.66
+				trait = kind
+			}
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.5
+				trait = ruthless
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 1.5
+				trait = cruel
+			}	
+		}
+		FROM = {
+			clr_character_flag = ransom_10
+			clr_character_flag = ransom_25
+			clr_character_flag = ransom_46
+			clr_character_flag = ransom_75
+			clr_character_flag = ransom_110
+		}
+	}
+}
+#Parent has opportunity to pay for ransom
+character_event = {
+	id = ransom.4
+	desc = "EVTDESCransom.4"
+	picture = "GFX_evt_into_the_dungeon"
+	
+	is_triggered_only = yes
+	
+	trigger = { 
+		FROM = { 
+			prisoner = yes
+		} 
+	}
+	
+	option = {
+		name = "EVTOPTAransom.4" # Yes
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { any_child = { character = FROM } }
+				NOT = { opinion = { who = FROM value = -50 } }
+				NOT = { trait = familyperson }
+			}	
+		}
+		FROM = {
+			host = { letter_event = { id = ransom.5 days = 3 tooltip = TOOLTIPransom.5 } }
+			if = {
+				limit = { has_character_flag = ransom_10 }
+				custom_tooltip = { text = TOOLTIPransom.4ransom_10 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_25 }
+				custom_tooltip = { text = TOOLTIPransom.4ransom_25 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_46 }
+				custom_tooltip = { text = TOOLTIPransom.4ransom_46 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_75 }
+				custom_tooltip = { text = TOOLTIPransom.4ransom_75 }
+			}
+			if = {
+				limit = { has_character_flag = ransom_110 }
+				custom_tooltip = { text = TOOLTIPransom.4ransom_110 }
+			}
+		}		
+	}
+	
+	option = {
+		name = "EVTOPTBransom.4" # No
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					any_child = { character = FROM }
+					opinion = { who = FROM value = 0 }
+				}
+			}	
+		}
+		FROM = {
+			clr_character_flag = ransom_10
+			clr_character_flag = ransom_25
+			clr_character_flag = ransom_46
+			clr_character_flag = ransom_75
+			clr_character_flag = ransom_110
+		}
+	}
+}
+
+#Host responds to the ransom request
+letter_event = {
+	id = ransom.5
+	desc = "EVTDESCransom.5"
+	
+	is_triggered_only = yes
+	
+	trigger = { 
+		FROMFROM = { 
+			prisoner = yes
+			host = { character = ROOT }
+		} 
+	}
+	
+	option = {
+		name = "EVTOPTBransom.3" # Granted
+		ai_chance = { 
+			factor = 66	
+			
+			modifier = {
+				factor = 0.05
+				FROMFROM = { 
+					any_claim = {
+						OR = {
+							holder_scope = { character = ROOT }
+							current_heir = { character = ROOT }
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = paranoid
+				FROMFROM = { 
+					any_claim = {
+						OR = {
+							holder_scope = { character = ROOT }
+							current_heir = { character = ROOT }
+						}
+					}
+				}
+			}
+		}
+		hidden_tooltip = { FROM = { letter_event = { id = ransom.7 } } }
+		FROMFROM = { prisoner = no }	
+		if = {
+			limit = { FROMFROM = { has_character_flag = ransom_10 } }
+			FROMFROM = { clr_character_flag = ransom_10 }
+			FROM = { wealth = -10 }
+			ROOT = { wealth = 10 }
+		}
+		if = {
+			limit = { FROMFROM = { has_character_flag = ransom_25 } }
+			FROMFROM = { clr_character_flag = ransom_25 }
+			FROM = { wealth = -25 }
+			ROOT = { wealth = 25 }
+		}
+		if = {
+			limit = { FROMFROM = { has_character_flag = ransom_46 } }
+			FROMFROM = { clr_character_flag = ransom_46 }
+			FROM = { wealth = -46 }
+			ROOT = { wealth = 46 }
+		}
+		if = {
+			limit = { FROMFROM = { has_character_flag = ransom_75 } }
+			FROMFROM = { clr_character_flag = ransom_75 }
+			FROM = { wealth = -75 }
+			ROOT = { wealth = 75 }
+		}
+		if = {
+			limit = { FROMFROM = { has_character_flag = ransom_110 } }
+			FROMFROM = { clr_character_flag = ransom_110 }
+			FROM = { wealth = -110 }
+			ROOT = { wealth = 110 }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTAransom.5" # Denied
+		ai_chance = { 
+			factor = 33
+			
+			modifier = {
+				factor = 0.5
+				opinion = { who = FROMFROM value = 25 }	
+			}		
+			modifier = {
+				factor = 0.05
+				opinion = { who = FROMFROM value = 50 }	
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -24 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -49 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -74 } }
+			}
+			modifier = {
+				factor = 1.25
+				NOT = { opinion = { who = FROMFROM value = -99 } }
+			}
+							
+			modifier = {
+				factor = 0.5
+				FROMFROM = { has_character_flag = ransom_110 }
+			}
+			modifier = {
+				factor = 0.7
+				FROMFROM = { has_character_flag = ransom_75 }
+			}
+			modifier = {
+				factor = 0.9
+				FROMFROM = { has_character_flag = ransom_46 }
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = { has_character_flag = ransom_10 }
+			}
+			
+			modifier = {
+				factor = 0.66
+				trait = greedy	
+			}
+			modifier = {
+				factor = 0.66
+				trait = just
+			}
+			modifier = {
+				factor = 0.66
+				trait = kind
+			}
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.5
+				trait = ruthless
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 1.5
+				trait = cruel
+			}	
+		}
+		FROM = { 		 
+			hidden_tooltip = { letter_event = { id = ransom.6 } }
+		}
+		FROMFROM = {
+			tooltip = { }
+			clr_character_flag = ransom_10
+			clr_character_flag = ransom_25
+			clr_character_flag = ransom_46
+			clr_character_flag = ransom_75
+			clr_character_flag = ransom_110
+		}
+	}
+}
+letter_event = { #Inform denied
+	id = ransom.6
+	desc = "EVTDESCransom.6"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAransom.6" 
+	}
+}	
+letter_event = { #Inform accepted
+	id = ransom.7
+	desc = "EVTDESCransom.7"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTAransom.7" 
+	}
+}

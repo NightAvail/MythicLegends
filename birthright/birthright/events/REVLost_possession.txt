@@ -1,0 +1,160 @@
+namespace = lost_possession
+
+character_event = {
+	id = lost_possession.0
+	desc = "EVTDESClost_possession.0"
+	picture = "GFX_evt_comet"
+
+	trigger = {
+		trait = stressed
+		is_landed = yes
+		prisoner = no
+		higher_tier_than = DUKE
+		NOT = { trait = paladin }
+		NOT = { trait = incapable }
+		NOT = { trait = awn_hunter }
+		NOT = { trait = possessed }
+		NOT = { has_character_flag = path_of_lost }
+		NOT = { has_character_flag = slowly_path_of_lost }
+		NOT = { has_character_flag = attempted_path_of_lost }
+	}
+
+	mean_time_to_happen = { months = 250 }
+
+	option = {
+		name = UHHH_EH_SOMEONE_THERE # Uhhh... Eh.... Someone there?
+		hidden_tooltip = { character_event = { id = lost_possession.1 months = 1 } }
+		set_character_flag = slowly_path_of_lost
+			if = {
+				limit = { trait = trusting }
+					remove_trait = trusting
+					add_trait = paranoid
+			}
+		}
+
+}
+
+
+character_event = {
+	id = lost_possession.1
+	desc = "EVTDESClost_possession.1"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+
+	option = {
+		name = HUH_WHAT_WAS_THAT # Huh.. What was that?
+		hidden_tooltip = { character_event = { id = lost_possession.2 months = 1 } }
+			if = {
+				limit = { trait = kind }
+				random = {
+					chance = 50
+					remove_trait = kind
+					add_trait = envious
+				}
+			}
+		}
+}
+
+character_event = {
+	id = lost_possession.2
+	desc = "EVTDESClost_possession.2"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+
+	option = {
+		name = THOSE_VOICES
+		hidden_tooltip = { character_event = { id = lost_possession.3 months = 1 } }
+			if = {
+				limit = { trait = charitable }
+				random = {
+					chance = 50
+					remove_trait = charitable
+					add_trait = greedy
+				}
+			}
+		}
+}
+
+character_event = {
+	id = lost_possession.3
+	desc = "EVTDESClost_possession.3"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+
+	option = {
+		name = ARRRRRGH
+		random_list = {
+			70 = { character_event = { id = lost_possession.4} } # No
+			30 = { character_event = { id = lost_possession.5} } # Yes
+		}
+	}
+}
+
+character_event = {
+	id = lost_possession.4
+	desc = "EVTDESClost_possession.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+
+	option = {
+		name = WHAT_HAPPENED
+		clr_character_flag = slowly_path_of_lost
+		set_character_flag = attempted_path_of_lost
+		remove_trait = stressed
+		random_list = {
+			2 = { add_trait = incapable }
+			14 = { add_trait = lunatic }
+			26 = {}
+			28 = { add_trait = maimed }
+			30 = { add_trait = wounded }
+		}
+	}
+}
+
+character_event = {
+	id = lost_possession.5
+	desc = "EVTDESClost_possession.5"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+
+	option = {
+		name = HAHA_HAHAHAHAHA # Haha.. Hahahahaha....
+		clr_character_flag = slowly_path_of_lost
+		set_character_flag = path_of_lost
+			if = {
+				limit = { trait = stressed }
+				remove_trait = stressed
+			}
+		add_trait = possessed
+
+		any_independent_ruler = { narrative_event = { id = lost_possession.6} }
+		any_realm_lord = { narrative_event = { id = lost_possession.6} }
+
+		location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = { pikemen = { 200 200 } }
+					}
+				}
+			}
+		}
+}
+
+narrative_event = {
+	title = TROUBLED_TIMES # Troubled Times
+	id = lost_possession.6
+	desc = "EVTDESClost_possession.6"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+
+	option = {
+		name = THIS_ARE_TROUBLED_TIMES_INDEED # This are troubled times indeed...
+	}
+}

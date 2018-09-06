@@ -1,0 +1,277 @@
+amateur_bard={
+	diplomacy = 1
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+	}
+}
+
+novice_bard={
+	diplomacy = 2
+	command_modifier = {
+		morale_offence = 0.10
+		morale_defence = 0.10
+	}
+}
+
+trained_bard={
+	diplomacy = 3
+	command_modifier = {
+		morale_offence = 0.15
+		morale_defence = 0.15
+	}
+}
+
+master_bard={
+	diplomacy = 4
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+}
+
+legendary_bard={
+	diplomacy = 5
+	command_modifier = {
+		morale_offence = 0.25
+		morale_defence = 0.25
+	}
+}
+
+amateur_mage={
+}
+
+novice_mage={
+}
+
+trained_mage={
+	command_modifier = {
+		damage = 0.1
+		morale_offence = 0.1
+	}
+}
+
+master_mage={
+	command_modifier = {
+		damage = 0.15
+		morale_offence = 0.15
+	}
+}
+
+legendary_mage={
+	command_modifier = {
+		damage = 0.20
+		morale_offence = 0.25
+	}
+}
+
+amateur_sorcerer={
+}
+
+novice_sorcerer={
+}
+
+trained_sorcerer={
+	command_modifier = {
+		damage = 0.1
+		morale_offence = 0.1
+	}
+}
+
+master_sorcerer={
+	command_modifier = {
+		damage = 0.15
+		morale_offence = 0.15
+	}
+}
+
+legendary_sorcerer={
+	command_modifier = {
+		damage = 0.2
+		morale_offence = 0.25
+	}
+}
+
+amateur_priest={
+
+	same_opinion_if_same_religion = 5
+	church_opinion = 5
+
+	diplomacy = 1
+	command_modifier = {
+		defence = 0.05
+	}
+}
+
+novice_priest={
+
+	same_opinion_if_same_religion = 5
+	church_opinion = 5
+
+	diplomacy = 1
+	command_modifier = {
+		defence = 0.1
+	}
+}
+
+
+trained_priest={
+
+	same_opinion_if_same_religion = 10
+	church_opinion = 10
+
+	diplomacy = 3
+	command_modifier = {
+		defence = 0.15
+	}
+}
+
+
+master_priest={
+
+	same_opinion_if_same_religion = 15
+	church_opinion = 15
+
+cached = yes
+	diplomacy = 4
+	command_modifier = {
+		defence = 0.2
+	}
+}
+
+legendary_priest={
+
+	same_opinion_if_same_religion = 20
+	church_opinion = 20
+
+cached = yes
+	diplomacy = 5
+	command_modifier = {
+	defence = 0.25
+	}
+}
+
+amateur_ranger={
+	stewardship = 1
+	command_modifier = {
+		speed = 0.05
+		pursue = 0.05
+	}
+}
+
+novice_ranger={
+	stewardship = 2
+	command_modifier = {
+		speed = 0.1
+		pursue = 0.1
+	}
+}
+
+trained_ranger={
+	stewardship = 3
+	command_modifier = {
+		speed = 0.15
+		pursue = 0.15
+	}
+}
+
+master_ranger={
+	stewardship = 4
+	command_modifier = {
+		speed = 0.2
+		pursue = 0.2
+	}
+}
+
+legendary_ranger={
+	command_modifier = {
+		speed = 0.25
+		pursue = 0.25
+	}
+	stewardship = 5
+}
+
+amateur_rogue={
+	intrigue = 2
+	stewardship = 1
+	command_modifier = {
+		siege = 0.1
+	}
+}
+
+novice_rogue={
+	intrigue = 3
+	stewardship = 2
+	command_modifier = {
+		siege = 0.2
+	}
+}
+
+trained_rogue={
+	intrigue = 4
+	stewardship = 3
+	command_modifier = {
+		siege = 0.3
+	}
+}
+
+master_rogue={
+	intrigue = 5
+	stewardship = 4
+	command_modifier = {
+		siege = 0.4
+	}
+}
+
+legendary_rogue={
+	intrigue = 6
+	stewardship = 5
+	command_modifier = {
+		siege = 0.5
+	}
+}
+
+amateur_fighter={
+	martial = 1
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+		defence = 0.05
+	}
+}
+
+novice_fighter={
+	martial = 2
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+		defence = 0.05
+	}
+}
+
+trained_fighter={
+	martial = 3
+	command_modifier = {
+		morale_offence = 0.15
+		morale_defence = 0.15
+		defence = 0.05
+	}
+}
+
+master_fighter={
+	martial = 4
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+		defence = 0.1
+	}
+}
+
+legendary_fighter={
+	martial = 5
+	command_modifier = {
+		morale_offence = 0.25
+		morale_defence = 0.25
+		defence = 0.15
+	}
+}

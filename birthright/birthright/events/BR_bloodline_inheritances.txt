@@ -1,0 +1,672 @@
+namespace = bloodline_inheritance
+
+character_event = {  #by Achab
+	id = bloodline_inheritance.101 # pregnant woman saves the real father's score
+	hide_window = yes
+	is_triggered_only = yes # triggered by on_pregnancy from 00_on_actions.txt
+  
+	trigger = {   #only if the father is blooded and alive
+		AND = {
+			father_of_unborn = { learning = 1 }
+			father_of_unborn = { is_alive = yes }
+		}
+	}
+  	  
+	immediate = {
+		father_of_unborn = { 
+			set_variable = { which = bloodline_score_father which = bloodline_score } 
+			PREV = { set_variable = { which = bloodline_score_father which = PREV }}
+			set_variable = { which = bloodline_score_father value = 0 }
+		}
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+
+
+character_event = {  #by Achab
+	id = bloodline_inheritance.102 # dieing father saves his score to the mother of their unborn child
+	hide_window = yes
+	is_triggered_only = yes # triggered by on_death from 00_on_actions.txt
+  
+	trigger = {   #only if the father is blooded
+		is_female = no
+		learning = 1
+	}
+  	  
+	immediate = {
+		set_variable = { which = bloodline_score_father which = bloodline_score }
+		any_spouse = {
+			father_of_unborn = {
+				if = {
+					limit = { character = ROOT }
+					PREV = {
+						set_variable = { which = bloodline_score_father which = ROOT }        
+						set_character_flag = spouse_forwarded
+					}
+				} 
+			}
+		}   
+		any_consort = {
+			father_of_unborn = {
+				if = {
+					limit = { character = ROOT }
+					PREV = {
+						set_variable = { which = bloodline_score_father which = ROOT }        
+						set_character_flag = consort_forwarded
+					}
+				} 
+			}
+		} 
+		any_lover = {
+			father_of_unborn = {
+				if = {
+					limit = { character = ROOT }
+					PREV = {
+						set_variable = { which = bloodline_score_father which = ROOT }        
+						set_character_flag = lover_forwarded
+					}
+				} 
+			}
+		} 
+    }
+	
+	option = {
+		name = "OK"
+	}	
+}
+
+
+character_event = {  #by Achab
+	id = bloodline_inheritance.111 # born child calcutates his score as an average of his parents scores, also gets derivation and strength
+	hide_window = yes
+	is_triggered_only = yes # triggered by on_birth from 00_on_actions.txt
+	
+	trigger = {  #only if father or mother is blooded
+		OR = {
+			mother_even_if_dead = { learning = 1 }
+			real_father = { learning = 1 }
+			father_even_if_dead = { learning = 1 }
+		}
+	}
+				  
+	immediate = {
+		set_character_flag = 111_works
+		mother = { PREV = { set_variable = { which = bloodline_score which = PREV }}}
+		mother = { PREV = { set_variable = { which = bloodline_score_father which = PREV }}}
+		set_variable = { which = stronger_parent_score which = bloodline_score }             	#keeping info who of the parents has stronger bloodline
+		multiply_variable =  { which = stronger_parent_score value = -1 }
+		change_variable = { which = stronger_parent_score which = bloodline_score_father }   	#if  stronger_parent_score >=0 then fathers stronger (or equal)
+		change_variable = { which = bloodline_score which = bloodline_score_father } 			# starting average calculation, adding scores
+		divide_variable = { which = bloodline_score value = 2 } 								#dividing by 2
+		change_variable = { which = bloodline_score value = 0.5 } 								#rounding up   
+		divide_variable = { which = bloodline_score value = 1000 } 								#dividing 1000 and multiplying back to
+		multiply_variable  = { which = bloodline_score value = 1000 } 							#get rid of possible decimal part as variables have only 3 decimal places
+		set_variable = { which = bloodline_score_father which = 0 }								#must be cleared to not mess in the future
+    
+		#kid inherited his father derivation and strength, now we check if he shouldnt get them from his mother instead
+		if = {
+			limit = { NOT = { check_variable = { which = stronger_parent_score value = 0 }}} #if mother has better score, set derivation first
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_anduireas }}
+				add_trait = bloodline_anduireas
+			}
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_azrai }}
+				add_trait = bloodline_azrai
+			}
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_basaia }}
+				add_trait = bloodline_basaia
+			}
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_brenna }}
+				add_trait = bloodline_brenna
+			}
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_masela }}
+				add_trait = bloodline_masela
+			}
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_reynir }}
+				add_trait = bloodline_reynir
+			}
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_vorynn }}
+				add_trait = bloodline_vorynn
+			}
+      
+			#now set the strength
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_tainted }}
+				add_trait = bloodline_tainted
+			}
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_minor }}
+				add_trait = bloodline_minor
+			} 
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_major }}
+				add_trait = bloodline_major
+			} 
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_great }}
+				add_trait = bloodline_great
+			} 
+			if = { 
+				limit = { mother_even_if_dead = { trait = bloodline_true }} #true cannot be inherited
+				add_trait = bloodline_great
+			}                                                                    
+		}
+     
+		if = { 
+			limit = { trait = bloodline_true } #true cannot be inherited
+			add_trait = bloodline_great
+		}
+    
+		if = {                            #if one parent unblooded then strength is only minor
+			limit = { 
+				OR = {
+					NOT = { mother_even_if_dead = { learning = 1 } }
+					NOT = { father_even_if_dead = { learning = 1 } }
+				}
+				NOT = { trait = bloodline_tainted }
+			}    
+			add_trait = bloodline_minor
+		}    
+    
+		mother = { character_event = {	id = bloodline_inheritance.112  days = 1 }}#var clearing maintenance
+     
+	} #closing immediate effects
+    
+	option = {
+		name = "OK"
+	}
+}
+
+character_event = {  #by Achab
+	id = bloodline_inheritance.112 #clearing var from the mother, must be separate event to not mess with twins
+	hide_window = yes
+	is_triggered_only = yes #from bloodline_inheritance.111 
+  
+  	immediate = {
+		set_variable = { which = bloodline_score_father which = 0 } 
+	}
+
+	option = {
+		name = "OK"
+	}
+}
+
+
+character_event = {   #by Achab
+	id = bloodline_inheritance.121 # adult character sets his learning to his bloodline_score
+	hide_window = yes
+	is_triggered_only = yes # triggered by on_adulthood from 00_on_actions.txt
+  
+	trigger = {  #only if blooded
+		check_variable = { which = bloodline_score value = 1 }
+	}
+
+	immediate = {
+		change_learning = -128   #first we set learning to 0
+		set_variable = { which = bloodline_score_temp which = bloodline_score } #temp variable used to fill learning
+		#Most efficient way to do this is with powers of 2
+		if = {
+			limit = { check_variable = { which = bloodline_score_temp value = 64 }}
+			change_learning = 64
+			change_variable = { which = bloodline_score_temp value = -64 } 
+		}
+		if = {
+			limit = { check_variable = { which = bloodline_score_temp value = 32 }}
+			change_learning = 32
+			change_variable = { which = bloodline_score_temp value = -32 } 
+		}
+		if = {
+			limit = { check_variable = { which = bloodline_score_temp value = 16 }}
+			change_learning = 16
+			change_variable = { which = bloodline_score_temp value = -16 } 
+		}
+		if = {
+			limit = { check_variable = { which = bloodline_score_temp value = 8 }}
+			change_learning = 8
+			change_variable = { which = bloodline_score_temp value = -8 } 
+		}
+		if = {
+			limit = { check_variable = { which = bloodline_score_temp value = 4 }}
+			change_learning = 4
+			change_variable = { which = bloodline_score_temp value = -4 } 
+		}
+		if = {
+			limit = { check_variable = { which = bloodline_score_temp value = 2 }}
+			change_learning = 2
+			change_variable = { which = bloodline_score_temp value = -2 } 
+		}
+		if = {
+			limit = { check_variable = { which = bloodline_score_temp value = 1 }}
+			change_learning = 1
+			change_variable = { which = bloodline_score_temp value = -1 } 
+		}
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+
+character_event = {  #by Achab
+	id = bloodline_inheritance.131 # investiture, passing bloodline at demise
+	hide_window = yes
+	is_triggered_only = yes # triggered by on_death from 00_on_actions.txt
+  
+	trigger = {   #only if blooded ruler
+		learning = 1
+		is_ruler = yes
+		NOT = { trait = bloodthefted }
+	}
+  	  
+	immediate = {
+		set_variable = { which = bloodline_score_investiture which = bloodline_score }
+		current_heir = { #general investiture goes to the dynastic heir               
+			if = {
+				limit = { 
+					dynasty = ROOT 
+					NOT = { ROOT = { has_character_flag = investiture_secured }}
+				}
+				set_variable = { which = bloodline_score_investiture which = ROOT }
+				set_character_flag = general_heir_invested #DEBUG
+				ROOT = { set_character_flag = investiture_secured }
+				character_event = {	id = bloodline_inheritance.132  days = 1 }
+			}     
+		}
+		family_palace = { #for patricians
+			current_heir = {
+				if = {
+					limit = { 
+						dynasty = ROOT 
+						NOT = { ROOT = { has_character_flag = investiture_secured }}
+					}   
+					set_variable = { which = bloodline_score_investiture which = ROOT }
+					set_character_flag = patrician_invested #DEBUG
+					ROOT = { set_character_flag = investiture_secured }
+					character_event = {	id = bloodline_inheritance.132  days = 1 }
+				}
+			}
+        }
+		capital_scope = { #for feudals
+			county = {
+				current_heir = {
+					if = {            
+						limit = { 
+							dynasty = ROOT 
+							NOT = { ROOT = { has_character_flag = investiture_secured }}
+						} 
+						set_variable = { which = bloodline_score_investiture which = ROOT }
+						set_character_flag = capital_invested #DEBUG
+						ROOT = { set_character_flag = investiture_secured }
+						character_event = {	id = bloodline_inheritance.132  days = 1 }
+					}
+				}
+			}
+		}
+		current_heir = { #DEBUG1
+			if = {
+				limit = { 
+					ai = yes
+					NOT = { ROOT = { has_character_flag = investiture_secured }}
+				} 
+				set_variable = { which = bloodline_score_investiture which = ROOT }
+				set_character_flag = passing_line_invested #DEBUG
+				ROOT = { set_character_flag = investiture_secured }
+				character_event = {	id = bloodline_inheritance.132  days = 1 }
+			}
+		} #closing DEBUG1
+                   
+	}# closing immediate
+  
+	option = {
+		name = "OK"
+		clr_character_flag = investiture_secured
+	}
+   	
+}
+
+character_event = {  #by Achab
+	id = bloodline_inheritance.132 # investiture, receiving bloodline
+	desc = EVTDESCblinher.0  #Your beloved predecessor decided to pass his bloodline to you.
+	is_triggered_only = yes
+  
+	immediate = {
+		set_variable = { which = stronger_bloodline which = bloodline_score }
+		multiply_variable =  { which = stronger_bloodline value = -1 }
+		change_variable = { which = stronger_bloodline which = bloodline_score_investiture }
+		#if stronger_bloodline is positive then the investors bloodline score is higher
+	} #close immediate
+  
+	option = {
+		name = EVTOPTAblinher.0  #I accept.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				check_variable = { which = stronger_bloodline value = 1 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { check_variable = { which = stronger_bloodline value = 1 }}
+			}
+		}
+
+		set_character_flag = investiture_accepted #DEBUG
+		set_variable = { which = bloodline_score which = bloodline_score_investiture }
+
+		hidden_tooltip = { change_learning = -128 }   #first we set learning to 0
+      
+		if = {      #steaming points from investiture to learning
+			limit = { check_variable = { which = bloodline_score_investiture value = 64 }}
+			change_learning = 64
+			hidden_tooltip = { change_variable = { which = bloodline_score_investiture value = -64 } }
+		}
+		if = {                                              
+			limit = { check_variable = { which = bloodline_score_investiture value = 32 }}
+			change_learning = 32
+			hidden_tooltip = { change_variable = { which = bloodline_score_investiture value = -32 } }
+		}
+		if = {                                                        
+			limit = { check_variable = { which = bloodline_score_investiture value = 16 }}
+			change_learning = 16
+			hidden_tooltip = { change_variable = { which = bloodline_score_investiture value = -16 } }
+		}
+		if = {                                                       
+			limit = { check_variable = { which = bloodline_score_investiture value = 8 }}
+			change_learning = 8
+			hidden_tooltip = { change_variable = { which = bloodline_score_investiture value = -8 } }
+		}
+		if = {                                                       
+			limit = { check_variable = { which = bloodline_score_investiture value = 4 }}
+			change_learning = 4
+			hidden_tooltip = { change_variable = { which = bloodline_score_investiture value = -4 } }
+		}
+		if = {                                                       
+			limit = { check_variable = { which = bloodline_score_investiture value = 2 }}
+			change_learning = 2
+			hidden_tooltip = { change_variable = { which = bloodline_score_investiture value = -2 } }
+		} 
+		if = {                                                       
+			limit = { check_variable = { which = bloodline_score_investiture value = 1 }}
+			change_learning = 1
+			hidden_tooltip = { change_variable = { which = bloodline_score_investiture value = -1 } }
+		}
+
+		#now set the derivation
+		if = { 
+			limit = { FROM = { trait = bloodline_anduireas }}
+			add_trait = bloodline_anduireas
+		}
+		if = { 
+			limit = { FROM = { trait = bloodline_azrai }}
+			add_trait = bloodline_azrai
+		}
+		if = { 
+			limit = { FROM = { trait = bloodline_basaia }}
+			add_trait = bloodline_basaia
+		}
+		if = { 
+			limit = { FROM = { trait = bloodline_brenna }}
+			add_trait = bloodline_brenna
+		}
+		if = { 
+			limit = { FROM = { trait = bloodline_masela }}
+			add_trait = bloodline_masela
+		}
+		if = { 
+			limit = { FROM = { trait = bloodline_reynir }}
+			add_trait = bloodline_reynir
+		}
+		if = { 
+			limit = { FROM = { trait = bloodline_vorynn }}
+			add_trait = bloodline_vorynn
+		}
+      
+		#now set the strength
+		if = { 
+			limit = { FROM = { trait = bloodline_tainted }}
+			hidden_tooltip = {
+				if = {
+					limit = {
+						age = 16
+						NOT = {
+							trait = bloodline_tainted
+							trait = bloodline_minor
+							trait = bloodline_major
+							trait = bloodline_great
+							trait = bloodline_true
+						}
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+			}
+			add_trait = bloodline_tainted
+		}
+		if = { 
+			limit = { FROM = { trait = bloodline_minor }}
+			hidden_tooltip = {
+				if = {
+					limit = {
+						age = 16
+						NOT = {
+							trait = bloodline_tainted
+							trait = bloodline_minor
+							trait = bloodline_major
+							trait = bloodline_great
+							trait = bloodline_true
+						}
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_tainted
+					}
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+			}
+			add_trait = bloodline_minor
+		} 
+		if = { 
+			limit = { FROM = { trait = bloodline_major }}
+			hidden_tooltip = {
+				if = {
+					limit = {
+						age = 16
+						NOT = {
+							trait = bloodline_tainted
+							trait = bloodline_minor
+							trait = bloodline_major
+							trait = bloodline_great
+							trait = bloodline_true
+						}
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_tainted 
+					}
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_minor 
+					}
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+			}
+			add_trait = bloodline_major
+		} 
+		if = { 
+			limit = { FROM = { trait = bloodline_great } }
+			hidden_tooltip = {
+				if = {
+					limit = {
+						age = 16
+						NOT = {
+							trait = bloodline_tainted
+							trait = bloodline_minor
+							trait = bloodline_major
+							trait = bloodline_great
+							trait = bloodline_true
+						}
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.1 days = 15 }	#add another minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_tainted 
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_minor 
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_major 
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+			}
+			add_trait = bloodline_great
+		} 
+		if = { 
+			limit = { FROM = { trait = bloodline_true }} #true can be invested
+			hidden_tooltip = {
+				if = {
+					limit = {
+						age = 16
+						NOT = {
+							trait = bloodline_tainted
+							trait = bloodline_minor
+							trait = bloodline_major
+							trait = bloodline_great
+							trait = bloodline_true
+						}
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.1 days = 15 }	#add another minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.2 days = 15 }	#add another major power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_tainted 
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.2 days = 15 }	#add another major power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_minor 
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_major 
+					}
+					character_event = { id = bloodpowers.1 days = 15 }	#add a minor power
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+				if = {
+					limit = { 
+						age = 16
+						trait = bloodline_great 
+					}
+					character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+					character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+				}
+			}
+			add_trait = bloodline_true
+		}                                
+	}
+  
+	option = {
+		name = EVTOPTBblinher.0  #Thanks, but I am happy with my bloodline.
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				NOT = { check_variable = { which = stronger_bloodline value = 1 }}
+			}
+			modifier = {
+				factor = 0
+				check_variable = { which = stronger_bloodline value = 1 }
+			}
+		}
+		set_character_flag = investiture_rejected #DEBUG
+	}
+}
+
+character_event = {  #by Achab
+	id = bloodline_inheritance.141 #clearing learning from ublooded chars 
+	hide_window = yes
+	is_triggered_only = yes # also triggered from 00_on_actions.txt by on_startup and on_adulthood 
+
+  
+	trigger = {   #only if unblooded with learning above 0      
+		learning = 1
+		NOT = { has_character_flag = learningreduced }
+		NOT = { check_variable = { which = bloodline_score value = 1 }}
+		is_adult = yes
+	}
+	
+	immediate = {
+		change_learning = -100
+		set_character_flag = learningreduced  
+	}
+}

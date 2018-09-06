@@ -1,0 +1,77 @@
+#######################################################
+# Mythic Legends
+# Traits
+#######################################################
+
+# Ultra levels.
+ml_ultra_level_demi_god = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_god = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_angel = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_arcangel = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_demon = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_ancient_demon = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_vampire = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_ghoul = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_werewolf = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_lich_king = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_hunter = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+ml_ultra_level_immortal_hunter = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}

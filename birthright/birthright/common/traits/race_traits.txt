@@ -1,0 +1,154 @@
+elf = {
+	immortal = yes
+	random = no
+	#health = 25
+	command_modifier = {
+		terrain = forest
+	}
+	
+	opposites =  {
+		goblin
+		half_goblin
+		orog
+	}
+	
+	opposite_opinion = -50
+}
+
+
+young_elf = {
+	command_modifier = {
+		terrain = forest
+	}
+	
+	opposites =  {
+		goblin
+		half_goblin
+		orog
+	}
+	
+	opposite_opinion = -50
+	random = no
+}
+
+
+
+half_elf = {
+    immortal = yes ##kill via event at 250ish##
+	random = no
+}
+
+young_half_elf = {
+	random = no
+}
+
+
+dwarven = {
+	immortal = yes ##kill them via event at age 250-350##
+	random = no
+	command_modifier = {
+		terrain = hills
+		terrain = mountain
+	}
+	
+	opposites =  {
+		goblin
+		half_goblin
+		orog
+	}
+	
+	opposite_opinion = -50
+}
+
+young_dwarven = {
+	command_modifier = {
+		terrain = hills
+		terrain = mountain
+	}
+	random = no
+	opposites =  {
+		goblin
+		half_goblin
+		orog
+	}
+	
+	opposite_opinion = -50
+}
+
+wraith = {
+	random = no
+	cannot_marry = yes
+	intrigue = 2
+	diplomacy = -2
+	
+	immortal = yes
+	fertility = -10
+}
+
+young_wraith = {
+	random = no
+	cannot_marry = yes
+	
+	intrigue = 2
+	diplomacy = -2
+	
+	fertility = -10
+}
+
+
+	
+halfling = {
+	stewardship = 1
+	random = no
+}
+	
+goblin = {
+	intrigue = 1
+	
+	opposites =  {
+		elf
+		dwarven
+	}
+	
+	opposite_opinion = -50
+	random = no
+}
+
+half_goblin = {
+	intrigue = 1
+	
+	general_opinion = -20
+	same_opinion = 30
+	
+	random = no
+	
+	opposites =  {
+		elf
+		dwarven
+	}
+	
+	opposite_opinion = -50
+	
+}
+
+orog = {
+	martial = 2
+	diplomacy = -2	#They're miners - negotation penalty makes more sense than stewardship
+		
+	opposites =  {
+		elf
+		dwarven
+	}
+	
+	opposite_opinion = -50
+	
+}
+
+gnoll = {
+	martial = 2
+	stewardship = -1
+	diplomacy = -1
+	
+	liege_opinion = -10		#Described as grasping and disrespectful of authority
+	ambition_opinion = -10
+}

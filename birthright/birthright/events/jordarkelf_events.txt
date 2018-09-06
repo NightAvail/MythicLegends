@@ -1,0 +1,290 @@
+#Thanks to jordarkelf
+
+# A female prisoner 'pleads her belly'
+character_event = {
+	id = MyMod.800
+	desc = EVTDESCMyMod.800
+	picture = GFX_evt_into_the_dungeon
+	
+	prisoner = yes
+	capable_only = yes
+	
+	trigger = {
+		is_marriage_adult = yes
+		is_female = yes
+		is_pregnant = no
+		OR = {
+			is_married = no
+			NOT = { spouse = { reverse_opinion = { who = ROOT value = 0 } } }
+		}
+		host = {
+			is_female = no
+			is_marriage_adult = yes
+			NOT = { trait = celibate }
+			NOT = { trait = chaste }
+			NOT = { trait = eunuch }
+			NOT = { is_close_relative = ROOT }
+			opinion = { who = ROOT value = 0 }
+		}
+		NOT = { trait = ugly }
+		NOT = { trait = celibate }
+		NOT = { trait = chaste }
+		NOT = { has_character_flag = pledbelly }
+	}
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 0.75
+			trait = fair
+		}
+		modifier = {
+			factor = 0.5
+			trait = lustful
+		}
+	}
+	
+	option = {
+		name = EVTOPTAMyMod.800 # Try to seduce
+		ai_chance = {
+			factor = 75
+		}
+		host = {
+			character_event = { id = MyMod.801 days = 4 tooltip = EVTTOOLTIPMyMod.801 }
+		}
+	}
+	option = {
+		name = EVTOPTBMyMod.800 # Don't
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				trait = lustful
+			}
+		}
+		piety = 10
+		IF = { 
+			limit = { is_married = yes }
+			add_trait = chaste
+		}
+	}
+}
+
+# The captor hears the plea from the imprisoned character
+character_event = {
+	id = MyMod.801
+	desc = EVTDESCMyMod.801
+	picture = GFX_evt_courtiers_talking
+	
+	is_friendly = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAMyMod.801 # Accept
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				is_married = no
+			}
+			modifier = {
+				factor = 2
+				trait = lustful
+			}
+			modifier = {
+				factor = 2
+				NOT = { any_child = { is_female = no } }
+			}
+			modifier = {
+				factor = 1.5
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 0
+				trait = homosexual
+			}
+		}
+		FROM = { character_event = { id = MyMod.802 days = 4 tooltip = EVTTOOLTIPMyMod.802 } }
+	}
+	
+	option = {
+		name = EVTOPTBMyMod.801 # Better not
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1.5
+				is_married = yes
+			}
+			modifier = {
+				factor = 2
+				trait = celibate
+			}
+			modifier = {
+				factor = 2
+				trait = chaste
+			}
+		}
+		FROM = { character_event = { id = MyMod.803 days = 4 tooltip = EVTTOOLTIPMyMod.803 } }
+	}
+}
+
+# The prisoner is released into the bedchamber
+character_event = {
+	id = MyMod.802
+	desc = EVTDESCMyMod.802
+	
+	is_friendly = yes
+	
+	picture = GFX_evt_lovers
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		prisoner = no
+	}
+	
+	option = {
+		name = EVTOPTAMyMod.802 # Free at last!
+		FROM = {
+			reverse_opinion = {
+				who = ROOT
+				modifier = opinion_sprung_from_jail
+				months = 240
+			}
+			random_list = {
+				70 = { 
+					if = {
+						limit = {
+							FROM = { is_married = yes }
+						}
+						impregnate_cuckoo = FROM
+					}
+					if = {
+						limit = {
+							FROM = { is_married = no }
+						}
+						impregnate = FROM
+					} 
+				}
+				30 = {
+					health = 0.01 
+				}
+			}
+			IF = {
+				limit = { has_lover = no }
+				random = {
+					chance = 50
+					add_lover = ROOT
+				}
+			}
+		}
+		set_character_flag = pledbelly
+	}
+}
+
+# The request is denied
+character_event = {
+	id = MyMod.803
+	desc = EVTDESCMyMod.803
+	picture = GFX_evt_into_the_dungeon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAMyMod.803 # Such a shame...
+		set_character_flag = pledbelly
+	}
+}
+
+
+#Legitimize a hidden bastard if old and childless?
+character_event = {
+	id = MyMod.810
+	desc = EVTDESCMyMod.810
+	picture = GFX_evt_courtiers_talking
+	
+	min_age = 50
+	only_rulers = yes
+		
+	trigger = {
+		NOT = { has_law = succ_feudal_elective }
+		is_feudal = yes
+		current_heir = { NOT = { dynasty = ROOT } }
+		NOT = {
+			any_child = {
+				dynasty = ROOT
+				is_female = no
+			}
+		}
+		any_child = {
+			was_conceived_a_bastard = yes
+			father = {
+				NOT = { character = ROOT }
+			}
+			is_female = no
+			NOT = { trait = bastard }
+			NOT = { trait = legit_bastard }
+		}
+	}
+	
+	mean_time_to_happen = {	years = 1 }
+	
+	option = {
+		name = EVTOPTA301 # Legitimize the child
+		ai_chance = { factor = 80 }
+		random_child = {
+			limit = {
+				was_conceived_a_bastard = yes
+				father = {
+					NOT = { character = ROOT }
+				}
+				is_female = no
+				NOT = { trait = bastard }
+				NOT = { trait = legit_bastard }
+			}
+			character_event = { id = 302 tooltip = EVTTOOLTIP302 } # The child gets the father's dynasty
+			mother = {
+				character_event = { id = MyMod.811 tooltip = EVTTOOLTIP303 } # The child's mother is very pleased
+				spouse = {
+					character_event = { id = 304 tooltip = EVTTOOLTIP304 } # The child's mother's husband is pissed off
+				}
+				consort = {
+					character_event = { id = 304 tooltip = EVTTOOLTIP304 } # The child's mother's lord is pissed off
+				}					
+			}
+		}
+		any_child = {
+			limit = {
+				dynasty = ROOT
+				was_conceived_a_bastard = no
+			}
+			opinion = {
+				who = ROOT
+				modifier = legitimized_bastard
+				months = 12
+			}
+		}
+	}
+	option = {
+		name = EVTOPTBMyMod.810
+		ai_chance = { factor = 20 }
+	}
+}
+
+# The child's mother is very pleased
+character_event = {
+	id = MyMod.811
+	
+	is_triggered_only = yes 
+	desc = EVTDESC307
+	picture = GFX_evt_birth
+
+	option = {
+		name = EVTOPTA303
+		opinion = {
+			who = FROM
+			modifier = legitimized_child
+			years = 10
+		}
+	}
+}

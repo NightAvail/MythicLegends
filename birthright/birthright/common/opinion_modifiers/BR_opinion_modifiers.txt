@@ -1,0 +1,361 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+
+# inherit = yes  # Heirs inherit this opinion
+
+# Opinion modifiers can give a reason to do the following actions without penalties
+# prison_reason
+# banish_reason
+# execute_reason
+# revoke_reason
+
+###BIRTHRIGHT OPINION MODIFIERS##
+opinion_battle_duel_target = {
+	opinion = 10
+	months = 2400 
+
+}
+
+opinion_adventuring_ally = {
+	opinion = 40
+	months = 1200	# For life
+}
+
+opinion_adventuring_foe = {
+	opinion = -50
+	months = 1200	# For life
+}
+
+opinion_insulted_my_imperial_claim = {
+	opinion = -100
+	months = 1200	# For life
+}
+
+opinion_duel_target = {
+	opinion = -5
+	months = 2400
+}
+opinion_battle_duel_target = {
+	opinion = 10
+	months = 2400
+}
+
+opinion_thinks_insane = {
+	opinion = -3000
+	months = 12
+}
+
+opinion_disapprove_marriage = {
+	opinion = -15
+	months = 12
+}
+
+opinion_approves_marriage = {
+	opinion = 15
+	months = 12
+}
+
+opinion_knighted_me = {
+	opinion = 10
+	months = 13
+}
+
+opinion_paid_tuition = {
+	opinion = 10
+	months = 24
+}
+
+opinion_sponsored_order = {
+	opinion = 100
+	months = 1200	# For Life
+}
+
+opinion_disinherited_me = {
+	opinion = -25
+	months = 36
+}
+
+opinion_restored_temple = {
+	opinion = 50
+	months = 36
+}
+
+opinion_accepted_my_bastard = {
+	opinion = 40
+	months = 36
+}
+
+opinion_denied_my_bastard = {
+	opinion = -40
+	months = 36
+}
+#Witcher
+
+opinion_prison_concubine = {
+	opinion = -10	#Not really for opinion, just for the connection
+	months = 6000
+}
+opinion_raped_me = {
+	opinion = -50
+	months = 120
+}
+opinion_raped_family = {
+	opinion = -40
+	months = 90
+}
+opinion_raped_spouse = {
+	opinion = -50
+	months = 120
+}
+opinion_raped_consort = {
+	opinion = -30
+	months = 60
+}
+opinion_forced_to_relinquish_claims = {
+	opinion = -25
+	months = 12
+}
+killed_vassal = {
+	opinion = -20
+	months = 12
+}
+attempted_murder_of_close_kin = {
+	opinion = -20
+	months = 12
+}
+devious_plotter = {
+	opinion = -20
+	months = 12
+}
+opinion_tortured_me = {
+	opinion = -50
+	months = 12
+}
+#Waylit's
+joined_war_against_me = {
+	opinion = -25
+	months = 12
+}
+stolen_banner = {
+	opinion = -10
+	months = 12
+}
+liberated = {
+	opinion = 20
+	months = 12
+}
+left_behind = {
+	opinion = -25
+	months = 12
+}
+left_to_rot = {
+	opinion = -40
+	months = 12
+}
+
+#AGOT's
+
+opinion_tortured_friend = {
+	opinion = -40
+	months = 12
+}
+
+opinion_tortured_lover = {
+	opinion = -40
+	months = 12
+}
+
+opinion_tortured_kin = {
+	opinion = -20
+	months = 12
+}
+
+opinion_forced_marriage = {
+	opinion = -50
+	months = 12
+}
+
+opinion_forced_marriage_child = {
+	opinion = -50
+	months = 12
+}
+
+opinion_forced_marriage_kin = {
+	opinion = -50
+	months = 12
+}
+
+opinion_attending_tournament = {
+	opinion = 10
+	months = 12
+}
+
+opinion_squire_humiliated = {
+	opinion = -10
+	months = 12
+}
+
+opinion_slayed_kinsman = {
+	opinion = -25
+	months = 12
+}
+
+opinion_spectating_tournament = {
+	opinion = 10
+	months = 12
+}
+
+opinion_queen_love_beauty = {
+	opinion = 10
+	months = 12
+}
+
+rescued_my_sorry_ass = {
+	opinion = 30
+	months = 12
+}
+
+opinion_my_abducted_spouse = {
+	opinion = -5
+	months = 12
+}
+
+opinion_cadet_bond = {
+	opinion = 20
+	months = 1200	# For life
+}
+###########################################
+# Used by Ambitions mod, by JGCrusader
+###########################################
+
+opinion_uncovered_plot = {
+	opinion = 25
+	months = 12
+}
+
+opinion_refused_legit_request = {
+	opinion = -25
+	months = 12
+}
+
+opinion_helpful_friend = {
+	opinion = 20
+	months = 12
+}
+
+opinion_unhelpful_friend = {
+	opinion = -20
+	months = 12
+}
+
+opinion_abuse_power = {
+	opinion = -10
+	months = 12
+}
+
+opinion_stopped_my_war = {
+	opinion = -20
+	months = 12
+}
+
+opinion_fame_glory = {
+	opinion = 5
+	months = 12
+}
+
+opinion_attempt_kidnap = {
+	opinion = -50
+	months = 12
+}
+
+kidnapped_me = {
+	opinion = -50
+	months = 12
+}
+
+attempted_kidnapping = {
+	opinion = -50
+	months = 12
+}
+
+attempted_kidnapping_of_vassal = {
+	opinion = -20
+	months = 12
+}
+
+attempted_kidnapping_of_kin = {
+	opinion = -35
+	months = 12
+}
+
+opinion_kidnapper = {
+	opinion = -100
+	months = 12
+}
+
+opinion_kidnapped_kin = {
+	opinion = -50
+	months = 12
+}
+
+opinion_broke_peace = {
+	opinion = -25
+	prison_reason = yes
+	months = 12
+}
+
+opinion_tried_to_frame_me = {
+	opinion = -50
+	months = 12
+}
+
+opinion_framed_me = {
+	opinion = -100
+	months = 30
+}
+
+opinion_framed_kin = {
+	opinion = -50
+	months = 12
+}
+
+opinion_unmasked_traitor = {
+	opinion = 10
+	months = 12
+}
+
+opinion_conspired_against_vassal = {
+	opinion = -20
+	months = 12
+}
+
+opinion_conspired_within_realm = {
+	opinion = -10
+	months = 12
+}
+
+opinion_unmasked_betrayer = {
+	opinion = 10
+	months = 12
+}
+
+opinion_betrayer = {
+	opinion = -30
+	months = 12
+}
+
+opinion_tried_to_trick_me = {
+	opinion = -15
+	months = 12
+}
+
+opinion_recent_plot = {
+	opinion = -20
+	months = 12
+}
+
+opinion_vengeance = {
+	opinion = -100
+	months = 12
+}

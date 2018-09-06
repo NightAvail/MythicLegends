@@ -1,0 +1,775 @@
+namespace = emperor
+
+	#avanil makes the claim#
+	character_event = {
+    id = emperor.0
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.0"
+    picture = "GFX_evt_busy_trading_dock_republic"
+		
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = emperor0 }
+	has_landed_title = k_avanil
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = YES_AND_SEND_WORD_TO_ALL_OF_ANUIRE # Yes, and send word to all of Anuire!
+	set_character_flag = emperor0
+	any_independent_ruler = {
+	limit = { has_landed_title = d_imperial_city }
+	character_event = { id = emperor.1 days = 7 }
+	}
+	any_independent_ruler = {
+	limit = { culture = Anuirean }
+	character_event = { id = emperor.2 days = 7 }
+	}
+	}
+	
+	option = {
+	name = emperor.0.b # No, I care not for the throne.
+	trigger = { ai = no }
+	}
+	
+	}
+	
+	#chancellor gets word#
+	character_event = {
+    id = emperor.1
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.1"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = NO_HE_HAS_NOT_YET_PROVEN_HIMSELF # No, he has not yet proven himself.
+	FROM = { character_event = { id = emperor.3 days = 7 }
+	}
+	}
+	
+	option = {
+	name = YES_LET_THE_DIVISION_END
+	trigger = { ai = no }
+	FROM = { character_event = { id = emperor.4 days = 7 }
+	}
+	}
+	
+	}
+	
+	
+	#rest of anuire gets word#
+	character_event = {
+    id = emperor.2
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.2"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = NO_HE_HAS_NOT_YET_PROVEN_HIMSELF # No, he has not yet proven himself.
+	}
+	
+	option = {
+	name = YES_LET_THE_DIVISION_END
+	trigger = {
+	ai = no 
+	NOT = { trait = awn_gorgon }
+	}
+	set_defacto_liege = FROM
+	FROM = { character_event = { id = emperor.5 } }
+	}
+	
+	option = {
+	name = emperor.2.c # Hah! Give this brave fool to my daughter...
+	trigger = { trait = awn_gorgon }
+	}
+	}
+	
+	#prince of avanil gets negative reply#
+	character_event = {
+    id = emperor.3
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.3"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = STUBBORN_OLD_FOOL
+	}
+	
+	option = {
+	name = FINE_WAR_IT_IS_THEN
+	}
+	}
+	
+	#prince of avanil gets positive reply#
+	character_event = {
+    id = emperor.4
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.4"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = YES_YES_OF_COURSE # Yes, yes, of course!
+	e_anuire = {
+	grant_title = ROOT
+	}
+	}
+	
+	}
+	
+	#prince of avanil gets positive reply#
+	character_event = {
+    id = emperor.5
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.5"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	any_independent_ruler = {
+	character_event = { id = emperor.6 days = 14 }
+	}
+	}
+	
+	}
+	
+	#prince of avanil gets positive reply#
+	character_event = {
+    id = emperor.6
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.6"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "OH_DEAR"
+	}
+	
+	option = {
+	name = INTERESTING_TIMES
+	}
+
+	option = {
+	name = "CURSES"
+	}	
+	}
+	
+	#boeruine makes the claim#
+	character_event = {
+    id = emperor.7
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.7"
+    picture = "GFX_evt_busy_trading_dock_republic"
+		
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = emperor0 }
+	has_landed_title = k_boeruine
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = YES_AND_SEND_WORD_TO_ALL_OF_ANUIRE # Yes, and send word to all of Anuire!
+	set_character_flag = emperor0
+	any_independent_ruler = {
+	limit = { has_landed_title = d_imperial_city }
+	character_event = { id = emperor.8 days = 7 }
+	}
+	any_independent_ruler = {
+	limit = { culture = Anuirean }
+	character_event = { id = emperor.9 days = 7 }
+	}
+	}
+	
+	option = {
+	name = emperor.0.b # No, I care not for the throne.
+	trigger = { ai = no }
+	}
+	
+	}
+	
+	#chancellor gets word#
+	character_event = {
+    id = emperor.8
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.8"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = NO_HE_HAS_NOT_YET_PROVEN_HIMSELF # No, he has not yet proven himself.
+	FROM = { character_event = { id = emperor.10 days = 7 }
+	}
+	}
+	
+	option = {
+	name = YES_LET_THE_DIVISION_END
+	trigger = { ai = no }
+	FROM = { character_event = { id = emperor.11 days = 7 }
+	}
+	}
+	
+	}
+	
+	
+	#rest of anuire gets word#
+	character_event = {
+    id = emperor.9
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.9"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = NO_HE_HAS_NOT_YET_PROVEN_HIMSELF # No, he has not yet proven himself.
+	}
+	
+	option = {
+	name = YES_LET_THE_DIVISION_END
+	trigger = {
+	ai = no 
+	NOT = { trait = awn_gorgon }
+	}
+	set_defacto_liege = FROM
+	FROM = { character_event = { id = emperor.12 } }
+	}
+	
+	option = {
+	name = emperor.2.c # Hah! Give this brave fool to my daughter...
+	trigger = { trait = awn_gorgon }
+	}
+	}
+	
+	#prince of avanil gets negative reply#
+	character_event = {
+    id = emperor.10
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.3"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = STUBBORN_OLD_FOOL
+	}
+	
+	option = {
+	name = FINE_WAR_IT_IS_THEN
+	}
+	}
+	
+	#boeruine gets positive reply#
+	character_event = {
+    id = emperor.11
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.4"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = YES_YES_OF_COURSE # Yes, yes, of course!
+	e_anuire = {
+	grant_title = ROOT
+	}
+	}
+	
+	}
+	
+	#boeruine gets positive reply#
+	character_event = {
+    id = emperor.12
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.5"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	any_independent_ruler = {
+	character_event = { id = emperor.13 days = 14 }
+	}
+	}
+	
+	}
+	
+	#boeruine gets positive reply tells world#
+	character_event = {
+    id = emperor.13
+    title = EMPEROR # Emperor
+    desc = "EVTDESCEMPEROR.13"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "OH_DEAR"
+	}
+	
+	option = {
+	name = INTERESTING_TIMES
+	}
+
+	option = {
+	name = "CURSES"
+	}	
+	}
+	
+	character_event = {
+    id = emperor.14
+    title = BECOMING_EMPEROR # Becoming Emperor
+    desc = "EVTDESCEMPEROR.14"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OK
+	set_character_flag = emperor.14
+	}
+	
+	}
+	
+	character_event = {
+    id = emperor.15
+    title = BECOMING_EMPEROR # Becoming Emperor
+    desc = "EVTDESCEMPEROR.15"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OK
+	set_character_flag = emperor.15
+	}
+	
+	}
+	
+	character_event = {
+    id = emperor.16
+    title = BECOMING_EMPEROR # Becoming Emperor
+    desc = "EVTDESCEMPEROR.16"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	trigger = {
+	independent = yes
+	age = 16
+	has_character_flag = emperor.15
+	realm_size = 35
+	tier = KING
+	NOT = { has_character_flag = emperor.16 }
+	NOT = { has_global_flag = anuireanemperor }
+	}
+	
+	mean_time_to_happen = { 
+	days = 7
+	}
+	
+	option = {
+	name = EXCELLENT
+	set_character_flag = emperor.16
+	}
+	
+	}
+	
+	character_event = {
+    id = emperor.17
+    title = BECOMING_EMPEROR # Becoming Emperor
+    desc = "EVTDESCEMPEROR.17"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	trigger = {
+	independent = yes
+	age = 16
+	has_character_flag = emperor.15
+	realm_size = 35
+	tier = DUKE
+	NOT = { has_character_flag = emperor.17 }
+	NOT = { has_global_flag = anuireanemperor }
+	}
+	
+	mean_time_to_happen = { 
+	days = 7
+	}
+	
+	option = {
+	name = EXCELLENT
+	set_character_flag = emperor.17
+	}
+	
+	}
+	
+	character_event = {
+    id = emperor.18
+    title = GETTING_SUPPORT # Getting Support
+    desc = "EVTDESCEMPEROR.18"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = ASK_THIS_DUKE_TO_SUPPORT_CLAIM # Ask this Duke to support claim
+	random_independent_ruler = {
+	limit = {
+	AND = {
+	age = 16
+	culture = Anuirean
+	religion_group = gods_of_good
+	tier = DUKE
+	independent = yes
+	is_landed = yes
+	}
+	}
+	character_event = { id = emperor.19 days = 7 }
+	}
+	}
+
+
+	
+	option = {
+	name = emperor.18.b # Close menu or try to find another Duke.
+	}
+	
+	}
+	
+	character_event = {
+    id = emperor.19
+    title = IMPERIAL_CLAIMANT # Imperial Claimant
+    desc = "EVTDESCEMPEROR.19"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = WE_CAN_DISCUSS_IT_WHAT_IS_THE_OFFER # We can discuss it. What is the offer?
+	trigger = {
+	OR = {
+	ai = no
+	ROOT = { opinion = { who = FROM value = 1 } } 
+	}
+	}
+	FROM = { character_event = { id = emperor.20 } }
+	}
+	
+	option = {
+	name = emperor.19.b # No, he is unworthy of the throne!
+	trigger = {
+	OR = {
+	ai = no
+	NOT = { ROOT = { opinion = { who = FROM value = 1 } } } 
+	}
+	}
+	FROM = { character_event = { id = emperor.21 days = 7 } }
+	}
+	
+	}
+	
+	character_event = {
+    id = emperor.20
+    title = IMPERIAL_CLAIMANT # Imperial Claimant
+    desc = "EVTDESCEMPEROR.20"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_HAVE_EARNED_THE_RIGHT # I have earned the right!
+	trigger = { prestige = 4000 }
+	FROM = { character_event = { id = emperor.23 days = 7 } }
+	}
+	
+	option = {
+	name = emperor.20.b # Send this huge chest of gold...
+	trigger = { wealth = 2000 }
+	wealth = -2000
+	FROM = { character_event = { id = emperor.22  days = 7 } }
+	}
+	
+	option = {
+	name = I_DONT_HAVE_ENOUGH_GOLD
+	trigger = {
+	AND = {
+	ai = no
+	NOT = { wealth = 2000 }
+	}
+	}
+	}
+	
+	option = {
+	name = emperor.20.d # I don't have enough prestige...
+	trigger = {
+	AND = {
+	ai = no
+	NOT = { prestige = 4000 }
+	}
+	}
+	}
+	
+	}
+	
+	character_event = {
+    id = emperor.21
+    title = IMPERIAL_CLAIMANT # Imperial Claimant
+    desc = "EVTDESCEMPEROR.21"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = THE_INSOLENCE_ILL_NEVER_FORGET_THIS # The insolence! I'll never forget this!
+	reverse_opinion = {
+			modifier = opinion_insulted_my_imperial_claim
+			who = FROM
+			years = 200
+		}
+		}
+		
+	option = {
+	name = emperor.21.b # Funny Duke. For that, I'll kill him last...
+	reverse_opinion = {
+			modifier = opinion_insulted_my_imperial_claim
+			who = FROM
+			years = 200
+		}
+		}
+		
+	option = {
+	name = I_FORGIVE_HIS_CRUDE_MANNER
+	trigger = { ai = no }
+		}
+		
+		}
+	
+	#duke gets offered 1k gold#
+	character_event = {
+    id = emperor.22
+    title = IMPERIAL_CLAIMANT # Imperial Claimant
+    desc = "EVTDESCEMPEROR.22"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = HAIL_TO_THE_NEW_EMPEROR # Hail to the New Emperor!
+	wealth = 2000
+	set_defacto_liege = FROM
+	any_playable_ruler  = {
+	limit = {
+	ai = no
+	}
+	character_event = { id = emperor.25 days = 7 }
+	}
+	}
+	
+	option = {
+	name = NO_BUT_ILL_KEEP_THE_MONEY
+	trigger = { ai = no }
+	wealth = 2000
+	FROM = { character_event = { id = emperor.24 days = 7 } }
+	}
+	
+	}
+	
+	#duke gets offered chance to do the right hting only#
+	character_event = {
+    id = emperor.23
+    title = IMPERIAL_CLAIMANT # Imperial Claimant
+    desc = "EVTDESCEMPEROR.23"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = HAIL_TO_THE_NEW_EMPEROR # Hail to the New Emperor!
+	FROM = { prestige = -4000 }
+	set_defacto_liege = FROM
+	any_playable_ruler  = {
+	limit = {
+	ai = no
+	}
+	character_event = { id = emperor.25 days = 7 }
+	}
+	}
+	
+	option = {
+	name = emperor.23.b # No. He is unworthy of the throne!
+	trigger = { ai = no }
+	FROM = { character_event = { id = emperor.21 days = 7 } }
+	}
+	
+	}
+	
+	#claimant is told that duke has kept gold, and not supported him!#
+	character_event = {
+    id = emperor.24
+    title = THEFT # Theft!
+    desc = "EVTDESCEMPEROR.24"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+FROM = {
+   random_demesne_title = {
+      limit = {
+         tier = duke
+      }
+      ROOT = {
+         add_claim = PREV
+      }
+   }
+}
+	}
+	
+	option = {
+	name = "WAR"
+	war = {
+	target = FROM
+	casus_belli = claim_all
+			}
+	}
+	
+	option = {
+	name = IN_DUE_TIME
+	trigger = { ai = no }
+	}
+	
+	}
+	
+	#people are told that a duke has declared himself#
+	character_event = {
+    id = emperor.25
+    title = ANUIREAN_EMPIRE # Anuirean Empire
+    desc = "EVTDESCEMPEROR.25"
+    picture = "GFX_evt_emissary"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EXCELLENT
+	}
+	
+	option = {
+	name = BAH_ANUIRE
+	}
+	
+	option = {
+	name = emperor.25.c # I need to accelerate my plans then...
+	}
+	
+	}
+	
+	
+	character_event = {
+    id = emperor.28
+    title = IMPERIAL_CONQUESTS # Imperial Conquests
+    desc = "EVTDESCEMPEROR.28"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = YES_PREPARE_TO_INVADE_VOSGAARD # Yes! Prepare to invade Vosgaard.
+	wealth = -2500
+	set_character_flag = vosgaardconquest
+	}
+	
+	option = {
+	name = emperor.28.b # Yes! Prepare to invade the Khinasi.
+	wealth = -2500
+	set_character_flag = khinasiconquest
+	}
+	
+		option = {
+	name = emperor.28.c # Yes! Prepare to invade Rjurik.
+	wealth = -2500
+	set_character_flag = rjurikconquest
+	}
+	
+	option = {
+	name = MORE_OPTIONS_OR_CANCEL
+	character_event = { id = emperor.29 }
+	}
+
+	}
+	
+	character_event = {
+    id = emperor.29
+    title = IMPERIAL_CONQUESTS # Imperial Conquests
+    desc = "EVTDESCEMPEROR.28"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = YES_PREPARE_TO_INVADE_ANUIRE # Yes! Prepare to invade Anuire.
+	wealth = -2500
+	set_character_flag = anuireconquest
+	}
+	
+	option = {
+	name = emperor.29.b # Yes! Prepare to invade the Brecht.
+	wealth = -2500
+	set_character_flag = brechturconquest
+	}
+	
+	option = {
+	name = NEVER_MIND_CLOSE_MENU
+	}
+	
+	}
+
+
+### Imperial Temple Restoration
+
+	character_event = {
+		id = emperor.30
+		title = IMPERIAL_TEMPLE_RESTORATION # Imperial Temple Restoration
+		desc = "EVTDESCemperor.30"
+		picture = "GFX_evt_stone_church"	
+
+		is_triggered_only = yes
+
+	option = {
+		name = FINALY_ITS_TIME_TO_MEND_THE_SCHISM # Finaly, its time to mend the schism!
+		prestige = 200
+	}
+
+}
+
+	character_event = {
+		id = emperor.31
+		title = IMPERIAL_TEMPLE_RESTORATION # Imperial Temple Restoration
+		desc = "EVTDESCemperor.31"
+		picture = "GFX_evt_stone_church"	
+
+		is_triggered_only = yes
+
+	option = {
+		name = emperor.31.a # I shall make [Root.Religion.GetRandomGodName] proud!
+		prestige = 100
+		set_defacto_liege = FROM
+	}
+
+}

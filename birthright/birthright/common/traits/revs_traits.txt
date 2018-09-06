@@ -1,0 +1,44 @@
+##Stuff stuff
+
+crucified = {
+	customizer = no
+}
+snu_snu = {
+	customizer = no
+}
+
+familyperson = {
+	personality = yes
+
+	opposites = {
+		kinslayer
+	}
+
+	random = no
+	
+	opposite_opinion = -40
+	same_opinion = 10
+	dynasty_opinion = 5
+	spouse_opinion = 10
+
+}
+
+ruthless = { #Gavin and Aeric
+	personality = yes
+
+	opposites = {
+		kind
+	}
+
+	random = no
+	
+	intrigue = 1
+	martial = 1
+	diplomacy = -1
+
+	general_opinion = -10
+
+	ai_honor = -25
+
+	ruler_designer_cost = -25
+}

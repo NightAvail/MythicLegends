@@ -1,0 +1,1413 @@
+namespace = portfolio_of_gods
+
+###For Haelyn followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.1
+	desc = "EVTDESCportfolio_of_gods.1"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.1"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = haelyns_courage
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.1"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = haelyns_justice
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.1"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = haelyns_chivalry
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.1"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.2 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.2
+	desc = "EVTDESCportfolio_of_gods.2"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.2"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = haelyns_rulership
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.2"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = haelyns_noble_war
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.2"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.1 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.3
+	desc = "EVTDESCportfolio_of_gods.3"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Haelyn }
+		OR = {
+			has_character_modifier = haelyns_courage
+			has_character_modifier = haelyns_justice
+			has_character_modifier = haelyns_chivalry
+			has_character_modifier = haelyns_rulership
+			has_character_modifier = haelyns_noble_war
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.3"
+			remove_character_modifier = haelyns_courage
+			remove_character_modifier = haelyns_justice
+			remove_character_modifier = haelyns_chivalry
+			remove_character_modifier = haelyns_rulership
+			remove_character_modifier = haelyns_noble_war
+	}
+}
+
+###For Nesirie followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.4
+	desc = "EVTDESCportfolio_of_gods.4"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.4"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = nesiries_healing
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.4"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = nesiries_grief
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.4"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = nesiries_remembrance_of_the_dead
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.4"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.5 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.5
+	desc = "EVTDESCportfolio_of_gods.5"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.5"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = nesiries_protection
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.5"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = nesiries_diplomacy
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.5"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.4 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.6
+	desc = "EVTDESCportfolio_of_gods.6"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Nesirie }
+		OR = {
+			has_character_modifier = nesiries_healing
+			has_character_modifier = nesiries_grief
+			has_character_modifier = nesiries_remembrance_of_the_dead
+			has_character_modifier = nesiries_protection
+			has_character_modifier = nesiries_diplomacy
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.6"
+			remove_character_modifier = nesiries_healing
+			remove_character_modifier = nesiries_grief
+			remove_character_modifier = nesiries_remembrance_of_the_dead
+			remove_character_modifier = nesiries_protection
+			remove_character_modifier = nesiries_diplomacy
+	}
+}
+
+###For Cuiraecen followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.7
+	desc = "EVTDESCportfolio_of_gods.7"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.7"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = cuiraecens_storms
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.7"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = cuiraecens_conflict
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.7"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = cuiraecens_battle
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.7"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.8 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.8
+	desc = "EVTDESCportfolio_of_gods.8"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.8"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = cuiraecens_glory
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.8"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = cuiraecens_strength
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.8"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.7 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.9
+	desc = "EVTDESCportfolio_of_gods.9"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Cuiraecen }
+		OR = {
+			has_character_modifier = cuiraecens_storms
+			has_character_modifier = cuiraecens_conflict
+			has_character_modifier = cuiraecens_battle
+			has_character_modifier = cuiraecens_glory
+			has_character_modifier = cuiraecens_strength
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.9"
+			remove_character_modifier = cuiraecens_storms
+			remove_character_modifier = cuiraecens_conflict
+			remove_character_modifier = cuiraecens_battle
+			remove_character_modifier = cuiraecens_glory
+			remove_character_modifier = cuiraecens_strength
+	}
+}
+
+###For Avani followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.10
+	desc = "EVTDESCportfolio_of_gods.10"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.10"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = avanis_law
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.10"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = avanis_knowledge
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.10"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = avanis_magic
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.10"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.11 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.11
+	desc = "EVTDESCportfolio_of_gods.11"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.11"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = avanis_reason
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.11"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = avanis_sun
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.11"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.10 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.12
+	desc = "EVTDESCportfolio_of_gods.12"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Avani }
+		OR = {
+			has_character_modifier = avanis_law
+			has_character_modifier = avanis_knowledge
+			has_character_modifier = avanis_magic
+			has_character_modifier = avanis_reason
+			has_character_modifier = avanis_sun
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.12"
+			remove_character_modifier = avanis_law
+			remove_character_modifier = avanis_knowledge
+			remove_character_modifier = avanis_magic
+			remove_character_modifier = avanis_reason
+			remove_character_modifier = avanis_sun
+	}
+}
+
+
+###For Sera followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.13
+	desc = "EVTDESCportfolio_of_gods.13"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.13"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = seras_luck
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.13"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = seras_trade
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.13"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = seras_travel
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.13"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.14 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.14
+	desc = "EVTDESCportfolio_of_gods.14"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.14"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = seras_wealth
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.14"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = seras_fortune
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.14"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.13 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.15
+	desc = "EVTDESCportfolio_of_gods.15"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Sera }
+		OR = {
+			has_character_modifier = seras_luck
+			has_character_modifier = seras_trade
+			has_character_modifier = seras_travel
+			has_character_modifier = seras_wealth
+			has_character_modifier = seras_fortune
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.15"
+			remove_character_modifier = seras_luck
+			remove_character_modifier = seras_trade
+			remove_character_modifier = seras_travel
+			remove_character_modifier = seras_wealth
+			remove_character_modifier = seras_fortune
+	}
+}
+
+
+###For Erik followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.16
+	desc = "EVTDESCportfolio_of_gods.16"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.16"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eriks_forests
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.16"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eriks_hunting
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.16"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eriks_earth
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.16"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.17 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.17
+	desc = "EVTDESCportfolio_of_gods.17"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.17"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eriks_wilderness
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.17"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eriks_animals
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.17"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.16 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.18
+	desc = "EVTDESCportfolio_of_gods.18"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Erik }
+		OR = {
+			has_character_modifier = eriks_forests
+			has_character_modifier = eriks_hunting
+			has_character_modifier = eriks_earth
+			has_character_modifier = eriks_wilderness
+			has_character_modifier = eriks_animals
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.18"
+			remove_character_modifier = eriks_forests
+			remove_character_modifier = eriks_hunting
+			remove_character_modifier = eriks_earth
+			remove_character_modifier = eriks_wilderness
+			remove_character_modifier = eriks_animals
+	}
+}
+
+
+###For Ruornil followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.19
+	desc = "EVTDESCportfolio_of_gods.19"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.19"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = ruornils_knowledge
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.19"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = ruornils_magic
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.19"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = ruornils_moon
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.19"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.20 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.20
+	desc = "EVTDESCportfolio_of_gods.20"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.20"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = ruornils_spell
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.20"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = ruornils_night
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.20"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.19 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.21
+	desc = "EVTDESCportfolio_of_gods.21"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Ruornil }
+		OR = {
+			has_character_modifier = ruornils_knowledge
+			has_character_modifier = ruornils_magic
+			has_character_modifier = ruornils_moon
+			has_character_modifier = ruornils_spell
+			has_character_modifier = ruornils_night
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.21"
+			remove_character_modifier = ruornils_knowledge
+			remove_character_modifier = ruornils_magic
+			remove_character_modifier = ruornils_moon
+			remove_character_modifier = ruornils_spell
+			remove_character_modifier = ruornils_night
+	}
+}
+
+
+###For Eloele followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.22
+	desc = "EVTDESCportfolio_of_gods.22"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.22"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eloeles_darkness
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.22"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eloeles_thieves
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.22"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eloeles_deception
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.22"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.23 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.23
+	desc = "EVTDESCportfolio_of_gods.23"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.23"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eloeles_independence
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.23"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = eloeles_trickery
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.23"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.22 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.24
+	desc = "EVTDESCportfolio_of_gods.24"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Eloele }
+		OR = {
+			has_character_modifier = eloeles_darkness
+			has_character_modifier = eloeles_thieves
+			has_character_modifier = eloeles_deception
+			has_character_modifier = eloeles_independence
+			has_character_modifier = eloeles_trickery
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.24"
+			remove_character_modifier = eloeles_darkness
+			remove_character_modifier = eloeles_thieves
+			remove_character_modifier = eloeles_deception
+			remove_character_modifier = eloeles_independence
+			remove_character_modifier = eloeles_trickery
+	}
+}
+
+
+
+###For Laerme followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.25
+	desc = "EVTDESCportfolio_of_gods.25"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.25"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = laermes_fire
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.25"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = laermes_love
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.25"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = laermes_art
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.25"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.26 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.26
+	desc = "EVTDESCportfolio_of_gods.26"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.26"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = laermes_charm
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.26"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = laermes_passion
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.26"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.25 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.27
+	desc = "EVTDESCportfolio_of_gods.27"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Laerme }
+		OR = {
+			has_character_modifier = laermes_fire
+			has_character_modifier = laermes_love
+			has_character_modifier = laermes_art
+			has_character_modifier = laermes_charm
+			has_character_modifier = laermes_passion
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.27"
+			remove_character_modifier = laermes_fire
+			remove_character_modifier = laermes_love
+			remove_character_modifier = laermes_art
+			remove_character_modifier = laermes_charm
+			remove_character_modifier = laermes_passion
+	}
+}
+
+
+###For Belinik followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.28
+	desc = "EVTDESCportfolio_of_gods.28"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.28"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = beliniks_fear
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.28"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = beliniks_domination
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.28"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = beliniks_feuds
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.28"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.29 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.29
+	desc = "EVTDESCportfolio_of_gods.29"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.29"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = beliniks_battle
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.29"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = beliniks_strength
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.29"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.28 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.30
+	desc = "EVTDESCportfolio_of_gods.30"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Belinik }
+		OR = {
+			has_character_modifier = beliniks_fear
+			has_character_modifier = beliniks_domination
+			has_character_modifier = beliniks_feuds
+			has_character_modifier = beliniks_battle
+			has_character_modifier = beliniks_strength
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.30"
+			remove_character_modifier = beliniks_fear
+			remove_character_modifier = beliniks_domination
+			remove_character_modifier = beliniks_feuds
+			remove_character_modifier = beliniks_battle
+			remove_character_modifier = beliniks_strength
+	}
+}
+
+
+
+###For Kriesha followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.31
+	desc = "EVTDESCportfolio_of_gods.31"
+	picture = GFX_evt_bishop
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.31"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = krieshas_winter
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.31"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = krieshas_hardship
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.31"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = krieshas_horrors
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.31"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.32 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.32
+	desc = "EVTDESCportfolio_of_gods.32"
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.32"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = krieshas_suffering
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.32"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = krieshas_law
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.32"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.31 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.33
+	desc = "EVTDESCportfolio_of_gods.33"
+	picture = GFX_evt_bishop
+	
+	trigger = {
+		NOT = { religion = Kriesha }
+		OR = {
+			has_character_modifier = krieshas_winter
+			has_character_modifier = krieshas_hardship
+			has_character_modifier = krieshas_horrors
+			has_character_modifier = krieshas_suffering
+			has_character_modifier = krieshas_law
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.33"
+			remove_character_modifier = krieshas_winter
+			remove_character_modifier = krieshas_hardship
+			remove_character_modifier = krieshas_horrors
+			remove_character_modifier = krieshas_suffering
+			remove_character_modifier = krieshas_law
+	}
+}
+
+
+###For Azrai followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.34
+	desc = "EVTDESCportfolio_of_gods.34"
+	picture = GFX_evt_pagan
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.34"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = azrais_lies
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.34"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = azrais_strength
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.34"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = azrais_secrets
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.34"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.35 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.35
+	desc = "EVTDESCportfolio_of_gods.35"
+	picture = GFX_evt_pagan
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.35"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = azrais_knowledge
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.35"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = azrais_fear
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.35"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.34 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.36
+	desc = "EVTDESCportfolio_of_gods.36"
+	picture = GFX_evt_pagan
+	
+	trigger = {
+		NOT = { religion = Azrai }
+		OR = {
+			has_character_modifier = azrais_lies
+			has_character_modifier = azrais_strength
+			has_character_modifier = azrais_secrets
+			has_character_modifier = azrais_knowledge
+			has_character_modifier = azrais_fear
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.36"
+			remove_character_modifier = azrais_lies
+			remove_character_modifier = azrais_strength
+			remove_character_modifier = azrais_secrets
+			remove_character_modifier = azrais_knowledge
+			remove_character_modifier = azrais_fear
+	}
+}
+
+
+###For Nature followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.37
+	desc = "EVTDESCportfolio_of_gods.37"
+	picture = GFX_evt_pagan
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.37"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = natures_forests
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.37"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = natures_strength
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.37"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = natures_elements
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.37"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.38 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.38
+	desc = "EVTDESCportfolio_of_gods.38"
+	picture = GFX_evt_pagan
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.38"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = natures_knowledge
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.38"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = natures_understanding
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.38"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.37 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.39
+	desc = "EVTDESCportfolio_of_gods.39"
+	picture = GFX_evt_pagan
+	
+	trigger = {
+		NOT = { religion = Nature }
+		OR = {
+			has_character_modifier = natures_forests
+			has_character_modifier = natures_strength
+			has_character_modifier = natures_elements
+			has_character_modifier = natures_knowledge
+			has_character_modifier = natures_understanding
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.39"
+			remove_character_modifier = natures_forests
+			remove_character_modifier = natures_strength
+			remove_character_modifier = natures_elements
+			remove_character_modifier = natures_knowledge
+			remove_character_modifier = natures_understanding
+	}
+}
+
+
+###For Moradin followers
+
+# Aspects PopUp-Event-Page 1
+character_event = {
+	id = portfolio_of_gods.40
+	desc = "EVTDESCportfolio_of_gods.40"
+	picture = GFX_evt_pagan
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.40"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = moradins_earth
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.40"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = moradins_law
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.40"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = moradins_protection
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTDportfolio_of_gods.40"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.41 } }
+	}
+}
+
+# Aspects PopUp-Event-Page 2
+character_event = {
+	id = portfolio_of_gods.41
+	desc = "EVTDESCportfolio_of_gods.41"
+	picture = GFX_evt_pagan
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.41"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = moradins_arts
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTBportfolio_of_gods.41"
+		set_character_flag = portfolio_chosen
+		add_character_modifier = {
+			name = moradins_sciences
+			duration = -1
+		}
+	}
+	option = {
+		name = "EVTOPTCportfolio_of_gods.41"
+		hidden_tooltip = { character_event = { id = portfolio_of_gods.40 } }
+	}
+}
+
+# Clean-up event if your change religion
+character_event = {
+	id = portfolio_of_gods.42
+	desc = "EVTDESCportfolio_of_gods.42"
+	picture = GFX_evt_pagan
+	
+	trigger = {
+		NOT = { religion = DwarvenPantheon }
+		OR = {
+			has_character_modifier = moradins_earth
+			has_character_modifier = moradins_law
+			has_character_modifier = moradins_protection
+			has_character_modifier = moradins_arts
+			has_character_modifier = moradins_sciences
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "EVTOPTAportfolio_of_gods.42"
+			remove_character_modifier = moradins_earth
+			remove_character_modifier = moradins_law
+			remove_character_modifier = moradins_protection
+			remove_character_modifier = moradins_arts
+			remove_character_modifier = moradins_sciences
+	}
+}

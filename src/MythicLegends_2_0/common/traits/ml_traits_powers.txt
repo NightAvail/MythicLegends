@@ -1,0 +1,18 @@
+#######################################################
+# Mythic Legends
+# Traits
+#######################################################
+
+# Simple mage buff spell.
+ml_mage_weak_buff = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Powerful mage buff spell.
+ml_mage_powerful_buff = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}

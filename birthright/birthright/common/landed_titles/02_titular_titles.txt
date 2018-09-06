@@ -1,0 +1,912 @@
+
+##TITULAR TITLES#
+
+e_rebels = {
+	rebel = yes
+	landless = yes
+	primary = yes
+
+	culture = Anuirean
+	tribe = yes
+
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
+}
+
+e_pirates = {
+	pirate = yes
+	landless = yes
+	primary = yes
+
+	culture = Brecht
+	tribe = yes
+
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
+}
+
+e_shadowworld = {
+	color = { 255 127 0 }
+
+	short_name = yes
+
+#	capital = 1
+
+	# Always exists
+	landless = yes
+
+#	tribe = yes
+
+	culture = Vos
+	religion = Shadowworld
+}
+
+e_gorgons_crown = {
+	color={ 52 3 6 }
+	color2={ 255 255 255 }
+	
+	capital = 173 #  Kal Saitharak	
+	short_name = yes
+	
+	title = "Prince"
+	title_female = "Princess"
+	
+	culture = Anuirean
+	
+	allow = {
+		has_landed_title = k_gorgons_crown
+		has_trait = awn_gorgon
+	}
+}
+
+k_vampires_hold = {
+	color={ 223 17 32 }
+	color2={ 255 255 255 }
+	
+	short_name = yes
+	
+	culture = Brecht
+}
+
+k_mueden_republic = {
+	color={ 216 110 40 }
+	color2={ 255 255 255 }
+	
+	capital = 406 # Wesbrahlen
+	culture = Brecht
+	
+	title = Count
+	title_female = Countess
+}
+k_berhagen = {
+	color={ 46 18 43 }
+	color2={ 255 255 255 }
+	
+	capital = 436 # Holstadt
+	culture = Brecht
+	
+	title = Baron
+	title_female = Baroness
+	name_tier = baron
+}
+k_rheulgard = {
+	color={ 49 179 122 }
+	color2={ 255 255 255 }
+	
+	short_name = yes
+	capital = 418 # Coulbaraigh
+	culture = Brecht
+}
+
+k_yeninskiy = {
+	color={ 186 106 228 }
+	color2={ 255 255 255 }
+	
+	capital = 608 # Hilov
+	culture = Vos
+	
+	allow = {
+		has_landed_title = d_yeninskiy
+	}
+}
+
+k_kozlovnyy = {
+	color={ 137 71 117 }
+	color2={ 255 255 255 }
+	
+	capital = 577 # c_gradny
+	culture = Vos
+	
+	allow = {
+		has_landed_title = d_gradny
+	}
+}
+
+k_black_spear_tribes = {
+	color={ 83 58 12 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		has_landed_title = d_djira
+	}
+	capital = 730	# c_djira
+}
+
+k_zoloskaya = {
+	color={ 29 38 33 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		has_landed_title = d_zoloskaya
+	}
+	capital = 616 # c_adoga
+	culture = Vos
+}
+
+k_kal_kalathor = {
+	color={ 67 91 46 }
+	color2={ 255 255 255 }
+	
+	capital = 549 # c_murthang
+	culture = Goblin
+	
+	allow = {
+		religion = GoblinPantheon
+		has_landed_title = c_murthang
+	}
+}
+
+d_surzek = {
+	color={ 71 4 110 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		any_demesne_province = { OR = { province_id = 636 province_id = 637 province_id = 638 province_id = 639 province_id = 640 province_id = 941 } }
+	}
+	capital = 941 # c_zzyk
+}
+
+k_duzhumazabik = {
+	color={ 126 78 14 }
+	color2={ 255 255 255 }
+	
+	capital = 768 # Bauth Rayad
+	culture = Orog
+	tribe = yes
+	
+	allow = {
+		has_landed_title = d_bauth_ravad
+		culture = Orog
+		religion = OrogPantheon
+	}
+}
+
+k_min_dhousai = {
+	color={ 89 174 85 }
+	color2={ 255 255 255 }
+	
+	capital = 774 # Toure El Fasil	
+	
+	culture = Khinasi
+}
+
+k_djafra = {
+	color={ 94 46 104 }
+	color2={ 255 255 255 }
+	
+	capital = 742 # Djafra
+	
+	allow = {
+		has_landed_title = d_djafra
+	}
+}
+
+k_aftane = {
+	color={ 98 38 44 }
+	color2={ 255 255 255 }
+	
+	capital = 708 # Aftane
+	
+	allow = {
+		has_landed_title = d_aftane
+	}
+}
+
+k_khourane = {
+	color={ 190 124 95 }
+	color2={ 255 255 255 }
+	
+	capital = 797 # Ber Falaïa
+	
+	culture = Khinasi
+}
+
+k_serpent = {
+	color={ 235 237 104 }
+	color2={ 255 255 255 }
+	
+	capital = 808 
+	short_name = yes
+	
+	title = "GodKing"
+	title_female = "GodQueen"
+	
+	culture = Masetian
+	
+	allow = {
+		trait = awn_serpent
+	}
+	
+}
+
+k_magian = {
+	color={ 24 4 86 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		trait = awn_magian
+	}
+	tribe = yes
+	capital = 824 # c_pipryet
+}
+
+k_raven = {
+	color={ 150 8 8 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		trait = awn_raven
+	}
+	tribe = yes
+	capital = 599 # Yanskia
+}
+
+k_sphinx = {
+	color={ 216 137 26 }
+	color2={ 255 255 255 }
+
+	allow = {
+		trait = awn_sphinx
+	}
+	capital = 686 # c_irbouda
+}
+
+k_white_witch = {
+	color={ 216 137 26 }
+	color2={ 255 255 255 }
+
+	allow = {
+		trait = awn_white_witch
+	}
+	capital = 274 # c_mandal
+}
+
+##########
+##ANUIRE##
+##########
+
+k_avanil = {
+	color={ 255 0 0 }
+	color2={ 128 0 0 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_avanil
+		has_landed_title = d_mieres
+	}
+		num_of_duke_titles = 2
+		independent = yes
+		primary_title = { title = d_avanil }
+		k_heartlands = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 38 # Daulton
+	short_name = yes
+	
+	title = "Prince"
+	title_female = "Princess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_boeruine = {
+	color={ 139 0 139 }
+	color2={ 75 0 130 }
+
+	allow={
+	AND={
+		has_landed_title = d_boeruine
+		has_landed_title = d_talinie
+	}
+		num_of_duke_titles = 2
+		independent = yes
+		primary_title = { title = d_boeruine }
+		k_western_bay = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 22 # Seasedge
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_diemed = {
+	color={ 30 144 255 }
+	color2={ 65 105 225 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_diemed
+		has_landed_title = d_medoere
+		has_landed_title = d_ilien
+	}
+		independent = yes
+		primary_title = { title = d_diemed }
+		k_southern_bay = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 89 # Aerele
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_ghoere = {
+	color={ 218 165  32 }
+	color2={ 205 133  63 }
+	
+	allow = {
+		has_landed_title = d_ghoere
+		num_of_duke_titles = 2
+		independent = yes
+		primary_title = { title = d_ghoere }
+		k_heartlands = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 68 # Bhaelaene
+	short_name = yes
+	
+	title = "Grand Baron"
+	title_female = "Grand Baroness"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_alamie = {
+	color={ 255 255 0 }
+	color2={ 218 165 32 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_alamie
+		has_landed_title = d_tuornen
+		has_landed_title = d_rhuobhe
+	}
+		independent = yes
+		primary_title = { title = d_alamie }
+		k_heartlands = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 55 # Deseirain
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_aerenwe = {
+	color={ 0 0 205 }
+	color2={ 0 0 255 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_aerenwe
+		has_landed_title = d_caelcorwynn
+	}
+		independent = yes
+		primary_title = { title = d_aerenwe }
+		k_southern_bay = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 110 # Calrie
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_taeghas = {
+	color={ 188 143 143 }
+	color2={ 255 255 255 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_taeghas
+		has_landed_title = d_brosengae
+	}
+		independent = yes
+		primary_title = { title = d_taeghas }
+		k_western_bay = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 13 # Seasdeep
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_mhoried = {
+	color={ 199 230 199 }
+	color2={ 255 255 255 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_mhoried
+		has_landed_title = d_markazor
+	}
+		independent = yes
+		primary_title = { title = d_mhoried }
+		k_heartlands = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 76 # Bevaldruor
+	short_name = yes
+	
+	title = "Mhor"
+	title_female = "Mhora"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_osoerde = {
+	color={ 133 115 152 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		has_landed_title = d_osoerde
+		num_of_duke_titles = 2
+		independent = yes
+		primary_title = { title = d_osoerde }
+		k_eastern_marches = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 119 # Moriel
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_talinie = {
+	color={ 178 122 27 }
+	color2={ 255 255 255 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_talinie
+		has_landed_title = d_thurazor
+	}
+		independent = yes
+		primary_title = { title = d_talinie }
+		k_western_bay = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 33 # Ice Haven
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_cariele = {
+	color={ 15 38 71 }
+	color2={ 255 255 255 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_cariele
+		has_landed_title = d_five_peaks
+	}
+		num_of_duke_titles = 2
+		independent = yes
+		primary_title = { title = d_cariele }
+		k_northern_marches = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 182 # Riverford
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+k_elinie = {
+	color={ 107 88 42 }
+	color2={ 255 255 255 }
+	
+	allow = {
+	AND={
+		has_landed_title = d_elinie
+		has_landed_title = d_coeranys
+		has_landed_title = d_chimaeron
+	}
+		independent = yes
+		primary_title = { title = d_elinie }
+		k_eastern_marches = { has_holder = no }
+		culture = Anuirean
+	}
+	
+	capital = 84 # Ansien
+	short_name = yes
+	
+	title = "Archduke"
+	title_female = "Archduchess"
+	
+	culture = Anuirean
+	
+	creation_requires_capital = yes
+
+}
+
+d_drake = {
+	color={ 139 69 19 }
+	color2={ 255 222 173 }
+	
+	allow = {
+		num_of_count_titles = 4
+		independent = yes
+		d_five_peaks = { has_holder = no }
+		religion = Drake_Cult
+	}
+
+	capital = 186 # Torain
+	short_name = yes
+	
+	title = "Lord"
+	title_female = "Lady"
+	
+	culture = Orog
+	religion = Drake_Cult
+	
+}
+
+c_royal_college = {
+	color={ 176 224 230 }
+	color2={ 255 228 181 }
+
+	allow = {
+		independent = yes
+	}
+
+	capital = 36 # Imperial City
+	short_name = yes
+	primary = yes
+
+	title = "Lord"
+	title_female = "Lady"
+
+	culture = Anuirean
+	landless = yes
+}
+
+d_imperial_chamberlain = {
+	color={ 220 220 220 }
+	color2={ 255 255 255 }
+
+	allow = {
+		independent = yes
+	}
+
+	capital = 36 # Imperial City
+	short_name = yes
+	primary = yes
+
+	title = "Imperial Chamberlain"
+	title_female = "Lady"
+
+	duchy_revokation = yes
+
+	culture = Anuirean
+	landless = yes
+
+	dignity=200
+}
+
+k_trautha = {
+	color={ 128 128 0 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		has_landed_title = d_talinie
+		num_of_duke_titles = 2
+		independent = yes
+		primary_title = { title = d_talinie }
+		k_western_bay = { has_holder = no }
+		culture = Elven
+		religion = Nature
+	}
+	
+	capital = 33 # Ice Haven
+	short_name = yes
+	
+	culture = Elven
+	
+	creation_requires_capital = yes
+}
+
+#k_cwmb_bheinn = {
+#	color={ 197 124 61 }
+#	color2={ 255 255 255 }
+	
+#	capital = 585 # c_cilmwyaren
+#	culture = Elven
+	
+#	allow = {
+#		has_landed_title = d_cwmb_bheinn
+#	}
+#}
+
+k_rhuannach = {
+	color={ 134 87 155 }
+	color2={ 255 255 255 }
+	
+	capital = 752 # c_morwyth
+	culture = Elven
+	
+	allow = {
+		has_landed_title = d_rhuannach
+	}
+}
+
+k_tuarhievel_dhoesone = {
+	color={ 00 64 00 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		AND={
+			has_landed_title = d_cwmbheir
+			has_landed_title = d_dhoesone
+		}
+		OR={
+			culture=Elven
+			culture=Anuirean
+		}
+		independent = yes
+	}
+	
+	capital = 160 # Cwmbheir
+	
+	creation_requires_capital = yes
+}
+
+e_aelvinwode = {
+	color={ 0 128 0 }
+	color2={ 255 255 255 }
+
+	allow = {
+		has_landed_title = k_tuarhievel
+		num_of_duke_titles = 3
+		independent = yes
+		culture = Elven
+	OR={
+	religion = Nature
+	religion = Gheallie_Sidhe
+	}
+	}
+	
+	capital = 160 # Thorn Throne
+	short_name = yes
+	name_tier = king
+	
+	title = "SidheKing"
+	title_female = "SidheQueen"
+	
+	culture = Elven
+	
+	creation_requires_capital = yes
+
+}
+
+e_stonecrowns = {
+	color={ 128 128 0 }
+	color2={ 107 142 35 }
+
+	allow={
+		has_landed_title = d_five_peaks
+		num_of_duke_titles = 3
+		independent = yes
+		primary_title = { title = k_northern_marches }
+	OR={
+	culture=Goblin
+	culture=Orog
+	}
+	}
+	
+	capital = 184 # Puinol
+	short_name = yes
+	name_tier = king
+	
+	title = "King"
+	title_female = "Queen"
+	
+	culture = Goblin
+	
+	creation_requires_capital = yes
+
+}
+
+d_boeruine_trading_guild = {
+	color={ 75 0 30 }
+	color2={ 255 255 255 }
+
+	allow = {
+		independent = yes
+	}
+	
+	capital = 25 # Tariene
+	short_name = yes
+	primary = yes
+	
+	culture = Anuirean
+	landless = yes
+}
+
+d_princes_pride = {
+	color={ 165 42 42 }
+	color2={ 255 255 255 }
+
+	allow = {
+		independent = yes
+	}
+	
+	capital = 38 # Daulton
+	short_name = yes
+	primary = yes
+	
+	culture = Anuirean
+	landless = yes
+}
+
+d_djafran_merchant_league = {
+	color={ 60 3 63 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		any_demesne_province = { OR = { province_id = 746 province_id = 747 province_id = 748 } }
+	}
+	capital = 747 # c_sahaiad
+}
+
+d_gold_coast_coster = {
+	color={ 58 97 200 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		any_demesne_province = { OR = { province_id = 718 } }
+	}
+	capital = 718 # c_azedas
+}
+
+k_urga_zai = {
+	color={ 29 14 240 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		any_demesne_province = { OR = { province_id = 310 province_id = 311 province_id = 312 province_id = 313 province_id = 314 province_id = 315 province_id = 316 province_id = 317 province_id = 318 province_id = 319 province_id = 320 province_id = 321 province_id = 322 } }
+	}
+	capital = 316 # c_draga_zai
+}
+
+
+k_ariya = {
+	color={ 87 39 101 }
+	color2={ 255 255 255 }
+
+	allow = {
+		has_landed_title = d_ariya
+	}
+	capital = 714 # c_ariya
+}
+
+k_khinad_ghuel = {
+	color={ 83 58 12 }
+	color2={ 255 255 255 }
+	
+	allow = {
+		has_trait = awn_ghoul
+	}
+	capital = 730	# c_djira
+}
+d_torsketly = {
+	color={ 255 174 85 }
+	color2={ 255 255 255 }
+	
+	capital = 603 # Btumi	
+	
+	culture = Khinasi
+}
+k_mairada = {
+	color={ 43 39 101 }
+	color2={ 255 255 255 }
+
+	allow = {
+		has_landed_title = d_mairada
+	}
+	capital = 801 # c_mairada
+}
+d_mairada_trade_company = {
+	color={ 65 42 42 }
+	color2={ 255 255 255 }
+
+	allow = {
+		independent = yes
+	}
+	capital = 801 # mairada
+	short_name = yes
+	primary = yes
+	culture = Khinasi
+	landless = yes
+}

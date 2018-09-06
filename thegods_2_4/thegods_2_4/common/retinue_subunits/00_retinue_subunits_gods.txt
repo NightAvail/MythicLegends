@@ -9,7 +9,7 @@
 
 RETTYPE_ANGELSA =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 50
 
 	special_troops = angelic
@@ -23,7 +23,7 @@ RETTYPE_ANGELSA =
 }
 RETTYPE_ANGELSB =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 250
 
 	special_troops = angelic
@@ -37,7 +37,7 @@ RETTYPE_ANGELSB =
 }
 RETTYPE_ANGELSC =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 500
 
 	special_troops = angelic
@@ -52,7 +52,7 @@ RETTYPE_ANGELSC =
 
 RETTYPE_YOUKAIA =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 50
 
 	special_troops = youkai
@@ -63,7 +63,7 @@ RETTYPE_YOUKAIA =
 }
 RETTYPE_YOUKAIB =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 250
 
 	special_troops = youkai
@@ -74,7 +74,7 @@ RETTYPE_YOUKAIB =
 }
 RETTYPE_YOUKAIC =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 500
 
 	special_troops = youkai
@@ -85,7 +85,7 @@ RETTYPE_YOUKAIC =
 }
 #RETTYPE_DARKANGELSA =
 #{
-#	first_type = 6
+#	first_type = 4
 #	first_amount = 50
 #
 #	special_troops = dark_angels
@@ -96,7 +96,7 @@ RETTYPE_YOUKAIC =
 #}
 #RETTYPE_DARKANGELSB =
 #{
-#	first_type = 6
+#	first_type = 4
 #	first_amount = 250
 #
 #	special_troops = dark_angels
@@ -107,7 +107,7 @@ RETTYPE_YOUKAIC =
 #}
 #RETTYPE_DARKANGELSC =
 #{
-#	first_type = 6
+#	first_type = 4
 #	first_amount = 500
 #
 #	special_troops = dark_angels
@@ -118,7 +118,7 @@ RETTYPE_YOUKAIC =
 #}
 RETTYPE_JOTNARA =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 10
 
 	special_troops = jotnar
@@ -129,7 +129,7 @@ RETTYPE_JOTNARA =
 }
 RETTYPE_JOTNARB =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 50
 
 	special_troops = jotnar
@@ -140,7 +140,7 @@ RETTYPE_JOTNARB =
 }
 RETTYPE_JOTNARC =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 100
 
 	special_troops = jotnar
@@ -151,7 +151,7 @@ RETTYPE_JOTNARC =
 }
 RETTYPE_JOTNARD =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 1000
 
 	special_troops = jotnar
@@ -162,7 +162,7 @@ RETTYPE_JOTNARD =
 }
 RETTYPE_TITANA =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 10
 
 	special_troops = titans
@@ -173,7 +173,7 @@ RETTYPE_TITANA =
 }
 RETTYPE_TITANB =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 50
 
 	special_troops = titans
@@ -184,7 +184,7 @@ RETTYPE_TITANB =
 }
 RETTYPE_TITANC =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 100
 
 	special_troops = titans
@@ -195,7 +195,7 @@ RETTYPE_TITANC =
 }
 RETTYPE_TITAND =
 {
-	first_type = 6
+	first_type = 4
 	first_amount = 1000
 
 	special_troops = titans

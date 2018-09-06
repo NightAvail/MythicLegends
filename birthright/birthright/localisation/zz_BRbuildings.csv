@@ -1,0 +1,207 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+##BUILDINGS###
+#Dwarven Mines#
+ca_mine_1;Surface Mine;;;;;;;;;;;;;x
+ca_mine_1_desc;This dwarven mine is very close to the surface, mining the most easy to access ores.;;;;;;;;;;;;;x
+ca_mine_2;Copper Mine;;;;;;;;;;;;;x
+ca_mine_2_desc;Copper mines are valuable, and the ores are still found quite close to the surface.;;;;;;;;;;;;;x
+ca_mine_3;Silver Mine;;;;;;;;;;;;;x
+ca_mine_3_desc;This mine has reached a deep vein of silver are, and the dwarves are busily digging deeper to access more precious metals.;;;;;;;;;;;;;x
+ca_mine_4;Gold Mine;;;;;;;;;;;;;x
+ca_mine_4_desc;These dwarves have finally struck gold, and their treasures overflow at the same time that their coins buy luxuries from the surface.;;;;;;;;;;;;;x
+ca_mine_5;Gem Mine;;;;;;;;;;;;;x
+ca_mine_5_desc;Deep beneath the surface, precious stones are to be found in abundance for those willing to risk the dangers.;;;;;;;;;;;;;x
+ca_mine_6;Mithril Mine;;;;;;;;;;;;;x
+ca_mine_6_desc;Deep in the depths of the earth, Mithril can be found. Easy to forge, yet nigh unbreakable once crafted, it is the most rare and valuable metal in Cerilia. The lust for Mithril has been the undoing of many dwarf realms, and they dug too deep, and disturbed the Orogs and other foul creatures that lurk below in the lightless caverns.;;;;;;;;;;;;;x
+ca_orog_1;Coal Mine;;;;;;;;;;;;;x
+ca_orog_1_desc;The fires of orog smiths are hungry things, and coal satisfies them better than timber.;;;;;;;;;;;;;x
+ca_orog_2;Rusty Ironworks;;;;;;;;;;;;;x
+ca_orog_2_desc;Whole veins of iron are cleared out by the miners, down to the last and most corrupted scraps of ore.  All will be put to use.;;;;;;;;;;;;;x
+ca_orog_3;Blacksmoke Furnace;;;;;;;;;;;;;x
+ca_orog_3_desc;Our fires belch and bellow even in the depths, churning out the tools of war.;;;;;;;;;;;;;x
+ca_orog_4;Molten Pits;;;;;;;;;;;;;x
+ca_orog_4_desc;Magma!  The most dangerous and prized of tools allows our smiths to turn out a coat of plates in no more than a day.;;;;;;;;;;;;;x
+ca_orog_5;Steamworks;;;;;;;;;;;;;x
+ca_orog_5_desc;The cleverest of us build constructions that tap into the lifesblood of the earth, turning it into an obedient servant - and freeing many strong orog for war instead of labor.;;;;;;;;;;;;;x
+ca_orog_6;Orichalcum Mine;;;;;;;;;;;;;x
+ca_orog_6_desc;Deep in the depths of the earth, in veins that glitter with dark promise, Orichalcum waits for us.  It holds its edge as greedily as a miser clutches gold, and stands before a battering as patient and relentless as the earth - few creatures but an Orog could hope to bear its weight, but there is no metal better made for war.;;;;;;;;;;;;;x
+ca_adventurers_1;Adventuring School;;;;;;;;;;;;;x
+ca_adventurers_1_desc;An adventuring school is surely to bring more prospects to our realm looking for both fame and glory.;;;;;;;;;;;;;x
+ca_adventurers_2;Adventuring Academy;;;;;;;;;;;;;x
+ca_adventurers_2_desc;An adventuring academy is a great way to expand adventurers growth, every year prospects with hopes of grandeur travel to our realm in hopes of gaining entrance into the academy.;;;;;;;;;;;;;x
+ca_adventurers_3;Adventuring Guild;;;;;;;;;;;;;x
+ca_adventurers_3_desc;The Adventuring Guild is the centre of attention in the realm, adventurers with great ambition of fame and glory gather here from all over Cerilia to go on expeditions and quests. Looking for ancient treasures, fair damsels in distress, and great beasts to slay, this adventurers are surely more than happy to trade services in exchange of coin.;;;;;;;;;;;;;x
+ca_treant_grove_1;Treant Clearing;;;;;;;;;;;;;x
+ca_treant_grove_2;Treant Grove;;;;;;;;;;;;;x
+ca_treant_grove_3;Treant Forest;;;;;;;;;;;;;x
+forest_source_holding;Forest Source Holding;;;;;;;;;;;;;x
+plains_source_holding;Plains Source Holding;;;;;;;;;;;;;x
+hills_source_holding;Hills Source Holding;;;;;;;;;;;;;x
+mountains_source_holding;Mountains Source Holding;;;;;;;;;;;;;x
+law_holding_1;Small Law Holding;;;;;;;;;;;;;x
+law_holding_2;Medium Law Holding;;;;;;;;;;;;;x
+law_holding_3;Large Law Holding;;;;;;;;;;;;;x
+temple_holding_1;Small Temple Holding;;;;;;;;;;;;;x
+temple_holding_2;Medium Temple Holding;;;;;;;;;;;;;x
+temple_holding_3;Large Temple Holding;;;;;;;;;;;;;x
+tr_merchant_holding_1;Small Guild Holding;;;;;;;;;;;;;x
+tr_merchant_holding_2;Medium Guild Holding;;;;;;;;;;;;;x
+tr_merchant_holding_3;Large Guild Holding;;;;;;;;;;;;;x
+tr_merchant_holding_4;Huge Guild Holding;;;;;;;;;;;;;x
+ca_mage_tower_1;Small Mage Tower;;;;;;;;;;;;;x
+ca_mage_tower_2;Medium Mage Tower;;;;;;;;;;;;;x
+ca_mage_tower_3;Large Mage Tower;;;;;;;;;;;;;x
+ca_mage_tower_4;Huge Mage Tower;;;;;;;;;;;;;x
+ca_inn_1;Small Inn;;;;;;;;;;;;;x
+ca_inn_1_desc;This small inn is generally sought out by travellers, merchants and adventurers seeking food, drinks and a cheap place to spend the night.;;;;;;;;;;;;;x
+ca_inn_2;Medium Inn;;;;;;;;;;;;;x
+ca_inn_2_desc;This medium sized inn is generally sought out by travellers, merchants and adventurers seeking food, drinks and a decent place to spend the night.;;;;;;;;;;;;;x
+ca_inn_3;Large Inn;;;;;;;;;;;;;x
+ca_inn_3_desc;This large inn is generally the centre of attention amongst travellers, drinks and food are plenty here, a good nights rest is guaranteed.;;;;;;;;;;;;;x
+ca_inn_4;Huge Inn;;;;;;;;;;;;;x
+ca_inn_4_desc;This huge inn is rapidly making a name for itself, mostly sought out amongst all travellers everywhere, drinks and food are plenty here, a good nights rest is guaranteed.;;;;;;;;;;;;;x
+ca_wall_6;Huge Castle Walls;;;;;;;;;;;;;x
+ct_merchant_district_1;Small Merchant District;;;;;;;;;;;;;x
+ct_merchant_district_2;Medium Merchant District;;;;;;;;;;;;;x
+ct_merchant_district_3;Large Merchant District;;;;;;;;;;;;;x
+ct_merchant_district_1_desc;A small part of the city serves as merchant district where citizens and people from all around the realm can buy anything from edibles to small estates.;;;;;;;;;;;;;x
+ct_merchant_district_2_desc;A medium part of the city serves as merchant district where citizens and people from all around the realm can buy anything from edibles to medium estates.;;;;;;;;;;;;;x
+ct_merchant_district_3_desc;A large part of the city serves as merchant district where citizens and people from all around the realm can buy anything from edibles to large estates.;;;;;;;;;;;;;x
+#Unique Buildings#
+ca_bevaldruor;Bevaldruor;;;;;;;;;;;;;x
+ca_bevaldruor_desc;Bevaldruor as it is known in old Andu or also known as Shieldhaven in Anuirean, is the ancestral home of House Mhoried. This fortification dates back to the old days of the Anuirean Empire when it used to be the first defence against The Gorgon and has long since stood as the 'Shield of Anuire'.;;;;;;;;;;;;;x
+tp_avelerine_cathedral;Avelerine Cathedral;;;;;;;;;;;;;x
+tp_avelerine_cathedral_desc;The Avelerine Cathedral, the first church built solely in the honour of Haelyn. The Cathedral houses many relics and treasures of Haelyn, not the least among them the original Book of Laws.;;;;;;;;;;;;;x
+tp_celestial_palace;Celestial Palace;;;;;;;;;;;;;x
+tp_celestial_palace_desc;The Celestial Palace, the seat of power of the ruler of Medoere. The Celestial Palace used to be known as Caer Enlien when it was the seat of power of House Enlien, now it houses Ruornil Celestial Spell's 'Sacred Voice' and has become a palace of worship.;;;;;;;;;;;;;x
+ct_ilien;Ilien;;;;;;;;;;;;;x
+ct_ilien_desc;One of the oldest city in Anuire, the Free City of Ilien has been the seat of power of House Aglondier since they gained their independence from the Duchy of Diemed. Its walls standing high and mighty peaking at 70 ft, defend the city against any intruders.;;;;;;;;;;;;;x
+ca_rock_roost_castle;Rock Roost Castle;;;;;;;;;;;;;x
+ca_rock_roost_castle_desc;Built by the first Baron of Ghoere the Rock Roost Castle has been an impregnable fortress, the massive stones of House Tael's keep are said to had been cut from the peaks of Mur-Kilad. There is no location in Bhalaene where a man can hide from the gaze of the dark keep.;;;;;;;;;;;;;x
+ca_blacktower_castle;Blacktower Castle;;;;;;;;;;;;;x
+ca_blacktower_castle_desc;The Blacktower Castle has been the Baronial residence since Daen 'The Black Baron' successfully won the independence of Roesone from the Duchy of Diemed, built by one of Daen's lieutenant Noelon 'The Hawk', the Blacktower Castle has been one of the strongest fortifications in Southern Anuire.;;;;;;;;;;;;;x
+ca_imperial_city;The Imperial City;;;;;;;;;;;;;x
+ca_imperial_city_desc;The greatest city in all of Anuire and perhaps even of Cerilia, The Imperial City is the capital of the ancient Anuirean Empire and the heart of modern Anuirean lands. The first emperor to ever sit the Iron Throne was Roele Andu who united The Original 12 Duchies and went on to conquer much of Cerilia - The last emperor to sit the Iron Throne was Michael Roele who fought tooth and nail to win the support of his vassals in The War of Succession against the Archduke Aerin Boeruine, he later met his death at the hands of The Gorgon and the empire with him.;;;;;;;;;;;;;x
+ca_daulton;Caer Daulton;;;;;;;;;;;;;x
+ca_daulton_desc;Dating back to the old days of the Anuirean Empire, Caer Daulton has been the seat of power of House Avan since Emperor Boeric Roele granted the lands surrounding The Imperial City to his kin Avanlyr Roele, whom then went on to create a dynasty of his own. Much to this day Daulton remains the capital of The Principality of Avanil and the heart to Avanese politics.;;;;;;;;;;;;;x
+ca_seaharrow_castle;Seaharrow Castle;;;;;;;;;;;;;x
+ca_seaharrow_castle_desc;The Seaharrow Castle, the ancestral home of House Boeruine is an immense castle with a defensive wall encircling it. This fortification dates back to the old days of the Anuirean Empire when it served as seat of power to Archduke Derwyn Boeruine and his kin.;;;;;;;;;;;;;x
+ca_caer_aerele;Caer Aerele;;;;;;;;;;;;;x
+ca_caer_aerele_desc;Caer Aerele, also still called with the old name of Caer Deretha, is the seat of power of House Diem. Long ago this used to be the seat of power of House Deretha when much of southern anuire was known as the Archduchy of Diemed.;;;;;;;;;;;;;x
+ca_castle_bellamie;Castle Bellamie;;;;;;;;;;;;;x
+ca_castle_bellamie_desc;Castle Bellamie, seat of power of House Bellamie used to be part of Aerenwe but was ceded to Roesone in order to keep peace with the newly established barony. Much to this day House Bellamie enjoys a high degree of stature and prestige in Roesone as one of the few nobles that weren't outlaws at the time of Roesone's founding.;;;;;;;;;;;;;x
+ca_caer_ansien;Caer Ansien;;;;;;;;;;;;;x
+ca_caer_ansien_desc;Caer Ansien, seat of power of the rulers of Elinie since Archduke Ansien Elinie built this fortification in order to preserve both his legacy and his kin. This day House ibn Daouta rules over Elinie, since Daouta slayed the last Archduke Duraend Elinie who was a tyrant and his people had grown tired of him.;;;;;;;;;;;;;x
+ca_oak_seat;The Oak Seat;;;;;;;;;;;;;x
+ca_oak_seat_desc;When Jarod Dannis united Talinie it wasn't he who sat at the throne, he selected his three year old son Edrand to rule Talinie and his wooden throne was then known as The Oak Seat.;;;;;;;;;;;;;x
+ca_thorn_throne;The Thorn Throne;;;;;;;;;;;;;x
+ca_thorn_throne_desc;The Thorn Throne has been the seat of power of the ruler of Tuarhievel since its first Queen, Tuar, founded the realm. It is said that the Thorn Throne will injure any pretender that tries to seat without first being accepted by it.;;;;;;;;;;;;;x
+ca_crystal_palace;The Crystal Palace;;;;;;;;;;;;;x
+ca_crystal_palace_desc;This palace, made entirely of crystal, was raised from the earth by the magic and lore of the Emerald Queen's forebears, and it is said that a single candle held in the right place can illuminate the entire structure.;;;;;;;;;;;;;x
+ca_castle_rhuannoch;Castle Rhuannoch;;;;;;;;;;;;;x
+ca_castle_rhuannoch_desc;Castle Rhuannoch, seat of power to House Manslayer. This fortification houses Rhuobhe 'Manslayer' and his kin - and has served as their centre of operations long before humans came to Cerilia.;;;;;;;;;;;;;x
+ca_haesrien;Haesrien;;;;;;;;;;;;;x
+ca_haesrien_desc;Haesrien, built by Archduke Haes 'The Builder' of Alamie, is home to over 6,000 people, the city of Haesrien is the second oldest in all Tuornen and serves as the realm's heart of culture, commerce and government. It also serves as the seat of power of the rulers of Tuornen.;;;;;;;;;;;;;x
+ca_caer_alam;Caer Alam;;;;;;;;;;;;;x
+ca_caer_alam_desc;An ancient castle built atop a hill in the center of Deseirain, Caer Alam is the ancestral seat of House Alam. An ancient structure dating back to the earliest days of settlement, when the human settlers had to fight off elven raids, the castle has been rebuilt several times over the ruins of older castles. Today, a labyrinth of old tunnels and forgotten rooms lie beneath the castle and popular stories tell of the ghosts of long dead Alam family members haunting the depths of Caer Alam.;;;;;;;;;;;;;x
+ca_imperial_militia;Imperial Militia;;;;;;;;;;;;;x
+###PROVINCE LEVELS##
+province0;Level 0 Province;;;;;;;;;;;;;x
+province1;Level 1 Province;;;;;;;;;;;;;x
+province2;Level 2 Province;;;;;;;;;;;;;x
+province3;Level 3 Province;;;;;;;;;;;;;x
+province4;Level 4 Province;;;;;;;;;;;;;x
+province5;Level 5 Province;;;;;;;;;;;;;x
+province6;Level 6 Province;;;;;;;;;;;;;x
+province7;Level 7 Province;;;;;;;;;;;;;x
+province8;Level 8 Province;;;;;;;;;;;;;x
+province9;Level 9 Province;;;;;;;;;;;;;x
+province10;Level 10 Province;;;;;;;;;;;;;x
+ca_province_0;Level 0 Province;;;;;;;;;;;;;x
+ca_province_0_desc;A level zero province is basically uninhabited, held only loosely by a local lord and a handful of retainers living off foraging and hunting.;;;;;;;;;;;;;x
+ca_province_1;Level 1 Province;;;;;;;;;;;;;x
+ca_province_1_desc;A level one province has maybe 1,000 people living in it in isolated homesteads, and is barely more than a wilderness.;;;;;;;;;;;;;x
+ca_province_2;Level 2 Province;;;;;;;;;;;;;x
+ca_province_2_desc;A level two province has around 4,000 people living there, and there is maybe a handful of small settlements surrounded by spread-out homesteads.;;;;;;;;;;;;;x
+ca_province_3;Level 3 Province;;;;;;;;;;;;;x
+ca_province_3_desc;A level three province typically has around 7,000 people, and there may be one or two proper towns that act as the centers of commerce and local government.;;;;;;;;;;;;;x
+ca_province_4;Level 4 Province;;;;;;;;;;;;;x
+ca_province_4_desc;A level four province has maybe 10,000 people living in it, and typically also a prosperous city which is well governed with an established middle-class of merchants and lower nobility.;;;;;;;;;;;;;x
+ca_province_5;Level 5 Province;;;;;;;;;;;;;x
+ca_province_5_desc;A level five province can have around 20,000 citizens, and is widely accounted a well-settled prosperous area. There is at least one major city, and several towns all connected by good roads and well patrolled wildernesses.;;;;;;;;;;;;;x
+ca_province_6;Level 6 Province;;;;;;;;;;;;;x
+ca_province_6_desc;A level six province has up to 30,000 people living in it, making it a center of commerce and civilization in the often wild landscape of Cerilia. Many of these citizens will tend to group around one major city, often a regional capital, but the rest of the land is well guarded and settled as well.;;;;;;;;;;;;;x
+ca_province_7;Level 7 Province;;;;;;;;;;;;;x
+ca_province_7_desc;A level seven province is one of the most settled in Cerilia, and there are typically not many untamed wilderness areas in such a region. Up to 40,000 people can live in such a province, and there is almost always a great metropolis at its center.;;;;;;;;;;;;;x
+ca_province_8;Level 8 Province;;;;;;;;;;;;;x
+ca_province_8_desc;A level eight province is teeming with citizens, up to 60,000 of them which means that almost all the land is cultivated or claimed to one extent or another. One can typically not walk for more than an hour here without seeing one kind of person or another, which is rare indeed in the great wide lands of Cerilia.;;;;;;;;;;;;;x
+ca_province_9;Level 9 Province;;;;;;;;;;;;;x
+ca_province_9_desc;A level nine province usually has around 80,000 people, and it will be famous for its major metropolis which is known far and wide as a teeming center of commerce, opportunity, and power.;;;;;;;;;;;;;x
+ca_province_10;Level 10 Province;;;;;;;;;;;;;x
+ca_province_10_desc;A level ten province is typically almost either completely urbanised, or holds a great city with all the surrounding land being either farmland or full of subsidiary towns and villages. Up to 100,000 people live in such a province, making its population and wealth greater than many entire realms.;;;;;;;;;;;;;x
+ct_province_0;Level 0 Province;;;;;;;;;;;;;x
+ct_province_0_desc;A level zero province is basically uninhabited, held only loosely by a local lord and a handful of retainers living off foraging and hunting.;;;;;;;;;;;;;x
+ct_province_1;Level 1 Province;;;;;;;;;;;;;x
+ct_province_1_desc;A level one province has maybe 1,000 people living in it in isolated homesteads, and is barely more than a wilderness.;;;;;;;;;;;;;x
+ct_province_2;Level 2 Province;;;;;;;;;;;;;x
+ct_province_2_desc;A level two province has around 4,000 people living there, and there is maybe a handful of small settlements surrounded by spread-out homesteads.;;;;;;;;;;;;;x
+ct_province_3;Level 3 Province;;;;;;;;;;;;;x
+ct_province_3_desc;A level three province typically has around 7,000 people, and there may be one or two proper towns that act as the centres of commerce and local government.;;;;;;;;;;;;;x
+ct_province_4;Level 4 Province;;;;;;;;;;;;;x
+ct_province_4_desc;A level four province has maybe 10,000 people living in it, and typically also a prosperous city which is well governed with an established middle-class of merchants and lower nobility.;;;;;;;;;;;;;x
+ct_province_5;Level 5 Province;;;;;;;;;;;;;x
+ct_province_5_desc;A level five province can have around 20,000 citizens, and is widely accounted a well-settled prosperous area. There is at least one major city, and several towns all connected by good roads and well patrolled wildernesses.;;;;;;;;;;;;;x
+ct_province_6;Level 6 Province;;;;;;;;;;;;;x
+ct_province_6_desc;A level six province has up to 30,000 people living in it, making it a center of commerce and civilization in the often wild landscape of Cerilia. Many of these citizens will tend to group around one major city, often a regional capital, but the rest of the land is well guarded and settled as well.;;;;;;;;;;;;;x
+ct_province_7;Level 7 Province;;;;;;;;;;;;;x
+ct_province_7_desc;A level seven province is one of the most settled in Cerilia, and there are typically not many untamed wilderness areas in such a region. Up to 40,000 people can live in such a province, and there is almost always a great metropolis at its center.;;;;;;;;;;;;;x
+ct_province_8;Level 8 Province;;;;;;;;;;;;;x
+ct_province_8_desc;A level eight province is teeming with citizens, up to 60,000 of them which means that almost all the land is cultivated or claimed to one extent or another. One can typically not walk for more than an hour here without seeing one kind of person or another, which is rare indeed in the great wide lands of Cerilia.;;;;;;;;;;;;;x
+ct_province_9;Level 9 Province;;;;;;;;;;;;;x
+ct_province_9_desc;A level nine province usually has around 80,000 people, and it will be famous for its major metropolis which is known far and wide as a teeming center of commerce, opportunity, and power.;;;;;;;;;;;;;x
+ct_province_10;Level 10 Province;;;;;;;;;;;;;x
+ct_province_10_desc;A level ten province is typically almost either completely urbanised, or holds a great city with all the surrounding land being either farmland or full of subsidiary towns and villages. Up to 100,000 people live in such a province, making its population and wealth greater than many entire realms.;;;;;;;;;;;;;x
+tp_province_0;Level 0 Province;;;;;;;;;;;;;x
+tp_province_0_desc;A level zero province is basically uninhabited, held only loosely by a local lord and a handful of retainers living off foraging and hunting.;;;;;;;;;;;;;x
+tp_province_1;Level 1 Province;;;;;;;;;;;;;x
+tp_province_1_desc;A level one province has maybe 1,000 people living in it in isolated homesteads, and is barely more than a wilderness.;;;;;;;;;;;;;x
+tp_province_2;Level 2 Province;;;;;;;;;;;;;x
+tp_province_2_desc;A level two province has around 4,000 people living there, and there is maybe a handful of small settlements surrounded by spread-out homesteads.;;;;;;;;;;;;;x
+tp_province_3;Level 3 Province;;;;;;;;;;;;;x
+tp_province_3_desc;A level three province typically has around 7,000 people, and there may be one or two proper towns that act as the centres of commerce and local government.;;;;;;;;;;;;;x
+tp_province_4;Level 4 Province;;;;;;;;;;;;;x
+tp_province_4_desc;A level four province has maybe 10,000 people living in it, and typically also a prosperous city which is well governed with an established middle-class of merchants and lower nobility.;;;;;;;;;;;;;x
+tp_province_5;Level 5 Province;;;;;;;;;;;;;x
+tp_province_5_desc;A level five province can have around 20,000 citizens, and is widely accounted a well-settled prosperous area. There is at least one major city, and several towns all connected by good roads and well patrolled wildernesses.;;;;;;;;;;;;;x
+tp_province_6;Level 6 Province;;;;;;;;;;;;;x
+tp_province_6_desc;A level six province has up to 30,000 people living in it, making it a center of commerce and civilization in the often wild landscape of Cerilia. Many of these citizens will tend to group around one major city, often a regional capital, but the rest of the land is well guarded and settled as well.;;;;;;;;;;;;;x
+tp_province_7;Level 7 Province;;;;;;;;;;;;;x
+tp_province_7_desc;A level seven province is one of the most settled in Cerilia, and there are typically not many untamed wilderness areas in such a region. Up to 40,000 people can live in such a province, and there is almost always a great metropolis at its center.;;;;;;;;;;;;;x
+tp_province_8;Level 8 Province;;;;;;;;;;;;;x
+tp_province_8_desc;A level eight province is teeming with citizens, up to 60,000 of them which means that almost all the land is cultivated or claimed to one extent or another. One can typically not walk for more than an hour here without seeing one kind of person or another, which is rare indeed in the great wide lands of Cerilia.;;;;;;;;;;;;;x
+tp_province_9;Level 9 Province;;;;;;;;;;;;;x
+tp_province_9_desc;A level nine province usually has around 80,000 people, and it will be famous for its major metropolis which is known far and wide as a teeming center of commerce, opportunity, and power.;;;;;;;;;;;;;x
+tp_province_10;Level 10 Province;;;;;;;;;;;;;x
+tp_province_10_desc;A level ten province is typically almost either completely urbanised, or holds a great city with all the surrounding land being either farmland or full of subsidiary towns and villages. Up to 100,000 people live in such a province, making its population and wealth greater than many entire realms.;;;;;;;;;;;;;x
+tr_province_0;Level 0 Province;;;;;;;;;;;;;x
+tr_province_0_desc;A level zero province is basically uninhabited, held only loosely by a local lord and a handful of retainers living off foraging and hunting.;;;;;;;;;;;;;x
+tr_province_1;Level 1 Province;;;;;;;;;;;;;x
+tr_province_1_desc;A level one province has maybe 1,000 people living in it in isolated homesteads, and is barely more than a wilderness.;;;;;;;;;;;;;x
+tr_province_2;Level 2 Province;;;;;;;;;;;;;x
+tr_province_2_desc;A level two province has around 4,000 people living there, and there is maybe a handful of small settlements surrounded by spread-out homesteads.;;;;;;;;;;;;;x
+tr_province_3;Level 3 Province;;;;;;;;;;;;;x
+tr_province_3_desc;A level three province typically has around 7,000 people, and there may be one or two proper towns that act as the centres of commerce and local government.;;;;;;;;;;;;;x
+tr_province_4;Level 4 Province;;;;;;;;;;;;;x
+tr_province_4_desc;A level four province has maybe 10,000 people living in it, and typically also a prosperous city which is well governed with an established middle-class of merchants and lower nobility.;;;;;;;;;;;;;x
+tr_province_5;Level 5 Province;;;;;;;;;;;;;x
+tr_province_5_desc;A level five province can have around 20,000 citizens, and is widely accounted a well-settled prosperous area. There is at least one major city, and several towns all connected by good roads and well patrolled wildernesses.;;;;;;;;;;;;;x
+tr_province_6;Level 6 Province;;;;;;;;;;;;;x
+tr_province_6_desc;A level six province has up to 30,000 people living in it, making it a center of commerce and civilization in the often wild landscape of Cerilia. Many of these citizens will tend to group around one major city, often a regional capital, but the rest of the land is well guarded and settled as well.;;;;;;;;;;;;;x
+tr_province_7;Level 7 Province;;;;;;;;;;;;;x
+tr_province_7_desc;A level seven province is one of the most settled in Cerilia, and there are typically not many untamed wilderness areas in such a region. Up to 40,000 people can live in such a province, and there is almost always a great metropolis at its center.;;;;;;;;;;;;;x
+tr_province_8;Level 8 Province;;;;;;;;;;;;;x
+tr_province_8_desc;A level eight province is teeming with citizens, up to 60,000 of them which means that almost all the land is cultivated or claimed to one extent or another. One can typically not walk for more than an hour here without seeing one kind of person or another, which is rare indeed in the great wide lands of Cerilia.;;;;;;;;;;;;;x
+tr_province_9;Level 9 Province;;;;;;;;;;;;;x
+tr_province_9_desc;A level nine province usually has around 80,000 people, and it will be famous for its major metropolis which is known far and wide as a teeming center of commerce, opportunity, and power.;;;;;;;;;;;;;x
+tr_province_10;Level 10 Province;;;;;;;;;;;;;x
+tr_province_10_desc;A level ten province is typically almost either completely urbanised, or holds a great city with all the surrounding land being either farmland or full of subsidiary towns and villages. Up to 100,000 people live in such a province, making its population and wealth greater than many entire realms.;;;;;;;;;;;;;x

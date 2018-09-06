@@ -1,0 +1,208 @@
+decisions = {
+
+##############################
+#WIZARD/SORCERER REALM SPELLS#
+##############################
+
+cast_realm_war_magic = {
+	
+	potential = {
+		AND = {
+		OR = {
+			trait=novice_mage
+			trait=trained_mage
+			trait=master_mage
+			trait=legendary_mage
+			trait=novice_sorcerer
+			trait=trained_sorcerer
+			trait=master_sorcerer
+			trait=legendary_sorcerer
+			}
+		OR = {
+			trait=elf
+			trait=bloodline_tainted
+			trait=bloodline_minor
+			trait=bloodline_major
+			trait=bloodline_great
+			trait=bloodline_true
+			}
+			}
+			}
+		
+		allow = {
+		piety=100
+		wealth=20
+		war=yes
+		NOT = { trait = casting_realm_magic }
+			}
+		
+		effect = {
+		ROOT = { character_event = { id = realmbattlemagic.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}			
+			}
+
+cast_realm_magic = {
+	
+	potential = {
+		AND = {
+		OR = {
+			trait=novice_mage
+			trait=trained_mage
+			trait=master_mage
+			trait=legendary_mage
+			trait=novice_sorcerer
+			trait=trained_sorcerer
+			trait=master_sorcerer
+			trait=legendary_sorcerer
+			}
+		OR = {
+						trait=elf
+			trait=bloodline_tainted
+			trait=bloodline_minor
+			trait=bloodline_major
+			trait=bloodline_great
+			trait=bloodline_true
+			}
+			}
+			}
+		
+		allow = {
+		piety=100	
+		wealth=20
+		NOT = { trait = casting_realm_magic }
+			}
+		
+		effect = {
+		ROOT = { character_event = { id = realmspell.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 5
+		}			
+			}
+
+cast_lightning_storm_enemy = {
+	is_high_prio = yes
+	
+	potential = {
+			OR = {
+			trait=novice_lightning_storm
+			trait=trained_lightning_storm
+			trait=master_lightning_storm
+			trait=legendary_lightning_storm
+			}
+			war = yes
+			}
+			
+		allow = {
+			OR = {
+			trait=novice_lightning_storm
+			trait=trained_lightning_storm
+			trait=master_lightning_storm
+			trait=legendary_lightning_storm
+			}
+			OR = {
+				any_current_enemy = {
+						at_location = ROOT
+						in_command = yes
+				}
+				
+					any_current_enemy = {
+						any_vassal = {
+						at_location = ROOT
+						in_command = yes
+						}
+					}
+					any_current_enemy = {
+						any_vassal = {
+							any_vassal = {
+								at_location = ROOT
+								in_command = yes
+							}
+						}
+					}
+					any_current_enemy = {
+						any_vassal = {
+							any_vassal = {
+								any_vassal = {
+									at_location = ROOT
+									in_command = yes
+								}
+							}
+						}
+					}
+					any_current_enemy = {
+						any_vassal = {
+							any_vassal = {
+								any_vassal = {
+									any_vassal = {
+										at_location = ROOT
+										in_command = yes
+									}
+								}
+							}
+						}
+					}
+			}
+			}
+			
+		effect = {
+		ROOT = { character_event = { id = combatmagic.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}			
+		
+		}
+			
+		
+		
+##also need separate decision to command court mage##
+
+##############################
+#PRIESTLY REALM SPELLS#
+##############################
+
+cast_priest_magic = {
+	
+	potential = {
+		AND = {
+		OR = {
+			trait=novice_priest
+			trait=trained_priest
+			trait=master_priest
+			trait=legendary_priest
+			}
+		OR = {
+			trait=elf
+			trait=bloodline_tainted
+			trait=bloodline_minor
+			trait=bloodline_major
+			trait=bloodline_great
+			trait=bloodline_true
+			}
+			}
+			}
+		
+		allow = {
+		piety=100
+		wealth=20
+		NOT = { trait = casting_realm_magic }
+			}
+		
+		effect = {
+		ROOT = { character_event = { id = realmpriestmagic.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}			
+			}
+			
+			
+			}

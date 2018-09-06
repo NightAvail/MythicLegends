@@ -1,0 +1,19 @@
+novice_lightning_storm={
+	customizer = no
+	random = no
+}
+
+trained_lightning_storm={
+	customizer = no
+	random = no
+}
+
+master_lightning_storm={
+	customizer = no
+	random = no
+}
+
+legendary_lightning_storm={
+	customizer = no
+	random = no
+}

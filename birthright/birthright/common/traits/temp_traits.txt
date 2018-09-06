@@ -1,0 +1,69 @@
+casting_realm_magic = {
+	customizer = no
+	random = no
+diplomacy = -6
+intrigue = -6
+martial = -6
+stewardship = -6
+pilgrimage = yes
+fertility = -0.3
+}
+
+adventuring = {
+	customizer = no
+	random = no
+
+	diplomacy = -15
+	intrigue = -15
+	stewardship = -15
+	
+	pilgrimage = yes
+	is_health = yes
+	
+	fertility = -0.3
+	monthly_character_prestige = 1.0
+}
+
+on_current_quest = {
+	
+	customizer = no
+	is_health = yes
+	
+	random = no
+	
+	monthly_character_prestige = 2.0
+}
+
+duel_target = {
+	customizer = no
+	random = no
+	cached = yes
+}
+
+dead_target = {
+	customizer = no
+	random = no
+}
+
+bloodthefted = {
+	customizer = no
+	random = no
+	is_health = yes
+	health = -100
+#	cached = yes
+}
+
+apprenticing = {
+
+	ai_ambition = 10
+
+	same_opinion = 15
+	liege_opinion = 15
+
+	customizer = no
+	monthly_character_prestige = 0.05
+	cannot_marry = yes
+	random = no
+	pilgrimage = yes
+
+}

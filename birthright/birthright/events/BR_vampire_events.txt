@@ -1,0 +1,60 @@
+namespace = vampires
+
+	#character gets turned into a vampire via targetted decision
+	character_event = {
+    id = vampires.0   
+	desc = vampires0desc #A vampire has given you the Blood Gift, and you feel your body transforming, strengthening, and sharp canines begin to grow swiftly as the taint of Azrai fills you with a sharp hunger.
+    picture = "GFX_evt_vampire_kiss"
+	
+	is_triggered_only = yes
+	
+	option={
+	name=vampire0a #I must feed... 
+	add_trait = vampire
+	set_graphical_culture = Vampire
+	}
+	
+	}
+	
+	#AI vampires turn their children via event, if worthy
+	character_event = {
+    id = vampires.1  
+	desc = vampires0desc #A vampire has given you the Blood Gift, and you feel your body transforming, strengthening, and sharp canines begin to grow swiftly as the taint of Azrai fills you with a sharp hunger.
+    picture = "GFX_evt_vampire_kiss"
+	
+	trigger = {
+	ai = yes
+	trait = vampire
+	learning = 40
+	any_child = {
+	OR = { 
+	martial = 15
+	stewardship = 15
+	intrigue = 15
+	diplomacy = 15
+	}
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 20
+	}
+	
+	option={
+	name=vampire0a #Do it!
+	change_learning = -5
+	random_child = {
+	limit = {
+	OR = { 
+	martial = 15
+	stewardship = 15
+	intrigue = 15
+	diplomacy = 15
+	}
+	}
+	add_trait = vampire
+	set_graphical_culture = Vampire
+	}
+	}
+	
+	}

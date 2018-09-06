@@ -1,0 +1,495 @@
+###########################
+####  Made by Talias   ####
+##   Integrated by Rev  ###
+###########################
+
+namespace = prisoner
+
+################################################
+# Force prisoner to relinquish claims decision
+################################################
+# Jailer - Force prisoner to relinquish claims
+character_event = {
+	id = prisoner.1
+	desc = EVTDESCprisoner.1
+	picture = GFX_evt_torture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAprisoner.1
+	}
+}
+# Prisoner - Forced to relinquish claims
+character_event = {
+	id = prisoner.2
+	desc = EVTDESCprisoner.2
+	picture = GFX_evt_torture
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAprisoner.2
+	}
+}
+
+################################################
+# Visit prisoner decision
+################################################
+# Prisoner - Visited
+character_event = {
+	id = prisoner.3
+	desc = EVTDESCprisoner.3
+	picture = GFX_evt_lovers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAprisoner.3
+
+		custom_tooltip = {
+			host = { character_event = { id = prisoner.4 } }
+		}
+	}
+}
+# Jailer - Visit prisoner
+character_event = {
+	id = prisoner.4
+	desc = EVTDESCprisoner.4
+	picture = GFX_evt_lovers
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAprisoner.4
+		custom_tooltip = {
+			text = CTVISITING
+		}
+		hidden_tooltip = {
+			FROM = { opinion = { modifier = opinion_prison_concubine who = ROOT } }
+		}
+	}
+}
+
+
+character_event = {
+	id = prisoner.17
+	desc = EVTDESCprisoner.4
+	picture = GFX_evt_lovers
+	
+	hide_window = yes
+	only_women = yes
+	min_age = 15
+	
+	trigger = {
+		prisoner = yes
+		fertility = 0
+		has_any_opinion_modifier = opinion_prison_concubine
+		NOT = { 
+			trait = pregnant 
+			num_of_children = 10
+		}
+		host = { 
+			fertility = 0 
+			reverse_has_opinion_modifier = { who = ROOT modifier = opinion_prison_concubine }
+			NOT = { num_of_children = 10 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 6
+		
+		modifier = {
+			factor = 0.8
+			fertility = 0.5
+		}
+		modifier = {
+			factor = 0.8
+			host = { fertility = 0.5 }
+		}
+		modifier = {
+			factor = 0.8
+			fertility = 0.65
+		}
+		modifier = {
+			factor = 0.8
+			host = { fertility = 0.65 }
+		}
+		modifier = {
+			factor = 0.8
+			fertility = 0.8
+		}
+		modifier = {
+			factor = 0.8
+			host = { fertility = 0.8 }
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { fertility = 0.35 }
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { host = { fertility = 0.35 } }
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { fertility = 0.2 }
+		}
+		modifier = {
+			factor = 1.2
+			NOT = { host = { fertility = 0.2 } }
+		}
+	}
+	
+	option = {
+		name = "OK"
+		host = { impregnate = ROOT }
+		set_character_flag = prison_rape
+	}
+}
+
+
+character_event = {
+	id = prisoner.18
+	desc = EVTDESCprisoner.4
+	picture = GFX_evt_lovers
+	
+	hide_window = yes
+	only_women = yes
+	min_age = 15
+		
+	trigger = {
+		prisoner = no
+		has_any_opinion_modifier = opinion_prison_concubine
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		any_opinion_modifier_target = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					who = PREV
+					modifier = opinion_prison_concubine
+				}
+			}
+			reverse_remove_opinion = {
+				who = PREV
+				modifier = opinion_prison_concubine
+			}
+		}
+	}
+}
+
+
+# Prisoner - Pregnant (on_pregnancy)
+character_event = {
+	id = prisoner.5
+	desc = EVTDESCprisoner.5
+	picture = GFX_evt_pregnancy
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { trait = pregnant }
+		has_character_flag = prison_rape
+	}
+	
+	option = {
+		name = OK
+		add_trait = pregnant
+		prestige = -75
+		if = {
+			limit = {
+				prisoner = yes
+				father_of_unborn = {
+					is_alive = yes
+					ROOT = {
+						host = { character = PREVPREV }
+					}
+				}
+			}
+			father_of_unborn = { character_event = { id = prisoner.6 } }
+		}
+		if = {
+			limit = {
+				prisoner = no
+				OR = {
+					is_married = yes
+					is_consort = yes
+				}
+			}
+			spouse = { character_event = { id = prisoner.7 } }
+			consort = { character_event = { id = prisoner.7 } }
+		}
+	}
+}
+
+# Jailer - Notification if still prisoner
+character_event = {
+	id = prisoner.6
+	desc = EVTDESCprisoner.6
+	picture = GFX_evt_pregnancy
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = prisoner.6.a # Hah, she should be honoured of bearing my child!
+		prestige = 20
+		treasury = -2
+	}
+}
+# Spouse or consort - Notification if not prisoner
+character_event = {
+	id = prisoner.7
+	desc = EVTDESCprisoner.7
+	picture = GFX_evt_pregnancy
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = OK
+	}
+}
+# Child - Is born (on_birth)
+character_event = {
+	id = prisoner.8
+	desc = "EVTDESCPRISONER.8"
+	picture = GFX_evt_birth
+	
+	is_triggered_only = yes
+	
+	trigger = {
+#		NOT = { culture = wilderness}
+		#was_conceived_a_bastard = yes
+		mother = { has_character_flag = prison_rape }
+	}
+	
+	option = {
+		name = "OK"
+		mother = {
+			clr_character_flag = prison_rape
+			if = {		#Still in rapist's prison - he decides
+				limit = {
+					prisoner = yes
+					host = {
+						ROOT = {
+							father = {
+								is_alive = yes
+								character = PREVPREV
+							}
+						}
+					}
+				}
+				ROOT = { father = { character_event = { id = prisoner.9 days = 1 } } }
+				break = yes
+			}
+			if = {		#Otherwise, landed or single - she decides
+				limit = {
+					OR = {
+						is_ruler = yes
+						AND = {
+							is_consort = no
+							is_married = no
+						}
+					}
+				}
+				character_event = { id = prisoner.10 days = 1 }
+				break = yes
+			}
+			#Otherwise, send to husband/liege - only valid one will work
+			spouse = { character_event = { id = prisoner.10 days = 1 } }
+			consort = { character_event = { id = prisoner.10 days = 1 } }
+		}
+	}
+}
+# Jailor - Reacts to the bastard birth
+character_event = {
+	id = prisoner.9
+	desc = EVTDESCprisoner.9
+	picture = GFX_evt_birth
+	
+	is_triggered_only = yes
+	
+	option = { # Legitimize the child - jailor's wife and children upset
+		name = EVTOPTAprisoner.9
+		FROM = {
+			character_event = { id = prisoner.11 tooltip = EVTTOOLTIPprisoner.11 }
+		}
+		any_spouse = {
+			limit = {
+				NOT = { FROM = { mother = { character = PREVPREV } } }
+			}
+			hidden_tooltip = {
+				character_event = { id = prisoner.12 }
+			}
+			tooltip = {
+				opinion = { who = FROM modifier = legitimized_bastard }
+			}
+		}
+				
+		any_child = {
+			limit = {
+				NOT = { character = FROM }
+				dynasty = ROOT
+				NOT = { trait = bastard }
+			}
+			opinion = { who = ROOT modifier = legitimized_bastard months = 12 }
+		}
+	}
+	
+	option = { # Acknowledge the child - wife upset
+		name = EVTOPTBprisoner.9
+		FROM = {
+			character_event = { id = prisoner.14 tooltip = EVTTOOLTIPprisoner.14 }
+		}
+		any_spouse = {
+			limit = {
+				NOT = { FROM = { mother = { character = PREVPREV } } }
+			}
+			hidden_tooltip = {
+				character_event = { id = prisoner.15 }
+			}
+			tooltip = {
+				opinion = { who = FROM modifier = acknowledged_bastard }
+			}
+		}
+	}
+	option = { # Denounce the child
+		name = EVTOPTCprisoner.9
+		FROM = {
+			character_event = { id = prisoner.16 tooltip = EVTTOOLTIPprisoner.16 }
+		}
+	}
+}
+
+# Spouse, consort or prisoner - Reacts to the bastard birth
+character_event = {
+	id = prisoner.10
+	desc = EVTDESCprisoner.10
+	picture = GFX_evt_birth
+	
+	is_triggered_only = yes
+	
+	option = { # Legitimize the child
+		name = EVTOPTAprisoner.9
+		FROM = {
+			character_event = { id = prisoner.11 tooltip = EVTTOOLTIPprisoner.11 } 
+			mother = {
+				if = {
+					limit = { character = ROOT }	#Mother got event - husband (if any) upset
+					spouse = { 
+						opinion = { who = ROOT modifier = legitimized_bastard }
+					}
+				}
+				if = {
+					limit = { NOT = { character = ROOT } }  #Husband/liege got event - wife happy
+					opinion = { who = ROOT modifier = legitimized_child }
+				}
+			}					
+		}		
+		any_child = {
+			limit = {
+				NOT = { character = FROM }
+				dynasty = ROOT
+				NOT = { trait = bastard }
+			}
+			opinion = { who = ROOT modifier = legitimized_bastard months = 12 }
+		}
+	}
+	
+	option = { # Acknowledge the child - no meaningful effects
+		name = EVTOPTBprisoner.9
+		FROM = { character_event = { id = prisoner.14 tooltip = EVTTOOLTIPprisoner.14 } }
+	}
+	
+	#Can't denounce, since the person picking here isn't the father anyway
+}
+
+# Child - Legitimized
+character_event = {
+	id = prisoner.11
+	desc = EVTDESC302
+	picture = GFX_evt_birth
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = OK
+		dynasty = FROM
+		remove_trait = bastard
+		add_trait = legit_bastard
+		if = {
+			limit = { 
+				father = { NOT = { character = FROM } }
+				FROM = { is_female = no }	#Mothers don't get set as fathers!
+			}
+			father = { ROOT = { set_real_father = PREV } }
+			set_father = FROM
+		}
+	}
+}
+
+# Jailor's wife - Enraged
+character_event = {
+	id = prisoner.12
+	desc = EVTDESCprisoner.12
+	picture = GFX_evt_quarrel
+	
+	is_triggered_only = yes 
+
+	option = {
+		name = EVTOPTAprisoner.12
+		spouse = { reverse_opinion = { who = ROOT modifier = legitimized_bastard years = 20 } }
+	}
+}
+
+# Child - Acknowledged
+character_event = {
+	id = prisoner.14
+	desc = EVTDESC306
+	picture = GFX_evt_birth
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = OK
+		dynasty = father_bastard
+		add_trait = bastard
+	}
+}
+# Jailor's wife - Angered
+character_event = {
+	id = prisoner.15
+	desc = EVTDESCprisoner.15
+	picture = GFX_evt_quarrel
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = EVTOPTAprisoner.15
+		spouse = { reverse_opinion = { who = ROOT modifier = acknowledged_bastard years = 20 } }
+	}
+}
+# The child is denounced
+character_event = {
+	id = prisoner.16
+	desc = EVTDESC309
+	picture = GFX_evt_birth
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = OK
+		dynasty = mother_bastard
+		father = { ROOT = { set_real_father = PREV } }
+		set_father = 0
+	}
+}

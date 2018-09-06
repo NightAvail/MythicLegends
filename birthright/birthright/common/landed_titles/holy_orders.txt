@@ -1,0 +1,589 @@
+d_ihh = {
+	color={ 230 230 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 96 # Ilien
+	
+	title = "High Prefect"
+	title_female = "High Prefectess"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_ihh_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Haelyn
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_haelynaegis = {
+	color={ 230 250 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 82 # Chalsedon
+	
+	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_haelynaegis_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Haelyn
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 5 # (Must be an integer between 1 and 512)
+}
+
+d_milorce = {
+	color={ 200 250 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 50 # Haesrien
+	
+	title = "GRANDMASTER"
+	title_female = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_milorce_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Cuiraecen
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+}
+
+d_haelynwarriors = {
+	color={ 190 250 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 385 # Alklund
+	
+	title = "Archbishop"
+	title_female = "Archbishop"
+	foa = "Your Grace"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_haelynwarriors_composition
+	
+	culture = Brecht
+	
+	# Parent Religion 
+	religion = Haelyn
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+}
+
+d_stormorder = {
+	color={ 190 250 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 119 # Moriel
+	
+	title = "Storm Prefect"
+	title_female = "Storm Prefectess"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_stormorder_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Cuiraecen
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+}
+
+d_orthodoxguardians = {
+	color={ 190 220 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 89 # Aerele
+	
+	title = "Patriarch"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_orthodoxguardians_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Haelyn
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
+}
+
+d_sonsofserpent = {
+	color={ 190 220 230 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 807 # Callian
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_sonsofserpent_composition
+	
+	culture = Khinasi
+	
+	# Parent Religion 
+	religion = Serpent
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 20 # (Must be an integer between 1 and 512)
+}
+
+d_krieshawitches = {
+	color={ 133 23 26 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 264 # Kandalask
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_krieshawitches_composition
+	religion = Kriesha
+	culture = Vos
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_gheallie_sidhe = {
+	color={ 133 23 26 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 139 # Hoehnain
+	
+	title = "Protector"
+	foa = "Sir"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_gheallie_sidhe_composition
+	religion = Gheallie_Sidhe
+	culture = Elven
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_forestguardians = {
+	color={ 0 100 0 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 160 # Cwmbheir
+	
+	title = "Guardian"
+	title_female = "Guardian"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_forestguardians_composition
+	
+	culture = Elven
+	
+	# Parent Religion 
+	religion = Nature
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_peaceful_nesirie = {
+	color={ 216 191 216 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 13 # Seasdeep
+	
+	title = "High Priest"
+	title_female = "High Priestess"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_peaceful_nesirie_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Nesirie
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_tf = {
+	color={ 105 105 105 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 132 # Careine
+	
+	title = "High Fist of Cuiraecen"
+	title_female = "High Fist of Cuiraecen"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_tf_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Cuiraecen
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+c_lpa = {
+	color={ 135 206 250 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 120 # Ruorven
+	
+	title = "Hierophant"
+	title_female = "Hierophant"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = c_lpa_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Avani
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_htc = {
+	color={ 25 25 112 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 22 # Seasedge
+	
+	title = "High Priest"
+	title_female = "High Priestess"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_htc_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Cuiraecen
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_cjs = {
+	color={ 216 191 216 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 55 # Deseirain
+	
+	title = "Sacred Broker"
+	title_female = "Sacred Broker"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_cjs_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Sera
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_ff = {
+	color={ 221 160 221 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 436 # Holstadt
+	
+	title = "High Priest"
+	title_female = "High Priestess"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_ff_composition
+	
+	culture = Brecht
+	
+	# Parent Religion 
+	religion = Sera
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_bloodspears = {
+	color={ 105 105 105 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 534 # Ziass
+	
+	title = "Commander"
+	title_female = "Commander"
+	foa = "Sire"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_bloodspears_composition
+	
+	culture = Vos
+	
+	# Parent Religion 
+	religion = Belinik
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_tof = {
+	color={ 255 182 193 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 10 # Bindier
+	
+	title = "High Priest"
+	title_female = "High Priestess"
+	foa = "Your Eminence"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_tof_composition
+	
+	culture = Anuirean
+	
+	# Parent Religion 
+	religion = Sera
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_oaken_grove = {
+	color={ 0 191 255 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 208 # Ustkjuvil
+	
+	title = "Archdruid"
+	title_female = "Archdruidess"
+	foa = "Your Eminence"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_oaken_grove_composition
+	
+	culture = Rjurik
+	
+	# Parent Religion 
+	religion = Erik
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}
+
+d_emerald_spiral = {
+	color={ 70 130 180 }
+	color2={ 255 255 255 }
+	
+	graphical_culture = holygfx
+	
+	capital = 236 # Skapa Hjaering
+	
+	title = "Grand Druid"
+	title_female = "Grand Druidess"
+	foa = "Your Eminence"
+
+	# Always exists
+	landless = yes
+	
+	holy_order = yes
+	mercenary_type = d_tof_composition
+	
+	culture = Rjurik
+	
+	# Parent Religion 
+	religion = Old_Father_of_the_Forests
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Extra income due to banking, etc
+	monthly_income = 10 # (Must be an integer between 1 and 512)
+}

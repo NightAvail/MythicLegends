@@ -1,0 +1,464 @@
+#################################################
+#
+# CULTURAL CONVERSION EVENTS
+#
+#################################################
+
+# Province culture changes
+province_event = {
+	id = 55000
+	desc = "EVTDESC55000"
+	picture = GFX_evt_stone_church
+	
+	trigger = {
+		owner = {
+			top_liege = {
+				culture = PREV
+			}
+			NOT = { culture = ROOT }
+			#religion = ROOT
+		}
+		
+		OR = {
+		any_neighbor_province = {
+			has_owner = yes
+			ROOT = {
+				owner = {
+					culture = PREVPREV
+				}
+			}
+			owner = {
+				ROOT = {
+					owner = {
+						culture = PREVPREV
+					}
+				}
+			}
+		}
+		owner = {
+		NOT = { culture_group = human }
+		}
+	}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 2 } }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 3 } }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 4 } }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 5 } }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 9 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 11 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 13 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 15 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = {
+				OR = {
+					primary_title = {
+						conquest_culture = PREV
+					}
+					ROOT = {
+						county = {
+							conquest_culture = PREVPREV
+						}
+					}
+					ROOT = {
+						duchy = {
+							holder_scope = {
+								character = PREVPREVPREV
+							}
+							conquest_culture = PREVPREV
+						}
+					}
+					ROOT = {
+						kingdom = {
+							holder_scope = {
+								character = PREVPREVPREV
+							}
+							conquest_culture = PREVPREV
+						}
+					}
+					ROOT = {
+						empire = {
+							holder_scope = {
+								character = PREVPREVPREV
+							}
+							conquest_culture = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTA55000"
+		owner = {
+			ROOT = {
+				culture = PREV
+				religion = PREV
+			}
+		}
+	}
+}
+
+# Bring in some settlers
+province_event = {
+	id = 55001
+	desc = "EVTDESC55001"
+	picture = GFX_evt_stone_church
+	
+	only_rulers = yes
+	
+	trigger = {
+		owner = {
+			top_liege = {
+				culture = PREV
+			}
+			NOT = { culture = ROOT }
+			capital_scope = {
+				province_id = ROOT
+			}
+			
+			OR = {
+				primary_title = {
+					conquest_culture = PREV
+				}
+				ROOT = {
+					county = {
+						conquest_culture = PREVPREV
+					}
+				}
+				ROOT = {
+					duchy = {
+						holder_scope = {
+							character = PREVPREVPREV
+						}
+						conquest_culture = PREVPREV
+					}
+				}
+				ROOT = {
+					kingdom = {
+						holder_scope = {
+							character = PREVPREVPREV
+						}
+						conquest_culture = PREVPREV
+					}
+				}
+				ROOT = {
+					empire = {
+						holder_scope = {
+							character = PREVPREVPREV
+						}
+						conquest_culture = PREVPREV
+					}
+				}
+			}
+		}
+		
+		NOT = { # Exclude provinces covered by event 55000
+			any_neighbor_province = {
+				has_owner = yes
+				ROOT = {
+					owner = {
+						culture = PREVPREV
+					}
+				}
+				owner = {
+					ROOT = {
+						owner = {
+							culture = PREVPREV
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 2 } }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 3 } }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 4 } }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { NOT = { stewardship = 5 } }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 9 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 11 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 13 }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { stewardship = 15 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA55001"
+		owner = {
+			ROOT = {
+				culture = PREV
+				if = {
+					limit = {
+						NOT = { religion = PREV }
+					}
+					religion = PREV
+				}
+			}
+		}
+	}
+}
+
+# The English Melting Pot
+character_event = {
+	id = 55002
+	desc = "EVTDESC55002"
+	picture = GFX_evt_stone_church
+	
+	trigger = {
+		year = 1100
+		culture = norman
+		any_demesne_province = {
+			kingdom = {
+				title = k_england
+			}
+			culture = saxon
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1200
+		modifier = {
+			factor = 0.75
+			diplomacy = 7
+		}
+		modifier = {
+			factor = 0.75
+			diplomacy = 9
+		}
+		modifier = {
+			factor = 0.75
+			diplomacy = 11
+		}
+		modifier = {
+			factor = 0.75
+			diplomacy = 13
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { diplomacy = 5 }
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { diplomacy = 3 }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { diplomacy = 1 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTA55002"
+		culture = english
+		random_demesne_province = {
+			limit = {
+				kingdom = {
+					title = k_england
+				}
+				culture = saxon
+			}
+			culture = english
+		}
+	}
+}
+
+# It's spreading
+character_event = {
+	id = 55003
+	desc = "EVTDESC55003"
+	picture = GFX_evt_stone_church
+	
+	trigger = {
+		year = 1100
+		culture = english
+		any_demesne_province = {
+			kingdom = {
+				title = k_england
+			}
+			OR = {
+				culture = saxon
+				culture = norman
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 720
+	}
+
+	option = {
+		name = "EVTOPTA55003"
+		random_demesne_province = {
+			limit = {
+				kingdom = {
+					title = k_england
+				}
+				OR = {	
+					culture = saxon
+					culture = norman
+				}
+			}
+			culture = english
+		}
+	}
+}
+
+#Make my court speak English
+character_event = {
+	id = 55004
+	desc = "EVTDESC55004"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		year = 1100
+		culture = english
+		independent = no
+		top_liege = {
+			primary_title = {
+				title = k_england
+			}
+		}
+		any_courtier = {
+			OR = {
+				culture = saxon
+				culture = norman
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+
+	option = {
+		name = "EVTOPTA55004"
+		random_courtier = {
+			limit = {
+				OR = {	
+					culture = saxon
+					culture = norman
+				}
+			}
+			culture = english
+			hidden_tooltip = {
+				character_event = { id = 55006 days = 3 }
+			}
+		}
+	}
+}
+
+#Make my vassal speak English
+character_event = {
+	id = 55005
+	desc = "EVTDESC55005"
+	picture = GFX_evt_throne_room
+
+	trigger = {
+		year = 1100
+		culture = english
+		independent = no
+		top_liege = {
+			primary_title = {
+				title = k_england
+			}
+		}
+		any_vassal = {
+			OR = {
+				culture = saxon
+				culture = norman
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 720
+	}
+
+	option = {
+		name = "EVTOPTA55005"
+		random_vassal = {
+			limit = {
+				OR = {	
+					culture = saxon
+					culture = norman
+				}
+			}
+			culture = english
+			hidden_tooltip = {
+				character_event = { id = 55006 days = 3 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = 55006
+	desc = "EVTDESC55006"
+	picture = GFX_evt_throne_room
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA55006"
+		culture = english
+	}
+}
+
+

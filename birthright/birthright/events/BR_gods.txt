@@ -1,0 +1,167 @@
+#events for creatures claiming divinity
+
+namespace = gods
+
+
+character_event = {
+	id = gods.1 	#god died
+	hide_window = yes
+	is_triggered_only = yes #fired from on-death
+	
+	trigger = {
+		OR = {
+			character = 15801
+			character = 18701
+			character = 19601
+			character = 5303
+		}
+	}
+  
+	option = {
+		name = OK
+		#who died?
+		if = {
+			limit = { character = 15801 }	#Sphinx
+			if = {
+				limit = {
+					is_ruler = yes
+					independent = yes
+				}
+				any_realm_character = {
+					limit = { religion = Sphinx }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+			any_independent_ruler = {
+				any_realm_character = {
+					limit = { religion = Sphinx }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+		}
+		if = {
+			limit = { character = 18701 }	#Lamia
+			if = {
+				limit = {
+					is_ruler = yes
+					independent = yes
+				}
+				any_realm_character = {
+					limit = { religion = Lamia }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+			any_independent_ruler = {
+				any_realm_character = {
+					limit = { religion = Lamia }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+		}
+		if = {
+			limit = { character = 19601 }	#Serpent
+			if = {
+				limit = {
+					is_ruler = yes
+					independent = yes
+				}
+				any_realm_character = {
+					limit = { religion = Serpent }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+			any_independent_ruler = {
+				any_realm_character = {
+					limit = { religion = Serpent }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+		}
+		if = {
+			limit = { character = 5303 }	#Drake
+			if = {
+				limit = {
+					is_ruler = yes
+					independent = yes
+				}
+				any_realm_character = {
+					limit = { religion = Drake_Cult }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+			any_independent_ruler = {
+				any_realm_character = {
+					limit = { religion = Drake_Cult }
+					character_event = { id = gods.2 days = 7 }
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = gods.2 				#Character's god just died
+	desc = gods.2.desc			#They say that $godname lies dead...
+	is_triggered_only = yes
+  
+	option = {
+		name = gods.2.a			#He/she is a god, and cannot truly die.  Retain belief.
+	}
+	
+	option = {
+		name = gods.2.b			#Faith is dead
+		religion = Outlaw
+	}
+	
+	option = {
+		name = gods.2.c			#I shall return to the gods of my people
+		trigger = {
+			OR = {
+				culture = Elven
+				culture = Dwarven
+				culture_group = Goblinoid
+				culture = Giant
+				culture = Halfling
+				culture = Wraith
+				culture = Gnoll
+			}
+		}
+		if = {
+			limit = { culture = Elven }
+			religion = Nature
+		}
+		if = {
+			limit = { culture = Dwarven }
+			religion = DwarvenPantheon
+		}
+		if = {
+			limit = { culture = Goblin }
+			religion = GoblinPantheon
+		}
+		if = {
+			limit = { culture = Orog }
+			religion = OrogPantheon
+		}
+		if = {
+			limit = { culture = Giant }
+			religion = GiantPantheon
+		}
+		if = {
+			limit = { culture = Halfling }
+			religion = HalflingPantheon
+		}
+		if = {
+			limit = { culture = Wraith }
+			religion = Shadowworld
+		}
+		if = {
+			limit = { culture = Gnoll }
+			religion = GnollPantheon
+		}
+	}
+	
+	option = {
+		name = gods.2.d			#The true source of his/her power was Azrai, and he shall receive my worship
+		religion = Azrai
+	}
+}

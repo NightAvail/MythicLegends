@@ -1,0 +1,203 @@
+##########################################
+##All new cerilia-wide buildings go here##
+##always add new ones at the end please ##
+##########################################
+
+
+
+castle={
+
+	#Warrior Cult, special pagan building that gives more infantry to pagans
+	ca_warrior_cult = {
+		auto_add_at_year = 10
+		potential = {
+			#FROM = {
+			#	religion_group = pagan_group
+			#	is_reformed_religion = no
+			#	NOT = {
+			#		any_liege = {
+			#			NOT = { religion_group = pagan_group }
+			#		}
+			#	}
+			#}
+			OR = {
+				religion_group = gods_of_evil
+				religion_group = Azrai
+				religion_group = Demihuman
+				religion_group = Gnolls
+				religion_group = Awnsheighleen
+				religion_group = Faithless
+			}
+			NOT = { has_global_flag = shattered_balance }
+		}
+		gold_cost = 10
+		build_time = 60
+		light_infantry = 50
+		heavy_infantry = 100
+		archers = 50
+		galleys = 2
+		tech_growth_modifier = -0.05
+		culture_techpoints = -0.005
+		economy_techpoints = -0.005
+		military_techpoints = -0.005
+		fort_level = 1
+		ai_creation_factor = 300 #AI should always build this if it can
+	}
+	
+	ca_inn_1 = {
+		desc = ca_inn_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		tax_income = 1
+		ai_creation_factor = 110
+		add_number_to_name = no
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	ca_inn_2 = {
+		desc = ca_inn_2_desc
+		prerequisites = { ca_wall_1 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_inn_1
+		gold_cost = 120
+		build_time = 547
+		tax_income = 1
+		ai_creation_factor = 109
+		add_number_to_name = no
+
+		extra_tech_building_start = 0.8
+	}
+	ca_inn_3 = {
+		desc = ca_inn_3_desc
+		prerequisites = { ca_wall_2 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_inn_2
+		gold_cost = 140
+		build_time = 753
+		tax_income = 2
+		ai_creation_factor = 109
+		add_number_to_name = no
+
+		extra_tech_building_start = 0.8
+	}
+	ca_inn_4 = {
+		desc = ca_inn_4_desc
+		prerequisites = { ca_wall_2 }
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		upgrades_from = ca_inn_3
+		gold_cost = 200
+		build_time = 982
+		tax_income = 2
+		ai_creation_factor = 109
+		add_number_to_name = no
+
+		extra_tech_building_start = 0.8
+	}
+
+	ca_adventurers_1 = {
+		desc = ca_adventurers_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 500
+		build_time = 365
+		tax_income = -1
+		ai_creation_factor = 100
+		knights = 25
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+		}
+	}
+	ca_adventurers_2 = {
+		desc = ca_adventurers_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_adventurers_1
+		gold_cost = 500
+		build_time = 365
+		tax_income = -1
+		ai_creation_factor = 99
+		knights = 35
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	ca_adventurers_3 = {
+		desc = ca_adventurers_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_adventurers_2
+		gold_cost = 500
+		build_time = 765
+		tax_income = -1
+		ai_creation_factor = 98
+		knights = 45
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+}
+	
+city={
+
+	ct_merchant_district_1 = {
+		desc = ct_merchant_district_1_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 1 }
+		gold_cost = 1000
+		build_time = 865
+		ai_creation_factor = 50
+		
+		fort_level = 1.0
+		levy_size = 0.025
+		garrison_size = 0.2
+		tax_income = 2
+		
+		light_infantry = 100
+		pikemen = 80
+		archers = 50
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	ct_merchant_district_2 = {
+		desc = ct_merchant_district_2_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 3 }
+		upgrades_from = ct_merchant_district_1
+		gold_cost = 1600
+		build_time = 1125
+		ai_creation_factor = 50
+		
+		fort_level = 1.0
+		levy_size = 0.025
+		garrison_size = 0.2
+		tax_income = 2
+		
+		light_infantry = 100
+		pikemen = 80
+		archers = 50
+		
+		extra_tech_building_start = 0.2
+	}
+
+	ct_merchant_district_3 = {
+		desc = ct_merchant_district_3_desc
+		trigger = { TECH_CITY_CONSTRUCTION = 5 }
+		upgrades_from = ct_merchant_district_2
+		gold_cost = 2250
+		build_time = 1475
+		ai_creation_factor = 50
+		
+		fort_level = 1.0
+		levy_size = 0.025
+		garrison_size = 0.2
+		tax_income = 3
+		
+		light_infantry = 100
+		pikemen = 80
+		archers = 50
+		
+		extra_tech_building_start = 0.2
+	}
+
+}
+	
+temple={
+}
+
+

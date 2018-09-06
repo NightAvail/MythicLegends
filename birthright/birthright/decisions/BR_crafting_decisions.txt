@@ -1,0 +1,354 @@
+
+targetted_decisions = {
+
+gift_sword_1 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=sword_1
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = sword_1}
+		FROM = { remove_trait = sword_1 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_sword_2 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=sword_2
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = sword_2}
+		FROM = { remove_trait = sword_2 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_sword_3 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=sword_3
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = sword_3}
+		FROM = { remove_trait = sword_3 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_sword_4 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=sword_4
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = sword_4}
+		FROM = { remove_trait = sword_4 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_sword_5 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=sword_5
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = sword_5}
+		FROM = { remove_trait = sword_5 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+ gift_holy_avenger_sword = {
+	 ai_target_filter = spouse
+	 from_potential = {
+		 ai = no
+		 OR = {
+			 trait=holy_avenger_sword
+		 }
+	 }
+	 potential = {
+		 age = 1
+	 }
+	 allow = {
+		 always = yes
+	 }
+	
+	 effect = {
+		 ROOT = { add_trait = holy_avenger_sword}
+		 FROM = { remove_trait = holy_avenger_sword }
+	 }
+	
+	 ai_will_do = {
+		 factor = 0
+	 }
+ }
+
+ gift_sword_of_roele = {
+	 ai_target_filter = spouse
+	 from_potential = {
+		 ai = no
+		 OR = {
+			 trait=sword_of_roele
+		 }
+	 }
+	 potential = {
+		 age = 1
+	 }
+	 allow = {
+		 always = yes
+	 }
+	
+	 effect = {
+		 ROOT = { add_trait = sword_of_roele}
+		 FROM = { remove_trait = sword_of_roele }
+	 }
+	
+	 ai_will_do = {
+		 factor = 0
+	 }
+ }
+
+gift_ring_of_persuasion = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=ring_of_persuasion
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = ring_of_persuasion}
+		FROM = { remove_trait = ring_of_persuasion }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_ring_of_invisibility = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=ring_of_invisibility
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = ring_of_invisibility}
+		FROM = { remove_trait = ring_of_invisibility }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_ring_of_speed = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=ring_of_speed
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = ring_of_speed}
+		FROM = { remove_trait = ring_of_speed }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_ring_of_command = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=ring_of_command
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = ring_of_command}
+		FROM = { remove_trait = ring_of_command }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_amulet_of_protection_1 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=amulet_of_protection_1
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = amulet_of_protection_1}
+		FROM = { remove_trait = amulet_of_protection_1 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_amulet_of_protection_3 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=amulet_of_protection_3
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = amulet_of_protection_3}
+		FROM = { remove_trait = amulet_of_protection_3 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+gift_amulet_of_protection_5 = {
+	ai_target_filter = spouse
+	from_potential = {
+		ai = no
+		OR = {
+			trait=amulet_of_protection_5
+		}
+	}
+	potential = {
+		age = 1
+	}
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		ROOT = { add_trait = amulet_of_protection_5}
+		FROM = { remove_trait = amulet_of_protection_5 }
+	}
+	
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+}

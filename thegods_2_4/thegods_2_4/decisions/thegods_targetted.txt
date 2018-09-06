@@ -61,8 +61,8 @@ targetted_decisions = {
 					}
 				}
 				if = {
-				limit = { has_game_rule = { name = powers value = normal } }
-				from = { piety = -100 }
+                    limit = { has_game_rule = { name = powers value = normal } }
+                    from = { piety = -100 }
 				}
 				impregnate_cuckoo = FROM
 			}
@@ -505,6 +505,13 @@ targetted_decisions = {
             }
         }
 
+        allow = {
+			OR = {
+				has_game_rule = { name = powers value = free }
+				from = { piety = 200 }
+			}
+		}
+
         revoke_allowed = {
 			always = no
 		}
@@ -524,6 +531,11 @@ targetted_decisions = {
             remove_trait = slothful
             remove_trait = dull
             remove_trait = celibate
+
+            if = {
+                limit = { has_game_rule = { name = powers value = normal } }
+                from = { piety = -200 }
+            }
         }
     }
 
@@ -552,6 +564,13 @@ targetted_decisions = {
             }
         }
 
+        allow = {
+			OR = {
+				has_game_rule = { name = powers value = free }
+				from = { piety = 200 }
+			}
+		}
+
         revoke_allowed = {
 			always = no
 		}
@@ -571,6 +590,11 @@ targetted_decisions = {
             remove_trait = slothful
             remove_trait = dull
             remove_trait = celibate
+
+            if = {
+                limit = { has_game_rule = { name = powers value = normal } }
+                from = { piety = -200 }
+            }
         }
     }
 
@@ -820,6 +844,13 @@ targetted_decisions = {
             NOT = { character = FROM }
         }
 
+        allow = {
+			OR = {
+				has_game_rule = { name = powers value = free }
+				from = { piety = 1250 }
+			}
+		}
+
         revoke_allowed = {
             always = no
         }
@@ -834,6 +865,11 @@ targetted_decisions = {
                 duration = -1
             }
             add_trait = godblessing_trait
+
+            if = {
+                limit = { has_game_rule = { name = powers value = normal } }
+                from = { piety = -1250 }
+            }
         }
     }
 
@@ -856,6 +892,13 @@ targetted_decisions = {
             }
         }
 
+        allow = {
+			OR = {
+				has_game_rule = { name = powers value = free }
+				from = { piety = 250 }
+			}
+		}
+
         potential = {
             is_alive = yes
             trait = godblessing_trait
@@ -872,6 +915,11 @@ targetted_decisions = {
         effect = {
             remove_character_modifier = god_blessing_modifier
             remove_trait = godblessing_trait
+
+            if = {
+                limit = { has_game_rule = { name = powers value = normal } }
+                from = { piety = -250 }
+            }
         }
     }
 
@@ -912,10 +960,10 @@ targetted_decisions = {
         }
 
         allow = {
-            from = { piety = 200 }
+            from = { piety = 10000 }
         }
         effect = {
-            FROM = { piety = -200 }
+            FROM = { piety = -10000 }
             add_character_modifier = {
                 modifier = godchosenblessing_modifier
                 duration = -1
@@ -958,7 +1006,12 @@ targetted_decisions = {
             factor = 0
         }
 
+        allow = {
+            from = { piety = 1000 }
+        }
+
         effect = {
+            FROM = { piety = -1000 }
             remove_character_modifier = godchosenblessing_modifier
             remove_trait = godchoosenblessing_trait
         }
@@ -1001,10 +1054,10 @@ targetted_decisions = {
         }
 
         allow = {
-            from = { piety = 500 }
+            from = { piety = 2500 }
         }
         effect = {
-            FROM = { piety = -500 }
+            FROM = { piety = -2500 }
             add_character_modifier = {
                 modifier = god_curse_modifier
                 duration = -1
@@ -1045,7 +1098,11 @@ targetted_decisions = {
             factor = 0
         }
 
+        allow = {
+            from = { piety = 2500 }
+        }
         effect = {
+            FROM = { piety = -2500 }
             remove_character_modifier = god_curse_modifier
         }
     }
@@ -1086,12 +1143,16 @@ targetted_decisions = {
             factor = 0
         }
 
+        allow = {
+            from = { piety = 25000 }
+        }
         effect = {
             add_character_modifier = {
                 modifier = godpower_trait
                 duration = -1
             }
             add_trait = godpower_trait
+            FROM = { piety = -25000 }
         }
     }
 
@@ -1154,8 +1215,10 @@ targetted_decisions = {
         }
         allow = {
             always = yes
+            from = { piety = 25 }
         }
         effect = {
+            from = { piety = -25 }
             prisoner = no
         }
         revoke_allowed = {
@@ -1187,9 +1250,11 @@ targetted_decisions = {
             is_landed = no
         }
         allow = {
+            from = { piety = 25 }
             always = yes
         }
         effect = {
+            from = { piety = -25 }
             move_character = FROM
         }
         revoke_allowed = {
@@ -1236,6 +1301,7 @@ targetted_decisions = {
         }
         allow = {
             always = yes
+            from = { piety = 50000 }
         }
         effect = {
             remove_trait = God
@@ -1251,6 +1317,7 @@ targetted_decisions = {
             remove_trait = God_Blood
             remove_trait = Angel_Blood
             remove_trait = Young_Demi_Baby
+            from = { piety = -50000 }
         }
         revoke_allowed = {
             always = no
@@ -1490,7 +1557,12 @@ targetted_decisions = {
             factor = 0
         }
 
+        allow = {
+            from = { piety = 1000 }
+        }
+
         effect = {
+            from = { piety = -1000 }
             save_event_target_as = target_person
             FROM = {
                 character_event = {
@@ -1535,7 +1607,12 @@ targetted_decisions = {
             factor = 0
         }
 
+        allow = {
+            from = { piety = 1000 }
+        }
+
         effect = {
+            from = { piety = -1000 }
             save_event_target_as = target_person
             FROM = {
                 character_event = {
@@ -1831,7 +1908,13 @@ targetted_decisions = {
 			}
 		}
 		effect = {
-				from = { character_event = { id = thegodsbless.1 } }
+				from = {
+                    character_event = { id = thegodsbless.1 }
+                    if = {
+                        limit = { has_game_rule = { name = powers value = normal } }
+                        from = { piety = -250 }
+                    }
+                }
 			}
 		revoke_allowed = {
 			always = no
@@ -1900,7 +1983,13 @@ targetted_decisions = {
 			}
 		}
 		effect = {
-				from = { character_event = { id = thegodsbless.2 } }
+				from = {
+                    character_event = { id = thegodsbless.2 }
+                    if = {
+                        limit = { has_game_rule = { name = powers value = normal } }
+                        from = { piety = -250 }
+                    }
+                }
 			}
 		revoke_allowed = {
 			always = no
@@ -1991,6 +2080,56 @@ targetted_decisions = {
 		}
 		ai_target_filter = court
 	}
+
+    apotheosis_angelic = {
+		only_playable = yes
+		filter = all					# Only those under me
+		ai_target_filter = court		# Only those under me
+		ai_check_interval = 10000
+
+		from_potential = {
+			#religion_group = god_group
+			OR = {
+				trait = God
+				trait = Fallen_God
+				trait = Goddess
+				trait = Fallen_Goddess
+            }
+			ai = no
+			OR = {
+				has_game_rule = { name = powers value = free }
+				piety = 5000
+			}
+		}
+		potential = {
+			OR = { trait = Angel_Blood }
+		}
+		allow = {
+			OR = {
+				has_game_rule = { name = powers value = free }
+				from = { piety = 5000 }
+			}
+		}
+		effect = {
+			if = {
+				limit = { has_game_rule = { name = powers value = normal } }
+				from = { piety = -5000 }
+			}
+			hidden_tooltip = {
+				remove_trait = Angel_Blood
+                remove_trait = God_Blood
+			}
+            add_trait = Angel
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_target_filter = court
+	}
+
 	visitation = {
 		only_playable = yes
 		filter = all					# Only those under me

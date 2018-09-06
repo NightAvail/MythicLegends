@@ -1,0 +1,370 @@
+# Brechtürer dynasties      10000-10999
+
+# Danigau
+10000 = {
+	name = Danig				# Erik Danig, count of Danigau
+	culture = Brecht
+	used_for_random = no
+}
+10002 = {
+	name = Redbedtehr			# Ilse & Volse Redbedtehr
+	culture = Brecht
+}
+10003 = {
+	name = Lenig				# non canon
+	culture = Brecht
+}
+10004 = {
+	name = Meissan				# wiki
+	culture = Brecht
+}
+
+# Dauren
+10020 = {
+	name = Caernson				# Colier Caernson, ? of Dauren
+	culture = Brecht
+	used_for_random = no
+}
+10022 = {
+	name = Coppenaur			# merc dyn 2 / Dauren
+	#culture = Dwarven
+	culture = Brecht
+}
+10023 = {
+	name = Rukkhaewan			# merc dyn 3 / Dauren
+	#culture = Dwarven
+	culture = Brecht
+}
+10024 = {
+	name = Singawe				# merc dyn 4 / Dauren
+	culture = Brecht
+}
+10025 = {
+	name = Wohlkern				# merc dyn 5 / Dauren
+	culture = Brecht
+}
+10021 = {
+	name = Tehrbach				# Karl Tehrbach
+	culture = Brecht
+}
+10026 = {
+	name = Gfug
+	culture = Brecht
+}
+
+
+# Kiergard
+10040 = {
+	name = Späkhaert			# Onwen Späkhaert, ? of Kiergard (puppet of the Gorgon)
+	culture = Brecht
+	used_for_random = no
+}
+10041 = {
+	name = Krevet
+	culture = Brecht
+}
+10042 = {
+	name = Dhunstet
+	culture = Brecht
+}
+
+# Wierech
+10060 = {
+	name = Adler				# Kiel Adler	 	MBr	F7				Re	minor	19	LN 		
+	culture = Brecht
+	used_for_random = no
+}
+10061 = {
+	name = Wohlkern				# Darold Wohlkern	MBr	Pr7 Sera		Re	major	27	CG
+	culture = Brecht
+}
+10062 = {
+	name = Bakenstede
+	culture = Brecht
+}
+
+# Massenmarch
+10080 = {
+	name = Bissel				# Karl 'Swordhawk' Bissel, ? of Massenmarch
+	culture = Brecht
+	used_for_random = no
+}
+
+# Rohrmarch
+10100 = {
+	name = Rohr					# Kings of Rohrmarch (Oden, Alaric, ...)
+	culture = Brecht
+	used_for_random = no
+}
+10101 = {
+	name = Lessen				# Siegfried Lessen
+	culture = Brecht
+}
+10102 = {
+	name = Warkinde				# Kurt Warkinde
+	culture = Brecht
+}
+10103 = {
+	name = Fussen				# Delma Fussen
+	culture = Brecht
+}
+
+
+# Treucht
+10150 = {
+	name = Ehrsdottal			# Belinda Ehrsdottal
+	culture = Brecht
+	used_for_random = no
+}
+10151 = {
+	name = Wotenfür				# Morkad Wotenfür
+	culture = Brecht
+}
+10152 = {
+	name = Astridsen			# Pieter Astridsen
+	culture = Brecht
+}
+
+# Berhagen
+10200 = {
+	name = "von Schaeffen"		# Ludwig von Schaeffen, baron
+	culture = Brecht
+	used_for_random = no
+}
+10201 = {
+	name = Lossen				# Tanbeir Lossen
+	culture = Brecht
+}
+10202 = {
+	name = Auslawsen
+	culture = Brecht
+}
+10203 = {
+	name = Freiss
+	culture = Brecht
+}
+10205 = {
+	name = Pywestorpe
+	culture = Brecht
+}
+10206 = {
+	name = Warnekouw
+	culture = Brecht
+}
+10207 = {
+	name = Yezertze
+	culture = Brecht
+}
+
+
+# Müden
+10300 = {
+	name = Hoffstugart
+	culture = Brecht
+	used_for_random = no
+}
+10301 = {
+	name = Aldenauer
+	culture = Brecht
+	used_for_random = no
+}
+10302 = {
+	name = Kommsen
+	culture = Brecht
+	used_for_random = no
+}
+10303 = {
+	name = Bragen
+	culture = Brecht
+	used_for_random = no
+}
+10304 = {
+	name = Sadler
+	culture = Brecht
+	used_for_random = no
+}
+10305 = {
+	name = Talbehr
+	culture = Brecht
+	used_for_random = no
+}
+10306 = {
+	name = Kaiser-Talbehr
+	culture = Brecht
+	used_for_random = no
+}
+10307 = {
+	name = Rochman
+	culture = Brecht
+	used_for_random = no
+}
+
+10308 = {
+	name = Crichton
+	culture = Brecht
+}
+10309 = {
+	name = Neolund
+	culture = Brecht
+}
+10310 = {
+	name = Negus
+	culture = Brecht
+}
+
+10311 = {
+	name = Mallin
+	culture = Brecht
+}
+
+
+# Rheulgard
+10350 = {
+	name = Kaysun					# Richard Kaysun
+	culture = Brecht
+	used_for_random = no
+}
+10351 = {
+	name = Oerwinde					# Alford Oerwinde
+	culture = Brecht
+}
+10352 = {
+	name = Liebeshül				# Frederika Liebeshül
+	culture = Brecht
+}
+
+
+# Drachenward
+10400 = {
+	name = Drachen					# Mor Drachen
+	culture = Brecht
+	used_for_random = no
+}
+10401 = {
+	name = Blüch					# Talron Blüch
+	culture = Brecht
+}
+10402 = {
+	name = Fresmund					# Gelda Fresmund
+	culture = Brecht
+}
+10403 = {
+	name = Llebruch					# Llebruch
+	culture = Brecht
+}
+10404 = {
+	name = Cramon
+	culture = Brecht
+}
+10405 = {
+	name = Ketelhodt
+	culture = Brecht
+}
+10406 = {
+	name = Peccatel
+	culture = Brecht
+}
+
+# The Hag's domain
+10500 = {
+	name = Geissen					# Fulda Geissen 'The Hag'
+	culture = Brecht
+	used_for_random = no
+}
+
+# Grabentod
+10550 = {
+	name = Graben					# Albrecht Graben
+	culture = Brecht
+	used_for_random = no
+}
+
+# Grevesmühl
+10600 = {
+	name = Karlburgher				# Shaemes Karlburgher, duke
+	culture = Brecht
+	used_for_random = no
+}
+10601 = {
+	name = Rauchhaupt
+	culture = Brecht
+}
+10602 = {
+	name = Dyhrn
+	culture = Brecht
+}
+
+# Wolfgaard
+
+# Zweilund
+10700 = {
+	name = Shaefpaete				# Colin Shaefpaete
+	culture = Zweilunder
+	used_for_random = no
+}
+
+# Vampire's Hold
+10750 = {
+	name = Kalt						# Britter Kalt 'Vampire'
+	culture = Brecht
+	used_for_random = no
+}
+
+# The Banshegh
+10850 = {
+	name = Heulough					# Justina Heulough
+	culture = Brecht
+	used_for_random = no
+}
+
+# Sendoure
+
+10950 = {
+	name = Rheiter					# Ilse Rheiter, Unbrausen Temple of Kirche
+	culture = Brecht
+}
+10951 = {
+	name = Gruber					# Helmut Gruber, Ghoudaia Coster
+	culture = Brecht
+}
+
+# GENERIC ONES
+
+#first some random ones for republic patrician families#
+14900 = {
+	name = Hapsfallen
+	culture=Brecht
+}
+14901 = {
+	name = Amsberg
+	culture=Brecht
+}
+14902 = {
+	name = Decken
+	culture=Brecht
+}
+14903 = {
+	name = Rohr
+	culture=Brecht
+}
+
+#Zweilund Pirate patricians
+14904 = {
+	name = Spatz #sparrow
+	culture = Zweilunder
+}
+
+14905 = {
+	name = Schwarzbart #blackbeard
+	culture = Zweilunder
+	}
+	
+14906 = {
+	name = Henzlein
+	culture = Zweilunder
+	}
+
+14907 = {
+	name = Hornblower
+	culture = Halfling
+	}

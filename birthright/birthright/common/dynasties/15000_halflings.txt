@@ -1,0 +1,92 @@
+# Halfling dynasties      15000-15999
+
+15000 = {
+	name = Garrelban				# Edvara Garrelban (Burrows)
+	culture = Halfling
+}
+15001 = {
+	name = Haupstahl				# Corben "Flint" Haupstahl (Burrows)
+	culture = Halfling
+}
+15002 = {
+	name = Fairbairn				# Elan Fairbairn (Burrows)
+	culture = Halfling
+}
+15003 = {
+	name = Spiritwalker				# Fulda Spiritwalker
+	culture = Halfling
+}
+15004 = {
+	name = Segwardes				# Theofold Segwardes
+	culture = Halfling
+}
+15005 = {
+	name = Innkeeper				# Jollid Inkeeper
+	culture = Halfling
+}
+15006 = {
+	name = Burnlaffen				# Hollisande Burnlaffen
+	culture = Halfling
+}
+
+
+
+# non canon
+15500 = { name = Hamwich		culture = Halfling }
+15501 = { name = Overhill 		culture = Halfling }
+15502 = { name = Peatfingers  	culture = Halfling }
+15503 = { name = Noakes		  	culture = Halfling }
+15504 = { name = Beestinger 	culture = Halfling }
+15505 = { name = Amster			culture = Halfling }
+15506 = { name = Ashworthy		culture = Halfling }
+15507 = { name = Bandawax		culture = Halfling }
+15508 = { name = Boffin			culture = Halfling }
+15509 = { name = Bolger			culture = Halfling }
+15510 = { name = Bracegirdle	culture = Halfling }
+15511 = { name = Brownlock		culture = Halfling }
+15512 = { name = Brushgather	culture = Halfling }
+15513 = { name = Bullroarer		culture = Halfling }
+15514 = { name = Bunce			culture = Halfling }
+15515 = { name = Burrows		culture = Halfling }
+15516 = { name = ChubbCotton	culture = Halfling }
+15517 = { name = Dale			culture = Halfling }
+15518 = { name = Dudley			culture = Halfling }
+15519 = { name = Gammidge		culture = Halfling }
+15520 = { name = Gamwich		culture = Halfling }
+15521 = { name = Gardner		culture = Halfling }
+15522 = { name = Goodbarrel		culture = Halfling }
+15523 = { name = Goodbody		culture = Halfling }
+15524 = { name = Greenbottle	culture = Halfling }
+15525 = { name = Greenspan		culture = Halfling }
+15526 = { name = Grub			culture = Halfling }
+15527 = { name = Hamson			culture = Halfling }
+15528 = { name = Heathertoe		culture = Halfling }
+15529 = { name = Highhill		culture = Halfling }
+15530 = { name = Hilltopple		culture = Halfling }
+15531 = { name = Hornblower		culture = Halfling }
+15532 = { name = Jallisall		culture = Halfling }
+15533 = { name = Kaese			culture = Halfling }
+15534 = { name = Kalliwart		culture = Halfling }
+15535 = { name = Leagallow		culture = Halfling }
+15536 = { name = Lindenbrook	culture = Halfling }
+15537 = { name = Marmidas		culture = Halfling }
+15538 = { name = Melilot		culture = Halfling }
+15539 = { name = Millbridge		culture = Halfling }
+15540 = { name = Milliciny		culture = Halfling }
+15541 = { name = Montajay		culture = Halfling }
+15542 = { name = Newtan			culture = Halfling }
+15543 = { name = Oldfur			culture = Halfling }
+15544 = { name = Orgulas		culture = Halfling }
+15545 = { name = Ostgood		culture = Halfling }
+15546 = { name = Overhill		culture = Halfling }
+15547 = { name = Quettory		culture = Halfling }
+15548 = { name = Shortwick		culture = Halfling }
+15549 = { name = Sire			culture = Halfling }
+15550 = { name = Talbot			culture = Halfling }
+15551 = { name = Tealeaf		culture = Halfling }
+15552 = { name = Thorngage		culture = Halfling }
+15553 = { name = Tighfield		culture = Halfling }
+15554 = { name = Tosscobble		culture = Halfling }
+15555 = { name = Trill			culture = Halfling }
+15556 = { name = Underbough		culture = Halfling }
+15557 = { name = Weatherbee		culture = Halfling }

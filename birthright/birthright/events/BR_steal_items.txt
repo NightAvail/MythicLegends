@@ -1,0 +1,191 @@
+namespace = stealing
+
+	#stealing decision is triggered#
+	character_event = {
+    id = stealing.0
+    title = THEFT # Theft
+    desc = "EVTDESCSTEALING.0"
+    picture = "GFX_evt_into_the_dungeon"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OF_COURSE
+	if = {
+	limit = {
+	NOT = { trait = greedy }
+	}
+	add_trait = greedy
+	}
+	prestige = -200
+	any_courtier= {
+	limit = {
+	AND = {
+	prisoner = yes
+	OR = {
+		trait=sword_1
+		trait=sword_2
+		trait=sword_3
+		trait=sword_4
+		trait=sword_5
+		trait=holy_avenger_sword
+		trait=sword_of_roele
+		trait=ring_of_persuasion
+		trait=ring_of_invisibility
+		trait=ring_of_speed
+		trait=ring_of_command
+		trait=amulet_of_protection_1
+		trait=amulet_of_protection_3
+		trait=amulet_of_protection_5
+		trait=ring_of_faele
+		trait=ring_of_dierdrien
+		trait=amulet_of_inspiration
+			}
+		}
+	}
+	character_event = { id = stealing.1 }
+	}
+	}
+	
+	option = {
+	name = bloodtheft.0.b # Maybe later... if the ransom is not paid.
+	}
+	
+	}
+	
+	#prisoner is informed#
+	character_event = {
+    id = stealing.1
+    title = THEFT # Theft
+    desc = "EVTDESCSTEALING.1"
+    picture = "GFX_evt_into_the_dungeon"
+
+	is_triggered_only = yes	
+	
+	option = {
+	name = "BASTARDS"
+		if = {
+			limit = {	
+			trait = sword_1
+			   }
+		FROM = { add_trait = sword_1 }
+		remove_trait = sword_1
+		}
+			if = {
+			limit = {	
+			trait = sword_2
+			   }
+		FROM = { add_trait = sword_2 }
+		remove_trait = sword_2
+		}
+				if = {
+			limit = {	
+			trait = sword_3
+			   }
+		FROM = { add_trait = sword_3 }
+		remove_trait = sword_3
+		}
+			if = {
+			limit = {	
+			trait = sword_4
+			   }
+		FROM = { add_trait = sword_4 }
+		remove_trait = sword_4
+		}
+			if = {
+			limit = {	
+			trait = sword_5
+			   }
+		FROM = { add_trait = sword_5 }
+		remove_trait = sword_5
+		}
+			if = {
+			limit = {	
+			trait = holy_avenger_sword
+			   }
+		FROM = { add_trait = holy_avenger_sword }
+		remove_trait = holy_avenger_sword
+		}
+			if = {
+			limit = {	
+			trait = sword_of_roele
+			   }
+		FROM = { add_trait = sword_of_roele }
+		remove_trait = sword_of_roele
+		}
+			if = {
+			limit = {	
+			trait = amulet_of_protection_1
+			   }
+		FROM = { add_trait = amulet_of_protection_1 }
+		remove_trait = amulet_of_protection_1
+		}
+			if = {
+			limit = {	
+			trait = amulet_of_protection_3
+			   }
+		FROM = { add_trait = amulet_of_protection_3 }
+		remove_trait = amulet_of_protection_3
+		}
+			if = {
+			limit = {	
+			trait = amulet_of_protection_5
+			   }
+		FROM = { add_trait = amulet_of_protection_5 }
+		remove_trait = amulet_of_protection_5
+		}
+			if = {
+			limit = {	
+			trait = ring_of_persuasion
+			   }
+		FROM = { add_trait = ring_of_persuasion }
+		remove_trait = ring_of_persuasion
+		}
+			if = {
+			limit = {	
+			trait = ring_of_invisibility
+			   }
+		FROM = { add_trait = ring_of_invisibility }
+		remove_trait = ring_of_invisibility
+		}
+			if = {
+			limit = {	
+			trait = ring_of_speed
+			   }
+		FROM = { add_trait = ring_of_speed }
+		remove_trait = ring_of_speed
+		}
+			if = {
+			limit = {	
+			trait = ring_of_command
+			   }
+		FROM = { add_trait = ring_of_command }
+		remove_trait = ring_of_command
+		}
+			if = {
+			limit = {	
+			trait = ring_of_faele
+			   }
+		FROM = { add_trait = ring_of_faele }
+		remove_trait = ring_of_faele
+		}
+			if = {
+			limit = {	
+			trait = ring_of_dierdrien
+			   }
+		FROM = { add_trait = ring_of_dierdrien }
+		remove_trait = ring_of_dierdrien
+		}
+			if = {
+			limit = {	
+			trait = amulet_of_inspiration
+			   }
+		FROM = { add_trait = amulet_of_inspiration }
+		remove_trait = amulet_of_inspiration
+		}
+		}
+		
+		}
+
+		
+	

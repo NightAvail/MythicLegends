@@ -1,0 +1,381 @@
+##########################################
+##All province-unique buildings go here ##
+##always add new ones at the end please ##
+##########################################
+
+
+
+castle={
+
+	ca_bevaldruor = {
+		desc = ca_bevaldruor_desc
+		trigger = { always = no }
+		fort_level = 5
+		gold_cost = 1000
+		build_time = 3000
+		archers=300
+		pikemen=200
+		light_infantry=200
+		levy_size = 0.045
+		garrison_size = 0.045
+		tax_income = 2.5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 76 } # Bevaldruor
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_rock_roost_castle = {
+		desc = ca_rock_roost_castle_desc
+		trigger = { always = no }
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		archers=300
+		pikemen=150
+		light_infantry=150
+		levy_size = 0.025
+		garrison_size = 0.025
+		tax_income = 2.5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 68 } # Bhaelaene
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_blacktower_castle = {
+		desc = ca_blacktower_castle_desc
+		trigger = { always = no }
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		archers=300
+		pikemen=150
+		light_infantry=150
+		levy_size = 0.025
+		garrison_size = 0.025
+		tax_income = 2.5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 99 } # Caercas
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_imperial_city = {
+		desc = ca_imperial_city_desc
+		trigger = { always = no }
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		garrison_size = 0.050
+		tax_income = 2.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 36 } # Imperial City
+
+		extra_tech_building_start = 0.2
+	}
+
+	ca_imperial_militia = {
+		gold_cost = 1000000
+		build_time = 1
+		garrison_size = 12.00
+
+		potential = {
+		FROM = { dynasty = 23 }
+		province_id = 36 
+		}
+		ai_creation_factor = 0
+		extra_tech_building_start = 0.0
+	}
+
+	ca_daulton = {
+		desc = ca_daulton_desc
+		trigger = { always = no }
+		fort_level = 6
+		gold_cost = 1000
+		build_time = 3000
+		archers=300
+		pikemen=150
+		galleys=20
+		levy_size = 0.035
+		garrison_size = 0.035
+		tax_income = 2.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 38 } # Daulton
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_seaharrow_castle = {
+		desc = ca_seaharrow_castle_desc
+		trigger = { always = no }
+		fort_level = 6
+		gold_cost = 1000
+		build_time = 3000
+		archers=300
+		light_infantry=300
+		galleys=20
+		levy_size = 0.035
+		garrison_size = 0.035
+		tax_income = 2.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 22 } # Seasedge
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_caer_aerele = {
+		desc = ca_caer_aerele_desc
+		trigger = { always = no }
+		fort_level = 3
+		gold_cost = 600
+		build_time = 3000
+		archers=200
+		light_infantry=200
+		galleys=10
+		levy_size = 0.025
+		garrison_size = 0.025
+		tax_income = 1.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 89 } # Aerele
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_castle_bellamie = {
+		desc = ca_castle_bellamie_desc
+		trigger = { always = no }
+		fort_level = 2
+		gold_cost = 500
+		build_time = 3000
+		archers=100
+		light_infantry=100
+		levy_size = 0.010
+		garrison_size = 0.010
+		tax_income = 1.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 103 } # Bellam
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_caer_ansien = {
+		desc = ca_caer_ansien_desc
+		trigger = { always = no }
+		fort_level = 3
+		gold_cost = 500
+		build_time = 3000
+		archers=100
+		light_infantry=100
+		pikemen = 100
+		levy_size = 0.020
+		garrison_size = 0.020
+		tax_income = 1.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 84 } # Ansien
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_haesrien = {
+		desc = ca_haesrien_desc
+		trigger = { always = no }
+		fort_level = 3
+		gold_cost = 500
+		build_time = 3000
+		archers=100
+		light_infantry=100
+		pikemen = 100
+		levy_size = 0.015
+		garrison_size = 0.015
+		tax_income = 1.5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 50 } # Haesrien
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_caer_alam = {
+		desc = ca_caer_alam_desc
+		trigger = { always = no }
+		fort_level = 4
+		gold_cost = 1000
+		build_time = 3000
+		archers=100
+		light_infantry=100
+		pikemen = 100
+		levy_size = 0.018
+		garrison_size = 0.018
+		tax_income = 1.7
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 55 } # Deseirain
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_oak_seat = {
+		desc = ca_oak_seat_desc
+		trigger = { always = no }
+		gold_cost = 500
+		build_time = 3000
+		archers=50
+		light_infantry=20
+		galleys=10
+		levy_size = 0.010
+		garrison_size = 0.010
+		tax_income = 1.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 33 } # Ice Haven
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_thorn_throne = {
+		desc = ca_thorn_throne_desc
+		trigger = { always = no }
+		gold_cost = 500
+		build_time = 3000
+		archers=100
+		light_infantry=100
+		levy_size = 0.010
+		garrison_size = 0.010
+		tax_income = 1.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 160 } # Cwmbheir
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_crystal_palace = {
+		desc = ca_crystal_palace_desc
+		trigger = { always = no }
+		gold_cost = 500
+		build_time = 3000
+		archers=100
+		light_infantry=100
+		levy_size = 0.010
+		garrison_size = 0.010
+		tax_income = 1.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 142 } # Fhylallien
+
+		extra_tech_building_start = 0.2
+	}
+	
+	ca_castle_rhuannoch = {
+		desc = ca_castle_rhuannoch_desc
+		trigger = { always = no }
+		fort_level = 2
+		gold_cost = 500
+		build_time = 3000
+		archers=100
+		light_infantry=100
+		levy_size = 0.010
+		garrison_size = 0.010
+		tax_income = 1.0
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 29 } # Rhuobhe
+
+		extra_tech_building_start = 0.2
+	}
+}
+	
+city={
+
+	ct_ilien = {
+		desc = ct_ilien_desc
+		trigger = { always = no }
+		fort_level = 7
+		gold_cost = 1000
+		build_time = 3000
+		archers=200
+		light_infantry=100
+		pikemen=100
+		galleys=20
+		levy_size = 0.25
+		garrison_size = 0.25
+		tax_income = 2.5
+		ai_creation_factor = 97
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 96 } # Ilien
+
+		extra_tech_building_start = 0.2
+	}
+
+}
+	
+temple={
+
+	tp_avelerine_cathedral = {
+		desc = tp_avelerine_cathedral_desc
+		trigger = { always = no }
+		fort_level = 1
+		gold_cost = 1000
+		build_time = 3000
+		archers=100
+		light_infantry=50
+		pikemen=50
+		garrison_size = 0.10
+		tax_income = 1.0
+		ai_creation_factor = 100
+		local_revolt_risk = -0.05
+		
+		potential = { province_id = 89 } # Aerele
+
+		extra_tech_building_start = 0.2
+	}
+	
+	tp_celestial_palace = {
+		desc = tp_celestial_palace_desc
+		trigger = { always = no }
+		fort_level = 1
+		gold_cost = 1000
+		build_time = 3000
+		archers=100
+		light_infantry=50
+		pikemen=50
+		garrison_size = 0.10
+		tax_income = 1.0
+		liege_piety = 0.2
+		ai_creation_factor = 100
+		local_revolt_risk = -0.005
+		
+		potential = { province_id = 94 } # Braeme
+
+		extra_tech_building_start = 0.2
+	}
+
+}
+
+

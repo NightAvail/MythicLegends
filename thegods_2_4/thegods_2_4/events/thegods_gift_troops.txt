@@ -18,7 +18,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 100 100 }
+							angelic = { 1000 1000 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -35,7 +35,7 @@ character_event = {
 		clr_character_flag = buying_troops
 		if = {
 			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -100 }	
+			piety = -100
 		}
 	}
 	option = {
@@ -44,7 +44,7 @@ character_event = {
 			has_character_flag = troops1
 			OR = {
 				has_game_rule = { name = powers value = free }
-				from = { piety = 200 }
+				piety = 200
 			}
 		}
 		event_target:sin_troop_target = {
@@ -55,7 +55,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 100 100 }
+							angelic = { 1000 1000 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -69,7 +69,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 100 100 }
+							angelic = { 1000 1000 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -86,7 +86,7 @@ character_event = {
 		clr_character_flag = buying_troops
 		if = {
 			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -200 }	
+			piety = -200
 		}
 	}
 	option = {
@@ -95,7 +95,7 @@ character_event = {
 			has_character_flag = troops1
 			OR = {
 				has_game_rule = { name = powers value = free }
-				from = { piety = 300 }
+				piety = 300
 			}
 		}
 		event_target:sin_troop_target = {
@@ -106,7 +106,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 100 100 }
+							angelic = { 1000 1000 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -120,7 +120,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 100 100 }
+							angelic = { 1000 1000 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -134,7 +134,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 100 100 }
+							angelic = { 1000 1000 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -151,7 +151,7 @@ character_event = {
 		clr_character_flag = buying_troops
 		if = {
 			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -300 }	
+			piety = -300
 		}
 	}
 	option = {
@@ -160,7 +160,7 @@ character_event = {
 			has_character_flag = troops2
 			OR = {
 				has_game_rule = { name = powers value = free }
-				from = { piety = 500 }
+				piety = 500
 			}
 		}
 		event_target:sin_troop_target = {
@@ -171,7 +171,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 500 500 }
+							angelic = { 1500 1500 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -188,7 +188,7 @@ character_event = {
 		clr_character_flag = buying_troops
 		if = {
 			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -500 }	
+			piety = -500
 		}
 	}
 	option = {
@@ -197,7 +197,7 @@ character_event = {
 			has_character_flag = troops2
 			OR = {
 				has_game_rule = { name = powers value = free }
-				from = { piety = 1000 }
+				piety = 1000
 			}
 		}
 		event_target:sin_troop_target = {
@@ -208,7 +208,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 500 500 }
+							angelic = { 1500 1500 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -222,7 +222,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 500 500 }
+							angelic = { 1500 1500 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -239,7 +239,7 @@ character_event = {
 		clr_character_flag = buying_troops
 		if = {
 			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -1000 }	
+			piety = -1000
 		}
 	}
 	option = {
@@ -248,7 +248,7 @@ character_event = {
 			has_character_flag = troops2
 			OR = {
 				has_game_rule = { name = powers value = free }
-				from = { piety = 1500 }
+				piety = 1500
 			}
 		}
 		event_target:sin_troop_target = {
@@ -259,7 +259,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 500 500 }
+							angelic = { 1500 1500 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -273,7 +273,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 500 500 }
+							angelic = { 1500 1500 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -287,7 +287,7 @@ character_event = {
 						province = PREV
 						leader = none
 						troops = {
-							angels = { 500 500 }
+							angelic = { 1500 1500 }
 						}
 						attrition = 1.0
 						reinforcing = yes
@@ -304,7 +304,7 @@ character_event = {
 		clr_character_flag = buying_troops
 		if = {
 			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -1500 }	
+			piety = -1500
 		}
 	}
 	option = {

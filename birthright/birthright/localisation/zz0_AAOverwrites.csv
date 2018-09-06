@@ -1,0 +1,21 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+e_anuire;Anuirean Empire;Anuirean Empire;Anuirean Empire;;Anuirean Empire;;;;;;;;;x
+e_anuire_adj;Anuirean;;;;;;;;;;;;;x
+d_taeghas;High County of Taeghas;;;;;;;;;;;;;x
+d_taeghas_adj;Taeghasian;;;;;;;;;;;;;x
+d_elinie;Patriarchy of Elinie;;;;;;;;;;;;;x
+d_elinie_adj;Elinean;;;;;;;;;;;;;x
+d_talinie;Thanage of Talinie;;;;;;;;;;;;;x
+d_talinie_adj;Talinean;;;;;;;;;;;;;x
+d_mieres;Colony of Mieres;;;;;;;;;;;;;x
+d_mieres_adj;Mieresian;;;;;;;;;;;;;x
+d_coeranys;Barony of Coeranys;;;;;;;;;;;;;x
+d_coeranys_adj;Coeransean;;;;;;;;;;;;;x
+d_diemed;Barony of Diemed;;;;;;;;;;;;;x
+d_diemed_adj;Diemedian;;;;;;;;;;;;;x
+d_roesone;Barony of Roesone;;;;;;;;;;;;;x
+d_roesone_adj;Roesonean;;;;;;;;;;;;;x
+###my my, keep it here
+POPE_VOTE_SCORE;§YSuitability: $SCORE$§!;;;;;;;;;;;;;x
+VASSAL_BISHOPS;Vassal Priests;;;;;;;;;;;;;x
+CANDIDATE_SCORE;§YAppointment Score§!;;;;;;;;;;;;;x

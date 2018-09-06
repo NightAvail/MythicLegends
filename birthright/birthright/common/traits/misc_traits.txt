@@ -1,0 +1,176 @@
+# Misc traits
+disfigured = { #Fair traits are genetic, thus it doesn't remove it
+	
+	potential = {
+		NOT = { graphical_culture = treemangfx }
+	}
+	sex_appeal_opinion = -40
+	monthly_character_prestige = -0.5
+	diplomacy = -1
+	health = -1
+	combat_rating = -1
+
+	blinding = yes
+
+	customizer = no
+
+	ai_ambition = -25
+
+	male_insult = INSULT_FREAK
+	female_insult = INSULT_FREAK
+	male_insult_adj = INSULT_HIDEOUS
+	female_insult_adj = INSULT_HIDEOUS
+	
+}
+torva_vos = {
+	opposites = {
+		nona_vos
+	}
+
+	opposite_opinion = -5
+	
+	monthly_character_prestige = 0.5
+	martial = 1
+	
+	potential = { 
+		OR = {
+			religion = Belinik 
+			religion = Kriesha
+		}
+	}
+	
+	religious_branch = Belinik
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+nona_vos = {
+	opposites = {
+		torva_vos
+	}
+
+	opposite_opinion = -5
+	
+	vassal_opinion = 5
+	# todo: add tech bonus
+
+	potential = { 
+		OR = {
+			religion = Belinik 
+			religion = Kriesha
+		}
+	}
+
+	religious_branch = Belinik
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+scarred_by_michael = { # Given himself by MR
+	opposites = {
+		scarred	# He cant be hurt my mere men
+	}
+	customizer = no
+	random = no
+
+	monthly_character_prestige = 0.1 # Didn't get his head cut-off
+	
+	vassal_opinion = -5 # Scarred by a mere mortal
+}
+
+infertile = {
+	customizer = no
+	fertility = -10.0
+}
+
+knight = {
+	opposites =  {
+		paladin						# Either knight or paladin
+		awn_hunter					# Hunt monsters or work for nobles
+	}
+
+	monthly_character_prestige = 0.50
+	monthly_character_wealth = 0.05				# They work for nobles hence income
+
+	sex_appeal_opinion = 10			# Bitches like knights
+	same_opinion = 10				# Bros before hoes
+
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+		cavalry = 0.25
+	}
+
+	random = no
+
+}
+
+paladin = {
+	opposites =  {
+		knight 				# Either paladin or knight
+		awn_hunter 			# Works for your god or walk your path
+	}
+
+	fertility = -0.15		# Less likely to procreate considering he/she is busy working for god
+	monthly_character_prestige = 0.50
+	religious = yes			# You CANT just jump ship to another god and be their paladin
+
+	ai_zeal = 100			# They are paladins to their gods
+	ai_rationality = 30		# Gods guide them
+	ai_honor = 100			# They should be incapable of doing wrong
+	ai_greed = -30			# Less likely to greed
+	ai_ambition = -30		# Too busy working for god
+
+	same_opinion_if_same_religion = 20			# Paladins of the same religion like each other
+	sex_appeal_opinion = 10						# Bitches likes paladins
+	liege_opinion = 15							# Liege likes paladins
+	vassal_opinion = 15							# Vassals like paladins
+	church_opinion = 25							# Church likes paladins but not too much because some religious leaders like to keep control over things
+
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+		center = 0.1
+		religious_enemy = 0.3
+		defence = 0.1
+	}
+
+	random = no
+
+}
+
+awn_hunter = {
+	opposites =  {
+		paladin				# Either knight or paladin
+		knight				# Work for a noble or walk your own path
+	}
+
+	monthly_character_prestige = 0.50
+
+	ai_rationality = 20			# To be in this line of work you must be somewhat smart
+	ai_greed = 20				# Must kill stuff
+	ai_ambition = 25			# I want it now
+
+	sex_appeal_opinion = 15			# Bitches likes tough guy
+	same_opinion = 10				# Bros before hoes
+	general_opinion = -5			# They walk a dark path
+
+	command_modifier = {
+		morale_offence = 0.05
+		morale_defence = 0.05
+		pursue = 0.15
+		winter_combat = 0.5
+	}
+
+	random = no
+
+}
+
+disinherited ={
+	monthly_character_prestige = -1
+	diplomacy = -1
+	cannot_inherit = yes
+	customizer = no
+}

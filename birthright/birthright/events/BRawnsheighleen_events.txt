@@ -1,0 +1,1293 @@
+namespace = lahmia
+
+character_event = {
+id = lahmia.0
+title = YOUR_FOLLOWERS # Your followers
+desc = "EVTDESCLAHMIA.0"
+picture = "GFX_evt_victory_arch_byzantine"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_lahmia
+NOT = { has_character_flag = lahmia0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = lahmia0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 4000 4000 }
+						}
+					}
+				}
+			}
+}
+
+}
+
+#daughters become lahmias# 
+	character_event = {
+    id = lahmia.1
+    title = A_NEW_LAHMIA # A New Lahmia
+    desc = "EVTDESCLAHMIA.1"
+    picture = "GFX_evt_victory_arch_byzantine"
+
+	is_triggered_only = yes
+	
+	trigger={
+		age = 15
+		is_female = yes
+		mother = { trait = awn_lahmia }
+	}
+	
+
+	option = {
+		name = OK
+		add_trait = awn_lahmia2
+	}
+	
+}	
+
+namespace = gorgon
+
+character_event = {
+id = gorgon.0
+title = YOUR_FOLLOWERS # Your followers
+desc = "gorgon0desc"
+picture = "GFX_evt_large_army"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_gorgon
+NOT = { has_character_flag = gorgon0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = gorgon0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 4000 4000 }
+			heavy_infantry = { 4000 4000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 4000 4000 }
+			archers = { 4000 4000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			knights = { 500 500 }
+			light_cavalry = { 1000 1000 }
+						}
+					}
+				}
+			}
+}
+
+}
+namespace = magian
+
+character_event = {
+id = magian.0
+title = YOUR_UNDEAD_ARMY # Your undead army
+desc = "EVTDESCMAGIAN.0"
+picture = "GFX_evt_plague_doctor"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_magian
+NOT = { has_character_flag = magian0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = magian0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 5000 5000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_cavalry = { 500 500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 500 500 }
+						}
+					}
+				}
+			}
+}
+
+}	
+
+namespace = serpent
+
+character_event = {
+id = serpent.0
+title = YOUR_FORCES # Your forces
+desc = "EVTDESCSERPENT.0"
+picture = "GFX_evt_victory_arch_byzantine"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_serpent
+NOT = { has_character_flag = serpent0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = serpent0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 1000 1000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 2000 2000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 1000 1000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			archers = { 1000 1000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 250 250 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			knights = { 500 500 }
+						}
+					}
+				}
+			}
+		spawn_fleet = {
+			province = closest # closest sea zone
+			owner = ROOT
+			disband_on_peace = no
+			troops =
+			{
+				galleys = { 100 100 }
+			}
+		}
+}
+
+}
+
+#strongly blooded children of the serpent become serpent form too# 
+character_event = {
+	id = serpent.1
+	title = A_NEW_SERPENT
+	desc = EVTDESCSERPENT.1
+	picture = GFX_evt_victory_arch_byzantine
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		age = 15
+		is_female = yes
+		father = {
+			trait = awn_serpent
+		}
+		NOT = {
+			trait = awn_serpent2
+		}
+		AND = {
+			trait = bloodline_azrai
+			OR = {
+				trait = bloodline_major
+				trait = bloodline_great
+				trait = bloodline_true
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+		add_trait = awn_serpent2
+	}
+}
+
+namespace = spider
+
+character_event = {
+id = spider.0
+title = YOUR_FORCES # Your forces
+desc = "EVTDESCSPIDER.0"
+picture = "GFX_evt_bandits"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_spider
+NOT = { has_character_flag = spider0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = spider0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 500 500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			archers = { 500 500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 250 250 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 2500 2500 }
+						}
+					}
+				}
+			}
+}
+
+}
+
+namespace = raven
+
+character_event = {
+id = raven.0
+title = YOUR_FORCES # Your forces
+desc = "EVTDESCRAVEN.0"
+picture = "GFX_evt_large_army"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_raven
+NOT = { has_character_flag = raven0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = raven0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 500 500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			archers = { 500 500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 250 250 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 1500 1500 }
+						}
+					}
+				}
+			}
+}
+
+}
+
+namespace = succubus
+
+##daughters become succubi also##
+	character_event = {
+    id = succubus.0
+    title = A_NEW_SUCCUBUS # A New Succubus
+    desc = "EVTDESCSUCCUBUS.0"
+    picture = "GFX_evt_succubus"
+	
+	is_triggered_only = yes
+	
+	trigger={
+		age = 15
+		is_female = yes
+		mother = { trait = awn_succubus }
+	}
+	
+	
+	option = {
+		name = OK
+		add_trait = awn_succubus2
+	}
+	
+}
+	
+##succubus wants to take a lover##
+	character_event = {
+    id = succubus.1
+    title = YOU_GROW_HUNGRY # You grow hungry
+    desc = "EVTDESCSUCCUBUS.1"
+    picture = "GFX_evt_succubus"
+	
+	trigger = {
+	trait = awn_succubus
+	age = 16
+	is_married = no
+	is_landed = yes
+	}
+	
+	mean_time_to_happen = {
+	days = 1000
+	}
+
+	option = {
+	name = succubus.1.a # He will become my pet whether he wants to or not!
+	prestige = 400
+	top_liege={
+	random_realm_character = {
+	limit = {
+	age = 16
+	NOT = { trait = awn_gorgon }
+	is_female = no
+	OR = {
+	trait = beautiful
+	trait = fair
+	trait = pretty
+	trait = strong
+	trait = genius
+	trait = brilliant
+	}
+	OR = {
+	culture = Anuirean
+	culture = Vos
+	culture = Rjurik
+	culture = Khinasi
+	culture = Brecht
+	}
+	}
+	character_event = { id = succubus.2 }
+	}
+	}
+	}
+	
+	option = {
+	name = LEAVE_HIM_BE
+	trigger = { ai = no }
+	}
+	
+	}
+	
+##target is informed##
+	character_event = {
+    id = succubus.2
+    title = THE_SUCCUBUS # The Succubus
+    desc = "EVTDESCSUCCUBUS.2"
+    picture = "GFX_evt_into_the_dungeon"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = TRY_TO_GET_WORD_TO_MY_LIEGE # Try to get word to my liege!
+	trigger = {
+	AND = {
+	top_liege = {
+	NOT = { trait = awn_succubus }
+	NOT = { trait = awn_succubus2 }
+	}
+	liege = {
+	NOT = { trait = awn_succubus }
+	NOT = { trait = awn_succubus2 }
+	}
+	}
+	}
+	liege = { character_event = { id = succubus.3 } }
+	imprison = FROM
+	add_spouse_matrilineal  = FROM
+	}
+	
+	option = {
+	name = ACCEPT_MY_FATE
+	FROM = { character_event = { id = succubus.5 days = 2 } }
+	imprison = FROM
+	add_spouse_matrilineal  = FROM
+	}
+	}
+	
+##liege is informed##
+	character_event = {
+    id = succubus.3
+    title = THE_SUCCUBUS # The Succubus
+    desc = "EVTDESCSUCCUBUS.3"
+    picture = "GFX_evt_lovers"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = HAH_LET_HER_HAVE_HER_FUN # Hah! Let her have her fun.
+	}
+	
+	option = {
+	name = SHE_CANT_HAVE_THIS_ONE
+	trigger = {
+	AND = {
+	trait = awn_gorgon
+	ai = no
+	}
+	}
+	remove_spouse = FROM
+	FROM = { prisoner = no }
+	FROM = {
+		reverse_opinion = {
+			who = ROOT
+			modifier = opinion_sprung_from_jail
+			months = 240
+				}
+	}
+}
+
+option = {
+name = succubus.3.c # I will attempt to secure his release!
+top_liege = { character_event = { id = succubus.6 days = 7 } }
+}
+
+
+option = {
+name = succubus.3.d # I dare not move against her...
+trigger = { ai = no }
+}
+
+}
+
+	##succubus is informed target accepts fate##
+	character_event = {
+    id = succubus.5
+    title = YOUR_NEW_PET # Your new pet
+    desc = "EVTDESCSUCCUBUS.5"
+    picture = "GFX_evt_succubus"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = BRING_HIM_TO_MY_CHAMBERS # Bring him to my chambers!
+	if = {
+	limit = {
+	FROM = { health = 1 }
+	}
+	FROM = { health = -1 }
+	}
+	}
+	
+	option = {
+	name = succubus.5.b # How boring. I'll have to make him fear me.
+	FROM = { add_trait = wounded }
+	}
+	
+	}
+	
+##top liege is informed##
+	character_event = {
+    id = succubus.6
+    title = THE_SUCCUBUS # The Succubus
+    desc = "EVTDESCSUCCUBUS.6"
+    picture = "GFX_evt_into_the_dungeon"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = HAH_LET_HER_HAVE_HER_FUN # Hah! Let her have her fun.
+	trigger = {
+	trait = awn_gorgon
+	}
+	}
+	
+	option = {
+	name = SHE_CANT_HAVE_THIS_ONE
+	trigger = {
+	AND = {
+	trait = awn_gorgon
+	ai = no
+	}
+	}
+	FROMFROM = { remove_spouse = spouse }
+	FROMFROM = { prisoner = no }
+}
+
+
+}
+
+
+##Darnae slowly kills her husband##
+	character_event = {
+    id = succubus.7
+    title = YOU_GROW_HUNGRY # You grow hungry
+    desc = "EVTDESCSUCCUBUS.7"
+    picture = "GFX_evt_succubus"
+	
+	trigger = {
+	trait = awn_succubus
+	age = 16
+	is_married = yes
+	}
+	
+	mean_time_to_happen = {
+	days = 120
+	}
+	
+	option = {
+	name = YES_AT_ONCE
+	spouse = { character_event = { id = succubus.8 } }
+	spouse = { health = -1 }
+	ROOT = { health = 0.50 }
+	}
+	
+	option = {
+	name = YES_BUT_I_WONT_DRAIN_HIM
+	trigger = { 
+	health = 30
+	}
+	ROOT = { health = -2 }
+	}
+	
+	option = {
+	name = succubus.7.c # No, not now. I'll resist the hunger.
+	trigger = { 
+	ai = no 
+	}
+	ROOT = { health = -2 }
+	}	
+	}
+	
+##husband is informed##
+	character_event = {
+    id = succubus.8
+    title = PRINCESS_DARNAE_SUMMONS # Princess Darnae Summons
+    desc = "EVTDESCSUCCUBUS.8"
+    picture = "GFX_evt_succubus"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_DONT_WANT_TO_DIE # I don't want to die!
+	}
+	
+	option = {
+	name = NOOOO_SET_ME_FREE
+	}
+	
+	}
+	
+character_event = {
+	id = succubus.9
+    title = TORTURE # Torture
+    desc = "EVTDESCSUCCUBUS.9"
+    picture = "GFX_evt_into_the_dungeon"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "NO"
+		health = -8
+		add_trait = maimed
+		add_trait = blinded
+		prisoner = no
+	}
+}
+
+character_event = {
+	id = succubus.10
+    title = FEEDING # Feeding
+    desc = "EVTDESCSUCCUBUS.10"
+    picture = "GFX_evt_succubus"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = THAT_WAS_FUN
+		health = 4
+	}
+}
+
+##succubus wants to take a lover##
+	character_event = {
+    id = succubus.11
+    title = YOU_GROW_HUNGRY # You grow hungry
+    desc = "EVTDESCSUCCUBUS.11"
+    picture = "GFX_evt_succubus"
+	
+	trigger = {
+	OR = {
+	trait = awn_succubus
+	trait = awn_succubus2
+	}
+	ai = no
+	is_landed = yes
+	age = 16
+	NOT = { health = 4 }
+	NOT = { has_character_flag = succubus.11 }
+	}
+	
+	mean_time_to_happen = {
+	months = 12
+	}
+
+	option = {
+	name = succubus.11.a # I need to get a prisoner... or a consort.
+	}
+	
+	option = {
+	name = DO_NOT_WARN_ME_OF_THIS_AGAIN
+	set_character_flag = succubus.11
+	}
+	
+	}
+
+namespace = whitewitch
+
+	character_event = {
+    id = whitewitch.0
+    title = SECURING_AN_HEIR # Securing an Heir
+    desc = "EVTDESCWHITEWITCH.0"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = A_RJURIK_KING_OR_DUKE # A Rjurik King or Duke...
+	random_playable_ruler = {
+	limit = {
+	AND = { 
+	age = 15
+	culture = Rjurik 
+	is_female = no
+		OR = {
+	tier = DUKE
+	tier = KING
+	}
+	}
+	}
+	character_event = { id = whitewitch.1 days = 14 }
+	}
+	}
+	
+	
+	option = {
+	name = whitewitch.0.b # Never mind, or try to find another Duke.
+	}
+	}
+	
+	character_event = {
+    id = whitewitch.1
+    title = INVITATION # Invitation
+    desc = "EVTDESCWHITEWITCH.1"
+    picture = "GFX_evt_princess_byzantine"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = ILL_HEAR_WHAT_SHE_HAS_TO_SAY # I'll hear what she has to say...
+	wealth = 25
+	FROM = { character_event = { id = whitewitch.2 days = 7 } }
+	}
+	
+	option = {
+	name = NO_IM_NO_FOOL_I_WONT_GO
+	FROM = { character_event = { id = whitewitch.3 days = 7 } }
+	}
+	
+	}
+	
+	##ruler arrives at white witch court, she is informed##
+	character_event = {
+    id = whitewitch.2
+    title = INVITATION # Invitation
+    desc = "EVTDESCWHITEWITCH.2"
+    picture = "GFX_evt_carriage"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = whitewitch.2.a # I must find just the right thing to wear!
+	FROM = { character_event = { id = whitewitch.4 } }
+	}
+	
+	}
+	
+	##ruler rejects invitation at white witch court, she is informed##
+	character_event = {
+    id = whitewitch.3
+    title = INVITATION # Invitation
+    desc = "EVTDESCWHITEWITCH.3"
+    picture = "GFX_evt_throne"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = whitewitch.3.a # Useless coward! I'll have to find someone else...
+	}
+	
+	option = {
+	name = NEVER_LIKED_HIM_MUCH_ANYWAYS
+	}
+	
+	option = {
+	name = HIS_LOSS_NOT_MINE
+	}
+	
+	}
+	
+	##ruler rejects invitation at white witch court, she is informed##
+	character_event = {
+    id = whitewitch.4
+    title = THE_WHITE_WITCH # The White Witch
+    desc = "EVTDESCWHITEWITCH.4"
+    picture = "GFX_evt_feast"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_STILL_DONT_TRUST_HER # I still don't trust her...
+	FROM = { character_event = { id = whitewitch.5 } }
+	}
+	
+	option = {
+	name = whitewitch.4.b # The only way to defeat a female adversary, is to seduce her!
+	FROM = { character_event = { id = whitewitch.6 } }
+	}
+	
+	}
+	
+	##the feast begins, ruler is sceptical##
+	character_event = {
+    id = whitewitch.5
+    title = THE_FEAST # The Feast
+    desc = "EVTDESCWHITEWITCH.5"
+    picture = "GFX_evt_feast"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = whitewitch.5.a # Insulting! I'll have to resort to charm magic...
+	FROM = { character_event = { id = whitewitch.7 } }
+	}
+	
+	}
+	
+	##the feast begins, ruler is eager##
+	character_event = {
+    id = whitewitch.6
+    title = THE_FEAST # The Feast
+    desc = "EVTDESCWHITEWITCH.6"
+    picture = "GFX_evt_feast"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = whitewitch.6.a # My beauty and power are too much for any man to resist!
+	FROM = { character_event = { id = whitewitch.8 } }
+	}
+	
+	}
+
+	#ruler feels charm spell being cast on him##
+	character_event = {
+    id = whitewitch.7
+    title = THE_FEAST # The Feast
+    desc = "EVTDESCWHITEWITCH.7"
+    picture = "GFX_evt_feast"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = SHE_IS_USING_MAGIC_ON_ME_RUN # She is using magic on me! Run!
+	FROM = { character_event = { id = whitewitch.9 } }
+	}
+	
+	option = {
+	name = whitewitch.7.b # I can't resist her, and don't want to anymore!
+	FROM = { character_event = { id = whitewitch.10 } }
+	}
+	
+	}
+	
+	#ruler succeeds in seducing the white witch, who is willing##
+	character_event = {
+    id = whitewitch.8
+    title = THE_FEAST # The Feast
+    desc = "EVTDESCWHITEWITCH.8"
+    picture = "GFX_evt_feast"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = LETS_GO_SOMEWHERE_MORE_PRIVATE # Let's go somewhere more private...
+	FROM = { character_event = { id = whitewitch.15 } }
+	}
+	
+	}
+	
+	#ruler feels charm spell being cast on him, resists##
+	character_event = {
+    id = whitewitch.9
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.9"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = LET_THE_FOOL_GO_I_TIRE_OF_HIM # Let the fool go! I tire of him!
+	FROM = { character_event = { id = whitewitch.11 } }
+	}
+	
+	option = {
+	name = ARREST_THEM_ALL_GUARDS
+	prestige = -500
+	FROM = { character_event = { id = whitewitch.12 } }
+	}
+	
+	}
+	
+	#ruler feels charm spell being cast on him, does not resist##
+	character_event = {
+    id = whitewitch.10
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.10"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = LETS_GO_SOMEWHERE_MORE_PRIVATE # Let's go somewhere more... private.
+	FROM = { character_event = { id = whitewitch.13 } }
+	}
+
+	
+	}	
+	
+	#ruler feels charm spell being cast on him##
+	character_event = {
+    id = whitewitch.11
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.11"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = IM_NEVER_COMING_BACK_HERE # I'm never coming back here!
+	}
+	
+	}
+	
+	#ruler feels charm spell being cast on him##
+	character_event = {
+    id = whitewitch.12
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.12"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = whitewitch.12.a # There's too many to fight... surrender, men.
+	imprison = FROM
+	}
+	
+	}
+	
+	#ruler has been charmed, night is a blur##
+	character_event = {
+    id = whitewitch.13
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.13"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = whitewitch.13.a # Time to leave, and never speak of this again!
+	FROM = { character_event = { id = whitewitch.14 } }
+	}
+
+	
+	}	
+	
+	#ruler has been charmed, night is a blur, white witch pov##
+	character_event = {
+    id = whitewitch.14
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.14"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = whitewitch.14.a # When I'm good, I'm good. When I'm bad, I'm better!
+		prestige = -250
+		create_character = {
+			age = 0
+			trait = bastard
+			female = yes
+		}
+		new_character = {
+			religion = FROM
+			set_mother = ROOT
+			set_father = FROM
+			add_trait = amateur_sorcerer
+			dynasty = ROOT
+			FROM = {
+				random_demesne_title = {
+					limit = {
+						tier = duke
+					}
+					add_claim = PREVPREV
+				}	
+			}
+		}
+	}
+	}
+
+
+	
+	character_event = {
+    id = whitewitch.15
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.15"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = LETS_GO_SOMEWHERE_MORE_PRIVATE # Let's go somewhere more... private.
+	FROM = { character_event = { id = whitewitch.16 } }
+	}
+
+	
+	}	
+	
+	character_event = {
+    id = whitewitch.16
+    title = THE_SEDUCTION # The Seduction
+    desc = "EVTDESCWHITEWITCH.16"
+    picture = "GFX_evt_lovers"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = I_SEDUCED_THE_WHITE_WITCH # I seduced the White Witch!
+	prestige = 100
+	FROM = { character_event = { id = whitewitch.14 } }
+	}
+
+	
+	}
+
+character_event = {
+id = whitewitch.17
+title = YOUR_FORCES # Your forces
+desc = "EVTDESCWHITEWITCH.17"
+picture = "GFX_evt_plague_doctor"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_white_witch
+NOT = { has_character_flag = witch17 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = witch17
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 1500 1500 }
+						}
+					}
+				}
+			}
+}
+
+}
+
+
+##generic event for awnsheighleen who change religions##
+
+namespace = awnsheighleen
+
+character_event = {
+id = awnsheighleen.1
+title = REALM_TURMOIL # Realm Turmoil
+desc = "EVTDESCAWNSHEIGHLEEN.1"
+picture = "gfx_peasants"
+
+trigger = {
+OR = {
+trait = awn_white_witch
+trait = awn_gorgon
+trait = awn_raven
+trait = awn_serpent
+trait = awn_lahmia
+trait = awn_rhuobhe
+trait = awn_sphinx
+trait = awn_magian
+trait = awn_succubus
+trait = awn_brute
+}
+religion_group = gods_of_good
+NOT = { has_character_flag = awnsheighleen1 }
+}
+
+mean_time_to_happen = {
+days = 7
+}
+
+option = {
+name = "CURSES"
+set_character_flag = awnsheighleen1
+any_realm_province = { 
+add_province_modifier = { name = severe_realm_duress duration = 1500 } 
+}
+any_vassal = {
+limit = {
+NOT = { religion_group = gods_of_good }
+}
+		opinion = {
+			who = PREV
+			modifier = opinion_thinks_insane
+			months = 120
+		}
+}
+}
+
+}		
+
+namespace = sphinx
+
+character_event = {
+id = sphinx.0
+title = YOUR_FOLLOWERS # Your followers
+desc = "EVTDESCSPHINX.0"
+picture = "GFX_evt_victory_arch_byzantine"
+
+trigger = {
+year = 1524
+NOT = { year = 1525 }
+trait = awn_sphinx
+NOT = { has_character_flag = sphinx0 }
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = EXCELLENT
+set_character_flag = sphinx0
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_cavalry = { 2000 2000 }
+						}
+					}
+				}
+			}
+}
+
+}
+
+namespace = awnshie
+
+#awnsheighleen recover from being incapable
+character_event = {
+id = awnshie.0
+desc = awnshie0desc #Your bloodline powers have healed a grievous injury.
+picture = "GFX_evt_comet"
+
+trigger = {
+trait = incapable
+OR = {
+		trait = BPbloodform
+		trait = BPinvulnerability	
+		trait = BPmajor_regeneration
+		trait = awn_succubus
+		trait = awn_succubus2
+		trait = awn_brute
+		trait = awn_magian
+		trait = awn_white_witch
+		trait = awn_gorgon
+		trait = awn_spider
+		trait = awn_rhuobhe
+		trait = awn_lahmia
+		trait = awn_lahmia2
+		trait = awn_serpent
+		trait = awn_raven		
+		trait = awn_hag
+		trait = awn_chimaera
+		trait = awn_basilisk
+		trait = awn_banshegh
+		trait = awn_kraken
+		trait = awn_manticore
+		trait = awn_sphinx
+		trait = awn_swordhawk
+		trait = awn_harpy
+		trait = awn_siren
+		trait = wraith
+		trait = vampire
+				}
+}
+
+mean_time_to_happen = {
+months = 12
+}
+
+option = {
+name = EXCELLENT
+remove_trait = incapable
+}
+
+}
+	

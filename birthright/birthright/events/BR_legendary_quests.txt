@@ -1,0 +1,135 @@
+namespace = legendary
+
+	#######################################
+	####Legendary Quests###################
+	#######################################
+	
+
+	character_event = {
+    id = legendary.0
+    title = LEGENDS # Legends
+    desc = "EVTDESCLEGENDARY.0"
+    picture = "GFX_evt_mecca_falls_soa"	
+	
+    is_triggered_only = yes
+
+option = {
+name = I_WILL_HUNT_DOWN_A_GREAT_MONSTER # I will hunt down a great monster!
+add_trait = on_current_quest
+character_event = { id = legendary.1 days = 7 }
+}
+
+option = {
+name = NOT_RIGHT_NOW
+}
+
+}
+
+	##Generic Repeatable Epic Quest - hunt Awnsheighleen##
+	character_event = {
+    id = legendary.1
+    title = MONSTER_HUNTING # Monster Hunting
+    desc = "EVTDESCLEGENDARY.1"
+    picture = "GFX_evt_bandits"	
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "CHARGE"
+	random_list = {
+    25 = { character_event = { id = legendary.2  } }
+	75 = { character_event = { id = legendary.3 } }
+	}
+	}
+	
+	option = {
+	name = adventurer.14.b # No, wait, let's not do this...
+	trigger = { ai = no }
+	remove_trait = on_current_quest
+	prestige = -100
+	}
+	
+	}
+	
+	#giants success#
+	character_event = {
+    id = legendary.2
+    title = THE_BATTLE # The Battle
+    desc = "EVTDESCLEGENDARY.2"
+    picture = "GFX_evt_bandits"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = I_AM_A_LEGEND
+	remove_trait = on_current_quest
+	random = {
+	chance = 50
+	add_trait = wounded
+	}	
+	if = {
+	limit = { trait = master_fighter }
+	remove_trait = master_fighter
+	add_trait = legendary_fighter
+	}
+	if = {
+	limit = { trait = master_rogue }
+	remove_trait = master_rogue
+	add_trait = legendary_rogue
+	}
+	if = {
+	limit = { trait = master_sorcerer }
+	remove_trait = master_sorcerer
+	add_trait = legendary_sorcerer
+	}
+	if = {
+	limit = { trait = master_priest }
+	remove_trait = master_priest
+	add_trait = legendary_priest
+	}
+	if = {
+	limit = { trait = master_ranger }
+	remove_trait = master_ranger
+	add_trait = legendary_ranger
+	}
+	if = {
+	limit = { trait = master_bard }
+	remove_trait = master_bard
+	add_trait = legendary_bard
+	}	
+	if = {
+	limit = { trait = master_mage }
+	remove_trait = master_mage
+	add_trait = legendary_mage
+	}
+	}
+	
+	}
+
+	#giants defeat#
+	character_event = {
+    id = legendary.3
+    title = THE_BATTLE # The Battle
+    desc = "EVTDESCLEGENDARY.3"
+    picture = "GFX_evt_pale_rider"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = "RUN"
+	remove_trait = on_current_quest
+		random_list = {	
+	20 = { 
+	add_trait = wounded 
+	}
+	50 = { 
+	add_trait = maimed 
+	}
+	30 = {   death = {
+		death_reason = death_battle
+				}
+				}
+				}
+				}
+				
+				}

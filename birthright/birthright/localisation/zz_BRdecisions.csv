@@ -1,0 +1,305 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+employ_steward;Employ a Steward;;;;;;;;;;;;;x
+employ_steward_desc;The realm needs a steward, luckily for us there will always be men seeking for employment.;;;;;;;;;;;;;x
+employ_lieutenant;Employ a Lieutenant;;;;;;;;;;;;;x
+employ_lieutenant_desc;The realm needs a warrior to command our troops, luckily for us there will always be men seeking for employment.;;;;;;;;;;;;;x
+employ_shadow;Employ a Shadow;;;;;;;;;;;;;x
+employ_shadow_desc;Our household needs someone who will get his hands dirty for a price, luckily for us there will always be men seeking for employment.;;;;;;;;;;;;;x
+employ_herald;Employ a Herald;;;;;;;;;;;;;x
+employ_herald_desc;Our household needs someone to keep our genealogical records as well as an avid speaker, luckily for us there will always be men seeking for employment.;;;;;;;;;;;;;x
+open_employment_decisions;Open Employment Decisions;;;;;;;;;;;;;x
+open_employment_decisions_desc;Open the employment decisions - This will let you hire steward, shadow, herald, a field commander, or bring to court a young debutante.;;;;;;;;;;;;;x
+close_employment_decisions;Close Employment Decisions;;;;;;;;;;;;;x
+close_employment_decisions_desc;Close Employment Decisions;;;;;;;;;;;;;x
+perform_bloodtheft;Perform Bloodtheft;;;;;;;;;;;;;x
+perform_bloodtheft_desc;Perform bloodtheft on your prisoners, consuming his bloodline and killing him in the process.;;;;;;;;;;;;;x
+increase_your_bloodline_t;Increase Tainted Bloodline;;;;;;;;;;;;;x
+increase_your_bloodline_t_desc;By using your accumulated regency and prestige you may increase your bloodline power.;;;;;;;;;;;;;x
+increase_your_bloodline_m;Increase Minor Bloodline;;;;;;;;;;;;;x
+increase_your_bloodline_m_desc;By using your accumulated regency and prestige you may increase your bloodline power.;;;;;;;;;;;;;x
+increase_bloodscore;Increase Your Bloodscore;;;;;;;;;;;;;x
+increase_bloodscore_desc;By using your accumulated regency you may increase your bloodscore by 1 point for 10x regency.;;;;;;;;;;;;;x
+open_adventuring_menu;Open Adventuring Menu;;;;;;;;;;;;;x
+open_adventuring_menu_desc;Open the adventuring menu receiving a letter telling you what to do.;;;;;;;;;;;;;x
+becoming_emperor;Become Emperor of Anuire;;;;;;;;;;;;;x
+becoming_emperor_desc;Become Emperor of the Anuirean Empire.;;;;;;;;;;;;;x
+begin_bid;Begin Bid for the Iron Throne;;;;;;;;;;;;;x
+begin_bid_desc;Begin your bid to gain the Iron Throne.;;;;;;;;;;;;;x
+buy_support;Buy Support of Neighbouring Realms;;;;;;;;;;;;;x
+buy_support_desc;By spending your prestige or wealth you can buy the support of a neighbouring realm, effectively becoming your vassals and recognising your claim to the Iron Throne.;;;;;;;;;;;;;x
+change_religion;Change your Religion;;;;;;;;;;;;;x
+change_religion_desc;Changing your religion comes at a price, your vassals may dislike this.;;;;;;;;;;;;;x
+choose_adventuring_class;Choose your Adventuring Class;;;;;;;;;;;;;x
+choose_adventuring_class_desc;It is time to choose your adventuring class, you will be presented with different choices - a mage, bard, ranger, fighter, priest or a rogue.;;;;;;;;;;;;;x
+prepare_a_mass_invasion;Prepare a Mass Invasion;;;;;;;;;;;;;x
+prepare_a_mass_invasion_desc;You will gather your vassals and plan an invasion the mights which Cerilia has never seen before.;;;;;;;;;;;;;x
+command_cm;Command your Court Mage;;;;;;;;;;;;;x
+command_cm_desc;Command your court mage to do your bidding.;;;;;;;;;;;;;x
+craft_item;Craft a Magical Item;;;;;;;;;;;;;x
+craft_item_desc;As a magic user you might want to craft a magical item, however this will consume time and come at a cost.;;;;;;;;;;;;;x
+legendary_quest;Go on a Legendary Quest;;;;;;;;;;;;;x
+legendary_quest_desc;Going on a legendary quest will surely immortalise you in the history books... IF you succeed.;;;;;;;;;;;;;x
+recover_from_maiming;Recover form Maiming;;;;;;;;;;;;;x
+recover_from_maiming_desc;Recovering from maiming while not entirely hard will surely come at a cost.;;;;;;;;;;;;;x
+cast_realm_magic;Cast Arcane Realm Magic;;;;;;;;;;;;;x
+cast_realm_magic_desc;Cast Arcane Realm Magic.;;;;;;;;;;;;;x
+cast_realm_war_magic;Cast Arcane Realm War Magic;;;;;;;;;;;;;x
+cast_realm_war_magic_desc;Cast Arcane Realm War Magic.;;;;;;;;;;;;;x
+cast_lightning_storm_enemy;Cast Lightning Storm on Enemy;;;;;;;;;;;;;x
+cast_lightning_storm_enemy_desc;Cast Lightning Storm on Enemy.;;;;;;;;;;;;;x
+cast_priest_magic;Cast Priest Realm Magic;;;;;;;;;;;;;x
+cast_priest_magic_desc;Cast Priest Realm Magic.;;;;;;;;;;;;;x
+steal_artifact;Steal Artefact from Prisoner;;;;;;;;;;;;;x
+steal_artifact_desc;Steal Artefact from Prisoner.;;;;;;;;;;;;;x
+feed_on_prisoner;Feed of Prisoner;;;;;;;;;;;;;x
+feed_on_prisoner_desc;Feed on Prisoner.;;;;;;;;;;;;;x
+have_children;Have a Child;;;;;;;;;;;;;x
+have_children_desc;Have a Child;;;;;;;;;;;;;x
+open_prisoner_decisions;Open Prisoner Decisions;;;;;;;;;;;;;x
+open_prisoner_decisions_desc;Open Prisoner Decisions;;;;;;;;;;;;;x
+close_prisoner_decisions;Close Prisoner Decisions;;;;;;;;;;;;;x
+close_prisoner_decisions_desc;Close Prisoner Decisions;;;;;;;;;;;;;x
+vassal_relinquish_claim_decision;Force [Root.GetTitledFirstName] to relinquish claims;;;;;;;;;;;;;x
+vassal_relinquish_claim_decision_desc;As [Root.GetSheHe] is your prisoner and a claimant to your rightful titles, you may force [Root.GetHerHim] to relinquish said claims, with torture if necessary.;;;;;;;;;;;;;x
+visit_prisoner;Visit [Root.GetTitledFirstName];;;;;;;;;;;;;x
+visit_prisoner_desc;As [Root.GetTitledFirstName] is your prisoner, you can visit [Root.GetHerHim] to spend a night with [Root.GetHerHim]. It's not like [Root.GetSheHe] can resist.;;;;;;;;;;;;;x
+open_bloodline_decisions;Open Bloodline Decisions;;;;;;;;;;;;;x
+open_bloodline_decisions_desc;Open Bloodline Decisions;;;;;;;;;;;;;x
+close_bloodline_decisions;Close Bloodline Decisions;;;;;;;;;;;;;x
+close_bloodline_decisions_desc;Close Bloodline Decisions;;;;;;;;;;;;;x
+open_birthright_decisions;Open Birthright Decisions;;;;;;;;;;;;;x
+open_birthright_decisions_desc;Open Birthright Decisions;;;;;;;;;;;;;x
+close_birthright_decisions;Close Birthright Decisions;;;;;;;;;;;;;x
+close_birthright_decisions_desc;Close Birthright Decisions;;;;;;;;;;;;;x
+open_festivities_decisions;Open Festivities Decisions;;;;;;;;;;;;;x
+open_festivities_decisions_desc;Open Festivities Decisions;;;;;;;;;;;;;x
+close_festivities_decisions;Close Festivities Decisions;;;;;;;;;;;;;x
+close_festivities_decisions_desc;Close Festivities Decisions;;;;;;;;;;;;;x
+gift_magic_item;Gift Magical Item;;;;;;;;;;;;;x
+gift_magic_item_desc;Gift Magical Item;;;;;;;;;;;;;x
+knight_courtier;Knight a Random Courtier;;;;;;;;;;;;;x
+knight_courtier_desc;Some of my courtiers are worthy enough of a knighthood.;;;;;;;;;;;;;x
+open_knighthood_decisions;Open Legacy Decisions;;;;;;;;;;;;;x
+open_knighthood_decisions_desc;Open Legacy Decisions;;;;;;;;;;;;;x
+close_knighthood_decisions;Close Legacy Decisions;;;;;;;;;;;;;x
+close_knighthood_decisions_desc;Close Legacy Decisions;;;;;;;;;;;;;x
+sponsor_knightly_order;Sponsor a Knightly Order;;;;;;;;;;;;;x
+sponsor_knightly_order_desc;Sponsor a Knightly Order;;;;;;;;;;;;;x
+sorcery_college_children;Send [Root.GetTitledFirstName] to College of Sorcery;;;;;;;;;;;;;x
+sorcery_college_children_desc;Send [Root.GetTitledFirstName] to the College of Sorcery where [Root.GetSheHe] will hopefully gain knowledge and become wise beyond [Root.GetHerHis] years.;;;;;;;;;;;;;x
+sorcery_college_children_ruornil;Send [Root.GetTitledFirstName] to College of Sorcery;;;;;;;;;;;;;x
+sorcery_college_children_ruornil_desc;Send [Root.GetTitledFirstName] to the College of Sorcery where [Root.GetSheHe] will hopefully gain knowledge and become wise beyond [Root.GetHerHis] years.;;;;;;;;;;;;;x
+send_son_to_soa;Send [Root.GetTitledFirstName] to The Swords of Avanil;;;;;;;;;;;;;x
+send_son_to_soa_desc;Send your [Root.GetTitledFirstName] to serve in the Swords of Avanil.;;;;;;;;;;;;;x
+knight_son;Knight [This.GetBestName];Chevalier [This.GetBestName];;;Nombrar Caballero a [This.GetBestName];;;;;;;;;x
+knight_son_desc;[This.GetBestName] has proven himself to be a fine warrior. Perhaps we should officially recognize his skill.;;;;;;;;;;;;;x
+knight_daughter;Knight [This.GetBestName];Chevalier [This.GetBestName];;;Nombrar Caballero a [This.GetBestName];;;;;;;;;x
+knight_daughter_desc;[This.GetBestName] has proven herself to be a fine warrior. Though it's normally an honour for men, perhaps we should officially recognize her skill.;;;;;;;;;;;;;x
+buy_knighthood;Buy Knighthood;Acheter chevalerie.;;;;;;;;;;;;x
+buy_knighthood_desc;Bribe someone to knight [Root.GetBestName];;;;;;;;;;;;;x
+knight_ward;Knight my Ward;;;;;;;;;;;;;x
+knight_ward_desc;My ward has proven himself, deserving enough to be a knight.;;;;;;;;;;;;;x
+send_son_merc;Send [Root.GetTitledFirstName] to a Mercenary Company;;;;;;;;;;;;;x
+send_son_merc_desc;Send your son [Root.GetTitledFirstName], to gain glory on his own, working for mercenaries.;;;;;;;;;;;;;x
+recall_sorcery_college_children;Recall Apprenticing Children;;;;;;;;;;;;;x
+recall_sorcery_college_children_desc;When conflict arises in the Imperial City of Anuire, you can send a carriage for your child. This however, will cost your child the apprenticeship at the Royal College of Sorcery.;;;;;;;;;;;;;x
+restore_imperial_temple;Restore The Imperial Temple;;;;;;;;;;;;;x
+restore_imperial_temple_desc;Restore The Imperial Temple to its former glory and rightful seat of power.;;;;;;;;;;;;;x
+
+##Portfolio decisions
+portfolio_of_gods_haelyn;Choose Haelyn's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_haelyn_desc;Choose an aspect of life of your god and patron Haelyn.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.1;The church of Haelyn is considered the most powerful church in Cerilia and its teachings have spread to every human-dominated region. In the fifteen centuries since Deismaar, the church has split in several different schisms. Each of the sects differs slightly in their beliefs and activities, but all provide spiritual guidance for the people who look to them for inspiration.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.1;Haelyn's Courage;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.1;Haelyn's Justice;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.1;Haelyn's Chivalry;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.1;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.2;The church of Haelyn is considered the most powerful church in Cerilia and its teachings have spread to every human-dominated region. In the fifteen centuries since Deismaar, the church has split in several different schisms. Each of the sects differs slightly in their beliefs and activities, but all provide spiritual guidance for the people who look to them for inspiration.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.2;Haelyn's Rulership;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.2;Haelyn's Noble War;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.2;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.3;As you stray away from Haelyn's grace, you feel his divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.3;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_nesirie;Choose Nesirie's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_nesirie_desc;Choose an aspect of life of your goddess and patroness Nesirie.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.4;The church of Nesirie can be found nearly anywhere where land meets sea. Mariners call to her for protection from storms, creatures of the deep, and other hazards. They beg of her full sails and calm waters. Most of Nesirie's clergy are women that have endured some terrible tragedy that has left them bereft.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.4;Nesirie's Healing;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.4;Nesirie's Grief;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.4;Nesirie's Remembrance of The Dead;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.4;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.5;The church of Nesirie can be found nearly anywhere where land meets sea. Mariners call to her for protection from storms, creatures of the deep, and other hazards. They beg of her full sails and calm waters. Most of Nesirie's clergy are women that have endured some terrible tragedy that has left them bereft.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.5;Nesirie's Protection;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.5;Nesirie's Diplomacy;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.5;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.6;As you stray away from Nesirie's grace, you feel her divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.6;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_cuiraecen;Choose Cuiraecen's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_cuiraecen_desc;Choose an aspect of life of your god and patron Cuiraecen.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.7;The church of Cuiraecen is loosely organized, each individual temple is arranged differently and no overall church hierarchy exists. Cuiraecen was born in the third century after Deismaar, and by the beginning of the fourth century, he had inspired orders of knighthood within the church of Haelyn.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.7;Cuiraecen's Storms;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.7;Cuiraecen's Conflict;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.7;Cuiraecen's Battle;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.7;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.8;The church of Cuiraecen is loosely organized, each individual temple is arranged differently and no overall church hierarchy exists. Cuiraecen was born in the third century after Deismaar, and by the beginning of the fourth century, he had inspired orders of knighthood within the church of Haelyn.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.8;Cuiraecen's Glory;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.8;Cuiraecen's Strength;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.8;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.9;As you stray away from Cuiraecen's grace, you feel his divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.9;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_avani;Choose Avani's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_avani_desc;Choose an aspect of life of your goddess and patroness Avani.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.10;The church of Avani is strongest in the lands of the Khinasi. Her priests and paladins are expected to represent themselves as if they were representing her. They must strive to be firm but fair in their dispensation of justice, must aid the poor and defend those unable to defend themselves, and must be merciful to enemies who she would deem deserving.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.10;Avani's Law;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.10;Avani's Knowledge;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.10;Avani's Magic;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.10;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.11;The church of Avani is strongest in the lands of the Khinasi. Her priests and paladins are expected to represent themselves as if they were representing her. They must strive to be firm but fair in their dispensation of justice, must aid the poor and defend those unable to defend themselves, and must be merciful to enemies who she would deem deserving.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.11;Avani's Reason;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.11;Avani's Sun;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.11;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.12;As you stray away from Avani's grace, you feel her divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.12;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_sera;Choose Sera's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_sera_desc;Choose an aspect of life of your goddess and patroness Sera.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.13;Sera's church has become international, with temples throughout Cerilia, temples to Sera can be found wherever trade exists. To Sera's clergy, the achievements of temporal goals are every bit as important as the achievement of spiritual goals.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.13;Sera's Luck;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.13;Sera's Trade;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.13;Sera's Travel;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.13;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.14;Sera's church has become international, with temples throughout Cerilia, temples to Sera can be found wherever trade exists. To Sera's clergy, the achievements of temporal goals are every bit as important as the achievement of spiritual goals.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.14;Sera's Wealth;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.14;Sera's Fortune;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.14;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.15;As you stray away from Sera's grace, you feel her divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.15;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_erik;Choose Erik's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_erik_desc;Choose an aspect of life of your god and patron Erik.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.16;Erik's priests pray for their spells at dawn or dusk. Holy ceremonies to Erik take place in the wild, generally in stone circles that function as Erik's temples. The principle holy day is Midsummer's Day. His church is a matter of heart and soul, not of doctrine.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.16;Erik's Forests;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.16;Erik's Hunting;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.16;Erik's Earth;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.16;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.17;Erik's priests pray for their spells at dawn or dusk. Holy ceremonies to Erik take place in the wild, generally in stone circles that function as Erik's temples. The principle holy day is Midsummer's Day. His church is a matter of heart and soul, not of doctrine.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.17;Erik's Wilderness;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.17;Erik's Animals;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.17;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.18;As you stray away from Erik's grace, you feel his divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.18;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_ruornil;Choose Ruornil's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_ruornil_desc;Choose an aspect of life of your god and patron Ruornil.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.19;Even to his worshippers, Ruornil seems a distant, mysterious god. He has set down no written word, does not communicate regularly with his followers, and seems aloof from the daily affairs of Cerilia. The church of Ruornil is very small. It is comprised primarily of small shrines attended by priests and mages.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.19;Ruornil's Knowledge;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.19;Ruornil's Magic;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.19;Ruornil's Moon;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.19;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.20;Even to his worshippers, Ruornil seems a distant, mysterious god. He has set down no written word, does not communicate regularly with his followers, and seems aloof from the daily affairs of Cerilia. The church of Ruornil is very small. It is comprised primarily of small shrines attended by priests and mages.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.20;Ruornil's Spell;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.20;Ruornil's Night;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.20;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.21;As you stray away from Ruornil's grace, you feel his divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.21;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_eloele;Choose Eloele's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_eloele_desc;Choose an aspect of life of your goddess and patroness Eloele.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.22;As a religious organization, her church is almost non-existent and does not have any extensive set of rules. Followers of Eloele are found across Cerilia, but rarely gather in large numbers for any length of time. In most of Cerilia, the church has little more than small shrines hidden from all but a few knowledgeable followers.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.22;Eloele's Darkness;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.22;Eloele's Thieves;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.22;Eloele's Deception;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.22;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.23;As a religious organization, her church is almost non-existent and does not have any extensive set of rules. Followers of Eloele are found across Cerilia, but rarely gather in large numbers for any length of time. In most of Cerilia, the church has little more than small shrines hidden from all but a few knowledgeable followers.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.23;Eloele's Independence;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.23;Eloele's Trickery;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.23;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.24;As you stray away from Eloele's grace, you feel her divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.24;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_laerme;Choose Laerme's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_laerme_desc;Choose an aspect of life of your goddess and patroness Laerme.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.25;Laerme's faith does not have a a widespread and organized church, and she does not encourage her priests to actively convert followers. Temples to Laerme are rare, churches of Avani and Cuiraecen often have small shrines devoted to Laerme and her priests tend to them itinerantly.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.25;Laerme's Fire;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.25;Laerme's Love;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.25;Laerme's Art;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.25;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.26;Laerme's faith does not have a a widespread and organized church, and she does not encourage her priests to actively convert followers. Temples to Laerme are rare, churches of Avani and Cuiraecen often have small shrines devoted to Laerme and her priests tend to them itinerantly.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.26;Laerme's Charm;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.26;Laerme's Passion;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.26;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.27;As you stray away from Laerme's grace, you feel her divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.27;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_belinik;Choose Belinik's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_belinik_desc;Choose an aspect of life of your god and patron Belinik.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.28;Belinik's church has unquestioned power among the Vos. His priests do not work alongside others in their community to help it prosper, they plan attacks on their neighbours to take what they have, raiding for slaves, livestock, and booty.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.28;Belinik's Fear;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.28;Belinik's Domination;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.28;Belinik's Feuds;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.28;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.29;Belinik's church has unquestioned power among the Vos. His priests do not work alongside others in their community to help it prosper, they plan attacks on their neighbours to take what they have, raiding for slaves, livestock, and booty.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.29;Belinik's Battle;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.29;Belinik's Strength;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.29;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.30;As you stray away from Belinik's grace, you feel his divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.30;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_kriesha;Choose Kriesha's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_kriesha_desc;Choose an aspect of life of your goddess and patroness Kriesha.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.31;Kriesha's clergy are almost exclusively women, often the 'wise-women' of their clans. It is difficult to wield power without the support of a clan's circle of wise-women and few dare to cross them, for their revenge is slow, thorough, and nearly always fatal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.31;Kriesha's Winter;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.31;Kriesha's Hardship;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.31;Kriesha's Horrors;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.31;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.32;Kriesha's clergy are almost exclusively women, often the 'wise-women' of their clans. It is difficult to wield power without the support of a clan's circle of wise-women and few dare to cross them, for their revenge is slow, thorough, and nearly always fatal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.32;Kriesha's Suffering;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.32;Kriesha's Law;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.32;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.33;As you stray away from Kriesha's grace, you feel her divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.33;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_azrai;Choose Azrai's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_azrai_desc;Choose an aspect of life of your god and patron Azrai.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.34;Azrai refused to accept the world as the gods had shaped it, ceaseless in his attempts to improve upon their creation Azrai created the many races of beast-men, raised the best of the Orogs from mere labourers into strong warriors, warped animals into beasts and empowered those he favoured with the power of his blood.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.34;Azrai's Lies;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.34;Azrai's Strength;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.34;Azrai's Secrets;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.34;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.35;Azrai refused to accept the world as the gods had shaped it, ceaseless in his attempts to improve upon their creation Azrai created the many races of beast-men, raised the best of the Orogs from mere labourers into strong warriors, warped animals into beasts and empowered those he favoured with the power of his blood.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.35;Azrai's Knowledge;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.35;Azrai's Fear;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.35;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.36;As you stray away from Azrai's shadows, you feel his divine favour pulling away from you, leaving you as you were, a mere mortal.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.36;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x
+
+portfolio_of_gods_nature;Choose Nature's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_nature_desc;Choose an aspect of life of Nature.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.37;Although elves are aware gods existed prior to Deismaar and the ascension of the new ones, they choose not to follow them nor pay them homage to them since the betrayal of Azrai.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.37;Nature's Forests;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.37;Nature's Strength;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.37;Nature's Secrets;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.37;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.38;Although elves are aware gods existed prior to Deismaar and the ascension of the new ones, they choose not to follow them nor pay them homage to them since the betrayal of Azrai.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.38;Nature's Knowledge;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.38;Nature's Understanding;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.38;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.39;As you stray away from Nature's protection, you feel the divine favour that has been surrounding you pulling away.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.39;Pffs.. There are gods out there that would appreciate me!;;;;;;;;;;;;;x
+
+portfolio_of_gods_moradin;Choose Moradin's Aspect;;;;;;;;;;;;;x
+portfolio_of_gods_moradin_desc;Choose an aspect of life of your god, father, creator and patron Moradin.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.40;The church of Moradin has an active role in guiding the morals of dwarven communities. They emphasize the Soul Forger's hand in everyday dwarven activities such as mining, smithing, and engineering, and invoke his blessing when these tasks are begun.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.40;Moradin's Earth;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.40;Moradin's Law;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.40;Moradin's Protection;;;;;;;;;;;;;x
+EVTOPTDportfolio_of_gods.40;Check other aspects in the next page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.41;The church of Moradin has an active role in guiding the morals of dwarven communities. They emphasize the Soul Forger's hand in everyday dwarven activities such as mining, smithing, and engineering, and invoke his blessing when these tasks are begun.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.41;Moradin's Arts;;;;;;;;;;;;;x
+EVTOPTBportfolio_of_gods.41;Moradin's Science;;;;;;;;;;;;;x
+EVTOPTCportfolio_of_gods.41;Go back to the previous page.;;;;;;;;;;;;;x
+EVTDESCportfolio_of_gods.42;As you stray away from Moradin's grace, you feel his paternal divine favour pulling away from you, leaving you as you were, a mere dwarf.;;;;;;;;;;;;;x
+EVTOPTAportfolio_of_gods.42;Pffs.. There are other gods for me out there!;;;;;;;;;;;;;x

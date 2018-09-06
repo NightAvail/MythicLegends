@@ -1,0 +1,1640 @@
+namespace = bloodpowers
+
+##assigns the traits##
+
+
+character_event = {		#Central event - distributes up to 5 sub-events to assign powers, based on bloodline level
+	title = YOUR_BLOOD_POWERS
+	id = bloodpowers.0
+	desc = "EVTDESCBLOODPOWERS.0"
+	picture = GFX_evt_comet
+	
+	#is_triggered_only = yes
+	
+	hide_window = yes
+	min_age = 16
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	trigger = {
+		OR = {
+			trait = bloodline_great
+			trait = bloodline_major
+			trait = bloodline_minor
+			trait = bloodline_tainted
+			trait = bloodline_true
+		}
+		NOT = { has_character_flag = bloodpowers_passed }
+	}
+	
+	option = {
+		name = "OK"
+		set_character_flag = bloodpowers_passed
+		if = {
+			limit = { 
+				trait = bloodline_tainted	#Receives one minor
+			}
+			character_event = { id = bloodpowers.1 }
+			character_event = { id = bloodpowers.4 days = 1 }
+		}
+		if = {
+			limit = { 
+				trait = bloodline_minor		#Receives one minor, one major
+			}
+			character_event = { id = bloodpowers.1 }
+			character_event = { id = bloodpowers.2 }
+			character_event = { id = bloodpowers.4 days = 1 }
+		}
+		if = {
+			limit = { 
+				trait = bloodline_major		#Receives one minor, one major, one great
+			}
+			character_event = { id = bloodpowers.1 }
+			character_event = { id = bloodpowers.2 }
+			character_event = { id = bloodpowers.3 }
+			character_event = { id = bloodpowers.4 days = 1 }
+		}
+		if = {
+			limit = { 
+				trait = bloodline_great		#Receives two minor, one major, one great
+			}
+			character_event = { id = bloodpowers.1 }
+			character_event = { id = bloodpowers.1 }
+			character_event = { id = bloodpowers.2 }
+			character_event = { id = bloodpowers.3 }
+			character_event = { id = bloodpowers.4 days = 1 }
+		}
+		if = {
+			limit = { 
+				trait = bloodline_true		#Receives two minor, two major, one great
+			}
+			character_event = { id = bloodpowers.1 }
+			character_event = { id = bloodpowers.1 }
+			character_event = { id = bloodpowers.2 }
+			character_event = { id = bloodpowers.2 }
+			character_event = { id = bloodpowers.3 }
+			character_event = { id = bloodpowers.4 days = 1 }
+		}
+	}
+}
+
+
+character_event = {		#Minor power
+	title = YOUR_BLOOD_POWERS
+	id = bloodpowers.1
+	desc = "EVTDESCBLOODPOWERS.0"
+	picture = GFX_evt_comet
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+		
+	option = {
+		name = "OK"
+		
+		random_list = {
+			1 = { 	#alertness
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPalertness
+				}
+				modifier = {
+					factor = 4
+					OR = {
+						trait = bloodline_azrai
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 6
+					OR = {
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+					}
+				}
+				add_trait = BPalertness
+			}
+			1 = { 	#alter appearance
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_brenna
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPalter_appearance
+				}
+				modifier = {
+					factor = 8
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 15
+					trait = bloodline_vorynn
+				}
+				add_trait = BPalter_appearance
+			}
+			1 = { 	#animal affinity
+				modifier = {
+					factor = 0
+					trait = BPanimal_affinity
+				}
+				modifier = {
+					factor = 0.5
+					#annoyingly common otherwise.
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 16
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 7
+					OR = {
+						trait = bloodline_azrai
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 23
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 15
+					trait = bloodline_reynir
+				}
+				add_trait = BPanimal_affinity
+			}
+			1 = { 	#blood history
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_brenna
+						trait = bloodline_masela
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPblood_history
+				}
+				modifier = {
+					factor = 8
+					OR = {
+						trait = bloodline_brenna
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_masela
+				}
+				add_trait = BPblood_history
+			}
+			1 = { 	#bloodmark
+				modifier = {
+					factor = 0
+					trait = BPbloodmark
+				}
+				modifier = {
+					factor = 7
+					OR = {
+						trait = bloodline_anduireas
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 8
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 6
+					OR = {
+						trait = bloodline_brenna
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_masela
+				}
+				add_trait = BPbloodmark
+			}
+			1 = { 	#courage
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPcourage
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_anduireas
+				}
+				add_trait = BPcourage
+			}
+			1 = { 	#death touch
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPdeath_touch
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_azrai
+				}
+				add_trait = BPdeath_touch
+			}
+			1 = { 	#detect lie
+				modifier = { 
+					factor = 0
+					trait = bloodline_azrai		#all but azrai have a chance of getting this
+				}
+				modifier = {
+					factor = 0
+					trait = BPdetect_lie
+				}
+				modifier = {
+					factor = 4
+					OR = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_masela
+					}
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						trait = bloodline_reynir
+						trait = bloodline_vorynn
+					}
+				}
+				add_trait = BPdetect_lie
+			}
+			1 = { 	#direction sense
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_reynir
+						trait = bloodline_masela
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPdirection_sense
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_reynir
+				}
+				add_trait = BPdirection_sense
+			}
+			5 = { 	#endurance
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_masela
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPendurance
+				}
+				add_trait = BPendurance
+			}
+			1 = { 	#fear
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPfear
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_azrai
+				}
+				add_trait = BPfear
+			}
+			1 = {	#forest walk
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPforest_walk
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_reynir
+				}
+				add_trait = BPforest_walk
+			}
+			1 = { 	#healing
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPhealing
+				}
+				modifier = {
+					factor = 16
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_reynir
+				}
+				add_trait = BPhealing
+			}
+			1 = { 	#heightened ability
+				modifier = { 
+					factor = 0
+					trait = bloodline_masela	#all but masela have a chance
+				}
+				modifier = {
+					factor = 0
+					trait = BPheightened_ability
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 6
+					OR = {
+						trait = bloodline_azrai
+						trait = bloodline_brenna
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 8
+					OR = {
+						trait = bloodline_basaia
+						trait = bloodline_vorynn
+					}
+				}
+				add_trait = BPheightened_ability
+			}
+			1 = { 	#iron will
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_azrai
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPiron_will
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						trait = bloodline_azrai
+						trait = bloodline_reynir
+					}
+				}
+				add_trait = BPiron_will
+			}
+			1 = { 	#light of reason
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_basaia
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPlightofreason
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_basaia
+				}
+				add_trait = BPlightofreason
+			}
+			1 = { 	#long life
+				modifier = {
+					factor = 0
+					trait = BPlong_life
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 5
+					trait = bloodline_reynir
+				}
+				modifier = {
+					factor = 12
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_vorynn
+				}
+				add_trait = BPlong_life
+			}
+			1 = { 	#poison sense
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPpoison_sense
+				}
+				modifier = {
+					factor = 3
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_reynir
+				}
+				add_trait = BPpoison_sense
+			}
+		}
+	}
+}
+
+
+character_event = {		#Major power
+	title = YOUR_BLOOD_POWERS
+	id = bloodpowers.2
+	desc = "EVTDESCBLOODPOWERS.0"
+	picture = GFX_evt_comet
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+		
+	option = {
+		name = "OK"
+		
+		random_list = {
+			1 = { 	#animal affinity
+				modifier = {
+					factor = 0
+					trait = BPanimal_affinity
+				}
+				modifier = {
+					factor = 0.5
+					#annoyingly common otherwise.
+				}
+				modifier = {
+					factor = 14
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 17
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 12
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 24
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 15
+					OR = {
+						trait = bloodline_reynir
+						trait = bloodline_vorynn
+					}
+				}
+				add_trait = BPanimal_affinity
+			}
+			1 = { 	#battlewise
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPbattlewise
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_azrai
+				}
+				add_trait = BPbattlewise
+			}
+			1 = { 	#bloodform
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPbloodform
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_azrai
+				}
+				add_trait = BPbloodform
+			}
+			1 = { 	#character reading
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPcharacter_reading
+				}
+				modifier = {
+					factor = 6
+					OR = {
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_vorynn
+				}
+				add_trait = BPcharacter_reading
+			}
+			1 = { 	#charm aura
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPcharm_aura
+				}
+				modifier = {
+					factor = 7
+					OR = {
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+					}
+				}
+				add_trait = BPcharm_aura
+			}
+			1 = { 	#courage
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPcourage
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_anduireas
+				}
+				add_trait = BPcourage
+			}
+			1 = { 	#death touch
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPdeath_touch
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_azrai
+				}
+				add_trait = BPdeath_touch
+			}
+			1 = { 	#divine aura
+				modifier = {
+					factor = 0
+					trait = BPdivine_aura
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 3
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 6
+					OR = {
+						trait = bloodline_masela
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 16
+					trait = bloodline_vorynn
+				}
+				add_trait = BPdivine_aura
+			}
+			1 = { 	#enhanced sense
+				modifier = {
+					factor = 0
+					trait = BPenhanced_sense
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 14
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 15
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 10
+					OR = {
+						trait = bloodline_reynir
+						trait = bloodline_vorynn
+					}
+				}
+				add_trait = BPenhanced_sense
+			}
+			1 = {	#forest walk
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPforest_walk
+				}
+				modifier = {
+					factor = 20
+					trait = bloodline_reynir
+				}
+				add_trait = BPforest_walk
+			}
+			1 = { 	#healing
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPhealing
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 10
+					OR = {
+						trait = bloodline_basaia
+						trait = bloodline_reynir
+					}
+				}
+				add_trait = BPhealing
+			}
+			1 = {	#home hearkening
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPhome_hearkening
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_brenna
+				}
+				add_trait = BPhome_hearkening
+			}
+			1 = { 	#light of reason
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_basaia
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPlightofreason
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_basaia
+				}
+				add_trait = BPlightofreason
+			}
+			1 = { 	#long life
+				modifier = {
+					factor = 0
+					trait = BPlong_life
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+						trait = bloodline_masela
+					}
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_reynir
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 5
+					trait = bloodline_vorynn
+				}
+				add_trait = BPlong_life
+			}
+			1 = { 	#persuasion
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPpersuasion
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 16
+					trait = bloodline_brenna
+				}
+				add_trait = BPpersuasion
+			}
+			1 = { 	#sea song
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_masela
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPsea_song
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_masela
+				}
+				add_trait = BPsea_song
+			}
+			1 = { 	#unreadable thoughts
+				modifier = {
+					factor = 0
+					trait = BPunreadable_thoughts
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						trait = bloodline_anduireas
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 5
+					trait = bloodline_vorynn
+				}
+				add_trait = BPunreadable_thoughts
+			}
+			1 = { 	#wither touch
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPwither_touch
+				}
+				modifier = {
+					factor = 5
+					trait = bloodline_azrai
+				}
+				add_trait = BPwither_touch
+			}
+		}
+	}
+}
+
+
+character_event = {		#Great power
+	title = YOUR_BLOOD_POWERS
+	id = bloodpowers.3
+	desc = "EVTDESCBLOODPOWERS.0"
+	picture = GFX_evt_comet
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+		
+	option = {
+		name = "OK"
+		
+		random_list = {
+			1 = { 	#animal affinity
+				modifier = {
+					factor = 0
+					trait = BPanimal_affinity
+				}
+				modifier = {
+					factor = 0.5
+					#annoyingly common otherwise.
+				}
+				modifier = {
+					factor = 15
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 12
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 22
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 15
+					trait = bloodline_reynir
+				}
+				modifier = {
+					factor = 12
+					trait = bloodline_vorynn
+				}
+				add_trait = BPanimal_affinity
+			}
+			1 = { 	#berserker's blood
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPberserker_blood
+				}
+				modifier = {
+					factor = 3
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_vorynn
+				}
+				add_trait = BPberserker_blood
+			}
+			1 = { 	#bloodform
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPbloodform
+				}
+				modifier = {
+					factor = 14
+					trait = bloodline_azrai
+				}
+				add_trait = BPbloodform
+			}
+			1 = { 	#charm aura
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPcharm_aura
+				}
+				modifier = {
+					factor = 8
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 11
+					trait = bloodline_brenna
+				}
+				add_trait = BPcharm_aura
+			}
+			1 = { 	#courage
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPcourage
+				}
+				modifier = {
+					factor = 12
+					trait = bloodline_anduireas
+				}
+				add_trait = BPcourage
+			}
+			1 = { 	#divine aura
+				modifier = {
+					factor = 0
+					trait = BPdivine_aura
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 5
+					OR = {
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+					}
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_reynir
+				}
+				modifier = {
+					factor = 15
+					trait = bloodline_vorynn
+				}
+				add_trait = BPdivine_aura
+			}
+			1 = { 	#divine wrath
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_masela
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPdivine_wrath
+				}
+				modifier = {
+					factor = 2
+					OR = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+					}
+				}
+				add_trait = BPdivine_wrath
+			}
+			1 = { 	#elemental control
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_masela
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPelemental_control
+				}
+				modifier = {
+					factor = 5
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 8
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_reynir
+				}
+				add_trait = BPelemental_control
+			}
+			1 = { 	#enhanced sense
+				modifier = {
+					factor = 0
+					OR = {
+						trait = bloodline_brenna
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPenhanced_sense
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 8
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 12
+					trait = bloodline_masela
+				}
+				modifier = {
+					factor = 5
+					trait = bloodline_vorynn
+				}
+				add_trait = BPenhanced_sense
+			}
+			1 = {	#forest walk
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPforest_walk
+				}
+				modifier = {
+					factor = 18
+					trait = bloodline_reynir
+				}
+				add_trait = BPforest_walk
+			}
+			1 = { 	#healing
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPhealing
+				}
+				modifier = {
+					factor = 8
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_reynir
+				}
+				add_trait = BPhealing
+			}
+			1 = {	#home hearkening
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPhome_hearkening
+				}
+				modifier = {
+					factor = 10
+					trait = bloodline_brenna
+				}
+				add_trait = BPhome_hearkening
+			}
+			1 = { 	#invulnerability
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPinvulnerability
+				}
+				modifier = {
+					factor = 2
+					trait = bloodline_azrai
+				}
+				add_trait = BPinvulnerability
+			}
+			1 = { 	#light of reason
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_basaia
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPlightofreason
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_basaia
+				}
+				add_trait = BPlightofreason
+			}
+			1 = { 	#long life
+				modifier = {
+					factor = 0
+					trait = BPlong_life
+				}
+				modifier = {
+					factor = 3
+					OR = {
+						trait = bloodline_anduireas
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+						trait = bloodline_masela
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 9
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_vorynn
+				}
+				add_trait = BPlong_life
+			}
+			1 = { 	#major regeneration
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_anduireas
+						trait = bloodline_azrai
+						trait = bloodline_reynir
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPmajor_regeneration
+				}
+				modifier = {
+					factor = 2
+					trait = bloodline_anduireas
+				}
+				modifier = {
+					factor = 5
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_reynir
+				}
+				add_trait = BPmajor_regeneration
+			}
+			1 = { 	#shadow form
+				modifier = { 
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_brenna
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPshadow_form
+				}
+				modifier = {
+					factor = 3
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 4
+					trait = bloodline_brenna
+				}
+				add_trait = BPshadow_form
+			}			
+			1 = { 	#touch of decay
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPtouch_of_decay
+				}
+				modifier = {
+					factor = 3
+					trait = bloodline_azrai
+				}
+				add_trait = BPtouch_of_decay
+			}			
+			1 = { 	#travel
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+						trait = bloodline_basaia
+						trait = bloodline_brenna
+						trait = bloodline_masela
+						trait = bloodline_vorynn
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPtravel
+				}
+				modifier = {
+					factor = 7
+					trait = bloodline_azrai
+				}
+				modifier = {
+					factor = 6
+					trait = bloodline_basaia
+				}
+				modifier = {
+					factor = 13
+					trait = bloodline_brenna
+				}
+				modifier = {
+					factor = 9
+					OR = {
+						trait = bloodline_masela
+						trait = bloodline_vorynn
+					}
+				}
+				add_trait = BPtravel
+			}
+			1 = { 	#wither touch
+				modifier = {
+					factor = 0
+					NOT = {
+						trait = bloodline_azrai
+					}
+				}
+				modifier = {
+					factor = 0
+					trait = BPwither_touch
+				}
+				modifier = {
+					factor = 2
+					trait = bloodline_azrai
+				}
+				add_trait = BPwither_touch
+			}
+		}
+	}
+}
+
+character_event = {		#Report powers obtained
+	title = YOUR_BLOOD_POWERS
+	id = bloodpowers.4
+	desc = "EVTDESCBLOODPOWERS.0"
+	picture = GFX_evt_comet
+	
+	is_triggered_only = yes
+		
+	option = {
+		name = I_CAN_FEEL_THE_POWER_WITHIN_ME
+		if = {
+			limit = { trait = BPheightened_ability }
+			tooltip = { add_trait = BPheightened_ability }
+		}
+		if = {
+			limit = { trait = BPalertness }
+			tooltip = { add_trait = BPalertness }
+		}
+		if = {
+			limit = { trait = BPalter_appearance }
+			tooltip = { add_trait = BPalter_appearance }
+		}
+		if = {
+			limit = { trait = BPanimal_affinity }
+			tooltip = { add_trait = BPanimal_affinity }
+		}
+		if = {
+			limit = { trait = BPbattlewise }
+			tooltip = { add_trait = BPbattlewise }
+		}
+		if = {
+			limit = { trait = BPberserker_blood }
+			tooltip = { add_trait = BPberserker_blood }
+		}
+		if = {
+			limit = { trait = BPblood_history }
+			tooltip = { add_trait = BPblood_history }
+		}
+		if = {
+			limit = { trait = BPbloodform }
+			tooltip = { add_trait = BPbloodform }
+		}
+		if = {
+			limit = { trait = BPbloodmark }
+			tooltip = { add_trait = BPbloodmark }
+		}
+		if = {
+			limit = { trait = BPcharacter_reading }
+			tooltip = { add_trait = BPcharacter_reading }
+		}
+		if = {
+			limit = { trait = BPcharm_aura }
+			tooltip = { add_trait = BPcharm_aura }
+		}
+		if = {
+			limit = { trait = BPcourage }
+			tooltip = { add_trait = BPcourage }
+		}
+		if = {
+			limit = { trait = BPdeath_touch }
+			tooltip = { add_trait = BPdeath_touch }
+		}
+		if = {
+			limit = { trait = BPdetect_lie }
+			tooltip = { add_trait = BPdetect_lie }
+		}
+		if = {
+			limit = { trait = BPdirection_sense }
+			tooltip = { add_trait = BPdirection_sense }
+		}
+		if = {
+			limit = { trait = BPdivine_aura }
+			tooltip = { add_trait = BPdivine_aura }
+		}
+		if = {
+			limit = { trait = BPdivine_wrath }
+			tooltip = { add_trait = BPdivine_wrath }
+		}
+		if = {
+			limit = { trait = BPelemental_control }
+			tooltip = { add_trait = BPelemental_control }
+		}
+		if = {
+			limit = { trait = BPendurance }
+			tooltip = { add_trait = BPendurance }
+		}
+		if = {
+			limit = { trait = BPenhanced_sense }
+			tooltip = { add_trait = BPenhanced_sense }
+		}
+		if = {
+			limit = { trait = BPfear }
+			tooltip = { add_trait = BPfear }
+		}
+		if = {
+			limit = { trait = BPforest_walk }
+			tooltip = { add_trait = BPforest_walk }
+		}
+		if = {
+			limit = { trait = BPhealing }
+			tooltip = { add_trait = BPhealing }
+		}
+		if = {
+			limit = { trait = BPhome_hearkening }
+			tooltip = { add_trait = BPhome_hearkening }
+		}
+		if = {
+			limit = { trait = BPinvulnerability }
+			tooltip = { add_trait = BPinvulnerability }
+		}
+		if = {
+			limit = { trait = BPiron_will }
+			tooltip = { add_trait = BPiron_will }
+		}
+		if = {
+			limit = { trait = BPlightofreason }
+			tooltip = { add_trait = BPlightofreason }
+		}
+		if = {
+			limit = { trait = BPlong_life }
+			tooltip = { add_trait = BPlong_life }
+		}
+		if = {
+			limit = { trait = BPmajor_regeneration }
+			tooltip = { add_trait = BPmajor_regeneration }
+		}
+		if = {
+			limit = { trait = BPpersuasion }
+			tooltip = { add_trait = BPpersuasion }
+		}
+		if = {
+			limit = { trait = BPpoison_sense }
+			tooltip = { add_trait = BPpoison_sense }
+		}
+		if = {
+			limit = { trait = BPsea_song }
+			tooltip = { add_trait = BPsea_song }
+		}
+		if = {
+			limit = { trait = BPshadow_form }
+			tooltip = { add_trait = BPshadow_form }
+		}
+		if = {
+			limit = { trait = BPtouch_of_decay }
+			tooltip = { add_trait = BPtouch_of_decay }
+		}
+		if = {
+			limit = { trait = BPtravel }
+			tooltip = { add_trait = BPtravel }
+		}
+		if = {
+			limit = { trait = BPunreadable_thoughts }
+			tooltip = { add_trait = BPunreadable_thoughts }
+		}
+		if = {
+			limit = { trait = BPwither_touch }
+			tooltip = { add_trait = BPwither_touch }
+		}
+	}
+}

@@ -1,0 +1,200 @@
+namespace = religion
+
+character_event = {
+id = religion.1
+title = RELIGION # Religion
+desc = "EVTDESCRELIGION.1"
+picture = "GFX_evt_cathedral"
+
+is_triggered_only = yes
+
+
+option = {
+name = ONE_OF_THE_GODS_OF_GOOD # One of the Gods of Good.
+character_event = { id = religion.2 }
+}
+
+option = {
+name = ONE_OF_THE_EVIL_GODS
+character_event = { id = religion.3 }
+}
+
+option = {
+name = A_NONHUMAN_PANTHEON
+character_event = { id = religion.4 }
+}
+
+option = {
+name = SHOW_MORE_OPTIONS
+character_event = { id = religion.5 }
+}
+
+}
+
+character_event = {
+id = religion.2
+title = GODS_OF_GOOD # Gods of Good
+desc = "EVTDESCRELIGION.2"
+picture = "GFX_evt_cathedral"
+
+is_triggered_only = yes
+
+option = {
+name = HAELYN_GOD_OF_NOBLE_WAR # Haelyn, God of Noble War.
+set_character_flag = changedreligion
+religion = Haelyn
+}
+
+option = {
+name = SERA_GODDESS_OF_COMMERCE
+set_character_flag = changedreligion
+religion = Sera
+}
+
+option = {
+name = RUORNIL_GOD_OF_MAGIC
+set_character_flag = changedreligion
+religion = Ruornil
+}
+
+option = {
+name = SHOW_MORE_GODS_OF_GOOD
+character_event = { id = religion.6 }
+}
+
+}
+
+character_event = {
+id = religion.3
+title = GODS_OF_EVIL # Gods of Evil
+desc = "EVTDESCRELIGION.2"
+picture = "GFX_evt_cathedral"
+
+is_triggered_only = yes
+
+option = {
+name = BELINIK_GOD_OF_STRIFE # Belinik, God of Strife.
+set_character_flag = changedreligion
+religion = Belinik
+}
+
+option = {
+name = KRIESHA_GODDESS_OF_WINTER
+set_character_flag = changedreligion
+religion = Kriesha
+}
+
+option = {
+name = AZRAI_GOD_OF_DARKNESS
+set_character_flag = changedreligion
+religion = Azrai
+}
+
+option = {
+name = CLOSE_MENU
+}
+
+}
+
+character_event = {
+id = religion.4
+title = NONHUMAN_GODS # Non-Human Gods
+desc = "EVTDESCRELIGION.2"
+picture = "GFX_evt_cathedral"
+
+is_triggered_only = yes
+
+option = {
+name = THE_GOBLINS_HAVE_THE_RIGHT_IDEA # The Goblins have the right idea!
+set_character_flag = changedreligion
+religion = GoblinPantheon
+}
+
+option = {
+name = religion.4.b # I will embrace the Gheallie Sidhe!
+trigger = { 
+religion = Nature
+} 
+set_character_flag = changedreligion
+religion = Gheallie_Sidhe
+}
+
+option = {
+name = religion.4.c # The Elves have the right idea!
+trigger = { 
+NOT = { religion = Nature } 
+}
+set_character_flag = changedreligion
+religion = Nature
+}
+
+option = {
+name = religion.4.d # The Dwarves have the right idea!
+set_character_flag = changedreligion
+religion = DwarvenPantheon
+}
+
+option = {
+name = CLOSE_MENU
+}
+
+}
+
+character_event = {
+id = religion.5
+title = OTHERS # Others
+desc = "EVTDESCRELIGION.2"
+picture = "GFX_evt_cathedral"
+
+is_triggered_only = yes
+
+option = {
+name = NO_GODS_ILL_BE_AN_OUTLAW # No gods! I'll be an outlaw.
+set_character_flag = changedreligion
+religion = Outlaw
+}
+
+option = {
+name = ILL_WORSHIP_THE_LAMIA
+set_character_flag = changedreligion
+religion = Lamia
+}
+
+option = {
+name = I_LIKE_THE_SERPENTS_STYLE
+set_character_flag = changedreligion
+religion = Serpent
+}
+
+option = {
+name = CLOSE_MENU
+}
+
+}
+
+
+character_event = {
+id = religion.6
+title = GODS_OF_GOOD # Gods of Good
+desc = "EVTDESCRELIGION.2"
+picture = "GFX_evt_cathedral"
+
+is_triggered_only = yes
+
+option = {
+name = ERIK_THE_DRUID_GOD # Erik, the Druid God.
+set_character_flag = changedreligion
+religion = Erik
+}
+
+option = {
+name = AVANI_GODDESS_OF_THE_SUN
+set_character_flag = changedreligion
+religion = Avani
+}
+
+option = {
+name = CLOSE_MENU
+}
+
+}

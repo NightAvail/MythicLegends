@@ -1,0 +1,335 @@
+######################################################
+## Integrated work made by Talias and the AGOT team ##
+######################################################
+
+targetted_decisions = {
+
+	vassal_relinquish_claim_decision = {  ## From Talias
+		filter = home_court
+		from_potential = {
+			is_ruler = yes
+		}
+		potential = {
+			prisoner = yes
+			any_claim = { 
+				OR = {
+					holder_scope = { character = FROM }
+					FROM = { any_claim = { title = PREVPREV } }
+				}
+			}
+			host = { character = FROM }
+		}
+		allow = {
+			prisoner = yes
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = { character_event = { id = prisoner.1 } }
+				character_event = { id = prisoner.2 }
+			}
+			any_claim = {
+				limit = {
+					OR = {
+						holder_scope = { character = FROM }
+						FROM = { any_claim = { title = PREVPREV } }
+					}
+				}
+				remove_claim = ROOT
+			}
+			prisoner = no
+			opinion = {
+				modifier = opinion_forced_to_relinquish_claims
+				who = FROM
+			}
+			FROM = {
+				prestige = -50
+			}
+			hidden_tooltip = {
+				FROM = {
+					remove_opinion = { who = ROOT modifier = opinion_traitor }
+					remove_opinion = { who = ROOT modifier = opinion_rebel_traitor }
+					remove_opinion = { who = ROOT modifier = opinion_dishonorable }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 reverse_opinion = { who = FROM value = 40 } }
+			modifier = {
+				factor = 0
+				FROM = { 
+					OR = {
+						trait = content 
+						trait = just
+					}
+				}
+			}
+			modifier = { factor = 0.5 FROM = { NOT = { trait = ambitious } } }
+			modifier = { factor = 0.2 } # Less likely to do it
+			modifier = { #Enemy has your relative
+				factor = 0.1
+				FROM = {
+					any_current_enemy = {
+						dynasty = ROOT
+						is_close_relative = ROOT
+						any_courtier = {
+							is_close_relative = FROM
+							dynasty = FROM
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_pretender = yes
+				FROM = {
+					OR = {
+						is_pretender = yes
+						is_primary_heir = yes
+					}
+				}
+			}
+			modifier = { #Is your enemy and can enforce a victory
+				factor = 0
+				FROM = {
+					any_current_enemy = {
+						character = ROOT
+					}
+				}
+			}
+		}
+	}
+
+
+
+	visit_prisoner = { ## From Talias
+		filter = home_court
+		from_potential = {
+			is_ruler = yes
+			is_female = no
+		}
+		potential = {
+			prisoner = yes
+			is_female = yes
+			is_adult = yes
+			fertility = 0	#Exclude infertile, as well as wraiths and such
+			host = { character = FROM }
+			NOT = { is_close_relative = FROM }
+			NOT = { has_opinion_modifier = { modifier = opinion_prison_concubine who = FROM } }
+		}
+		allow = {
+			prisoner = yes
+			FROM = { prestige = 75 }
+		}
+		effect = {
+			character_event = { id = prisoner.3 tooltip = EVTTOOLTIPprisoner.3 }
+			opinion = { modifier = opinion_raped_me who = FROM }
+			FROM = {
+				if = {
+					limit = { NOT = { trait = lustful } }
+					random = {
+						chance = 25
+						add_trait = lustful
+						hidden_tooltip = { character_event = { id = 38272 } } #Notify Lustful
+					}
+				}
+				if = {
+					limit = { NOT = { trait = cruel } }
+					random = {
+						chance = 50
+						add_trait = cruel
+						hidden_tooltip = { character_event = { id = 38259 } } #Notify Cruel
+					}
+				}
+				if = {
+					limit = {
+						OR = {
+							religion_group = gods_of_good
+							religion = Nature
+							religion = DwarvenPantheon
+							religion = HalflingPantheon
+						}
+					}
+					prestige = -100
+				}
+			}
+			
+			hidden_tooltip = {
+				spouse = { opinion = { modifier = opinion_raped_spouse who = FROM } }
+				consort = { opinion = { modifier = opinion_raped_consort who = FROM } }
+				any_dynasty_member = { 
+					limit = { is_close_relative = ROOT }
+					opinion = { modifier = opinion_raped_family who = FROM } 
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 reverse_opinion = { who = FROM value = 40 } }
+			modifier = {
+				factor = 0
+				FROM = {
+					AND = {
+						NOT = { trait = cruel } 
+						NOT = { trait = impaler } 
+						NOT = { trait = arbitrary }
+					}
+				}
+			}
+			modifier = { factor = 0.1 FROM = { NOT = { trait = lustful } } }
+			modifier = { factor = 2 trait = fair }
+			modifier = { factor = 0.5 trait = ugly }
+			modifier = { factor = 0.5 trait = hunchback }
+			modifier = { factor = 0.75 trait = lisp }
+			modifier = { factor = 0.75 trait = clubfooted }
+			modifier = { factor = 0.75 trait = ill }
+			modifier = { factor = 0.75 trait = pneumonic }
+			modifier = { factor = 0.5 trait = syphilitic }
+			modifier = { factor = 0.5 trait = leper }
+			modifier = { factor = 0.5 trait = infirm }
+			modifier = { factor = 0.75 trait = has_tuberculosis }
+			modifier = { factor = 0.75 trait = has_typhoid_fever }
+			modifier = { factor = 0.75 trait = has_typhus }
+			modifier = { factor = 0.5 trait = has_bubonic_plague }
+			modifier = { factor = 0.5 trait = has_measles }
+			modifier = { factor = 0.5 trait = has_small_pox }
+			modifier = { factor = 0.1 }
+			modifier = { factor = 0 has_opinion_modifier = { modifier = opinion_raped_me who = FROM } }
+			modifier = {
+				factor = 0.1
+				OR = {
+					tier = count
+					spouse = { tier = count }
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					higher_tier_than = count
+					spouse = { higher_tier_than = count }
+				}
+			}
+		}
+	}
+
+	take_prisoner_as_wife = { ## From AGOT
+		filter = home_court
+		
+		from_potential = {
+			is_ruler = yes
+			is_married = no
+			is_female = no
+			is_betrothed = no
+			age = 15
+			NOT = { trait = kind }
+			NOT = { trait = honest }
+		}
+		
+		potential = {
+			prisoner = yes
+			host = { character = FROM }
+			is_female = yes
+			age = 15
+			is_married = no
+			OR = {
+				fertility = 0
+				trait = elf		#Infertile elves will probably be fertile again one day
+			}
+			NOT = { is_close_relative = FROM }
+			NOT = { trait = celibate }
+			NOT = { trait = incapable }
+#			NOT = { culture = wilderness }
+		}
+		allow = {
+			prisoner = yes
+			OR = {	#If she's an independent ruler in her own right, she probably won't obey vows she's forced to take.
+				is_ruler = no
+				any_liege = { character = FROM }
+			}
+		}
+		effect = {
+			add_spouse = FROM
+			opinion = {
+				who = FROM
+				modifier = opinion_forced_marriage
+			}
+			prisoner = no
+			FROM = {
+				if = {
+					limit = { NOT = { trait = cruel } }
+					random = {
+						chance = 25
+						add_trait = cruel
+						hidden_tooltip = {
+							character_event = { id = 38259 }
+						}
+					}
+				}
+				prestige = -50
+			}
+			hidden_tooltip = {
+				father = { opinion = { who = FROM modifier = opinion_forced_marriage_child } }
+				mother = { opinion = { who = FROM modifier = opinion_forced_marriage_child } }
+				any_dynasty_member = {
+					limit = {
+						is_close_relative = ROOT
+						NOT = { any_child = { character = ROOT } } 
+					}
+					opinion = { who = FROM modifier = opinion_forced_marriage_kin }
+				}
+				FROM = {
+					remove_opinion = { who = ROOT modifier = opinion_dishonorable }
+					remove_opinion = { who = ROOT modifier = devious_plotter }
+					remove_opinion = { who = ROOT modifier = attempted_kidnapping }
+					remove_opinion = { who = ROOT modifier = attempted_kidnapping_of_kin }
+					remove_opinion = { who = ROOT modifier = attempted_kidnapping_of_vassal }
+					remove_opinion = { who = ROOT modifier = attempted_murder_of_close_kin }
+					remove_opinion = { who = ROOT modifier = killed_vassal }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.02 # Less likely to do it
+			}
+			modifier = { #AI motives
+				factor = 0
+				OR = {
+					reverse_opinion = { who = FROM value = 40 } 
+					age = 35
+					NOT = { 
+						OR = {
+#							Target has a title or claim that is equal or higher to FROM's rank
+							NOT = { lower_tier_than = FROM }
+							any_heir_title = { NOT = { lower_tier_than = FROM } }
+							any_claim = { NOT = { lower_tier_than = FROM } }
+							AND = { #Horny bastard
+								trait = fair
+								FROM = { trait = lustful }
+							}
+						}
+					}
+				}	
+			}
+			modifier = {
+				factor = 0
+				FROM = { trait = just }
+			}
+			modifier = {
+				factor = 0 #Is your enemy and can enforce a victory
+				FROM = {
+					any_current_enemy = {
+						character = ROOT
+					}
+				}
+			}
+		}
+	}
+
+
+	
+
+
+}

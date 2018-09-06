@@ -1,0 +1,99 @@
+namespace = adventuremenu
+
+	#choose to go, or leave, adventuring life for player regent#
+	character_event = {
+    id = adventuremenu.0
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTUREMENU.0"
+    picture = "GFX_evt_council"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = YES_I_WILL_GO_ADVENTURING # Yes, I will go adventuring.
+	add_trait = adventuring
+	}
+	
+	option = {
+	name = adventuremenu.0.b # I will leave the adventuring life behind.
+	remove_trait = adventuring
+	remove_trait = on_current_quest
+	}
+	
+	option = {
+	name = adventuremenu.0.c # How do I encourage my kids to go adventuring?
+	character_event = { id = adventuremenu.1 }
+	}
+	
+	}
+
+	#choose to go, or leave, adventuring life for player regent#
+	character_event = {
+    id = adventuremenu.1
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTUREMENU.1"
+    picture = "GFX_evt_council"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = OK
+	}
+
+	
+	}
+	
+	#kids who get the adventurer title also get the trait#
+	character_event = {
+    id = adventuremenu.2
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTUREMENU.2"
+    picture = "GFX_evt_council"	
+	
+	trigger = {
+	has_minor_title = title_adventurer
+	NOT = { trait = adventuring }
+	age = 15
+	}
+	
+	mean_time_to_happen = {
+	days = 7
+	}
+	
+	option = {
+	name = "SO_BE_IT"
+	add_trait = adventuring
+	set_character_flag = adventureforced
+	}
+	
+	}
+	
+	#kids who get the adventurer title also get the trait#
+	character_event = {
+    id = adventuremenu.3
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTUREMENU.3"
+    picture = "GFX_evt_council"	
+	
+	trigger = {
+	AND = {
+	NOT = { has_minor_title = title_adventurer }
+	trait = adventuring
+	age = 15
+	has_character_flag = adventureforced
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = "SO_BE_IT"
+	remove_trait = adventuring
+	remove_trait = on_current_quest
+	clr_character_flag = adventureforced
+	}
+	
+	}
+	

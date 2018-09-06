@@ -1,0 +1,117 @@
+#Events to make sure that some graphical cultures are not inherited such as elven, vampires, etc
+
+namespace = portraits
+
+character_event = {
+id = portraits.0
+desc = "EVTDESCHEALTH.0"
+picture = "GFX_evt_plague_doctor"
+hide_window = yes
+
+
+	trigger = {
+	NOT = { has_character_flag = portraits0 }
+	OR = {
+		AND = { 
+			graphical_culture = asraigfx
+			NOT = { trait = elf }
+			NOT = { trait = half_elf }
+		}
+		AND = { 
+			graphical_culture = carsteingfx
+			NOT = { trait = vampire }
+		}
+		AND = { 
+			graphical_culture = orkgfx
+			NOT = { trait = orog }
+		}
+		AND = { 
+			graphical_culture = goblingfx
+			NOT = { trait = goblin }
+			NOT = { trait = half_goblin }
+		}
+		}
+	}
+
+	is_triggered_only = yes #yearly pulse
+	
+	option = {
+		name = OK
+		set_character_flag = portraits0
+		if = {
+		limit = { 
+		graphical_culture = asraigfx
+		mother = {
+		NOT = { graphical_culture = asraigfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}
+		if = {
+		limit = { 
+		graphical_culture = carsteingfx
+		mother = {
+		NOT = { graphical_culture = carsteingfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}	
+		if = {
+		limit = { 
+		graphical_culture = orkgfx
+		mother = {
+		NOT = { graphical_culture = orkgfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}	
+		if = {
+		limit = { 
+		graphical_culture = goblingfx
+		mother = {
+		NOT = { graphical_culture = goblingfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}	
+		if = {
+		limit = { 
+		graphical_culture = asraigfx
+		father = {
+		NOT = { graphical_culture = asraigfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}
+		if = {
+		limit = { 
+		graphical_culture = carsteingfx
+		father = {
+		NOT = { graphical_culture = carsteingfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}	
+		if = {
+		limit = { 
+		graphical_culture = orkgfx
+		father = {
+		NOT = { graphical_culture = orkgfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}	
+		if = {
+		limit = { 
+		graphical_culture = goblingfx
+		father = {
+		NOT = { graphical_culture = goblingfx }
+		}
+		}
+		set_graphical_culture = PREV
+		}	
+	
+		}
+		
+		}
+		

@@ -1,0 +1,332 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+##BLOODLINE TRAITS##
+bloodline_azrai;Bloodline of Azrai;;;;;;;;;;;;;x
+bloodline_azrai_desc;Azrai, known as the Shadow, was an evil god of great power. His essence can easily corrupt the holder, and twist the body into monstrous forms. However, it also gives great powers.;;;;;;;;;;;;;x
+bloodline_basaia;Bloodline of Basaïa;;;;;;;;;;;;;x
+bloodline_basaia_desc;Basaïa, the queen of the sun was the patron deity of the Basarji, precursors to the Khinasi. Basaïa died at Deismaar at the hands of Azrai. It is said that her blazing body fell to the earth and burned its way to the core of the world causing the collapse of the land bridge.;;;;;;;;;;;;;x
+bloodline_brenna;Bloodline of Brenna;;;;;;;;;;;;;x
+bloodline_brenna_desc;Brenna was the goddess of commerce and fortune, her people were explorers by nature but mostly they valued exploration for the wealth it brought for Brenna's people were ever appreciative of comforts. Brenna died at Deismaar at the hands of Azrai shortly after the dark god killed Vorynn as he tried to regain the loyalty of the Vos and sway them to the side of light.;;;;;;;;;;;;;x
+bloodline_anduireas;Bloodline of Anduiras;;;;;;;;;;;;;x
+bloodline_anduireas_desc;Anduiras was the patron deity of the Andu, precursors to the Anuireans. Little remains of Anduiras beyond his bloodline for his worship has been replaced by that of Haelyn in Aduria and Cerilia. Anduiras died at Deismaar after killing Azrai, his wounded form disrupted by the explosion of power as the shadow lord's spirit was torn asunder and Deismaar exploded.;;;;;;;;;;;;;x
+bloodline_reynir;Bloodline of Reynir;;;;;;;;;;;;;x
+bloodline_reynir_desc;Reynir was the ancient god of the Rjuven, an explorer like his people he encouraged his people to migrate from Aduria to the relative safety of Cerilia, she is still worshipped in some parts of Aduria, where word of his death never reached the more reclusive of his people.;;;;;;;;;;;;;x
+bloodline_vorynn;Bloodline of Vorynn;;;;;;;;;;;;;x
+bloodline_vorynn_desc;Vorynn ancient god of the Vos, saw the coming of the Shadow before any other, but failed to act against Azrai out of disinterest in temporal matters. When Vorynn saw that his inaction had allowed Azrai to corrupt many of his people, he guided the remainder of his people to migrate from Aduria to Cerilia, taking them as far from Aduria as it was physically possible to get.;;;;;;;;;;;;;x
+bloodline_masela;Bloodline of Masela;;;;;;;;;;;;;x
+bloodline_masela_desc;Masela was the Lady of the Seas, patron of the sea-faring Masetian people and all those who lived on the bounty of the seas. She embodied the dualism of the sea and favoured those who lived a good, rather than a proper life. When Azrai turned his attention to Cerilia, Masela's people sailed to defend Cerilia at Deismaar in vast numbers.;;;;;;;;;;;;;x
+##Class Traits##
+amateur_bard;Amateur Bard;;;;;;;;;;;;;x
+amateur_bard_desc;This character is an amateur bard, a starter in the college of bards.;;;;;;;;;;;;;x
+novice_bard;Novice Bard;;;;;;;;;;;;;x
+novice_bard_desc;This character is an novice bard, thriving to be the best, in enough years [Root.GetSheHe] is surely to reach greatness.;;;;;;;;;;;;;x
+trained_bard;Trained Bard;;;;;;;;;;;;;x
+trained_bard_desc;This character is a trained bard, a most interesting prospect, surely this character is beloved among [Root.GetHerHis] local populace.;;;;;;;;;;;;;x
+master_bard;Master Bard;;;;;;;;;;;;;x
+master_bard_desc;This character is a master bard, a master like no other, regents everywhere give huge feasts when this character is at court.;;;;;;;;;;;;;x
+legendary_bard;Legendary Bard;;;;;;;;;;;;;x
+legendary_bard_desc;This character is a legendary bard, a legend between bards, only tales and rumours are heard of this character. Legendary Bards are often revered as healers, historians, heralds, messengers, advisers, and tutors.;;;;;;;;;;;;;x
+amateur_mage;Amateur Mage;;;;;;;;;;;;;x
+amateur_mage_desc;This character is an amateur mage, a starter in the college of mages.;;;;;;;;;;;;;x
+novice_mage;Novice Mage;;;;;;;;;;;;;x
+novice_mage_desc;This character is an novice mage, thriving to be the best, in enough years [Root.GetSheHe] is surely to reach greatness.;;;;;;;;;;;;;x
+trained_mage;Trained Mage;;;;;;;;;;;;;x
+trained_mage_desc;This character is a trained mage, a most interesting prospect, surely this character is beloved among [Root.GetHerHis] local populace.;;;;;;;;;;;;;x
+master_mage;Master Mage;;;;;;;;;;;;;x
+master_mage_desc;This character is a master mage, a master like no other, regents everywhere dream of hiring [Root.GetHerHis] services when this character is nearby.;;;;;;;;;;;;;x
+legendary_mage;Legendary Mage;;;;;;;;;;;;;x
+legendary_mage_desc;This character is a legendary mage, a legend between mages, only tales and rumours are heard of this character. Legendary Mages are often able to create great magical weapons with ease.;;;;;;;;;;;;;x
+amateur_sorcerer;Amateur Sorcerer;;;;;;;;;;;;;x
+amateur_sorcerer_desc;This character is an amateur sorcerer, a true sorcerer, though an amateur, has a great potential, the future of this character is uncertain.;;;;;;;;;;;;;x
+novice_sorcerer;Novice Sorcerer;;;;;;;;;;;;;x
+novice_sorcerer_desc;This character is an novice sorcerer, thriving to be the best, with enough training [Root.GetSheHe] is surely to reach greatness.;;;;;;;;;;;;;x
+trained_sorcerer;Trained Sorcerer;;;;;;;;;;;;;x
+trained_sorcerer_desc;This character is a trained sorcerer, a most interesting prospect, surely this character is beloved among [Root.GetHerHis] local populace and [Root.GetHerHis] power feared among other magic users.;;;;;;;;;;;;;x
+master_sorcerer;Master Sorcerer;;;;;;;;;;;;;x
+master_sorcerer_desc;This character is a master sorcerer, a master like no other, regents everywhere dream of hiring [Root.GetHerHis] services when this character is nearby [Root.GetHerHis] force is to be reckoned with.;;;;;;;;;;;;;x
+legendary_sorcerer;Legendary Sorcerer;;;;;;;;;;;;;x
+legendary_sorcerer_desc;This character is a legendary sorcerer, a legend between magic users, only tales and rumours are heard of this character. Legendary Sorcerers are able to harness the energy of the earth itself to create both wonders and terrors...;;;;;;;;;;;;;x
+amateur_priest;Amateur Priest;;;;;;;;;;;;;x
+amateur_priest_desc;This character is an amateur priest, an amateur follower of [Root.GetHerHis] patron deity.;;;;;;;;;;;;;x
+novice_priest;Novice Priest;;;;;;;;;;;;;x
+novice_priest_desc;This character is an novice priest, thriving to be the best, in enough years [Root.GetSheHe] is surely to reach greatness.;;;;;;;;;;;;;x
+trained_priest;Trained Priest;;;;;;;;;;;;;x
+trained_priest_desc;This character is a trained priest, a most interesting prospect, surely this character is beloved among [Root.GetHerHis] local populace and guided by [Root.GetHerHis] patron deity.;;;;;;;;;;;;;x
+master_priest;Master Priest;;;;;;;;;;;;;x
+master_priest_desc;This character is a master priest, a master like no other, regents everywhere dream of hiring [Root.GetHerHis] services when this character is nearby.;;;;;;;;;;;;;x
+legendary_priest;Legendary Priest;;;;;;;;;;;;;x
+legendary_priest_desc;This character is a legendary priest, a legend between priests and clergy alike, only tales and rumours are heard of this character. Legendary Priests are often rumoured to speak with their patron deity directly.;;;;;;;;;;;;;x
+amateur_ranger;Amateur Ranger;;;;;;;;;;;;;x
+amateur_ranger_desc;This character is an amateur ranger, barely able to tap into the natural energy.;;;;;;;;;;;;;x
+novice_ranger;Novice Ranger;;;;;;;;;;;;;x
+novice_ranger_desc;This character is an novice ranger, thriving to be the best, in enough years [Root.GetSheHe] is surely to reach greatness.;;;;;;;;;;;;;x
+trained_ranger;Trained Ranger;;;;;;;;;;;;;x
+trained_ranger_desc;This character is a trained ranger, a most interesting prospect, surely this character is beloved among [Root.GetHerHis] local populace and has a great understanding of nature.;;;;;;;;;;;;;x
+master_ranger;Master Ranger;;;;;;;;;;;;;x
+master_ranger_desc;This character is a master ranger, a master like no other, regents everywhere dream of hiring [Root.GetHerHis] services when this character is nearby.;;;;;;;;;;;;;x
+legendary_ranger;Legendary Ranger;;;;;;;;;;;;;x
+legendary_ranger_desc;This character is a legendary ranger, a legend between rangers, only tales and rumours are heard of this character. Legendary Rangers are often able to tame the wildest of forests, obtaining great understanding of nature.;;;;;;;;;;;;;x
+amateur_rogue;Amateur Rogue;;;;;;;;;;;;;x
+amateur_rogue_desc;This character is an amateur rogue, slowly venturing into the world, this character is surely to learn.;;;;;;;;;;;;;x
+novice_rogue;Novice Rogue;;;;;;;;;;;;;x
+novice_rogue_desc;This character is a novice rogue, thriving to be the best, in enough years [Root.GetSheHe] is surely to reach greatness.;;;;;;;;;;;;;x
+trained_rogue;Trained Rogue;;;;;;;;;;;;;x
+trained_rogue_desc;This character is a trained rogue, a most interesting prospect, surely this character has made a name for [Root.GetHerselfHimself] amongst traders, sailors and merchants.;;;;;;;;;;;;;x
+master_rogue;Master Rogue;;;;;;;;;;;;;x
+master_rogue_desc;This character is a master rogue, a master like no other, regents everywhere dream of hiring [Root.GetHerHis] services when this character is nearby, making an excellent merchant as well as a sailor.;;;;;;;;;;;;;x
+legendary_rogue;Legendary Rogue;;;;;;;;;;;;;x
+legendary_rogue_desc;This character is a legendary rogue, a legend between rogues, only tales and rumours are heard of this character. Legendary Rogues are often able to sway away regents into their direction.;;;;;;;;;;;;;x
+amateur_fighter;Amateur Fighter;;;;;;;;;;;;;x
+amateur_fighter_desc;This character is an amateur fighter, a starter in the path of adventuring and commanding troops.;;;;;;;;;;;;;x
+novice_fighter;Novice Fighter;;;;;;;;;;;;;x
+novice_fighter_desc;This character is an novice fighter, thriving to be the best, in enough years [Root.GetSheHe] is surely to reach greatness.;;;;;;;;;;;;;x
+trained_fighter;Trained Fighter;;;;;;;;;;;;;x
+trained_fighter_desc;This character is a trained fighter, a most interesting prospect, surely this character is beloved among [Root.GetHerHis] local populace and feared by [Root.GetHerHis] enemies on the field.;;;;;;;;;;;;;x
+master_fighter;Master Fighter;;;;;;;;;;;;;x
+master_fighter_desc;This character is a master fighter, a master like no other, regents everywhere dream of hiring [Root.GetHerHis] services when this character is nearby, an able commander and an spectacular warrior.;;;;;;;;;;;;;x
+legendary_fighter;Legendary Fighter;;;;;;;;;;;;;x
+legendary_fighter_desc;This character is a legendary fighter, a legend between fighters and adventurers everywhere, only tales and rumours are heard of this character. Legendary Fighters are often able to take on great quests with ease, able to withstand the most dangerous foes, surely this character is to be reckoned with, a fierce opponent and surely very famous.;;;;;;;;;;;;;x
+knight;Knight;;;;;;;;;;;;;x
+knight_desc;This character is a [Root.GetOnlyDynastyName] and has been worthy of being knighted. Knights are heavily armoured retainers of nobles who have an income from lands sufficient enough to provide horse and armour which allow them to be ready for war.;;;;;;;;;;;;;x
+paladin;Paladin;;;;;;;;;;;;;x
+paladin_desc;This character is a devoted loyal servant and follower of [Root.Religion.GetName]. Paladins have a code of conduct and loose all of their abilities if they ever fail to protect their people against those who seek to do harm, they also must respect legitimate authority and not act chaotically or without forethought.;;;;;;;;;;;;;x
+awn_hunter;Awnsheghlien Hunter;;;;;;;;;;;;;x
+awn_hunter_desc;Awnsheghlien hunters spend a life hunting the most hideous creatures and venture into the heart of the darkness just to slay their foes. They are often initiated into this lifestyle by another awnsheghlien hunter or when they have survived a horrible experience.;;;;;;;;;;;;;x
+familyperson;Family Person;;;;;;;;;;;;;x
+familyperson_desc;This character will do more than most for their kinsmen.;;;;;;;;;;;;;x
+##Racial Traits##
+elf;Elf;;;;;;;;;;;;;x
+elf_desc;Elves of Cerilia are a magical, immortal people closely tied to the energy of the land. They were once the rulers of the continent, but advancing tribes of men drove them into the deep forests. Many of the oldest elves harbour either a deep sadness or burning anger, and await the day when they will be masters of Cerilia once more.;;;;;;;;;;;;;x
+half_elf;Half-Elf;;;;;;;;;;;;;x
+half_elf_desc;Half-elves are the unusual children of men and women and their elven hosts. The elves regard them as Sidhelien, and they are welcome in elven society. Humans are more suspicious of half-elves, referring to them as bewitched or changelings - it's rare for half-elves to leave the elven woods.;;;;;;;;;;;;;x
+dwarven;Dwarf;;;;;;;;;;;;;x
+dwarven_desc;Dwarves lived in the mountains of Cerilia long before humans came to the land. Over the years, the dwarven holds have chosen a defensive strategy, fortifying their approaches and retreating to their cities under the mountains whenever threatened.;;;;;;;;;;;;;x
+halfling;Halfling;;;;;;;;;;;;;x
+halfling_desc;Halflings seem to be harmless, good-natured folk, but they harbour hidden secrets. Most people assume that the name halfling refers to their stature, but only a handful know the truth. Halflings were once creatures who could pass freely between Aebrynis and the Spirit World. In the early years of the Anuire Empire a darkness arose in the Spirit World and halflings made Aebrynis their permanent home.;;;;;;;;;;;;;x
+goblin;Goblin;;;;;;;;;;;;;x
+goblin_desc;Goblins are common in Cerilia and control numerous kingdoms in the more desolate and dangerous parts of the continent. The goblins are ancestral enemies of the elves and dwarves, their lands were taken from them by force by the human tribes fleeing Aduria and by the Basarji settlers in Cerilia and so most ancient texts also describe goblins as enemies of the various human tribes.;;;;;;;;;;;;;x
+half_goblin;Half-Goblin;;;;;;;;;;;;;x
+half_goblin_desc;Half-Goblins are the result of a union between a goblin and a non-goblin, often unsightly and less-than intelligent, they are looked down upon by the more numerous races.;;;;;;;;;;;;;x
+orog;Orog;;;;;;;;;;;;;x
+orog_desc;Orogs are a subterranean race of miners and warriors that inhabit Cerilia's mountain ranges. They consider all other races to be their foes, and constantly wage war upon them. Orogs are slightly taller than humans, and more powerfully built, with a somewhat apish face and long arms. They have hairless skin, ranging in color from leathery grey to black.;;;;;;;;;;;;;x
+gnoll;Gnoll;;;;;;;;;;;;;x
+gnoll_desc;Gnolls are a brutal race of humanoids, one of the races of beast-men created by Azrai. They have humanoid bodies but the heads of hyenas, and shaggy hair covers their skin. Gnolls are notoriously undisciplined, and rarely respect any authority unless it is within arm's reach.;;;;;;;;;;;;;x
+##Temp Traits##
+casting_realm_magic;Casting Realm Magic;;;;;;;;;;;;;x
+casting_realm_magic_desc;This character is away from court casting realm magic, and thus needs a regent.;;;;;;;;;;;;;x
+adventuring;Adventuring;;;;;;;;;;;;;x
+adventuring_desc;This character is away from court adventuring, and thus needs a regent.;;;;;;;;;;;;;x
+on_current_quest;On a Current Quest;;;;;;;;;;;;;x
+on_current_quest_desc;This character is on a current quest, adventuring where no man has gone.;;;;;;;;;;;;;x
+duel_target;Duel Target;;;;;;;;;;;;;x
+duel_target_desc;Duel Target.;;;;;;;;;;;;;x
+scarred_by_michael;Scarred by Michael Roele;;;;;;;;;;;;;x
+scarred_by_michael_desc;When Michael Roele marched his troops into the Gorgon's Crown, he engaged in a legendary duel against The Gorgon himself. Although The Gorgon was able to dispose of him without much troubles, Michael managed to injure him. His wound has long since healed but its still visible, and remains as proof that even mere mortal men when angered would be capable of injuring a demi-god.;;;;;;;;;;;;;x
+dead_target;Dead Target;;;;;;;;;;;;;x
+dead_target_desc;Dead Target.;;;;;;;;;;;;;x
+bloodthefted;BloodThefted;;;;;;;;;;;;;x
+bloodthefted_desc;This character was bloodthefted!;;;;;;;;;;;;;x
+infertile;Infertile;;;;;;;;;;;;;x
+infertile_desc;This character has reached the end of [Root.GetHerHis] reproductive cycle.;;;;;;;;;;;;;x
+##Spells##
+novice_lightning_storm;Novice Lightning Storm;;;;;;;;;;;;;x
+novice_lightning_storm_desc;Novice Lightning Storm.;;;;;;;;;;;;;x
+trained_lightning_storm;Trained Lightning Storm;;;;;;;;;;;;;x
+trained_lightning_storm_desc;Trained Lightning Storm.;;;;;;;;;;;;;x
+master_lightning_storm;Master Lightning Storm;;;;;;;;;;;;;x
+master_lightning_storm_desc;Master Lightning Storm.;;;;;;;;;;;;;x
+legendary_lightning_storm;Legendary Lightning Storm;;;;;;;;;;;;;x
+legendary_lightning_storm_desc;Legendary Lightning Storm.;;;;;;;;;;;;;x
+##Bloodline Traits##
+bloodline_tainted;Tainted Bloodline;;;;;;;;;;;;;x
+bloodline_tainted_desc;A Tainted Bloodline goes from 1 to 15.;;;;;;;;;;;;;x
+bloodline_minor;Minor Bloodline;;;;;;;;;;;;;x
+bloodline_minor_desc;A Minor Bloodline goes from 16 to 25.;;;;;;;;;;;;;x
+bloodline_major;Major Bloodline;;;;;;;;;;;;;x
+bloodline_major_desc;A Major Bloodline goes from 26 to 50.;;;;;;;;;;;;;x
+bloodline_great;Great Bloodline;;;;;;;;;;;;;x
+bloodline_great_desc;A Great Bloodline goes from 51 to 70.;;;;;;;;;;;;;x
+bloodline_true;True Bloodline;;;;;;;;;;;;;x
+bloodline_true_desc;A True Bloodline goes from 71 to 90.;;;;;;;;;;;;;x
+##Bloodline Powers##
+BPheightened_ability;Heightened Ability;;;;;;;;;;;;;x
+BPheightened_ability_desc;The old powers each cherished different traits in their followers and embodied these characteristics. The resulting bloodlines often show near-divine examples of strength, intelligence, or beauty.;;;;;;;;;;;;;x
+BPalertness;Alertness;;;;;;;;;;;;;x
+BPalertness_desc;The scion possesses an uncanny sense of [Root.GetHerHis] surroundings.;;;;;;;;;;;;;x
+BPalter_appearance;Alter Appearance;;;;;;;;;;;;;x
+BPalter_appearance_desc;The scion can briefly change their approximate build and facial features by means of a natural illusory talent.;;;;;;;;;;;;;x
+BPanimal_affinity;Animal Affinity;;;;;;;;;;;;;x
+BPanimal_affinity_desc;The scion possesses an affinity and skill for communicating with the totem animal of their bloodline derivation.;;;;;;;;;;;;;x
+BPbattlewise;Battlewise;;;;;;;;;;;;;x
+BPbattlewise_desc;The scion with this ability is a military genius, blessed with an uncanny power to analyse enemy weaknesses, create sound plans of attack, and inspire troops to victory.;;;;;;;;;;;;;x
+BPberserker_blood;Berserker Blood;;;;;;;;;;;;;x
+BPberserker_blood_desc;Scions with this ability can surpass the limits of mortal endurance and battle after other mortals would have died at the hands of their enemies.;;;;;;;;;;;;;x
+BPblood_history;Blood History;;;;;;;;;;;;;x
+BPblood_history_desc;The scion is blessed (or cursed) with the memories of [Root.GetHerHis] ancestors.;;;;;;;;;;;;;x
+BPbloodform;Bloodform;;;;;;;;;;;;;x
+BPbloodform_desc;A scion's form undergoes a graduate transformation into a creature fitting their darkest nature.;;;;;;;;;;;;;x
+BPbloodmark;Bloodmark;;;;;;;;;;;;;x
+BPbloodmark_desc;The scion bears a visible, recognizable sign of [Root.GetHerHis] special heritage.;;;;;;;;;;;;;x
+BPcharacter_reading;Character Reading;;;;;;;;;;;;;x
+BPcharacter_reading_desc;The scion is an unnaturally perceptive judge of character and can quickly form accurate assessments of another character's intentions attitudes and motivations.;;;;;;;;;;;;;x
+BPcharm_aura;Charm Aura;;;;;;;;;;;;;x
+BPcharm_aura_desc;The scion projects an invisible shroud of power.;;;;;;;;;;;;;x
+BPcourage;Courage;;;;;;;;;;;;;x
+BPcourage_desc;Scions with Courage are automatically successful with any saving throws required for effects that cause magical or normal fear.;;;;;;;;;;;;;x
+BPdeath_touch;Death Touch;;;;;;;;;;;;;x
+BPdeath_touch_desc;A scion with this ability can exude a virulent fluid in some manner. Contact with this toxin results in an infection that causes a disease effect.;;;;;;;;;;;;;x
+BPdetect_lie;Detect Lie;;;;;;;;;;;;;x
+BPdetect_lie_desc;The scion has a knack for determining whether a character is lying.;;;;;;;;;;;;;x
+BPdirection_sense;Direction Sense;;;;;;;;;;;;;x
+BPdirection_sense_desc;A scion with Direction Sense has almost no chance of becoming lost.;;;;;;;;;;;;;x
+BPdivine_aura;Divine Aura;;;;;;;;;;;;;x
+BPdivine_aura_desc;An intangible mantle of power and nobility surrounds some scions, commanding respect from all they meet.;;;;;;;;;;;;;x
+BPdivine_wrath;Divine Wrath;;;;;;;;;;;;;x
+BPdivine_wrath_desc;When a scion with this ability is moved to great anger, [Root.GetSheHe] becomes a terrible enemy. The scion's body is imbued with extreme strength, and the mere sight of [Root.GetHerHis] angry visage terrifies [Root.GetHerHis] enemies.;;;;;;;;;;;;;x
+BPelemental_control;Elemental Control;;;;;;;;;;;;;x
+BPelemental_control_desc;Several of the old gods were closely tied to one of the four elements: Masela was goddess of the sea, Basaïa was associated with the sun, Reynir was tied to earth, and Anduiras was associated with the skies. A few particularly powerful scions of these lines also inherited their progenitor's powers over these elements.;;;;;;;;;;;;;x
+BPendurance;Endurance;;;;;;;;;;;;;x
+BPendurance_desc;Scions with this ability can undertake physical hardship that borders on the supernatural.;;;;;;;;;;;;;x
+BPenhanced_sense;Enhanced Sense;;;;;;;;;;;;;x
+BPenhanced_sense_desc;Scions are sometimes gifted with powers of perception far beyond those of ordinary mortals. The nature of the enhanced sense depends on the derivation and power of the character's bloodline.;;;;;;;;;;;;;x
+BPfear;Fear;;;;;;;;;;;;;x
+BPfear_desc;With a touch, the scion can instil absolute terror in [Root.GetHerHis] victim.;;;;;;;;;;;;;x
+BPforest_walk;Forest Walk;;;;;;;;;;;;;x
+BPforest_walk_desc;Scions can use this ability to harmonize with the forest, moving through it without affecting it.;;;;;;;;;;;;;x
+BPhealing;Healing;;;;;;;;;;;;;x
+BPhealing_desc;The ancient powers were capable of miraculous feats of healing, some scions have inherited these powers.;;;;;;;;;;;;;x
+BPhome_hearkening;Home Hearkening;;;;;;;;;;;;;x
+BPhome_hearkening_desc;A regent with this blood ability has an even stronger connection to the land and holdings [Root.GetSheHe] rules than other regents.;;;;;;;;;;;;;x
+BPinvulnerability;Invulnerability;;;;;;;;;;;;;x
+BPinvulnerability_desc;This ability grants the scion a limited form of immortality - [Root.GetSheHe] is not immortal in the true sense of the word, but [Root.GetSheHe] cannot be killed except under very specific circumstances.;;;;;;;;;;;;;x
+BPiron_will;Iron Will;;;;;;;;;;;;;x
+BPiron_will_desc;The scion is tougher than ordinary characters. The mystic energy of their divine heritage allows them to persevere where lesser mortals tire or perish.;;;;;;;;;;;;;x
+BPlightofreason;Light of Reason;;;;;;;;;;;;;x
+BPlightofreason_desc;Scions with this ability can use the power of the former sun goddess to light their surroundings. A scion who calls upon this ability actually radiates light as described below.;;;;;;;;;;;;;x
+BPlong_life;Long Life;;;;;;;;;;;;;x
+BPlong_life_desc;With this ability, a scion enjoys a greatly increased life span, as the ageing process is vastly slowed down. This does not protect a scion from normal damage from combat or poisons, but simply postpones the ravages of age.;;;;;;;;;;;;;x
+BPmajor_regeneration;Major Regeneration;;;;;;;;;;;;;x
+BPmajor_regeneration_desc;A scion with this ability can regenerate severed limbs, damaged organs and senses, and heal damage much faster than normal or blooded beings.;;;;;;;;;;;;;x
+BPpersuasion;Persuasion;;;;;;;;;;;;;x
+BPpersuasion_desc;Scions with this ability can create arguments of extreme clarity and logic, thereby influencing other creatures to do their bidding.;;;;;;;;;;;;;x
+BPpoison_sense;Poison Sense;;;;;;;;;;;;;x
+BPpoison_sense_desc;The scion has an innate ability to sense the presence of poison nearby. Thus [Root.GetSheHe] could sense poison in [Root.GetHerHis] food, drink, or even a phial of poison in the pocket of [Root.GetHerHis] supposedly loyal advisor.;;;;;;;;;;;;;x
+BPsea_song;Sea Song;;;;;;;;;;;;;x
+BPsea_song_desc;Scions with this ability have a particular affinity for the water and the sea.;;;;;;;;;;;;;x
+BPshadow_form;Shadow Form;;;;;;;;;;;;;x
+BPshadow_form_desc;The scion is able to transform into living shadow.;;;;;;;;;;;;;x
+BPtouch_of_decay;Touch of Decay;;;;;;;;;;;;;x
+BPtouch_of_decay_desc;A scion with this ability can destroy inanimate objects with a mere touch.;;;;;;;;;;;;;x
+BPtravel;Travel;;;;;;;;;;;;;x
+BPtravel_desc;This potent ability allows a scion to use a limited form of teleportation based on [Root.GetHerHis] derivation. Anything the scion wears or carries is teleported with him, and some scions may even take a companion with [Root.GetHerHim].;;;;;;;;;;;;;x
+BPunreadable_thoughts;Unreadable Thoughts;;;;;;;;;;;;;x
+BPunreadable_thoughts_desc;A scion with this ability is protected from spells and effects that permit someone else to determine what he is thinking, feeling, or planning.;;;;;;;;;;;;;x
+BPwither_touch;Wither Touch;;;;;;;;;;;;;x
+BPwither_touch_desc;The scion has the ability to cause living tissue to wilt away.;;;;;;;;;;;;;x
+##AWNSHEIGHLEEN##
+awn_gorgon;The Gorgon;;;;;;;;;;;;;x
+awn_gorgon_desc;A master mage and almost an unbeatable warrior, the Gorgon is one of the most powerful Awnsheighleen of Cerilia, having fought next to the Dark God Azrai and survived the cataclysmic battle of Mt.Deismaar over 1500 years ago. His motives are unclear - is he trying to conquer the continent, or do his goals stretch towards outright ascension to godhood?;;;;;;;;;;;;;x
+awn_succubus;Succubus;;;;;;;;;;;;;x
+awn_succubus_desc;Darnae is the daughter of the Gorgon, and her powerful Azrai bloodline has transformed her into a demonic Succubus. Cunning and evil to the core, she will stop at nothing to get what she wants - which is everything.;;;;;;;;;;;;;x
+awn_brute;The Brute;;;;;;;;;;;;;x
+awn_brute_desc;By all accounts a half-ogre or a half-giant (as human women can no longer mate with the Gorgon without suffering mortal injury) the Brute is an awe-inspiring warrior on the battlefield, tossing lesser foes aside with his great hammer. He is not good at much else, however, and even simple things like putting on his armour and even sometimes opening doors he needs assistance with.;;;;;;;;;;;;;x
+awn_raven;The Raven;;;;;;;;;;;;;x
+awn_raven_desc;The Raven has recently appeared, rumours say from the Shadow World. He is a mage of terrifying power, and has apparently possessed the body of a Vos noble in order to return to Cerilia. His motives are unclear, but according to his recent actions, it seems he is planning a great war of conquest.;;;;;;;;;;;;;x
+awn_lahmia;The Lamia;;;;;;;;;;;;;x
+awn_lahmia_desc;Once a simple commoner, the Lamia killed an awnsheigh in self-defence and has transformed into a Lamia. She can cast a powerful charm spell on any male in her sights, and has been steadily gathering an army of fanatical worshippers. She is a hedonist to the core, caring only for her own possessions and desires. What she cannot have, she will destroy.;;;;;;;;;;;;;x
+awn_lahmia2;The Lamia;;;;;;;;;;;;;x
+awn_lahmia2_desc;A daughter of the Lamia. Her powers may not be as strong as those of her mother but she is surely a force to be reckoned with.;;;;;;;;;;;;;x
+awn_serpent;The Serpent;;;;;;;;;;;;;x
+awn_serpent_desc;Once a great Masetian admiral who fought on the side of Azrai, the Serpent has gained such bloodline power that he can grant spells directly to his clerics. He has proclaimed himself a God, and with his cult 'The Sons of the Serpent' he aims to dominate the Khinasi lands and bend them all to his will. Though he could once shift from serpent to human form, he now mostly exists in a hybrid-state - the body of a man, but the head of a great serpent.;;;;;;;;;;;;;x
+awn_magian;The Magian;;;;;;;;;;;;;x
+awn_magian_desc;A lich of great power from beyond the Eastern Sea, the Magian has absorbed the bloodlines native to Cerilia. Though evil to the core, he is a fair but stern ruler, managing his lands capably, building up his power base. Resistance to his rule is brutally put down, but for those who submit, they quickly find rewards in his service.;;;;;;;;;;;;;x
+awn_spider;The Spider;;;;;;;;;;;;;x
+awn_spider_desc;Once a great goblin king of Southern Anuire, Tal-Qazar has been pushed back into a small dark forest. There he has transformed into a giant spider, and commands both goblins and a local variety of huge spiders that trap all who enter his realm. He awaits the time when the humans will weaken, and then he will spring forth, taking back what was once his.;;;;;;;;;;;;;x
+awn_white_witch;The White Witch;;;;;;;;;;;;;x
+awn_white_witch_desc;Once the niece of a Jarl, the taint of Azrai in her blood caused her to begin ageing at a rapid rate. In return for eternal youth, she made a pact with Kriesha, and now rules Gandvik in her name after killing her uncle in a palace-coup. She is both cunning and evil, but can appear charming and seductive when she wishes, keeping her opponents off-guard as to her intentions.;;;;;;;;;;;;;x
+awn_rhuobhe;Rhuobhe;;;;;;;;;;;;;x
+awn_rhuobhe_desc;Rhuobhe Manslayer was once an elf who was fascinated by humans as they entered Cerilia. Soon, however, their destructive ways became apparent and he was at the forefront of the Gheallie Sidhe - the hunt of the elves. When most of his people left Azrai at Mt.Deismaar, knowing they would be betrayed, he stuck with the dark god, hating humans too much to ever join their side. To this day, he still sits brooding in his dark tower, plotting the downfall of humanity.;;;;;;;;;;;;;x
+awn_succubus2;Succubus;;;;;;;;;;;;;x
+awn_succubus2_desc;A daughter of Darnae, the Succubus. While her powers are not as strong as those of her mother, she is not to be under-estimated. Succubus are clever manipulators, and though chaotic at heart, their goal of seeking ever more power and possessions is their one constant.;;;;;;;;;;;;;x
+awn_siren;The Siren;;;;;;;;;;;;;x
+awn_siren_desc;When Jerusha Fjoldan slew the Dusk Man she assumed the regency of the realm of the same name.;;;;;;;;;;;;;x
+awn_harpy;The Harpy;;;;;;;;;;;;;x
+awn_harpy_desc;Birthed a century ago, The Harpy has been plotting and scheming. Her past and her present are still unknown to most.;;;;;;;;;;;;;x
+awn_hag;The Hag;;;;;;;;;;;;;x
+awn_hag_desc;The Hag, a noble of Grabentod who schemed her way to power and then kidnapped and murdered her nephew when scorned by those she would rule.;;;;;;;;;;;;;x
+awn_chimaera;The Chimaera;;;;;;;;;;;;;x
+awn_chimaera_desc;Birthed a millennia ago Danica Kusor can shape-shift into her fearsome beast form, that of The Chimaera. She rules the Lands of The Chimaeron.;;;;;;;;;;;;;x
+awn_basilisk;The Basilisk;;;;;;;;;;;;;x
+awn_basilisk_desc;The Basilisk was once a man of the Khinasi, but he retains little of his original appearance, being almost entirely reptilian in appearance. Green scales cover his body, a fan-like crest runs along his back spotted with red, and he has a long prehensile tail. He walks upon his eight legs, only the first two legs could be used as arms and hands, each hand/foot has but two powerful claw-like fingers.;;;;;;;;;;;;;x
+awn_banshegh;The Banshegh;;;;;;;;;;;;;x
+awn_banshegh_desc;The Awnshegh known as the Banshegh torments the people of Rheulgard every night, transforming the pleasant forests and mountains into dark-some and dangerous in the span of a few minutes.;;;;;;;;;;;;;x
+awn_kraken;The Kraken;;;;;;;;;;;;;x
+awn_kraken_desc;The Kraken is a very powerful awnsheigh, some say the strongest one to rule the seas.;;;;;;;;;;;;;x
+awn_manticore;The Manticore;;;;;;;;;;;;;x
+awn_manticore_desc;The Manticore was once known as Qandar the Righteous, a paladin of Avani with some relation to the ruling family of Djafra. Soon after the Magian began his conquest of the Esenshal Peninsula, Qandar set out with many other heroes to stop this interloper.;;;;;;;;;;;;;x
+awn_sphinx;The Sphinx;;;;;;;;;;;;;x
+awn_sphinx_desc;The Sphinx has ruled its own domain for hundreds of years. Early on, it lived as a marauding beast, preying on local villagers and passing caravans. Over the last century or so, the Sphinx has chosen to expand its domain and become a true regent. A long time menace to trade, the Sphinx craves territory and power above all else.;;;;;;;;;;;;;x
+awn_swordhawk;The Swordhawk;;;;;;;;;;;;;x
+awn_swordhawk_desc;The Swordhawk started as a royal assassin for the last king of Massenmarch. He was used to eliminate rebellious nobles and political enemies. At least one of his victims had a bloodline of Azrai and he was cursed by the foul divine blood and began the transformation in an awnshegh.;;;;;;;;;;;;;x
+awn_hydra;The Hydra;;;;;;;;;;;;;x
+awn_hydra_desc;The Hydra is an awnshegh that dwells in the Harrowmarsh on the border between the Eastern Marches of Anuire and the Saire Siendere of Khinasi.;;;;;;;;;;;;;x
+awn_ghoul;The Ghoul;;;;;;;;;;;;;x
+awn_ghoul_desc;The Ghoul was once the son of a minor Khinasi noble, a pampered child with an insignificant bloodline. His entire family was brutally slain by another noble, due to some palace intrigue. The boy barely escaped with his life intact by hiding underneath the corpse of his father.;;;;;;;;;;;;;x
+awn_serpent2;Serpent;;;;;;;;;;;;;x
+awn_serpent2_desc;A son of The Serpent. His powers may not be as strong as those of his father but he is surely a force to be reckoned with.;;;;;;;;;;;;;x
+##Magical Items##
+sword_1;Sword +1;;;;;;;;;;;;;x
+sword_1_desc;A common magical sword for a noble scion, it will never break in battle.;;;;;;;;;;;;;x
+sword_2;Sword +2;;;;;;;;;;;;;x
+sword_2_desc;An uncommon magical sword for a noble scion, while almost normal looking you can feel the power emanating from this sword.;;;;;;;;;;;;;x
+sword_3;Sword +3;;;;;;;;;;;;;x
+sword_3_desc;A rare magical sword for a noble scion, you can feel this sword irradiating power.;;;;;;;;;;;;;x
+sword_4;Sword +4;;;;;;;;;;;;;x
+sword_4_desc;A very rare magical sword for a noble scion, you can feel the magic calling you from the sword.;;;;;;;;;;;;;x
+sword_5;Sword +5;;;;;;;;;;;;;x
+sword_5_desc;This Legendary sword can cut through almost anything like a hot knife through butter. Only the greatest families have a sword of this power.;;;;;;;;;;;;;x
+holy_avenger_sword;Holy Avenger Sword;;;;;;;;;;;;;x
+holy_avenger_sword_desc;A Sword reserved for the greatest heroes of the faith, it will glow with a holy fire in battle and is considered one of the most powerful swords ever crafted.;;;;;;;;;;;;;x
+sword_of_roele;Sword of Roele;;;;;;;;;;;;;x
+sword_of_roele_desc;Michael Roele, the last Emperor of Anuire is remembered not for his life, heroic and eventful though it was, but for his death. Michael died shortly after ending a civil war in Anuire. When his wife died in childbirth and their unborn child somehow corrupted into a spawn of the Gorgon, Michael temper flared to life led his troops into the Gorgon's Crown. The cream of the Anuirean Empire fought its way through the goblins of Markazor, the Gorgon's legions and to the gates of Kal-Saitharak themselves. It is said that Michael fought past the best of the Gorgon's troops before facing the Gorgon in single combat, though not being able to kill The Gorgon, Michael Roele was able to greatly injure the Gorgon before dying and grounding his powers. His sword was long thought lost, but has now been recovered.;;;;;;;;;;;;;x
+ring_of_persuasion;Ring of Persuasion;;;;;;;;;;;;;x
+ring_of_persuasion_desc;While not a common item, this silver ring is surely to grant a bonus to the wearer's negotiation abilities making for a great Steward.;;;;;;;;;;;;;x
+ring_of_invisibility;Ring of Invisibility;;;;;;;;;;;;;x
+ring_of_invisibility_desc;While not a common item, this silver ring is surely to grant a bonus to the wearer's stealth abilities making for a great Spymaster.;;;;;;;;;;;;;x
+ring_of_command;Ring of Command;;;;;;;;;;;;;x
+ring_of_command_desc;Very far from being a trinket, this golden ring is surely to grant a bonus to the wearer's martial abilities making for a great Marshall.;;;;;;;;;;;;;x
+ring_of_speed;Ring of Speed;;;;;;;;;;;;;x
+ring_of_speed_desc;While not a common item, this silver ring is surely to grant a bonus to the wearer's speed and agility, making them hard to keep up with.;;;;;;;;;;;;;x
+amulet_of_protection_1;Amulet of Protection +1;;;;;;;;;;;;;x
+amulet_of_protection_1_desc;This light blue amulet increases your defences.;;;;;;;;;;;;;x
+amulet_of_protection_3;Amulet of Protection +3;;;;;;;;;;;;;x
+amulet_of_protection_3_desc;This light blue amulet increases your defences.;;;;;;;;;;;;;x
+amulet_of_protection_5;Amulet of Protection +5;;;;;;;;;;;;;x
+amulet_of_protection_5_desc;This light blue amulet increases your defences.;;;;;;;;;;;;;x
+elixir_of_eternal_youth;Elixir of Eternal Youth;;;;;;;;;;;;;x
+elixir_of_eternal_youth_desc;This elixir will keep its owner from ever having to worry about ageing.;;;;;;;;;;;;;x
+potion_of_beauty;Potion of Beauty;;;;;;;;;;;;;x
+potion_of_beauty_desc;This potion will make its owner an everlasting beauty to the eye.;;;;;;;;;;;;;x
+potion_of_healing;Potion of Healing;;;;;;;;;;;;;x
+potion_of_healing_desc;This potion will heal any injuries or old scars from combat.;;;;;;;;;;;;;x
+##Relics of Past##
+ring_of_faele;Faele's Ring;;;;;;;;;;;;;x
+ring_of_faele_desc;This holy object is said to have been made from metal that was once part of Anduiras armour. The band is imbued with ancient magic shaping itself to a wearers finger, and thus granting bonuses.;;;;;;;;;;;;;x
+ring_of_dierdrien;Dierdrien's Ring;;;;;;;;;;;;;x
+ring_of_dierdrien_desc;The ring will shape itself to fit any wearers finger (from halfling to giant sized). This ring was a gift to one of the first human kings of Aerenwe from the Elves of the Erebannien. The elven mage Dierdrien wrought this band sacrificing some of his own Blood strength in its making.;;;;;;;;;;;;;x
+amulet_of_inspiration;Amulet of Inspiration;;;;;;;;;;;;;x
+amulet_of_inspiration_desc;This ornate golden amulet has a large star sapphire set in its center. The amulet's history goes back to a time before humans the settled on the Cerilian continent. Originally made to rally the disputing tribes, this item has found its way into the hands of regents who found they could use its powers to embolden people to their own cause. And has since lost any 'Holy' connections. Although it has still been used by Priests, faith is no longer an issue.;;;;;;;;;;;;;x
+##Misc Traits##
+torva_vos;Torva;;;;;;;;;;;;;x
+torva_vos_desc;Torva means 'true' or 'one' in the Vos language, but more commonly refers to a faction who battles for the control of Vos people, backed by a culture soaked in blood and fury for centuries and the worship of two powerful deities. They are traditionalists who emphasise the strength of power gained through physical strength and military might. They cling to clan loyalties, follow their temples, and see the ways of the Nona as decadent and cowardly.;;;;;;;;;;;;;x
+nona_vos;Nona;;;;;;;;;;;;;x
+nona_vos_desc;Nona means 'new' or 'upstart' in the Vos language, but it is commonly used for one of the two factions that fight for supremacy of their people. The Nona desire to turn the fantastic energies of the Torva people towards progress and unity. They want prosperous strong realms and will tolerate, to a limited degree, foreign gods and ideas. This is a far more harmonious and collaborative approach than that of the Torva.;;;;;;;;;;;;;x
+apprenticing;Apprenticing;;;;;;;;;;;;;x
+apprenticing_desc;This character is away from home at the Royal College of Sorcery on an apprenticeship.;;;;;;;;;;;;;x
+disinherited;Disinherited;;;;;;;;;;;;;x
+disinherited_desc;This character has been disinherited by [Root.GetHerHis] family, and thus has no stand in succession.;;;;;;;;;;;;;x
+young_elf;Young Elf;;;;;;;;;;;;;x
+young_elf_desc;Elves of Cerilia are a magical, immortal people closely tied to the energy of the land. They were once the rulers of the continent, but advancing tribes of men drove them into the deep forests. Many of the oldest elves harbour either a deep sadness or burning anger, and await the day when they will be masters of Cerilia once more.;;;;;;;;;;;;;x
+young_half_elf;Young Half-Elf;;;;;;;;;;;;;x
+young_half_elf_desc;Half-elves are the unusual children of men and women and their elven hosts. The elves regard them as Sidhelien, and they are welcome in elven society. Humans are more suspicious of half-elves, referring to them as bewitched or changelings - it's rare for half-elves to leave the elven woods.;;;;;;;;;;;;;x
+young_dwarven;Young Dwarf;;;;;;;;;;;;;x
+young_dwarven_desc;Dwarves lived in the mountains of Cerilia long before humans came to the land. Over the years, the dwarven holds have chosen a defensive strategy, fortifying their approaches and retreating to their cities under the mountains whenever threatened.;;;;;;;;;;;;;x

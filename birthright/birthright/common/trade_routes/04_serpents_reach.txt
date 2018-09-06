@@ -1,0 +1,26 @@
+serpents_reach_route = {
+	wealth = 35			# Total base wealth of silk route
+
+	modifier = {			# How the trade route modifies the provinces it passes
+		castle_tax_modifier = 0.15
+		city_tax_modifier = 0.15
+		temple_tax_modifier = 0.15
+		trade_route_value = 1
+	}
+
+	start = {				# Start provinces of trade route
+		808 
+		801 # masetium and mairada
+	}
+
+	# Western Sea Route
+	path = {	# From masetium to mairada
+		808 925 932 935 740 935 932 804 925 922 801
+	}
+	
+	# Eastern Sea Route
+	path = {	# From masetium to mairada
+		808 925 933 934 896 911 896 923 853 801
+	}
+	
+}

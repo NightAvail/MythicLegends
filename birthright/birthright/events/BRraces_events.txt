@@ -1,0 +1,188 @@
+namespace = racetraits
+
+character_event = {
+	id = racetraits.0
+	title = ELF_TRAIT # elf trait
+	desc = "EVTDESCRACETRAITS.0"
+	picture = "GFX_evt_coronation"
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_character_flag = racetraitpassed }
+	}
+
+	option = {
+		name = "OK"
+		set_character_flag = racetraitpassed
+		if = {
+			limit = {
+				graphical_culture = asraigfx
+				NOT = { trait = half_elf } 	#Some 'elven' characters at game start are already traited as half-elves
+			}
+			if = {
+				limit = { NOT = { age = 16 } }
+				add_trait = young_elf
+				break = yes
+			}
+			add_trait = elf
+			break = yes
+		}
+		if = {
+			limit = {
+				graphical_culture = dwarfgfx
+			}
+			if = {
+				limit = { NOT = { age = 16 } }
+				add_trait = young_dwarven
+				break = yes
+			}
+			add_trait = dwarven
+			break = yes
+		}
+		if = {
+			limit = {
+				graphical_culture = goblingfx
+			}
+			add_trait = goblin
+			break = yes
+		}
+		if = {
+			limit = {
+				graphical_culture = orkgfx
+			}
+			add_trait = orog
+			break = yes
+		}
+		if = {
+			limit = {
+				graphical_culture = gnollgfx
+			}
+			add_trait = gnoll
+			break = yes
+		}
+		if = {
+			limit = {
+				graphical_culture = hobbitsgfx
+			}
+			add_trait = halfling
+			break = yes
+		}
+		
+		if = { 
+			limit = {
+				graphical_culture = wraithgfx
+			}
+			#Ready for trait when it exists
+			add_trait = wraith
+			break = yes
+		}
+		if = { 
+			limit = {
+				graphical_culture = trollgfx
+			}
+			#Ready for trait when it exists
+			add_trait = giant
+			break = yes
+		}
+		
+		#Anything after this is human-looking (at least one human or half-race parent), but we need to check for half-races
+		
+		if = {
+			limit = {
+				OR = {
+					mother_even_if_dead = { trait = elf }			#mother's an elf
+					AND = {
+						father_even_if_dead = { trait = elf }
+						NOT = { real_father = { always = yes } }	#Father's an elf, and not a cuckoo child
+					}
+					real_father = { trait = elf }					#IS a cuckoo child, and real dad's an elf
+					AND = {
+						mother_even_if_dead = { trait = half_elf }
+						OR = {
+							AND = {
+								father_even_if_dead = { trait = half_elf }
+								NOT = { real_father = { always = yes } }
+							}
+							real_father = { trait = half_elf }
+						}
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { age = 16 } }
+				add_trait = young_half_elf
+				break = yes
+			}
+			add_trait = half_elf
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					mother_even_if_dead = { trait = goblin }			#mother's a goblin
+					AND = {
+						father_even_if_dead = { trait = goblin }
+						NOT = { real_father = { always = yes } }	#Father's a goblin, and not a cuckoo child
+					}
+					real_father = { trait = goblin }					#IS a cuckoo child, and real dad's a goblin
+					AND = {
+						mother_even_if_dead = { trait = half_goblin }
+						OR = {
+							AND = {
+								father_even_if_dead = { trait = half_goblin }
+								NOT = { real_father = { always = yes } }
+							}
+							real_father = { trait = half_goblin }
+						}
+					}
+				}
+			}
+			add_trait = half_goblin
+			break = yes
+		}
+		
+		#NOT PRESENTLY EXISTENT HYBRIDS
+		
+	}
+}
+
+character_event = {
+	id = racetraits.1	
+	title = ELF_TRAIT # elf trait
+	desc = "EVTDESCRACETRAITS.0"
+	picture = "GFX_evt_coronation"
+	hide_window = yes
+				   
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			trait = young_half_elf
+			trait = young_elf
+			trait = young_dwarven
+		}
+	}
+	
+	option = {
+		name = "OK"
+
+		if = {
+			limit = { trait = young_dwarven }
+			remove_trait = young_dwarven
+			add_trait = dwarven
+		}
+		if = {
+			limit = { trait = young_half_elf }
+			remove_trait = young_half_elf
+			add_trait = half_elf
+		}
+		if = {
+			limit = { trait = young_elf }
+			remove_trait = young_elf
+			add_trait = elf
+		}
+	}
+}

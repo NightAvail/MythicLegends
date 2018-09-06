@@ -1,0 +1,553 @@
+##Events to determine who becomes an adventurer, and what will make them stop##
+
+namespace = adventuring
+
+	#AI adventurers are generated from sons of dukes or kings+ only to prevent spam#
+	character_event = {
+    id = adventuring.0
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.0"
+    picture = "GFX_evt_council"
+	
+	trigger={
+	age = 15
+	NOT = { age = 45 }
+	NOT = { has_character_flag = retired }
+	NOT = { has_character_flag = adventuring0 }
+	NOT = { trait = apprenticing }
+	is_landed = no
+	is_primary_heir = no
+	ai = yes
+	NOT = { trait = maimed }
+	OR = {
+	trait = ambitious
+	trait = brave
+	}
+	OR = {
+trait = amateur_bard 
+trait = novice_bard 
+trait = trained_bard 
+trait = amateur_mage 
+trait = novice_mage
+trait = trained_mage
+trait = amateur_priest
+trait = novice_priest
+trait = trained_priest
+trait = amateur_ranger
+trait = novice_ranger
+trait = trained_ranger
+trait = amateur_rogue
+trait = novice_rogue
+trait = trained_rogue
+trait = amateur_fighter
+trait = novice_fighter
+trait = trained_fighter
+trait = amateur_sorcerer
+trait = novice_sorcerer
+trait = trained_sorcerer
+trait = master_bard 
+trait = legendary_bard 
+trait = master_mage
+trait = legendary_mage
+trait = master_priest
+trait = legendary_priest
+trait = master_ranger
+trait = legendary_ranger
+trait = master_rogue
+trait = legendary_rogue
+trait = master_fighter
+trait = legendary_fighter
+trait = master_sorcerer
+trait = legendary_sorcerer 
+	}
+	OR = {
+	religion = Haelyn
+	religion = Sera
+	religion = Avani
+	religion = Erik
+	religion = DwarvenPantheon
+	religion = Belinik
+	religion = Kriesha
+	}
+	OR = {
+	OR = {
+	father_even_if_dead = {
+	OR = {
+	tier = COUNT
+	tier = DUKE
+	tier = KING
+	tier = EMPEROR
+	}
+	}
+	}
+	OR = {
+	mother_even_if_dead = {
+	OR = {
+	tier = COUNT
+	tier = DUKE
+	tier = KING
+	tier = EMPEROR
+	}
+	}
+	}
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 30
+	}
+	
+	option = {
+	name = YES_ADVENTURE_CALLS # Yes, adventure calls!
+	father = { character_event = { id = adventuring.3 } }
+	mother = { character_event = { id = adventuring.3 } }
+	add_trait = adventuring
+	set_character_flag = adventuring0
+	}
+	
+	}
+	
+	#after age 35, adventurers begin to retire#
+	character_event = {
+    id = adventuring.1
+    title = RETIRE_FROM_ADVENTURING # Retire from Adventuring
+    desc = "EVTDESCADVENTURING.1"
+    picture = "GFX_evt_council"
+	
+	trigger={
+	age = 35
+	trait = adventuring
+	has_character_flag = adventuring0
+	ai = yes
+}
+
+mean_time_to_happen = {
+years = 10
+}
+
+option = {
+name = YES_GOING_HOME_SOUNDS_GOOD # Yes, going home sounds good!
+remove_trait = adventuring
+}
+
+}
+
+	#after age 35, adventurers begin to retire#
+	character_event = {
+    id = adventuring.2
+    title = RETIRE_FROM_ADVENTURING # Retire from Adventuring
+    desc = "EVTDESCADVENTURING.2"
+    picture = "GFX_evt_recovery"
+	
+	trigger={
+	trait = maimed
+	trait = adventuring
+}
+
+mean_time_to_happen = {
+days = 7
+}
+
+option = {
+name = "CURSES"
+remove_trait = adventuring
+father = { character_event = { id = adventuring.7 } }
+mother = { character_event = { id = adventuring.7 } }
+}
+
+}
+
+	#parents are informed their child is going adventuring#
+	character_event = {
+    id = adventuring.3
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.3"
+    picture = "GFX_evt_son_asking_father"
+	
+	is_triggered_only = yes
+
+option = {
+name = OF_COURSE_MAKE_OUR_FAMILY_PROUD # Of course! Make our family proud.
+}
+
+option = {
+name = NO_I_FORBID_IT
+trigger = { ai = no }
+FROM = { character_event = { id = adventuring.4 } }
+}
+
+}
+
+	#child is informed parents reject the plan#
+	character_event = {
+    id = adventuring.4
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.4"
+    picture = "GFX_evt_son_asking_father"
+	
+	is_triggered_only = yes
+
+option = {
+name = TO_HELL_WITH_THEM_IM_GOING # To hell with them, I'm going!
+FROM = { character_event = { id = adventuring.5 } }
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+}
+
+option = {
+name = ILL_STAY_THEN
+remove_trait = adventuring
+FROM = { character_event = { id = adventuring.6 } }
+}
+
+}
+
+	#parents informed of rejection#
+	character_event = {
+    id = adventuring.5
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.5"
+    picture = "GFX_evt_son_asking_father"
+	
+	is_triggered_only = yes
+
+option = {
+name = I_WONT_FORGET_THIS # I won't forget this...
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+}
+
+option = {
+name = THE_DUNGEON_IT_IS
+FROM = { remove_trait = adventuring }
+FROM = { imprison = ROOT }
+FROM = { character_event = { id = adventuring.6 } }
+}
+
+}
+
+	#parents informed of acceptance#
+	character_event = {
+    id = adventuring.6
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.6"
+    picture = "GFX_evt_son_asking_father"
+	
+	is_triggered_only = yes
+
+option = {
+name = adventuring.6.a # That brat almost ruined our reputation...
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+}
+
+
+}
+
+	character_event = {
+    id = adventuring.7
+    title = MAIMING # Maiming
+    desc = "EVTDESCADVENTURING.7"
+    picture = "GFX_evt_recovery" 
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "OH_NO"
+	}
+	
+	option = {
+	name = I_SAID_IT_WAS_TOO_DANGEROUS
+	}
+	
+	option = {
+	name = HMMPF
+	}
+	
+	}
+	
+	##inform people when someone becomes a master##
+	##first set character flag for those who are only trained##
+	character_event = {
+    id = adventuring.8
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.8"
+    picture = "GFX_evt_feast" 
+
+	
+	trigger={
+	age = 15
+    NOT = { has_character_flag = adventuring8 }
+	OR = {
+	trait = trained_bard
+	trait = trained_mage
+	trait = trained_sorcerer
+	trait = trained_priest
+	trait = trained_ranger
+	trait = trained_fighter
+	trait = trained_rogue
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 7
+	}
+	
+	option = {
+	name = GOOD
+	set_character_flag = adventuring8
+	}
+	
+	}
+	
+	##message when becoming master##
+	character_event = {
+    id = adventuring.9
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.9"
+    picture = "GFX_evt_feast" 
+
+	
+	trigger={
+	age = 15
+	has_character_flag = adventuring8
+    NOT = { has_character_flag = adventuring9 }
+	OR = {
+	trait = master_bard
+	trait = master_mage
+	trait = master_sorcerer
+	trait = master_priest
+	trait = master_ranger
+	trait = master_fighter
+	trait = master_rogue
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 7
+	}
+	
+	option = {
+	name = GOOD
+	set_character_flag = adventuring9
+	any_playable_ruler = {
+	limit = { 
+	AND = {
+	ai = no
+	NOT = { has_character_flag = adventuring.10 }
+	age = 1
+	}
+	}
+	character_event = { id = adventuring.10 }
+	}
+	}
+	}
+	
+	##world is informed  when becoming master##
+	character_event = {
+    id = adventuring.10
+    title = FAME # Fame
+    desc = "EVTDESCADVENTURING.10"
+    picture = "GFX_evt_feast" 
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "I_SEE"
+	}
+	
+	option = {
+	name = adventuring.10.b # Don't bother me with this type of news again.
+	set_character_flag = adventuring.10
+	}
+	}
+	
+	##option to retire when becoming master##
+	character_event = {
+    id = adventuring.11
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.11"
+    picture = "GFX_evt_feast" 
+
+	
+	trigger={
+	age = 15
+	has_character_flag = adventuring8
+    has_character_flag = adventuring9
+	NOT = { has_character_flag = adventuring.11 }
+	OR = {
+	trait = master_bard
+	trait = master_mage
+	trait = master_sorcerer
+	trait = master_priest
+	trait = master_ranger
+	trait = master_fighter
+	trait = master_rogue
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 90
+	}
+	
+	option = {
+	name = YES_ITS_TIME_TO_SETTLE_DOWN # Yes, it's time to settle down!
+	trigger = {
+	NOT = {
+	AND = {
+	trait = ambitious
+	trait = brave
+	ai = no
+	}
+	}
+	}
+	remove_trait = adventuring
+	remove_trait = on_current_quest
+	set_character_flag = adventuring.11
+	set_character_flag = retired
+	}
+	
+	option = {
+	name = NO_I_WILL_BECOME_A_LEGEND
+	trigger = {
+	AND = {
+	ai = yes
+	trait = ambitious
+	trait = brave
+	}
+	}
+	set_character_flag = adventuring.11
+	}
+	
+	option = {
+	name = adventuring.11.c # Yes, it's time to settle down.
+	trigger = { ai = no }
+	remove_trait = adventuring
+	remove_trait = on_current_quest
+	set_character_flag = adventuring.11
+	}
+	
+	option = {
+	name = NO_I_WILL_BECOME_A_LEGEND
+	trigger = { ai = no }
+	}
+	
+	}
+	
+	##message when becoming master##
+	character_event = {
+    id = adventuring.12
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.12"
+    picture = "GFX_evt_feast" 
+
+	
+	trigger={
+	age = 15
+	has_character_flag = adventuring8
+    has_character_flag = adventuring9
+	NOT = { has_character_flag = adventuring12 }
+	OR = {
+	trait = legendary_bard
+	trait = legendary_mage
+	trait = legendary_sorcerer
+	trait = legendary_priest
+	trait = legendary_ranger
+	trait = legendary_fighter
+	trait = legendary_rogue
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 7
+	}
+	
+	option = {
+	name = EXCELLENT_DRINKS_ON_ME # Excellent! Drinks on me!
+	set_character_flag = adventuring12
+	any_playable_ruler = {
+	limit = { 
+	AND = {
+	ai = no
+	NOT = { has_character_flag = adventuring.13 }
+	age = 1
+	}
+	}
+	character_event = { id = adventuring.13 }
+	}
+	}
+	}
+	
+	##world is informed  when becoming master##
+	character_event = {
+    id = adventuring.13
+    title = FAME # Fame
+    desc = "EVTDESCADVENTURING.13"
+    picture = "GFX_evt_feast" 
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "I_SEE"
+	}
+	
+	option = {
+	name = adventuring.10.b # Don't bother me with this type of news again.
+	set_character_flag = adventuring.13
+	}
+	}
+	
+	##option to retire when becoming legend##
+	character_event = {
+    id = adventuring.14
+    title = ADVENTURING # Adventuring
+    desc = "EVTDESCADVENTURING.14"
+    picture = "GFX_evt_feast" 
+
+	
+	trigger={
+	age = 15
+	has_character_flag = adventuring8
+    has_character_flag = adventuring9
+	has_character_flag = adventuring.11
+	NOT = { has_character_flag = adventuring.14 }
+	OR = {
+	trait = legendary_bard
+	trait = legendary_mage
+	trait = legendary_sorcerer
+	trait = legendary_priest
+	trait = legendary_ranger
+	trait = legendary_fighter
+	trait = legendary_rogue
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 90
+	}
+	
+	option = {
+	name = YES_ITS_TIME_TO_SETTLE_DOWN # Yes, it's time to settle down!
+	remove_trait = adventuring
+	remove_trait = on_current_quest
+	set_character_flag = adventuring.14
+	set_character_flag = retired
+	}
+	
+	option = {
+	name = adventuring.14.b # No, I will continue to adventure!
+	trigger = {	ai = no }
+	set_character_flag = adventuring.14
+	}
+	
+	}
+	

@@ -1,0 +1,157 @@
+namespace = bloodline
+
+			
+character_event = {
+	id = bloodline.2
+	desc = "EVTDESCBLOODLINE.2"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		remove_trait = bloodline_tainted
+		add_trait = bloodline_minor
+		hidden_tooltip = {
+			character_event = { id = bloodpowers.2 days = 15 }	#add a major power
+			character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+		}
+		piety = -1000
+	}
+}
+	
+	
+character_event = {
+	id = bloodline.3
+	desc = "EVTDESCBLOODLINE.3"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		remove_trait = bloodline_minor
+		add_trait = bloodline_major
+		piety = -2000
+		prestige = -2000
+		hidden_tooltip = {
+			character_event = { id = bloodpowers.3 days = 15 }	#add a great power
+			character_event = { id = bloodpowers.4 days = 16 }	#report all powers
+		}
+	}
+	
+	}
+	
+##Now for the events to increase the bloodscore##
+
+character_event = {
+	id = bloodline.4
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -100
+		change_learning = 1
+	}
+}
+	
+character_event = {
+	id = bloodline.5
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -200
+		change_learning = 1
+	}
+}
+	
+character_event = {
+	id = bloodline.6
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -300
+		change_learning = 1
+	}
+}
+	
+character_event = {
+	id = bloodline.7
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -400
+		change_learning = 1
+	}
+}
+	
+character_event = {
+	id = bloodline.8
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -500
+		change_learning = 1
+	}
+}
+	
+character_event = {
+	id = bloodline.9
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -500
+		change_learning = 1
+	}
+}
+	
+character_event = {
+	id = bloodline.10
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -600
+		change_learning = 1
+	}
+}
+	
+character_event = {
+	id = bloodline.11
+	desc = "EVTDESCBLOODLINE.4"
+	picture = "GFX_evt_comet"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		piety = -700
+		change_learning = 1
+	}
+}

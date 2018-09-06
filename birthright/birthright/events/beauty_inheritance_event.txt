@@ -1,0 +1,246 @@
+namespace = beauty
+character_event = {
+	id = beauty.0
+	desc = "EVTDESCbeauty_inheritance.0"
+	picture = GFX_evt_child_playing
+    
+	is_triggered_only = yes
+					
+	immediate = {
+		set_variable = { which = genemath value = 0 }
+		if = { 
+			limit = { mother = { trait = beautiful } }
+			change_variable = { which = genemath value = 3 }
+		}
+		if = {
+			limit = { mother = { trait = pretty } }
+			change_variable = { which = genemath value = 2 }
+		}
+		if = {
+			limit = { mother = { trait = fair } }
+			change_variable = { which = genemath value = 1 }
+		}
+		if = {
+			limit = { mother = { trait = plain } }
+			change_variable = { which = genemath value = -1 }
+		}
+		if = {
+			limit = { mother = { trait = ugly } }
+			change_variable = { which = genemath value = -2 }
+		}
+		if = {
+			limit = { mother = { trait = unsightly } }
+			change_variable = { which = genemath value = -3 }
+		}
+		if = {
+			limit = { NOT = { real_father = { always = yes } } }	#Not a hidden bastard - use normal father scope
+			if = {
+				limit = { father = { trait = beautiful } }
+				change_variable = { which = genemath value = 3 }
+			}
+			if = {
+				limit = { father = { trait = pretty } }
+				change_variable = { which = genemath value = 2 }
+			}
+			if = {
+				limit = { father = { trait = fair } }
+				change_variable = { which = genemath value = 1 }
+			}
+			if = {
+				limit = { father = { trait = plain } }
+				change_variable = { which = genemath value = -1 }
+			}
+			if = {
+				limit = { father = { trait = ugly } }
+				change_variable = { which = genemath value = -2 }
+			}
+			if = {
+				limit = { father = { trait = unsightly } }
+				change_variable = { which = genemath value = -3 }
+			}
+		}
+		if = {
+			limit = { real_father = { always = yes } }	#Is a hidden bastard - use real_father scope
+			if = {
+				limit = { real_father = { trait = beautiful } }
+				change_variable = { which = genemath value = 3 }
+			}
+			if = {
+				limit = { real_father = { trait = pretty } }
+				change_variable = { which = genemath value = 2 }
+			}
+			if = {
+				limit = { real_father = { trait = fair } }
+				change_variable = { which = genemath value = 1 }
+			}
+			if = {
+				limit = { real_father = { trait = plain } }
+				change_variable = { which = genemath value = -1 }
+			}
+			if = {
+				limit = { real_father = { trait = ugly } }
+				change_variable = { which = genemath value = -2 }
+			}
+			if = {
+				limit = { real_father = { trait = unsightly } }
+				change_variable = { which = genemath value = -3 }
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTAstrength_inheritance.0"
+		if = {
+			limit = { is_variable_equal = { which = genemath value = 6 } }
+			random_list = {
+				25 = { add_trait = beautiful }
+				25 = { add_trait = pretty }
+				25 = { add_trait = fair }
+				23 = { }
+				1 = { add_trait = plain }
+				1 = { add_trait = ugly }
+			}  #23 chance of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = 5 } }
+			random_list = { 
+				21 = { add_trait = beautiful }
+				26 = { add_trait = pretty }
+				25 = { add_trait = fair }
+				24 = { }
+				3 = { add_trait = plain }
+				1 = { add_trait = ugly }
+			} #24 chance of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = 4 } }
+			random_list = { 
+				15 = { add_trait = beautiful }
+				25 = { add_trait = pretty }
+				25 = { add_trait = fair }
+				30 = { }
+				3 = { add_trait = plain }
+				1 = { add_trait = ugly }
+				1 = { add_trait = unsightly }
+			} #30 chance of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = 3 } }
+               random_list = { 
+				13 = { add_trait = beautiful }
+				20 = { add_trait = pretty }
+				25 = { add_trait = fair }
+				36 = { }
+				3 = { add_trait = plain }
+				2 = { add_trait = ugly }
+				1 = { add_trait = unsightly }
+			} #36 of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = 2 } }
+			random_list = { 
+				6 = { add_trait = beautiful }
+				12 = { add_trait = pretty }
+				25 = { add_trait = fair }
+				50 = { }
+				4 = { add_trait = plain }
+				2 = { add_trait = ugly }
+				1 = { add_trait = unsightly }
+			} #50 of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = 1 } }
+			random_list = { 
+				4 = { add_trait = beautiful }
+				10 = { add_trait = pretty }
+				18 = { add_trait = fair }
+				58 = { }
+				6 = { add_trait = plain }
+				3 = { add_trait = ugly }
+				1 = { add_trait = unsightly }
+			} #45 of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = -6 } }
+			random_list = { 
+				25 = { add_trait = unsightly }
+				25 = { add_trait = ugly }
+				25 = { add_trait = plain }
+				23 = { }
+				1 = { add_trait = fair }
+				1 = { add_trait = pretty }
+			} #23 of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = -5 } }
+			random_list = { 
+				21 = { add_trait = unsightly }
+				26 = { add_trait = ugly }
+				25 = { add_trait = plain }
+				24 = { }
+				3 = { add_trait = fair }
+				1 = { add_trait = pretty }
+			} #24 chance of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = -4 } }
+			random_list = {
+				15 = { add_trait = unsightly }
+				25 = { add_trait = ugly }
+				25 = { add_trait = plain }
+				30 = { }
+				3 = { add_trait = fair }
+				1 = { add_trait = pretty }
+				1 = { add_trait = beautiful }
+			} #30 of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = -3 } }
+			random_list = { 
+				13 = { add_trait = unsightly }
+				20 = { add_trait = ugly }
+				25 = { add_trait = plain }
+				36 = { }
+				3 = { add_trait = fair }
+				2 = { add_trait = pretty }
+				1 = { add_trait = beautiful }
+			} #36 of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = -2 } }
+			random_list = {
+				6 = { add_trait = unsightly }
+				12 = { add_trait = ugly }
+				25 = { add_trait = plain }
+				50 = { }
+				4 = { add_trait = fair }
+				2 = { add_trait = pretty }
+				1 = { add_trait = beautiful }
+			} #50 chance of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = -1 } }
+			random_list = { 
+				4 = { add_trait = unsightly }
+				10 = { add_trait = ugly }
+				18 = { add_trait = plain }
+				58 = { }
+				6 = { add_trait = fair }
+				3 = { add_trait = pretty }
+				1 = { add_trait = beautiful }
+			} #58 of normal
+		}
+		if = {
+			limit = { is_variable_equal = { which = genemath value = 0 } }
+			random_list = { 
+				1 = { add_trait = unsightly }
+				4 = { add_trait = ugly }
+				10 = { add_trait = plain }
+				70 = { }
+				10 = { add_trait = fair }
+				4 = { add_trait = pretty }
+				1 = { add_trait = beautiful }
+			} #70 of normal
+		}
+	}
+}

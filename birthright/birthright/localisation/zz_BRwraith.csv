@@ -1,0 +1,11 @@
+wraith;Wraith;;;;;;;;;;;;;x
+wraith_desc;Wraiths live forever, but cannot marry or have children normally.  Spread by converting prisoners into more wraiths.;;;;;;;;;;;;;x
+young_wraith;Wraith;;;;;;;;;;;;;x
+young_wraith_desc;Wraiths live forever, but cannot marry or have children normally.  Spread by converting prisoners into more wraiths.;;;;;;;;;;;;;x
+wraith.0.desc;I can feel the corruptive powers brimming within me, prepared to bring another death onto the world.  [From.GetTitledFirstName] could be a fine vessel to carry it.;;;;;;;;;;;;;x
+wraith.0.a;Begin the rituals!;;;;;;;;;;;;;x
+wraith.0.b;No. [From.GetSheHeCap] is unworthy.;;;;;;;;;;;;;x
+will_become_wraith;[From.GetTitledFirstName] will be turned into a wraith.;;;;;;;;;;;;;x
+wraith.1.desc;The ghostly apparition passes through the walls of my cell like they were nothing, as it has done so many times before.  I hear its voice as though it were a whisper in my head.  I will be freed from this prison...as well as from the curse of life.;;;;;;;;;;;;;x
+convert_to_wraith;Turn to Wraith;;;;;;;;;;;;;x
+convert_to_wraith_desc;Arrange the necromantic rituals which will unravel [Root.GetTitledFirstName]'s lifeforce, binding [Root.GetHerHim] as another shade.;;;;;;;;;;;;;x

@@ -1,0 +1,82 @@
+namespace = wraith
+
+#decision triggered
+character_event = {
+    id = wraith.0
+	desc = "wraith.0.desc"
+    picture = "GFX_evt_beheading"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "wraith.0.a"	#Begin the rituals!
+		
+		piety = -100
+		hidden_tooltip = {
+			FROM = { 
+				character_event = { id = wraith.1  days = 2 }
+			}
+		}
+		custom_tooltip = { text = will_become_wraith }
+	}
+	
+	option = {
+		name = "wraith.0.b" #He/she does not deserve that honor
+		ai_chance = { factor = 0 }
+	}
+}
+
+	
+#prisoner is informed#
+character_event = {
+    id = wraith.1
+    desc = "wraith.1.desc"
+    picture = "GFX_evt_beheading"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = "NOOOOOO"
+		
+		dynasty = FROM
+		set_father = FROM	#Would check for gender, but wraiths don't/shouldn't exactly have it, so it doesn't matter.
+		
+		hidden_tooltip = {	#Remove any existing race trait, set religion, lose wives/consorts
+			remove_trait = elf
+			remove_trait = young_elf
+			remove_trait = half_elf
+			remove_trait = young_half_elf
+			remove_trait = dwarven
+			remove_trait = young_dwarven
+			remove_trait = halfling
+			remove_trait = goblin
+			remove_trait = half_goblin
+			remove_trait = orog
+			remove_trait = gnoll
+			remove_trait = bastard
+			remove_trait = legit_bastard
+			remove_trait = child_of_consort
+			set_graphical_culture = Wraith
+			religion = Shadowworld
+			if = {
+				limit = { FROM = { culture = Wraith } }
+				culture = Wraith
+			}
+			any_spouse = { remove_spouse = ROOT }
+			any_consort = { remove_consort = ROOT }	#command doesn't exist?  hm
+		}
+		if = {
+			limit = { NOT = { age = 16 } }
+			add_trait = young_wraith
+		}
+		if = {
+			limit = { age = 16 }
+			add_trait = wraith
+		}
+		if = {
+			limit = { is_ruler = no }
+			move_character = FROM
+		}
+		prisoner = no
+	}
+}

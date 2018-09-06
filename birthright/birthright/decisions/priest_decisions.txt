@@ -1,0 +1,26 @@
+decisions = {
+
+	recover_from_maiming={
+
+		is_high_prio = yes
+		potential = {
+			is_landed = yes
+			trait = maimed
+		}
+			
+		allow = {
+			trait = maimed
+			wealth = 200
+		}
+		
+		effect = {
+			ROOT = { character_event = { id = priest.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}			
+			
+	}
+
+}

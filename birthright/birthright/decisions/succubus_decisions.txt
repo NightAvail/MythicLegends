@@ -1,0 +1,41 @@
+# Vassal decisions are listed for each courtier and direct vassal. The ruler is in the FROM scope.
+
+vassal_decisions = {
+
+feed_on_prisoner  = {
+
+from_potential = {
+OR = {
+trait = awn_succubus
+trait = awn_succubus2
+	}
+	}
+	
+potential = {
+			prisoner = yes
+			is_female = no
+		}
+		
+allow = {
+			prisoner = yes
+		}
+		
+effect = {
+character_event = { id = succubus.9 }
+FROM = {
+character_event = { id = succubus.10 }
+		}
+}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { month = 12 }
+			}			
+			
+			}
+			
+			}
+			
+			}

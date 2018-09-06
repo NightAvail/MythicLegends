@@ -6,10 +6,10 @@ title_godoflight = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -48,7 +48,7 @@ title_godoflight = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -63,9 +63,9 @@ title_godoflight = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godoflight
 	add_trait = godoflight
@@ -80,10 +80,10 @@ title_godofstrategy = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -122,7 +122,7 @@ title_godofstrategy = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -137,16 +137,16 @@ title_godofstrategy = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofstrategy
 	add_trait = godofstrategy
 	add_trait = strong
 	}
 lose_effect = {
-	
+
 	remove_trait = godofstrategy
 	remove_trait = strong
 	}}
@@ -155,10 +155,10 @@ title_godoffortune = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -197,7 +197,7 @@ title_godoffortune = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -212,16 +212,16 @@ title_godoffortune = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godoffortune
 	add_trait = godoffortune
 	add_trait = charitable
 	}
 lose_effect = {
-	
+
 	remove_trait = godoffortune
 	remove_trait = charitable
 	}}
@@ -230,10 +230,10 @@ title_godofsecrecy = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -272,7 +272,7 @@ title_godofsecrecy = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -287,16 +287,16 @@ title_godofsecrecy = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofsecrecy
 	add_trait = godofsecrecy
 	add_trait = shy
 	}
 lose_effect = {
-	
+
 	remove_trait = godofsecrecy
 	remove_trait = shy
 	}}
@@ -305,10 +305,10 @@ title_godofknowledge = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -347,7 +347,7 @@ title_godofknowledge = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -362,16 +362,16 @@ title_godofknowledge = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofknowledge
 	add_trait = godofknowledge
 	add_trait = genius
 	}
 lose_effect = {
-	
+
 	remove_trait = godofknowledge
 	remove_trait = genius
 	}}
@@ -380,10 +380,10 @@ title_godoffertility = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -422,7 +422,7 @@ title_godoffertility = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -437,16 +437,16 @@ title_godoffertility = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godoffertility
 	add_trait = godoffertility
 	add_trait = fair
 	}
 lose_effect = {
-	
+
 	remove_trait = godoffertility
 	remove_trait = fair
 	}}
@@ -455,10 +455,10 @@ title_godoftheseas = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -497,7 +497,7 @@ title_godoftheseas = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -512,16 +512,16 @@ title_godoftheseas = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godoftheseas
 	add_trait = godoftheseas
 	add_trait = strong
 	}
 lose_effect = {
-	
+
 	remove_trait = godoftheseas
 	remove_trait = strong
 	}}
@@ -530,10 +530,10 @@ title_godoffestivals = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = God
@@ -572,7 +572,7 @@ title_godoffestivals = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -587,16 +587,16 @@ title_godoffestivals = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godoffestivals
 	add_trait = godoffestivals
 	add_trait = gregarious
 	}
 lose_effect = {
-	
+
 	remove_trait = godoffestivals
 	remove_trait = gregarious
 	}}
@@ -608,10 +608,10 @@ title_goddessofthesun = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -650,7 +650,7 @@ title_goddessofthesun = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -665,16 +665,16 @@ title_goddessofthesun = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofthesun
 	add_trait = goddessofthesun
 	add_trait = gregarious
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessofthesun
 	remove_trait = gregarious
 	}}
@@ -683,10 +683,10 @@ title_goddessofprotection = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -725,7 +725,7 @@ title_goddessofprotection = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -740,16 +740,16 @@ title_goddessofprotection = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofprotection
 	add_trait = goddessofprotection
 	add_trait = strong
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessofprotection
 	remove_trait = strong
 	}}
@@ -758,10 +758,10 @@ title_goddessofharvest = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -800,7 +800,7 @@ title_goddessofharvest = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -815,15 +815,15 @@ title_goddessofharvest = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofharvest
 	add_trait = goddessofharvest
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessofharvest
 	}}
 title_goddessofsilence = {
@@ -831,10 +831,10 @@ title_goddessofsilence = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -873,7 +873,7 @@ title_goddessofsilence = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -888,16 +888,16 @@ title_goddessofsilence = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofsilence
 	add_trait = goddessofsilence
 	add_trait = shy
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessofsilence
 	remove_trait = shy
 	}}
@@ -906,10 +906,10 @@ title_goddessofwisdom = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -948,7 +948,7 @@ title_goddessofwisdom = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -963,16 +963,16 @@ title_goddessofwisdom = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofwisdom
 	add_trait = goddessofwisdom
 	add_trait = genius
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessofwisdom
 	remove_trait = genius
 	}}
@@ -981,10 +981,10 @@ title_goddessoflove = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -1023,7 +1023,7 @@ title_goddessoflove = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -1038,9 +1038,9 @@ title_goddessoflove = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessoflove
 	add_trait = goddessoflove
@@ -1048,7 +1048,7 @@ title_goddessoflove = {
 	add_trait = kind
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessoflove
 	remove_trait = fair
 	remove_trait = kind
@@ -1058,10 +1058,10 @@ title_goddessofrain = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -1100,7 +1100,7 @@ title_goddessofrain = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -1115,14 +1115,14 @@ title_goddessofrain = {
 				tier = emperor
 			}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofrain
 	add_trait = goddessofrain
 	add_trait = fair
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessofrain
 	remove_trait = fair
 	}}
@@ -1131,10 +1131,10 @@ title_goddessofwine = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Goddess
@@ -1173,7 +1173,7 @@ title_goddessofwine = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = God
@@ -1188,16 +1188,16 @@ title_goddessofwine = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofwine
 	add_trait = goddessofwine
 	add_trait = drunkard
 	}
 lose_effect = {
-	
+
 	remove_trait = goddessofwine
 	remove_trait = drunkard
 	}}
@@ -1209,10 +1209,10 @@ title_godofdarkness = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1251,7 +1251,7 @@ title_godofdarkness = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1266,16 +1266,16 @@ title_godofdarkness = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofdarkness
 	add_trait = godofdarkness
 	add_trait = gregarious
 	}
 lose_effect = {
-	
+
 	remove_trait = godofdarkness
 	remove_trait = gregarious
 	}}
@@ -1284,10 +1284,10 @@ title_godofwar = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1326,7 +1326,7 @@ title_godofwar = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1341,16 +1341,16 @@ title_godofwar = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofwar
 	add_trait = godofwar
 	add_trait = strong
 	}
 lose_effect = {
-	
+
 	remove_trait = godofwar
 	remove_trait = strong
 	}}
@@ -1359,10 +1359,10 @@ title_godofgreed = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1401,7 +1401,7 @@ title_godofgreed = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1416,16 +1416,16 @@ title_godofgreed = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofgreed
 	add_trait = godofgreed
 	add_trait = greedy
 	}
 lose_effect = {
-	
+
 	remove_trait = godofgreed
 	remove_trait = greedy
 	}}
@@ -1434,10 +1434,10 @@ title_godofthedead = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1476,7 +1476,7 @@ title_godofthedead = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1491,15 +1491,15 @@ title_godofthedead = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofthedead
 	add_trait = godofthedead
 	}
 lose_effect = {
-	
+
 	remove_trait = godofthedead
 	}}
 title_godofdarkknowledge = {
@@ -1507,10 +1507,10 @@ title_godofdarkknowledge = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1549,7 +1549,7 @@ title_godofdarkknowledge = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1564,16 +1564,16 @@ title_godofdarkknowledge = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofdarkknowledge
 	add_trait = godofdarkknowledge
 	add_trait = genius
 	}
 	lose_effect = {
-	
+
 	remove_trait = godofdarkknowledge
 	remove_trait = genius
 	}}
@@ -1582,10 +1582,10 @@ title_godofadultery = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1624,7 +1624,7 @@ title_godofadultery = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1639,16 +1639,16 @@ title_godofadultery = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofadultery
 	add_trait = godofadultery
 	add_trait = fair
 	}
 lose_effect = {
-	
+
 	remove_trait = godofadultery
 	remove_trait = fair
 	}}
@@ -1657,10 +1657,10 @@ title_godofearthquakes = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1699,7 +1699,7 @@ title_godofearthquakes = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1714,15 +1714,15 @@ title_godofearthquakes = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofearthquakes
 	add_trait = godofearthquakes
 	}
 lose_effect = {
-	
+
 	remove_trait = godofearthquakes
 	}}
 title_godofchaos = {
@@ -1730,10 +1730,10 @@ title_godofchaos = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_God
@@ -1772,7 +1772,7 @@ title_godofchaos = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1787,17 +1787,17 @@ title_godofchaos = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_godofchaos
 	add_trait = godofchaos
 	add_trait = possessed
-	
+
 		}
 lose_effect = {
-	
+
 	remove_trait = possessed
 	remove_trait = godofchaos
 	}}
@@ -1809,10 +1809,10 @@ title_goddessofthemoon = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -1851,7 +1851,7 @@ title_goddessofthemoon = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1866,16 +1866,16 @@ title_goddessofthemoon = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofthemoon
 	add_trait = goddessofthemoon
 	add_trait = gregarious
 		}
 lose_effect = {
-	
+
 	remove_trait = goddessofthemoon
 	remove_trait = gregarious
 	}}
@@ -1884,10 +1884,10 @@ title_goddessofdestruction = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -1926,7 +1926,7 @@ title_goddessofdestruction = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -1943,8 +1943,8 @@ title_goddessofdestruction = {
 				}
 			}
 		}
-	
-	
+
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofdestruction
 	add_trait = goddessofdestruction
@@ -1962,10 +1962,10 @@ title_goddessofdecadence = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -2004,7 +2004,7 @@ title_goddessofdecadence = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -2019,16 +2019,16 @@ title_goddessofdecadence = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofdecadence
 	add_trait = goddessofdecadence
 	add_trait = greedy
 		}
 lose_effect = {
-	
+
 	remove_trait = goddessofdecadence
 	remove_trait = greedy
 	}}
@@ -2037,10 +2037,10 @@ title_goddessofmurder = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -2079,7 +2079,7 @@ title_goddessofmurder = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -2094,16 +2094,16 @@ title_goddessofmurder = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofmurder
 	add_trait = goddessofmurder
 	add_trait = cruel
 		}
 lose_effect = {
-	
+
 	remove_trait = goddessofmurder
 	remove_trait = cruel
 	}}
@@ -2112,10 +2112,10 @@ title_goddessofmanipulation = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -2154,7 +2154,7 @@ title_goddessofmanipulation = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -2169,16 +2169,16 @@ title_goddessofmanipulation = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofmanipulation
 	add_trait = goddessofmanipulation
 	add_trait = genius
 		}
 lose_effect = {
-	
+
 	remove_trait = goddessofmanipulation
 	remove_trait = genius
 	}}
@@ -2187,10 +2187,10 @@ title_goddessoflust = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -2229,7 +2229,7 @@ title_goddessoflust = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -2244,9 +2244,9 @@ title_goddessoflust = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessoflust
 	add_trait = goddessoflust
@@ -2254,7 +2254,7 @@ title_goddessoflust = {
 	add_trait = fair
 		}
 lose_effect = {
-	
+
 	remove_trait = goddessoflust
 	remove_trait = lustful
 	remove_trait = fair
@@ -2264,10 +2264,10 @@ title_goddessoffire = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -2306,7 +2306,7 @@ title_goddessoffire = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -2321,15 +2321,15 @@ title_goddessoffire = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessoffire
 	add_trait = goddessoffire
 		}
 lose_effect = {
-	
+
 	remove_trait = goddessoffire
 	}}
 title_goddessofhunting = {
@@ -2337,10 +2337,10 @@ title_goddessofhunting = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 10
-	monthly_prestige = 10
-	
+
+	#monthly_salary = 10
+	#monthly_prestige = 10
+
 	allowed_to_hold = {
 		is_adult = yes
 		trait = Fallen_Goddess
@@ -2379,7 +2379,7 @@ title_goddessofhunting = {
 			trait = goddessofhunting
 		}
 	}
-	
+
 	allowed_to_grant = {
 			OR = {
 				trait = Fallen_God
@@ -2394,16 +2394,16 @@ title_goddessofhunting = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_goddessofhunting
 	add_trait = goddessofhunting
 	add_trait = hunter
 		}
 lose_effect = {
-	
+
 	remove_trait = goddessofhunting
 	remove_trait = hunter
 	}}
@@ -2412,10 +2412,10 @@ title_godking = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 15
-	monthly_prestige = 15
-	
+
+	#monthly_salary = 15
+	#monthly_prestige = 15
+
 	allowed_to_hold = {
 		is_adult = yes
 		is_married = yes
@@ -2459,7 +2459,7 @@ title_godking = {
 			trait = evilqueen
 		}
 	}
-	
+
 	allowed_to_grant = {
 			is_married = yes
 			trait = Goddess
@@ -2473,15 +2473,15 @@ title_godking = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_kingofthegods
 	add_trait = kingofthegods
 		}
 lose_effect = {
-	
+
 	remove_trait = kingofthegods
 	}}
 title_godqueen = {
@@ -2489,10 +2489,10 @@ title_godqueen = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 15
-	monthly_prestige = 15
-	
+
+	#monthly_salary = 15
+	#monthly_prestige = 15
+
 	allowed_to_hold = {
 		is_adult = yes
 		is_married = yes
@@ -2536,7 +2536,7 @@ title_godqueen = {
 			trait = evilqueen
 		}
 	}
-	
+
 	allowed_to_grant = {
 			is_married = yes
 			trait = God
@@ -2550,15 +2550,15 @@ title_godqueen = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_queenofthegods
 	add_trait = queenofthegods
 		}
 lose_effect = {
-	
+
 	remove_trait = queenofthegods
 	}}
 title_evilgodking = {
@@ -2566,10 +2566,10 @@ title_evilgodking = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 15
-	monthly_prestige = 15
-	
+
+	#monthly_salary = 15
+	#monthly_prestige = 15
+
 	allowed_to_hold = {
 		is_adult = yes
 		is_married = yes
@@ -2613,7 +2613,7 @@ title_evilgodking = {
 			trait = evilqueen
 		}
 	}
-	
+
 	allowed_to_grant = {
 			is_married = yes
 			trait = Fallen_Goddess
@@ -2627,15 +2627,15 @@ title_evilgodking = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_evilking
 	add_trait = evilking
 		}
 lose_effect = {
-	
+
 	remove_trait = evilking
 	}}
 title_evilgodqueen = {
@@ -2643,10 +2643,10 @@ title_evilgodqueen = {
 	realm_in_name = no
 	grant_limit = 1
 	opinion_effect = 100
-	
-	monthly_salary = 15
-	monthly_prestige = 15
-	
+
+	#monthly_salary = 15
+	#monthly_prestige = 15
+
 	allowed_to_hold = {
 		is_adult = yes
 		is_married = yes
@@ -2690,7 +2690,7 @@ title_evilgodqueen = {
 			trait = evilqueen
 		}
 	}
-	
+
 	allowed_to_grant = {
 			is_married = yes
 			trait = Fallen_God
@@ -2704,14 +2704,14 @@ title_evilgodqueen = {
 				tier = king
 				tier = emperor
 			}
-		}	
+		}
 	}
-	
+
 	gain_effect = {
 	give_nickname = nick_the_evilqueen
 	add_trait = evilqueen
 		}
 lose_effect = {
-	
+
 	remove_trait = evilqueen
 	}}

@@ -1,0 +1,213 @@
+##WEAPONS##
+
+sword_1 = {
+	martial = 1
+	vassal_opinion = 2
+	monthly_character_prestige = 0.2
+	random = no	 
+	opposites =  {
+		sword_2
+		sword_3
+		sword_4
+		sword_5
+	}
+	command_modifier = {
+		damage = 0.05
+	}
+}
+
+sword_2 = {
+	martial = 2
+	vassal_opinion = 4
+	monthly_character_prestige = 0.25
+	random = no	 
+	opposites =  {
+		sword_1
+		sword_3
+		sword_4
+		sword_5
+	}
+	command_modifier = {
+		damage = 0.1
+	}
+}
+
+sword_3 = {
+	martial = 3
+	vassal_opinion = 6
+	monthly_character_prestige = 0.30
+	random = no	 
+	opposites =  {
+		sword_1
+		sword_2
+		sword_4
+		sword_5
+	}
+	command_modifier = {
+		damage = 0.125
+	}
+}
+
+sword_4 = {
+	martial = 4
+	vassal_opinion = 8
+	monthly_character_prestige = 0.35
+	random = no	 
+	opposites =  {
+		sword_1
+		sword_2
+		sword_3
+		sword_5
+	}
+	command_modifier = {
+		damage = 0.15
+	}
+}
+
+sword_5 = {
+	martial = 5
+	vassal_opinion = 10
+	monthly_character_prestige = 0.40
+	random = no	
+	opposites =  {
+		sword_1
+		sword_2
+		sword_3
+		sword_4
+	}	
+	command_modifier = {
+		damage = 0.175
+	}
+}
+
+holy_avenger_sword = {
+random = no	
+martial = 2
+same_religion_opinion = 10
+	command_modifier = {
+		morale_defence = 0.2
+		damage = 0.175
+	}
+	}
+	
+sword_of_roele = {
+
+	customizer = no
+
+	random = no
+	martial = 5
+	vassal_opinion = 10
+	monthly_character_prestige = 0.50
+
+	command_modifier = {
+		morale_defence = 0.3
+			defence = 0.1
+			damage = 0.1
+		}
+}
+
+##RINGS##
+
+ring_of_persuasion = {
+random = no
+diplomacy = 5
+}
+
+ring_of_invisibility = {
+random = no
+intrigue = 5
+}
+
+ring_of_command = {
+random = no
+martial = 5
+command_modifier = {
+morale_defence = 0.1
+morale_offence = 0.1
+}
+}
+
+ring_of_speed = {
+random = no
+command_modifier = {
+speed = 0.1
+}
+}
+
+
+##AMULETS##
+
+amulet_of_protection_1 = {
+random = no
+command_modifier = {
+defence = 0.1
+}
+}
+
+amulet_of_protection_3 = {
+random = no
+command_modifier = {
+defence = 0.15
+}
+}
+
+amulet_of_protection_5 = {
+random = no 
+command_modifier = {
+defence = 0.2
+}
+}
+
+##POTIONS##
+
+elixir_of_eternal_youth = {
+random = no
+immortal = yes
+}
+
+potion_of_beauty = {
+random = no
+sex_appeal_opinion = 25
+}
+
+potion_of_healing = {
+random = no
+}
+
+##RELICS OF PAST##
+
+ring_of_faele = {
+
+	customizer = no
+
+	random = no
+	martial = 2
+	monthly_character_prestige = 0.50
+	vassal_opinion = 5
+	health = 1
+		command_modifier = {
+			damage = 0.4
+			speed = 0.1
+		}
+}
+
+ring_of_dierdrien = {
+
+	customizer = no
+
+	random = no
+	intrigue = 2
+	same_religion_opinion = 5
+}
+
+amulet_of_inspiration = {
+
+	customizer = no
+
+	random = no
+	command_modifier = {
+		morale_defence = 0.2
+		morale_offence = 0.5
+	}
+}
+

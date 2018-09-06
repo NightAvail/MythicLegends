@@ -33,7 +33,7 @@ good_god_group= {
 		allow_rivermovement = yes
 		has_heir_designation = yes
 		raised_vassal_opinion_loss = no
-		peace_piety_gain = 10
+		peace_piety_gain = 1
 		max_consorts = 0
 
 		religious_clothing_head = 2

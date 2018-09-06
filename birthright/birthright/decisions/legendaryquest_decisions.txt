@@ -1,0 +1,59 @@
+decisions = {
+
+legendary_quest={
+
+potential = {
+age = 16
+	OR = {
+	trait = master_bard
+	trait = master_mage
+	trait = master_sorcerer
+	trait = master_priest
+	trait = master_ranger
+	trait = master_fighter
+	trait = master_rogue
+	}
+OR = {
+	ai = no
+	OR = {
+	trait = brave
+	trait = ambitious
+	}
+	}
+	}
+
+allow = {
+NOT = { trait = maimed }
+NOT = { trait = on_current_quest }
+age = 16
+	OR = {
+	trait = master_bard
+	trait = master_mage
+	trait = master_sorcerer
+	trait = master_priest
+	trait = master_ranger
+	trait = master_fighter
+	trait = master_rogue
+	}
+OR = {
+	ai = no
+	OR = {
+	AND = {
+	trait = brave
+	trait = ambitious
+	}
+	}
+	}
+	}
+	
+		effect = {
+		ROOT = { character_event = { id = legendary.0 } }
+		}
+		
+	ai_will_do = {
+	factor = 1	
+	}
+	
+	}
+	
+	}

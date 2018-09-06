@@ -1,0 +1,1024 @@
+gods_of_good = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	crusade_cb = crusade
+	hostile_within_group = yes
+
+	playable = yes
+
+	ai_convert_same_group = 1
+	ai_convert_other_group = 1
+
+	Haelyn = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+
+		color = { 0.8 0.8 0.6 }
+
+		crusade_name = CRUSADE
+		scripture_name = "Book of Laws"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Haelyn Halaia Holn "The Lawmaker" "The Lord of Noble War"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Eloele
+		}
+
+		can_grant_claim = no
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		female_temple_holders = yes
+
+		investiture = yes
+		priests_can_inherit = no
+		priests_can_marry = no
+		can_hold_temples = no
+		can_excommunicate = no
+		can_retire_to_monastery = yes
+	}
+
+	Haelyns_Aegis = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+
+		color = { 0.7 0.8 0.6 }
+		parent = Haelyn
+
+		crusade_name = CRUSADE
+		scripture_name = "Book of Laws"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Haelyn Halaia Holn "The Lawmaker" "The Lord of Noble War"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Eloele
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+
+	}
+
+	Haelyns_Bastion_of_Truth = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+
+		color = { 0.6 0.8 0.6 }
+		parent = Haelyn
+
+		crusade_name = CRUSADE
+		scripture_name = "Book of Laws"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Haelyn Halaia Holn "The Lawmaker" "The Lord of Noble War"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Eloele
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+	}
+
+	Avani = {
+		graphical_culture = muslimgfx
+
+		icon = 3
+		heresy_icon = 8
+
+		color = { 0.7 0.7 0.1 }
+
+		crusade_name = CRUSADE
+		scripture_name = "Avani's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Avani Avanalae Lana Vani "The Lady of Reason" "The Light-Bringer" "The Life-Giver" "The Goddess of the Sun"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Eloele
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		max_consorts = 3
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		female_temple_holders = yes
+
+		can_retire_to_monastery = yes
+	}
+
+	Fiery_Dawn_of_Avani = {
+		graphical_culture = muslimgfx
+
+		icon = 3
+		heresy_icon = 8
+		
+		color = { 0.6 0.7 0.1 }
+		parent = Avani
+		
+		crusade_name = CRUSADE
+		scripture_name = "Avani's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Avani Avanalae Lana Vani "The Lady of Reason" "The Light-Bringer" "The Life-Giver" "The Goddess of the Sun"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Eloele
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		priests_can_marry = yes
+		max_consorts = 3
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		female_temple_holders = yes
+
+		feminist = yes
+	}
+
+	Sera = {
+		graphical_culture = westerngfx
+
+		icon = 2
+		heresy_icon = 7
+
+		color = { 0.7 0.6 0.3 }
+
+		crusade_name = CRUSADE
+		scripture_name = "Sera's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Sera Sarimie Sarma Sirova "The Lady of Fortune" "The Goddess of Wealth"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Haelyn Cuiraecen
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		female_temple_holders = yes
+
+		feminist = yes
+		can_retire_to_monastery = yes
+	}
+
+	Seras_Perfekt_Symmetri= {
+		graphical_culture = westerngfx
+
+		icon = 2
+		heresy_icon = 7
+
+		color = { 0.6 0.6 0.3 }
+		parent=Sera
+
+		crusade_name = CRUSADE
+		scripture_name = "Sera's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Sera Sarimie Sarma Sirova "The Lady of Fortune" "The Goddess of Wealth"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Haelyn Cuiraecen
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		female_temple_holders = yes
+
+		feminist = yes
+	}
+
+	Erik = {
+		graphical_culture = norsegfx
+
+		icon = 19
+		heresy_icon = 21
+
+		color = { 0.3 0.6 0.3 }
+
+		crusade_name = CRUSADE
+		scripture_name = "Erik's Teaching"
+		priest_title = Druid
+		piety_name = REGENCY
+		god_names = {
+			Erik Aeric Iraikhan
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		priests_can_marry = yes
+		matrilineal_marriages = yes
+		max_consorts = 1
+		can_grant_divorce = yes
+		female_temple_holders = yes
+
+		can_retire_to_monastery = yes
+	}
+
+	Old_Father_of_the_Forests = {
+		graphical_culture = norsegfx
+
+		icon = 19
+		heresy_icon = 21
+
+		color = { 0.2 0.6 0.3 }
+		parent=Erik
+
+		crusade_name = CRUSADE
+		scripture_name = "Erik's Teaching"
+		priest_title = Druid
+		piety_name = REGENCY
+		god_names = {
+			Erik Aeric Iraikhan "The Old Father of the Forests"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		max_consorts = 1
+		can_grant_divorce = yes
+		female_temple_holders = yes
+	}
+
+	Ruornil = {
+		graphical_culture = westerngfx
+
+		icon = 19
+		heresy_icon = 21
+		
+		color = { 0.29 0.47 0.68 }
+		god_names = {
+			Ruornil Rilni Lirorn Lirovka "The Moon God" "The Silver Prince"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik
+		}
+				
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = "Ruornil's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+
+		female_temple_holders = yes
+		can_call_crusade = no
+		can_hold_temples = yes
+		can_retire_to_monastery = yes
+		
+		feminist = yes
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+	}
+		
+	Nesirie = {
+		graphical_culture = westerngfx
+
+		icon = 19
+		heresy_icon = 21
+		
+		color = { 0.5 0.4 0.8 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Nesirie's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Nesirie Nasri Narikja Neira "The Goddess of the Sea" "The Lady of Mourning"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik
+		}
+		
+		investiture = yes
+		can_grant_divorce = yes
+		can_grant_invasion_cb = invasion
+		can_grant_claim = yes
+		can_call_crusade = yes
+		can_retire_to_monastery = yes
+		priests_can_inherit = no
+		female_temple_holders = yes
+		
+		religious_clothing_head = 0
+		religious_clothing_priest = 1
+	}			
+
+	Cuiraecen  = {
+		graphical_culture = westerngfx
+
+		icon = 19
+		heresy_icon = 21
+		
+		color = { 0.2 0.2 0.8 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Cuiraecen's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Cuiraecen Kirche Khirdai Kirken "The Stormlord" "The God of Battle" "Haelyn's Champion"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		female_temple_holders = yes
+		can_retire_to_monastery = yes
+	}	
+
+	Eloele = {
+		graphical_culture = westerngfx
+
+		icon = 19
+		heresy_icon = 21
+		
+		color = { 0.1 0.4 0.3 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Eloele's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Eloele Ela Elyal "The Goddess of the Night" "The Sister of Thieves"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik Avani Laerme Haelyn
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		female_temple_holders = yes
+		
+		feminist = yes
+		can_retire_to_monastery = yes
+	}		
+	
+	Laerme = {
+		graphical_culture = westerngfx
+
+		icon = 19
+		heresy_icon = 21
+		
+		color = { 0.8 0.2 0.3 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Laerme's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Laerme Leira Lara Ayairda "The Goddess of Fire" "The Goddess of Beauty" "The Goddess of Art"
+		}
+		evil_god_names = {
+			Azrai Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok Kriesha Belinik
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		max_consorts = 3
+		female_temple_holders = yes
+		
+		feminist = yes
+		can_retire_to_monastery = yes
+	}			
+}
+
+gods_of_evil = {
+	playable = yes
+
+	Belinik = {
+		graphical_culture = norsegfx
+		
+		icon = 31
+		heresy_icon = 33
+		
+		color = { 0.1 0.3 0.85 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = "Belinik's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Belinik Alenecht "The Prince of Terror" "The Lord of Strife"
+		}
+		evil_god_names = {
+			Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Moradin Annam Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok
+		}
+
+		priests_can_marry = yes
+		female_temple_holders = yes
+		allow_looting = yes
+		max_consorts = 3
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		allow_viking_invasion = yes
+		defensive_attrition = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		aggression = 2.5
+	}
+
+	Kriesha = {
+		graphical_culture = norsegfx
+		icon = 31
+		heresy_icon = 33
+
+		color = { 0.1 0.7 1.0 }
+		parent = Belinik
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = "Kriesha's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Kriesha Karesha Kriestal "The Ice Lady" "The Winter Witch"
+		}
+		evil_god_names = {
+			Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Moradin Annam Drake Serpent Lamia Sphinx Yeenoghu Torazan Kartathok
+		}
+
+		priests_can_marry = yes
+		female_temple_holders = yes
+		allow_looting = yes
+		can_grant_divorce = yes
+		can_call_crusade = yes
+		allow_viking_invasion = yes
+		defensive_attrition = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		aggression = 2.5
+		feminist = yes
+	}
+}
+
+Azrai = {
+	playable = yes
+	
+	Azrai = {
+		graphical_culture = norsegfx
+		
+		icon = 31
+		heresy_icon = 33
+		
+		color = { 0.4 0.4 0.4 }
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = "Azrai's Teaching"
+		priest_title = "Dark Priest"
+		piety_name = REGENCY
+		god_names = {
+			Azrai "The Shadow" "The Darkling" "The Lord of Chaos" "The Doom Bringer"
+		}
+		evil_god_names = {
+			Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Moradin Annam Drake Serpent Lamia Sphinx Nature
+		}
+		
+		aggression = 2.5
+		priests_can_marry = yes
+		allow_looting = yes
+		max_consorts = 3
+		can_grant_divorce = yes
+		can_call_crusade = yes
+	}
+}
+
+Siedhe_Beliefs = {
+	playable = yes
+	
+	ai_convert_same_group = 1
+	ai_convert_other_group = 1
+	
+	Nature = {
+		graphical_culture = westerngfx
+
+		icon = 10
+		heresy_icon = 12
+		
+		color = { 0.1 0.75 0.1 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Spiritualism"
+		priest_title = Taelinri
+		piety_name = REGENCY
+		god_names = {
+			Nature "The Spirits" "The Fey"
+		}
+		evil_god_names = {
+			Azrai Yeenoghu Kriesha Belinik Drake Plunder Loot Raid Torazan Kartathok
+		}
+		
+		female_temple_holders = yes
+		defensive_attrition = yes
+		
+		independence_war_score_bonus = 30
+		matrilineal_marriages = yes
+		raised_vassal_opinion_loss = no
+		feminist = yes
+		can_retire_to_monastery = yes
+		
+		short_reign_opinion_year_mult = 1
+	}
+	
+	Gheallie_Sidhe = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.1 0.55 0.1 }
+		parent = Nature
+		
+		crusade_name = CRUSADE
+		scripture_name = "Spiritualism"
+		priest_title = Taelinri
+		piety_name = REGENCY
+		god_names = {
+			Nature "The Spirits" "The Fey"
+		}
+		
+		
+		female_temple_holders = yes
+		defensive_attrition = yes
+		allow_looting = yes
+		feminist = yes
+		can_retire_to_monastery = yes
+		
+		independence_war_score_bonus = 30
+		aggression = 1.5
+		
+		short_reign_opinion_year_mult = 1
+	}
+}
+		
+Dwarf = {
+	playable = yes
+	
+	DwarvenPantheon = {
+		graphical_culture = westerngfx
+
+		icon = 2
+		color = { 0.57 0.72 0.96 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Moradin's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Moradin "The Soul Forger" "The Dwarf-Father"
+		}
+		evil_god_names = {
+			Yeenoghu Torazan Kartathok
+		}
+
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		defensive_attrition = yes
+	}
+}
+
+GiantGods = {
+	playable = yes
+
+	GiantPantheon = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.83 0.10 0.5 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Annam's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Annam
+		}
+		evil_god_names = {
+			Azrai Kriesha Belinik Drake Serpent Lamia Sphinx Yeenoghu Torazan
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		defensive_attrition = yes		
+	}
+}
+
+Goblins = {
+	playable = yes
+
+	GoblinPantheon = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.74 0.27 0.09 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Kartathok's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Kartathok "The Great Slayer"
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Lamia Sphinx
+		}
+		
+		unit_modifier = {
+			heavy_infantry_offensive = 0.10
+			light_cavalry_offensive = 0.10
+			light_infantry_offensive = 0.10
+			archers_offensive = 0.10
+			
+			key = "OFF_RELIGION"
+		}
+		
+		unit_home_modifier = {
+			knights_defensive = 0.50
+			heavy_infantry_defensive = 0.50
+			pikemen_defensive = 0.50
+			land_morale = 0.50
+			
+			key = "OFF_RELIGION"
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		max_consorts = 2
+		allow_viking_invasion = yes
+		defensive_attrition = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		aggression = 1.5
+	}
+}
+	
+Demihuman = {
+	playable = yes
+	
+	OrogPantheon = {
+		graphical_culture = westerngfx
+
+		icon = 4
+		color = { 0.83 0.10 0.5 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Torazan's Teaching"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Torazan "The Oroglord"
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Lamia Sphinx Yeenoghu
+		}
+		
+		unit_modifier = {
+			heavy_infantry_offensive = 0.10
+			light_cavalry_offensive = 0.10
+			light_infantry_offensive = 0.10
+			archers_offensive = 0.10
+			
+			key = "OFF_RELIGION"
+		}
+		
+		unit_home_modifier = {
+			knights_defensive = 0.50
+			heavy_infantry_defensive = 0.50
+			pikemen_defensive = 0.50
+			land_morale = 0.50
+			
+			key = "OFF_RELIGION"
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = yes
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		max_consorts = 2
+		allow_viking_invasion = yes
+		defensive_attrition = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		aggression = 1.5
+	}
+}
+
+Gnolls = {
+	playable = yes
+	
+	GnollPantheon = {
+		graphical_culture = muslimgfx
+
+		icon = 45
+		heresy_icon = 45
+		color = { 153 255 153 }
+		
+		scripture_name = "Yeenoghu's Teachings"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Yeenoghu "The Beast of Butchery" "The Ruler of Ruin"
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Lamia Sphinx Torazan
+		}
+
+		defensive_attrition = yes
+		max_consorts = 2
+		raised_vassal_opinion_loss = no
+		allow_looting = yes
+		short_reign_opinion_year_mult = 2
+		priests_can_marry = yes
+		allow_viking_invasion = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		aggression = 1.5
+	}
+}
+
+Halflings = {
+	playable = yes
+	
+	HalflingPantheon = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.81 0.63 0.90 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Halfling Ways"
+		priest_title = Druid
+		piety_name = REGENCY
+		god_names = {
+			"The Spirits" Nature
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Lamia Sphinx Yeenoghu Torazan
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+	}
+}
+
+Awnsheighleen = {
+	playable = yes
+	
+	Sphinx = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.40 0.98 0.60 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Sphinx's Word"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Sphinx
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Lamia Yeenoghu Torazan
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = yes
+		priests_can_marry = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		max_consorts = 3
+		aggression = 1.5
+	}
+	
+	Lamia = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.40 0.98 0.60 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Lamia's Word"
+		priest_title = Devotee
+		piety_name = REGENCY
+		god_names = {
+			Lamia
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Sphinx Yeenoghu Torazan
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		max_consorts = 3
+		aggression = 1.5
+		feminist = yes
+	}
+	
+	Serpent = {
+		graphical_culture = westerngfx
+
+		icon = 4
+		color = { 0.46 0.65 0.48 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Serpent's Word"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Serpent
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Lamia Sphinx Yeenoghu Torazan
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = yes
+		priests_can_marry = yes
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		max_consorts = 3
+		aggression = 1.5
+	}
+	
+	Shadowworld = {
+		graphical_culture = westerngfx
+
+		icon = 4
+		color = { 0.59 0.48 0.46 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "Shadowworld"
+		priest_title = PRIEST
+		piety_name = REGENCY
+		god_names = {
+			Shadowworld "The Cold Rider" "The Night Walker" "The Darkling"
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Lamia Sphinx Yeenoghu Torazan
+		}
+		
+		can_grant_claim = yes
+		can_call_crusade = yes
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		defensive_attrition = yes
+		aggression = 1.5
+		feminist = yes	#Ghosts don't care about your dangly bits
+	}
+	
+	Drake_Cult = {
+		graphical_culture = westerngfx
+
+		icon = 4
+		color = { 0.59 0.48 0.46 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "The Drake's Word"
+		priest_title = Druid
+		piety_name = REGENCY
+		god_names = {
+			Drake
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Serpent Lamia Sphinx Yeenoghu Torazan
+		}
+		
+		parent=OrogPantheon
+		
+		aggression = 3.0
+		can_call_crusade = no
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		defensive_attrition = yes
+		allow_viking_invasion = yes
+		max_consorts = 2
+		peace_prestige_loss = yes
+		raised_vassal_opinion_loss = no
+	}
+}
+
+Faithless = {
+	playable = yes
+
+	Outlaw = {
+		graphical_culture = westerngfx
+
+		icon = 1
+		heresy_icon = 6
+		
+		color = { 0.40 0.98 0.60 }
+		
+		crusade_name = CRUSADE
+		scripture_name = "The Code"
+		priest_title = Chief
+		piety_name = REGENCY
+		god_names = {
+			Plunder Raid Loot
+		}
+		evil_god_names = {
+			Azrai Haelyn Nesirie Cuiraecen Sera Ruornil Laerme Avani Erik Eloele Kriesha Belinik Moradin Annam Drake Serpent Lamia Sphinx Yeenoghu Torazan
+		}
+
+		aggression = 2.0
+		can_grant_claim = yes
+		can_call_crusade = no
+		priests_can_marry = yes
+		can_hold_temples = yes
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		allow_looting = yes
+		allow_rivermovement = yes
+		max_consorts = 3
+		defensive_attrition = yes
+	}
+}
+
+ancient_gods = { ## for religious link
+	playable = yes
+	
+	Anduiras = {
+		graphical_culture = westerngfx
+		
+		icon = 20
+		heresy_icon = 21
+		
+		color = { 0.8 0.8 0.6 }
+
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = "Anduiras' Teachings"
+		priest_title = "Druid"
+		piety_name = REGENCY
+		god_names = {
+			Anduiras
+		}
+		evil_god_names = {
+			Azrai "The Shadow" "The Darkling" "The Lord of Chaos" "The Doom Bringer"
+		}
+
+		matrilineal_marriages = yes
+		can_grant_divorce = yes
+		can_call_crusade = yes
+	}
+}

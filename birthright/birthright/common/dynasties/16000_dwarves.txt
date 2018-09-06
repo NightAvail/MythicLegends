@@ -1,0 +1,137 @@
+# Dwarven dynasties      16000-16999
+
+# Mur-Kilad
+3601 = {
+	name = Thurinson				# Godar Thurinson		MD	F6				Vo	tainted	5	LE
+	culture = Dwarven
+}
+3501 = {
+	name = Earthcore				# Kiras Earthcore		MD	F18								LE
+	culture = Dwarven
+}
+
+# Daikhar Zhigun
+16001 = {
+	name = Pickbiter				# Kallen Pickbiter		MD	F7				Ba	minor	16	LN
+	culture = Dwarven
+	used_for_random = no
+}
+16002 = {
+	name = Utterlund				# Dorin Utterlund		FD	T6				Re	major	20	LN
+	culture = Dwarven
+}
+16003 = {
+	name = Stonebreaker
+	culture = Dwarven
+}
+16004 = {
+	name = Everdark					# Morathos Everdark		MD	Pr8, Moradin	Vo	great	38	LN
+	culture = Dwarven
+}
+
+# Khurin-Azur
+16201 = {
+	name = Stonesoul				# Tjorgrim Stonesoul 	DM	F15				Re	major	26	LG
+	culture = Dwarven				# Hrothval Stonesoul 	DM	F 8				Re	minor	15	LG
+}
+16202 = {
+	name = Ironfist
+	culture = Dwarven
+}
+16203 = {
+	name = Redhammer
+	culture = Dwarven
+}
+16204 = {
+	name = Gestad
+	culture = Dwarven
+}
+16205 = {
+	name = Guthvarsson				# Northri Guthvarsson 	DM	Pr15, Moradin	Vo	major	32	LG
+	culture = Dwarven
+}
+
+# Wierech
+16220 = {
+	name = Smoothface				# Darlure Smoothface	FD	F6/T7			Ba	minor	19	NG
+	culture = Dwarven
+}
+
+# Baruk-Azhik
+3600 = {
+	name = Graybeard
+	culture = Dwarven
+}
+16401 = {
+	name = Ahan						# Cairn Ahan			MD	F8
+	culture = Dwarven
+}
+16402 = {
+	name = Endrede					# Hadassah Endrede		FD	Pr9				Re	major	38
+	culture = Dwarven
+}
+16403 = {
+	name = Laccolith				# Bayard Laccolith		MD					Vo	major	32
+	culture = Dwarven
+}
+16404 = {
+	name = Wainier					# Wulfram Wanier		MD					An	great	48
+	culture = Dwarven
+}
+16405 = {
+	name = Rockhammer				# Ruarch Rockhammer		MD	Pr11			An	major	41
+	culture = Dwarven
+}
+16406 = {
+	name = Watershold				# Diirk Watershold		MD	T10				An	minor	29
+	culture = Dwarven
+}
+16407 = {
+	name = Lamier
+	culture = Dwarven
+}
+16408 = {
+	name = Lannaman
+	culture = Dwarven
+}
+16409 = {
+	name = Caskenz
+	culture = Dwarven
+}
+16410 = {
+	name = Earthkore				# Bain Earthkore 		MD					An	minor	12
+	culture = Dwarven
+}
+
+###################
+
+16411 = {
+	name = Arakh-Kahl
+	culture = Dwarven
+}
+16412 = {
+	name = Strong-arm
+	culture = Dwarven
+}
+16413 = {
+	name = Greystone
+	culture = Dwarven
+}
+16414 = {
+	name = Zhus-Khel
+	culture = Dwarven
+}
+16500 = { name = Baldrek culture = Dwarven }
+16501 = { name = Dankil culture = Dwarven }
+16502 = { name = Gorunn culture = Dwarven }
+16503 = { name = Holderhek culture = Dwarven }
+16504 = { name = Ioderr culture = Dwarven }
+16505 = { name = Lutgehr culture = Dwarven }
+16506 = { name = Rumnaheim culture = Dwarven }
+16507 = { name = Strakeln culture = Dwarven }
+16508 = { name = Torunn culture = Dwarven }
+16509 = { name = Ungart culture = Dwarven }
+16510 = { name = Arakh-Kahl culture = Dwarven }
+16511 = { name = Harldan-Erh culture = Dwarven }
+16512 = { name = Stork-Khul culture = Dwarven }
+16513 = { name = Zhus-Khel culture = Dwarven }

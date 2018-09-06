@@ -1,0 +1,557 @@
+namespace = realmbattlemagic
+
+	#main battle magic spellbook event#
+	character_event = {
+    id = realmbattlemagic.0
+    title = WAR_MAGIC # War Magic
+    desc = "EVTDESCREALMBATTLEMAGIC.0"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=DIRECT_BATTLE_DAMAGE_SPELLS # Direct battle damage spells.
+	character_event = { id = realmbattlemagic.1 }
+	}
+	
+	option={
+	name=realmbattlemagic.0.b # Province subversion and damage spells.
+	character_event = { id = realmbattlemagic.3 }
+	}
+	
+	option={
+	name=NEVER_MIND
+	}
+	}
+	
+	#the direct damage spellbook#
+	character_event = {
+    id = realmbattlemagic.1
+    title = DIRECT_DAMAGE_SPELLS # Direct Damage Spells
+    desc = "EVTDESCREALMBATTLEMAGIC.1"
+    picture = "GFX_evt_pagan"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=realmbattlemagic.1.a # A great lightning storm to ravage the enemy army.
+	add_trait = casting_realm_magic
+	character_event = { id = realmbattlemagic.2 days = 30 }
+	piety = -50
+	wealth = -10
+	}
+	
+	#if there not enough money, or player changes mind#
+	option={
+	name=NEVER_MIND
+	trigger = {
+	ai = no
+	}
+	}
+	
+	
+	}
+	
+	#after 30 days, the great lightning storm spell is ready#
+	character_event = {
+    id = realmbattlemagic.2
+    title = LIGHTNING_STORM_SPELL # Lightning Storm Spell
+    desc = "EVTDESCREALMBATTLEMAGIC.2"
+    picture = "GFX_evt_comet"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=realmbattlemagic.2.a # I have prepared a lightning storm spell!
+	trigger = {
+	NOT = { trait = novice_lightning_storm }
+	OR = {
+	trait = novice_mage
+	trait = novice_sorcerer
+	}
+	}
+	remove_trait = casting_realm_magic
+	add_trait = novice_lightning_storm
+	}
+
+	option={
+	name=realmbattlemagic.2.a # I have prepared a lightning storm spell!
+	trigger = {
+	NOT = { trait = trained_lightning_storm }
+	OR = {
+	trait = trained_mage
+	trait = trained_sorcerer
+	}
+	}
+	remove_trait = casting_realm_magic
+	add_trait = trained_lightning_storm
+	}	
+
+	option={
+	name=realmbattlemagic.2.a # I have prepared a lightning storm spell!
+	trigger = {
+	NOT = { trait = master_lightning_storm }
+	OR = {
+	trait = master_mage
+	trait = master_sorcerer
+	}
+	}
+	remove_trait = casting_realm_magic
+	add_trait = master_lightning_storm
+	}
+
+	option={
+	name=realmbattlemagic.2.a # I have prepared a lightning storm spell!
+	trigger = {
+	NOT = { trait = legendary_lightning_storm }
+	OR = {
+	trait = legendary_mage
+	trait = legendary_sorcerer
+	}
+	}
+	remove_trait = casting_realm_magic
+	add_trait = legendary_lightning_storm
+	}
+	
+	}
+	
+	
+	#the province subversion and damage spellbook#
+	character_event = {
+    id = realmbattlemagic.3
+    title = PROVINCE_SUBVERSION_SPELLS # Province Subversion Spells
+    desc = "EVTDESCREALMBATTLEMAGIC.3"
+    picture = "GFX_evt_pagan"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=realmbattlemagic.3.a # I will cast a plague on their provinces.
+	trigger = {
+	piety = 50
+	wealth = 20
+	}
+	character_event = { id = realmbattlemagic.4 }
+	}
+	
+	option={
+	name=realmbattlemagic.3.b # I will stir the enemy populace to rebellion.
+	trigger = {
+	piety = 50
+	wealth = 20
+	}
+	character_event = { id = realmbattlemagic.8 }
+	}
+	
+	option={
+	name=NEVER_MIND
+	trigger = {
+	ai = no
+	}
+	}
+	
+	}
+	
+	#player opens up the plague spell list#
+	character_event = {
+    id = realmbattlemagic.4
+    title = PLAGUE_SPELLS # Plague Spells
+    desc = "EVTDESCREALMBATTLEMAGIC.4"
+    picture = "GFX_evt_comet"
+	
+	is_triggered_only = yes
+	
+	option={
+	name=realmbattlemagic.4.a # I will cast a death plague on an enemy province!
+	trigger = {
+	OR = {
+		trait=novice_mage
+		trait=trained_mage
+		trait=master_mage
+		trait=legendary_mage
+		trait=novice_sorcerer
+		trait=trained_sorcerer
+		trait=master_sorcerer
+		trait=legendary_sorcerer
+		}
+		}
+	character_event = { id = realmbattlemagic.5 days = 7 }
+	add_trait=casting_realm_magic
+	piety = -50
+	wealth = -20
+	}
+	
+	option={
+	name=realmbattlemagic.4.b # I will cast a death plague on an entire enemy region!
+	trigger = {
+	OR = {
+		trait=master_mage
+		trait=legendary_mage
+		trait=master_sorcerer
+		trait=legendary_sorcerer
+		}
+		}
+	character_event = { id = realmbattlemagic.6 days = 14 }
+	add_trait=casting_realm_magic
+	piety = -100
+	wealth = -40
+	}	
+	option={
+	name=NEVER_MIND
+	trigger = { ai = no }
+	}
+	
+	
+	}
+	
+	#player finishes preparing the death plague spell#
+	character_event = {
+    id = realmbattlemagic.5
+    title = DEATH_PLAGUE # Death Plague
+    desc = "EVTDESCREALMBATTLEMAGIC.5"
+    picture = "plague_doctor"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = death_plague duration = 1500 }  
+	owner = { character_event = { id = realmbattlemagic.7 days = 7 } }
+	}
+	}
+	}
+	
+	option={
+	name=realmbattlemagic.5.b # Cast at it a random enemy province.
+	remove_trait = casting_realm_magic
+	random_current_enemy = {
+	limit = { higher_tier_than = BARON }
+	random_realm_province = {
+	add_province_modifier = { name = death_plague duration = 1500 }
+	owner = { character_event = { id = realmbattlemagic.7 days = 7 } }
+	}
+	}
+	}
+	
+	}
+	
+	##the spell is cast on an entire region - target + all neighbors##
+	character_event = {
+    id = realmbattlemagic.6
+    title = DEATH_PLAGUE # Death Plague
+    desc = "EVTDESCREALMBATTLEMAGIC.6"
+    picture = "plague_doctor"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = death_plague duration = 1500 }
+	owner = { character_event = { id = realmbattlemagic.7 days = 7 } }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = death_plague duration = 1500 } 
+	owner = { character_event = { id = realmbattlemagic.7 days = 7 } }
+	}
+	}
+	}
+	}
+	
+	
+	option={
+	name=realmbattlemagic.5.b # Cast at it a random enemy province.
+	remove_trait = casting_realm_magic
+	random_current_enemy = {
+	limit = { higher_tier_than = BARON }
+	random_realm_province = {
+	add_province_modifier = { name = death_plague duration = 1500 }
+	owner = { character_event = { id = realmbattlemagic.7 days = 7 } }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = death_plague duration = 1500 } 
+	owner = { character_event = { id = realmbattlemagic.7 days = 7 } }
+	}
+	}
+	}
+	}
+	
+	}
+		
+
+
+	#ruler of plague-infested province is informed of the event#
+	character_event = {
+	id = realmbattlemagic.7
+    title = DEATH_PLAGUE # Death Plague
+    desc = "EVTDESCREALMBATTLEMAGIC.7"
+    picture = "plague_doctor"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=CURSE_THEM
+	}
+	
+	option={
+	name=I_WILL_DISPEL_IT
+	trigger = {
+			OR = {
+			trait=novice_mage
+			trait=trained_mage
+			trait=master_mage
+			trait=legendary_mage
+			trait=novice_sorcerer
+			trait=trained_sorcerer
+			trait=master_sorcerer
+			trait=legendary_sorcerer
+			}
+	}
+	}
+
+	option={
+	name=realmbattlemagic.7.c # Summon my court mage - we must dispel it!
+	}
+	}
+	
+#player opens up the subversion spell list#
+	character_event = {
+    id = realmbattlemagic.8
+    title = SUBVERSION_SPELLS # Subversion Spells
+    desc = "EVTDESCREALMBATTLEMAGIC.8"
+    picture = "GFX_evt_comet"
+	
+	is_triggered_only = yes
+	
+	option={
+	name=I_WILL_CAST_A_SMALL_SUBVERSION_SPELL # I will cast a small subversion spell.
+	trigger = {
+	OR = {
+		trait=novice_mage
+		trait=novice_sorcerer
+		trait=trained_mage
+		trait=trained_sorcerer
+		trait=master_mage
+		trait=master_sorcerer
+		trait=legendary_mage
+		trait=legendary_sorcerer
+		}
+		}
+	character_event = { id = realmbattlemagic.9 days = 7 }
+	add_trait=casting_realm_magic
+	piety = -20
+	wealth = -20
+	}
+	
+	option={
+	name=realmbattlemagic.8.b # I will cast a powerful subversion spell.
+	trigger = {
+	OR = {
+		trait=trained_mage
+		trait=trained_sorcerer
+		trait=master_mage
+		trait=master_sorcerer
+		trait=legendary_mage
+		trait=legendary_sorcerer
+		}
+		}
+	character_event = { id = realmbattlemagic.10 days = 14 }
+	add_trait=casting_realm_magic
+	piety = -100
+	wealth = -40
+	}	
+	
+	option={
+	name=realmbattlemagic.8.c # I will cast an epic subversion spell.
+	trigger = {
+	OR = {
+		trait=legendary_mage
+		trait=legendary_sorcerer
+		}
+		}
+	character_event = { id = realmbattlemagic.11 days = 21 }
+	add_trait=casting_realm_magic
+	piety = -150
+	wealth = -60
+	}	
+	
+	option={
+	name=NEVER_MIND
+	trigger = { ai = no }
+	}
+	
+	
+	}
+	
+	#player finishes preparing the small subversion spell#
+	character_event = {
+    id = realmbattlemagic.9
+    title = SUBVERSION_MAGIC # Subversion Magic
+    desc = "EVTDESCREALMBATTLEMAGIC.9"
+    picture = "gfx_peasants"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = small_subversion_spell duration = 500 }  
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	}
+	}
+	}
+	
+	option={
+	name=realmbattlemagic.5.b # Cast at it a random enemy province.
+	remove_trait = casting_realm_magic
+	random_current_enemy = {
+	limit = { higher_tier_than = BARON }
+	random_realm_province = {
+	add_province_modifier = { name = small_subversion_spell duration = 500 }
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	}
+	}
+	}
+	
+	}
+	
+	##the powerful subversion spell is cast on an entire region - target + all neighbors##
+	character_event = {
+    id = realmbattlemagic.10
+    title = SUBVERSION_MAGIC # Subversion Magic
+    desc = "EVTDESCREALMBATTLEMAGIC.10"
+    picture = "gfx_peasants"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = powerful_subversion_spell duration = 700 }
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = powerful_subversion_spell duration = 700 } 
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	}
+	}
+	}
+	}
+	
+	
+	option={
+	name=realmbattlemagic.5.b # Cast at it a random enemy province.
+	remove_trait = casting_realm_magic
+	random_current_enemy = {
+	limit = { higher_tier_than = BARON }
+	random_realm_province = {
+	add_province_modifier = { name = powerful_subversion_spell duration = 700 }
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = powerful_subversion_spell duration = 700 } 
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	}
+	}
+	}
+	}
+	
+	}
+	
+	##the epic subversion spell is cast on an entire region - target + all neighbors##
+	character_event = {
+    id = realmbattlemagic.11
+    title = SUBVERSION_MAGIC # Subversion Magic
+    desc = "EVTDESCREALMBATTLEMAGIC.10"
+    picture = "gfx_peasants"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED # Cast it where my spymaster is located.
+	trigger = { ai = no }
+	remove_trait = casting_realm_magic
+	any_courtier={
+	limit = {has_job_title = job_spymaster }
+	location = { 
+	add_province_modifier = { name = epic_subversion_spell duration = 700 }
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = epic_subversion_spell duration = 700 } 
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	}
+	}
+	}
+	}
+	
+	
+	option={
+	name=realmbattlemagic.5.b # Cast at it a random enemy province.
+	remove_trait = casting_realm_magic
+	random_current_enemy = {
+	limit = { higher_tier_than = BARON }
+	random_realm_province = {
+	add_province_modifier = { name = powerful_subversion_spell duration = 700 }
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	
+	any_neighbor_province = { 
+	add_province_modifier = { name = powerful_subversion_spell duration = 700 } 
+	owner = { character_event = { id = realmbattlemagic.12 days = 7 } }
+	}
+	}
+	}
+	}
+	
+	}
+	
+	#ruler of subverted province is informed of the event#
+	character_event = {
+	id = realmbattlemagic.12
+    title = DEATH_PLAGUE # Death Plague
+    desc = "EVTDESCREALMBATTLEMAGIC.12"
+    picture = "gfx_peasants"
+	
+	is_triggered_only=yes
+	
+	option={
+	name=CURSE_THEM_ALL
+	}
+	
+	option={
+	name=I_WILL_DISPEL_IT
+	trigger = {
+			OR = {
+			trait=novice_mage
+			trait=trained_mage
+			trait=master_mage
+			trait=legendary_mage
+			trait=novice_sorcerer
+			trait=trained_sorcerer
+			trait=master_sorcerer
+			trait=legendary_sorcerer
+			}
+	}
+	}
+
+	option={
+	name=realmbattlemagic.7.c # Summon my court mage - we must dispel it!
+	}
+	}

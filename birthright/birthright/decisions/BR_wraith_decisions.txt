@@ -1,0 +1,40 @@
+targetted_decisions = {
+
+	convert_to_wraith = {
+		filter = home_court
+		ai_target_filter = court
+	
+		from_potential = {
+			trait = wraith
+			is_ruler = yes
+			religion = Shadowworld
+			graphical_culture = wraithgfx
+		}
+	
+		potential = {
+			prisoner = yes
+			NOT = { trait = wraith }
+			host = { character = FROM }
+		}
+		
+		allow = {
+			FROM = { piety = 100 }
+		}
+		
+		effect = {
+			FROM = { character_event = { id = wraith.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 1 		# 1 = 100% chance every month (for each allowed target!)
+			modifier = {
+				factor = 0.05
+			}
+			modifier = {
+				factor = 0
+				num_of_children = 3
+				any_child = { trait = wraith }
+			}
+		}
+	}
+}

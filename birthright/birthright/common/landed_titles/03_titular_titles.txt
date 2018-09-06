@@ -1,0 +1,31 @@
+
+##TITULAR EMPIRES#
+##Keep Alone for now##
+
+e_north = {
+	color={ 230 230 250 }
+	color2={ 255 255 255 }
+
+	allow={
+		has_landed_title = k_northern_marches
+		num_of_duke_titles = 3
+		independent = yes
+	OR={
+	culture=Rjurik
+	culture=Anuirean
+	}
+	}
+	
+	capital = 204 # Sonnelind
+	short_name = yes
+	name_tier = king
+	
+	title = "King"
+	title_female = "Queen"
+	
+	culture = Rjurik
+	
+	creation_requires_capital = yes
+
+}
+

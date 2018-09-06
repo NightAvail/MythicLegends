@@ -1,0 +1,49 @@
+#######################################################
+# Mythic Legends
+#
+# Traits
+#######################################################
+
+# Mage levels.
+ml_mage_level_neophyte = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_apprentice = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_wizard = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_master_wizard = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_archmage = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_legendarymage = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Mage bloodlines.
+ml_mage_bloodline_strong = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_bloodline_weak = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}

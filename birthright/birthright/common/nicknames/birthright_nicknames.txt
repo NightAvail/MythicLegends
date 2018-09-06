@@ -1,0 +1,313 @@
+# NEW NICKNAMES
+#################
+
+nick_the_warrior = {
+	allow = {
+		age = 15
+		NOT = { trait = infirm }
+		NOT = { trait = incapable }
+		NOT = { trait = craven }
+		OR = {
+			trait = skilled_tactician
+			trait = brilliant_strategist
+		}
+		OR = {
+			trait = master_fighter
+			trait = legendary_fighter
+		}
+	}
+	chance = {
+		factor = 10
+	}
+}
+
+nick_the_scholar = {
+	allow = {
+		age = 15
+		OR = {
+			trait = scholar
+		}
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_priest = {
+	allow = {
+		age = 15
+		OR = {
+			trait = scholar
+			trait = trained_priest
+			trait = master_priest
+			trait = scholarly_theologian
+			trait = mastermind_theologian
+		}
+	}
+	chance = {
+		factor = 2
+	}
+}
+nick_the_priestess = {}
+nick_the_defender = {}
+nick_the_sword = {}
+nick_the_shield = {}
+
+nick_the_lunatic = {
+	allow = {
+		age = 21
+		ruled_years = 2
+		OR = {
+			trait = lunatic
+			trait = cruel
+			trait = arbitrary
+		}
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_greedy = {
+	allow = {
+		age = 15
+		OR = {
+			trait = wroth
+			trait = greedy
+		}
+		NOT = { trait = charitable }
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_envious = {
+	allow = {
+		age = 15
+		OR = {
+			trait = wroth
+			trait = envious
+		}
+		NOT = { trait = kind }
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_kind = {
+	allow = {
+		age = 15
+		OR = {
+			trait = kind
+			trait = charitable
+		}
+		NOT = { trait = envious }
+		NOT = { trait = greedy }
+	}
+	chance = {
+		factor = 2
+	}
+}
+
+nick_the_founder = {}
+nick_riedhie = {}
+nick_the_sickly = {}
+nick_the_bleeder = {}
+nick_the_unfair = {}
+nick_shooting_star = {}
+nick_the_raider = {}
+nick_firebrand = {}
+nick_the_gourmand = {}
+nick_bulls_eye = {}
+nick_two_toes = {}
+nick_the_red = {}
+nick_rot_eye = {}
+nick_maulfist = {}
+nick_the_black = {}
+nick_sharpspear = {}
+nick_the_swift = {}
+nick_the_kingslayer = {}
+nick_the_paladin = {}
+nick_the_master_of_anuire = {}
+
+
+# AWNS  # Self-Note to localize this too, Rev
+#########
+
+"The Gorgon" = {
+    allow = {
+        trait = awn_gorgon
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The White Witch" = {
+    allow = {
+        trait = awn_white_witch
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Succubus" = {
+    allow = {
+        trait = awn_succubus
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Spider" = {
+    allow = {
+        trait = awn_spider
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Manslayer" = {
+    allow = {
+        trait = awn_rhuobhe
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Magian" = {
+    allow = {
+        trait = awn_magian
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Lamia" = {
+    allow = {
+        trait = awn_lahmia
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Serpent" = {
+    allow = {
+        trait = awn_serpent
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Raven" = {
+    allow = {
+        trait = awn_raven
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Brute of Kal-Saitharak" = {
+    allow = {
+        trait = awn_brute
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Siren" = {
+    allow = {
+        trait = awn_siren
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+"The Ghoul" = {
+    allow = {
+        trait = awn_ghoul
+    }
+    chance = {
+        factor = 500
+    }
+}
+
+################### #Eventual localisation for this stuff self-note, Rev.#
+nick_the_skulk = {}
+nick_the_chimaera = {}
+"Lion of the East" = {}
+"The Exiled" = {}
+"Ratface" = {}
+"The Sword Prince" = {}
+"The Blood Prince" = {}
+"The Silver Prince" = {}
+"The Golden Prince" = {}
+"The Dark Prince" = {}
+"The Evil Prince" = {}
+"The Iron Baron" = {}
+"The Black Baron" = {}
+"The Warlock" = {}
+"of The Seven Stars" = {}
+"of The Crystal Staff" = {}
+"Hermedhie" = {}
+"The Storm Knight" = {}
+"The Sun Knight" = {}
+"The Winter Knight" = {}
+"The Boar" = {}
+"The Bard" = {}
+"The Butcher" = {}
+"The Elder" = {}
+"The Quick" = {}
+"The Greater" = {}
+"The Younger" = {}
+"Dan" = {}
+"The White Falcon" = {}
+"The Black Falcon" = {}
+"The Golden Falcon" = {}
+"The Hawk" = {}
+"The Hound of Ghoere" = {}
+"The Twisted" = {}
+"Black Snake" = {}
+"The Eyeless One" = {}
+"Hyperion" = {}
+"The Swamp Mage" = {}
+"The Second Swamp Mage" = {}
+"The Raider" = {}
+"Mhistecai" = {}
+"The Wizard" = {}
+"The Seadrake" = {}
+"The Lich" = {}
+"The Red Bull" = {}
+"The Black Princess" = {}
+"The Spiritwraith" = {}
+"The Reviled" = {}
+"The Cursed" = {}
+"The Sleeping Duke" = {}
+"Mad Maeve" = {}
+"The Sword Mage" = {}
+Reaversbane = {}
+"The Swordhawk" = {}
+"The Manticore" = {}
+"the Banshee" = {}
+"The Builder" = {}
+"The Crafter" = {}
+"Elf-Killer" = {}
+"The Restorer" = {}
+"The Dreamer" = {}
+"The White Goblin" = {}
+"The Wraith" = {}
+"The Rake" = {}
+"The Hand of Azrai" = {}
+"the White Sorceress" = {}

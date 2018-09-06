@@ -1,0 +1,171 @@
+# KHINASI DYNASTIES      	13000-13999
+#  							  2001-2500
+
+# ARIYA			13000
+13002 = { culture = Khinasi		name = el-Arrasi }
+13003 = { culture = Khinasi		name = el-Mesir }
+13004 = { culture = Khinasi		name = "min Saida" }
+13005 = { culture = Khinasi		name = al-Hufuf }
+13006 = { culture = Khinasi		name = "min Azédas" }
+13007 = { culture = Khinasi		name = el-Djefer }
+
+13008 = { culture = Khinasi		name = el-Omadi }
+13009 = { culture = Khinasi		name = al-Anahi }
+13010 = { culture = Khinasi		name = al-Hobii }
+13011 = { culture = Khinasi		name = al-Ghumrai }
+13012 = { culture = Khinasi		name = al-Sa }
+
+
+# BINSADA		13025
+13025 = { culture = Khinasi		name = el-Reshid }
+13026 = { culture = Khinasi		name = Sherif }
+13027 = { culture = Khinasi		name = Mandil }
+
+# THE SPHINX	13050
+
+# AFTANE		13075
+13075 = { culture = Khinasi		name = Herad }				# RK 1
+13076 = { culture = Khinasi		name = "min Bedoureg" }		# RK 2
+13077 = { culture = Khinasi		name = "min Saida" }		# RK 3
+13078 = { culture = Khinasi		name = "el-Adaba" }			# RK 4
+#13079 = { culture = Khinasi		name = "xxx" }				# RK 5
+#13080 = { culture = Khinasi		name = "xxx" }				# RK 6
+#13081 = { culture = Khinasi		name = "xxx" }				# RK 7
+
+# SENDOURE		13100
+
+# TARVAN WASTE	13125
+2013 = { culture = Khinasi		name = "min Uighera" }
+
+# ZIKALA		13150
+13150 = { culture = Khinasi		name = "el-Zisef" }
+13151 = { culture = Khinasi		name = "min Houran" }
+
+# THE BASILISK	13175
+
+# MESIRE		13200
+
+# LAMIA			13225
+
+# MERASAF		13250
+13250 = {
+name = "el-Zesande"
+culture = Khinasi
+}
+
+13251 = {
+name = "el-Shaifal"
+culture = Khinasi
+}
+
+# MIN DHOUSAI	13275
+# DJAFRA		13300
+13320 = { culture = Khinasi		name = Fakhoury	}
+13321 = { culture = Khinasi		name = Najjar	}
+13322 = { culture = Khinasi		name = Maalouf	}
+13323 = { culture = Khinasi		name = Quraishi	}
+13324 = { culture = Khinasi		name = Atiyeh	}
+
+# KHOURANE		13325
+# GHAMOURA		13350
+# MAIRADA		13375
+13375 = {
+name = "el-Mair"
+culture = Khinasi
+}
+13376 = {
+name = "el-Ceci"
+culture = Khinasi
+}
+13377 = {
+name = "el-Dal"
+culture = Khinasi
+}
+13378 = {
+name = "el-Dein"
+culture = Khinasi
+}
+13379 = {
+name = "el-Ceir"
+culture = Khinasi
+}
+
+# SERPENT		13400
+# SURIENE		13425
+# MANTICORE		13450
+
+# DJIRA			13475
+13475 = { culture = Khinasi 	name = el-Sheighül }
+
+
+2001 = {
+	name = Rashoud
+	culture = Khinasi
+}
+
+2002 = {
+	name = Hamam
+	culture = Khinasi
+}
+
+2003 = {
+	name = "el-Mashil"
+	culture = Khinasi
+}
+
+2004 = {
+	name = Molchev
+	culture = Khinasi
+}
+
+2005 = {
+	name = Bahar
+	culture = Khinasi
+}
+
+2008 = {
+	name = "Red Kings"
+	culture = Khinasi
+}
+
+2009 = {
+	name = "el-Zisef"
+	culture = Khinasi
+}
+
+2010 = {
+	name = "el-Ayub"
+	culture = Khinasi
+}
+
+2011 = {
+	name = "el-Duatim"
+	culture = Khinasi
+}
+
+2012 = {
+	name = "Gruber"
+	culture = Brecht
+}
+
+2014 = {
+	name = "el-Dhousai"
+	culture = Khinasi
+	used_for_random = no
+}
+
+2015 = {
+	name = "min Nurida"
+	culture = Khinasi
+	used_for_random = no
+}
+
+13000 = {
+	name = "el-Qadal"
+	culture = Khinasi
+}
+
+13001 = {
+	name = "Sphinx"
+	culture = Khinasi
+}

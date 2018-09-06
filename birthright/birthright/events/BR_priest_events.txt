@@ -1,0 +1,151 @@
+namespace = priest
+
+##maimed character asks to get healed by a master##
+	character_event = {
+    id = priest.0
+    title = HEALING # Healing
+    desc = "EVTDESCPRIEST.0"
+    picture = "GFX_evt_monastery_monks"
+	
+	is_triggered_only = yes
+	
+	option = { 
+	name = YES_CONTACT_ONE_OF_MY_OWN_RELIGION # Yes, contact one of my own religion.
+	random_playable_ruler = {
+	limit = { 
+	AND = {
+	OR = {
+	trait = master_priest
+	trait = legendary_priest
+	}
+	religion = ROOT
+	}
+	}
+character_event = { id = priest.1 days = 7 }
+	}
+	}
+	
+	option = {
+	name = priest.0.b # Contact anyone who might help!
+	trigger = { ai = no }
+	random_playable_ruler = {
+	limit = {
+	OR = {
+	trait = master_priest
+	trait = legendary_priest
+	}
+	}
+character_event = { id = priest.4 days = 7 }
+	}
+	}
+	
+	option = {
+	name = NO_ITS_BUT_A_FLESH_WOUND
+	}
+	
+	}
+	
+	#priest of same religion gets message##
+	character_event = {
+    id = priest.1
+    title = HEALING # Healing
+    desc = "EVTDESCPRIEST.1"
+    picture = "GFX_evt_monastery_monks"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = priest.1.a # Of course, with such a large donation...
+	wealth = 200
+	FROM = { character_event = { id = priest.2 } }
+	}
+	
+	option = {
+	name = NO_SUFFER_FOR_YOUR_SINS
+	trigger = { ai = no }
+	FROM = { character_event = { id = priest.3 } }
+	}
+	
+	}
+	
+	#maimed character gets positive reply from his own religion priest##
+	character_event = {
+    id = priest.2
+    title = HEALING # Healing
+    desc = "EVTDESCPRIEST.2"
+    picture = "GFX_evt_monastery_monks"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = "AT_LAST"
+	wealth = -200
+	remove_trait = maimed
+	}
+	
+	}
+	
+	#maimed character gets positive reply from his own religion priest##
+	character_event = {
+    id = priest.3
+    title = HEALING # Healing
+    desc = "EVTDESCPRIEST.3"
+    picture = "GFX_evt_monastery_monks"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = THAT_BASTARD
+	}
+	
+	}
+	
+	#priest of same religion gets message##
+	character_event = {
+    id = priest.4
+    title = HEALING # Healing
+    desc = "EVTDESCPRIEST.4"
+    picture = "GFX_evt_monastery_monks"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = priest.1.a # Of course, with such a large donation...
+	wealth = 200
+	FROM = { character_event = { id = priest.2 } }
+	}
+	
+	option = {
+	name = HE_MUST_CONVERT_FIRST
+	FROM = { character_event = { id = priest.5 } }
+	}
+	
+	option = {
+	name = NO_SUFFER_FOR_YOUR_SINS
+	trigger = { ai = no }
+	FROM = { character_event = { id = priest.3 } }
+	}
+	
+	}
+	
+	#priest of same religion gets message##
+	character_event = {
+    id = priest.5
+    title = HEALING # Healing
+    desc = "EVTDESCPRIEST.5"
+    picture = "GFX_evt_monastery_monks"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = YES_YES_I_VOW_TO_SERVE_THEIR_GOD # Yes yes, I vow to serve their god!
+	set_character_flag = changedreligion
+	religion = FROM
+	FROM = { character_event = { id = priest.1 days = 7 } }
+	}
+	
+	option = {
+	name = NEVER
+	}
+	
+	}

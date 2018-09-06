@@ -1,0 +1,2394 @@
+######################################################
+# 
+# @author Pietrko <p.l.stepnicki@gmail.com>
+# @version 0.1.0
+# @compatibility 2.2.0
+# @modified_on 0.1.2
+# @description  Warhammer mod custom duel engine
+# @wip
+#
+#
+# Duel engine doesn't work after simplification sha=0aa5471c9751d9090203d8468917246a825c505a
+# BUGS:
+# Multiplication of duel events in case PC=defender (event that is multiplied duelengine.4)
+# doesn't depend on spells or not is random
+# Response with damaging an oppenoent and getting zero dmg is responsible for multiplication
+#
+# DUEL MODEL
+#
+# attributes
+# hit points:   how many attacks being can suffer
+#           1-?
+# attack:   overall rating of character's attack power
+#           0-10
+# defence:  overall rating of character's toughness
+#           and defence skills
+#           0-10
+#
+# All those attributes are determined when duel starts
+# basing on traits, modfiers etc
+#
+#
+# Duel is turn based, each duel turn consits of two
+# duelers turns, the duel is started with 
+# character with higher martial rank
+#
+#
+# Events: 1.Trigerring event - just a template many of them
+#         2.Reporting&Choice making
+#         3.Init event(hidden)
+#         4.Turn event(hidden)
+# 
+#
+#
+# 0-9:   Engine events
+# 10-19: Triggerning events
+# 20-x:  Reporting events
+#
+#
+#
+# TARGET LOCKING
+# flags: opinion_battlefield_duel_target
+# battlefield_fight = modificator for character after duel
+#
+######################################################
+
+namespace = duelengine
+
+# HIDDEN EVENTS FOR MECHANICS 
+#
+# TODO take into consideration that two people can attack the same target
+#
+# for this event FORM = ROOT?
+
+
+
+# FIXME check why it marks multiple targets
+character_event = { # Battlefield Duel Start
+    id = duelengine.0
+    border = "GFX_event_normal_frame_war"
+    desc = "EVTDESC_DUELENGINE_0"
+    picture = GFX_evt_battle
+    
+    is_triggered_only = yes
+    
+    trigger = {
+        NOT = { has_character_modifier = battlefield_fight }
+		NOT = { has_minor_title = title_no_duels_allowed }
+        #NOT = { culture_group = ? }
+        # Avoid crossing targets
+        OR = {
+            AND = {
+                liege = { war = yes }
+                war = no
+            }
+            AND = {
+                war = yes
+                liege = { 
+                    OR = {
+                        war = no 
+                        character = ROOT
+                    }    
+                }    
+            }
+        }
+        OR = {
+            AND = {
+                is_ruler = yes
+                war = yes
+                any_playable_ruler = {
+                    war_with = ROOT
+                    OR = {
+                        AND = {                        
+                            in_battle = yes
+                            at_location = ROOT
+                            prisoner = no
+                            is_alive = yes        
+                            NOT = { character = ROOT }                        
+                            #NOT = { culture_group = unoccupied_group } FIXME remember about this when we introduce ruins
+                            NOT = { has_character_modifier = battlefield_fight }
+                        }
+                        any_realm_character = {                
+                            in_battle = yes
+                            at_location = ROOT
+                            prisoner = no
+                            is_alive = yes        
+                            NOT = { character = ROOT }
+                            NOT = { has_character_modifier = battlefield_fight }
+                        }
+                    }    
+                }
+            }    
+            AND = {
+                war = no
+                liege = {
+                    any_playable_ruler = {
+                        war_with = PREV
+                        OR = {
+                            AND = {                        
+                                in_battle = yes
+                                at_location = ROOT
+                                prisoner = no
+                                is_alive = yes        
+                                NOT = { character = ROOT }                        
+                                NOT = { has_character_modifier = battlefield_fight }
+                            }
+                            any_realm_character = {                        
+                                in_battle = yes
+                                at_location = ROOT
+                                prisoner = no
+                                is_alive = yes        
+                                NOT = { character = ROOT }
+                                NOT = { has_character_modifier = battlefield_fight }
+                            }
+                        }    
+                    }
+                }
+            }    
+        }
+    }
+    
+    weight_multiplier = {
+        days = 1
+        modifier = {
+            factor = 3
+            trait = duelist
+        }
+        modifier = {
+            factor = 3
+            trait = brave
+        }
+        modifier = {
+            factor = 3
+            trait = wroth
+        }
+
+        modifier = {
+            factor = 0.25
+            trait = craven
+        }
+        modifier = { 
+            factor = 2.5
+            trait = poor_warrior
+        }
+        modifier = { 
+            factor = 3
+            trait = trained_warrior
+        }
+        modifier = { 
+            factor = 3.5
+            trait = skilled_warrior
+        }
+        modifier = { 
+            factor = 4
+            trait = master_warrior
+        }
+        modifier = { 
+            factor = 2
+            trait = magic_power_adept
+        }
+
+    }
+    
+    immediate = {
+        add_character_modifier = {
+            name = battlefield_fight
+            duration = 10
+        }
+        # Target lock
+        # case 1 - we have our own war
+        if = {
+            limit = { 
+                war = yes
+                liege = { 
+                    OR = {
+                        war = no 
+                        character = ROOT
+                    }    
+                }
+            }
+            random_playable_ruler = {
+                limit = {
+                    war_with = ROOT
+                    OR = {
+                        AND = {                        
+                            in_battle = yes
+                            at_location = ROOT
+                            prisoner = no
+                            is_alive = yes        
+                            NOT = { character = ROOT }                        
+                            NOT = { has_character_modifier = battlefield_fight }
+                        }
+                        any_realm_character = {                        
+                            in_battle = yes # FIXME in_command?
+                            at_location = ROOT
+                            prisoner = no
+                            is_alive = yes        
+                            NOT = { character = ROOT }
+                            #NOT = { culture_group = unoccupied_group } FIXME remember about this when we introduce ruins
+                            NOT = { has_character_modifier = battlefield_fight }
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        in_battle = yes # marks first category of targets: playable rulers
+                        at_location = ROOT
+                        prisoner = no
+                        is_alive = yes        
+                        NOT = { character = ROOT }                        
+                        NOT = { has_character_modifier = battlefield_fight }
+                    }
+                    opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                    reverse_opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                }
+                if = {
+                    limit = { NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target } } }
+                    random_realm_character = {
+                        limit = {
+                            in_battle  = yes #FIXME in battle
+                            at_location = ROOT
+                            prisoner = no
+                            is_alive = yes        
+                            NOT = { character = ROOT }                        
+                            NOT = { has_character_modifier = battlefield_fight }
+                        }
+                        opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                        reverse_opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                    }
+                }    
+            }
+        }
+        # Case 2 - we server in liege forces
+        if = {
+            limit = { 
+                war = no
+                liege = { war = yes }                
+            }
+            liege = {
+                random_playable_ruler = {
+                    limit = {
+                        war_with = PREV
+                        OR = {
+                            AND = {                        
+                                in_battle = yes #FIXME
+                                at_location = ROOT
+                                prisoner = no
+                                is_alive = yes        
+                                NOT = { character = ROOT }                        
+                                NOT = { has_character_modifier = battlefield_fight }
+                            }
+                            any_realm_character = {                        
+                                in_battle = yes
+                                at_location = ROOT
+                                prisoner = no
+                                is_alive = yes        
+                                NOT = { character = ROOT }
+                                NOT = { has_character_modifier = battlefield_fight }
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            in_battle = yes
+                            at_location = ROOT
+                            prisoner = no
+                            is_alive = yes        
+                            NOT = { character = ROOT }                        
+                            NOT = { has_character_modifier = battlefield_fight }
+                        }
+                        opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                        reverse_opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                    }
+                    if = {
+                        limit = { NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target } } }
+                        random_realm_character = {
+                            limit = {
+                                in_battle = yes
+                                at_location = ROOT
+                                prisoner = no
+                                is_alive = yes        
+                                NOT = { character = ROOT }                        
+                                NOT = { has_character_modifier = battlefield_fight }
+                            }
+                            opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                            reverse_opinion = { who = ROOT modifier = opinion_battle_duel_target }
+                        }
+                    }    
+                }
+            }
+        }
+    }
+    # OPTIONS
+    option = {
+        # we assume that there is only one person marked with opinion_battle_duel_target
+        # which is wrong
+        name = "EVTOPT_DUELENGINE_1A"
+        if = {
+            limit = { 
+                war = yes
+                liege = { 
+                    OR = {
+                        war = no 
+                        character = ROOT
+                    }    
+                }                
+            }
+            random_playable_ruler = {
+                limit = { 
+                    war_with = ROOT
+                    OR = {
+                        has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target }    
+                        any_realm_character = { has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target } }
+                    }    
+                }
+                if = {
+                    limit = { has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target } }
+                    hidden_tooltip = { character_event = { id = duelengine.1 } }
+                }
+                random_realm_character = {
+                    limit = { 
+                        has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target }
+                        NOT = { character = PREV } # random_realm_character can be the ruler itself
+                    } 
+                    hidden_tooltip = { character_event = { id = duelengine.1 } }
+                }
+            }
+        }
+        if = {
+            limit = { 
+                war = no
+                liege = { war = yes }                
+            }
+            liege = {
+                random_playable_ruler = {
+                    limit = { 
+                        war_with = PREV
+                        OR = {
+                            has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target }    
+                            any_realm_character = { has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target } }
+                        }    
+                    }
+                    if = {
+                        limit = { has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target } }
+                        hidden_tooltip = { character_event = { id = duelengine.1  } }
+                    }
+                    random_realm_character = {
+                        limit = { 
+                            has_opinion_modifier = { who = ROOT modifier = opinion_battle_duel_target }
+                            NOT = { character = PREV } # random_realm_character can be the ruler itself
+                        }
+                        hidden_tooltip = { character_event = { id = duelengine.1  } }
+                    }
+                }
+            }
+        }
+    }
+}
+#
+# duelengine.1 Defender(target) fight or run?
+#
+character_event = {
+    id = duelengine.1
+    desc = "EVTDESC_DUELENGINE_1"
+    picture = "GFX_evt_duel0"
+    border = "GFX_event_normal_frame_war"
+    is_triggered_only = yes
+    
+    immediate = {
+        set_character_flag = debug_duel_defender # FIXME DEBUG ONLY
+        add_character_modifier = {
+            name = battlefield_fight
+            duration = 10
+        }
+	FROM = {
+            add_character_modifier = {
+                name = battlefield_fight
+                duration = 10
+            }
+	}
+        # Remove targeting information (just from the fighter)
+        remove_opinion = { who = FROM modifier = opinion_battle_duel_target }
+        reverse_remove_opinion = { who = FROM modifier = opinion_battle_duel_target }
+       
+        # set stats
+        character_event = { id = duelengine.3 }
+    }
+    
+    option = {
+        name = "EVTOPT_DUELENGINE_1A"
+        FROM = { character_event = { id = duelengine.2 tooltip = "DUELENGINE_TOOLTIP_1A" } }
+        ai_chance = {
+            factor = 100
+			
+            modifier = {
+                factor = 6
+                trait = duelist
+            }
+            modifier = {
+                factor = 6
+                trait = brave
+            }
+            modifier = {
+                factor = 3
+                trait = proud
+            }
+            modifier = {
+                factor = 3
+                trait = wroth
+            }
+            modifier = {
+                factor = 3
+                trait = strong
+            }
+        }
+    }
+    
+    option = {
+        name = "EVTOPT_DUELENGINE_1B"
+		trigger = { 
+		NOT = { trait = adventuring }
+		}
+        hidden_tooltip = { FROM = { character_event = { id = duelengine.5 } } }        
+        if = {
+            limit = { NOT = { trait = craven } }
+            random = {
+                chance = 25
+                add_trait = craven
+                hidden_tooltip = {
+                    character_event ={
+                        id = 38257 #Notify FIXME
+                    }
+                }
+            }    
+        }
+        morale = -0.1
+        ai_chance = {
+            factor = 10
+				
+            modifier = {
+                factor = 2
+                trait = craven
+            }
+            modifier = {
+                factor = 2
+                trait = paranoid
+            }
+            modifier = {
+                factor = 2
+                trait = weak
+            }
+            modifier = {
+                factor = 2
+                trait = dwarf
+            }
+            modifier = {
+                factor = 2
+                trait = hunchback
+            }
+            modifier = {
+                factor = 2
+                trait = leper
+            }
+            modifier = {
+                factor = 2
+                trait = wounded
+            }
+            modifier = {
+                factor = 4
+                trait = maimed
+            }
+            modifier = {
+                factor = 20
+                has_minor_title = title_no_duels_allowed
+            }
+        }
+    }
+}
+# 
+# Attacker if attack or no triggered FROM = defender (this trigger duel or no)
+# ROOT = attacker
+# FROM = defender
+character_event = {
+    id = duelengine.2
+    desc = "EVTDESC_DUELENGINE_1" #the same locals
+    picture = "GFX_evt_duel0"
+    border = "GFX_event_normal_frame_war"
+    
+    is_triggered_only = yes
+    
+    immediate = {
+       # set stats
+       set_character_flag = debug_duel_attacker # FIXME DEBUG ONLY
+       character_event = { id = duelengine.3 }
+    }
+    option = {
+        name = "EVTOPT_DUELENGINE_1A"
+        # Begin duel
+        hidden_tooltip = {
+           # FIXME random person starts the fight
+           # Defender starts the fight (in testing case ai)
+           FROM = { character_event = { id = duelengine.4 days = 1 } }    
+        }
+        ai_chance = {
+            factor = 100
+
+            modifier = {
+                factor = 2
+                trait = brave
+            }
+            modifier = {
+                factor = 2
+                trait = proud
+            }
+            modifier = {
+                factor = 1.5
+                trait = wroth
+            }
+            modifier = {
+                factor = 1.5
+                trait = strong
+            }
+        }
+    }
+    # RUN from enemy!
+    option = {
+        name = "EVTOPT_DUELENGINE_1B"
+        hidden_tooltip = { FROM = { character_event = { id = duelengine.5 } } }
+
+        if = {
+            limit = { NOT = { trait = craven } }
+            random = {
+                chance = 25
+                add_trait = craven
+                hidden_tooltip = {
+                    character_event ={
+                        id = 38257 #Notify
+                    }
+                }
+            }
+        }
+        morale = -0.1
+        ai_chance = {
+            # FIXME factor
+            factor = 5
+           	
+			modifier = {
+				factor = 20
+				has_minor_title = title_no_duels_allowed
+				}	
+            modifier = {
+                factor = 2
+                FROM = { trait = strong }
+            }
+			
+            modifier = {
+                factor = 2
+                trait = craven
+            }
+            modifier = {
+                factor = 2
+                trait = paranoid
+            }
+            modifier = {
+                factor = 2
+                trait = weak
+            }
+            modifier = {
+                factor = 2
+                trait = dwarf
+            }
+            modifier = {
+                factor = 2
+                trait = hunchback
+            }
+            modifier = {
+                factor = 2
+                trait = leper
+            }
+            modifier = {
+                factor = 2
+                trait = wounded
+            }
+            modifier = {
+                factor = 4
+                trait = maimed
+            }
+        }
+    }
+}
+###########################################################################
+#
+# DUEL INIT:  Set character attributes basing on traits
+#
+###########################################################################
+character_event = {
+   id = duelengine.3
+   hide_window = yes 
+   is_triggered_only = yes
+
+   immediate = {
+       # Determine attributes 
+       # first we determine basic values for each race
+       # then modify it according to traits etc
+       #
+       # Goblins
+
+       # Man sized creatures
+       if = { 
+           limit = { 
+		   OR = {
+               culture_group = human
+			   culture_group = old_humans
+			   culture_group = Vampires
+               }
+           } 
+           set_variable = { which = "duel_max_hp" value = 7 }
+           set_variable = { which = "duel_att" value = 3 }
+           set_variable = { which = "duel_def" value = 4 }
+       }
+       # elves (they seem to be weaker however they gain martial bonus
+       # so its not true at all
+       if = { limit = { culture_group = Siedhe } 
+           set_variable = { which = "duel_max_hp" value = 6 }
+           set_variable = { which = "duel_att" value = 6 }
+           set_variable = { which = "duel_def" value = 5 }
+       }
+       # dwarves
+       if = { 
+           limit = { 
+               culture_group = Dwarf
+           } 
+           set_variable = { which = "duel_max_hp" value = 9 }
+           set_variable = { which = "duel_att" value = 4 }
+           set_variable = { which = "duel_def" value = 4 }
+       }
+       # orogs
+       if = { limit = { culture = Orog } 
+           set_variable = { which = "duel_max_hp" value =  8 }
+           set_variable = { which = "duel_att" value = 4 }
+           set_variable = { which = "duel_def" value = 4 }
+       }
+       # goblins 
+       if = { limit = { culture = Goblin } 
+           set_variable = { which = "duel_max_hp" value = 5 }
+           set_variable = { which = "duel_att" value = 3 }
+           set_variable = { which = "duel_def" value = 3 }
+       }
+       # halflings 
+       if = { limit = { culture_group = Small_folk } 
+           set_variable = { which = "duel_max_hp" value = 4 }
+           set_variable = { which = "duel_att" value = 3 }
+           set_variable = { which = "duel_def" value = 5 }
+       }
+       # giants 
+       if = { limit = { culture_group = Giantkin } 
+           set_variable = { which = "duel_max_hp" value = 15 }
+           set_variable = { which = "duel_att" value = 7 }
+           set_variable = { which = "duel_def" value = 5 }
+       }
+       # wraiths 
+       if = { limit = { culture_group = Shadowworld } 
+           set_variable = { which = "duel_max_hp" value = 7 }
+           set_variable = { which = "duel_att" value = 4 }
+           set_variable = { which = "duel_def" value = 7 }
+       }
+       # gnolls 
+       if = { limit = { culture_group = Gnolls } 
+           set_variable = { which = "duel_max_hp" value = 7 }
+           set_variable = { which = "duel_att" value = 4 }
+           set_variable = { which = "duel_def" value = 3 }
+       }
+       # Hit point bonus basing on hp
+       if = {
+           limit = { NOT = { health = 2.5 } }
+           change_variable = { which = "duel_max_hp" value = -1 }
+       }
+       if = {
+           limit = { NOT = { health = 3.5 } }
+           change_variable = { which = "duel_max_hp" value = -1 }
+       }
+       if = {
+           limit = { health = 4.5 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+       if = {
+           limit = { health = 5.5 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+       if = {
+           limit = { health = 6.5 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+       # Attack, defence, hp bonus basing on martial skill
+       #
+       # bonus for all ranges form 0-4
+       if = { 
+           limit = { NOT = { martial = 1 } }
+           change_variable = { which = "duel_att" value = -1 }
+       }
+       if = { 
+           limit = { NOT = { martial = 3 } }
+           change_variable = { which = "duel_def" value = -1 }
+       }
+       if = { 
+           limit = { martial = 7 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+       if = { 
+           limit = { martial = 9 }
+           change_variable = { which = "duel_def" value = 1 }
+       }
+       if = { 
+           limit = { martial = 11 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+       if = { 
+           limit = { martial = 13 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+       if = { 
+           limit = { martial = 15 }
+           change_variable = { which = "duel_def" value = 1 }
+       }
+       if = { 
+           limit = { martial = 17 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+       if = { 
+           limit = { martial = 19 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+       if = { 
+           limit = { martial = 21 }
+           change_variable = { which = "duel_def" value = 1 }
+       }
+       if = { 
+           limit = { martial = 23 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+       if = { 
+           limit = { martial = 25 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+       if = { 
+           limit = { martial = 27 }
+           change_variable = { which = "duel_def" value = 1 }
+       }
+	    if = { 
+           limit = { martial = 29 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+	    if = { 
+           limit = { martial = 31 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+	    if = { 
+           limit = { martial = 33 }
+           change_variable = { which = "duel_def" value = 1 }
+       }
+	    if = { 
+           limit = { martial = 35 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+	    if = { 
+           limit = { martial = 37 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+	   	if = { 
+           limit = { martial = 39 }
+           change_variable = { which = "duel_def" value = 1 }
+       }
+	   	if = { 
+           limit = { martial = 41 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+	   	if = { 
+           limit = { martial = 43 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+	   	if = { 
+           limit = { martial = 45 }
+           change_variable = { which = "duel_def" value = 1 }
+       }
+	   	if = { 
+           limit = { martial = 47 }
+           change_variable = { which = "duel_max_hp" value = 1 }
+       }
+	   	if = { 
+           limit = { martial = 49 }
+           change_variable = { which = "duel_att" value = 1 }
+       }
+       # just to be sure
+       if = { 
+           limit = { NOT = {  check_variable = { which = "duel_max_hp" value = 1 } }}
+           set_variable = { which = "duel_max_hp" value  = 1 }
+       }
+       # setting starting hit points 
+       set_variable = { which = "duel_hp" which = "duel_max_hp" }
+
+       # Ok now here should be traits bonus but i left them for now
+
+       if = { 
+           limit = { trait = wounded  }
+           change_variable = { which = "duel_def" value = -1 }
+           change_variable = { which = "duel_att" value = -1 }
+           set_variable = { which = "duel_hp" value = 3 }
+       }
+       if = { 
+           limit = { trait = maimed  }
+           change_variable = { which = "duel_def" value = -2 }
+           change_variable = { which = "duel_att" value = -2 }
+           set_variable = { which = "duel_hp" value = 2 }
+       }  
+		if = { 
+           limit = { 
+		   trait = sword_1 
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = sword_2 
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = sword_3 
+		   }
+           change_variable = { which = "duel_def" value = 4 }
+           change_variable = { which = "duel_att" value = 4 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = sword_4 
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 5 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = sword_5 
+		   }
+           change_variable = { which = "duel_def" value = 6 }
+           change_variable = { which = "duel_att" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = holy_avenger_sword 
+		   }
+           change_variable = { which = "duel_def" value = 7 }
+           change_variable = { which = "duel_att" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = sword_of_roele 
+		   }
+           change_variable = { which = "duel_def" value = 7 }
+           change_variable = { which = "duel_att" value = 6 }
+       }
+ 	    if = { 
+           limit = { 
+		   trait = ring_of_invisibility 
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+       }  
+ 	    if = { 
+           limit = { 
+		   trait = amulet_of_protection_1
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+       }
+		#Dark Elves#	   
+ 	    if = { 
+           limit = { 
+		   trait = amulet_of_protection_3
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+       }  
+ 	    if = { 
+           limit = { 
+		   trait = amulet_of_protection_5
+		   }
+           change_variable = { which = "duel_def" value = 7 }
+       }  
+	   #CHARACTER CLASSES
+ 	    if = { 
+           limit = { 
+		   trait = amateur_bard
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 1 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = novice_bard 
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = trained_bard 
+		   }
+           change_variable = { which = "duel_def" value = 4 }
+           change_variable = { which = "duel_att" value = 4 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = master_bard 
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 5 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = legendary_bard 
+		   }
+           change_variable = { which = "duel_def" value = 6 }
+           change_variable = { which = "duel_att" value = 6 }
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       } 
+  	    if = { 
+           limit = { 
+		   trait = amateur_mage
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 1 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = novice_mage 
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = trained_mage 
+		   }
+           change_variable = { which = "duel_def" value = 4 }
+           change_variable = { which = "duel_att" value = 4 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = master_mage 
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 9 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = legendary_mage 
+		   }
+           change_variable = { which = "duel_def" value = 8 }
+           change_variable = { which = "duel_att" value = 12 }
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       } 	  
+  	    if = { 
+           limit = { 
+		   trait = amateur_sorcerer
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 1 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = novice_sorcerer
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = trained_sorcerer
+		   }
+           change_variable = { which = "duel_def" value = 4 }
+           change_variable = { which = "duel_att" value = 4 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = master_sorcerer
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 9 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = legendary_sorcerer
+		   }
+           change_variable = { which = "duel_def" value = 8 }
+           change_variable = { which = "duel_att" value = 12 }
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       }
+  	    if = { 
+           limit = { 
+		   trait = amateur_priest
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = novice_priest
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = trained_priest
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 4}
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = master_priest
+		   }
+           change_variable = { which = "duel_def" value = 7 }
+           change_variable = { which = "duel_att" value = 9 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = legendary_priest
+		   }
+           change_variable = { which = "duel_def" value = 10 }
+           change_variable = { which = "duel_att" value = 10 }
+		   change_variable = { which = "duel_max_hp" value = 8 }
+       } 	
+  	    if = { 
+           limit = { 
+		   trait = amateur_ranger
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = novice_ranger
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = trained_ranger
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 4}
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = master_ranger
+		   }
+           change_variable = { which = "duel_def" value = 9 }
+           change_variable = { which = "duel_att" value = 9 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = legendary_ranger
+		   }
+           change_variable = { which = "duel_def" value = 10 }
+           change_variable = { which = "duel_att" value = 10 }
+		   change_variable = { which = "duel_max_hp" value = 8 }
+       }	
+  	    if = { 
+           limit = { 
+		   trait = amateur_rogue
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = novice_rogue
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = trained_rogue
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 4}
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = master_rogue
+		   }
+           change_variable = { which = "duel_def" value = 9 }
+           change_variable = { which = "duel_att" value = 6 }
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = legendary_rogue
+		   }
+           change_variable = { which = "duel_def" value = 10 }
+           change_variable = { which = "duel_att" value = 8 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       }	
+  	    if = { 
+           limit = { 
+		   trait = amateur_fighter
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = novice_fighter
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = trained_fighter
+		   }
+           change_variable = { which = "duel_def" value = 5 }
+           change_variable = { which = "duel_att" value = 4}
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = master_fighter
+		   }
+           change_variable = { which = "duel_def" value = 9 }
+           change_variable = { which = "duel_att" value = 9 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = legendary_fighter
+		   }
+           change_variable = { which = "duel_def" value = 10 }
+           change_variable = { which = "duel_att" value = 10 }
+		   change_variable = { which = "duel_max_hp" value = 8 }
+       }	
+	#BLOOD POWERS
+  	    if = { 
+           limit = { 
+		   trait = BPheightened_ability
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 1 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPalertness
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPanimal_affinity
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1}
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPbattlewise
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = BPberserker_blood
+		   }
+           change_variable = { which = "duel_def" value = -1 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       }	
+  	    if = { 
+           limit = { 
+		   trait = BPbloodform
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 5 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPcharm_aura
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPcourage
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPdeath_touch
+		   }
+           change_variable = { which = "duel_att" value = 4 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = BPdivine_aura
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+       }
+ 	    if = { 
+           limit = { 
+		   trait = BPdivine_wrath
+		   }
+           change_variable = { which = "duel_def" value = 7 }
+           change_variable = { which = "duel_att" value = 7 }
+		   change_variable = { which = "duel_max_hp" value = 7 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPelemental_control
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 4 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPendurance
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = BPfear
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+       }
+ 	    if = { 
+           limit = { 
+		   trait = BPhealing
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = BPinvulnerability
+		   }
+           change_variable = { which = "duel_def" value = 8 }
+		   change_variable = { which = "duel_max_hp" value = 8 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = BPiron_will
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+       }
+ 	    if = { 
+           limit = { 
+		   trait = BPmajor_regeneration
+		   }
+		   change_variable = { which = "duel_max_hp" value = 8 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = BPshadow_form
+		   }
+           change_variable = { which = "duel_def" value = 4 }
+       }
+ 	    if = { 
+           limit = { 
+		   trait = BPtouch_of_decay
+		   }
+		   change_variable = { which = "duel_att" value = 3 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = BPwither_touch
+		   }
+           change_variable = { which = "duel_att" value = 3 }
+       }
+	#Awnsheighleen
+  	    if = { 
+           limit = { 
+		   trait = awn_white_witch
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	 
+ 	    if = { 
+           limit = { 
+		   trait = awn_gorgon
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 3 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       }	
+  	    if = { 
+           limit = { 
+		   trait = awn_succubus
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 2 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_succubus2
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 1 }
+       } 
+  	    if = { 
+           limit = { 
+		   trait = awn_spider
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_rhuobhe
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_magian
+		   }
+           change_variable = { which = "duel_def" value = 2 }
+           change_variable = { which = "duel_att" value = 2 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_lahmia
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_lahmia2
+		   }
+           change_variable = { which = "duel_def" value = 3 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 3 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_serpent
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_serpent2
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_raven
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       }
+ 	    if = { 
+           limit = { 
+		   trait = awn_brute
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 	
+ 	    if = { 
+           limit = { 
+		   trait = awn_siren
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	
+ 	    if = { 
+           limit = { 
+		   trait = awn_harpy
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	
+ 	    if = { 
+           limit = { 
+		   trait = awn_raven
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 	
+ 	    if = { 
+           limit = { 
+		   trait = awn_hag
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	
+ 	    if = { 
+           limit = { 
+		   trait = awn_chimaera
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 4 }
+       } 	
+ 	    if = { 
+           limit = { 
+		   trait = awn_basilisk
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_banshegh
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_kraken
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 12 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_basilisk
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_manticore
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_sphinx
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_swordhawk
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_hydra
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = awn_ghoul
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 
+ 	    if = { 
+           limit = { 
+		   trait = vampire
+		   }
+           change_variable = { which = "duel_def" value = 1 }
+           change_variable = { which = "duel_att" value = 1 }
+		   change_variable = { which = "duel_max_hp" value = 6 }
+       } 		   
+       # Set basic combat stance
+       set_character_flag = duel_move_combat 
+
+       # calculate stats (for defender round)
+       character_event = { id = duelengine.6 }
+
+   }    
+}
+# Round event
+# 
+# each rund the damage is done to opponent
+# according to formula: 
+#
+# CHARACTER STATS
+# 
+# duel_dmg - dmg taken form enemy this round 
+# duel_att - base attack 
+# duel_def - base defense
+# duel_hp - actual hit points
+# duel_max_hp - maximal hit points
+# duel_att_mod - attack modified
+# duel_def_mod - defence modified
+# duel_magic_att - used in place of duel_att if not zero
+#
+# magic_points - this is from other system, however is also used in duels
+# not in a explicit way though
+#
+# each round it deals "duel_dmg" (variable is set on enemy)
+# dmg = (k6 -2) + att(attacker) - def(defender) + att_mod(attacker) - def_mod(defender)
+#
+#
+# At first rund:
+#
+# FROMFROM = attacker
+# FROM = defender(victim)
+# ROOT = attacker
+character_event = {
+    id = duelengine.4
+    desc = "EVTDESC_DUELENGINE_4"
+    picture = "GFX_evt_duel0"
+    border = "GFX_event_normal_frame_war"
+    is_triggered_only = yes
+    
+    immediate = {
+               
+        # calculate actual defence and attack (writes duel_att_mod, duel_def_mod)
+        character_event = { id = duelengine.6 }
+ 
+        # set basic damage
+        FROM = { set_variable = { which = "duel_dmg" value = 0 } }
+       
+        # dmg from attack calculation (FROM is victim)
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  1 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  2 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  3 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  4 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  5 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  6 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  7 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  8 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value =  9 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value = 10 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value = 11 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value = 11 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value = 12 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value = 13 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value = 14 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_att_mod" value = 15 } }   
+            FROM = { change_variable = { which = "duel_dmg" value =  1 }}
+        }
+ 
+         
+        #
+        # now we have properly defined duel_dmg for defender
+        # now take into account his defence capabilities
+        #
+
+        # APPLY: defence modifier (of victim)
+        FROM = { subtract_variable = { which = "duel_dmg" which = "duel_def_mod" }}
+
+        # Ok now duel_dmg has proper value which we should substract from health
+        # 
+	# thing that prevents infinite duels setting dmg to 1 if less than 0
+        # (50% chance) or to 0 
+        if = {
+            limit = { FROM = { NOT = { check_variable = { which = "duel_dmg" value = 1 }}}}
+            random_list = {
+               50 = { FROM = { set_variable = { which = "duel_dmg" value =  1 }} } #FIXME set 1
+               50 = { FROM = { set_variable = { which = "duel_dmg" value =  0 }} }
+            }
+        }
+        # applying damage
+        FROM = { subtract_variable = { which = "duel_hp" which = "duel_dmg" } }
+        
+        # clear effects (those which have limited duration)
+        character_event = { id = duelengine.7 }
+
+        # FIXME: dmg reporting events
+        #character_event = { id = test.25 } # FROMFROM is the victim
+        #character_event = { id = test.23 } # dmg dealt to enemy
+        #character_event = { id = test.27 } # defence of enemy
+  
+        # clear flags that mark character's choose of type of move
+        clr_character_flag = duel_move_combat
+        clr_character_flag = duel_move_nomove
+        clr_character_flag = duel_move_magic_spell
+        clr_character_flag = duel_move_magic_other
+        # clear flags for triggering next round (DEBUG its needed)
+        clr_character_flag = debug_duel_calculated
+     
+        # MAGIC - passive channeling
+        character_event = { id = magicengine.5 } 
+
+    }
+    
+    #############################################################################
+    #
+    # Here is decided round outcome, also the player decides what 
+    # kind of move (regular combat, cast spell, other action
+    # for each kind of round outcome there are 4 options 
+    # therefore no more 4 * 4 options alotgether
+    #
+    # There are 4 (+1 death case) big mutally exclusive big cases could more
+    #
+    ############################################################################
+    #
+    # CASE 0 - END OF COMBAT
+    option = {
+        name = "EVTOPT_DUELENGINE_4E"
+        # ONLY ONE IF CASE SHOULD FIRE
+        # Events in case of death
+        trigger = { 
+            # 1 or less hp points - death
+            NOT = { check_variable = { which = "duel_hp" value = 1 }}
+            NOT = { has_character_flag = duel_effect_noescape } 
+            NOT = { has_character_flag = duel_effect_freeze }
+        }
+        # Erik: here is decided what happens to loser
+        hidden_tooltip = {
+        random_list = {
+            70 = { character_event = { id = duelengine.50 } } # death
+            30 = { character_event = { id = duelengine.52 } } # wounded but managed to run away
+        }}
+        ai_chance = { factor = 1 }
+    }
+    option = {
+        name = "EVTOPT_DUELENGINE_4F"
+        # ONLY ONE IF CASE SHOULD FIRE
+        # Events in case of death
+        trigger = { 
+            # 1 or less hp points - death
+            NOT = { check_variable = { which = "duel_hp" value = 1 }}
+            OR = { 
+                has_character_flag = duel_effect_noescape 
+                has_character_flag = duel_effect_freeze 
+            }
+        }
+        # Here is precisely defined what happens to the loser
+        hidden_tooltip = {
+            character_event = { id = duelengine.50 } # death
+        }
+        ai_chance = { factor = 1 }
+    }
+    # MEELE FIGHT
+    option = {
+        name = "EVTOPT_DUELENGINE_4A"
+        # Damage report
+        if = { 
+               limit = { NOT = { check_variable = { which = "duel_dmg" value = 1 }  } }
+               custom_tooltip = { text = TOOLTIP_nodmg } 
+        }
+        if = { 
+               limit = { is_variable_equal = { which = "duel_dmg" value = 1 } } 
+               custom_tooltip = { text = TOOLTIP_minordmg } 
+        }
+        if = { 
+               limit = { check_variable = { which = "duel_dmg" value = 2 } }
+               custom_tooltip = { text = TOOLTIP_majordmg } 
+        }
+
+        # Report on enemy move
+        if = { limit = { FROM = { has_character_flag = duel_move_combat }} custom_tooltip = { text = TOOLTIP_enemy_combat }}
+        if = { limit = { FROM = { has_character_flag = duel_move_magical_spell }} custom_tooltip = { text = TOOLTIP_enemy_magic_spell }}
+        if = { limit = { FROM = { has_character_flag = duel_move_magical_other }} custom_tooltip = { text = TOOLTIP_enemy_magic_other }}
+        if = { limit = { FROM = { has_character_flag = duel_move_nomove }} custom_tooltip = { text = TOOLTIP_enemy_nothing }}
+
+        # Hp report
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 0 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp0 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 1 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp1 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 2 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp2 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 3 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp3 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 4 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp4 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 5 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp5 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 6 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp6 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 7 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp7 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 8 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp8 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 9 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp9 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 10 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp10 }
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_hp" value = 11 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhpMAX }
+        }
+
+        trigger = { 
+            # 1 or less hp points - alive
+            check_variable = { which = "duel_hp" value = 1 }
+            NOT = { has_character_flag = duel_effect_freeze }
+            NOT = { has_character_flag = duel_effect_barrier }
+            FROM = { NOT = { has_character_flag = duel_effect_barrier } }
+        }
+
+        # Now when dmg is done there is time to send report events
+        set_character_flag = duel_move_combat
+        #
+        hidden_tooltip = { character_event = { id = duelengine.20 }}
+        ai_chance = { factor = 1 }
+    }
+	
+    # Do nothing option in case of freeze or barrier
+    option = {
+        name = "EVTOPT_DUELENGINE_4D"
+        trigger = { 
+            check_variable = { which = "duel_hp" value = 1 }
+            OR = { 
+                has_character_flag = duel_effect_freeze
+                has_character_flag = duel_effect_barrier
+                FROM = { has_character_flag = duel_effect_barrier }
+            }
+        }
+        # Report on enemy move
+        #if = { limit = { FROM = { has_character_flag = duel_move_combat }} custom_tooltip = { text = TOOLTIP_enemy_combat }}
+        #if = { limit = { FROM = { has_character_flag = duel_move_magical_spell }} custom_tooltip = { text = TOOLTIP_enemy_magic_spell }}
+        #if = { limit = { FROM = { has_character_flag = duel_move_magical_other }} custom_tooltip = { text = TOOLTIP_enemy_magic_other }}
+        #if = { limit = { FROM = { has_character_flag = duel_move_nomove }} custom_tooltip = { text = TOOLTIP_enemy_nothing }}
+
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 0 }} 
+            custom_tooltip = { text = TOOLTIP_duelhp0 }}
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 1 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp1 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 2 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp2 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 3 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp3 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 4 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp4 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 5 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp5 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 6 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp6 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 7 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp7 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 8 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp8 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 9 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp9 }
+        }
+        if = { 
+            limit = { is_variable_equal = { which = "duel_hp" value = 10 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhp10 }
+        }
+        if = { 
+            limit = { check_variable = { which = "duel_hp" value = 11 }  } 
+            custom_tooltip = { text = TOOLTIP_duelhpMAX }
+        }
+
+        set_character_flag = duel_move_nomove
+        hidden_tooltip = { character_event = { id = duelengine.23 }}
+    }
+    # END OF THIS FUCKING BIG EVENT
+}
+#
+# Run report 
+character_event = {
+    id = duelengine.5
+    desc = "EVTDESC_DUELENGINE_5"
+    picture = GFX_evt_battle
+    border = "GFX_event_normal_frame_war"
+    is_triggered_only = yes
+    
+    immediate = { 
+        remove_character_modifier = battlefield_fight
+        FROM = { remove_character_modifier = battlefield_fight }
+    }
+    option = {
+        name = "EVTOPT_DUELENGINE_5A"
+
+        morale = 0.1
+        # trigger clearing event
+        hidden_tooltip = {
+            character_event = { id = duelengine.9 }
+            FROM = { character_event = { id = duelengine.9 } }
+        }
+    }
+}
+#########################################################
+#
+# Stat setting event: duelengine.6
+#
+# This event handles setting actual attack & defence 
+# stats for the next round
+#
+#########################################################
+#
+# FROM = ROOT = attacker
+# FROMFROM = victim/defender
+#
+character_event = {
+    id = duelengine.6
+    is_triggered_only = yes
+    hide_window = yes
+    
+    immediate = {
+
+        # set basic attack & defence
+        set_variable = { which = "duel_att_mod" which = "duel_att" }
+        set_variable = { which = "duel_def_mod" which = "duel_def" }
+       
+        # stance bonus
+        if = { 
+            limit = {  has_character_flag = duel_effect_attack }   
+            change_variable = { which = "duel_att_mod" value =  1 }
+            change_variable = { which = "duel_def_mod" value = -1 }
+        }
+        if = { 
+            limit = { has_character_flag = duel_effect_defend }   
+            change_variable = { which = "duel_att_mod" value = -1 }
+            change_variable = { which = "duel_def_mod" value = 1 }
+        }
+ 
+        # magic bonuses
+        # @test
+        # counterspell in case of non-zero magic dmg
+        if = {
+            limit = { 
+                has_character_flag = duel_effect_counterspell 
+                # check if enemy is casting
+                FROMFROM = {
+                    NOT = { has_character_flag = duel_move_combat }
+                    has_character_flag = duel_move_magic_spell 
+                }
+             }
+            
+            change_variable = { which = "duel_def_mod" value = 3 }
+            # TODO apply lvl dependent bonus
+        }
+        # weakan2
+        if = { 
+            limit = { has_character_flag = duel_effect_weaken2 }
+            change_variable = { which = "duel_att_mod" value = -1 }
+            change_variable = { which = "duel_def_mod" value = -1 }
+        }
+        # weaken1
+        if = { 
+            limit = { has_character_flag = duel_effect_weaken1 }
+            random_list = {
+                50 = { change_variable = { which = "duel_att_mod" value = -1 }}
+                50 = { change_variable = { which = "duel_def_mod" value = -1 }}
+            }
+        }
+    }
+}
+# EFFECTS DISPEL EVENT
+# 
+# Dispel effects that have limited duration
+#
+character_event = {
+    id = duelengine.7
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        # clear effects for sure
+        clr_character_flag = duel_effect_defend
+        clr_character_flag = duel_effect_attack
+        clr_character_flag = duel_effect_counterspell
+
+        # dispel Freeze
+        random_list = {
+            75 = { clr_character_flag = duel_effect_freeze }
+            25 = { }
+        }
+        # dispel Barrier
+        random_list = {
+            75 = { clr_character_flag = duel_effect_barrier }
+            25 = { }
+        }
+        # dispel rest
+        random_list = {
+            15 = { clr_character_flag = duel_effect_weaken1 }
+            15 = { clr_character_flag = duel_effect_weaken2 }
+            15 = { clr_character_flag = duel_effect_defence_bonus1 }
+            15 = { clr_character_flag = duel_effect_defence_bonus2 }
+            40 = { }
+        }
+
+    }
+}
+# CLEAR ALL EVENT
+character_event = {
+    id = duelengine.9
+    is_triggered_only = yes
+    hide_window = yes
+    
+    immediate = {
+        # clear all duel stats
+        set_variable = { which = "duel_att_mod" value = 0 }
+        set_variable = { which = "duel_def_mod" value = 0 }
+        set_variable = { which = "duel_att" value = 0 }
+        set_variable = { which = "duel_def" value = 0 }
+        set_variable = { which = "duel_dmg" value = 0 }
+        set_variable = { which = "duel_hp" value = 0 }
+        set_variable = { which = "duel_max_hp" value = 0 }
+        set_variable = { which = "duel_magic_att" value = 0 }
+
+        set_variable = { which = "magic_points" value = 0 }
+        set_variable = { which = "k10_roll" value = 0 }
+        set_variable = { which = "SW" value = 0 }
+        set_variable = { which = "Int" value = 0 }
+        set_variable = { which = "k4_roll" value = 0 }
+       
+        clr_character_flag = duel_effect_defend
+        clr_character_flag = duel_effect_attack
+        clr_character_flag = duel_effect_counterspell
+        clr_character_flag = duel_effect_defence_bonus2
+        clr_character_flag = duel_effect_weaken1
+        clr_character_flag = duel_effect_weaken2
+        clr_character_flag = duel_effect_freeze
+        clr_character_flag = duel_effect_noescape 
+ 
+        clr_character_flag = duel_move_combat
+        clr_character_flag = duel_move_nomove
+        clr_character_flag = duel_move_magic_spell
+        clr_character_flag = duel_move_magic_other
+
+        clr_character_flag = debug_duel_calculated
+
+        clr_character_flag = debug_duel_attacker # FIXME DEBUG ONLY
+        clr_character_flag = debug_duel_defender # FIXME DEBUG ONLY
+    }
+}
+
+# Deciding who is first is done in event triggering the duel
+# This is the event triggered by some battle events etc
+#
+# TODO it should be right this maybe?
+####################################################
+#
+# VISIBLE EVENTS FOR REPORTING THE DUEL 
+# AND CHOOSING OPTIONS
+#
+####################################################
+#
+# TEMPLATE
+#
+#
+# id = 20-x
+#
+# Each reporting event is also event used for choosing the particular move from 
+# the move category defined one event before
+# For all report events all options are THE SAME
+#
+#
+# FROMFROM - enemy
+# FROM = ROOT = us
+#
+
+######################
+# Player using meele combat
+######################
+character_event = { 
+    id = duelengine.20
+    desc = "EVTDESC_DUELENGINE_20"
+    picture = "GFX_evt_duel3"
+    border = GFX_event_normal_frame_war
+    is_triggered_only = yes
+  
+    # MEELE COMBAT
+    option = {
+
+        name = "EVTOPT_DUELENGINE_20A"
+        trigger = { has_character_flag = duel_move_combat }
+ 
+        set_character_flag = duel_effect_defend
+
+        custom_tooltip = { text = TOOLTIP_defence_stance }
+        FROMFROM = { hidden_tooltip = { character_event = { id = duelengine.4 } } }
+        # low hp - higher chances to defend
+        ai_chance = { 
+            factor = 2
+            modifier = {
+                factor = 4
+                NOT = { check_variable = { which = "duel_hp" value = 3 } }
+            }
+            modifier = {
+                factor = 0.5
+                check_variable = { which = "duel_hp" value = 5 }
+            }
+        }
+    }
+    # attack stance
+    option = {
+        name = "EVTOPT_DUELENGINE_20B"
+        trigger = { has_character_flag = duel_move_combat }
+        
+        set_character_flag = duel_effect_attack
+        custom_tooltip = { text = TOOLTIP_attack_stance }
+        FROMFROM = { hidden_tooltip = { character_event = { id = duelengine.4 } } }
+
+        # high hp - higher chances to attack
+        ai_chance = { 
+            factor = 2
+            modifier = {
+                factor = 4
+                check_variable = { which = "duel_hp" value = 5 }
+            } 
+        }
+    }
+    # normal stance
+    option = {
+
+        name = "EVTOPT_DUELENGINE_20C"
+        trigger = { has_character_flag = duel_move_combat }
+       
+        hidden_tooltip = { FROMFROM = { character_event = { id = duelengine.4 }}}
+        ai_chance = { factor = 4 }
+    }
+	
+}
+
+####################################
+# Character immobilized 
+####################################
+character_event = {
+    id = duelengine.23
+    desc = "EVTDESC_DUELENGINE_23"
+    is_triggered_only = yes
+    picture = "GFX_evt_duel0"
+    border = GFX_event_normal_frame_war
+
+    # character is immoblized cannot choose special reaction
+    option = {
+        name = "EVTOPT_DUELENGINE_20J"
+        trigger = { has_character_flag = duel_move_nomove }
+ 
+        custom_tooltip = { text = TOOLTIP_duel_nomove }
+        FROMFROM = { hidden_tooltip = { character_event = { id = duelengine.4 } } }
+        ai_chance = { factor = 1 }
+    }
+}
+#####################################################################
+#
+# DUEL OUTCOMES
+#
+# ids: 50-x
+#####################################################################
+character_event = { 
+    id = duelengine.50
+    desc = "EVTDESC_DUELENGINE_50"
+    is_triggered_only = yes
+    picture = "GFX_evt_duel5"
+    border = GFX_event_normal_frame_war
+    
+    option = {
+        name = "EVTOPT_DUELENGINE_50A"
+        morale = -0.1
+	   if ={ #If the Greenskin dies during a duel triggered by a law change, the law goes down one step.
+			limit = {
+				has_character_flag = greenksin_law_duel
+			}
+			character_event = {
+				id = DR_greenskins.152
+			}
+			clr_character_flag = greenksin_law_duel
+		}
+		
+	
+        FROMFROM = { character_event = { id = duelengine.51 } }
+        # garbage clean
+        hidden_tooltip = {
+            character_event = { id = duelengine.9 }
+        }
+	   if = {
+ 		limit = {  trait = carstein_ring }
+		character_event = { id = carstein.13 days = 1 }
+		break = yes
+		 }	
+
+death = { death_reason = death_battle
+		killer = FROMFROM }
+    }
+}
+# report the death to winner
+character_event = { 
+    id = duelengine.51
+    desc = "EVTDESC_DUELENGINE_51"
+    is_triggered_only = yes
+    picture = "GFX_evt_duel5"
+    border = GFX_event_normal_frame_war
+    
+    option = {
+        name = "EVTOPT_DUELENGINE_51A"
+        morale = 0.1
+        # garbage clean
+        hidden_tooltip = {
+				character_event = { id = duelengine.9 }
+				if = {
+				limit = {
+					event_target:courtier_challenging_for_regency = {
+						character = ROOT
+					}
+				}
+				ROOT = {
+					clr_character_flag = duelist_courtier
+					give_minor_title = title_regent
+					liege = {
+						character_event = {
+							id = 61235
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					event_target:courtier_challenging_for_regency = {
+						character = FROMFROM
+					}
+				}
+				ROOT = {
+					clr_character_flag = duelist_courtier
+				}
+			}
+        }
+		
+	}
+}
+# report about escape
+character_event = { 
+    id = duelengine.52
+    desc = "EVTDESC_DUELENGINE_52"
+    is_triggered_only = yes
+    picture = GFX_evt_battle
+    border = GFX_event_normal_frame_war
+    
+    option = {
+        name = "EVTOPT_DUELENGINE_52A"
+        random_list = { 
+            60 = { add_trait = wounded }
+            40 = { add_trait = maimed  }
+        }
+        if = {
+            limit = { NOT = { trait = craven } }
+            random = {
+                chance = 5
+                add_trait = craven
+                hidden_tooltip = {
+                    character_event ={
+                        id = 38257 #Notify
+                    }
+                }
+            }
+        }    
+        morale = -0.1
+        FROMFROM = { character_event = { id = duelengine.53 } }
+        # garbage clean
+        hidden_tooltip = {
+            # clean all other duel stats
+            character_event = { id = duelengine.9 }
+        }
+		if = {
+			limit = {
+				OR = {
+					event_target:courtier_challenging_for_regency = {
+						character = ROOT
+					}
+					event_target:courtier_challenging_for_regency = {
+						character = FROMFROM
+					}
+				}
+			}
+			ROOT = {
+				clr_character_flag = duelist_courtier
+			}
+		}
+    }
+}
+# report the escape to winner
+character_event = { 
+    id = duelengine.53
+    desc = "EVTDESC_DUELENGINE_53"
+    is_triggered_only = yes
+    picture = GFX_evt_battle
+    border = GFX_event_normal_frame_war
+    
+    option = {
+        name = "EVTOPT_DUELENGINE_53A"
+        morale = 0.1
+        # garbage clean
+        hidden_tooltip = {
+            clr_character_flag = duel_effect_attack
+            clr_character_flag = duel_effect_defend
+            # clean all other duel stats
+            character_event = { id = duelengine.9 }
+        }
+		if = {
+			limit = {
+				event_target:courtier_challenging_for_regency = {
+					character = ROOT
+				}
+			}
+			ROOT = {
+				clr_character_flag = duelist_courtier
+				give_minor_title = title_regent
+				liege = {
+					character_event = {
+						id = 61235
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				event_target:courtier_challenging_for_regency = {
+					character = FROMFROM
+				}
+			}
+			ROOT = {
+				clr_character_flag = duelist_courtier
+			}
+		}
+    }
+}

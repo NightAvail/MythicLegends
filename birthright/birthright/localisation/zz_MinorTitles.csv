@@ -1,0 +1,83 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+title_lieutenant_general;Lieutenant-General;;;;;;;;;;;;;;;;
+title_lieutenant_general_desc;The Lieutenant-General handles part of the realm's army, while not a prestigious position, it makes up for the fame and glory.;;;;;;;;;;;;;;
+title_captain_general;Captain-General;;;;;;;;;;;;;;;;
+title_captain_general_desc;The Captain-General handles the entirety of the military affairs of the realm, all Lieutenant-Generals are second in command only to him.;;;;;;;;;;;;;;
+title_advisor;Advisor;;;;;;;;;;;;;;;;
+title_advisor_desc;Advisors are the voice of experience for rulers, sometimes they are retired lieutenants or adventurers.;;;;;;;;;;;;;;
+title_grand_curate;Grand Curate;;;;;;;;;;;;;;;;
+title_grand_curate_desc;The Grand Curate often handles the medicines and herbs for the realm troops and their nominal liege.;;;;;;;;;;;;;;
+title_court_bard;Court Bard;;;;;;;;;;;;;;;;
+title_court_bard_desc;The Court Bard is tasked with playing the most exquisite music and tales for all of the court to hear.;;;;;;;;;;;;;;
+title_herald;Herald;;;;;;;;;;;;;;;;
+title_herald_desc;The Herald is a messenger, diplomat, and an expert on related fields, such as genealogy, heraldry, history, and law.;;;;;;;;;;;;;;
+title_chamberlain;Chamberlain;;;;;;;;;;;;;;;;
+title_chamberlain_desc;The Chamberlain runs the household for the lord. When that noble is also a regent, sometimes the chamberlain remains the senior household figure, albeit a great household with a palace and a great court regnant.;;;;;;;;;;;;;;
+title_court_mage;Court Mage;;;;;;;;;;;;;x
+title_court_mage_desc;A Court Mage can handle most magical tasks in a realm, if the Regent is incapable or unwilling of handling them personally. It is a very prestigious and powerful position to hold.;;;;;;;;;;;;;x
+###Avanil
+title_council_head;Head of The Privy Council;;;;;;;;;;;;;;;;
+title_council_head_desc;The Head of The Privy Council of Avanil is tasked with overseeing all the affairs concerning the realm, his or her voice is law and only second to the Princes of Avanil.;;;;;;;;;;;;;;
+title_fleet_captain;Captain of The Fleet;;;;;;;;;;;;;;;;
+title_fleet_captain_desc;The Captain of The Fleet manages the shipyards and the whole fleet of Avanil is under his direct control, he is only second to the Lieutenant-Generals.;;;;;;;;;;;;;;
+title_lord_treasurer;Lord-Treasurer;;;;;;;;;;;;;;;;
+title_lord_treasurer_desc;The Lord-Treasurer manages the royal household's expenses and income, he handles the allowance of the Princes of Avanil, while not a major position at court, it makes up for trust and close work with The Avans.;;;;;;;;;;;;;;
+title_lord_justicar;Lord-Justicar;;;;;;;;;;;;;;;;
+title_lord_justicar_desc;The Lord-Justicar oversees that the law is just and upheld accordingly, the Lord-Justicar is often called High-Judge.;;;;;;;;;;;;;;
+title_guard_captain;Captain of The Guard;;;;;;;;;;;;;;;;
+title_guard_captain_desc;The Captain of the Household Guard makes sure there is no shortage of guards and escorts for people of great importance to the realm.;;;;;;;;;;;;;;
+###Unique
+title_erebannien_guard;Guardian of The Erebannien;;;;;;;;;;;;;;;;
+title_erebannien_guard_desc;The Guardian of The Erebannien protects and oversees the Erebannien, its beauty and natural properties are of great importance for the greater good.;;;;;;;;;;;;;;
+title_sacred_minister;Most Sacred Minister;;;;;;;;;;;;;;;;
+title_sacred_minister_desc;The Most Sacred Minister is a person of great influence and power within the realm, his word is law and only second to the Nominal Ruler of Cariele.;;;;;;;;;;;;;;
+title_inquisitor;Inquisitor;;;;;;;;;;;;;;;;
+title_inquisitor_desc;The Inquisitor is tasked with the elimination of heresy, and anyone who is a threat to the realm.;;;;;;;;;;;;;;
+title_high_mage;High Mage;;;;;;;;;;;;;;;;
+title_high_mage_desc;The High Mage is the traditional title held by the court mage of Aerenwe, he draws the magical power of The Erebannien and channels it.;;;;;;;;;;;;;;
+###Knightly
+title_knight_aerenwe;Knight of Aerenwe;;;;;;;;;;;;;;;;
+title_knight_aerenwe_desc;The Knights of Aerenwe are different from other knights, they can be commoners who have carried out a great deed for the kingdom or shown bravery in the face of danger.;;;;;;;;;;;;;;
+title_knight_nesirie;Knight of Nesirie;;;;;;;;;;;;;;;;
+title_knight_nesirie_desc;The Knights of Nesirie are a small group dedicated to ridding the world of evil and teaching the ways of their goddess.;;;;;;;;;;;;;;
+title_knight_cleaves;Knight of Crossed Leaves;;;;;;;;;;;;;;;;
+title_knight_cleaves_desc;The Knights of The Crossed Leaves usually known as the Queens Rangers, These men and women travel alone or in small groups throughout the Erebannien, protecting the forest from both humans and monsters.;;;;;;;;;;;;;;
+title_dragon_knight;Dragon Knight;;;;;;;;;;;;;;;;
+title_dragon_knight_desc;The Dragon Knights are a cadre of about twenty-five of Avanil's best knights, The Dragon Knights are charged with protecting the Prince of Avanil and travel with him whenever he leaves Daulton.;;;;;;;;;;;;;;
+title_dragon_commander;Dragon Commander;;;;;;;;;;;;;;;;
+title_dragon_commander_desc;A Dragon Knight deemed valuable, honourable and wise enough may bear the title of Dragon Commander. Prestige, glory, and fame will accompany this character.;;;;;;;;;;;;;;;;
+title_boeruine_guard;Boeruinian Guard;;;;;;;;;;;;;;;;
+title_boeruine_guard_desc;The Boeruinian Guard is en elite fighting order dedicated to the safety of the Archduke.;;;;;;;;;;;;;;;;
+title_boeruine_companion;Boeruine Companion;;;;;;;;;;;;;;;;
+title_boeruine_companion_desc;The Boeruine Companions is a noble order awarded to the close friends of the Archduke.;;;;;;;;;;;;;;;;
+title_rose_order;Knight of Rose;;;;;;;;;;;;;;;;
+title_rose_order_desc;The Order of the Rose comprises the Regents personal Guard.;;;;;;;;;;;;;;;;
+###Courtesy
+title_sir;Sir;;;;;;;;;;;;;;;;
+title_sir_desc;Sir.;;;;;;;;;;;;;;
+title_dame;Dame;;;;;;;;;;;;;;;;
+title_dame_desc;Dame.;;;;;;;;;;;;;;
+emperor_title_prince_Anuirean;Prince;Prince;Prince;Prince;Principe;;;;;;;;;x
+emperor_title_prince_female_Anuirean;Princess;Princesse;Princess;Princess;Princesa;;;;;;;;;x
+king_title_prince_Anuirean;Lord;;;;;;;;;;;;;x
+king_title_prince_female_Anuirean;Lady;;;;;;;;;;;;;x
+title_favoured_knight;Favoured Knight;;;;;;;;;;;;;;;;
+title_favoured_knight_desc;This character is worthy on leading your Knightly Order.;;;;;;;;;;;;;;
+###Misc
+title_bloodlineheir;Bloodline Heir;;;;;;;;;;;;;;;;
+title_bloodlineheir_desc;This character is deem worthy of being heir to your divine bloodline.;;;;;;;;;;;;;;
+title_no_duels_allowed;Forbidden to Duel;;;;;;;;;;;;;;;;
+title_no_duels_allowed_desc;This character isn't allowed to participate in any duels.;;;;;;;;;;;;;;
+title_adventurer;Adventurer;;;;;;;;;;;;;x
+title_adventurer_desc;Adventurers are brave souls travelling the land in search of fame, glory, and always seeking to hone their skills whether it be stealth, magic, combat, priestly powers, or the ways of the ranger or bard. Many die young, but those that survive, often end up being immortalised in song if they become legends in their own time.;;;;;;;;;;;;;x
+job_marshal_Vos;Belevic;Belevic;Belevic;;Belevic;;;;;;;;;x
+job_marshal_Anuirean;Lord-Marshal;Lord-Marshal;Lord-Marshal;;Lord-Marshal;;;;;;;;;x
+minor_title_gift_target;Gift Target;;;;;;;;;;;;;;;;
+minor_title_gift_target_desc;Gift Target;;;;;;;;;;;;;;
+###Elven
+title_master_of_bow_and_saddle;Master of Bow and Saddle;;;;;;;;;;;;;;;;
+title_master_of_bow_and_saddle_desc;This character is deem worthy of being our Master of Bow and Saddle, a prestigious position held by those ready to ride out at a moments notice.;;;;;;;;;;;;;;;;
+title_chief_ranger;Chief Ranger;;;;;;;;;;;;;;;;
+title_chief_ranger_desc;This character shall be our Chief Ranger, commanding a host of their own and holding a very prestigious position at our realm.;;;;;;;;;;;;;;;;
+title_llywodraeth_cynulliad;Llywodraeth Cynulliad;;;;;;;;;;;;;;;;
+title_llywodraeth_cynulliad_desc;The Llywodraeth Cynulliad is the highest council of government in Tuarhievel. The Llywodraeth Cynulliad, or council of the realm, is sometimes mis-translated as the council of the moon. This body advise the Prince who decides issues regardless of the will of the council.;;;;;;;;;;;;;;;;

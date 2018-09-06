@@ -1,0 +1,273 @@
+# Types:
+# 0 - Light Infantry
+# 1 - Heavy Infantry
+# 2 - Pikemen
+# 3 - Light Cavalry
+# 4 - Heavy Cavalry
+# 5 - Archers
+# 6 - Horse Archers
+
+RETTYPE_INF1 =
+{
+	first_type = 1
+	first_amount = 200
+	second_type = 5
+	second_amount = 50
+	
+	modifier = {
+		archers_offensive = 0.4
+		heavy_infantry_defensive = 0.2
+	}
+}
+
+RETTYPE_INF2 =
+{
+	first_type = 2
+	first_amount = 150
+	second_type = 5
+	second_amount = 100
+	
+	modifier = {
+		archers_offensive = 0.4
+		pikemen_defensive = 0.2
+	}
+}
+
+RETTYPE_CAV1 =
+{
+	first_type = 4
+	first_amount = 50
+	second_type = 3
+	second_amount = 200
+	
+	modifier = {
+		knights_offensive = 0.3
+		light_cavalry_offensive = 0.3
+	}
+}
+
+RETTYPE_SKIR1 = 
+{
+	first_type = 5
+	first_amount = 200
+	second_type = 1
+	second_amount = 50
+	
+	modifier = {
+		archers_offensive = 0.6
+	}
+}
+
+#Elven Retinues
+
+#100 Heavy Infantry#
+"Elven Elite Guards" =
+{
+    first_type = 1
+    first_amount = 100
+	potential = {
+		culture = Elven
+	}
+    modifier = {
+        heavy_infantry_defensive = 0.5
+        heavy_infantry_offensive = 0.5
+        heavy_infantry_morale = 0.5       
+    }
+}
+
+#100 Archers#
+"Elven Rangers" =
+{
+    first_type = 5
+    first_amount = 100
+	potential = {
+		culture = Elven
+	}
+    modifier = {
+        archers_defensive = 0.5
+        archers_offensive = 0.5
+        archers_morale = 0.5       
+    }
+}
+
+#100 Horse Archers#
+"Gheallie Sidhe" =
+{
+    first_type = 6
+    first_amount = 100
+	potential = {
+		culture = Elven
+	}
+	special_troops = horse_archers
+    modifier = {
+        horse_archers_defensive = 1.0
+        horse_archers_offensive = 0.5
+        horse_archers_morale = 0.5     
+    }
+}
+
+#100 Knights#
+"Elven Knights" =
+{
+    first_type = 4
+    first_amount = 100
+	potential = {
+		culture = Elven
+	}
+    modifier = {
+        knights_defensive = 0.7
+        knights_offensive = 0.5
+        knights_morale = 0.5    
+    }
+}
+#100 Horse Archers#
+"Pegasus Knights of Innishere" =
+{
+    first_type = 6
+    first_amount = 100
+	potential = {
+		culture = Elven
+		OR = {
+			has_landed_title = k_innishere
+			has_landed_title = d_adwyth_tallagh
+			has_landed_title = d_slieve_siona
+		}
+	}
+	special_troops = horse_archers
+    modifier = {
+        horse_archers_defensive = 2.0
+        horse_archers_offensive = 0.5
+        horse_archers_morale = 1.0    
+    }
+}
+
+#Dwarven Retinues
+
+#100 Heavy Infantry#
+"Dwarven Gate-Wardens" =
+{
+    first_type = 1
+    first_amount = 100
+	potential = {
+		culture = Dwarven
+	}
+    modifier = {
+        heavy_infantry_defensive = 0.4
+        heavy_infantry_offensive = 0.4
+        heavy_infantry_morale = 0.4     
+    }
+}
+
+#Vos Retinues
+
+#100 Heavy Cavalry#
+"Varsk Riders" =
+{
+    first_type = 4
+    first_amount = 100
+	potential = {
+		culture = Vos
+	}
+    modifier = {
+        knights_defensive = 0.7
+        knights_offensive = 0.7
+        knights_morale = 0.5     
+    }
+}
+
+#Goblin Retinues
+
+#100 Light Cavalry#
+"Wolf Riders" =
+{
+    first_type = 3
+    first_amount = 100
+	potential = {
+		culture = Goblin
+	}
+    modifier = {
+        light_cavalry_offensive = 0.7
+        light_cavalry_defensive = 0.7
+        light_cavalry_morale = 0.5     
+    }
+}
+
+#Gorgon Retinues
+
+#100 Heavy Cavalry#
+"Black Guard" =
+{
+    first_type = 4
+    first_amount = 100
+	potential = {
+		has_landed_title = k_gorgons_crown
+	}
+    modifier = {
+        knights_defensive = 1.0
+        knights_offensive = 1.0
+        knights_morale = 0.5     
+    }
+}
+
+
+#Gnoll Retinues
+
+#100 Heavy Infantry#
+"Chief's Guard" =
+{
+    first_type = 1
+    first_amount = 100
+	potential = {
+		culture = Gnoll
+	}
+    modifier = {
+        heavy_infantry_offensive = 1.0
+        heavy_infantry_morale = 1.0     
+    }
+}
+
+#Serpent Retinues
+
+#50 Heavy Infantry, 50 Archers#
+"Sons of the Serpent" =
+{
+    first_type = 1
+	second_type = 5
+    first_amount = 50
+	second_amount = 50
+	potential = {
+		trait = awn_serpent
+	}
+    modifier = {
+        heavy_infantry_defensive = 0.4
+        heavy_infantry_offensive = 0.4
+        heavy_infantry_morale = 0.4
+		archers_offensive = 0.4
+		archers_defensive = 0.4
+		archers_morale = 0.4
+    }
+}
+
+#Khinasi Retinues
+
+#50 Horse Archers, 50 light infantry#
+"Ariya Prince's Guard" =
+{
+    first_type = 6
+	second_type = 3
+    first_amount = 50
+	second_amount = 50
+	potential = {
+		has_landed_title = d_ariya
+		culture = Khinasi
+	}
+	special_troops = horse_archers
+    modifier = {
+        horse_archers_defensive = 0.5
+        horse_archers_offensive = 0.5
+        horse_archers_morale = 0.5   
+		light_cavalry_offensive = 0.5
+		light_cavalry_defensive = 0.5
+		light_cavalry_morale = 0.5
+    }
+}

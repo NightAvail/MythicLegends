@@ -1,0 +1,39 @@
+
+targetted_decisions = {
+
+turn_courtier_into_vampire = {
+		filter = realm
+		ai_target_filter = realm
+
+		from_potential = {
+			is_ruler = yes		
+			trait = vampire
+		}
+		
+		potential = {
+			OR = { host = { character = FROM }
+				guardian = { character = FROM }
+				any_spouse = { character = FROM }
+				any_lover = { character = FROM }
+				any_friend = { character = FROM } }
+		}
+		
+		allow = {
+			FROM = { learning = 40 }
+		}
+		
+		effect = {
+			character_event = { id = vampires.0 }
+			FROM = { change_learning = -10 }
+			FROM = { change_variable={ which=bloodline_score value=-10 } } 
+			}
+		
+		
+		ai_will_do = {
+			factor = 0 #AI does it via event to wife and children instead when bloodscore allows for it
+		}
+	}
+	
+	}
+	
+	

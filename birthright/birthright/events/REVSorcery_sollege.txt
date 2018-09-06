@@ -1,0 +1,371 @@
+namespace = sorcerycollege
+
+character_event = {		## Father Notification
+	id = sorcerycollege.0
+	desc = "EVTDESCsorcerycollege.0"
+	picture = "GFX_evt_stone_church"
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+character_event = {		## Children Notification
+	id = sorcerycollege.1
+	desc = "EVTDESCsorcerycollege.1"
+	picture = "GFX_evt_stone_church"
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+		add_trait = apprenticing
+	}
+}
+
+character_event = {		## Apprenticeship starts paying off
+	id = sorcerycollege.2
+	desc = "EVTDESCsorcerycollege.2"
+	picture = "GFX_evt_library"
+
+	trigger = {
+		prisoner = no
+		has_character_flag = atacademy
+		OR = {
+			trait = amateur_mage
+			trait = amateur_sorcerer
+			trait = amateur_priest
+		}
+	}
+
+	mean_time_to_happen = {
+	years = 3
+	}
+
+	option = {
+		name = OK
+
+		random = {
+			chance = 5
+			add_trait = scholar
+			}
+
+		if = {
+			limit = { trait = amateur_mage }
+				random = {
+					chance = 65
+					remove_trait = amateur_mage
+					add_trait = novice_mage
+				}
+			}
+
+		if = {
+			limit = { trait = amateur_sorcerer }
+				random = {
+					chance = 65
+					remove_trait = amateur_sorcerer
+					add_trait = novice_sorcerer
+				}
+			}
+
+		if = {
+			limit = { trait = amateur_priest }
+				random = {
+					chance = 65
+					remove_trait = amateur_priest
+					add_trait = novice_priest
+				}
+			}
+
+		if = {
+			limit = { trait = slothful }
+				random = {
+					chance = 20
+					remove_trait = slothful
+					add_trait = diligent
+				}
+			}
+
+		if = {
+			limit = { trait = wroth }
+				random = {
+					chance = 10
+					remove_trait = wroth
+					add_trait = patient
+				}
+			}
+	}
+}
+
+character_event = {		## Apprenticeship #2
+	id = sorcerycollege.3
+	desc = "EVTDESCsorcerycollege.3"
+	picture = "GFX_evt_library"
+
+	trigger = {
+		prisoner = no
+		has_character_flag = atacademy
+		OR = {
+			trait = novice_mage
+			trait = novice_sorcerer
+			trait = novice_priest
+		}
+	}
+
+	mean_time_to_happen = {
+	years = 3
+	}
+
+	option = {
+		name = TIME_TO_RETURN_HOME # Time to return home!
+		trigger = {
+		NOT = { trait = brilliant }
+		NOT = { trait = genius }
+		}
+		father = { character_event = { id = sorcerycollege.4 } }
+		mother = { character_event = { id = sorcerycollege.4 } }
+
+		random = {
+			chance = 5
+			add_trait = scholar
+			}
+
+		if = {
+			limit = { trait = novice_mage }
+				random = {
+					chance = 57
+					remove_trait = novice_mage
+					add_trait = trained_mage
+				}
+			}
+
+		if = {
+			limit = { trait = novice_sorcerer }
+				random = {
+					chance = 57
+					remove_trait = novice_sorcerer
+					add_trait = trained_sorcerer
+				}
+			}
+
+		if = {
+			limit = { trait = novice_priest }
+				random = {
+					chance = 57
+					remove_trait = novice_priest
+					add_trait = trained_priest
+				}
+			}
+
+		if = {
+			limit = { trait = slothful }
+				random = {
+					chance = 10
+					remove_trait = slothful
+					add_trait = diligent
+				}
+			}
+
+		if = {
+			limit = { trait = wroth }
+				random = {
+					chance = 5
+					remove_trait = wroth
+					add_trait = patient
+				}
+			}
+	}
+
+
+	option={
+		name = sorcerycollege.3.b # I think I'd rather continue my studies
+		trigger = {
+			trait = brilliant
+			trait = genius
+		}
+
+		if = {
+			limit = { trait = novice_mage }
+				random = {
+					chance = 60
+					remove_trait = novice_mage
+					add_trait = trained_mage
+				}
+			}
+
+		if = {
+			limit = { trait = novice_sorcerer }
+				random = {
+					chance = 60
+					remove_trait = novice_sorcerer
+					add_trait = trained_sorcerer
+				}
+			}
+			
+		if = {
+			limit = { trait = novice_priest }
+				random = {
+					chance = 60
+					remove_trait = novice_priest
+					add_trait = trained_priest
+				}
+			}
+
+		if = {
+			limit = { trait = slothful }
+				random = {
+					chance = 30
+					remove_trait = slothful
+					add_trait = diligent
+				}
+			}
+			
+		if = {
+			limit = { trait = wroth }
+				random = {
+					chance = 30
+					remove_trait = wroth
+					add_trait = patient
+				}
+			}
+
+		if = {
+			limit = { trait = scholar }
+				random = {
+					chance = 45
+					add_trait = scholar
+				}
+			}
+	}
+}
+
+character_event = {	## Father/Mother Return Notification
+	id = sorcerycollege.4
+	desc = "EVTDESCsorcerycollege.4"
+	picture = "GFX_evt_stone_church"
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			is_landed = yes
+			AND = {
+			ai = no
+			}
+		}
+		name = sorcerycollege.4.a # Send a carriage for my child immediately!
+		FROM = {
+			move_character = ROOT
+			change_diplomacy = 4
+			clr_character_flag = atacademy
+			set_character_flag = apprenticeover
+			remove_trait = apprenticing
+		}
+	}
+
+	option = {
+		trigger = {
+			is_landed = yes
+			AND = {
+				ai = yes
+			}
+		}
+		name = sorcerycollege.4.a # Send a carriage for my child immediately!
+		FROM = {
+			move_character = ROOT
+			change_diplomacy = 4
+			clr_character_flag = atacademy
+			set_character_flag = apprenticeover
+			remove_trait = apprenticing
+		}
+	}
+
+	option = {
+		trigger = {
+			is_landed = no
+			AND = {
+				ai = yes
+			}
+		}
+		name = OK
+	}
+
+}
+
+##Imperial City at war Hide yo children
+
+character_event = {		## Parent Notification
+	id = sorcerycollege.5
+	desc = "EVTDESCsorcerycollege.5"
+	picture = "GFX_evt_stone_church"
+
+	is_triggered_only = yes
+
+	option = {
+		name = OK
+	}
+}
+
+character_event = {		## Parent Notification
+	id = sorcerycollege.6
+	desc = "EVTDESCsorcerycollege.6"
+	picture = "GFX_evt_stone_church"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MAYBE_ITS_FOR_THE_BEST # Maybe its for the best..
+		clr_character_flag = atacademy
+		remove_trait = apprenticing
+	}
+}
+
+##RCS High Opinion so you can't invite students
+
+character_event = {
+	id = sorcerycollege.7
+	desc = "EVTDESCsorcerycollege.7"
+	picture = "GFX_evt_stone_church"
+
+	trigger = {
+		has_landed_title = c_royal_college
+		NOT = { has_character_modifier = rcs_headmaster }
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = OK
+		add_character_modifier = {
+			name = rcs_headmaster
+			duration = -1
+		}
+	}
+}
+
+##Apprentices Fail-safe#2
+
+character_event = {
+	id = sorcerycollege.8
+	desc = "EVTDESCsorcerycollege.8"
+	picture = "GFX_evt_stone_church"
+
+	trigger = {
+		trait = apprenticing
+		liege = { NOT = { has_landed_title = c_royal_college } }
+		is_landed = no
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = OK
+		c_royal_college = {
+		holder_scope = {
+			ROOT = { move_character = PREV }
+			}
+		}
+	}
+}

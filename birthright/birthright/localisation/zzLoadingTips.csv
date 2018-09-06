@@ -1,0 +1,66 @@
+LOADING_MAP_SPRITES;Birthing the Siedhe...;;;;;;;;;;;;;x
+LOADING_GUI_DEF;Spawning the Orogs...;;;;;;;;;;;;;x
+LOADING_DATABASES;Preaching Haelyn...;;;;;;;;;;;;;x
+INIT_MAP_LOGIC;Calming Nesirie...;;;;;;;;;;;;;x
+CREATING_CHKSUM;Bringing Cerilia Together...;;;;;;;;;;;;;x
+CALC_PATHS;Separating Aduria and Cerilia...;;;;;;;;;;;;;x
+GENERATING_COAS;Bringing Banners...;;;;;;;;;;;;;x
+LOADING_HISTORY;Reading Stories About Roele Andu...;;;;;;;;;;;;;x
+LOAD_EVENTS;Birthing the Dwarves...;;;;;;;;;;;;;x
+LOADING_SOUNDS;Assigning Divine Bloodlines...;;;;;;;;;;;;;x
+PROC_FLAGS;Worshipping the Drake...;;;;;;;;;;;;;x
+LOAD_FLAGS;Protecting El-Arrasi...;;;;;;;;;;;;;x
+LOAD_GFX;Fear The Gorgon...;;;;;;;;;;;;;x
+CREATING_THE_WORLD;Halflings arriving to Cerilia...;;;;;;;;;;;;;x
+CREATING_TREES;Making a Deal with Kriesha...;;;;;;;;;;;;;x
+CREATING_BORDERS;Exploring the Aelvinwode...;;;;;;;;;;;;;x
+CREATING_RIVERS;Raiding the Heartlands...;;;;;;;;;;;;;x
+MAP_PROPERLY_INIT;Adventuring unto Unknown Lands...;;;;;;;;;;;;;x
+CREATING_PROVINCE;Closing Rift with The Shadow Lands...;;;;;;;;;;;;;x
+CREATING_TEXTS;Fortifying Shieldhaven...;;;;;;;;;;;;;x
+ADAPTING_HISTORY;Immortalizing Adventurers...;;;;;;;;;;;;;x
+LOAD_CITY;Marching towards The Imperial City...;;;;;;;;;;;;;x
+LOAD_GFX_PDXMAP_SHADERS;Conquering Markazor and Mur-Kilad...;;;;;;;;;;;;;x
+LOAD_GFX_PDXMAP_TERRAIN;Exploring the Rjurik Highlands...;;;;;;;;;;;;;x
+LOAD_GFX_PDXMAP_BORDERS;Fighting Alongside Anduiras...;;;;;;;;;;;;;x
+LOAD_GFX_PDXMAP_TEXTURES;Crafting a Holy Avenger...;;;;;;;;;;;;;x
+LOAD_GFX_PDXMAP_TREES;Rebelling Against Diemed...;;;;;;;;;;;;;x
+LOAD_GFX_PDXMAP_RIVERS;Building Haesrien...;;;;;;;;;;;;;x
+LOAD_GFX_PDXMAP_STATIC_OBJECTS;Crafting Artefacts...;;;;;;;;;;;;;x
+LOADING_CALC_NAVAL;Marching into The Gorgon's Crown...;;;;;;;;;;;;;x
+LOAD_INIT;Destroying Azrai...;;;;;;;;;;;;;x
+LOADING_TIP_0;Award the 'Adventurer' minor title to your sons and daughters if you want them to adventure.;;;;;;;;;;;;;x
+LOADING_TIP_1;You should cast warding spells whenever possible to protect your realm from enemy magic.;;;;;;;;;;;;;x
+LOADING_TIP_2;Check the bloodline and traits of your wife carefully! This will influence greatly on your heir.;;;;;;;;;;;;;x
+LOADING_TIP_3;Feel free to report bugs and suggest new ideas on our thread on the paradox forums.;;;;;;;;;;;;;x
+LOADING_TIP_4;We are always looking for new additions to the team.;;;;;;;;;;;;;x
+LOADING_TIP_5;This mod is based on Sierra's Online The Gorgon's Alliance game, the table top campaign setting, The Player Secrets and Novels.;;;;;;;;;;;;;x
+LOADING_TIP_6;If you don't want your sons to fight in duels, grant them the 'Forbidden to Duel' minor title, however this will take a toll on their prestige.;;;;;;;;;;;;;x
+LOADING_TIP_7;You can craft Swords, Amulets and Rings if you are a high class mage and have enough wealth to pay for the ingredients.;;;;;;;;;;;;;x
+LOADING_TIP_8;Think twice before changing your religion, this may upset your vassals.;;;;;;;;;;;;;x
+LOADING_TIP_9;Be wary of whose claim you support to the Iron Throne, the wrong move and you will find yourself surrounded by foes and enemies.;;;;;;;;;;;;;x
+LOADING_TIP_10;When you go on an adventure be sure you are not the last of your dynasty as you may die.;;;;;;;;;;;;;x
+LOADING_TIP_11;Learning has been replaced with 'bloodline score' to simulate how much divine blood a character has.;;;;;;;;;;;;;x
+LOADING_TIP_12;Haelyn is the patron to the anuireans, brother to Roele Andu, and half-brother to The Gorgon.;;;;;;;;;;;;;x
+LOADING_TIP_13;All the major anuirean houses can lay claim the Iron Throne through their close kinship to the now extinct imperial line.;;;;;;;;;;;;;x
+LOADING_TIP_14;In 973 Michael Roele, marched to the Gorgon's Crown only to meet his end.;;;;;;;;;;;;;x
+LOADING_TIP_15;The Princes of Avanil lay claim the Iron Throne through their descent of Avanlyr Roele.;;;;;;;;;;;;;x
+LOADING_TIP_16;You shouldn't randomly give out minor titles as this come with income for the proprietary.;;;;;;;;;;;;;x
+LOADING_TIP_17;Think twice before invading an elven realm.;;;;;;;;;;;;;x
+LOADING_TIP_18;Endier, The Spiderfell, Medoere, Ilien and parts of Roesone used to be part of the Archduchy of Diemed, but they have since long gained their independence.;;;;;;;;;;;;;x
+LOADING_TIP_19;The Theocracy of Medoere was founded only eight years ago when Suris Enlien received visions of 'The Silver Prince' Ruornil.;;;;;;;;;;;;;x
+LOADING_TIP_20;Roele Andu, first emperor to the anuireans was a fair and just ruler, he believed that one could only rule with the consent of those ruled.;;;;;;;;;;;;;x
+LOADING_TIP_21;Although the Roele line has gone extinct, their descendants are very much alive and keep fighting over the control of the ruins of the empire.;;;;;;;;;;;;;x
+LOADING_TIP_22;The House of Boeruine lay claim the Iron Throne by descent of the Archduke Derwyn Boeruine whom married one of Michael's sisters.;;;;;;;;;;;;;x
+LOADING_TIP_23;Tuornen split off of Alamie years ago in the Bloody War of The Brothers, which saw half the Archduchy secede and become what is now the Duchy of Tuornen.;;;;;;;;;;;;;x
+LOADING_TIP_24;Rumours say that The Gorgon is preparing his forces to invade anuire in one of his generational blood harvests.;;;;;;;;;;;;;x
+LOADING_TIP_25;The Count of Taeghas and the Duchess of Brosengae have both sworn fealty to the Prince of Avanil, recognising his claim to the Iron Throne.;;;;;;;;;;;;;x
+LOADING_TIP_26;Most Khinasi rulers claim descent to The Great Hero-King of the Basarji 'El-Arrasi'.;;;;;;;;;;;;;x
+LOADING_TIP_27;The battle of Mount Deismaar which was over fifteen centuries ago, saw the death of the old gods, the birth of their bloodlines and the ascension of the new gods.;;;;;;;;;;;;;x
+LOADING_TIP_28;Roesone was founded eighty years ago, when Daen 'The Black Baron' won its independence from the Archduchy of Diemed.;;;;;;;;;;;;;x
+LOADING_TIP_29;The Andu fled Aduria centuries ago when Azrai The Dark God covered Aduria in the shadows. They were guided by their God and Patron, Anduiras.;;;;;;;;;;;;;x
+LOADING_TIP_30;Elves were once the masters of Cerilia, but long has it been since the arrival of men that they have been confided into their woods, awaiting for their chance to one day regain their lands back.;;;;;;;;;;;;;x
+LOADING_TIP_31;When Rhuobhe was a young elf he found himself fascinated by humans, but when their destructive ways became apparent he sided with Azrai at the battle of Mount Deismaar.;;;;;;;;;;;;;x
+LOADING_TIP_32;Raesene Andu, Belinik and Kriesha were the champions of Azrai at the battle of Mount Deismaar centuries ago.;;;;;;;;;;;;;x
+LOADING_TIP_33;The last time Anuire was unified, they went on to conquer much of Cerilia.;;;;;;;;;;;;;x
+LOADING_TIP_34;Seducing the White Witch.;;;;;;;;;;;;;x

@@ -1,0 +1,38 @@
+#######################################################
+# Mythic Legends
+# Traits
+#######################################################
+
+# Warrior levels.
+ml_mage_level_warrior_trainee = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_expert_warrior = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_master_warrior = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_mage_level_legendary_warrior = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Mage bloodlines.
+ml_warrior_bloodline_strong = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_warrior_bloodline_weak = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}

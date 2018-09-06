@@ -1,0 +1,403 @@
+#RJURIK DYNASTIES 1001-1500#
+
+#Gandvik dynasties#
+1001 = {
+name = "of the North"
+culture = Rjurik
+}
+
+1002 = {
+name = "Bjornoya"
+culture = Rjurik
+}
+
+1003 = {
+name = "Boden"
+culture = Rjurik
+}
+
+1004 = {
+name = "Enherad"
+culture = Rjurik
+}
+
+1005 = {
+name = "Folda Fjord"
+culture = Rjurik
+}
+
+1006 = {
+name = "Halten"
+culture = Rjurik
+}
+
+1007 = {
+name = "Kandalask"
+culture = Rjurik
+}
+
+1008 = {
+name = "Nordcapp"
+culture = Rjurik
+}
+
+1009 = {
+name = "Pitea"
+culture = Rjurik
+}
+
+1010 = {
+name = "Rovan"
+culture = Rjurik
+}
+
+1011 = {
+name = "Solung Bank"
+culture = Rjurik
+}
+
+1012 = {
+name = "Soroya"
+culture = Rjurik
+}
+
+1013 = {
+name = "Torne"
+culture = Rjurik
+}
+
+#Halskapa Dynasties 1014-1025#
+1014 = {
+name = "Skapa Hjarring"
+culture = Rjurik
+}
+
+1015 = {
+name = "Aandjvor"
+culture = Rjurik
+}
+
+1016 = {
+name = "Dalmrshuud"
+culture = Rjurik
+}
+
+1017 = {
+name = "Drasvik"
+culture = Rjurik
+}
+
+1018 = {
+name = "Helkstraad"
+culture = Rjurik
+}
+
+1019 = {
+name = "Selkhauske"
+culture = Rjurik
+}
+
+1020 = {
+name = "Stjolvar"
+culture = Rjurik
+}
+
+1021 = {
+name = "Taelrhud"
+culture = Rjurik
+}
+
+#Siren's Realm 1022-1025#
+1022 = {
+name = "Fjoldan"
+culture = Rjurik
+}
+
+1023 = {
+name = "Junnarson"
+culture = Rjurik
+}
+
+1024 = {
+name = "Jorn"
+culture = Rjurik
+}
+
+1025 = {
+name = "Bjarn"
+culture = Rjurik
+}
+
+#Rjuvik dynasties 1026-1032#
+1026 = {
+name = "Fulgar"
+culture = Rjurik
+}
+
+1027 = {
+name = "Dinn"
+culture = Khinasi
+}
+
+1028 = {
+name = "Hjarrsmark"
+culture = Rjurik
+}
+
+1029 = {
+name = "Hoeskal"
+culture = Rjurik
+}
+
+1030 = {
+name = "Sjarkhoelle"
+culture = Rjurik
+}
+
+1031 = {
+name = "Svarkannek"
+culture = Brecht
+}
+
+1032 = {
+name = "Wulf"
+culture = Rjurik
+}
+
+#Hjolvar dynasties#
+1033 = {
+name = "Varrig"
+culture = Rjurik
+}
+
+1034 = {
+name = "Thajuula"
+culture = Rjurik
+}
+
+1035 = {
+name = "Freikstad"
+culture = Rjurik
+}
+
+1036 = {
+name = "Vaaltrand"
+culture = Rjurik
+}
+
+#Jankaiping dynasties#
+1037 = {
+name = "Harlkaang"
+culture = Rjurik
+}
+
+1038 = {
+name = "Aaldjnor"
+culture = Rjurik
+}
+
+1039 = {
+name = "Aaldvar"
+culture = Rjurik
+}
+
+1040 = {
+name = "Draska"
+culture = Rjurik
+}
+
+1041 = {
+name = "Froyland"
+culture = Rjurik
+}
+
+1042 = {
+name = "Jekkaoen"
+culture = Rjurik
+}
+
+1043 = {
+name = "Jurva"
+culture = Rjurik
+}
+
+1044 = {
+name = "Rjutafel"
+culture = Rjurik
+}
+
+1045 = {
+name = "Strangafjord"
+culture = Rjurik
+}
+
+1046 = {
+name = "Olthrugaard"
+culture = Rjurik
+}
+
+#Kvigmar dynasties#
+1051 = {
+name = "Kvigmar"
+culture = Rjurik
+}
+
+1052 = {
+name = "Borrik"
+culture = Rjurik
+}
+
+1053 = {
+name = "Audric"
+culture = Rjurik
+}
+
+#Hogunmark dynasties#
+1054 = {
+name = "Yngvi"
+culture = Rjurik
+}
+
+1055 = {
+name = "Hjarni"
+culture = Rjurik
+}
+
+1056 = {
+name = "Jarvyll"
+culture = Rjurik
+}
+
+1057 = {
+name = "Heimdjor"
+culture = Rjurik
+}
+
+1058 = {
+name = "Otryff"
+culture = Rjurik
+}
+
+1059 = {
+name = "Roluf"
+culture = Rjurik
+}
+
+1061 = {
+name = "Aegilsgaard"
+culture = Rjurik
+}
+
+1062 = {
+name = "Gautrakka"
+culture = Rjurik
+}
+
+1063 = {
+name = "Halskorrik"
+culture = Rjurik
+}
+
+1064 = {
+name = "Jarnkasspel"
+culture = Rjurik
+}
+
+1065 = {
+name = "Trygvaar"
+culture = Rjurik
+}
+
+#Svinik#
+1066 = {
+name = "Svinik"
+culture = Rjurik
+}
+
+1067 = {
+name = "Bergvaas"
+culture = Rjurik
+}
+
+1068 = {
+name = "Darsruud"
+culture = Rjurik
+}
+
+1069 = {
+name = "Haekholfn"
+culture = Rjurik
+}
+
+1070 = {
+name = "Hvarliik"
+culture = Rjurik
+}
+
+1071 = {
+name = "Innsmark"
+culture = Rjurik
+}
+
+1072 = {
+name = "Bjarnheim"
+culture = Rjurik
+}
+
+1073 = {
+name = "Sjavaar"
+culture = Rjurik
+}
+
+#Stjordvik#
+1074 = {
+name = "Stjordvik"
+culture = Rjurik
+}
+
+1075 = {
+name = "Arvaald"
+culture = Rjurik
+}
+
+1076 = {
+name = "Hjorvaal"
+culture = Rjurik
+}
+
+1077 = {
+name = "Hollenvik"
+culture = Rjurik
+}
+
+1078 = {
+name = "Lofkirdik"
+culture = Rjurik
+}
+
+1079 = {
+name = "Namverg"
+culture = Rjurik
+}
+
+1080 = {
+name = "Saerskaap"
+culture = Rjurik
+}
+
+1081 = {
+name = "Udvika"
+culture = Rjurik
+}
+
+1082 = {
+name = "UstkJuvil"
+culture = Rjurik
+}
+
+# Hjorig
+1100 = {
+	name = Kuppel					# Jarl Einar Kuppel
+	culture = Rjurik
+	used_for_random = no
+}

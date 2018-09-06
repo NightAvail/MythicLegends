@@ -35,7 +35,7 @@ ml_trait_air_mage_beginner = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 1
+    intrigue   = 2
     learning    = 1
 
     random = no
@@ -64,7 +64,7 @@ ml_trait_air_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 1
+    intrigue   = 3
     learning    = 1
 
     random = no
@@ -93,7 +93,7 @@ ml_trait_air_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 1
+    intrigue   = 4
     learning    = 1
 
     random = no
@@ -130,7 +130,7 @@ ml_trait_air_mage_master = {
         ml_trait_water_mage_master
     }
 
-    intrigue   = 2
+    intrigue   = 5
     learning    = 2
     combat_rating = 1
 
@@ -172,7 +172,7 @@ ml_trait_earth_mage_beginner = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 1
+    stewardship       = 2
     learning        = 1
 
     random = no
@@ -201,7 +201,7 @@ ml_trait_earth_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 1
+    stewardship       = 3
     learning        = 1
 
     random = no
@@ -230,7 +230,7 @@ ml_trait_earth_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 1
+    stewardship       = 4
     learning        = 1
 
     random = no
@@ -267,7 +267,7 @@ ml_trait_earth_mage_master = {
         ml_trait_water_mage_master
     }
 
-    stewardship       = 1
+    stewardship       = 5
     learning        = 1
     combat_rating = 2
 
@@ -309,7 +309,7 @@ ml_trait_fire_mage_beginner = {
         ml_trait_water_mage_master
     }
 
-    martial           = 1
+    martial           = 2
     health            = 1
     combat_rating = 1
 
@@ -317,8 +317,8 @@ ml_trait_fire_mage_beginner = {
     customizer = no
 
     command_modifier = {
-        morale_offence = 0.01
-        morale_defence = 0.01
+        morale_offence = 0.02
+        morale_defence = 0.02
     }
 }
 ml_trait_fire_mage_apprentice = {
@@ -344,7 +344,7 @@ ml_trait_fire_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    martial               = 1
+    martial               = 3
     health                = 1
     combat_rating = 1
 
@@ -352,8 +352,8 @@ ml_trait_fire_mage_apprentice = {
     customizer = no
 
     command_modifier = {
-        morale_offence = 0.01
-        morale_defence = 0.01
+        morale_offence = 0.03
+        morale_defence = 0.03
     }
 }
 ml_trait_fire_mage_expert = {
@@ -379,7 +379,7 @@ ml_trait_fire_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    martial           = 1
+    martial           = 4
     health            = 1
     combat_rating = 1
 
@@ -390,8 +390,8 @@ ml_trait_fire_mage_expert = {
     ai_rationality = -5
 
     command_modifier = {
-        morale_offence = 0.01
-        morale_defence = 0.01
+        morale_offence = 0.05
+        morale_defence = 0.05
     }
 }
 ml_trait_fire_mage_master = {
@@ -417,7 +417,7 @@ ml_trait_fire_mage_master = {
         ml_trait_water_mage_master
     }
 
-    martial           = 2
+    martial           = 5
     health            = 1
     combat_rating = 2
 
@@ -428,8 +428,8 @@ ml_trait_fire_mage_master = {
     ai_rationality = -10
 
     command_modifier = {
-        morale_offence = 0.05
-        morale_defence = 0.05
+        morale_offence = 0.1
+        morale_defence = 0.1
     }
 }
 
@@ -459,7 +459,7 @@ ml_trait_water_mage_beginner = {
         ml_trait_water_mage_master
     }
 
-    diplomacy               = 1
+    diplomacy               = 2
     learning                = 1
 
     fertility               = 0.1
@@ -491,7 +491,7 @@ ml_trait_water_mage_apprentice = {
         ml_trait_water_mage_master
     }
 
-    diplomacy               = 1
+    diplomacy               = 3
     learning                = 1
 
     fertility               = 0.1
@@ -523,7 +523,7 @@ ml_trait_water_mage_expert = {
         ml_trait_water_mage_master
     }
 
-    diplomacy               = 1
+    diplomacy               = 4
     learning                = 1
 
     fertility               = 0.15
@@ -563,7 +563,7 @@ ml_trait_water_mage_master = {
         ml_trait_water_mage_expert
     }
 
-    diplomacy               = 2
+    diplomacy               = 5
     learning                = 1
     combat_rating = 1
 
@@ -609,11 +609,11 @@ ml_trait_white_mage = {
         ml_trait_water_mage_master
     }
 
-    stewardship             = 2
-    diplomacy               = 2
-    intrigue                = 2
-    learning                = 2
-    martial                 = 2
+    stewardship             = 5
+    diplomacy               = 5
+    intrigue                = 5
+    learning                = 5
+    martial                 = 5
     combat_rating           = 5
 
     health                  = 100

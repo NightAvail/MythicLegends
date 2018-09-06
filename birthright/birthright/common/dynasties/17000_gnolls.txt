@@ -1,0 +1,20 @@
+# Gnoll dynasties      17000-17999
+
+17000 = {
+	name = Feuerscorn
+	culture = Gnoll
+}
+17001 = {
+	name = "zul Turbun"
+	culture = Gnoll
+}
+
+
+
+17500 = {	name = Greatfist	culture = Gnoll		}
+17501 = {	name = Speardance	culture = Gnoll		}
+17502 = {	name = Thunderfang	culture = Gnoll		}
+17503 = {	name = Bloodfang	culture = Gnoll		}
+17504 = {	name = Truedeath	culture = Gnoll		}
+17505 = {	name = Spearfist	culture = Gnoll		}
+17506 = {	name = Thunderfeather	culture = Gnoll		}

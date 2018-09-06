@@ -1,0 +1,274 @@
+###DWARVES - CASTLE###
+
+castle = {
+	ca_mine_1 = {
+		desc = ca_mine_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		tax_income = 3
+		ai_creation_factor = 100
+		heavy_infantry = 40
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+		culture = Dwarven
+		terrain = mountain
+		}
+	}
+	ca_mine_2 = {
+		desc = ca_mine_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_mine_1
+		gold_cost = 120
+		build_time = 547
+		tax_income = 4
+		ai_creation_factor = 99
+		heavy_infantry = 40
+		extra_tech_building_start = 1.0
+		potential = {
+		culture = Dwarven
+		terrain = mountain
+		}
+	}
+	ca_mine_3 = {
+		desc = ca_mine_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_mine_2
+		gold_cost = 200
+		build_time = 730
+		tax_income = 5
+		ai_creation_factor = 98
+		heavy_infantry = 40
+		extra_tech_building_start = 0.2
+		potential = {
+		culture = Dwarven
+		terrain = mountain
+		}
+	}
+	ca_mine_4 = {
+		desc = ca_mine_4_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_mine_3
+		gold_cost = 300
+		build_time = 1095
+		tax_income = 5
+		ai_creation_factor = 97
+		heavy_infantry = 40
+		extra_tech_building_start = 0.2
+		potential = {
+		culture = Dwarven
+		terrain = mountain
+		}
+	}
+	ca_mine_5 = {
+		desc = ca_mine_5_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		upgrades_from = ca_mine_4
+		gold_cost = 400
+		build_time = 2190
+		tax_income = 5
+		ai_creation_factor = 96
+		heavy_infantry = 40
+		extra_tech_building_start = 0.2
+		potential = {
+		culture = Dwarven
+		terrain = mountain
+		}
+	}
+	ca_mine_6 = {
+		desc = ca_mine_6_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_mine_5
+		gold_cost = 500
+		build_time = 2190
+		tax_income = 8
+		ai_creation_factor = 96
+		heavy_infantry = 40
+		extra_tech_building_start = 0.2
+		potential = {
+		culture = Dwarven
+		terrain = mountain
+		}
+	}
+
+###Elves - treant grove, mage tower in forest
+	
+	ca_treant_grove_1 = {
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 300
+		build_time = 200
+		tax_income = -1
+		ai_creation_factor = 100
+		knights = 30
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+		culture = Elven
+		terrain = forest
+		}
+	}
+	ca_treant_grove_2 = {
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_treant_grove_1
+		gold_cost = 300
+		build_time = 365
+		tax_income = -1
+		ai_creation_factor = 99
+		knights = 30
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	ca_treant_grove_3 = {
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_treant_grove_2
+		gold_cost = 300
+		build_time = 586
+		tax_income = -1
+		ai_creation_factor = 98
+		knights = 30
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	
+	ca_mage_tower_1 = {
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		gold_cost = 300
+		build_time = 200
+		tax_income = -1
+		ai_creation_factor = 100
+		knights = 25
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+		culture = Elven
+		terrain = forest
+		}
+	}
+	ca_mage_tower_2 = {
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_mage_tower_1
+		gold_cost = 300
+		build_time = 365
+		tax_income = -1
+		ai_creation_factor = 99
+		knights = 30
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	ca_mage_tower_3 = {
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_mage_tower_2
+		gold_cost = 500
+		build_time = 586
+		tax_income = -1
+		ai_creation_factor = 98
+		knights = 45
+		extra_tech_building_start = 0.2
+	}
+	ca_mage_tower_4 = {
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_mage_tower_3
+		gold_cost = 800
+		build_time = 957
+		tax_income = -1
+		ai_creation_factor = 98
+		knights = 50
+		extra_tech_building_start = 10.0 # Never get at start of game
+	}
+	
+	
+###	Orog - warworks
+	ca_orog_1 = {		#Coal Mine
+		desc = ca_orog_1_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		gold_cost = 100
+		build_time = 365
+		ai_creation_factor = 100
+
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.15
+		heavy_infantry = 40
+		
+		extra_tech_building_start = 10.0 # Never get at start of game
+		potential = {
+		culture = Orog
+		terrain = mountain
+		}
+	}
+	ca_orog_2 = {		#Rusty Ironworks
+		desc = ca_orog_2_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_orog_1
+		gold_cost = 120
+		build_time = 547
+		
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.15
+		heavy_infantry = 40
+				
+		ai_creation_factor = 99
+		extra_tech_building_start = 1.0
+	}
+	ca_orog_3 = {	#Blacksmoke Furnace
+		desc = ca_orog_3_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		prerequisites = { ca_wall_2 }
+		upgrades_from = ca_orog_2
+		gold_cost = 200
+		build_time = 730
+		
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.15
+		heavy_infantry = 40
+		
+		ai_creation_factor = 98
+		extra_tech_building_start = 0.2
+	}
+	ca_orog_4 = {	#Molten Pits
+		desc = ca_orog_4_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_orog_3
+		gold_cost = 300
+		build_time = 1095
+		
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.15
+		heavy_infantry = 40
+		
+		ai_creation_factor = 97
+		extra_tech_building_start = 0.2
+	}
+	ca_orog_5 = {	#Steamfoundry
+		desc = ca_orog_5_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		upgrades_from = ca_orog_4
+		gold_cost = 400
+		build_time = 2190
+		
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.15
+		heavy_infantry = 40
+		
+		ai_creation_factor = 96
+		extra_tech_building_start = 0.2
+	}
+	ca_mine_6 = {	#Orichalcum mine
+		desc = ca_orog_6_desc
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_orog_5
+		gold_cost = 500
+		build_time = 2190
+		
+		heavy_infantry_offensive = 0.25
+		heavy_infantry_defensive = 0.15
+		heavy_infantry = 40
+		
+		ai_creation_factor = 96
+		extra_tech_building_start = 0.2
+	}
+	
+}

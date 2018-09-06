@@ -1,0 +1,357 @@
+namespace = battleambition
+
+# Events for completing the Show Bravery Ambition - by JGCrusader
+# 0 - Show bravery (generic)
+# 1 - Show bravery against infidels (generic)
+# 2 - Robert the Bruce vs. Henry de Bohun
+# 3 - Lucius Vorenus
+# 4 - Titus Pullo
+# 5 - Tyrion Lannister
+# 6 - Tyrion Lannister charge
+# 7 - Homeland Defense
+# 8 - Night Attack (Siege)
+# 9 - Riding when ill
+#10 - Diomedes
+#11 - Beowulf
+#12 - Taillefer
+#13 - Monty Python Concorde (Easter Egg)
+#14 - Don Quixote (Easter Egg)
+
+# Show bravery (generic)
+character_event = {
+	id = battleambition.0
+	desc = "battleambition.0.desc"
+	picture = "GFX_evt_battle"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ambition = obj_lead_troops
+		in_command = yes
+		is_alive = yes
+		OR = { 
+			war = yes
+			any_liege = {
+				war = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 1.5
+			trait = brave
+		}
+		
+		modifier = {
+			factor = 1.35
+			trait = zealous
+		}
+		
+		modifier = {
+			factor = 1.45
+			trait = strong
+		}
+		
+		modifier = {
+			factor = 2.0
+			trait = imbecile
+		}
+		
+		modifier = {
+			OR = {
+				trait = genius
+				trait = quick
+			}
+			factor = 1.15
+		}
+		
+		modifier = {
+			factor = 2.5
+			OR = {
+				trait = lunatic
+				trait = possessed
+			}
+		}
+		
+		modifier = {
+			OR = {
+				trait = weak
+				trait = inbred
+			}
+			factor = 0.5
+		}
+		
+		modifier = {
+			OR = {
+				trait = dwarf
+				trait = hunchback
+			}
+			factor = 0.25
+		}
+		
+		modifier = {
+			factor = 1.1
+			OR = {
+				trait = flamboyant_schemer
+				trait = detached_priest
+			}
+		}
+		
+		modifier = {
+			factor = 1.15
+			OR = {
+				trait = misguided_warrior
+				trait = intricate_webweaver
+				trait = elusive_shadow
+				trait = martial_cleric
+			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			OR = {
+				trait = tough_soldier
+				trait = scholarly_theologian
+				trait = mastermind_theologian
+			}
+		}
+		
+		modifier = {
+			factor = 1.35
+			OR = {
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			martial = 4
+		}
+		
+		modifier = {
+			factor = 1.15
+			martial = 6
+		}
+		
+		modifier = {
+			factor = 1.15
+			martial = 8
+		}
+		
+		modifier = {
+			factor = 1.1
+			martial = 10
+		}
+		
+		modifier = {
+			factor = 1.1
+			martial = 12
+		}
+		
+		modifier = {
+			factor = 1.05
+			martial = 14
+		}
+		
+		modifier = {
+			factor = 1.05
+			martial = 16
+		}
+		
+		modifier = {
+			factor = 0.55
+			is_ill = yes
+		}
+		
+		modifier = {
+			factor = 0.85
+			health_traits = 1
+		}
+			
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		add_trait = veteran
+	}
+}
+
+# Show bravery against infidels (generic)
+character_event = {
+	id = battleambition.1
+	desc = "battleambition.1.desc"
+	picture = "GFX_evt_pale_rider"
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ambition = obj_lead_troops_infidel
+		in_command = yes
+		is_alive = yes
+		OR = { 
+			war = yes
+			any_liege = {
+				war = yes
+			}
+		}
+		OR = {
+			any_current_enemy = {
+				NOT = { religion_group = ROOT }
+			}
+		
+			any_liege = {
+				any_current_enemy = {
+					NOT = { religion_group = ROOT }
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 1.5
+			trait = brave
+		}
+		
+		modifier = {
+			factor = 1.35
+			trait = zealous
+		}
+		
+		modifier = {
+			factor = 1.45
+			trait = strong
+		}
+		
+		modifier = {
+			factor = 2.0
+			trait = imbecile
+		}
+		
+		modifier = {
+			OR = {
+				trait = genius
+				trait = quick
+			}
+			factor = 1.15
+		}
+		
+		modifier = {
+			factor = 2.5
+			OR = {
+				trait = lunatic
+				trait = possessed
+			}
+		}
+		
+		modifier = {
+			OR = {
+				trait = weak
+				trait = inbred
+			}
+			factor = 0.5
+		}
+		
+		modifier = {
+			OR = {
+				trait = dwarf
+				trait = hunchback
+			}
+			factor = 0.25
+		}
+		
+		modifier = {
+			factor = 1.1
+			OR = {
+				trait = flamboyant_schemer
+				trait = detached_priest
+			}
+		}
+		
+		modifier = {
+			factor = 1.15
+			OR = {
+				trait = misguided_warrior
+				trait = intricate_webweaver
+				trait = elusive_shadow
+				trait = martial_cleric
+			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			OR = {
+				trait = tough_soldier
+				trait = scholarly_theologian
+				trait = mastermind_theologian
+			}
+		}
+		
+		modifier = {
+			factor = 1.35
+			OR = {
+				trait = skilled_tactician
+				trait = brilliant_strategist
+			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			martial = 4
+		}
+		
+		modifier = {
+			factor = 1.15
+			martial = 6
+		}
+		
+		modifier = {
+			factor = 1.15
+			martial = 8
+		}
+		
+		modifier = {
+			factor = 1.1
+			martial = 10
+		}
+		
+		modifier = {
+			factor = 1.1
+			martial = 12
+		}
+		
+		modifier = {
+			factor = 1.05
+			martial = 14
+		}
+		
+		modifier = {
+			factor = 1.05
+			martial = 16
+		}
+		
+		modifier = {
+			factor = 0.55
+			is_ill = yes
+		}
+		
+		modifier = {
+			factor = 0.85
+			health_traits = 1
+		}
+			
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		remove_trait = veteran
+		add_trait = champion
+	}
+}
+

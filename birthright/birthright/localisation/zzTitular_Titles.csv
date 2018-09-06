@@ -1,0 +1,109 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+e_gorgons_crown;Gorgon's Crown;Gorgon's Crown;Gorgon's Crown;;Gorgon's Crown;;;;;;;;;x
+e_gorgons_crown_adj;Gorgon's;;Gorgons;;;;;;;;;;;x
+e_aelvinwode;The Aelvinwode;;;;;;;;;;;;;x
+e_aelvinwode_adj;Aelvinwodian;;;;;;;;;;;;;x
+e_north;Kingdom of The North;;;;;;;;;;;;;x
+e_north_adj;Northern;;;;;;;;;;;;;x
+e_stonecrowns;Kingdom of The Stonecrowns;;;;;;;;;;;;;x
+e_stonecrowns_adj;Stonecrowner;;;;;;;;;;;;;x
+e_cerilia;Cerilia;;;;;;;;;;;;;x
+e_cerilia_adj;Cerilian;;;;;;;;;;;;;x
+e_shadowworld;Shadowworld;;;;;;;;;;;;;x
+e_shadowworld_adj;Shadowworld;;;;;;;;;;;;;x
+k_imperial_temple;Imperial Temple;;;;;;;;;;;;;x
+k_imperial_temple_adj;Imperial Temple;;;;;;;;;;;;;x
+k_avanil;Principality of Avanil;;;;;;;;;;;;;x
+k_avanil_adj;Avanese;;;;;;;;;;;;;x
+k_boeruine;Archduchy of Boeruine;;;;;;;;;;;;;x
+k_boeruine_adj;Boeruinian;;;;;;;;;;;;;x
+k_ghoere;Grand Barony of Ghoere;;;;;;;;;;;;;x
+k_ghoere_adj;Ghoerian;;;;;;;;;;;;;x
+k_diemed;Archduchy of Diemed;;;;;;;;;;;;;x
+k_diemed_adj;Diemedian;;;;;;;;;;;;;x
+k_alamie;Archduchy of Alamie;;;;;;;;;;;;;x
+k_alamie_adj;Alamian;;;;;;;;;;;;;x
+k_taeghas;Archduchy of Taeghas;;;;;;;;;;;;;x
+k_taeghas_adj;Taeghasian;;;;;;;;;;;;;x
+k_aerenwe;Archduchy of Aerenwe;;;;;;;;;;;;;x
+k_aerenwe_adj;Aerenwian;;;;;;;;;;;;;x
+k_mhoried;Archduchy of Mhoried;;;;;;;;;;;;;x
+k_mhoried_adj;Mhoriedian;;;;;;;;;;;;;x
+k_osoerde;Archduchy of Osoerde;;;;;;;;;;;;;x
+k_osoerde_adj;Osoerdian;;;;;;;;;;;;;x
+k_elinie;Archduchy of Elinie;;;;;;;;;;;;;x
+k_elinie_adj;Elinean;;;;;;;;;;;;;x
+k_cariele;Archduchy of Cariele;;;;;;;;;;;;;x
+k_cariele_adj;Carielian;;;;;;;;;;;;;x
+k_talinie;Archduchy of Talinie;;;;;;;;;;;;;x
+k_talinie_adj;Talinian;;;;;;;;;;;;;x
+k_trautha;Elven Tribe of Trautha;;;;;;;;;;;;;x
+k_trautha_adj;Trauthian;;;;;;;;;;;;;x
+k_tuarhievel_dhoesone;Tuarhievel & Dhoesone;;;;;;;;;;;;;x
+k_tuarhievel_dhoesone_adj;Tuarhievelian & Dhoesonian;;;;;;;;;;;;;x
+k_serpent;Isle of the Serpent;;;;;;;;;;;;;x
+k_duzhumazabik;Duzhumazabik;;;;;;;;;;;;;x
+k_duzhumazabik_adjDuzhumazabikan;;;;;;;;;;;;;x
+k_yeninskiy;Yeninskiy;Yeninskiy;Yeninskiy;;Yeninskiy;;;;;;;;;x
+k_yeninskiy_adj;Yeninskian;;;;;;;;;;;;;x
+k_min_dhousai;Min Dhousai;Min Dhousai;Min Dhousai;;Min Dhousai;;;;;;;;;x
+k_min_dhousai_adj;Min Dhousaian;;min dhousaisch;;;;;;;;;;;x
+k_aftane;Aftane;Aftane;Aftane;;Aftane;;;;;;;;;x
+k_aftane_adj;Aftanian;;Aftanisch;;;;;;;;;;;x
+k_djafra;Djafra;Djafra;Djafra;;Djafra;;;;;;;;;x
+k_djafra_adj;Djafrian;;Djafrisch;;;;;;;;;;;x
+k_khourane;Khourane;Khourane;Khourane;;Khourane;;;;;;;;;x
+k_khourane_adj;Khouranian;;khouranisch;;;;;;;;;;;x
+k_mueden_republic;Müden;Müden;Müden;;Müden;;;;;;;;;x
+k_mueden_republic_adj;Müdenite;;Müdener;;;;;;;;;;;x
+k_berhagen;Berhagen;Berhagen;Berhagen;;Berhagen;;;;;;;;;x
+k_berhagen_adj;Berhagenian;;Berhagenisch;;;;;;;;;;;x
+k_rheulgard;League of Rheulgard;League of Rheulgard;League of Rheulgard;;League of Rheulgard;;;;;;;;;x
+k_rheulgard_adj;Rheulgardian;;rheulgardisch;;;;;;;;;;;x
+k_magian;The Magian's Domain;Magian;Magian;;Magian;;;;;;;;;x
+k_magian_adj;Magian;;Magianisch;;;;;;;;;x
+k_raven;The Raven;The Raven;The Raven;;The Raven;;;;;;;;;x
+k_raven_adj;Raven;;Ravenisch;;;;;;;;;x
+k_binsada;Binsada;Binsada;Binsada;;Binsada;;;;;;;;;x
+k_binsada_adj;Binsadian;;binsadisch;;;;;;;;;;;x
+k_binsada_titular;Binsada;Binsada;Binsada;;Binsada;;;;;;;;;x
+k_binsada_titular_adj;Binsadian;;binsadisch;;;;;;;;;;;x
+k_zikala;Zikala;Zikala;Zikala;;Zikala;;;;;;;;;x
+k_zikala_adj;Zikalian;;zikalisch;;;;;;;;;;;x
+k_sphinx;The Sphinx;The Sphinx;The Sphinx;;The Sphinx;;;;;;;;;x
+k_sphinx_adj;Sphinxian;;Sphinxisch;;;;;;;;;;;x
+k_vampires_hold;Vampires Hold;Vampires Hold;Vampires Hold;;Vampires Hold;;;;;;;;;x
+k_vampires_hold_adj;Vampirian;;Vampirish;;;;;;;;;;;x
+k_zoloskaya;Zoloskaya;Zoloskaya;Zoloskaya;;Zoloskaya;;;;;;;;;x
+k_zoloskaya_adj;Zoloskayian;;zoloskayisch;;;;;;;;;;;x
+k_kal_kalathor;Kal Kalathor;Kal Kalathor;Kal Kalathor;;Kal Kalathor;;;;;;;;;x
+k_kal_kalathor_adj;Kal Kalathorian;;kal kalathorisch;;;;;;;;;;;x
+d_drake;Drake's Domain;;;;;;;;;;;;;x
+d_imperial_chamberlain;Anuire;;;;;;;;;;;;;x
+d_surzek;Surzek;Surzek;Surzek;;Surzek;;;;;;;;;x
+d_surzek_adj;Surzekian;;surzekisch;;;;;;;;;;;x
+d_boeruine_trading_guild;Boeruine Trading Guild;;;;;;;;;;;;;x
+c_royal_college;Royal College of Sorcery;;;;;;;;;;;;;x
+k_cwmb_bheinn;Cwmb Bheinn;Cwmb Bheinn;Cwmb Bheinn;;Cwmb Bheinn;;;;;;;;;x
+k_cwmb_bheinn_adj;Cwmb Bheinnian;;cwmb bheinnisch;;;;;;;;;;;x
+k_rhuannach;Rhuannach;Rhuannach;Rhuannach;;Rhuannach;;;;;;;;;x
+k_rhuannach_adj;Rhuannachian;;rhuannachisch;;;;;;;;;;;x
+d_princes_pride;Prince's Pride;;;;;;;;;;;;;x
+k_kozlovnyy;Kozlovnyy;Kozlovnyy;Kozlovnyy;;Kozlovnyy;;;;;;;;;x
+k_kozlovnyy_adj;Kozlovnyian;;kozlovnyisch;;;;;;;;;;;x
+k_white_witch;White Witch;White Witch;White Witch;;White Witch;;;;;;;;;x
+k_black_spear_tribes;Black Spear Tribes;Black Spear Tribes;Black Spear Tribes;;Black Spear Tribes;;;;;;;;;x
+k_black_spear_tribes_adj;Black Spear Tribesian;;black spear tribesisch;;;;;;;;;;;x
+k_khinad_ghuel;Khinad-Ghül;;Khinad-Ghül;;;;;;;;;;;x
+k_khinad_ghuel_adj;Khinad-Ghülian;;Khinad-Ghülisch;;;;;;;;;;;x
+k_ariya;Ariya;;;;;;;;;;;;;x
+k_ariya_adj;Ariyan;;;;;;;;;;;;;x
+k_urga_zai;Urga-Zai;;;;;;;;;;;;;x
+k_urga_zai_adj;Urga-Zai;;;;;;;;;;;;;x
+d_gold_coast_coster;Gold Coast Coster;;;;;;;;;;;;;x
+d_gold_coast_coster_adj;Gold Coast Coster;;;;;;;;;;;;;x
+d_djafran_merchant_league;Djafran Merchant League;;;;;;;;;;;;;x
+d_djafran_merchant_league_adj;Djafran Merchant League;;;;;;;;;;;;;x
+d_torsketly;Torsketly;;;;;;;;;;;;;x
+k_mairada;Mairada;;;;;;;;;;;;;x
+d_mairada_trade_company;Mairada Trade Company;;;;;;;;;;;;;x

@@ -1,0 +1,2528 @@
+###INDEX##############
+###1-1000 Anuirean####
+###3001-3500 Elven####
+######################
+#MISCELLANEOUS DYNASTIES 5501-9000#
+###########################
+###########################
+###########################
+
+
+##ANUIREAN DYNASTIES 1-1000#
+
+#The First Andu, Roele Line of Emperors, the Princes of Avanil and The Avar cadets#
+
+1={
+	name=Andu
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 27
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+2={
+	name=Roele
+	culture=Anuirean
+	used_for_random=no
+	can_appear=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 23
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+3={
+	name=Avan
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 0
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+4={
+	name=Avar
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 19
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Bhrein#
+5={
+name="Cale"
+culture=Anuirean
+used_for_random=no
+}
+#Caulnor#
+6={
+name="Caulnor"
+culture=Anuirean
+used_for_random=no
+}
+#Duriene#
+7={
+name="Daerian"
+culture=Anuirean
+used_for_random=no
+}
+#Nentril#
+#Bayside#
+8 = {
+name="Nentril"
+culture=Anuirean
+used_for_random=no
+}
+#Taliern#
+9={
+	name=Rowanael
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 33
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+#########################
+##The Duchy of Mhoried###
+#########################
+10={
+	name=Mhoried
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 4
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Byrnnor#
+11={
+name="Ceried"
+culture=Anuirean
+used_for_random=no
+}
+#Dhalsiel#
+12={
+name="Dhalsiel"
+culture=Anuirean
+used_for_random=no
+}
+#Winoene#
+13={
+name="Winoene"
+culture=Anuirean
+used_for_random=no
+}
+
+#############################
+##The Archduchy of Boeruine##
+#############################
+
+14={
+	name=Boeruine
+	culture=Anuirean
+	used_for_random=no
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 1
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Bacaele#
+15={
+name="Valanthas"
+culture=Anuirean
+used_for_random=no
+}
+#Calant#
+16={
+name="Mhoen"
+culture=Anuirean
+used_for_random=no
+}
+#Dhalaese#
+17={
+name="Dhalaese"
+culture=Anuirean
+used_for_random=no
+}
+#Fhoruile#
+18={
+name="Fhoruile"
+culture=Anuirean
+used_for_random=no
+}
+#Nieter#
+19={
+name="Stone-axe"
+culture=Anuirean
+used_for_random=no
+}
+#Redoubt#
+20={
+name="Oeroede"
+culture=Anuirean
+used_for_random=no
+}
+#Rivien#
+21={
+name="Tilien"
+culture=Anuirean
+used_for_random=no
+}
+#Tariene#
+22={
+name="Tariene"
+culture=Anuirean
+used_for_random=no
+}
+########################
+##The Chamberlain Line##
+########################
+23={
+	name=Dosiere
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 18
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#######################
+##Free-City of Endier##
+#######################
+24={
+	name=Kaliender
+	culture=Brecht
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 32
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+######################
+##Free-City of Ilien##
+######################
+25={
+	name=Aglondier
+	culture=Anuirean
+	used_for_random=no
+	can_appear=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 20
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+####################
+##Duchy of Tuornen##
+####################
+26={
+	name=Flaertes
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 5
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+#Alamsreft#
+27={
+name="Carpenter"
+culture=Anuirean
+used_for_random=no
+}
+#Elevesnemiere#
+28={
+name="Hunter"
+culture=Anuirean
+used_for_random=no
+}
+#Ghonallison#
+29={
+name="Ghonallison"
+culture=Anuirean
+used_for_random=no
+}
+#Haesrien#
+30={
+name="Haesrien"
+culture=Anuirean
+used_for_random=no
+}
+#Moonsedge#
+31={
+name="Redstaff"
+culture=Anuirean
+used_for_random=no
+}
+#Nabhriene#
+32={
+name="Nabhriene"
+culture=Anuirean
+used_for_random=no
+}
+#Pechalinn#
+33={
+name="Pechalinn"
+culture=Anuirean
+used_for_random=no
+}
+#Tuor's Hold#
+34={
+	name=Tuor
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 24
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+####################
+##Barony of Ghoere##
+####################
+
+35={
+	name=Tael
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 2
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Achiese#
+36={
+name="Pelien"
+culture=Anuirean
+used_for_random=no
+}
+#Bheline#
+37={
+name="Cardael"
+culture=Anuirean
+used_for_random=no
+}
+#Conalier#
+38={
+name="Bellerran"
+culture=Anuirean
+used_for_random=no
+}
+#Danaroene#
+39={
+name="Gwynaard"
+culture=Anuirean
+used_for_random=no
+}
+#Ghiere#
+40={
+name="Arlannis"
+culture=Anuirean
+used_for_random=no
+}
+#Rhumannen#
+41={
+name="Saerel"
+culture=Anuirean
+used_for_random=no
+}
+#Thoralinar#
+42={
+name="Wiermaeon"
+culture=Anuirean
+used_for_random=no
+}
+#Tireste#
+43={
+name="Vathormane"
+culture=Anuirean
+used_for_random=no
+}
+#Tornilen#
+44={
+name="Khellevien"
+culture=Anuirean
+used_for_random=no
+}
+######################
+##Barony of Dhoesone##
+######################
+45={
+	name=Dhoesone
+	culture=Anuirean
+	used_for_random=no
+		coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 6
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Bjondrig#
+46={
+name="Bjondrig"
+culture=Anuirean
+used_for_random=no
+}
+#Dharilien#
+#Hidaele#
+47={
+name="Dhariel"
+culture=Anuirean
+used_for_random=no
+}
+#Giant Fastness#
+48={
+name="Redwolf"
+culture=Anuirean
+used_for_random=no
+}
+#Nolien#
+49={
+name="Nolien"
+culture=Anuirean
+used_for_random=no
+}
+#Riveside#
+50={
+name="Riven"
+culture=Anuirean
+used_for_random=no
+}
+#Ruidewash#
+51={
+name="Holst"
+culture=Anuirean
+used_for_random=no
+}
+#Sidhuire#
+52={
+name="Huire"
+culture=Anuirean
+used_for_random=no
+}
+#Tradebhein#
+53={
+name="Gaskard"
+culture=Anuirean
+used_for_random=no
+}
+#####################
+##Barony of Roesone##
+#####################
+54={
+	name=Roesone
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 7
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Abbautuor#
+55={
+name="Raemel"
+culture=Anuirean
+used_for_random=no
+}
+#Bellam#
+56={
+	name=Bellamie
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 31
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Duerlin#
+57={
+name="Ritter"
+culture=Anuirean
+used_for_random=no
+}
+#Edlin#
+58={
+name="Bjording"
+culture=Anuirean
+used_for_random=no
+}
+#Ghoried#
+59={
+name="Denoered"
+culture=Anuirean
+used_for_random=no
+}
+#########################
+##Grand Duchy of Diemed##
+#########################
+60={
+	name=Diem
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 3
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Ciliene#
+61={
+name="Kharnmoin"
+culture=Anuirean
+used_for_random=no
+}
+#Duene#
+#Seamist#
+62={
+name="Duene"
+culture=Anuirean
+used_for_random=no
+}
+#Moere#
+63={
+name="Geren"
+culture=Anuirean
+used_for_random=no
+}
+#Tier#
+64={
+name="Tier"
+culture=Anuirean
+used_for_random=no
+}
+######################
+##Kingdom of Aerenwe##
+######################
+65={
+	name=Swordwraith
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 8
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Halried#
+66={
+name="Halried"
+culture=Anuirean
+used_for_random=no
+}
+
+########################
+##Theocracy of Medoere##
+########################
+67={
+	name=Enlien
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 9
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+######################
+##Duchy of Brosengae##
+######################
+68={
+	name=Mierelen
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 10
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+##########################
+##High County of Taeghas##
+##########################
+
+69={
+	name=Khorien
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 11
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Bhaine#
+70={
+name="Bhaine"
+culture=Anuirean
+used_for_random=no
+}
+#Brosien#
+71={
+name="Sloere"
+culture=Anuirean
+used_for_random=no
+}
+#Islien#
+#Fairfield#
+72={
+	name=Isilviere
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 26
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+####################
+##Duchy of Talinie##
+####################
+73={
+	name=Donalls
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 12
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Freestead#
+74={
+name="Anviras"
+culture=Anuirean
+used_for_random=no
+}
+#Greensward#
+75={
+name="Riedhie"
+culture=Anuirean
+used_for_random=no
+}
+#Ice Haven#
+76={
+name="Sanford-Myles"
+culture=Anuirean
+used_for_random=no
+}
+#Lindholme#
+77={
+name="Deadwater"
+culture=Anuirean
+used_for_random=no
+}
+#Seaport#
+78={
+name="Murdoc"
+culture=Anuirean
+used_for_random=no
+}
+#Serimset#
+79={
+name="Dalmelling"
+culture=Anuirean
+used_for_random=no
+}
+#Winter's Deep#
+80={
+name="Matheson"
+culture=Anuirean
+used_for_random=no
+}
+
+####################
+##Duchy of Cariele##
+####################
+
+81={
+	name=Gladanil
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 21
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Mountainsedge#
+82={
+name="Baelcourt"
+culture=Anuirean
+used_for_random=no
+}
+#Mhellievine#
+83={
+name="Caelthein"
+culture=Anuirean
+used_for_random=no
+}
+
+###################
+##Duchy of Alamie##
+###################
+84={
+	name=Alam
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 13
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Alaroine#
+85={
+name="Alaroine"
+culture=Anuirean
+used_for_random=no
+}
+#Hildon#
+86={
+name="Maellenholme"
+culture=Anuirean
+used_for_random=no
+}
+#HildonBefore#
+87={
+name="Maescross"
+culture=Anuirean
+used_for_random=no
+}
+#Laraeth#
+88={
+name="Laraeth"
+culture=Anuirean
+used_for_random=no
+}
+#Maesford#
+89={
+name="Vyrwell"
+culture=Anuirean
+used_for_random=no
+}
+#Traiward#
+90={
+name="Traiward"
+culture=Anuirean
+used_for_random=no
+}
+
+###################
+##Duchy of Elinie##
+###################
+
+91={
+	name="ibn Daouta"
+	culture=Khinasi
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 22
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+####################
+##Duchy of Osoerde##
+####################
+92={
+	name=Raenech
+	culture=Anuirean
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 30
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Moergen Manor#
+93={
+	name=Moergen
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 14
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Algael#
+94={
+name="Algael"
+culture=Anuirean
+used_for_random=no
+}
+#Ghalliere#
+95={
+name="Ansien"
+culture=Anuirean
+used_for_random=no
+}
+#Gulfport#
+96={
+name="Almondier"
+culture=Anuirean
+used_for_random=no
+}
+#Spirit's End#
+97={
+name="Bindier"
+culture=Anuirean
+used_for_random=no
+}
+#Sunken Land#
+98={
+name="Veldaene"
+culture=Anuirean
+used_for_random=no
+}
+#####################
+##Duchy of Coeranys##
+#####################
+
+99={
+	name=Cariele
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 15
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Duornil#
+100={
+name="Duorn"
+culture=Anuirean
+used_for_random=no
+}
+#Ranien#
+101={
+name="Raniel"
+culture=Anuirean
+used_for_random=no
+}
+
+102={
+name="Armiendin"
+culture=Anuirean
+used_for_random=no
+}
+
+103={
+name="Maricoere"
+culture=Anuirean
+used_for_random=no
+}
+
+104={
+name="Innis"
+culture=Anuirean
+used_for_random=no
+}
+
+105={
+name="Braeloren"
+culture=Anuirean
+used_for_random=no
+}
+
+106={
+name="Coere"
+culture=Anuirean
+used_for_random=no
+}
+
+107={
+name="Bhailie"
+culture=Anuirean
+used_for_random=no
+}
+
+108={
+name="Braedonal"
+culture=Elven
+used_for_random=no
+}
+
+109={
+name="Jheron"
+culture=Anuirean
+used_for_random=no
+}
+
+110={
+name="Nichaleir"
+culture=Anuirean
+used_for_random=no
+}
+
+111={
+name="Bavent"
+culture=Anuirean
+}
+
+112={
+name="Skirvin"
+culture=Anuirean
+used_for_random=no
+}
+
+113={
+name="Galiene"
+culture=Anuirean
+used_for_random=no
+}
+
+114={
+name="Brosuine"
+culture=Anuirean
+used_for_random=no
+}
+
+115={
+name="Coriel"
+culture=Anuirean
+used_for_random=no
+}
+
+116={
+name="of Shieldhaven"
+culture=Anuirean
+used_for_random=no
+}
+
+117={
+name="Noelon"
+culture=Anuirean
+used_for_random=no
+}
+
+118={
+name="Enderiane"
+culture=Anuirean
+used_for_random=no
+}
+
+119={
+name="Ghieste"
+culture=Anuirean
+used_for_random=no
+}
+
+120={
+name="Michale"
+culture=Anuirean
+used_for_random=no
+}
+
+121={
+name="Aernghar"
+culture=Anuirean
+used_for_random=no
+}
+
+122={
+name="Baehomaes"
+culture=Anuirean
+used_for_random=no
+}
+
+123={
+	name=Aglondier-Tilgentor
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 25
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+124={
+name="Ondier"
+culture=Anuirean
+used_for_random=no
+}
+
+125={
+name="Hestean"
+culture=Anuirean
+used_for_random=no
+}
+
+126={
+name="Nielens"
+culture=Anuirean
+used_for_random=no
+}
+
+127={
+	name=Coeran
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 16
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+128={
+name="Bireon"
+culture=Anuirean
+used_for_random=no
+}
+
+129={
+name="Eliniere"
+culture=Anuirean
+used_for_random=no
+}
+
+130={
+name="Gregarin"
+culture=Anuirean
+used_for_random=no
+}
+
+131={
+name="Leonidan"
+culture=Anuirean
+used_for_random=no
+}
+
+132={
+name="Peracain"
+culture=Anuirean
+used_for_random=no
+}
+
+133={
+name="Gryphon"
+culture=Anuirean
+used_for_random=no
+}
+
+134={
+name="Pevrel"
+culture=Anuirean
+used_for_random=no
+}
+
+135={
+name="Cwllmie"
+culture=Anuirean
+used_for_random=no
+}
+
+136={
+name="Aneirin"
+culture=Anuirean
+used_for_random=no
+}
+
+137={
+name="Blackhart"
+culture=Anuirean
+used_for_random=no
+}
+
+138={
+name="Charie"
+culture=Anuirean
+used_for_random=no
+}
+
+139={
+name="Uluine"
+culture=Anuirean
+used_for_random=no
+}
+
+140={
+name="Rieste"
+culture=Anuirean
+used_for_random=no
+}
+
+141={
+name="Andwar"
+culture=Anuirean
+used_for_random=no
+}
+
+142={
+name="Haenele"
+culture=Anuirean
+used_for_random=no
+}
+
+143={
+name="Thaliere"
+culture=Anuirean
+used_for_random=no
+}
+
+144={
+name="Casterie"
+culture=Anuirean
+used_for_random=no
+}
+
+145={
+name="Banneren"
+culture=Anuirean
+used_for_random=no
+}
+
+146={
+	name=Dannis
+	culture=Anuirean
+	used_for_random=no
+	can_appear=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 29
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+147={
+name="Talinie"
+culture=Anuirean
+used_for_random=no
+can_appear=no
+}
+
+148={
+name="Armara"
+culture=Anuirean
+used_for_random=no
+}
+
+149={
+	name=Edrandson
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 28
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+150={
+name="Norvil"
+culture=Anuirean
+used_for_random=no
+}
+
+151={
+name="Bellannon"
+culture=Anuirean
+used_for_random=no
+}
+
+152={
+name="Kilmartin"
+culture=Anuirean
+used_for_random=no
+}
+
+153={
+name="Cairbre"
+culture=Anuirean
+used_for_random=no
+}
+
+154={
+name="Broweleit"
+culture=Anuirean
+used_for_random=no
+}
+
+155={
+name="Bhalaene"
+culture=Anuirean
+used_for_random=no
+}
+
+156={
+name="Haensen"
+culture=Anuirean
+used_for_random=no
+}
+
+157={
+name="Ranien"
+culture=Anuirean
+used_for_random=no
+}
+
+158={
+name="Graysong"
+culture=Anuirean
+used_for_random=no
+}
+
+159={
+name="Bannieren"
+culture=Anuirean
+used_for_random=no
+}
+
+160={
+name="Deubarth"
+culture=Anuirean
+used_for_random=no
+}
+
+161={
+name="Lavalier"
+culture=Anuirean
+used_for_random=no
+}
+
+162={
+name="Borthein"
+culture=Anuirean
+used_for_random=no
+}
+
+163={
+name="Kusor"
+culture=Anuirean
+used_for_random=no
+}
+
+164={
+name="Bherenstae"
+culture=Anuirean
+used_for_random=no
+}
+
+165={
+name="Toralar"
+culture=Anuirean
+used_for_random=no
+}
+
+166={
+name="Deseirain"
+culture=Anuirean
+used_for_random=no
+}
+
+##################
+#Colony of Mieres#
+##################
+
+#Seaward#
+167={
+	name=Vaumel
+	culture=Anuirean
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 0 texture_internal = 17
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+#Dhalier#
+168={
+name="Sonnatier"
+culture=Anuirean
+used_for_random=no
+}
+#Ghaele#
+169={
+name="Ghaeles"
+culture=Anuirean
+used_for_random=no
+}
+#Brenlie#
+170={
+name="Brenlier"
+culture=Anuirean
+used_for_random=no
+}
+#Crenier#
+171={
+name="Crenier"
+culture=Anuirean
+used_for_random=no
+}
+#Lathier#
+172={
+name="Rouine"
+culture=Anuirean
+used_for_random=no
+}
+
+173={
+name="Karitina"
+culture=Khinasi
+used_for_random=no
+}
+174={
+name="Gavinhorne"
+culture=Anuirean
+used_for_random=no
+}
+175={
+name="Orinthar"
+culture=Anuirean
+used_for_random=no
+}
+176={
+name="Soeran"
+culture=Anuirean
+used_for_random=no
+}
+177={
+name="Talien"
+culture=Anuirean
+used_for_random=no
+}
+178={
+name="Hlarsson"
+culture=Rjurik
+used_for_random=no
+}
+179={
+name="el-Tureem"
+culture=Khinasi
+used_for_random=no
+}
+180={
+name="Colbaer"
+culture=Anuirean
+used_for_random=no
+}
+181={
+name="Ravensblood"
+culture=Brecht
+used_for_random=no
+}
+182={
+name="Moreliar"
+culture=Anuirean
+used_for_random=no
+}
+183={
+name="Berran"
+culture=Anuirean
+used_for_random=no
+}
+184={
+name="Fussen"
+culture=Anuirean
+used_for_random=no
+}
+185={
+name="Xaviere"
+culture=Anuirean
+used_for_random=no
+}
+186={
+name="Basara"
+culture=Anuirean
+used_for_random=no
+}
+187={
+name="Cavaene"
+culture=Anuirean
+used_for_random=no
+}
+188={
+name="Tym"
+culture=Anuirean
+}
+189={
+name="Abaten"
+culture=Anuirean
+}
+190={
+name="Ramela"
+culture=Anuirean
+}
+191={
+name="Vis"
+culture=Anuirean
+}
+192={
+name="Parean"
+culture=Anuirean
+}
+193={
+name="Golaer"
+culture=Anuirean
+}
+194={
+name="Castamona"
+culture=Anuirean
+}
+195={
+name="Griene"
+culture=Anuirean
+}
+196={
+name="Elin"
+culture=Anuirean
+}
+197={
+name="Borokiev"
+culture=Anuirean
+}
+198={
+name="Bliene"
+culture=Anuirean
+}
+199={
+name="Vitalic"
+culture=Anuirean
+}
+200={
+name="Tuorven"
+culture=Anuirean
+}
+201={
+name="Briesen"
+used_for_random=no
+culture=Anuirean
+}
+202={
+name="Caelisen"
+culture=Anuirean
+}
+203={
+name="Aelicar"
+culture=Anuirean
+}
+204={
+name="Argyreol"
+culture=Anuirean
+}
+205={
+name="Cataros"
+culture=Anuirean
+}
+206={
+name="Enioras"
+culture=Anuirean
+}
+207={
+name="Melaesis"
+culture=Anuirean
+}
+208={
+name="Astaer"
+culture=Anuirean
+}
+209={
+name="Toren"
+culture=Anuirean
+}
+210={
+name="Coelitos"
+culture=Anuirean
+}
+211={
+name="Vaeles"
+culture=Anuirean
+}
+212={
+name="Gavin"
+culture=Anuirean
+}
+213={
+name="Dosen"
+culture=Anuirean
+}
+214={
+name="Aelis"
+culture=Anuirean
+}
+215={
+name="Nielem"
+culture=Anuirean
+}
+216={
+name="Boneth"
+culture=Anuirean
+}
+217={
+name="Vitalis"
+culture=Anuirean
+}
+218={
+name="Valance"
+culture=Anuirean
+}
+219={
+name="Reviers"
+culture=Anuirean
+}
+220={
+name="Picvini"
+culture=Anuirean
+}
+221={
+name="Pistres"
+culture=Anuirean
+}
+222={
+name="Poer"
+culture=Anuirean
+}
+223={
+name="Pavel"
+culture=Anuirean
+}
+224={
+name="Pasquier"
+culture=Anuirean
+}
+225={
+name="Osmont"
+culture=Anuirean
+}
+226={
+name="Osmond"
+culture=Anuirean
+}
+227={
+name="Pancevolt"
+culture=Anuirean
+}
+228={
+name="Ormond"
+culture=Anuirean
+}
+229={
+name="Omand"
+culture=Anuirean
+}
+230={
+name="Noyers"
+culture=Anuirean
+}
+231={
+name="Nelond"
+culture=Anuirean
+}
+232={
+name="Meri"
+culture=Anuirean
+}
+233={
+name="Meules"
+culture=Anuirean
+}
+234={
+name="Mobec"
+culture=Anuirean
+}
+235={
+name="Marci"
+culture=Anuirean
+}
+236={
+name="Guernon"
+culture=Anuirean
+}
+237={
+name="Gurney"
+culture=Anuirean
+}
+238={
+name="Guiffart"
+culture=Anuirean
+}
+239={
+name="Durandal"
+culture=Anuirean
+}
+240={
+name="Drieste"
+culture=Anuirean
+}
+241={
+name="Andien"
+culture=Anuirean
+}
+242={
+name="Doneim"
+culture=Anuirean
+}
+243={
+name="Evaerlin"
+culture=Anuirean
+}
+244={
+name="Amara"
+culture=Anuirean
+}
+245={
+name="Tindier"
+culture=Anuirean
+}
+246={
+name="Daeren"
+culture=Anuirean
+}
+247={
+name="Boerghas"
+culture=Anuirean
+}
+248={
+name="Taurele"
+culture=Anuirean
+}
+249={
+name="Moriel"
+used_for_random=no
+culture=Anuirean
+}
+250={
+name="Uriele"
+culture=Anuirean
+}
+251={
+name="Moegara"
+culture=Anuirean
+}
+252={
+name="Lanalier"
+culture=Anuirean
+}
+253={
+name="Terrem"
+culture=Anuirean
+}
+254={
+name="Galtrie"
+culture=Anuirean
+}
+255={
+name="Elama"
+culture=Anuirean
+}
+256={
+name="Ghonal"
+culture=Anuirean
+}
+257={
+name="Caligiere"
+culture=Anuirean
+}
+258={
+name="Caeran"
+culture=Anuirean
+}
+259={
+name="Bronwyn"
+culture=Anuirean
+}
+260={
+name="Rieghoer"
+culture=Anuirean
+}
+261={
+name="Nesirien"
+culture=Anuirean
+}
+262={
+name="Ghallie"
+culture=Anuirean
+}
+263={
+name="Valmier"
+culture=Anuirean
+}
+264={
+name="Balter"
+culture=Anuirean
+}
+265={
+name="Tornil"
+culture=Anuirean
+}
+266={
+name="Brightblade"
+culture=Anuirean
+}
+267={
+name="Brothen"
+culture=Anuirean
+}
+268={
+name="Terem"
+culture=Anuirean
+}
+269={
+name="Valmet"
+culture=Anuirean
+}
+270={
+name="Jariet"
+culture=Anuirean
+}
+271={
+name="Thoralinar"
+culture=Anuirean
+}
+272={
+name="Haniere"
+culture=Anuirean
+}
+273={
+name="Caliele"
+culture=Anuirean
+}
+274={
+name="Derthaen"
+culture=Anuirean
+}
+275={
+name="Greyhelm"
+culture=Anuirean
+}
+276={
+name="Tyien"
+culture=Anuirean
+}
+277={
+name="Beldere"
+culture=Anuirean
+}
+278={
+name="Goewhyn"
+culture=Anuirean
+}
+279={
+name="Perium"
+culture=Anuirean
+}
+280={
+name="Gendril"
+culture=Anuirean
+}
+281={
+name="Shaeme"
+culture=Anuirean
+}
+282={
+name="Faehrel"
+culture=Anuirean
+}
+283={
+name="Shoel"
+culture=Anuirean
+}
+284={
+name="Morilie"
+culture=Anuirean
+}
+285={
+name="Goerwin"
+culture=Anuirean
+}
+286={
+name="Ghorelle"
+culture=Anuirean
+}
+287={
+name="Vineshiver"
+culture=Anuirean
+}
+288={
+name="Issimane"
+used_for_random=no
+culture=Anuirean
+}
+289={
+name="Uriene"
+culture=Anuirean
+}
+290={
+name="Harris"
+culture=Anuirean
+}
+291={
+name="Amandus"
+culture=Anuirean
+}
+292={
+name="Vanilen"
+culture=Anuirean
+}
+293={
+name="Norvien"
+culture=Anuirean
+}
+294={
+name="Tamaere"
+used_for_random=no
+culture=Anuirean
+}
+295={
+name="Brosen"
+used_for_random=no
+culture=Anuirean
+}
+296={
+name="Oerel"
+culture=Anuirean
+}
+297={
+name="Loerien"
+culture=Anuirean
+}
+298={
+name="Raine"
+culture=Anuirean
+}
+299={
+name="Naedren"
+culture=Anuirean
+}
+300={
+name="Daulton"
+culture=Anuirean
+}
+301={
+name="Taliern"
+culture=Anuirean
+}
+302={
+name="Raelnien"
+culture=Anuirean
+}
+303={
+name="Diedred"
+culture=Anuirean
+}
+304={
+name="Baccaere"
+used_for_random=no
+culture=Anuirean
+}
+305={
+name="Willem"
+culture=Anuirean
+}
+306={
+name="Bhaele"
+culture=Anuirean
+}
+307={
+name="Montheal"
+culture=Anuirean
+}
+308={
+name="Treyneir"
+culture=Anuirean
+}
+309={
+name="Thuried"
+culture=Anuirean
+}
+310={
+name="Coumain"
+used_for_random=no
+culture=Anuirean
+}
+311={
+name="Friess"
+used_for_random=no
+culture=Anuirean
+}
+312={
+name="Laurent"
+used_for_random=no
+culture=Anuirean
+}
+313={
+name="Alanette"
+used_for_random=no
+culture=Anuirean
+}
+314={
+name="Estienot"
+used_for_random=no
+culture=Anuirean
+}
+315={
+name="Gerardin"
+used_for_random=no
+culture=Anuirean
+}
+316={
+name="Cedrune"
+culture=Anuirean
+}
+317={
+name="Malcaene"
+culture=Anuirean
+}
+318={
+name="Naentes"
+culture=Anuirean
+}
+319={
+name="Duorael"
+culture=Anuirean
+}
+320={
+name="Kalish"
+culture=Anuirean
+}
+321={
+name="Urdaen"
+culture=Anuirean
+}
+322={
+name="Gaent"
+culture=Anuirean
+}
+323={
+name="Grimstone"
+culture=Anuirean
+}
+324={
+name="Udaleos"
+used_for_random=no
+culture=Anuirean
+}
+325={
+name="Deodatus"
+used_for_random=no
+culture=Anuirean
+}
+326={
+name="Wille"
+used_for_random=no
+culture=Anuirean
+}
+327={
+name="Harte"
+used_for_random=no
+culture=Anuirean
+}
+328={
+name="Drayton"
+used_for_random=no
+culture=Anuirean
+}
+329={
+name="Wrenne"
+used_for_random=no
+culture=Anuirean
+}
+330={
+name="Termonie"
+used_for_random=no
+culture=Anuirean
+}
+331={
+name="Deretha"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+332={
+name="Volarae"
+used_for_random=no
+culture=Anuirean
+}
+333={
+name="Haelim"
+culture=Anuirean
+}
+334={
+name="Boru"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+335={
+name="Mhora"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+336={
+name="Elaime"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+337={
+name="Carel"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+338={
+name="Elinie"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+339={
+name="Elin"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+340={
+name="Aeren"	## Pretty sure this was the Swordwraith ancestors
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+341={
+name="Duireina" ##Taeghas ~ Last one killed 15 decades ago by Rhuobhe
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+342={
+name="Marko"
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+343={
+name="Dhoess"  ##Branch of Mora into Dhoesone
+used_for_random=no
+can_appear=no
+culture=Anuirean
+}
+344={
+name="Caraval"
+culture=Anuirean
+}
+345={
+name="Kiedel"
+culture=Anuirean
+}
+
+#Serien#
+346={
+name="Serien"
+culture=Anuirean
+used_for_random=no
+}
+
+347={ # Paladin's Choice 1
+name="Parnien"
+culture=Anuirean
+used_for_random=no
+can_appear=no
+}
+
+348={ # Paladin's Choice 2
+name="Laural"
+culture=Anuirean
+used_for_random=no
+can_appear=no
+}
+
+349={ # For the Cold Rider
+name="Azarias"
+culture=Anuirean
+used_for_random=no
+can_appear=no
+}
+
+#Dynasties from Gorgon's Alliance#
+
+500={
+name="Lamier"
+culture=Anuirean
+}
+
+501={
+name="Bristim"
+culture=Anuirean
+}
+
+502={
+name="Dargan"
+culture=Anuirean
+}
+
+503={
+name="Iniere"
+used_for_random=no
+culture=Anuirean
+}
+
+504={
+name="Hirele"
+culture=Anuirean
+}
+
+505={
+name="Suliere"
+culture=Anuirean
+}
+
+#ELVEN DYNASTIES 3001-3500#
+
+3001={
+name="Manslayer"
+culture=Elven
+used_for_random=no
+}
+
+3002={
+	name=Llyrandor
+	culture=Elven
+	used_for_random=no
+	coat_of_arms = {
+		template = 0
+		layer = {
+			texture = 5 texture_internal = 2
+			emblem = 0 color = 0 color = 0 color = 0
+		}
+	}
+}
+
+3003={
+name="Tuarlachiem"
+culture=Elven
+used_for_random=no
+}
+
+3004={
+name="Damaan"
+culture=Elven
+used_for_random=no
+}
+
+3005={
+name="Galanohel"
+culture=Elven
+used_for_random=no
+}
+
+3006={
+name="Rhysdiordan"
+culture=Elven
+used_for_random=no
+}
+
+3007={
+name="Aingaelar"
+culture=Elven
+used_for_random=no
+}
+
+3008={
+name="Rhoisneibhal"
+culture=Elven
+used_for_random=no
+}
+
+3009={
+name="Challra"
+culture=Elven
+used_for_random=no
+}
+
+3010={
+name="Caer Dwyth"
+culture=Elven
+used_for_random=no
+}
+
+3011={
+name="Bannoch"
+culture=Elven
+used_for_random=no
+}
+
+3012={
+name="Cwnddrrd"
+culture=Elven
+used_for_random=no
+}
+
+3013 = {
+name="Gwyddral"
+culture=Elven
+}
+
+3014={
+name="Llwaiss"
+culture=Elven
+used_for_random=no
+}
+
+3015={
+name="Monellrha"
+culture=Elven
+used_for_random=no
+}
+
+3016={
+name="Rhuiddar"
+culture=Elven
+used_for_random=no
+}
+
+3017={
+name="Waynmuun"
+culture=Elven
+used_for_random=no
+}
+
+3018={
+name="Tallagh"
+culture=Elven
+used_for_random=no
+}
+
+3019={
+name="Garradhgynn"
+culture=Elven
+used_for_random=no
+}
+
+3020={
+name="Alaigh"
+culture=Elven
+used_for_random=no
+}
+
+3021 = {
+name="Tuar Annun"
+culture=Elven
+}
+
+3022={
+name="Cuamhyrcha"
+culture=Elven
+used_for_random=no
+}
+
+3023={
+name="Siannodenel"
+culture=Elven
+used_for_random=no
+}
+
+################
+#EXTRA SIELWODE#
+################
+
+3024={
+name="Ghyllwn"
+culture=Elven
+used_for_random=no
+}
+
+3025={
+name="Ywrr"
+culture=Elven
+used_for_random=no
+}
+
+3026={
+name="Annwynd"
+culture=Elven
+used_for_random=no
+}
+
+3027={
+name="Haellyr"
+culture=Elven
+used_for_random=no
+}
+
+3028={
+name="Tuarlachyyn"
+culture=Elven
+used_for_random=no
+}
+
+3029={
+name="Llyrien"
+culture=Elven
+used_for_random=no
+}
+
+3030={
+name="Lloullbhe"
+culture=Elven
+used_for_random=no
+}
+
+####################
+##EXTRA TUARHIEVEL##
+####################
+
+3031={
+name="Caeloran"
+culture=Elven
+used_for_random=no
+}
+
+3032={
+name="Taeline"
+culture=Elven
+used_for_random=no
+}
+
+3033={
+name="Sidranal"
+culture=Elven
+used_for_random=no
+}
+
+3034={
+name="Takalereihn"
+culture=Elven
+used_for_random=no
+}
+
+3035={
+name="Takenya"
+culture=Elven
+used_for_random=no
+}
+
+3036={
+name="Haldanah"
+culture=Elven
+used_for_random=no
+}
+
+3037={
+name="Dhoelachnal"
+culture=Elven
+used_for_random=no
+}
+
+3038={
+name="Haldanah"
+culture=Elven
+used_for_random=no
+}
+
+3039={
+name="Peranwyr"
+culture=Elven
+used_for_random=no
+}
+
+3040={
+name="Sideath"
+culture=Elven
+used_for_random=no
+}
+
+3041={
+name="Cynulliad"
+culture=Elven
+}
+
+3042={
+name="Cefnwr"
+culture=Elven
+}
+
+#Rhuannach Extra#
+3043={
+name="Allaight"
+culture=Elven
+used_for_random=no
+}
+
+3044={
+name="Fhiellewyn"
+culture=Elven
+used_for_random=no
+}
+
+3045={
+name="Garradh"
+culture=Elven
+used_for_random=no
+}
+
+#MISCELLANEOUS DYNASTIES 5501-9000#
+
+#The Lamia#
+5501={
+name=Pechaya
+culture=Khinasi
+used_for_random=no
+}
+
+#The magian#
+5502={
+name=Blackstaff
+culture=Khinasi
+used_for_random=no
+}
+
+#The Serpent#
+5503={
+name=Masera
+culture=Masetian
+used_for_random=no
+}
+
+#Free City of Endier Patrician families#
+5505={
+name="Jansen"
+culture=Anuirean
+used_for_random=no
+}
+
+5506={
+name="Maesilien"
+culture=Anuirean
+used_for_random=no
+}
+
+5507={
+name="Endier"
+culture=Anuirean
+used_for_random=no
+}
+
+5508={
+name="Fairview"
+culture=Anuirean
+used_for_random=no
+}
+
+5509={
+name="Asher"
+culture=Khinasi
+used_for_random=no
+}
+
+#Free City of Ilien Patrician families#
+5510={
+name="Goldspur"
+culture=Anuirean
+used_for_random=no
+}
+
+5511={
+name="Redspear"
+culture=Anuirean
+used_for_random=no
+}
+
+5512={
+name="Arsalam"
+culture=Khinasi
+used_for_random=no
+}
+
+5513={
+name="Moalem"
+culture=Khinasi
+used_for_random=no
+}
+
+5514={
+name="Thorn"
+culture=Anuirean
+used_for_random=no
+}

@@ -1,0 +1,482 @@
+decisions = {
+
+	portfolio_of_gods_haelyn = {
+		potential = {
+			religion = Haelyn
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = haelyns_courage
+				has_character_modifier = haelyns_justice
+				has_character_modifier = haelyns_chivalry
+				has_character_modifier = haelyns_rulership
+				has_character_modifier = haelyns_noble_war
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.1 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_nesirie = {
+		potential = {
+			religion = Nesirie
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = nesiries_healing
+				has_character_modifier = nesiries_grief
+				has_character_modifier = nesiries_remembrance_of_the_dead
+				has_character_modifier = nesiries_protection
+				has_character_modifier = nesiries_diplomacy
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.4 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_cuiraecen = {
+		potential = {
+			religion = Cuiraecen
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = cuiraecens_storms
+				has_character_modifier = cuiraecens_conflict
+				has_character_modifier = cuiraecens_battle
+				has_character_modifier = cuiraecens_glory
+				has_character_modifier = cuiraecens_strength
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.7 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_avani = {
+		potential = {
+			religion = Avani
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = avanis_law
+				has_character_modifier = avanis_knowledge
+				has_character_modifier = avanis_magic
+				has_character_modifier = avanis_reason
+				has_character_modifier = avanis_sun
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.10 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_sera = {
+		potential = {
+			religion = Sera
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = seras_luck
+				has_character_modifier = seras_trade
+				has_character_modifier = seras_travel
+				has_character_modifier = seras_wealth
+				has_character_modifier = seras_fortune
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.13 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_erik = {
+		potential = {
+			religion = Erik
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = eriks_forests
+				has_character_modifier = eriks_hunting
+				has_character_modifier = eriks_earth
+				has_character_modifier = eriks_wilderness
+				has_character_modifier = eriks_animals
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.16 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_ruornil = {
+		potential = {
+			religion = Ruornil
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = ruornils_knowledge
+				has_character_modifier = ruornils_magic
+				has_character_modifier = ruornils_moon
+				has_character_modifier = ruornils_spell
+				has_character_modifier = ruornils_night
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.19 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_eloele = {
+		potential = {
+			religion = Eloele
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = eloeles_darkness
+				has_character_modifier = eloeles_thieves
+				has_character_modifier = eloeles_deception
+				has_character_modifier = eloeles_independence
+				has_character_modifier = eloeles_trickery
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.22 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_laerme = {
+		potential = {
+			religion = Laerme
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = laermes_fire
+				has_character_modifier = laermes_love
+				has_character_modifier = laermes_art
+				has_character_modifier = laermes_charm
+				has_character_modifier = laermes_passion
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.25 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_belinik = {
+		potential = {
+			religion = Belinik
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = beliniks_fear
+				has_character_modifier = beliniks_domination
+				has_character_modifier = beliniks_feuds
+				has_character_modifier = beliniks_battle
+				has_character_modifier = beliniks_strength
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.28 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_kriesha = {
+		potential = {
+			religion = Kriesha
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = krieshas_winter
+				has_character_modifier = krieshas_hardship
+				has_character_modifier = krieshas_horrors
+				has_character_modifier = krieshas_suffering
+				has_character_modifier = krieshas_law
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.31 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_azrai = {
+		potential = {
+			religion = Azrai
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = azrais_lies
+				has_character_modifier = azrais_strength
+				has_character_modifier = azrais_secrets
+				has_character_modifier = azrais_knowledge
+				has_character_modifier = azrais_fear
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.34 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_nature = {
+		potential = {
+			religion = Nature
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = natures_forests
+				has_character_modifier = natures_strength
+				has_character_modifier = natures_elements
+				has_character_modifier = natures_knowledge
+				has_character_modifier = natures_understanding
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.37 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+
+	portfolio_of_gods_moradin = {
+		potential = {
+			religion = DwarvenPantheon
+			is_landed = yes
+			age = 16
+			NOT = {
+				trait = incapable
+				trait = possessed
+				trait = cynical
+			}
+			NOT = {
+				has_character_modifier = moradins_earth
+				has_character_modifier = moradins_law
+				has_character_modifier = moradins_protection
+				has_character_modifier = moradins_arts
+				has_character_modifier = moradins_sciences
+			}
+		}
+		allow = {
+			prisoner = no
+		}
+		effect = {
+			character_event = { id = portfolio_of_gods.40 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	
+	
+	
+	
+}

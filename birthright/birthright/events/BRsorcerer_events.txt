@@ -1,0 +1,42 @@
+namespace = sorcerer
+
+character_event = {
+id = sorcerer.0
+title = SORCEROUS_BLOOD # Sorcerous Blood
+desc = "EVTDESCSORCERER.0"
+picture = "GFX_evt_comet"
+
+trigger = {
+age = 12
+NOT = { has_character_flag = sorcerer0 }
+OR = {
+mother = { trait = amateur_sorcerer }
+father = { trait = amateur_sorcerer }
+mother = { trait = novice_sorcerer }
+father = { trait = novice_sorcerer }
+mother = { trait = trained_sorcerer }
+father = { trait = trained_sorcerer }
+mother = { trait = master_sorcerer }
+father = { trait = master_sorcerer }
+mother = { trait = legendary_sorcerer }
+father = { trait = legendary_sorcerer }
+}
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+option = {
+name = "LETS_SEE"
+set_character_flag = sorcerer0
+			random_list = {
+                50 = {
+                    add_trait = amateur_sorcerer
+                }
+                50 = {
+                }
+            }
+			}
+			
+		}

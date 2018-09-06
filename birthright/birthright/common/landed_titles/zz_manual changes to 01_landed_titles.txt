@@ -1,0 +1,375 @@
+
+k_cwmb_bheinn = {
+	allow = {
+		culture = Elven
+	}
+}
+
+e_dwarves = {
+	allow = {
+		culture = Dwarven
+	}
+}
+
+e_western_elves = {
+	allow = {
+		culture = Elven
+	}
+}
+
+e_eastern_elves = {
+	allow = {
+		culture = Elven
+	}
+}
+
+k_mieres = {
+	allow = {
+		num_of_duke_titles = 2
+		independent = yes
+		primary_title = { title = d_mieres }
+	}
+	creation_requires_capital = yes
+}
+
+d_five_peaks = {
+
+	allow = {
+		num_of_count_titles = 4
+		independent = yes
+		d_drake = { has_holder = no }
+	}
+	
+	capital = 186 # Torain
+	creation_requires_capital = yes
+}
+
+e_gorgons_crown = {
+	color={ 52 3 6 }
+	color2={ 255 255 255 }
+	
+	short_name = yes
+	
+	title = "Prince"
+	title_female = "Princess"
+	
+	allow = {
+		has_landed_title = k_gorgons_crown
+		has_trait = awn_gorgon
+	}
+}
+
+##Regional Kingdoms of Anuire
+
+k_western_bay = {
+	allow = {
+		num_of_duke_titles = 2
+		NOT = { has_landed_title = k_boeruine }
+		NOT = { has_landed_title = k_taeghas }
+		NOT = { has_landed_title = k_trautha }
+		NOT = { has_landed_title = k_talinie }
+	}
+}
+
+k_southern_bay = {
+	allow = {
+		num_of_duke_titles = 2
+		NOT = { has_landed_title = k_diemed }
+		NOT = { has_landed_title = k_aerenwe }
+	}
+	capital = 89 # Aerele
+}
+
+k_heartlands = {
+	allow = {
+		num_of_duke_titles = 2
+		NOT = { has_landed_title = k_avanil }
+		NOT = { has_landed_title = k_ghoere }
+		NOT = { has_landed_title = k_mhoried }
+		NOT = { has_landed_title = k_alamie }
+		NOT = { has_landed_title = k_elinie }
+	}
+	capital = 36 # Imperial City
+}
+
+k_northern_marches = {
+	allow = {
+		num_of_duke_titles = 2
+		e_aelvinwode = { has_holder = no }
+		e_north = { has_holder = no }
+		e_stonecrowns = { has_holder = no }
+		NOT = { has_landed_title = k_cariele }
+	}
+	capital = 204 # Sonnelind
+}
+
+k_eastern_marches = {
+	allow = {
+		num_of_duke_titles = 2
+		NOT = { has_landed_title = k_osoerde }
+		NOT = { has_landed_title = k_elinie }
+	}
+	capital = 119 # Moerel
+}
+
+k_gorgons_crown = {
+	allow = {
+		num_of_duke_titles = 2
+	}
+	creation_requires_capital = yes
+}
+
+k_tuarhievel = {
+	allow = {
+		NOT = { has_landed_title = k_tuarhievel_dhoesone }
+	}
+}
+
+##Title Name Change
+
+d_mieres = {
+	title = "Governor"
+	title_female = "Governess"
+	short_name = yes
+}
+
+d_roesone = {
+	title = "Baron"
+	title_female = "Baroness"
+	short_name = yes
+}
+
+d_dhoesone = {
+	title = "Baron"
+	title_female = "Baroness"
+	Rjurik=Hjalsone
+}
+
+k_sielwode = {
+	title = "Emerald King"
+	title_female = "Emerald Queen"
+}
+
+d_mhoried = {
+	title = "Mhor"
+	title_female = "Mhora"
+}
+
+k_rheulgard = {
+	title = Count
+	title_female = Countess
+}
+
+d_poden = {
+	title = Meister
+	title_female = Meisterin
+}
+
+d_stille_waechter = {
+	title = Baron
+	title_female = Baroness
+}
+
+d_unbrau = {
+	title = Pater
+	title_female = Mater
+}
+
+d_elinie = {
+	title = "Patriarch"
+	title_female = "Matriarch"
+	short_name = yes
+}
+
+d_talinie = {
+	title = "Thane"
+	title_female = "Thane"
+	short_name = yes
+}
+
+d_coeranys = {
+	title = "Baron"
+	title_female = "Baroness"
+	short_name = yes
+}
+
+d_taeghas = {
+	title = "High Count"
+	title_female = "High Countess"
+	short_name = yes
+}
+
+b_avelerine_cathedral = {
+	short_name = yes
+}
+
+d_diemed = {
+	title = "Baron"
+	title_female = "Baroness"
+	short_name = yes
+}
+##Color Change
+
+k_sielwode = {
+	color={ 34 139 34 }
+	color2={ 0 100 0 }
+}
+
+k_tuarhievel = {
+	color={ 00 64 00 }
+	color2={ 0 127 0 }
+}
+
+k_lluabraight = {
+	color={ 50 205 50 }
+	color2={ 46 139 87 }
+}
+
+d_avanil = {
+	color={ 255 0 0 }
+	color2={ 128 0 0 }
+}
+
+d_boeruine = {
+	color={ 139 0 139 }
+	color2={ 75 0 130 }
+}
+
+d_ghoere = {
+	color={ 218 165  32 }
+	color2={ 205 133  63 }
+}
+
+d_diemed = {
+	color={ 30 144 255 }
+	color2={ 65 105 225 }
+}
+
+d_aerenwe = {
+	color={ 0 0 205 }
+	color2={ 0 0 255 }
+}
+
+d_endier = {
+	color={ 105 105 105 }
+	color2={ 192 192 192 }
+}
+
+d_ilien = {
+	color={ 255 215 0 }
+	color2={ 255 215 0 }
+}
+
+d_rhuobhe = {
+	color={ 0 128 0 }
+	color2={ 50 205  50 }
+}
+
+d_alamie = {
+	color={ 255 255 0}
+	color2={ 218 165 32 }
+}
+
+d_osoerde = {
+	color={ 105 105 105}
+	color2={ 0 0 0 }
+}
+
+d_imperial_city = {
+	color={ 255  20 147}
+	color2={ 199 21 133 }
+}
+
+d_tuornen = {
+	color={ 0 128 128 }
+	color2={ 0 191 255 }
+}
+
+d_caelcorwynn = {
+	color={ 255 250 250 }
+	color2={ 248 248 255 }
+}
+
+d_cariele = {
+	color={ 139 0 0 }
+	color2={ 165 42 42 }
+}
+
+d_coeranys = {
+	color={ 169 169 169 }
+	color2={ 192 192 192 }
+}
+
+d_medoere = {
+	color={ 148 0 211 }
+	color2={ 218 112 214 }
+}
+
+d_elinie = {
+	color={ 0 0 255 }
+	color2={ 25 25 112 }
+}
+
+k_northern_marches = {
+	color={ 25 25 112 }
+	color2={ 255 255 255 }
+}
+
+e_anuire = {
+	color={ 255 140 0 }
+	color2={ 255 165 0 }
+}
+
+##Some Capitals
+
+e_western_elves = { capital = 160 }
+
+### Cultural Names
+
+k_medec = {
+	Vos = Kozlovnyy
+}
+c_medeci = {
+	Vos = Aziev
+}
+d_medec = {
+	Vos = Aziev
+}
+c_pipryet = {
+	Khinasi = Famenna
+}
+d_famenna = {
+	Vos = Pipryet
+}
+d_mistmoor = {
+	Vos = Vorostokov
+}
+k_the_northlands = {
+	Rjurik = Hogunmark
+}
+
+## Some Holy Sites
+
+b_haelyns_glory = {
+#	holy_site=Haelyn
+	holy_site=Anduiras
+}
+
+b_anuire = {
+#	holy_site=Haelyn
+	holy_site=Anduiras
+}
+
+b_shieldhaven_3 = {
+#	holy_site=Haelyn
+	holy_site=Anduiras
+}
+
+b_avelerine_cathedral = {
+	holy_site=Anduiras
+}
+
+b_ghieste_2 = {
+#	holy_site=Haelyn
+	holy_site=Anduiras
+}

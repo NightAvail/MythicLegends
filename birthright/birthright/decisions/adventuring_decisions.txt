@@ -1,0 +1,103 @@
+decisions = {
+
+	open_adventuring_menu={
+
+		potential = {
+				age = 16
+				NOT = { has_character_flag = atacademy }
+				AND = {
+					OR = {
+					trait = amateur_bard 
+					trait = novice_bard 
+					trait = trained_bard 
+					trait = amateur_mage 
+					trait = novice_mage
+					trait = trained_mage
+					trait = amateur_priest
+					trait = novice_priest
+					trait = trained_priest
+					trait = amateur_ranger
+					trait = novice_ranger
+					trait = trained_ranger
+					trait = amateur_rogue
+					trait = novice_rogue
+					trait = trained_rogue
+					trait = amateur_fighter
+					trait = novice_fighter
+					trait = trained_fighter
+					trait = amateur_sorcerer
+					trait = novice_sorcerer
+					trait = trained_sorcerer
+					trait = master_bard 
+					trait = legendary_bard 
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+						}
+					}
+				}
+
+		allow = {
+			NOT = { trait = maimed }
+			OR = {
+				trait = amateur_bard 
+				trait = novice_bard 
+				trait = trained_bard 
+				trait = amateur_mage 
+				trait = novice_mage
+				trait = trained_mage
+				trait = amateur_priest
+				trait = novice_priest
+				trait = trained_priest
+				trait = amateur_ranger
+				trait = novice_ranger
+				trait = trained_ranger
+				trait = amateur_rogue
+				trait = novice_rogue
+				trait = trained_rogue
+				trait = amateur_fighter
+				trait = novice_fighter
+				trait = trained_fighter
+				trait = amateur_sorcerer
+				trait = novice_sorcerer
+				trait = trained_sorcerer
+				trait = master_bard 
+				trait = legendary_bard 
+				trait = master_mage
+				trait = legendary_mage
+				trait = master_priest
+				trait = legendary_priest
+				trait = master_ranger
+				trait = legendary_ranger
+				trait = master_rogue
+				trait = legendary_rogue
+				trait = master_fighter
+				trait = legendary_fighter
+				trait = master_sorcerer
+				trait = legendary_sorcerer
+				}
+				AND = {
+				age = 16
+				}
+			}
+
+		effect = {
+			ROOT = { character_event = { id = adventuremenu.0 } }
+		}
+		
+	ai_will_do = {
+		factor = 0	
+	}
+	
+	}
+	
+}

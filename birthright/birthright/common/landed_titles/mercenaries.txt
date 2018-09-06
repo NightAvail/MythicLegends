@@ -1,0 +1,554 @@
+d_swordsofavanil = {
+	color = { 130 173 70 }
+	color2 = { 255 255 255 }
+
+	capital = 38 # Daulton
+	
+	# Parent Religion 
+	religion = Haelyn
+	culture = Anuirean
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = d_swordsofavanil_composition
+}
+
+d_dawnlances = {
+	color = { 84 6 1 }
+	color2 = { 255 255 255 }
+
+	capital = 87 # Bilene
+	
+	# Parent Religion 
+	religion = Haelyn
+	culture = Anuirean
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = d_dawnlances_composition
+}
+
+d_spurbrotherhood = {
+	color = { 100 6 1 }
+	color2 = { 255 255 255 }
+
+	capital = 71 # Tenarien
+	
+	# Parent Religion 
+	religion = Haelyn
+	culture = Anuirean
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = d_spurbrotherhood_composition
+}
+
+d_clan_ironbreaker = {
+	color = { 65 48 18 }
+	color2 = { 255 255 255 }
+
+	capital = 127 # Cliff's Lament
+	
+	# Parent Religion 
+	culture = Dwarven
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = d_clan_ironbreaker_composition
+}
+
+d_zweilund_pirates = {
+	color = { 116 16 16 }
+	color2 = { 255 255 255 }
+
+	capital = 497 # Zweilund
+	
+	# Parent Religion 
+	culture = Brecht
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Cannot be vassalized
+	independent = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = d_zweilund_pirates_composition
+}
+
+c_aegilsgaard = {
+	color = { 170 50 0 }
+	color2 = { 255 255 255 }
+
+	capital = 253 # Njorldar
+
+	# Hire Trigger
+	allow = {
+		has_landed_title = k_the_northlands
+	}
+	
+	# Parent Religion 
+	culture = Rjurik
+	
+	mercenary = yes
+
+	title = "Jarl"
+	foa = "Jarl_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_aegilsgaard_composition
+}
+
+c_gautrakka = {
+	color = { 180 65 0 }
+	color2 = { 255 255 255 }
+
+	capital = 252 # Aldrud
+
+	# Hire Trigger
+	allow = {
+		has_landed_title = k_the_northlands
+	}
+	
+	# Parent Religion 
+	culture = Rjurik
+	
+	mercenary = yes
+
+	title = "Jarl"
+	foa = "Jarl_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_gautrakka_composition
+}
+
+c_halskorrik = {
+	color = { 30 170 50 }
+	color2 = { 255 255 255 }
+
+	capital = 257 # Jarnborg
+
+	# Hire Trigger
+	allow = {
+		has_landed_title = k_the_northlands
+	}
+	
+	# Parent Religion 
+	culture = Rjurik
+	
+	mercenary = yes
+
+	title = "Jarl"
+	foa = "Jarl_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_halskorrik_composition
+}
+
+c_jarnkasspel = {
+	color = { 30 150 50 }
+	color2 = { 255 255 255 }
+
+	capital = 256 # Horvliik
+
+	# Hire Trigger
+	allow = {
+		has_landed_title = k_the_northlands
+	}
+	
+	# Parent Religion 
+	culture = Rjurik
+	
+	mercenary = yes
+
+	title = "Jarl"
+	foa = "Jarl_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_jarnkasspel_composition
+}
+
+c_trygvaar = {
+	color = { 180 80 40 }
+	color2 = { 255 255 255 }
+
+	capital = 273 # Oulu
+
+	# Hire Trigger
+	allow = {
+		has_landed_title = d_mandal
+	}
+	
+	# Parent Religion 
+	culture = Rjurik
+	
+	mercenary = yes
+
+	title = "Chief"
+	foa = "Chief_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_trygvaar_composition
+}
+
+c_olthrugaard = {
+	color = { 80 60 20 }
+	color2 = { 255 255 255 }
+
+	capital = 250 # Rutafel
+
+	# Hire Trigger
+	allow = {
+		has_landed_title = d_jankaping
+	}
+	
+	# Parent Religion
+	religion = Old_Father_of_the_Forests 
+	culture = Rjurik
+	
+	mercenary = yes
+
+	title = "Chief"
+	foa = "Chief_FOA"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_olthrugaard_composition
+}
+
+c_uguraklegion = {
+	color = { 139 69 19 }
+	color2 = { 255 255 255 }
+
+	capital = 193 # Bloodbay
+
+	
+	# Parent Religion
+	religion = GoblinPantheon 
+	culture = Goblin
+	
+	mercenary = yes
+
+	title = "Chief"
+	foa = "Chief"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_uguraklegion_composition
+}
+
+c_kalgatorsmashers = {
+	color = { 139 69 19 }
+	color2 = { 255 255 255 }
+
+	capital = 280 # Zakkhur
+
+	
+	# Parent Religion
+	religion = OrogPantheon 
+	culture = Orog
+	
+	mercenary = yes
+
+	title = "Chief"
+	foa = "Chief"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_kalgatorsmashers_composition
+}
+
+c_malachardefilers = {
+	color = { 139 69 19 }
+	color2 = { 255 255 255 }
+
+	capital = 184 # Puinol
+
+	
+	# Parent Religion
+	religion = Drake_Cult 
+	culture = Orog
+	
+	mercenary = yes
+
+	title = "Chief"
+	foa = "Chief"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_malachardefilers_composition
+}
+
+c_sjavaar = {
+	color = { 160 55 0 }
+	color2 = { 255 255 255 }
+
+	capital = 229 # Njorldar
+
+	# Hire Trigger
+	allow = {
+		has_landed_title = d_svinik
+	}
+	
+	# Parent Religion 
+	culture = Rjurik
+	
+	mercenary = yes
+
+	title = "Chief"
+	foa = "Chief"
+
+	# Always exists
+	landless = yes
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = c_sjavaar_composition
+}
+
+d_white_goblin_company = {
+	color = { 192 192 192 }
+	color2 = { 255 255 255 }
+
+	capital = 111 # Spiderfell
+
+	religion = GoblinPantheon 
+	culture = Goblin
+	
+	mercenary = yes
+
+	title = "Chief"
+	foa = "Chief"
+
+	landless = yes
+	
+	primary = yes
+	
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = d_white_goblin_company_composition
+}
+
+d_ghostlegions = {
+	color = { 105 105 105 }
+	color2 = { 255 255 255 }
+
+	capital = 36 # Imperial City
+	
+	# Parent Religion
+	religion = Haelyn
+	culture = Anuirean
+	
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	# Always exists
+	landless = yes
+
+	# Cannot be held as a secondary title
+	primary = yes
+
+	# Cannot be vassalized
+	independent = yes
+
+	strength_growth_per_century = 1.00
+	
+	mercenary_type = d_ghostlegions_composition
+}
+
+####Sponsor Knightly##Keep This at end of file####
+
+d_hawkorder = {
+	color = { 184 134  11 }
+	color2 = { 255 255 255 }
+
+#	capital = 36 # Imperial City
+
+	religion = Haelyn
+	culture = Anuirean
+
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	landless = yes
+	primary = yes
+
+	strength_growth_per_century = 0.25
+
+	mercenary_type = d_knightlyorder
+}
+
+d_roseorder = {
+	color = { 255 105 180 }
+	color2 = { 255 255 255 }
+
+#	capital = 36 # Imperial City
+
+	religion = Haelyn
+	culture = Anuirean
+
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	landless = yes
+	primary = yes
+
+	strength_growth_per_century = 0.25
+
+	mercenary_type = d_knightlyorder
+}
+
+d_swordorder = {
+	color = { 211 211 211 }
+	color2 = { 255 255 255 }
+
+#	capital = 36 # Imperial City
+
+	religion = Haelyn
+	culture = Anuirean
+
+	mercenary = yes
+
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+
+	landless = yes
+	primary = yes
+
+	strength_growth_per_century = 0.25
+
+	mercenary_type = d_knightlyorder
+}

@@ -1,0 +1,1326 @@
+
+song = {
+	name = "crusaderkings2_maintitle.ogg"
+		chance = {
+			modifier = {
+				factor = 1
+				}
+			}
+		}
+		
+		
+#################################
+#### 	  Common Music		#####
+#################################
+
+song = { 
+	name = "Capella_de_Ministrers_Lamento_di_Tristano_La_Rotta.ogg"
+		chance = { 
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless } 
+					}
+				}
+			}
+
+song = { 
+	name = "Carmina_Track6.ogg"
+		chance = { 
+			factor = 1
+				modifier = { 
+					factor = 0 
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless } 
+					}
+				}
+			}
+
+song = { 
+	name = "ECDemo.ogg"
+		chance = { 
+			factor = 1
+				modifier = { 
+					factor = 0
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless } 
+					}
+				}
+			}
+
+song = {
+	name = "Fantasia.ogg"
+		chance = {
+			factor = 1 
+				modifier = {
+					factor = 0 
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+						}
+					}
+				}
+				
+				
+song = { 
+	name = "Faun_Karuna.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0 
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+						}
+					}
+				}
+
+song = { 
+	name = "Joculatores_Upsalienses_Par_Deus.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+				}
+			}
+		}
+
+song = { 
+	name = "Lamento_di_Tristano_Alla_Francesca.ogg"
+		chance = { 
+			factor = 1 
+				modifier = {
+					factor = 0 
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+				}
+			}
+		}
+
+
+song = {
+	name = "LaSexteEstampieReal.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0 
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+				}
+			}
+		}
+
+song = {
+	name = "Old_Music_5_Middle_ages.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+					}
+				}
+			}
+
+song = {
+	name = "Vox_Vulgaris_Cantiga_166.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+					}
+				}
+			}
+
+
+song = {
+	name = "WAR_DefendersOfTheRealm.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						war = no
+					}
+				}
+			}
+
+song = {
+	name = "WAR_The_Last_Embrace.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+					}
+					modifier = {
+						factor = 0 
+							war = no
+					}		
+				}
+			}
+
+song = {
+	name = "WAR_Wings_Of_The_Lost_Soul.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0 
+						NOT = { religion_group = gods_of_good } 
+						NOT = { religion_group = Dwarf }
+						NOT = { religion_group = Demihuman}
+						NOT = { religion_group = Halflings } 
+						NOT = { religion_group = Faithless }
+					}
+				modifier = { 
+					factor = 0
+						war = no
+					}
+				}
+			}
+
+
+
+#################################
+###	The Desolation of Evil	#####
+#################################
+
+
+song = { 
+	name = "Angel_Of_Sorrow.ogg"
+		chance = { 
+			factor = 1
+				modifier = { 
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}
+
+song = {
+	name = "BlackSpires.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}
+
+song = {
+	name = "DarknessImmortal.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}
+
+song = {
+	name = "MistLoch.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}
+
+song = {
+	name = "Nocturne.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}
+
+song = {
+	name = "ShadowForest.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}
+
+song = {
+	name = "songofthedeadsun.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}
+
+song = {
+	name = "Veil9.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				}
+			}				
+			
+song = {
+	name = "WAR_TheSiege.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				modifier = {
+					factor = 0
+						war = no
+					}
+				}
+			}
+
+
+song = {
+	name = "WAR_Veil2.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { religion_group = Awnsheighleen}
+						NOT = { religion_group = Gnolls } 
+						NOT = { religion_group = Demihuman }
+						NOT = { religion_group = GiantGods }
+						NOT = { religion = Gheallie_Sidhe }
+						NOT = { religion_group = gods_of_evil }
+						NOT = { religion_group = Azrai }
+					}
+				modifier = {
+					factor = 0
+						war = no
+					}
+				}
+			}
+			
+
+###################################
+###		   Elven Woods		   ####
+###################################
+
+song = {
+	name = "(Armenia_Win__1).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+						NOT = { culture_group = Small_folk }
+						}
+					modifier = {
+						factor = 0
+						NOT = { religion = Nature }
+						NOT = { religion_group = Halflings }
+					}
+				}
+			}
+
+song = { 
+	name = "(Latin_Camp_Map_03).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0 
+						NOT = { culture_group = Siedhe }
+					}
+				}
+			}
+
+song = {
+	name = "(Latin_Camp_Map_04).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0 
+						NOT = { culture_group = Siedhe }
+					}
+				}
+			}
+
+
+song = {
+	name = "Carolans_Dream_played_on_celtic_harp.ogg"
+		chance = {
+			factor = 1 
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion = Nature }
+					}
+				}
+			}
+
+song  = {
+	name = "CrystalForest.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+					}
+				}
+			}
+
+song = {
+	name = "Ebonshire.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+					}
+				}
+			}
+		}
+
+
+song = {
+	name = "el_dragon.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+						NOT = { culture_group = Small_folk }
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion = Nature }
+						NOT = { religion_group = Halflings }
+					}
+				}
+			}
+		}
+
+song = {
+	name = "LabyrinthOfDreams.ogg"
+		chance = {
+			factor = 1 
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+					}
+				}
+			}
+			
+song = { 
+	name = "Leaf2.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion = Nature }
+					}
+				}	
+			}
+			
+song = {
+	name = "Leaf3.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						Not = { culture_group = Siedhe }
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion = Nature }
+					}
+				}
+
+song = {
+	name = "MiscTrack10.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+						NOT = { culture_group = Small_folk }
+				}
+				modifier = {
+					factor = 0
+						NOT = { religion = Nature }
+						NOT = { religion_group = Halflings }
+					}
+				}
+			}
+
+song = { 
+	name = "Scottish_fiddle_Irish_Harp_Reid_Declan_Hegarty.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Siedhe }
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion = Nature }
+					}
+				}
+
+			}
+
+song = {
+	name = "WAR_(Latin_Battle_3).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0 
+						NOT = { culture_group = Siedhe }
+						NOT = { culture_group = Small_folk }
+					}
+				modifier = {
+					factor = 0
+						war = no
+				}
+			}	
+		}	
+	
+song = {
+	name = "WAR_Medievalhammereddulcimermusicbydizzi.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0 
+						NOT = { culture_group = Siedhe }
+						NOT = { culture_group = Small_folk }
+					}
+				modifier = {
+					factor = 0
+						war = no
+				}
+			}	
+		}	
+
+
+#################################
+###    Realms of Men		 ####
+#################################
+
+song = {
+	name = "(Aeranis_RJ_Camp_Map_1).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+
+song = {
+	name = "(Aeranis_RJ_Camp_Map_2).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+
+song = {
+	name = "(East_Islam_Mobilize_1).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}	
+				}
+			}			
+			
+song = {
+	name = "(Hindu_Camp_Map_1-1).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}					
+				}
+			}
+			
+song = {
+	name = "(Hindu_Camp_Map_3-2).ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = {culture = Khinasi}
+					}
+				}
+			}
+
+song = {
+	name = "20_Saltarello.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+						NOT = { culture_group = Dwarf }
+					}
+				}
+			}
+			
+song = {
+	name = "Anam_aghlar_bashujumda_otourour.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+			
+song = {
+	name = "Araz_uste_booz_ust.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}	
+				}
+			}
+
+song = {			
+	name = "Ave_Maria_o_auctrix_vitae.ogg"
+		chance = {
+			factor = 1 
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+						NOT = { culture_group = Dwarf }
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+					}	
+				}	
+			}
+			
+song = {
+	name = "Christian_medieval_maria_Virgine_Alfons_X_Cantigas_de_St_Maria_Spain_XII.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+
+song = {
+	name = "Ela_Sheena.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}	
+			}
+
+song = {
+	name = "Hafiz_mektepten_gelir.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi}
+					}
+				}
+			}
+
+song = {
+	name = "Kontakion_Theophane.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+					}
+				modifier = {
+					factor = 0 
+						NOT = { religion_group = gods_of_good }
+				}
+			}
+		}
+
+song = {
+	name = "La_musica_medieval_andalusi.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+
+song = {
+	name = "Medieval_Babes_So_Treiben_Wir_Den_Winter_Aus.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good }
+					}
+				}
+			}
+
+song = {
+	name = "MINCE_PYE_La_Basse_Dance_de_Magdalena.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+						NOT = { culture_group = Dwarf }
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+					}
+				}
+			}
+		
+song = { 
+	name = "Murakkaz_Ah_Ya_Muddasin.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+						}
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+				}
+			}
+			
+song = {
+	name = "Neva_Pesrev_Fahte.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+
+song = {
+	name = "Quddam.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+
+song = {
+	name = "Taqs_m_Maq_m_Bayyat_Husayni.ogg"
+		chance = {
+			factor = 1
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				}
+			}
+
+song = {
+	name = "WAR_(Arab_Battle_1).ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				modifier = {
+					factor = 0 
+						war = no
+				}
+			}
+		}
+
+song = {
+	name = "WAR_(East_Islam_Battle_2).ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				modifier = {
+					factor = 0
+						war = no
+				}
+			}
+		}
+
+song = {
+	name = "WAR_(Hindu_Mobilize_2).ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}	
+				modifier = {
+					factor = 0
+						war = no 
+				}
+			}
+		}
+		
+song = {
+	name = "WAR_Fortune_piange_vulnera.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+						NOT = { culture_group = Dwarf }
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good }
+						NOT = { religion_group = Dwarf }
+					}
+				modifier = {
+					factor = 0
+						war = no
+					}
+				}
+			}
+
+song = {
+	name = "WAR_HighlandStorm.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Dwarf }
+					}
+				modifier = {
+					factor = 0
+						war = no 
+					}	
+				}		
+			}
+
+song = {
+	name = "WAR_Love_Eternal.ogg"
+		chance = {
+			factor  = 2
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+						NOT = { culture_group = Dwarf }
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+					}
+				modifier = {
+					factor = 0
+						NOT = { religion_group = gods_of_good }
+						NOT = { religion_group = Dwarf }
+				}
+				modifier = {
+					factor = 0
+						war = no 
+				}
+			}
+		}	
+
+song = {
+	name = "WAR_MINCE_PYE_Medieval_Drum_Dance.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+					}
+				modifier = {
+					factor = 0
+						war = no
+				}
+			}
+		}
+		
+song = {
+	name = "WAR_Seljuk_Campaign_Winter_2.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				modifier = {
+					factor = 0
+						war = no
+				}	
+			}
+		}
+
+song = {
+	name = "WAR_SukhisvilebiTrack01.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				modifier = {
+					factor = 0
+						war = no
+					}
+				}
+			}
+
+song = {
+	name = "WAR_Ulvens_Dottrar.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture = Khinasi }
+					}
+				modifier = {
+					factor = 0
+						war = no
+					}
+				}
+			}
+
+song = {
+	name = "WAR_VeniVeniEmannuel.ogg"
+		chance = {
+			factor = 2
+				modifier = {
+					factor = 0
+						NOT = { culture_group = Human }
+					}
+				modifier = {
+					factor = 0
+						culture = Khinasi
+					}
+				modifier = {
+					factor = 0
+						war = no 
+					}
+				}
+			}
+
+			
+##################################################
+ ###				Dummy Songs					###
+ ##################################################
+ 
+ #If you want to have songs of the vanilla version in  your game
+ #just delete 'factor = 0 '
+ 
+ 
+song = {
+	name = "akingisdead.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+
+
+song = {
+	name = "asimplesongforcommoners.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "coeurdelion.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+
+
+song = {
+	name = "thefranks.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "theholysepulchre.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "hornsofhattinandaftermath.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "crusaders.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "kingdomofjerusalem.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+song = {
+	name = "krakdeschevaliers.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "marchtoholyland.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "orderofthetemple.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "pathtoglory.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "royalmarriage.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "siegeofkerak.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "thefirstcrusade.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+
+song = {
+	name = "thelastcrusade_finale.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+
+
+song = {
+	name = "turexgloriae.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "sanctus.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "tedonimum.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+
+song = {
+	name = "intaberna.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "journeytoabsolution.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "pilgrimage.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+song = {
+	name = "saladinbesiegejerusalem.ogg"
+	
+	chance = {
+		factor = 0
+			modifier = {
+				factor = 1
+		}		
+	}
+}
+
+
+#Have fun! :-)

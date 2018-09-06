@@ -1,0 +1,140 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+###SPECIAL CULTURAL TITLES###
+
+### RJURIK ###
+
+baron_Rjurik;Thane;;;;;;;;;;;;;x
+baron_female_Rjurik;Thane;;;;;;;;;;;;;x
+barony_of_Rjurik;Thanage of;;;;;;;;;;;;;x
+count_Rjurik;Jarl;;;;;;;;;;;;;x
+count_female_Rjurik;Jarl;;;;;;;;;;;;;x
+county_of_Rjurik;Jarldom of;;;;;;;;;;;;;x
+emperor_Rjurik;High King;;;;;;;;;;;;;x
+emperor_female_Rjurik;High Queen;;;;;;;;;;;;;x
+empire_of_Rjurik;High Kingdom of;;;;;;;;;;;;;x
+
+
+#### VOSGAARD ####
+baron_Vos;Boyar;;;;;;;;;;;;;x
+baron_female_Vos;Boyarina;;;;;;;;;;;;;x
+count_Vos;Zhupan;;;;;;;;;;;;;;;;
+count_female_Vos;Zhupana;;;;;;;;;;;;;x
+county_of_Vos;Chiefdom of;;;;;;;;;;;;;x
+duke_Vos;Tsarevo;;;;;;;;;;;;;x
+duke_female_Vos;Tsareva;;;;;;;;;;;;;x
+family_palace_baron_Vos;Guilder;;;;;;;;;;;;;;;;x
+city_duke_Vos;Guildmaster;;;;;;;;;;;;;;;;x
+city_duchy_of_Vos;Guild of;;;;;;;;;;;;;x
+city_duchy_Vos;City;;;;;;;;;;;;;x
+king_Vos;Tsar;;;;;;;;;;;;;x
+king_female_Vos;Tsaritsa;;;;;;;;;;;;;x
+empire_of_Vos;Tsarstvo of;Tsarstvo of;Tsarstvo of;;Tsarstvo of;;;;;;;;;x
+emperor_Vos;Tsarevic;;;;;;;;;;;;;x
+emperor_female_Vos;Tsarevna;;;;;;;;;;;;;x
+
+#Brechtur#
+city_duke_Brecht;Guildmaster;;;;;;;;;;;;;;;;x
+city_duchy_of_Brecht;Guild of;;;;;;;;;;;;;x
+city_duchy_Brecht;City;;;;;;;;;;;;;x
+family_palace_baron_Brecht;Guilder;;;;;;;;;;;;;;;;x
+
+#Anuire#
+family_palace_baron_Anuirean;Guilder;;;;;;;;;;;;;;;;x
+barony_of_Anuirean;Castle of;;;;;;;;;;;;;x
+baron_Anuirean;Sir;;;;;;;;;;;;;x
+baron_female_Anuirean;Dame;;;;;;;;;;;;;x
+city_baron_Anuirean;Mayor;;;;;;;;;;;;;x
+city_baron_female_Anuirean;Mayoress;;;;;;;;;;;;;x
+city_duchy_of_Anuirean;Guild of;;;;;;;;;;;;;x
+city_duchy_Anuirean;City;;;;;;;;;;;;;x
+city_duke_Anuirean;Guildmaster;;;;;;;;;;;;;;;;x
+city_count_Anuirean;Lord-Mayor;;;;;;;;;;;;;x
+city_count_female_Anuirean;Lady-Mayoress;;;;;;;;;;;;;x
+
+#### ELVEN ####
+baron_Elven;Lord;;;;;;;;;;;;;x
+baron_female_Elven;Lady;;;;;;;;;;;;;x
+barony_of_Elven;Tower of;;;;;;;;;;;;;x
+city_baron_Elven;Guardian;;;;;;;;;;;;;x
+city_baron_female_Elven;Guardian;;;;;;;;;;;;;x
+family_palace_baron_Elven;Guilder;;;;;;;;;;;;;;;;x
+city_count_Elven;Lord-Guardian;;;;;;;;;;;;;x
+city_count_female_Elven;Lady-Guardian;;;;;;;;;;;;;x
+city_duchy_of_Elven;Guild of;;;;;;;;;;;;;x
+
+#Goblin#
+county_of_Goblin;Taijikate of;;;;;;;;;;;;;x
+count_Goblin;Taijik;;;;;;;;;;;;;;;;
+king_Goblin;Khan;;;;;;;;;;;;;;;;
+
+#Orog#
+
+#### KHINASI ####
+family_palace_baron_Khinasi;Guilder;;;;;;;;;;;;;;;;x
+city_duke_Khinasi;Guildmaster;;;;;;;;;;;;;;;;x
+city_duchy_Khinasi;City;;;;;;;;;;;;;x
+city_duchy_of_Khinasi;Guild of;;;;;;;;;;;;;x
+baron_Khinasi;Bey;Bey;Bey;;Gobernador turco;;;;;;;;;x
+barony_of_Khinasi;Beylik;Beylik;Beylik;;Beylicato;;;;;;;;;x
+barony_of_Khinasi;Beylik of;Beylik de;Beylik von;;Beylicato de;;;;;;;;;x
+baron_Khinasi;Wâli;Wâli;Wâli;;Valí;;;;;;;;;x
+baron_female_Khinasi;Wâlia;Walia;Wâlia;;Valía;;;;;;;;;x
+barony_of_Khinasi;Wilayah of;Wilaya de;Wilayah von;;Vilayato de;;;;;;;;;x
+barony_Khinasi;Wilayah;Wilaya;Wilayah;;Vilayato;;;;;;;;;x;
+count_Khinasi;Sheikh;Cheikh;Scheich;;Jeque;;;;;;;;;x
+count_female_Khinasi;Shaykhah;Cheykha;Shaykhah;;Jequesa;;;;;;;;;x
+county_of_Khinasi;Sheikhdom of;Cheikat de;Scheichtum von;;Dominio del Jeque;;;;;;;;;x
+county_Khinasi;Sheikhdom;Cheikat;Scheichtum;;Dominio del Jeque;;;;;;;;;x;
+duke_Khinasi;Emir;Émir;Emir;;Emir;;;;;;;;;x
+duchy_Khinasi;Emirate;Émirat;Emirat;;Emirato;;;;;;;;;x;
+duke_female_Khinasi;Emira;Émirat;Emirin;;Emira;;;;;;;;;x
+duchy_of_Khinasi;Emirate of;Émirat de;Emirat von;;Emirato de;;;;;;;;;x
+king_Khinasi;Sultan;Sultan;Sultan;;Sultán;;;;;;;;;x
+king_female_Khinasi;Sultana;Sultane;Sultanin;;Sultana;;;;;;;;;x
+kingdom_Khinasi;Sultanate;Sultanat;Sultanat;;Sultanato;;;;;;;;;x;
+kingdom_of_Khinasi;Sultanate of;Sultanat de;Sultanat von;;Sultanato de;;;;;;;;;x
+empire_Khinasi;Caliphate;Califat;Kalifat;;Califato;;;;;;;;;x;;;;;;;;;;;;;;;
+empire_of_Khinasi;Caliphate of;;;;;;;;;;;;;x
+emperor_Khinasi;Caliph;;;;;;;;;;;;;x;;;;;;;;;;;;;;;
+emperor_female_Khinasi;Calipha;;;;;;;;;;;;;x;;;;;;;;;;;;;;;
+job_chancellor_Khinasi;Grand Vizier;Grand Vizir;Großwesir;;Gran Visir;;;;;;;;;x
+
+#### DWARF ####
+baron_Dwarven;Lord;;;;;;;;;;;;;x
+baron_female_Dwarven;Lady;;;;;;;;;;;;;x
+barony_of_Dwarven;Lordship of;;;;;;;;;;;;;x
+count_Dwarven;Thane;;;;;;;;;;;;;;;;
+count_female_Dwarven;Thane;;;;;;;;;;;;;x
+county_of_Dwarven;Thanage of;;;;;;;;;;;;;x
+duke_Dwarven;Thane;;;;;;;;;;;;;x
+duke_female_Dwarven;Thane;;;;;;;;;;;;;x
+duchy_of_Dwarven;Thanage of;;;;;;;;;;;;;x
+king_Dwarven;Overthane;;;;;;;;;;;;;;;;
+king_female_Dwarven;Overthane;;;;;;;;;;;;;;;;
+kingdom_of_Dwarven;Overthanage of;;;;;;;;;;;;;x
+family_palace_baron_Dwarven;Guilder;;;;;;;;;;;;;;;;x
+city_duchy_of_Dwarven;Guild of;;;;;;;;;;;;;x
+
+#Religious#
+temple_barony_of;Temple of;;;;;;;;;;;;;x
+temple_baron_Anuirean;Priest;;;;;;;;;;;;;x
+temple_baron_female_Anuirean;Priestess;;;;;;;;;;;;;x
+temple_baron_female_Nature;Taelinri;;;;;;;;;;;;;x
+temple_baron_Gheallie_Sidhe;Taelinri;;;;;;;;;;;;;x
+temple_baron_female_Gheallie_Sidhe;Taelinri;;;;;;;;;;;;;x
+temple_barony_of_Nature;Sacred Wood of;;;;;;;;;;;;;x
+temple_barony_of_Gheallie_Sidhe;Sacred Wood of;;;;;;;;;;;;;x
+temple_count_Anuirean;High Priest;;;;;;;;;;;;;x
+temple_count_female_Anuirean;High Priestess;;;;;;;;;;;;;x
+temple_county_of;High Temple of;;;;;;;;;;;;;x
+temple_duke_Anuirean;Archpriest;;;;;;;;;;;;;;;;x
+temple_duke_female_Anuirean;Archpriestess;;;;;;;;;;;;;;;;x
+temple_duchy_of_Anuirean;Theocracy of;;;;;;;;;;;;;x
+temple_baron_Erik;Druid;;;;;;;;;;;;;x
+temple_baron_female_Erik;Druidess;;;;;;;;;;;;;x
+
+#Outlaw
+family_palace_baron_Outlaw;Pirate Lord;;;;;;;;;;;;;x
+city_duke_Outlaw;Pirate Prince;;;;;;;;;;;;;;;;x
+city_duchy_Outlaw;Pirate Fleet;;;;;;;;;;;;;x
+city_duchy_of_Outlaw;Pirate Fleet of;;;;;;;;;;;;;x

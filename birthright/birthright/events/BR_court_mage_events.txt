@@ -1,0 +1,117 @@
+namespace = courtmage
+
+character_event = {
+    id = courtmage.0
+    title = COURT_MAGE # Court Mage
+    desc = "EVTDESCCOURTMAGE.0"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=I_WILL_TRANSFER_GOLD_OR_PIETY_TO_HIM # I will transfer gold or piety to him.
+	character_event = { id = courtmage.1 }
+	}
+	
+	option={
+	name=courtmage.0.b # I will tell him what spells to focus on.
+	character_event = { id = courtmage.2 }
+	}
+	
+	option={
+	name=NEVER_MIND
+	trigger = { ai = no }
+	}
+	
+	}
+	
+character_event = {
+    id = courtmage.1
+    title = COURT_MAGE # Court Mage
+    desc = "EVTDESCCOURTMAGE.1"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=I_WILL_TRANSFER_200_GOLD # I will transfer 200 gold
+	trigger = { 
+	wealth = 200
+	}
+	wealth = -200
+	any_realm_character = {
+	limit = { has_minor_title = title_court_mage }
+	wealth = 200
+	}
+	}
+	
+		option={
+	name=I_WILL_TRANSFER_500_GOLD
+	trigger = { 
+	wealth = 500
+	}
+	wealth = -500
+	any_realm_character = {
+	limit = { has_minor_title = title_court_mage }
+	wealth = 500
+	}
+	}
+	
+		option={
+	name=I_WILL_TRANSFER_200_REGENCY
+	trigger = { 
+	piety = 200
+	}
+	piety = -200
+	any_realm_character = {
+	limit = { has_minor_title = title_court_mage }
+	piety = 200
+	}
+	}
+	
+		option={
+	name=I_WILL_TRANSFER_500_REGENCY
+	trigger = { 
+	piety = 500
+	}
+	piety = -500
+	any_realm_character = {
+	limit = { has_minor_title = title_court_mage }
+	piety = 500
+	}
+	}
+	
+	option={
+	name=courtmage.1.e # Never mind/I don't have enough gold or regency to transfer.
+	}
+	
+	}
+	
+character_event = {
+    id = courtmage.2
+    title = COURT_MAGE # Court Mage
+    desc = "EVTDESCCOURTMAGE.2"
+    picture = "GFX_evt_pagan"
+
+	is_triggered_only = yes
+	
+	option={
+	name=SUMMON_ME_A_MIGHTY_ARMY # Summon me a mighty army.
+	any_realm_character = {
+	limit = { has_minor_title = title_court_mage }
+	set_character_flag = cm_summoning
+	clr_character_flag = cm_warding
+	}
+	}
+	
+	option={
+	name=courtmage.2.b # Ward my realm against magical attack.
+	any_realm_character = {
+	limit = { has_minor_title = title_court_mage }
+	set_character_flag = cm_warding
+	clr_character_flag = cm_summoning
+	}
+	}
+	
+	
+	}

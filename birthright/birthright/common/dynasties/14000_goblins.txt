@@ -1,0 +1,175 @@
+# GOBLIN DYNASTIES      	14000 - 14999
+#  							 4001 -  4500
+
+# Spiderfell
+4001 = {
+	name="Tal-Qazar"
+	culture=Goblin
+}
+
+
+# Thurazor
+4002 = {					# Tie'skar Graecher 	(MG; F7; Az, minor, 24; LE)
+	name=Graecher
+	culture=Goblin
+}
+14100 = {					# Kral Two-Toes 		(MG; Pr6; Az, tainted, 10; LE)
+	name="Two-Toes"
+	culture=Goblin
+}
+
+
+# Markazor
+4014 = {
+	name = Fanggrabber		# Razzik Fanggrabber	(FG; F4; Az, tainted, 2; LE)
+	culture = Goblin
+	used_for_random = no
+}
+
+
+# Surzek
+14000 = {
+	name = Vorskridder		# Sorid Vorskridder
+	culture = Goblin
+	used_for_random = no
+}
+14006 = {
+	name = Blackscale		# Thurag Blackscale
+	culture = Goblin
+}
+
+
+#Urga-Zai goblins#
+14002 = {
+	name=Eyegouger
+	culture=Goblin
+}
+4007 = {
+	name="Khul-Na"
+	culture=Goblin
+}
+4008 = {
+	name=Nulthan
+	culture=Goblin
+}
+4009 = {
+	name="Urik-Na"
+	culture=Goblin
+}
+4010 = {
+	name="Raka-Zai"
+	culture=Goblin
+}
+4011 = {
+	name=Zaruul
+	culture=Goblin
+}
+4012 = {
+	name=Vulzinn
+	culture=Goblin
+}
+
+
+
+# Kal Kalathor
+14001 = {
+	name = Murfang			# Krag Murfang of Kal Kalathor
+	culture = Goblin
+	used_for_random = no
+}
+14003 = {
+	name = Stonebound		# Hrukk Stonebound
+	culture = Goblin
+}
+14004 = {
+	name = Stoneface		# Ugron Stoneface
+	culture = Goblin
+}
+14005 = {
+	name = Twistback		# Tanbert Twistback
+	culture = Goblin
+}
+14007 = {
+	name = Truesyght		# Finnegan Truesyght
+	culture = Goblin
+}
+14008 = {
+	name = Ironwhip			# Korgul Ironwhip
+	culture = Goblin
+}
+14009 = {
+	name = Splittongue		# Gorren Splittongue 		(Ma,major,33)
+	culture = Goblin
+}
+14010 = {
+	name = "Fire-eyes"		# Hogleg Fire-eyes 			(Vo,minor,16)
+	culture = Goblin
+}
+14011 = {	name = "Clan Snogatroi"		culture = Goblin } # Clan of Snogatroi
+14012 = {	name = "Clan Tiklek"		culture = Goblin } # Clan of Tiklek
+14013 = {	name = "Clan Duegel"		culture = Goblin } # Clan of Duegel
+14014 = {	name = "Clan Wormflyd"		culture = Goblin } # Clan of Wormflyd
+14015 = {	name = "Clan Puggzeg"		culture = Goblin } # Clan of Puggzeg
+14016 = {	name = "Clan Boylspyr"		culture = Goblin } # Clan of Boylspyr
+14017 = {	name = "Clan Zegrabin"		culture = Goblin } # Clan of Zegrabin
+14018 = {	name = "Clan Hurgz"			culture = Goblin } # Clan of Hurgz
+14019 = {	name = "Clan Furzitz"		culture = Goblin } # Clan of Furzitz
+14020 = {	name = "Clan Liispyk"		culture = Goblin } # Clan of Liispyk
+14021 = {	name = "Clan Burgl"			culture = Goblin } # Clan of Burgl
+
+
+4003 = {
+	name=Redcap
+	culture=Goblin
+}
+4004 = {
+	name=Urgalar
+	culture=Goblin
+}
+4005 = {
+	name=Kralgar
+	culture=Goblin
+}
+
+# random ones
+14500={ culture = Goblin name = Brainheart }
+14501={ culture = Goblin name = Dreadgas }
+14502={ culture = Goblin name = Greatcut }
+14503={ culture = Goblin name = Greatdoom }
+14504={ culture = Goblin name = Greatlaugh }
+14505={ culture = Goblin name = Hellstink }
+14506={ culture = Goblin name = Icehowl }
+14507={ culture = Goblin name = Ironkiller }
+14508={ culture = Goblin name = Ironshadow }
+14509={ culture = Goblin name = Lustlurker }
+14510={ culture = Goblin name = Metaldrinker }
+14511={ culture = Goblin name = Metaltooth }
+14512={ culture = Goblin name = Mucktracker }
+14513={ culture = Goblin name = Rageburner }
+14514={ culture = Goblin name = Rockbone }
+14515={ culture = Goblin name = Rotdread }
+14516={ culture = Goblin name = Serpentjeer }
+14517={ culture = Goblin name = Sickbeast }
+14518={ culture = Goblin name = Stinkheart }
+14519={ culture = Goblin name = Tonguechain }
+14520={ culture = Goblin name = Bigshade }
+14521={ culture = Goblin name = Bladegouger }
+14522={ culture = Goblin name = Boneshade }
+14523={ culture = Goblin name = Evilrant }
+14524={ culture = Goblin name = Evilrender }
+14525={ culture = Goblin name = Giantyell }
+14526={ culture = Goblin name = Gloomcleaver }
+14527={ culture = Goblin name = Greatcleaver }
+14528={ culture = Goblin name = Holedrinker }
+14529={ culture = Goblin name = Ironcurse }
+14530={ culture = Goblin name = Killslime }
+14531={ culture = Goblin name = Metalfire }
+14532={ culture = Goblin name = Mossstomach }
+14533={ culture = Goblin name = Muckooze }
+14534={ culture = Goblin name = Paindread }
+14535={ culture = Goblin name = Puscut }
+14536={ culture = Goblin name = Stinkfury }
+14537={ culture = Goblin name = Stoneshade }
+14538={ culture = Goblin name = Vomitraider }
+14539={ culture = Goblin name = Wildcutter }
+14540={ culture = Goblin name = Giantlaugh }

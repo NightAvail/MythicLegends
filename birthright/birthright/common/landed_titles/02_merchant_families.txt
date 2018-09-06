@@ -1,0 +1,252 @@
+# Müden
+
+b_talbehr = {
+	culture = Brecht
+	religion = Sera
+}
+b_aldenauer = {
+	culture = Brecht
+	religion = Sera
+}
+b_hoffstugart = {
+	culture = Brecht
+	religion = Sera
+}
+b_sadler = {
+	culture = Brecht
+	religion = Sera
+}
+b_kommsen = {
+	culture = Brecht
+	religion = Sera
+}
+b_crichton = {
+	culture = Brecht
+	religion = Sera
+}
+
+
+#Ilien#
+
+b_aglondier_tilgentor={
+culture=Anuirean
+religion=Nesirie
+}
+
+b_redspear={
+culture=Anuirean
+religion=Nesirie
+}
+
+b_goldspur={
+culture=Anuirean
+religion=Nesirie
+}
+
+b_arsalam={
+culture=Khinasi
+religion=Nesirie
+}
+
+b_moalem={
+culture=Khinasi
+religion=Nesirie
+}
+
+
+#Endier#
+
+b_fairvew = {
+culture = Anuirean
+religion = Sera
+}
+
+b_jansen = {
+culture = Anuirean
+religion = Sera
+}
+
+b_kalien = {
+culture = Anuirean
+religion = Sera
+}
+
+b_maesilien = {
+culture = Anuirean
+religion = Sera
+}
+
+b_asher = {
+culture = Anuirean
+religion = Sera
+}
+
+
+# Dauren
+
+b_caernson = {
+	culture = Brecht
+	religion = Sera
+}
+b_coppenaur = {
+	culture = Brecht
+	religion = Sera
+	#culture = Dwarven
+	#religion = DwarvenPantheon
+}
+b_rukkhaewan = {
+	culture = Brecht
+	religion = Sera
+	#culture = Dwarven
+	#religion = DwarvenPantheon
+}
+b_singawe = {
+	culture = Brecht
+	religion = Sera
+}
+b_wohlkern = {
+	culture = Brecht
+	religion = Sera
+}
+
+
+# Boeruine Trading Guild
+
+b_borthein={
+culture=Anuirean
+religion=Haelyn
+}
+
+b_laurent={
+culture=Anuirean
+religion=Haelyn
+}
+
+b_alanette={
+culture=Anuirean
+religion=Haelyn
+}
+b_estienot={
+culture=Anuirean
+religion=Haelyn
+}
+b_gerardin={
+culture=Anuirean
+religion=Haelyn
+}
+
+# Prince's Pride
+
+b_iniere={
+culture=Anuirean
+religion=Haelyn
+}
+
+b_wille={
+culture=Anuirean
+religion=Haelyn
+}
+
+b_harte={
+culture=Anuirean
+religion=Haelyn
+}
+
+b_drayton={
+culture=Anuirean
+religion=Haelyn
+}
+
+b_wrenne={
+culture=Anuirean
+religion=Haelyn
+}
+
+
+# Gold Coast Coster
+b_el_omadi={
+	culture=Khinasi
+	religion=Avani
+}
+b_al_anahi={
+	culture=Khinasi
+	religion=Avani
+}
+b_al_hobii={
+	culture=Khinasi
+	religion=Avani
+}
+b_al_ghumrai={
+	culture=Khinasi
+	religion=Avani
+}
+b_al_sa={
+	culture=Khinasi
+	religion=Avani
+}
+
+
+# Djafran Merchant League
+b_fakhoury={
+	culture=Khinasi
+	religion=Avani
+}
+b_najjar={
+	culture=Khinasi
+	religion=Avani
+}
+b_maalouf={
+	culture=Khinasi
+	religion=Avani
+}
+b_quraishi={
+	culture=Khinasi
+	religion=Avani
+}
+b_atiyeh={
+	culture=Khinasi
+	religion=Avani
+}
+# Mairada Trade Company#
+b_mairada_curios={
+	culture=Khinasi
+	religion=Ruornil
+}
+b_mairada_teas={
+	culture=Khinasi
+	religion=Ruornil
+}
+b_mairada_spices={
+	culture=Khinasi
+	religion=Ruornil
+}
+b_mairada_silks={
+	culture=Khinasi
+	religion=Ruornil
+}
+b_mairada_arms={
+	culture=Khinasi
+	religion=Ruornil
+}
+
+#Zweilund Pirates
+b_shaefpate={
+	culture=Zweilunder
+	religion=Outlaw
+}
+b_spatz={
+	culture=Zweilunder
+	religion=Outlaw
+}
+b_schwarzbart={
+	culture=Zweilunder
+	religion=Outlaw
+}
+b_henzlein={
+	culture=Zweilunder
+	religion=Outlaw
+}
+b_hornblower={
+	culture=Halfling
+	religion=Outlaw
+}

@@ -1,0 +1,158 @@
+# Vos dynasties      12000-12999
+
+# Yeninskiy
+12000 = {
+	name = Wohlken				# Barak Wohlken, (K) of Yeninskiy
+	culture = Vos
+	used_for_random = no
+}
+
+12002 = {
+	name = Torsk				# Lita Torsk
+	culture = Vos
+}
+12003 = {
+	name = Lekiniskiy			# Vore Lekiniskiy
+	culture = Vos
+}
+12004 = {
+	name = Vladimirovich		# Corazon Vladimirovich
+	culture = Vos
+}
+
+
+# Ust Atka
+12001 = {
+	name = Tusilov				#The Raven, calls himself Son of Azrai#
+	culture = Vos
+	used_for_random = no
+}
+12005 = {
+	name = Lensky				# TSAR Lensky of the Ust Atka domain
+	culture = Vos
+}
+
+
+# Melyy
+12006 = {
+	name = Polavich				# TSAR Ivan Polavich (Melyy)
+	culture = Vos
+}
+
+
+# Lutkhovsky
+12007 = {
+	name = Suderaght			# Pavel Suderaght (Lutkhovsky)
+	culture = Vos
+}
+
+
+# Rovninodensk
+12008 = {
+	name = Tcherninsky			# Andrei Tcherninsky 
+	culture = Vos
+}
+12016 = {
+	name = Vorac				# Danica Vorac
+	culture = Vos
+}
+
+
+# Molochev
+12009 = {
+	name = Koskov				# Drago Koskov (Molochev)
+	culture = Vos
+	used_for_random = no
+}
+12020 = {
+	name = Tsorich				# Sugat Tsorich
+	culture = Vos
+}
+12021 = {
+	name = Daincser				# Kara Daincser
+	culture = Vos
+}
+
+
+# Velenoye
+12010 = {
+	name = Ruszca				# Fiala Ruszca (Velenoye)
+	culture = Vos
+	used_for_random = no
+}
+
+
+# Zoloskaya
+12011 = {
+	name = Farzeb				# Uvna Farzeb (Zoloskaya)
+	culture = Vos
+	used_for_random = no
+}
+
+12012 = {
+	name = Tetchayev			# Boris Tetchayev
+	culture = Vos
+}
+12013 = {
+	name = Rodelovisk			# Marisha Rodelovisk
+	culture = Vos
+}
+
+
+# Manticore
+12014 = {
+	name = Y'uriev				# Y'urre
+	culture = Vos
+}
+
+# Empire of Vosgaard
+12015 = {
+	name = Zariyatam			# Basil Zariyatam, Tsarevic of Vosgaard
+	culture = Vos
+}
+
+# Rzhlev
+12017 = {
+	name = Rodelovisk
+	culture = Vos
+}
+12018 = {
+	name = Brokeslav
+	culture = Vos
+}
+
+# Kozlovnyy
+12019 = {
+	name = Nikailov				# Vladimir Nikailov (MV; F3; An, major, 27, CG)
+	culture = Vos
+}
+
+
+
+### RANDOM ONES
+
+12400 = { culture = Vos name = Dolgorukov }
+12401 = { culture = Vos name = Sheremetev }
+12402 = { culture = Vos name = Romodanovsky }
+12403 = { culture = Vos name = Demidov }
+12404 = { culture = Vos name = Uvarov }
+12405 = { culture = Vos name = Gagarin }
+12406 = { culture = Vos name = Matveyev }
+12407 = { culture = Vos name = Chemodanov }
+12408 = { culture = Vos name = Shuisky }
+12409 = { culture = Vos name = Golovkin }
+12410 = { culture = Vos name = Zadunaisky }
+12411 = { culture = Vos name = Rostovsky }
+12412 = { culture = Vos name = Musin }
+12413 = { culture = Vos name = Dikiy }
+12414 = { culture = Vos name = Kapnist }
+12415 = { culture = Vos name = Artamonov }
+12416 = { culture = Vos name = Berkov }
+12417 = { culture = Vos name = Buturlin }
+12419 = { culture = Vos name = Guryelov }
+12420 = { culture = Vos name = Kurakin }
+12421 = { culture = Vos name = Kazakov }
+12422 = { culture = Vos name = Beklemishev }
+12423 = { culture = Vos name = Ignatiev }
+12424 = { culture = Vos name = Cherkassky }
+12425 = { culture = Vos name = Egorov }

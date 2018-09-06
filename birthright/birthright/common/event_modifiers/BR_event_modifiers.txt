@@ -1,0 +1,742 @@
+##################################################################################################
+# scriptable and usable for event-system below.
+##################################################################################################
+#
+# ICONS:
+#
+# Good 			<=> 		Bad
+#
+#  1 - Martial 				- 19
+#  2 - Learning 			- 20
+#  3 - Diplomacy 			- 21
+#  4 - Stewardship 			- 22
+#  5 - Intrigue 			- 23
+#  6 - Money 				- 24
+#  7 - Prestige 			- 25
+#  8 - Piety 				- 26
+#  9 - Titles 				- 27
+# 10 - Council 				- 28 
+# 11 - Laws 				- 29
+# 12 - Tech 				- 30 
+# 13 - Military 			- 31
+# 14 - Plots 				- 32
+# 15 - Messages 			- 33
+# 16 - Diplomatic actions 	- 34
+# 17 - Church 				- 35
+# 18 - Characters 			- 36
+# 37 - Prison 				- 38
+# 39 - Love 				- 40
+
+##########################################################
+# DUEL MODIFIERS
+##########################################################
+battlefield_fight = {
+	monthly_character_prestige = 0.01
+	icon = 1
+}
+
+##Birthright modifiers##
+death_plague = {
+	local_revolt_risk = 0.05
+	#city_tax_modifier = -0.5
+	#castle_tax_modifier = -0.5
+	#temple_tax_modifier = -0.5
+	castle_levy_size = -0.66
+	city_levy_size = -0.66
+	icon = 31
+}
+
+small_subversion_spell = {
+	local_revolt_risk = 0.25
+	#city_tax_modifier = -0.2
+	#castle_tax_modifier = -0.2
+	#temple_tax_modifier = -0.2
+	icon = 31
+}
+
+powerful_subversion_spell = {
+	local_revolt_risk = 0.30
+	#city_tax_modifier = -0.2
+	#castle_tax_modifier = -0.2
+	#temple_tax_modifier = -0.2
+	icon = 31
+}
+
+epic_subversion_spell = {
+	local_revolt_risk = 0.40
+	#city_tax_modifier = -0.2
+	#castle_tax_modifier = -0.2
+	#temple_tax_modifier = -0.2
+	icon = 31
+}
+
+bandit_lair = {
+	local_revolt_risk = 0.10
+	#city_tax_modifier = -0.2
+	#castle_tax_modifier = -0.2
+	#temple_tax_modifier = -0.2
+	icon = 31
+}
+
+fighting_undead = {
+	castle_levy_size = -0.75
+	city_levy_size = -0.75
+	icon = 31
+}
+
+adventurer_subversion = {
+	local_revolt_risk = 0.90
+	#city_tax_modifier = -0.2
+	#castle_tax_modifier = -0.2
+	#temple_tax_modifier = -0.2
+	icon = 31
+}
+
+province_ward = {
+	icon = 5
+}
+
+province_bless = {
+	local_revolt_risk = -0.50
+	city_tax_modifier = 0.25
+	castle_tax_modifier = 0.25
+	temple_tax_modifier = 0.50
+	icon = 8
+}
+
+battlefield_fight = {
+	icon = 3
+}
+
+severe_realm_duress = {
+	local_revolt_risk = 0.40
+	#city_tax_modifier = -0.4
+	#castle_tax_modifier = -0.4
+	#temple_tax_modifier = -0.4
+	icon = 31
+}
+
+province0 = {
+	city_tax_modifier = -0.95
+	castle_tax_modifier = -0.95
+	temple_tax_modifier = -0.95
+	castle_levy_size = -0.95
+	city_levy_size = -0.95
+	temple_levy_size = -0.95
+	levy_reinforce_rate = -0.95
+	local_build_cost_modifier = -0.95
+	icon = 45
+}
+
+province1 = {
+	city_tax_modifier = -0.50
+	castle_tax_modifier = -0.50
+	temple_tax_modifier = -0.50
+	castle_levy_size = -0.50
+	city_levy_size = -0.50
+	temple_levy_size = -0.50
+	levy_reinforce_rate = -0.50
+	local_build_cost_modifier = -0.50
+	icon = 46
+}
+province2 = {
+	city_tax_modifier = -0.25
+	castle_tax_modifier = -0.25
+	temple_tax_modifier = -0.25
+	castle_levy_size = -0.25
+	city_levy_size = -0.25
+	temple_levy_size = -0.25
+	levy_reinforce_rate = -0.25
+	local_build_cost_modifier = -0.25
+	icon = 47
+}
+province3= {
+	city_tax_modifier = 0.00
+	castle_tax_modifier = 0.00
+	temple_tax_modifier = 0.00
+	castle_levy_size = 0.00
+	city_levy_size = 0.00
+	temple_levy_size = 0.00
+	levy_reinforce_rate = 0.00
+	icon = 48
+}
+province4= {
+	city_tax_modifier = 0.25
+	castle_tax_modifier = 0.25
+	temple_tax_modifier = 0.25
+	castle_levy_size = 0.25
+	city_levy_size = 0.25
+	temple_levy_size = 0.25
+	levy_reinforce_rate = 0.25
+	icon = 49
+}
+province5= {
+	city_tax_modifier = 0.50
+	castle_tax_modifier = 0.50
+	temple_tax_modifier = 0.50
+	castle_levy_size = 0.50
+	city_levy_size = 0.50
+	temple_levy_size = 0.50
+	levy_reinforce_rate = 0.50
+	icon = 50
+}
+province6= {
+	city_tax_modifier = 1.00
+	castle_tax_modifier = 1.00
+	temple_tax_modifier = 1.00
+	castle_levy_size = 1.00
+	city_levy_size = 1.00
+	temple_levy_size = 1.00
+	levy_reinforce_rate = 0.75
+	icon = 51
+}
+province7= {
+	city_tax_modifier = 1.50
+	castle_tax_modifier = 1.50
+	temple_tax_modifier = 1.50
+	castle_levy_size = 1.50
+	city_levy_size = 1.50
+	temple_levy_size = 1.50
+	levy_reinforce_rate = 0.75
+	icon = 52
+}
+province8= {
+	city_tax_modifier = 2.0
+	castle_tax_modifier = 2.0
+	temple_tax_modifier = 2.0
+	castle_levy_size = 2.0
+	city_levy_size = 2.0
+	temple_levy_size = 2.0
+	levy_reinforce_rate = 0.75
+	icon = 53
+}
+province9= {
+	city_tax_modifier = 2.50
+	castle_tax_modifier = 2.50
+	temple_tax_modifier = 2.50
+	castle_levy_size = 2.50
+	city_levy_size = 2.50
+	temple_levy_size = 2.50
+	levy_reinforce_rate = 0.75
+	icon = 54
+}
+province10= {
+	city_tax_modifier = 3.00
+	castle_tax_modifier = 3.00
+	temple_tax_modifier = 3.00
+	castle_levy_size = 3.00
+	city_levy_size = 3.00
+	temple_levy_size = 3.00
+	levy_reinforce_rate = 0.75
+	icon = 55
+}
+
+rcs_headmaster = {
+	icon = 10
+
+	diplomacy = 2
+	vassal_opinion = 100
+}
+
+in_command = {
+	icon = 13
+
+	fertility = -0.2
+	monthly_character_prestige = 0.1
+}
+
+#waylit
+
+stalwart_defender = {
+	martial = 2
+	monthly_character_prestige = 0.5
+	icon = 1
+}
+
+modifier_hidden = {
+	diplomacy = -10
+	intrigue = -5
+	icon = 5
+}
+
+escaped_siege = {
+	intrigue = 2
+	icon = 14
+}
+
+left_at_siege = {
+	martial = 1
+	icon = 1
+}
+
+ransom_timer = { icon = 1 }
+
+## JGCrusader
+
+bastard_legit_request_timer = {
+	icon = 1
+}
+
+abuse_stopper_timer = {
+	icon = 1
+}
+
+plot_reveal_timer = {
+	icon = 1
+}
+
+peace_declared_10_timer = { 
+	monthly_character_prestige = -0.10
+	icon = 10 
+}
+
+friend_help_request_timer = {
+	icon = 1
+}
+
+hero_to_peasants = {
+	global_revolt_risk = -0.02
+	icon = 7
+}
+
+gain_demesne_obj_timer={icon = 10}
+
+## AGOT
+
+holding_epic_tournament = {
+	icon = 11
+
+	diplomacy = 1
+	monthly_character_prestige = 0.05
+}
+
+## Portfolio of Gods
+
+haelyns_courage = {
+	icon = 1
+	martial = 2
+}
+haelyns_justice = {
+	icon = 1
+	diplomacy = 2
+}
+haelyns_chivalry = {
+	icon = 1
+	martial = 1
+	diplomacy = 1
+	
+	general_opinion = 5
+}
+haelyns_rulership = {
+	icon = 1
+
+	stewardship = 1
+	diplomacy = 1
+}
+haelyns_noble_war = {
+	icon = 1
+
+	stewardship = 1
+	martial = 1
+}
+
+nesiries_healing = {
+	icon = 1
+
+	fertility = 0.1
+	health = 1
+}
+nesiries_grief = {
+	icon = 1
+
+	diplomacy = 1
+	intrigue = 1
+}
+nesiries_remembrance_of_the_dead = {
+	icon = 1
+
+	intrigue = 2
+}
+nesiries_protection = {
+	icon = 1
+
+	stewardship = 1
+	martial = 1
+}
+nesiries_diplomacy = {
+	icon = 1
+
+	diplomacy = 2
+}
+
+
+cuiraecens_storms = {
+	icon = 1
+
+	martial = 2
+}
+cuiraecens_conflict = {
+	icon = 1
+
+	martial = 1
+	intrigue = 1
+}
+cuiraecens_battle = {
+	icon = 1
+
+	martial = 1
+	stewardship = 1
+}
+cuiraecens_glory = {
+	icon = 1
+
+	diplomacy = 1
+	monthly_character_prestige = 0.05
+}
+cuiraecens_strength = {
+	icon = 1
+
+	martial = 1
+	diplomacy = 1
+}
+
+
+avanis_law = {
+	icon = 1
+
+	diplomacy = 2
+}
+avanis_knowledge = {
+	icon = 1
+
+	diplomacy = 1
+	intrigue = 1
+}
+avanis_magic = {
+	icon = 1
+
+	diplomacy = 1
+	stewardship = 1
+}
+avanis_reason = {
+	icon = 1
+
+	diplomacy = 1
+	monthly_character_prestige = 0.05
+}
+avanis_sun = {
+	icon = 1
+
+	martial = 1
+	diplomacy = 1
+}
+
+seras_luck = {
+	icon = 1
+
+	stewardship = 2
+}
+seras_trade = {
+	icon = 1
+
+	stewardship = 1
+	intrigue = 1
+}
+seras_travel = {
+	icon = 1
+
+	diplomacy = 1
+	stewardship = 1
+}
+seras_wealth = {
+	icon = 1
+
+	stewardship = 1
+	monthly_character_prestige = 0.05
+}
+seras_fortune = {
+	icon = 1
+
+	stewardship = 1
+	health = 1
+}
+
+eriks_forests = {
+	icon = 1
+
+	diplomacy = 2
+}
+eriks_hunting = {
+	icon = 1
+
+	martial = 1
+	monthly_character_prestige = 0.05
+}
+eriks_earth = {
+	icon = 1
+
+	diplomacy = 1
+	monthly_character_prestige = 0.05
+}
+eriks_wilderness = {
+	icon = 1
+
+	stewardship = 1
+	monthly_character_prestige = 0.05
+}
+eriks_animals = {
+	icon = 1
+
+	stewardship = 1
+	diplomacy = 1
+}
+
+ruornils_knowledge = {
+	icon = 1
+
+	diplomacy = 2
+}
+ruornils_magic = {
+	icon = 1
+
+	diplomacy = 1
+	stewardship = 1
+}
+ruornils_moon = {
+	icon = 1
+
+	martial = 1
+	monthly_character_prestige = 0.05
+}
+ruornils_spell = {
+	icon = 1
+
+	diplomacy = 1
+	monthly_character_prestige = 0.05
+}
+ruornils_night = {
+	icon = 1
+
+	intrigue = 1
+	diplomacy = 1
+}
+
+eloeles_darkness = {
+	icon = 1
+
+	intrigue = 2
+}
+eloeles_thieves = {
+	icon = 1
+
+	intrigue = 1
+	stewardship = 1
+}
+eloeles_deception = {
+	icon = 1
+
+	martial = 1
+	intrigue = 1
+}
+eloeles_independence = {
+	icon = 1
+
+	diplomacy = 1
+	monthly_character_prestige = 0.05
+}
+eloeles_trickery = {
+	icon = 1
+
+	intrigue = 1
+	monthly_character_prestige = 0.05
+}
+
+laermes_fire = {
+	icon = 1
+
+	intrigue = 1
+	diplomacy = 1
+}
+laermes_love = {
+	icon = 1
+
+	intrigue = 1
+	fertility = 0.1
+	sex_appeal_opinion = 10
+}
+laermes_art = {
+	icon = 1
+
+	stewardship = 1
+	monthly_character_prestige = 0.05
+}
+laermes_charm = {
+	icon = 1
+
+	diplomacy = 1
+	general_opinion = 10
+}
+laermes_passion = {
+	icon = 1
+
+	intrigue = 2
+}
+
+beliniks_fear = {
+	icon = 1
+
+	martial = 1
+	intrigue = 1
+	vassal_opinion = 15 # Figures negative opinion would be bad
+}
+beliniks_domination = {
+	icon = 1
+
+	martial = 1
+	health = 1
+	sex_appeal_opinion = 5
+	monthly_character_prestige = 0.05
+}
+beliniks_feuds = {
+	icon = 1
+
+	martial = 2
+	monthly_character_prestige = 0.05
+}
+beliniks_battle = {
+	icon = 1
+
+	martial = 1
+	general_opinion = 5
+}
+beliniks_strength = {
+	icon = 1
+
+	martial = 2
+	fertility = 0.1
+}
+
+krieshas_winter = {
+	icon = 1
+
+	martial = 1
+	intrigue = 1
+	vassal_opinion = 15 # Figures negative opinion would be bad
+}
+krieshas_hardship = {
+	icon = 1
+
+	martial = 1
+	health = 1
+	monthly_character_prestige = 0.05
+}
+krieshas_horrors = {
+	icon = 1
+
+	martial = 2
+	monthly_character_prestige = 0.05
+}
+krieshas_suffering = {
+	icon = 1
+
+	martial = 2
+	stewardship = 1
+	general_opinion = 5
+}
+krieshas_law = {
+	icon = 1
+
+	diplomacy = 2
+}
+
+azrais_lies = {
+	icon = 1
+
+	intrigue = 3
+}
+azrais_strength = {
+	icon = 1
+
+	martial = 2
+	health = 1
+}
+azrais_secrets = {
+	icon = 1
+
+	diplomacy = 2
+	monthly_character_prestige = 0.05
+}
+azrais_knowledge = {
+	icon = 1
+
+	stewardship = 2
+	intrigue	= 1
+}
+azrais_fear = {
+	icon = 1
+
+	martial = 2
+	vassal_opinion = 15 # Figures negative opinion would be bad
+}
+
+natures_forests = {
+	icon = 1
+
+	diplomacy = 2
+	vassal_opinion = 10
+}
+natures_strength = {
+	icon = 1
+
+	martial = 2
+	health = 1
+}
+natures_elements = {
+	icon = 1
+
+	diplomacy = 2
+	monthly_character_prestige = 0.05
+}
+natures_knowledge = {
+	icon = 1
+
+	stewardship = 2
+	diplomacy	= 1
+}
+natures_understanding = {
+	icon = 1
+
+	martial = 2
+	diplomacy = 1
+}
+
+moradins_earth = {
+	icon = 1
+
+	martial = 2
+	vassal_opinion = 10
+}
+moradins_law = {
+	icon = 1
+
+	diplomacy = 2
+	monthly_character_prestige = 0.05
+}
+moradins_protection = {
+	icon = 1
+
+	martial = 2
+	health = 1
+}
+moradins_arts = {
+	icon = 1
+
+	stewardship = 2
+	diplomacy	= 1
+}
+moradins_sciences = {
+	icon = 1
+
+	stewardship = 1
+	diplomacy = 2
+}

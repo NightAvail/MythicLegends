@@ -1,0 +1,126 @@
+#####################################
+######   TUARHIEVEL FLAVOUR   #######
+######     By Rev and Tim     #######
+#####################################
+
+narrative_event = {
+	id = TH.1
+	title = EVTTITLE_TH_1
+	desc = EVTDESC_TH_1
+	picture = GFX_evt_marriage
+
+	capable_only = yes
+	prisoner = no
+	
+	is_triggered_only = yes
+
+	trigger = {
+		has_landed_title = k_tuarhievel
+		is_married = no
+		year = 1524
+		NOT = { year = 1525 }
+		culture = Elven
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVTOPTA_TH_1   # Savane
+		ai_chance = { factor = 100 } # AI should always pick Savane
+		d_mhoried = {
+			holder_scope = {
+			random_sibling = {
+				limit = {
+					is_female = no
+					any_child = {
+						is_female = yes
+							}
+						}
+				random_child = {
+					limit = {
+						is_female = yes
+						is_married = no
+						}
+					add_spouse = ROOT
+					add_lover = ROOT
+					}
+				}
+			}
+		}
+		#any_realm_lord = {
+		#	reverse_opinion = {
+		#		modifier = opinion_disapprove_marriage
+		#		who = FROM
+		#			years = 40
+		#	}
+		#}
+		c_avallaight = {
+			holder_scope = { # Llytha Damaan gets sad
+			if = {
+			limit = { ai = yes }
+			add_trait = depressed
+			}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTB_TH_1   # Rhuandice
+		ai_chance = { factor = 0 }
+		c_bhindraith = {
+			holder_scope = {
+				religion = Nature
+				random_child = {
+					limit = {
+						is_female = yes
+						is_married = no
+					}
+					add_spouse = ROOT
+					religion = Nature
+				}
+			}
+		}
+		#any_realm_lord = {
+		#	reverse_opinion = {
+		#		modifier = opinion_approve_marriage
+		#		who = FROM
+		#			years = 40
+		#	}
+		#}
+		c_avallaight = {
+			holder_scope = { # Llytha Damaan gets happy
+			if = {
+			limit = { ai = yes }
+			add_trait = content
+			}
+			}
+		}
+	}
+
+
+	option = {
+		name = EVTOPTC_TH_1   # I will take no wife.
+		ai_chance = { factor = 0 }
+		prestige = -100
+		#any_realm_lord = {
+		#	reverse_opinion = {
+		#		modifier = opinion_disapprove
+		#		who = FROM
+		#			years = 40
+		#	}
+		#}
+		c_avallaight = {  # Llytha Damaan gets sad
+			holder_scope = {
+			if = {
+			limit = { ai = yes }
+			add_trait = depressed
+			}
+			}
+		}
+	}
+
+}
+

@@ -1,0 +1,1250 @@
+adventuremenu.0.b;I will leave the adventuring life behind.;;;;;;;;;;;;x
+adventuremenu.0.c;How do I encourage my kids to go adventuring?;;;;;;;;;;;;x
+adventurer.3.a;Very well, go forth then and slay this monster.;;;;;;;;;;;;x
+adventurer.3.b;Very well, go forth then and slay this monster.;;;;;;;;;;;;x
+adventurer.7.a;Pay them, and throw a feast in their honor!;;;;;;;;;;;;x
+adventurer.7.b;I refuse to pay. Send them off!;;;;;;;;;;;;x
+adventurer.7.b;Pay them, and throw a feast in their honor!;;;;;;;;;;;;x
+ADVENTURER;Adventurer;;;;;;;;;;;;x
+ADVENTURERS_FAIL;Adventurers Fail;;;;;;;;;;;;x
+ADVENTURE_AWAITS;Adventure awaits!;;;;;;;;;;;;x
+ADVENTURING;Adventuring;;;;;;;;;;;;x
+ADVENTURING_CLASS;Adventuring Class;;;;;;;;;;;;x
+AERENWE;Aerenwe;;;;;;;;;;;;x
+AMBUSH;Ambush!;;;;;;;;;;;;x
+ANUIREAN_EMPIRE;Anuirean Empire;;;;;;;;;;;;x
+I_WILL_BLESS_SOME_PROVINCES;I will bless some provinces.;;;;;;;;;;;;x
+adventurer.2.c;Better hire an adventurer from these parts...;;;;;;;;;;;;x
+adventurer.2.b;Better hire an adventurer from these parts...;;;;;;;;;;;;x
+YES_I_WILL_BECOME_WARLEADER;Yes, I will become War-Leader.;;;;;;;;;;;;x
+adventurer.2.a;Better hire an adventurer from these parts...;;;;;;;;;;;;x
+YES_CONTACT_ONE_OF_MY_OWN_RELIGION;Yes, contact one of my own religion.;;;;;;;;;;;;x
+HOPEFULLY_HE_BECOMES_A_MAN;Hopefully, he becomes a man;;;;;;;;;;;;x
+adventurer.2.d;Better hire an adventurer from these parts...;;;;;;;;;;;;x
+STAY_TOGETHER_FIGHTING_RETREAT;Stay together - fighting retreat!;;;;;;;;;;;;x
+random.15.a;I'll decide what to do with them later...;;;;;;;;;;;;x
+I_WANT_THEM_TO_INSTIGATE_REBELLIONS;I want them to instigate rebellions.;;;;;;;;;;;;x
+YES_I_WILL_LEAD_THE_KHINASI;Yes, I will lead the Khinasi.;;;;;;;;;;;;x
+NO_HE_HAS_NOT_YET_PROVEN_HIMSELF;No, he has not yet proven himself.;;;;;;;;;;;;x
+HAH_LET_HER_HAVE_HER_FUN;Hah! Let her have her fun.;;;;;;;;;;;;x
+random.2.a;Curse them! Hire another party of adventurers...;;;;;;;;;;;;x
+random.2.b;Curse them! Hire another party of adventurers...;;;;;;;;;;;;x
+THAT_BASTARD_I_WONT_FORGET_THIS;That bastard! I won't forget this...;;;;;;;;;;;;x
+random.6.a;For the glory of us all, men! Victory! We share the loot.;;;;;;;;;;;;x
+YES_PREPARE_THE_LESSER_ALCHEMY_SPELL;Yes, prepare the lesser alchemy spell.;;;;;;;;;;;;x
+FORWARD_INTO_THE_DARKNESS;Forward, into the darkness!;;;;;;;;;;;;x
+random.6.b;For the glory of us all, men! Victory! We share the loot.;;;;;;;;;;;;x
+random.2.c;Curse them! Hire another party of adventurers...;;;;;;;;;;;;x
+WELCOME_MY_NEW_MINIONS_WELCOME;Welcome, my new minions - welcome!;;;;;;;;;;;;x
+adventuring.6.a;That brat almost ruined our reputation...;;;;;;;;;;;;x
+realmbattlemagic.4.c;I will cast a death plague on an enemy province!;;;;;;;;;;;;x
+realmbattlemagic.4.b;I will cast a death plague on an enemy province!;;;;;;;;;;;;x
+emperor.31.a;I shall make [Root.Religion.GetRandomGodName] proud!;;;;;;;;;;;;x
+whitewitch.5.a;Insulting! I'll have to resort to charm magic...;;;;;;;;;;;;x
+realmbattlemagic.4.a;I will cast a death plague on an enemy province!;;;;;;;;;;;;x
+FALL_BACK_LEAVE_OUR_PACKS_BEHIND;Fall back! Leave our packs behind!;;;;;;;;;;;;x
+THE_INSOLENCE_ILL_NEVER_FORGET_THIS;The insolence! I'll never forget this!;;;;;;;;;;;;x
+SEND_THE_EVENT_TO_ALL_HUMAN_PLAYERS;Send the event to all human players;;;;;;;;;;;;x
+succubus.11.b;I need to get a prisoner... or a consort.;;;;;;;;;;;;x
+succubus.11.a;I need to get a prisoner... or a consort.;;;;;;;;;;;;x
+RISE_MY_NEW_MINIONS_RISE;Rise, my new minions - rise!;;;;;;;;;;;;x
+THE_GOBLINS_HAVE_THE_RIGHT_IDEA;The Goblins have the right idea!;;;;;;;;;;;;x
+I_STILL_DONT_TRUST_HER;I still don't trust her...;;;;;;;;;;;;x
+random.8.c;For the glory of us all, men! Victory! We share the loot.;;;;;;;;;;;;x
+random.8.a;For the glory of us all, men! Victory! We share the loot.;;;;;;;;;;;;x
+LET_THE_FOOL_GO_I_TIRE_OF_HIM;Let the fool go! I tire of him!;;;;;;;;;;;;x
+random.8.b;For the glory of us all, men! Victory! We share the loot.;;;;;;;;;;;;x
+realmspell.8.c;I will ward a province against enemy spells.;;;;;;;;;;;;x
+realmspell.8.b;I will ward a province against enemy spells.;;;;;;;;;;;;x
+realmspell.8.a;I will ward a province against enemy spells.;;;;;;;;;;;;x
+WE_CAN_DISCUSS_IT_WHAT_IS_THE_OFFER;We can discuss it. What is the offer?;;;;;;;;;;;;x
+random.12.b;A most excellent proposition. Throw him in the cells!;;;;;;;;;;;;x
+YES_I_WILL_LEAD_THE_BRECHT_LEAGUE;Yes, I will lead the Brecht League.;;;;;;;;;;;;x
+unification.6.a;I will swear fealty - Anuire must be strong again.;;;;;;;;;;;;x
+unification.6.b;I will swear fealty - Anuire must be strong again.;;;;;;;;;;;;x
+ILL_HEAR_WHAT_SHE_HAS_TO_SAY;I'll hear what she has to say...;;;;;;;;;;;;x
+random.12.a;A most excellent proposition. Throw him in the cells!;;;;;;;;;;;;x
+YES_PREPARE_TO_INVADE_VOSGAARD;Yes! Prepare to invade Vosgaard.;;;;;;;;;;;;x
+whitewitch.12.a;There's too many to fight... surrender, men.;;;;;;;;;;;;x
+random.3.a;Men, get in there! I'll stay and guard the horses.;;;;;;;;;;;;x
+YES_AND_SEND_WORD_TO_ALL_OF_ANUIRE;Yes, and send word to all of Anuire!;;;;;;;;;;;;x
+random.3.b;Men, get in there! I'll stay and guard the horses.;;;;;;;;;;;;x
+HAH_MEN_YOU_ARE_AVENGED;Hah! Men - you are avenged!;;;;;;;;;;;;x
+CAST_IT_WHERE_MY_SPYMASTER_IS_LOCATED;Cast it where my spymaster is located.;;;;;;;;;;;;x
+priest.1.a;Of course, with such a large donation...;;;;;;;;;;;;x
+priest.1.b;Of course, with such a large donation...;;;;;;;;;;;;x
+realmbattlemagic.1.b;A great lightning storm to ravage the enemy army.;;;;;;;;;;;;x
+realmbattlemagic.1.a;A great lightning storm to ravage the enemy army.;;;;;;;;;;;;x
+prisoner.6.a;Hah, she should be honoured of bearing my child!;;;;;;;;;;;;x
+POTION_OF_HEALING_/_TAKES_1_YEAR;Potion of Healing / Takes 1 year.;;;;;;;;;;;;x
+RING_OF_COMMAND_/_TAKES_5_YEARS;Ring of Command / Takes 5 years.;;;;;;;;;;;;x
+knight.101.a;That old fool thinks he can get rid of me this easy...;;;;;;;;;;;;x
+I_WILL_CAST_AN_ALCHEMY_SPELL;I will cast an alchemy spell.;;;;;;;;;;;;x
+HAELYN_GOD_OF_NOBLE_WAR;Haelyn, God of Noble War.;;;;;;;;;;;;x
+STAND_FIRM_HOOOOLD_THE_LINE;Stand firm! Hoooold the line!;;;;;;;;;;;;x
+I_WILL_CREATE_A_MAGIC_RING;I will create a magic ring.;;;;;;;;;;;;x
+YES_ITS_TIME_TO_SETTLE_DOWN;Yes, it's time to settle down!;;;;;;;;;;;;x
+NOW_MEN_INTO_THAT_BREACH;Now men - into that breach!;;;;;;;;;;;;x
+UNIFICATION_WILL_HELP_US_ALL;Unification will help us all.;;;;;;;;;;;;x
+adventurer.0.d;Sewers, they say? Better hire an adventurer from these parts...;;;;;;;;;;;;x
+adventurer.0.c;Sewers, they say? Better hire an adventurer from these parts...;;;;;;;;;;;;x
+BRING_HIM_TO_MY_CHAMBERS;Bring him to my chambers!;;;;;;;;;;;;x
+DIRECT_BATTLE_DAMAGE_SPELLS;Direct battle damage spells.;;;;;;;;;;;;x
+adventurer.0.b;Sewers, they say? Better hire an adventurer from these parts...;;;;;;;;;;;;x
+TO_HELL_WITH_THEM_IM_GOING;To hell with them, I'm going!;;;;;;;;;;;;x
+I_HOPE_ITS_NOT_THE_GORGONS_REALM;I hope it's not the Gorgon's realm!;;;;;;;;;;;;x
+adventurer.0.a;Sewers, they say? Better hire an adventurer from these parts...;;;;;;;;;;;;x
+RETREAT_THEYRE_TOO_POWERFUL;Retreat - they're too powerful!;;;;;;;;;;;;x
+ASK_THIS_DUKE_TO_SUPPORT_CLAIM;Ask this Duke to support claim;;;;;;;;;;;;x
+I_CAN_FEEL_THE_POWER_WITHIN_ME;I can feel the power within me!;;;;;;;;;;;;x
+SHE_IS_USING_MAGIC_ON_ME_RUN;She is using magic on me! Run!;;;;;;;;;;;;x
+A_+4_ENCHANTED_SWORD_/_TAKES_4_YEARS;A +4 Enchanted Sword / Takes 4 years.;;;;;;;;;;;;x
+whitewitch.13.a;Time to leave, and never speak of this again!;;;;;;;;;;;;x
+I_WILL_RAISE_SOME_ZOMBIES;I will raise some zombies.;;;;;;;;;;;;x
+OF_COURSE_MAKE_OUR_FAMILY_PROUD;Of course! Make our family proud.;;;;;;;;;;;;x
+realmpriestmagic.1.a;I will ward a province against enemy spells.;;;;;;;;;;;;x
+realmpriestmagic.1.b;I will ward a province against enemy spells.;;;;;;;;;;;;x
+realmpriestmagic.1.c;I will ward a province against enemy spells.;;;;;;;;;;;;x
+random.4.c;Excellent job men! Now bring me the loot!;;;;;;;;;;;;x
+AMULET_OF_PROTECTION_+1_/_TAKES_1_YEAR;Amulet of Protection +1 / Takes 1 year.;;;;;;;;;;;;x
+random.4.a;Excellent job men! Now bring me the loot!;;;;;;;;;;;;x
+random.4.b;Excellent job men! Now bring me the loot!;;;;;;;;;;;;x
+whitewitch.3.b;Useless coward! I'll have to find someone else...;;;;;;;;;;;;x
+YES_YES_I_VOW_TO_SERVE_THEIR_GOD;Yes yes, I vow to serve their god!;;;;;;;;;;;;x
+whitewitch.3.a;Useless coward! I'll have to find someone else...;;;;;;;;;;;;x
+priest.4.b;Of course, with such a large donation...;;;;;;;;;;;;x
+priest.4.a;Of course, with such a large donation...;;;;;;;;;;;;x
+priest.4.c;Of course, with such a large donation...;;;;;;;;;;;;x
+realmbattlemagic.2.d;I have prepared a lightning storm spell!;;;;;;;;;;;;x
+whitewitch.3.c;Useless coward! I'll have to find someone else...;;;;;;;;;;;;x
+YOU_PASS_OUT_FROM_A_BLOW_TO_THE_HEAD;*you pass out from a blow to the head*;;;;;;;;;;;;x
+WWHAT_SEIZE_THEM_CLOSE_THE_GATES;W-what? Seize them! Close the gates!;;;;;;;;;;;;x
+realmbattlemagic.2.a;I have prepared a lightning storm spell!;;;;;;;;;;;;x
+FINALY_ITS_TIME_TO_MEND_THE_SCHISM;Finaly, its time to mend the schism!;;;;;;;;;;;;x
+UHHH_EH_SOMEONE_THERE;Uhhh... Eh.... Someone there?;;;;;;;;;;;;x
+realmbattlemagic.2.c;I have prepared a lightning storm spell!;;;;;;;;;;;;x
+realmbattlemagic.2.b;I have prepared a lightning storm spell!;;;;;;;;;;;;x
+YES_I_WILL_GO_ADVENTURING;Yes, I will go adventuring.;;;;;;;;;;;;x
+YES_PREPARE_TO_INVADE_ANUIRE;Yes! Prepare to invade Anuire.;;;;;;;;;;;;x
+A_+1_ENCHANTED_SWORD_/_TAKES_1_YEAR;A +1 Enchanted Sword / Takes 1 year.;;;;;;;;;;;;x
+knight.102.a;That old fool thinks he can get rid of me this easy...;;;;;;;;;;;;x
+NEVER;Never!;;;;;;;;;;;;x
+emperor.28.c;Yes! Prepare to invade Rjurik.;;;;;;;;;;;;x
+emperor.28.b;Yes! Prepare to invade the Khinasi.;;;;;;;;;;;;x
+emperor.20.b;Send this huge chest of gold...;;;;;;;;;;;;x
+emperor.20.d;I don't have enough prestige...;;;;;;;;;;;;x
+EVTTOOLTIPSIEGEESCAPED;EVTTOOLTIPsiegeescaped;;;;;;;;;;;;x
+bloodtheft.0.b;Maybe later... if the ransom is not paid.;;;;;;;;;;;;x
+I_WILL_RAISE_SOME_SKELETONS;I will raise some skeletons.;;;;;;;;;;;;x
+SHOW_MORE_OPTIONS/LEAVE_MENU;Show more options/Leave Menu.;;;;;;;;;;;;x
+ARREST_THEM_ALL_GUARDS;Arrest them all! GUARDS!;;;;;;;;;;;;x
+MORE_OPTIONS_OR_CANCEL;More options, or cancel.;;;;;;;;;;;;x
+random.6.b;A great victory, I won almost singlehanded. The loot is mine!;;;;;;;;;;;;x
+A_NONHUMAN_PANTHEON;A non-human Pantheon.;;;;;;;;;;;;x
+adventurer.18.b;No, wait, let's leave her alone.;;;;;;;;;;;;x
+crafting.5.c;Elixir of Eternal Youth / Takes 10 years.;;;;;;;;;;;;x
+crafting.5.b;Potion of Beauty / Takes 1 year.;;;;;;;;;;;;x
+adventurer.33.b;Yes, hire anyone who wants the job.;;;;;;;;;;;;x
+adventurer.33.c;I'm too far away. Have my chancellor hire someone nearby.;;;;;;;;;;;;x
+ALRIGHT_MEN_THIS_IS_IT;Alright men, this is it!;;;;;;;;;;;;x
+adventurer.33.d;No, I don't trust adventurers.;;;;;;;;;;;;x
+realmbattlemagic.4.b;I will cast a death plague on an entire enemy region!;;;;;;;;;;;;x
+SHOW_MORE_OPTIONS;Show more options.;;;;;;;;;;;;x
+SERA_GODDESS_OF_COMMERCE;Sera, Goddess of Commerce.;;;;;;;;;;;;x
+realmspell.0.b;I will cast a summoning spell.;;;;;;;;;;;;x
+courtmage.0.b;I will tell him what spells to focus on.;;;;;;;;;;;;x
+sorcerycollege.3.b;I think I'd rather continue my studies;;;;;;;;;;;;x
+TRAIN_AS_A_FIGHTER_INSTEAD;Train as a fighter instead.;;;;;;;;;;;;x
+emperor.29.b;Yes! Prepare to invade the Brecht.;;;;;;;;;;;;x
+adventuring.14.b;No, I will continue to adventure!;;;;;;;;;;;;x
+NEVER_LIKED_HIM_MUCH_ANYWAYS;Never liked him much anyways!;;;;;;;;;;;;x
+MORE_OPTIONS;More options.;;;;;;;;;;;;x
+emperor.21.b;Funny Duke. For that, I'll kill him last...;;;;;;;;;;;;x
+random.8.c;Victory! Now we can return the stolen goods to the peasants!;;;;;;;;;;;;x
+ARRRRRGH;Arrrrrgh...;;;;;;;;;;;;x
+random.8.b;I almost took them down single-handedly! The loot is mine!;;;;;;;;;;;;x
+adventurer.23.b;I won't run from these scum! Chaaarge!;;;;;;;;;;;;x
+realmspell.8.b;I will ward a region against enemy spells.;;;;;;;;;;;;x
+random.16.c;Put a price on their heads. 20 gold bars!;;;;;;;;;;;;x
+realmspell.0.c;I will cast province ward/dispel magic.;;;;;;;;;;;;x
+unification.6.b;I will never bend the knee to this fool!;;;;;;;;;;;;x
+GREAT;Great!;;;;;;;;;;;;x
+TRAIN_AS_A_RANGER_INSTEAD;Train as a ranger instead.;;;;;;;;;;;;x
+succubus.7.c;No, not now. I'll resist the hunger.;;;;;;;;;;;;x
+NO_BUT_ILL_KEEP_THE_MONEY;No. But I'll keep the money!;;;;;;;;;;;;x
+RUORNIL_GOD_OF_MAGIC;Ruornil, God of Magic.;;;;;;;;;;;;x
+ILL_WORSHIP_THE_LAMIA;I'll worship the Lamia!;;;;;;;;;;;;x
+THEY_WIN_THIS_ROUND;They win.. this round...;;;;;;;;;;;;x
+IN_DUE_TIME;In due time...;;;;;;;;;;;;x
+NO_I_DONT_WANT_THE_THRONE;No, I don't want the throne.;;;;;;;;;;;;x
+ONE_OF_THE_EVIL_GODS;One of the Evil Gods.;;;;;;;;;;;;x
+CAST_AT_IT_A_RANDOM_REGION;Cast at it a random region.;;;;;;;;;;;;x
+crafting.4.c;Amulet of Protection +5 / Takes 5 years.;;;;;;;;;;;;x
+crafting.4.b;Amulet of Protection +3 / Takes 3 years.;;;;;;;;;;;;x
+adventurer.11.c;Bah - I'm too busy for this nonsense!;;;;;;;;;;;;x
+adventurer.11.b;Hire someone new, don't care from where.;;;;;;;;;;;;x
+adventurer.34.d;No, I won't ever do mercenary work.;;;;;;;;;;;;x
+realmbattlemagic.5.b;Cast at it a random enemy province.;;;;;;;;;;;;x
+whitewitch.4.b;The only way to defeat a female adversary, is to seduce her!;;;;;;;;;;;;x
+emperor.9.c;Hah! Give this brave fool to my daughter...;;;;;;;;;;;;x
+realmbattlemagic.12.c;Summon my court mage - we must dispel it!;;;;;;;;;;;;x
+NOOOO_SET_ME_FREE;Noooo, set me free!;;;;;;;;;;;;x
+NOT_INTERESTED;Not interested...;;;;;;;;;;;;x
+I_WILL_CREATE_AN_AMULET;I will create an amulet.;;;;;;;;;;;;x
+random.13.b;I'll get out... and when I do...;;;;;;;;;;;;x
+realmspell.1.b;Yes, prepare the greater alchemy spell.;;;;;;;;;;;;x
+LETS_TRY_AGAIN;Let's try again!;;;;;;;;;;;;x
+I_WILL_TRAIN_AS_A_PRIEST;I will train as a priest.;;;;;;;;;;;;x
+emperor.18.b;Close menu or try to find another Duke.;;;;;;;;;;;;x
+random.0.c;Ignore them, and they'll go away!;;;;;;;;;;;;x
+CLOSE_MENU;Close Menu.;;;;;;;;;;;;x
+priest.0.b;Contact anyone who might help!;;;;;;;;;;;;x
+LEAVE_HIM_BE;Leave him be.;;;;;;;;;;;;x
+NO_ITS_BUT_A_FLESH_WOUND;No, its but a flesh wound...;;;;;;;;;;;;x
+AVANI_GODDESS_OF_THE_SUN;Avani, Goddess of the Sun.;;;;;;;;;;;;x
+I_WILL_DISPEL_IT;I will dispel it!;;;;;;;;;;;;x
+UNACCEPTABLE;Unacceptable!;;;;;;;;;;;;x
+NO_TROLLS_ARE_TOO_DANGEROUS;No, trolls are too dangerous.;;;;;;;;;;;;x
+realmbattlemagic.11.b;Cast at it a random enemy province.;;;;;;;;;;;;x
+adventurer.3.b;No, that is too much. Show them the door.;;;;;;;;;;;;x
+adventurer.29.b;I won't run from goblins! Stand and fight!;;;;;;;;;;;;x
+emperor.23.b;No. He is unworthy of the throne!;;;;;;;;;;;;x
+I_WILL_TRANSFER_200_REGENCY;I will transfer 200 regency;;;;;;;;;;;;x
+NO_I_WILL_BECOME_A_LEGEND;No, I will become a legend!;;;;;;;;;;;;x
+I_WILL_TRAIN_AS_A_MAGE;I will train as a mage.;;;;;;;;;;;;x
+unification.24.b;I will never bend the knee to this fool!;;;;;;;;;;;;x
+emperor.0.b;No, I care not for the throne.;;;;;;;;;;;;x
+NO_I_FORBID_IT;No, I forbid it!;;;;;;;;;;;;x
+SHE_CANT_HAVE_THIS_ONE;She can't have this one...;;;;;;;;;;;;x
+succubus.5.b;How boring. I'll have to make him fear me.;;;;;;;;;;;;x
+realmpriestmagic.4.c;I will raise some undead cavalry.;;;;;;;;;;;;x
+realmpriestmagic.4.d;I will summon some lesser daemons.;;;;;;;;;;;;x
+random.1.b;The bandit treasury was my tax revenue - hand it over!;;;;;;;;;;;;x
+random.1.c;Want to stay and court my daughter, strapping young hero?;;;;;;;;;;;;x
+emperor.19.b;No, he is unworthy of the throne!;;;;;;;;;;;;x
+crafting.6.c;Ring of Speed / Takes 3 years.;;;;;;;;;;;;x
+adventurer.17.b;No, witches do not interest me.;;;;;;;;;;;;x
+crafting.6.b;Ring of Invisibility / Takes 1 year.;;;;;;;;;;;;x
+BAH_ANUIRE;Bah. Anuire...;;;;;;;;;;;;x
+unification.12.b;I will never bend the knee to this fool!;;;;;;;;;;;;x
+THE_DUNGEON_IT_IS;The dungeon it is!;;;;;;;;;;;;x
+adventuring.11.c;Yes, it's time to settle down.;;;;;;;;;;;;x
+realmbattlemagic.10.b;Cast at it a random enemy province.;;;;;;;;;;;;x
+adventurer.2.c;Have my chancellor hire someone nearby.;;;;;;;;;;;;x
+adventurer.2.b;Hire anyone, don't care from where.;;;;;;;;;;;;x
+I_SAID_IT_WAS_TOO_DANGEROUS;I said it was too dangerous!;;;;;;;;;;;;x
+TRAIN_AS_A_ROGUE_INSTEAD;Train as a rogue instead.;;;;;;;;;;;;x
+religion.4.b;I will embrace the Gheallie Sidhe!;;;;;;;;;;;;x
+religion.4.c;The Elves have the right idea!;;;;;;;;;;;;x
+religion.4.d;The Dwarves have the right idea!;;;;;;;;;;;;x
+DUEL_TITLE;duel_title;;;;;;;;;;;;x
+DO_NOT_WARN_ME_OF_THIS_AGAIN;Do not warn me of this again.;;;;;;;;;;;;x
+realmspell.3.d;I will summon some lesser daemons.;;;;;;;;;;;;x
+realmspell.3.c;I will raise some undead cavalry.;;;;;;;;;;;;x
+TRAIN_AS_A_PRIEST_INSTEAD;Train as a priest instead.;;;;;;;;;;;;x
+FOR_THAT_RULER_I_THINK_NOT;For that ruler? I think not!;;;;;;;;;;;;x
+random.2.b;If you want something done, do it yourself! Saddle my horse!;;;;;;;;;;;;x
+KRIESHA_GODDESS_OF_WINTER;Kriesha, Goddess of Winter.;;;;;;;;;;;;x
+random.2.c;To hell with it. Leave them alone.;;;;;;;;;;;;x
+I_LIKE_THE_SERPENTS_STYLE;I like the Serpent's style...;;;;;;;;;;;;x
+adventurer.14.b;No, wait, let's not do this...;;;;;;;;;;;;x
+YES_BUT_I_WONT_DRAIN_HIM;Yes, but I won't drain him.;;;;;;;;;;;;x
+realmbattlemagic.8.c;I will cast an epic subversion spell.;;;;;;;;;;;;x
+realmbattlemagic.8.b;I will cast a powerful subversion spell.;;;;;;;;;;;;x
+realmbattlemagic.0.b;Province subversion and damage spells.;;;;;;;;;;;;x
+emperor.2.c;Hah! Give this brave fool to my daughter...;;;;;;;;;;;;x
+FINE_WAR_IT_IS_THEN;Fine... war it is then.;;;;;;;;;;;;x
+NO_IM_NO_FOOL_I_WONT_GO;No, I'm no fool! I won't go.;;;;;;;;;;;;x
+adventuring.10.b;Don't bother me with this type of news again.;;;;;;;;;;;;x
+adventurer.1.b;No, killing undead is disgusting work...;;;;;;;;;;;;x
+emperor.25.c;I need to accelerate my plans then...;;;;;;;;;;;;x
+SHOW_MORE_GODS_OF_GOOD;Show more Gods of Good.;;;;;;;;;;;;x
+TRAIN_AS_A_BARD_INSTEAD;Train as a bard instead.;;;;;;;;;;;;x
+NO_NOT_NOW;No, not now.;;;;;;;;;;;;x
+succubus.3.d;I dare not move against her...;;;;;;;;;;;;x
+succubus.3.c;I will attempt to secure his release!;;;;;;;;;;;;x
+I_DONT_HAVE_ENOUGH_GOLD;I don't have enough gold...;;;;;;;;;;;;x
+whitewitch.0.b;Never mind, or try to find another Duke.;;;;;;;;;;;;x
+realmbattlemagic.9.b;Cast at it a random enemy province.;;;;;;;;;;;;x
+I_WILL_TRAIN_AS_A_FIGHTER;I will train as a fighter.;;;;;;;;;;;;x
+I_WILL_TRAIN_AS_A_ROGUE;I will train as a rogue.;;;;;;;;;;;;x
+CURSES_*FLEE_TO_SAFETY*;Curses! *flee to safety*;;;;;;;;;;;;x
+courtmage.1.e;Never mind/I don't have enough gold or regency to transfer.;;;;;;;;;;;;x
+adventuring.13.b;Don't bother me with this type of news again.;;;;;;;;;;;;x
+legendary.1.b;No, wait, let's not do this...;;;;;;;;;;;;x
+I_FORGIVE_HIS_CRUDE_MANNER;I forgive his crude manner...;;;;;;;;;;;;x
+TRANSFER_RINGS;Transfer Rings.;;;;;;;;;;;;x
+adventurer.0.d;Bah - I'm too busy for this nonsense!;;;;;;;;;;;;x
+adventurer.0.c;I'm too far away. Have my chancellor hire someone nearby.;;;;;;;;;;;;x
+adventurer.0.b;Sewers, they say? Hire anyone, don't care from where.;;;;;;;;;;;;x
+SHOW_MORE_OPTIONS/CLOSE_MENU;Show more options/Close menu;;;;;;;;;;;;x
+I_WILL_TRAIN_AS_A_BARD;I will train as a bard.;;;;;;;;;;;;x
+realmpriestmagic.1.b;I will ward a region against enemy spells.;;;;;;;;;;;;x
+random.4.c;Bribe your men to tell tales of your own heroism in the fight.;;;;;;;;;;;;x
+NOTSHOWN;NotShown;;;;;;;;;;;;x
+HIS_LOSS_NOT_MINE;His loss, not mine.;;;;;;;;;;;;x
+random.4.b;Excellent job men! You can keep the loot.;;;;;;;;;;;;x
+I_WILL_BLESS_A_REGION;I will bless a region.;;;;;;;;;;;;x
+crafting.3.c;A Holy Avenger Sword / Takes 5 years.;;;;;;;;;;;;x
+crafting.3.b;A +5 Enchanted Sword / Takes 5 years.;;;;;;;;;;;;x
+adventurer.35.b;I want them to assassinate my enemies.;;;;;;;;;;;;x
+adventurer.35.c;I want them to steal from my enemies.;;;;;;;;;;;;x
+adventurer.35.d;I want them as a special forces unit.;;;;;;;;;;;;x
+whitewitch.7.b;I can't resist her, and don't want to anymore!;;;;;;;;;;;;x
+realmbattlemagic.6.b;Cast at it a random enemy province.;;;;;;;;;;;;x
+AZRAI_GOD_OF_DARKNESS;Azrai, God of Darkness.;;;;;;;;;;;;x
+NO_SUFFER_FOR_YOUR_SINS;No. Suffer for your sins!;;;;;;;;;;;;x
+HMMPF;Hmmpf.;;;;;;;;;;;;x
+I_WILL_TRANSFER_500_REGENCY;I will transfer 500 regency;;;;;;;;;;;;x
+courtmage.2.b;Ward my realm against magical attack.;;;;;;;;;;;;x
+ACCEPT_MY_FATE;Accept my fate...;;;;;;;;;;;;x
+ARCANE_REALM_MAGIC;Arcane Realm Magic;;;;;;;;;;;;x
+ASSASSINATIONS;Assassinations;;;;;;;;;;;;x
+AT_LAST;At last!;;;;;;;;;;;;x
+AVANIL;Avanil;;;;;;;;;;;;x
+A_NEW_LAHMIA;A New Lahmia;;;;;;;;;;;;x
+A_NEW_SERPENT;A New Serpent;;;;;;;;;;;;x
+A_NEW_SUCCUBUS;A New Succubus;;;;;;;;;;;;x
+A_RJURIK_KING_OR_DUKE;A Rjurik King or Duke...;;;;;;;;;;;;x
+BANDITS;Bandits;;;;;;;;;;;;x
+BASTARDS;Bastards!;;;;;;;;;;;;x
+BECOMING_EMPEROR;Becoming Emperor;;;;;;;;;;;;x
+BEGIN;BEGIN!;;;;;;;;;;;;x
+BELINIK_GOD_OF_STRIFE;Belinik, God of Strife.;;;;;;;;;;;;x
+BETTER_THAN_NOTHING;Better than nothing!;;;;;;;;;;;;x
+BLOODTHEFT;Bloodtheft;;;;;;;;;;;;x
+BM_FATE_OF_ENGLAND;Time of Change;;;;;;;;;;;;;x
+BM_FATE_OF_ENGLAND_DESC;The year is 1524 of Haelyn's Count - in Anuire the Prince of Avanil, The Archduke of Boeruine, and The Grand Baron of Ghoere are finally on the move staking their claims to the Anuirean Empire first founded by Roele Andu. The Awnsheighleen are putting in motion their long wrought plans of conquest.;;;;;;;;;;;;;x
+BOERUINE;Boeruine;;;;;;;;;;;;x
+BRIGAND_AMBUSH;Brigand Ambush;;;;;;;;;;;;x
+BROSENGAE;Brosengae;;;;;;;;;;;;x
+BURN;Burn!;;;;;;;;;;;;x
+CAST_AT_IT_A_RANDOM_PROVINCE;Cast at it a random province.;;;;;;;;;;;;x
+CAUGHT;Caught!;;;;;;;;;;;;x
+CHARGE;Charge!;;;;;;;;;;;;x
+CHAR_DIPLOMACY;Negotiation: §Y[GetLearning]§W;;;;;;;;;;;;;x
+CHAR_LEARNING;Bloodline Strength: §Y[GetLearning]§W;;;;;;;;;;;;;x
+CH_DIPLOMACY_CHANGE;Negotiation $DIRECTION$ by $CHANGE$;;;;;;;;;;;;;x
+CH_LEARNING_CHANGE;Bloodline Power $DIRECTION$ by $CHANGE$;;;;;;;;;;;;;x
+CH_PIETY_CHANGE;Regency $DIRECTION$ by $CHANGE$;;;;;;;;;;;;;x
+clerics;Clerics;;;;;;;;;;;;;x
+clerics_desc;Priest units offer a strong defensive edge to any army formation.;;;;;;;;;;;;;x
+COURT_MAGE;Court Mage;;;;;;;;;;;;x
+crafting.2.b;A +2 Enchanted Sword / Takes 2 years.;;;;;;;;;;;;x
+crafting.2.c;A +3 Enchanted Sword / Takes 3 years.;;;;;;;;;;;;x
+CRAFTING_MENU;Crafting Menu;;;;;;;;;;;;x
+CRAFTING_MENU_AMULETS;Crafting Menu - Amulets;;;;;;;;;;;;x
+CRAFTING_MENU_POTIONS;Crafting Menu - Potions;;;;;;;;;;;;x
+CRAFTING_MENU_RINGS;Crafting Menu - Rings;;;;;;;;;;;;x
+CRAFTING_MENU_SWORDS;Crafting Menu - Swords;;;;;;;;;;;;x
+CURSE_THEM;Curse them!;;;;;;;;;;;;x
+CURSE_THEM_ALL;Curse them all!;;;;;;;;;;;;x
+DAMNIT;Damnit!;;;;;;;;;;;;x
+DAMN_THAT_MAGE;Damn that mage!;;;;;;;;;;;;x
+DEATH_PLAGUE;Death Plague;;;;;;;;;;;;x
+DEFEAT;Defeat!;;;;;;;;;;;;x
+DIEMED;Diemed;;;;;;;;;;;;x
+DIPLOMACYEFFECT;$DIRECTION$ $VALUE$ Negotiation\n;$DIRECTION$ $VALUE$ en Diplomatie\n;$DIRECTION$ $VALUE$ Diplomatie\n;;$DIRECTION$ $VALUE$ Diplomacia\n;;;;;;;;;x
+DIPLOMACY_MOD;Negotiation;;;;;;;;;;;;;x
+DIPLOMATIC_COURT_SKILL;Negotiation;;;;;;;;;;;;;x
+DIPLOMATIC_SKILL;Negotiation;;;;;;;;;;;;;x
+DIRECT_DAMAGE_SPELLS;Direct Damage Spells;;;;;;;;;;;;x
+DUEL_TITLE;duel_title;;;;;;;;;;;;x
+DUNGEON_EXPLORATION;Dungeon Exploration;;;;;;;;;;;;x
+DWARVESTRAITEVENT;dwarvestraitevent;;;;;;;;;;;;x
+EARLY_MED;Time of Change;;;;;;;;;;;;;x
+EARLY_MED_INFO;The year is 1524 of Haelyn's Count - in Anuire the Prince of Avanil, The Archduke of Boeruine, and The Grand Baron of Ghoere are finally on the move staking their claims to the Anuirean Empire first founded by Roele Andu. The Awnsheighleen are putting in motion their long wrought plans of conquest. The Anuireans are on the verge of unification, the elves may start putting their plans on motion, The Gorgon preparing for a mass invasion of the might which Cerilia has never see before. Will you be able to unite the Anuireans, defeat The Gorgon and be crowned emperor?;;;;;;;;;;;;;x
+ELF_TRAIT;elf trait;;;;;;;;;;;;x
+emperor.7.b;No, I care not for the throne.;;;;;;;;;;;;x
+EMPEROR;Emperor;;;;;;;;;;;;x
+ENDIER;Endier;;;;;;;;;;;;x
+ERA_CHAR_INFO_3;Raesene Andu or as he is commonly known today - The Gorgon, is the greatest of the Awnsheigh on Cerilia, and the most feared. A brooding, raging presence, closer to a god than to the man he once was, he was brother to Haelyn and Roele, betrayer of the Anuirean Empire, champion of Azrai and scourge of Anuire, and slayer of the Imperial line.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_313;Darien Avan, Prince of Avanil, is probably the most recognizable, respected and celebrated regent in all of Anuire, perhaps in all of Cerilia. He may not be loved, he may be distrusted, but he is almost universally respected, and he works hard to maintain and earn this respect from his peers, hoping to one day parley it into reunifying the Anuirean Empire under his banner.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_10211;Gerad ibn Farid el-Arrasi, Prince of Ariya rules the city of the same name, as well as the Ariyan Temple of Avani. Like all in his line, he claims descent from the Great King el-Arrasi, and is the eighty-forth Khinasi ruler of Ariya. The prince, a dignified warrior in his early forties, has a sharp mind and can truly see into a person's heart. He believes Ariya should act as the political and moral leader of all Khinasi and insists on formality in all dealings.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_20128;Barak Wohlken is the Tsarevo of Yeninskiy. Barak once led Vos armies in their defence against the Iron Hand Tribes. Now, he concentrates on protecting Yeninskiy's western provinces from the predations of the Raven. Oft-styled as brutal and savage even for a Vos war chief, Barak does what he must to keep the Raven's armies out of Yeninskiy.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_25007;The ruler of the last elf domain in the Aelvinwode is Fhileraene of House Llyrandor, King of Tuarhievel. Fhileraene seems an enigma to all around him, while he entertains traders from human lands he also holds court with the most hate-filled of the elves. He loves life, a quality one normally associates with elves, but he also flies into moods of black rage. Though smooth and handsome his demeanour hides lines of ugliness and hatred just below the surface.;;;;;;;;;;;;;x
+ERA_CHAR_INFO_44354;Erik is the unyielding ruler of the oldest line of nobility in Brechtur. Coming from an unbroken line of Danigs that can be traced past the battle of Mount Deismaar to the first wave of settlers in the Great Bay region. Even the royal house of Muden cannot boast so clear and unbroken a lineage.;;;;;;;;;;;;;x
+ERIK_THE_DRUID_GOD;Erik, the Druid God.;;;;;;;;;;;;x
+EVOPTA938;EVOPTA938;;;;;;;;;;;;x
+EVTDESC30087;New Friend;;;;;;;;;;;;x
+EVTDESC30093;Perfect Activity;;;;;;;;;;;;x
+EVTDESC30094;Failed Activity;;;;;;;;;;;;x
+EVTDESCADVENTUREMENU.0;Though you are a ruler, you can still go adventuring in search of fame, glory, and experience. You can leave the affairs of state to a regent who will act in your stead while you are away.;;;;;;;;;;;;x
+EVTDESCADVENTUREMENU.1;If your children have an adventuring class and are unlanded, you can give them an honorary title 'adventurer' and they will go. If you take it away, they will return.;;;;;;;;;;;;x
+EVTDESCADVENTUREMENU.2;Your parents have encouraged you to go adventuring and find fame and fortune. As you are unlanded, you have little choice in the matter.;;;;;;;;;;;;x
+EVTDESCADVENTUREMENU.3;Your parents have told you to come home and stop your adventuring career. As you are unlanded, you have little choice in the matter.;;;;;;;;;;;;x
+EVTDESCADVENTURER.0;You are informed that a necromancer lives deep beneath your city's sewers, and is raising an army of undead from amongst the plague victims. The citizens are in a panic and this threat must be dealt with.;;;;;;;;;;;;x
+EVTDESCADVENTURER.1;A message arrives from a ruler, asking if you would help his land defeat a necromancer re-animating plague victims and building an army. He will pay 10 gold. What do you say?.;;;;;;;;;;;;x
+EVTDESCADVENTURER.2;The necromancer has raised hundreds of undead now, and you have no choice but to act now. Will you send in the city guard, or call for an adventurer to deal with it?;;;;;;;;;;;;x
+EVTDESCADVENTURER.3;The adventuring party arrives and is quickly briefed on the situation. For 10 gold, they will go into the sewers and attempt to defeat this necromancer before he can summon an army of undead against you.;;;;;;;;;;;;x
+EVTDESCADVENTURER.4;You reach your destination. Fighting through dozens of undead beneath the city sewers, you finally come to the necromancer's lair - it is well guarded, and your small party is already tired. Yet you cannot rest, you must press on!;;;;;;;;;;;;x
+EVTDESCADVENTURER.5;You bravely charge ahead, and just as it seems you are about to be overwhelmed by hordes of undead, you strike down the necromancer and his minions fall lifeless to the ground.;;;;;;;;;;;;x
+EVTDESCADVENTURER.6;You bravely charge ahead, but you are overwhelmed by undead - you cannot get close enough to slay the necromancer, and you find yourself surrounded and overwhelmed! The last thing you remember are sharp claws dragging you down.;;;;;;;;;;;;x
+EVTDESCADVENTURER.7;The adventuring party arrives back safely, having defeated the necromancer. Your city is safe, and they are hailed as heroes.;;;;;;;;;;;;x
+EVTDESCADVENTURER.8;By some miracle, your companions manage to save you and drag you out of the sewers. You are grievously wounded, however, and your quest has failed...;;;;;;;;;;;;x
+EVTDESCADVENTURER.9;You return triumphant, and a great feast is held in your honor. You are duly paid, and the next morning, you set off for new adventures.;;;;;;;;;;;;x
+EVTDESCADVENTURER.10;You return triumphant, only to find the gates of the castle barred to you. 'Begone ruffians, the ruler shouts from the walls - or I'll have you arrested for vagrancy!' ;;;;;;;;;;;;x
+EVTDESCADVENTURER.11;The adventurers have failed, and are either dead, wounded, or captured now. What should be done? ;;;;;;;;;;;;x
+EVTDESCADVENTURER.13;While visiting a tavern, you hear stories of a nearby cave rumored to be a gnoll lair. Do you want to investigate?;;;;;;;;;;;;x
+EVTDESCADVENTURER.14;After a week of searching, you finally come upon some gnoll tracks which lead to a dark cave. Preparing yourself as best as you are able, you light some torches and prepare to destroy this threat to the local community.;;;;;;;;;;;;x
+EVTDESCADVENTURER.15;You march into the gnoll lair, and though they are strong opponents, they are no match for your party's superior skill and tactics. After slaying half a dozen of them, you find some treasure and quickly claim it.;;;;;;;;;;;;x
+EVTDESCADVENTURER.16;You march into the gnoll lair, and quickly find yourself in trouble. Six gnolls come at you all at once, and you are hard pressed to make it back to the exit alive!;;;;;;;;;;;;x
+EVTDESCADVENTURER.17;While visiting a tavern, you hear stories of a witch, possibly a priestess of Kriesha, stealing children from the village. She lives in a cave a few days away. Do you want to investigate?;;;;;;;;;;;;x
+EVTDESCADVENTURER.18;After some searching, you finally come upon a cave with skulls decorating the entrance and the symbol of Kriesha carved with blood into the rocks. Do you enter?;;;;;;;;;;;;x
+EVTDESCADVENTURER.19;You march into the cave, and as soon as you do, are met by a hail of ice sprouting from the fingertips of a darkly beautiful woman dressed in white robes. After a quick but fierce battle, you kill her, and free the children.;;;;;;;;;;;;x
+EVTDESCADVENTURER.20;As soon as you march into the cave, you are surprised by a cone of icy cold sprouting from the fingers of a beautiful woman dressed in white, quickly followed by four of her apprentices whose chants almost bring you to your knees with pain.;;;;;;;;;;;;x
+EVTDESCADVENTURER.21;As your party travels through the wilds, you are suddenly ambused by a band of outlaws.;;;;;;;;;;;;x
+EVTDESCADVENTURER.22;You take cover from the initial ambush, and after a brief moment, take the fight to them. You slay several, and the rest flee in terror before your party's overpowering strength!;;;;;;;;;;;;x
+EVTDESCADVENTURER.23;The ambush was well set-up! Two dozen archers pin you down, and they have mounted troops and what seems to be a half-giant! If you rush them, there's a good chance you won't make it...;;;;;;;;;;;;x
+EVTDESCADVENTURER.24;Ignoring a hail of arrows, you order your party to attack! With steel, stealth, sorcery and priestly powers, you throw everything you have at them, and...;;;;;;;;;;;;x
+EVTDESCADVENTURER.25;The fight is brutal, but the ferocity and strength of your charge throws off the brigands. The archers flee as you near them, and a fierce fight follows where you personally slay their leader. The rest turn and run!;;;;;;;;;;;;x
+EVTDESCADVENTURER.26;You rush the brigands, but you take an arrow to the knee as you leave cover! Another arrow hits one of your companions through the throat. This is not going well. A man approaches with a mace, seeking to knock you out!;;;;;;;;;;;;x
+EVTDESCADVENTURER.27;While resting around the camp fire one night, your party is suddenly ambused by a band of goblins.;;;;;;;;;;;;x
+EVTDESCADVENTURER.28;Like the well trained professionals that you are, you quickly jump to arms and engage the goblins! There are almost two dozen of them, but their ambush was clumsy and loud - you swiftly defeat them.;;;;;;;;;;;;x
+EVTDESCADVENTURER.29;You seem to be under attack from an entire goblin tribe, and they have gnolls with them! Disorganized, you cannot mount a proper defense. It would be wise to let them have you gear and make a run for it...;;;;;;;;;;;;x
+EVTDESCADVENTURER.30;Gathering your party together, fighting back to back, you face the rush of dozens of goblins and gnolls!;;;;;;;;;;;;x
+EVTDESCADVENTURER.31;Your party stands firm against the onslaught, fighting as a well disciplined team against the disorganized goblins. They cannot break your line, and soon a goblin horn sounds the retreat. Cowardly creatures!;;;;;;;;;;;;x
+EVTDESCADVENTURER.32;The goblins encircle you, and the larger gnolls rush at you. Take them alive, yells the goblin chief, and your line begins to break under the pressure. Gnoll hands grasp at you, pulling you away from your party...;;;;;;;;;;;;x
+EVTDESCADVENTURER.33;While your army is fully capable of fighting the battles to come, sometimes it helps to have an extra edge. Shall you hire a band of adventurers to help you win this war? They would cost 50 gold.;;;;;;;;;;;;x
+EVTDESCADVENTURER.34;A message arrives from a ruler, asking if you would help fight a war against their enemies. You would primarily be used for special missions. It would pay 50 gold.;;;;;;;;;;;;x
+EVTDESCADVENTURER.35;The adventuring party arrives and is quickly briefed on the situation. You pay them their fee, and sit together in council deciding how best to use them in the war...;;;;;;;;;;;;x
+EVTDESCADVENTURER.36;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to instigate rebellions amongst his enemies.;;;;;;;;;;;;x
+EVTDESCADVENTURER.37;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you assassinate enemy nobles and commanders...;;;;;;;;;;;;x
+EVTDESCADVENTURER.38;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to steal from the enemy, making him unable to pay for his troops.;;;;;;;;;;;;x
+EVTDESCADVENTURER.39;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to lead a unit of adventurers during the battles.;;;;;;;;;;;;x
+EVTDESCADVENTURER.40;You travel behind enemy lines, and begin to work on instigating a rebellion. What will you focus your message on?;;;;;;;;;;;;x
+EVOPTAADVENTURER.40;The unfairness of hereditary monarchy!;;;;;;;;;;;;x
+EVOPTBADVENTURER.40;Taxes are too high!;;;;;;;;;;;;x
+EVOPTCADVENTURER.40;The ruler is in league with demons!;;;;;;;;;;;;x
+EVTDESCADVENTURER.41;You travel behind enemy lines, and begin to plot your assassinations of enemy notables. Who will you strike at?;;;;;;;;;;;;x
+EVOPTAADVENTURER.41;The enemy Marshall.;;;;;;;;;;;;x
+EVOPTBADVENTURER.41;A random enemy count.;;;;;;;;;;;;x
+EVOPTCADVENTURER.41;I'll just go on a general killing spree!;;;;;;;;;;;;x
+EVTDESCADVENTURER.43;As ordered, you begin assembling a band of adventurers into a proper fighting force of some fifty people with various skills and talents to use on the battlefield at critical moments. How will you lead them?;;;;;;;;;;;;x
+EVOPTAADVENTURER.43;I will lead from the front.;;;;;;;;;;;;x
+EVOPTBADVENTURER.43;I will lead from the center.;;;;;;;;;;;;x
+EVOPTCADVENTURER.43;I will lead from the rear.;;;;;;;;;;;;x
+EVTDESCADVENTURER.44;The insolence! The ragged adventurers claim to be too good for your task, and outright refuses! They return the gold, and says the job was not what they expected they would be doing. Why I'll...;;;;;;;;;;;;x
+EVTDESCADVENTURER.45;The ruler is enraged at your refusal, and screams for his guards to arrest you immediately! What do you do?;;;;;;;;;;;;x
+EVTDESCADVENTURER.46;In an instant, you react, striking out at the ruler with all your power. He is caught off-guard, and falls quickly to the groundm dead or severely wounded! You then turn to rush the guards, heading for the nearest exit!;;;;;;;;;;;;x
+EVTDESCADVENTURER.47;In an instant, you react, striking out at the ruler with all your power. The guards jump in front of him however, and you soon find yourself surrounded, and more reinforcements on the way. There is no way out of this...;;;;;;;;;;;;x
+EVTDESCADVENTURER.48;As soon as you call for their arrest, the adventurers spring into action, launching a furious assault upon your person! Before you can react, you are struck down, and blackness falls upon you...;;;;;;;;;;;;x
+EVTDESCADVENTURER.49;As soon as you call for their arrest, the adventurers spring into action, launching a furious assault upon your person! You and your guards react swiftly though, and soon have them surrounded - they surrender...;;;;;;;;;;;;x
+EVTDESCADVENTURER.50;You are taken to the darkest dungeon, and unceremoniously dumped on the ground there, stripped of all your belongings. You'll have to hope you can pay the ransom, before they decide to execute you.;;;;;;;;;;;;x
+EVTDESCADVENTURER.51;During the last few weeks, you have been railing against the unfairness of hereditary rulers. The peasants are listening, and you have convinced them that together, they are powerful and wise enough to rule themselves!;;;;;;;;;;;;x
+EVTDESCADVENTURER.52;During the last few weeks, you have been railing against the unfairness of high taxes. The peasants are listening, and you have convinced them that they should stop paying them immediately until they are lowered.;;;;;;;;;;;;x
+EVTDESCADVENTURER.53;During the last few weeks, you have been fabricating evidence that their ruler is in league with demonic forces. They are frightened, and up in arms, vowing to burn this evil out of his castle.;;;;;;;;;;;;x
+EVTDESCADVENTURER.54;It seems one of your enemies has hired a band of adventurers to instigate a peasant revolt in your demesne... let's hope they have more sense than to listen to such nonsense!;;;;;;;;;;;;x
+EVTDESCADVENTURER.55;During the last few weeks, you have been seeking ways to kill the enemy Marshall. Finally, an opportunity presents itself during a moonless night...;;;;;;;;;;;;x
+EVTDESCADVENTURER.56;During the last few weeks, you have been seeking ways to kill an enemy count. Finally, an opportunity presents itself during a moonless night...;;;;;;;;;;;;x
+EVTDESCADVENTURER.57;During the last few weeks, you have been seeking ways to kill a large bunch of enemy notables. An opportunity presents itself, when you find a group of young enemy nobles drinking at a tavern, on the way to war.;;;;;;;;;;;;x
+EVTDESCADVENTURER.58;During the night, you hear a thud outside your door. Like a body falling... the door creeps open, and an assassin sneaks in. Treachery!;;;;;;;;;;;;x
+EVTDESCADVENTURER.59;You quietly dispatch the guard in front of the Marshall's door, and catch him unaware in bed! You rush towards him, and deliver a mortal blow before he can react, and then escape out the window.;;;;;;;;;;;;x
+EVTDESCADVENTURER.60;As you sneak into the Marshall's quarters after dispatching the guard, he hears you, and rushes out of bed screaming for the guards! He sleeps in his armour, and comes at you wielding a longsword!;;;;;;;;;;;;x
+EVTDESCADVENTURER.61;You heard the assassin coming, and seeing that you are awake and prepared to fight, the shadowy figure quickly disappears into the night!;;;;;;;;;;;;x
+EVTDESCADVENTURER.62;You heard the assassin coming, and after a quick struggle where neither of you can gain the advantage, the assassin thinks better of it, and runs away!!;;;;;;;;;;;;x
+EVTDESCADVENTURER.63;The assassin enters your quarters, and comes right at you! You only see a shadowy figure clothed in black, before you feel a sharp pain and then... blackness!;;;;;;;;;;;;x
+EVTDESCADVENTURER.64;You enter the target's quarters and decide to fight, despite being discovered. A swift and furious struggle ensues, but finally the Marshall is dealt a deadly blow just as you hear the guards come running down the corridor.;;;;;;;;;;;;x
+EVTDESCADVENTURER.65;You enter the target's quarters and decide to fight, despite being discovered. A swift and furious struggle ensues, you cannot quickly dispatch him! Guards are coming now, the castle bells are ringing...;;;;;;;;;;;;x
+EVTDESCADVENTURER.66;During the night, you hear a noise outside your door. Like a body falling... the door creaps open, and an assassin sneaks in. Treachery!;;;;;;;;;;;;x
+EVTDESCADVENTURER.67;You quietly dispatch the guard in front of the count's door, and catch him at unawares in bed! You rush towards him, and deliver a mortal blow before he can react, and then escape out the window.;;;;;;;;;;;;x
+EVTDESCADVENTURER.68;As you sneak into the count's quarters after dispatching the guard, he hears you, and rushes out of bed screaming for the guards! He sleeps in his armor, and comes at you wielding a longsword!;;;;;;;;;;;;x
+EVTDESCADVENTURER.69;After a night of drinking, you sleep in a tavern with other young nobles, on the way to the front lines of the war. A door creaks open and...;;;;;;;;;;;;x
+EVTDESCADVENTURER.70;You are drinking at a tavern, and some strangers approach and engage you in talk. Suddenly you feel lightheaded, and notice a white substance in your wine... you feel faint, ill, and your heart is racing!;;;;;;;;;;;;x
+EVTDESCADVENTURER.71;Suddenly you are drinking in a tavern with some friends, and a wizard starts chanting. You have only a moment to turn your head, and then a massive fireball approaches!;;;;;;;;;;;;x
+EVTDESCADVENTURER.72;After the group retires to the night, you and your party sneak into their quarters, aiming to kill them in their sleep. This one dies!;;;;;;;;;;;;x
+EVTDESCADVENTURER.73;You engage the group of young nobles, drinking and swapping tales, and all the while adding a deadly poison to your drinks whenever you can. It is slow acting, and the next morning, this one has died!;;;;;;;;;;;;x
+EVTDESCADVENTURER.74;You are not the subtle type. Seeing a group of enemy nobles, you or your party wizard starts casting a fireball spell directly towards them. Panic erupts in the tavern and the flames are spreadign. This one has died!;;;;;;;;;;;;x
+EVTDESCADVENTURER.75;Six months have passed, and your mercenary contract period is over. You can now return to normal adventuring, or take another contract with a different ruler.;;;;;;;;;;;;x
+EVTDESCADVENTURER.76;The campaign reaches a critical point, and your group of adventurers is needed at a key moment. Leading from the front, you rush in to plug a hole in the battle line that you can see is developing!;;;;;;;;;;;;x
+EVTDESCADVENTURER.77;The campaign reaches a critical point, and your group of adventurers is needed at a key moment. With your men forming a perimeter around you, you rush in to plug a hole in the battle line that you can see is developing!;;;;;;;;;;;;x
+EVTDESCADVENTURER.78;The campaign reaches a critical point, and your group of adventurers is needed at a key moment. Gathering your men, you order them to rush ahead to plug a hole in the battle line that you can see is developing!;;;;;;;;;;;;x
+EVTDESCADVENTURER.79;While visiting a tavern, the townspeople beg you to help them dispatch a small tribe of giants that has been stealing their cattle. This is a dangerous quest, but you will never achieve mastery without taking risks...;;;;;;;;;;;;x
+EVTDESCADVENTURER.80;After a week of searching, you finally come upon the giant tribe. There are a dozen of them, and they don't seem to have spotted you yet...;;;;;;;;;;;;x
+EVTDESCADVENTURER.81;You prepare as best you can, and then engage this most dangerous enemy. The giants quickly spring into action, but your long adventuring career has prepared you for such dangers - you finally slay the last of them!;;;;;;;;;;;;x
+EVTDESCADVENTURER.82;You engage the giants, but one of them is a priest of terrible power - Lightning cracks from the sky, and elementals are summoned to their aid - you have no chance of victory here!;;;;;;;;;;;;x
+EVTDESCADVENTURING.0;You decide to take up adventuring, being the child of a powerful ruler but not directly in the line of succession. Perhaps you can win fame and fortune with your own skills, that will one day grant you a realm of your own.;;;;;;;;;;;;x
+EVTDESCADVENTURING.1;You're getting older now, and it is finally time to settle down, many say. It's time to come home with your fame and loot, and look to a future away from dusty roads and dark dungeons!;;;;;;;;;;;;x
+EVTDESCADVENTURING.2;You have sustained a grievous injury, and until you can find a priest to heal you, there is no way you can keep up the demands of the adventuring life. For now, you will have to retire.;;;;;;;;;;;;x
+EVTDESCADVENTURING.3;Your child has decided to take up the life of an adventurer, and will travel the land in search of fame and fortune. Do you give your blessing to this endeavor?;;;;;;;;;;;;x
+EVTDESCADVENTURING.4;Your parents disapprove, and demand that you do not leave for the adventuring life. What do you say?;;;;;;;;;;;;x
+EVTDESCADVENTURING.5;Your child rejects your demand to stay, and short of locking him up, there is little you can do...;;;;;;;;;;;;x
+EVTDESCADVENTURING.6;Your child accepts your demand to stay at court, but is not happy about it...;;;;;;;;;;;;x
+EVTDESCADVENTURING.7;Your child returns one night, gravely wounded, carried home by his companions. He is maimed, and unless a priest can regenerate his body, the adventuring days are long gone...;;;;;;;;;;;;x
+EVTDESCADVENTURING.8;You have now become a trained professional in your adventuring class. To achieve mastery, however, you will either need to continue adventuring, or train with a current master which can become very costly.;;;;;;;;;;;;x
+EVTDESCADVENTURING.9;You have now become a recognized master in your adventuring class. To become a legend, however, you will have to undertake a legendary quest - and survive it!;;;;;;;;;;;;x
+EVTDESCADVENTURING.10;This character has become a master of their craft, whether of war, magic, song or stealth, and word of their name is quickly spreading. ;;;;;;;;;;;;x
+EVTDESCADVENTURING.11;As a master of your craft, perhaps it is time to retire. Unless you risk life and limb on an epic quest, you will not advance further, and it might seem like a good idea to settle down now and enjoy your wealth.;;;;;;;;;;;;x
+EVTDESCADVENTURING.12;You have now become a legend in your own time. Your skills rank you as amongst the most deadly and competent individuals in the land.;;;;;;;;;;;;x
+EVTDESCADVENTURING.13;This character has become a legend, having completed a quest which all the land is talking about. Their skills rank them as amongst the most powerful individuals in Cerilia now.;;;;;;;;;;;;x
+EVTDESCADVENTURING.14;As a legend, perhaps it is time to retire from the active life and make way for a new generation of heroes. Perhaps it is time to settle down and spend some of your wealth?;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.0;Avanil is one of the most powerful realms in Anuire. It is a rich land of fertile farms and walled cities, and many feel certain that their Prince will be the new Emperor. Only Boeruine stands in the way.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.1;Boeruine is a powerful realm, matched only by Avanil. Cities dot the entire coastline, and the forests are rich. Its people feel proud that their Archduke is certain to press his rightful claim soon and become Emperor.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.2;Talinie is a wild and forested realm, constantly on guard against the goblins of Thurazor. It has recently decided to accept Boeruine's claim on the Iron Throne, hoping a united Anuire will lead to the end of goblin and elf raids. ;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.3;Brosengae is a heavily populated realm, though it suffers from harsh storms at times from the sea. It is supporting Avanil's claim to the Iron Throne, and is frequently the site of battles between them and Boeruine.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.4;Taeghas is a fair land with an independent-minded people, but it's ruler has been unconcerned with statecraft for a long time. Darien Avan of Avanil rules this land, in all but name.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.5;The Free City of Endier is one of the greatest in Anuire. Under the rulership of the half-elf Guilder Kalien, it is a rich - yet also dangerous - place of commerce, intrigue, and decadence. Guarding its independence fiercely.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.6;Diemed is a rich land on the southern coast, but has recently lost it's eastern parts to Medoere, Ilien, and Roesone. In the old days of the empire, that whole region was known as the Archduchy of Diemed - and be so again...;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.7;Medoere is a small Theocracy of followers of the Celestial Temple of Ruornil, the god of magic. The land is fertile, but always the shadow of the Spiderfell falls upon its northern borders. Raids by fierce spider-riding goblins are common here. ;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.8;Ilien is one of the largest cities in Anuire, its walls standing 50 feet high. It is a rich and powerful city, and the main port of call for Khinasi traders in Anuire. Rumours say everything can be found here - for a price that is.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.9;Roesone was carved out of the Archduchy of Diemed by a fierce warrior named Daen commonly known as 'The Black Baron'. His great grand-daughter Marlae now rules this fair land of deep forests, rolling hills, and fiercely independent people.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.10;The Erebannien, last of the pristine forests of southern Anuire, covers much of this beautiful land. It is famous for its fine wines and unspoilt wilderness. It is not uncommon to see Fey folk dancing on the hills during moonlit nights.;;;;;;;;;;;;x
+EVTDESCANUIREINTRO.11;Ghoere is a rich land in central Anuire, and its Grand Baron is considered a contender for the Imperial Throne. The geography makes it difficult however - surrounded by unfriendly states, one wrong move can be fatal.;;;;;;;;;;;;x
+EVTDESCAWNSHEIGHLEEN.1;You have changed your religion to one of the Gods of Good, and your realm is in chaos. Vassals who previously served you out of fear or desire for loot now openly question your sanity. This is not good...;;;;;;;;;;;;x
+EVTDESCBLOODFIX.0;Something went wrong, and you are blooded with no bloodscore. You now get a bloodscore of 10.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.2;You have increased your bloodline powers using the regency you have absorbed over the years. You now have a minor bloodline.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.3;You have increased your bloodline powers using the regency you have absorbed over the years. You now have a major bloodline.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.4;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.5;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.6;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.7;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.8;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.9;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.10;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODLINE.11;You have increased your bloodline score using the regency you have absorbed over the years.;;;;;;;;;;;;x
+EVTDESCBLOODPOWERS.0;As you have reached adulthood, your blood powers begin to manifest. Based on your bloodline derivation from the ancient gods that fell at Mt.Deismaar, certain powers are more likely to appear than others.;;;;;;;;;;;;x
+EVTDESCBLOODTHEFT.0;One or more of your prisoners have bloodline powers which you can absorb into yourself by piercing them with a dagger through the heart. Do you wish to commit bloodtheft, and add their power to your own?;;;;;;;;;;;;x
+EVTDESCBLOODTHEFT.1;One day your captors drag you from your cell, and push you towards the block where an executioner awaits. The noble who has captured you stands smiling, wielding a dagger. They are going to kill you and steal your bloodline powers!;;;;;;;;;;;;x
+EVTDESCBLOODTHEFT.2;You strike the dagger through the heart of your prisoner, and feel some power flow into you. Too bad, the bloodline was weak and tainted, and it is not much.;;;;;;;;;;;;x
+EVTDESCBLOODTHEFT.3;You strike the dagger through the heart of your prisoner, and feel the power flow into you. Too bad, the bloodline was only minor, and it is not much.;;;;;;;;;;;;x
+EVTDESCBLOODTHEFT.4;You strike the dagger through the heart of your prisoner, and feel great power flow into you. The bloodline was major, and fills you with divine energy.;;;;;;;;;;;;x
+EVTDESCBLOODTHEFT.5;You strike the dagger through the heart of your prisoner, and feel huge power flow into you. The bloodline was great, and almost hurls you backwards as the power is absorbed from your prisoner through the dagger.;;;;;;;;;;;;x
+EVTDESCBLOODTHEFT.6;You strike the dagger through the heart of your prisoner, and feel awesome power flow into you. The bloodline was true, and hurls you backwards as the power is absorbed from your prisoner through the dagger.;;;;;;;;;;;;x
+EVTDESCCLASS.0;You can choose an adventuring class. This will allow you to go on quests and gain prestige, wealth, and added powers - but it is also a very risky lifestyle. To choose a mage class, you need to be highly intelligent.;;;;;;;;;;;;x
+EVTDESCCLASS.1;Your child has decided to take an adventurer class, and will pursue the path of the fighter. Do you approve?;;;;;;;;;;;;x
+EVTDESCCLASS.2;Your child has decided to take an adventurer class, and will pursue the path of the priest. Do you approve?;;;;;;;;;;;;x
+EVTDESCCLASS.3;Your child has decided to take an adventurer class, and will pursue the path of the rogue. Do you approve?;;;;;;;;;;;;x
+EVTDESCCLASS.4;Your child has decided to take an adventurer class, and will pursue the path of the ranger. Do you approve?;;;;;;;;;;;;x
+EVTDESCCLASS.5;Your child has decided to take an adventurer class, and will pursue the path of the mage. Do you approve?;;;;;;;;;;;;x
+EVTDESCCLASS.6;Your skills improve, and after much training, you are now a novice fighter.;;;;;;;;;;;;x
+EVTDESCCLASS.7;Your skills improve, and after much training, you are now a trained fighter.;;;;;;;;;;;;x
+EVTDESCCLASS.8;Your skills improve, and after much training, you are now a novice priest.;;;;;;;;;;;;x
+EVTDESCCLASS.9;Your skills improve, and after much training, you are now a trained priest.;;;;;;;;;;;;x
+EVTDESCCLASS.10;Your skills improve, and after much training, you are now a novice rogue.;;;;;;;;;;;;x
+EVTDESCCLASS.11;Your skills improve, and after much training, you are now a trained rogue.;;;;;;;;;;;;x
+EVTDESCCLASS.12;Your skills improve, and after much training, you are now a novice ranger.;;;;;;;;;;;;x
+EVTDESCCLASS.13;Your skills improve, and after much training, you are now a trained ranger.;;;;;;;;;;;;x
+EVTDESCCLASS.14;Your skills improve, and after much training, you are now a novice bard.;;;;;;;;;;;;x
+EVTDESCCLASS.15;Your skills improve, and after much training, you are now a trained bard.;;;;;;;;;;;;x
+EVTDESCCLASS.16;No matter how much you study, you are unfortunately just not smart enough to master anything except amateur-level spells - small cantrips and illusions are the best you can manage!;;;;;;;;;;;;x
+EVTDESCCLASS.17;After long years of study, you have mastered novice-level spells.;;;;;;;;;;;;x
+EVTDESCCLASS.18;After long years of study, you have become a trained mage.;;;;;;;;;;;;x
+EVTDESCCLASS.19;You can choose an adventuring class. This will allow you to go on quests and gain prestige, wealth, and added powers - but it is also a very risky lifestyle. To choose a mage class, you need to be highly intelligent.;;;;;;;;;;;;x
+EVTDESCCOMBATMAGIC.0;You have a prepared lightning storm spell, and as the armies engage, you hurl it at the enemy. You watch in awe as your power is unleashed, lightning crashes amongst the enemy ranks, and your men cheer!;;;;;;;;;;;;x
+EVTDESCCOMBATMAGIC.1;The enemy mage has unleashed a lightning storm upon your troops! Though it is tearing through your men, it is quickly over and dissipates - you were lucky, had the mage been more skilled, it could have been a disaster!;;;;;;;;;;;;x
+EVTDESCCOMBATMAGIC.2;The enemy mage has unleashed a lightning storm upon your troops! It is tearing through your ranks, but a few moments later it dissipates, and their lines reform. That was an impressive display of power!;;;;;;;;;;;;x
+EVTDESCCOMBATMAGIC.3;The enemy mage has unleashed a lightning storm upon your troops! It is tearing through your ranks, the sound is deafening, and your men drop to the ground in fear. That was an incredible display of magical power!;;;;;;;;;;;;x
+EVTDESCCOMBATMAGIC.4;The enemy mage has unleashed a lightning storm upon your troops! It is like nothing you have ever seen before - alike the fury of a god! You must be facing a mage of legendary skill to unleash such destruction upon you!;;;;;;;;;;;;x
+EVTDESCCOMBATMAGIC.5;A massive lightning storm comes down upon the enemy army, one of your spellcasters must have unleashed it! Your men cheer to see the enemy scream and fall, and you let out a shout of exhultation yourself while turning to salute the mighty spellcaster.;;;;;;;;;;;;x
+EVTDESCCOMBATMAGIC.6;Your lightning storm comes down upon the enemy army and you exult to see the destruction your power has unleashed! Your men cheer to see the enemy scream and fall, and you let out a shout of exhultation yourself as lightning crackles from your fingertips.;;;;;;;;;;;;x
+EVTDESCCOURTMAGE.0;If you have a court mage in your realm you can transfer gold and piety to him and tell him/her to focus on certain spells.;;;;;;;;;;;;x
+EVTDESCCOURTMAGE.1;No matter how skilled, your court mage cannot cast spells without regency or gold to pay the cost for spellcasting. You can transfer some of yours to him from to allow him to perform his duties.;;;;;;;;;;;;x
+EVTDESCCOURTMAGE.2;You can tell your court mage what spells he or she should be working on to protect and strengthen your realm.;;;;;;;;;;;;x
+EVTDESCCRAFTING.0;Using gold it is possible to craft powerful magical tools to aid you. What do you wish to craft?;;;;;;;;;;;;x
+EVTDESCCRAFTING.1;Using gold it is possible to craft powerful magical tools to aid you. What do you wish to craft?;;;;;;;;;;;;x
+EVTDESCCRAFTING.2;Depending on your class level and amount of gold, these are the swords you can forge at the moment. Note: Only legendary priests can forge Holy Avengers.;;;;;;;;;;;;x
+EVTDESCCRAFTING.3;Depending on your class level and amount of gold, these are the swords you can forge at the moment. Note: Only legendary priests can forge Holy Avengers.;;;;;;;;;;;;x
+EVTDESCCRAFTING.4;Depending on your class level and amount of gold, these are the amulets you can forge at the moment.;;;;;;;;;;;;x
+EVTDESCCRAFTING.5;A potion can be crafted which will last you throughout your lifetime, but not be passed on to your successors. These are the potions you can craft with your level and gold.;;;;;;;;;;;;x
+EVTDESCCRAFTING.6;These are the rings which you can craft based on your current level and available gold.;;;;;;;;;;;;x
+EVTDESCCRAFTING.7;These are the rings which you can craft based on your current level and available gold.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.0;You hold in your hands a glittering blade which shall neither break nor bend under any normal combat conditions, and capable of penetrating through the strongest armor.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.1;You hold in your hands a shining blade which glows with a dim blue flame. It is both light and impossible sharp.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.2;You hold in your hands a shining blade which glows with a bright blue flame. It is both light and impossible sharp.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.3;You hold in your hands a shining blade which glows with a fiery aura of power. It will slice through steel like it was mere leather armor.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.4;You hold in your hands a sword which is sure to go down in legend - a masterful work, it hums with an aura of power, and shines bright blue when unsheathed.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.5;You have created a legendary Holy Avenger Sword. Reserved for the champions of your faith, it has the power to slice through almost anything and it's divine power has been known to inspire entire armies when their leader wields it in battle.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.6;You have created an amulet of protection +1. It will protect both your person, and for short periods of time its range can be extended on the battlefield to deflect hostile arrows from your forces.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.7;You have created an amulet of protection +3. It will protect your person, and for short periods of time its range can be extended on the battlefield to deflect hostile arrows from your forces.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.8;You have created an amulet of protection +5. It will protect your person, and for short periods of time its range can be extended on the battlefield to deflect hostile arrows from your forces.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.9;You have created a healing potion, which can cure all wounds and deformities. Once spent, however, it will disappear.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.10;You have created a potion of beauty. If you take a small sip once per year, it will greatly increase your level of attraction from the opposite sex.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.11;You have created an elixir of eternal youth. The power of the potion is tied to your own essence, and it cannot be used by anyone but yourself.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.12;You have created a ring of persuasion. Using a subtle combination of charm magic and increased sensitivity to the flow of a conversation, it is a powerful tool in all negotiations.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.13;You have created a ring of invisibility. Obviously, this will have huge benefits for your intrigues.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.14;You have created a ring of speed. Not only can it make you move with uncanny speed, during times of war its influence can be extended to an entire army making them all move 10% faster.;;;;;;;;;;;;x
+EVTDESCCRAFTINGDONE.15;You have created a ring of command. During battles, its influence can be extended to your entire army, making them both attack and defend with more courage.;;;;;;;;;;;;x
+EVTDESCEMPEROR.0;The Iron Throne has stood empty since the fall of the Roeles. With them gone, the throne must go to the Avans. Is it time to press the claim once again to the Chancellor?;;;;;;;;;;;;x
+EVTDESCEMPEROR.1;A message arrives from the Prince of Avanil. He urges you to recognize his rightful claim to the throne, and end the division and bloodshed which threatens all of Anuire.;;;;;;;;;;;;x
+EVTDESCEMPEROR.2;A bard from Avanil arrives in your court, telling you that the Prince is pressing his rightful claim to the throne. He urges you to support him and end the division and strife once and for all.;;;;;;;;;;;;x
+EVTDESCEMPEROR.3;The Chamberlain sends greetings, but advises you that you are not yet powerful or respected enough to be Emperor. If you gather more vassal dukes, he may reconsider.;;;;;;;;;;;;x
+EVTDESCEMPEROR.4;The Chamberlain sends greetings, and advises you that he too wishes for the division to end. He will place the Imperial Crown on your head, if you promise to uphold the honor and dignity of the Empire.;;;;;;;;;;;;x
+EVTDESCEMPEROR.5;This ruler has accepted your claim to the Throne, and will support you with their armies.;;;;;;;;;;;;x
+EVTDESCEMPEROR.6;Word reaches your court that the Avans have been proclaimed the rightful heirs of the Anuirean Empire. These tidings surely mean war for any who would oppose them.;;;;;;;;;;;;x
+EVTDESCEMPEROR.7;The Iron Throne has stood empty since the fall of the Roeles. With them gone, the throne must go to the Boeruines. Is it time to press the claim once again to the Chancellor?;;;;;;;;;;;;x
+EVTDESCEMPEROR.8;A message arrives from the ArchDuke of Boeruine. He urges you to recognize his rightful claim to the throne, and end the division and bloodshed which threatens all of Anuire.;;;;;;;;;;;;x
+EVTDESCEMPEROR.9;A bard from Boeruine arrives in your court, telling you that the Archduke is pressing his rightful claim to the throne. He says his proven descent from the Roeles make him the only candidate.;;;;;;;;;;;;x
+EVTDESCEMPEROR.10;The Chamberlain sends greetings, but advises you that you are not yet powerful or respected enough to be Emperor. If you gather more vassal dukes, he may reconsider.;;;;;;;;;;;;x
+EVTDESCEMPEROR.11;The Chamberlain sends greetings, and advises you that he too wishes for the division to end. He will place the Imperial Crown on your head, if you promise to uphold the honor and dignity of the Empire.;;;;;;;;;;;;x
+EVTDESCEMPEROR.12;This ruler has accepted your claim to the Throne, and will support you with their armies.;;;;;;;;;;;;x
+EVTDESCEMPEROR.13;Word reaches your court that the Boeruines have been proclaimed the rightful heirs of the Anuirean Empire. These tidings surely mean war for any who would oppose them.;;;;;;;;;;;;x
+EVTDESCEMPEROR.14;The time is ripe to proclaim a new Anuirean Emperor, that much almost all agree on. But for the nobles to unite under one banner, it would require an individual of incredible power and prestige to get the Chamberlain's blessing.;;;;;;;;;;;;x
+EVTDESCEMPEROR.15;The first step towards becoming Emperor is to gather support. You must be independent and have at least 35 holdings in your realm. When you have this, you will receive a new event.;;;;;;;;;;;;x
+EVTDESCEMPEROR.16;Your realm is of a size where people will take you as a serious bid for the Iron Throne. You can now spend gold or prestige to gain the support of neighboring dukes. If your realm reaches size 125, you can declare yourself emperor.;;;;;;;;;;;;x
+EVTDESCEMPEROR.17;Your realm is of a size where people will take you as a serious bid for the Iron Throne. You gain a temporary King title, and you can now spend gold or prestige to gain the support of neighboring dukes.;;;;;;;;;;;;x
+EVTDESCEMPEROR.18;You can spend either gold or political influence (prestige) to gain the support of the unaligned Dukes. It will cost either 2000 gold or 4000 prestige to attempt to sway someone to back you as Emperor.;;;;;;;;;;;;x
+EVTDESCEMPEROR.19;An Imperial Claimant has sent an envoy, negotiating for your support. What do you tell him?;;;;;;;;;;;;x
+EVTDESCEMPEROR.20;The envoy returns, and the Duke is willing to discuss it. What do you offer him? Gold, or try to convince him to simply do the right thing based on your obvious rightful claim and great respect the people have for you?;;;;;;;;;;;;x
+EVTDESCEMPEROR.21;The envoy returns, with this message: 'Your claim is as laughable as you are, and I would rather have a goblin shit and fornicate on the Iron Throne than have you foul it with your presence.';;;;;;;;;;;;x
+EVTDESCEMPEROR.22;The envoy returns, bearing a chest of gold that takes two strong men to carry. He smiles, and says: 'I trust this will put your concerns to rest?' ;;;;;;;;;;;;x
+EVTDESCEMPEROR.23;The envoy returns, saying that the noble claimant will offer his protection and generosity as your liege lord, and restore the glory of Anuire. Nothing more substantial, like gold, however... ;;;;;;;;;;;;x
+EVTDESCEMPEROR.24;The envoy returns, saying that the treacherous Duke kept the chest of gold, but withheld his support! This is an outrage! It demands to be answered!;;;;;;;;;;;;x
+EVTDESCEMPEROR.25;Messengers bring word - this ruler has openly declared himself for one of the Claimants to the Iron Throne. The Anuirean Empire is one step closer to being reformed...;;;;;;;;;;;;x
+EVTDESCEMPEROR.28;It is possible to spend 2500 gold to prepare a massive invasion of another of the human tribes of Cerilia. Do you wish to proceed?;;;;;;;;;;;;x
+EVTDESCEMPEROR.29;It is possible to spend 2500 gold to prepare a massive invasion of another of the human tribes of Cerilia. Do you wish to proceed?;;;;;;;;;;;;x
+EVTDESCHEALTH.0;You have reached the age where you can no longer have children.;;;;;;;;;;;;x
+EVTDESCHEALTH.1;As an elf, your body needs a few decades to be fertile again each time you get pregnant.;;;;;;;;;;;;x
+EVTDESCHEALTH.2;It has been several decades since your last child, you can now conceive again.;;;;;;;;;;;;x
+EVTDESCHEALTH.3;You can feel that this will be your last child.;;;;;;;;;;;;x
+EVTDESCHEALTH.4;You begin to feel old age approaching.;;;;;;;;;;;;x
+EVTDESCHEALTH.5;Though part of a long-lived race, your time has finally come.;;;;;;;;;;;;x
+EVTDESCHEALTH.6;The power of my blood has restored my body!;;;;;;;;;;;;x
+EVTDESCHEALTH.7;Though part of a long-lived race, your time has finally come.;;;;;;;;;;;;x
+EVTDESCHEALTH.8;You begin to feel old age approaching, despite the long life given by your bloodline.;;;;;;;;;;;;x
+EVTDESCHEALTH.9;Though your bloodline powers have kept you alive decades longer than most other mortals, your time has finally come.;;;;;;;;;;;;x
+EVTDESCLAHMIA.0;Over the years you have enslaved a number of men in your realm with your charm-gaze power. They form a fanatical unit of devoted worshippers who will fight for you without fear or hesitation.;;;;;;;;;;;;x
+EVTDESCLAHMIA.1;As the daughter of a Lahmia, you begin to transform as you come of age...;;;;;;;;;;;;x
+EVTDESCLEGENDARY.0;To truly become a legend, you will have to undertake a great quest. Which quest will you undertake?;;;;;;;;;;;;x
+EVTDESCLEGENDARY.1;You travel for days, quick on the trail of a large twisted awnsheighleen that has been terrorising this region for years. It is a massive thing of fur, claws, and teeth like daggers. You are getting close...;;;;;;;;;;;;x
+EVTDESCLEGENDARY.2;You charge the beast, catching it at unawares. With one swipe of its giant claw, it kills one of your companions, but you press on - with steel, stealth, magic, and faith, you slay the beast but the running battle took hours!;;;;;;;;;;;;x
+EVTDESCLEGENDARY.3;This is truly a monster! It turns on you swiftly, cutting down one of your companions, and it roars and charges straight at you. It seems immune to your weapons and spells! You cannot hope to win here!;;;;;;;;;;;;x
+EVTDESCMAGIAN.0;Over the years you have built up an army of undead. They mindlessly await your command.;;;;;;;;;;;;x
+EVTDESCMISC_EVENTS_BR.2;This is invisible;;;;;;;;;;;;x
+EVTDESCMISC_EVENTS_BR.3;This is invisible;;;;;;;;;;;;x
+EVTDESCPIRATE.0;The pirates of the Zweilund Isles are at your command. The might fleet can raid up and down the coast, and so far, none have been able to stop you.;;;;;;;;;;;;x
+EVTDESCPRIEST.0;You have sustained a grievous wound, but powerful - and expensive - clerical magic can restore you to full health once more. Do you want to contact a priest and pay for the healing? It will cost 200 gold.;;;;;;;;;;;;x
+EVTDESCPRIEST.1;A member of your faith, having heard of your great power, begs you to heal him/her of a grievous injury. The ritual is long and expensive, but it can be done, if you are willing. You will be paid 200 gold.;;;;;;;;;;;;x
+EVTDESCPRIEST.2;The priest agrees to heal you for a substantial donation, and gets to work on the ritual immediately. You feel your broken body enveloped in divine power, and soon, you are whole again!;;;;;;;;;;;;x
+EVTDESCPRIEST.3;The priest refuses to heal you, citing some scripture that you have violated, and urges you to suffer for your sins with good grace.;;;;;;;;;;;;x
+EVTDESCPRIEST.4;A member of another faith, having heard of your great power, begs you to heal him/her of a grievous injury. The ritual is long and expensive, but it can be done, if you are willing. You will be paid 200 gold.;;;;;;;;;;;;x
+EVTDESCPRIEST.5;The priest is willing to heal you... but only if you first convert to their religion. What do you say?;;;;;;;;;;;;x
+EVTDESCPRISONER.8;I'm a bastard;;;;;;;;;;;;x
+EVTDESCPROVINCE.0;Level 0 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.1;Level 1 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.2;Level 2 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.3;Level 3 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.4;Level 4 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.5;Level 5 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.6;Level 6 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.7;Level 7 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.8;Level 8 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.9;Level 9 province.;;;;;;;;;;;;x
+EVTDESCPROVINCE.10;Level 10 province.;;;;;;;;;;;;x
+EVTDESCRACETRAITS.0;not visible;;;;;;;;;;;;x
+EVTDESCRACETRAITS.2;This character is an goblin;;;;;;;;;;;;x
+EVTDESCRACETRAITS.3;This character is a orog;;;;;;;;;;;;x
+EVTDESCRACETRAITS.4;This character is a gnoll;;;;;;;;;;;;x
+EVTDESCRANDOM.0;A band of brigands has grown into a real threat in one of your provinces. From their secret lair, they strike out and make a mockery of your justice. What should be done?;;;;;;;;;;;;x
+EVTDESCRANDOM.1;The adventurers return, having successfully dealt with the bandit threat! The peasants of the province hail them as heroes. What do you think?;;;;;;;;;;;;x
+EVTDESCRANDOM.2;Your sources inform you that the adventurers heroically sought out the hidden bandit lair... yet a few days later, their bodies were found in the local village magistrate's garden!;;;;;;;;;;;;x
+EVTDESCRANDOM.3;You set out, and soon you and your small company find the bandit lair. A major assault will alert them, and they'll flee. You'll have to go in with just the men you have...;;;;;;;;;;;;x
+EVTDESCRANDOM.4;Your guards storm the enemy camp, and soon all you can hear are the screams of the dead and dying over the clash of steel. Finally, an hour later, the battered remnants of your men return - victorious!;;;;;;;;;;;;x
+EVTDESCRANDOM.5;Your guards storm the enemy camp, and soon all you can hear are the screams of the dead and dying over the clash of steel. Finally, an hour later, their heads are thrown out of the gate, towards your direction.;;;;;;;;;;;;x
+EVTDESCRANDOM.6;You charge the enemy camp, and soon all you can hear are the screams of the dead and dying over the clash of steel. Finally, an hour later, the last of the bandits lie dead. You stand over the corpse of their leader.;;;;;;;;;;;;x
+EVTDESCRANDOM.7;Your storm the enemy camp, and screams of battle surround you. At a critical point, you face their leader, but he is too strong! Your men rush to your side, trying to pull you out.;;;;;;;;;;;;x
+EVTDESCRANDOM.8;Your storm the enemy camp, and you bring them down with your stealth/steel/magic! Your men cheer to see such skill, and soon you stand over the corpse of their leader.;;;;;;;;;;;;x
+EVTDESCRANDOM.9;Enraged, you decide to take on the brigands by yourself! Whether it'll be a show of magic, a brute force charge, or a stealthy campaign of assassination when darkness falls - they're going down!;;;;;;;;;;;;x
+EVTDESCRANDOM.10;This was a bad idea! The bandits soon corner you, and the last thing you hear before the pommel of a sword hits your head is their leader shouting 'Take him alive men, he's worth money!' ;;;;;;;;;;;;x
+EVTDESCRANDOM.11;Driven by rage at these insolent cut-throats, you go after them alone - two dozen of them fall before you, and soon you face their leader whose broken body lies before your righteous wrath! Victory!;;;;;;;;;;;;x
+EVTDESCRANDOM.12;A group of outlaws have captured a noble, and offer to sell him to you for a small fee. He is surely worth more than that in ransom... or you could steal his bloodline if he has one?;;;;;;;;;;;;x
+EVTDESCRANDOM.13;You pass out, and when you awake, a mage is opening a portal to a distant realm. You are thrown through it, and into a dark damp prison cell. Gods, where have you ended up?;;;;;;;;;;;;x
+EVTDESCRANDOM.14;One day at a local noble's birthday celebration, the alarm bells of your castle suddenly ring. The bard takes off her mask, yells 'Thank you for the gold!' and then puts on a ring and turns invisible while laughing at you. ;;;;;;;;;;;;x
+EVTDESCRANDOM.15;Your men spring into action, seal the castle, and catch up with the adventurers who helped you with the bandits just as they are trying to escape through the sewers. They are quickly thrown into the dungeon. The bard escaped, however.;;;;;;;;;;;;x
+EVTDESCRANDOM.16;In the confusion following their daring daylight heist of your treasury during a major celebration, the adventurers manage to escape. Your guard captain swears they must have used powerful magic to enter your vaults.;;;;;;;;;;;;x
+EVTDESCRAVEN.0;You have steadily built up a powerful personal army, and soon, your plans for conquest can be set in motion. ;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.0;It will take some time to prepare the spell, but you can spend regency and gold to cast realm war magic spells. Which do you wish to cast?;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.1;If you have enough gold and regency - and magical skill - you can cast certain spells that aid you in battles. What spell do you wish to prepare?;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.2;The spell is prepared. When engaged in a battle, you can unleash its full fury upon the enemy and there is no mage in all of Cerilia that will be able to dispel it on such short notice.;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.3;If you have enough gold and regency - and magical skill - you can cast certain spells that either aid you in battles, or ravage entire provinces of the enemy across vast distances. What do you wish to prepare?;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.4;If you have enough gold and regency and magical skill - you can cast certain spells that either aid you in battles, or ravage entire provinces of the enemy across vast distances. What do you wish to prepare?;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.5;Your preparations for the death-plague spell is ready. Which enemy province shall suffer this terrible doom?;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.6;Your preparations for the death-plague spell is ready. Which enemy provinces shall suffer this terrible doom? Do not cast on a neighboring province, as it will spill over into your realm.;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.7;An enemy magic user has cast a death plague on one of your provinces! Unless dispelled, these typically last for half a decade, and will decimate the population!;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.8;Subversion spells stir the enemy populace to revolt and rebellion. Their impact depends on how powerful a spell you are capable of casting.;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.9;Your preparations for the subversion spell are ready. Which enemy province shall you stir to rebellion?;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.10;Your preparations for the subversion spell are ready. Which enemy provinces shall be stirred to rebellion? Do not cast on a neighboring province, as it will spill over into your realm.;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.11;Your preparations for the subversion spell are ready. Which enemy provinces shall be stirred to rebellion? Do not cast on a neighboring province, as it will spill over into your realm.;;;;;;;;;;;;x
+EVTDESCREALMBATTLEMAGIC.12;An enemy magic user has cast a subversion spell on one of your provinces! Already angry peasants have been seen congregating and waving pitchforks while cursing your name!;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.0;It will take some time to prepare the spell, but you can spend regency and treasury to cast realm priest spells if you have enough of both. Which do you wish to cast?;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.1;It will take some time to prepare the spell, you can expend regency to ward a province. Warded provinces can still get attacked by enemy spells, but the effects will disappear in a week or two.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.2;Your province ward spell is ready. It will dispel active enemy spells within a week or two.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.3;Your province ward spell is ready to cast on a region. It will dispel active enemy spells within a week or two.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.4;It will take some time to prepare the spell, you can expend regency to summon a unit.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.5;Your raise zombie spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.6;Your raise skeleton spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.7;Your raise undead cavalry spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.8;Your summon lesser daemons spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.9;It will take some time to prepare the spell, you can expend regency to bless a province. Blessings last five years, and give increased taxes and reduced revolt risk.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.10;Your province bless spell is ready. It will bless a province for five years, giving extra income and lower revolt risk.;;;;;;;;;;;;x
+EVTDESCREALMPRIESTMAGIC.11;Your regional bless spell is ready. It will bless a province for five years, giving extra income and lower revolt risk.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.0;It will take some time to prepare the spell, but you or your court mage can spend regency and treasury to cast realm magic spells if you have enough of both. Which do you wish to cast?;;;;;;;;;;;;x
+EVTDESCREALMSPELL.1;It will take some time to prepare the spell, you can expend regency to transmute lead into gold. The greater version takes five months to cost.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.2;Your lesser alchemy spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.3;It will take some time to prepare the spell, you can expend regency to summon a unit.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.4;Your raise zombie spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.5;Your raise skeleton spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.6;Your raise undead cavalry spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.7;Your summon lesser daemons spell is ready.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.8;It will take some time to prepare the spell, you can expend regency to ward a province. Warded provinces can still get attacked by enemy spells, but the effects will disappear in a week or two.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.9;Your province ward spell is ready. It will dispel active enemy spells within a week or two.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.10;Your province ward spell is ready to cast on a region. It will dispel active enemy spells within a week or two.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.11;Your magical ward spell is working, and is dispelling the enemy effects. The ward itself is being consumed in the process, however.;;;;;;;;;;;;x
+EVTDESCREALMSPELL.12;Your greater alchemy spell is ready.;;;;;;;;;;;;x
+EVTDESCRELIGION.1;You can freely choose to follow any religion you like. But be careful - your vassals or liege may not approve... and you can only do it once via this menu per ruler.;;;;;;;;;;;;x
+EVTDESCRELIGION.2;You can freely choose to follow any religion you like. But be careful - your vassals or liege may not approve...;;;;;;;;;;;;x
+EVTDESCRELIGION.3;You can freely choose to follow any religion you like. But be careful - your vassals or liege may not approve...;;;;;;;;;;;;x
+EVTDESCRELIGION.4;You can freely choose to follow any religion you like. But be careful - your vassals or liege may not approve...;;;;;;;;;;;;x
+EVTDESCRELIGION.5;You can freely choose to follow any religion you like. But be careful - your vassals or liege may not approve...;;;;;;;;;;;;x
+EVTDESCRELIGION.6;You can freely choose to follow any religion you like. But be careful - your vassals or liege may not approve...;;;;;;;;;;;;x
+EVTDESCSERPENT.0;For decades you have built up your forces, and soon you will be ready to unleash them. The Sons of the Serpent have also completed your order to build a mighty invasion fleet. ;;;;;;;;;;;;x
+EVTDESCSERPENT.1;As the child of the Serpent with a strong bloodline of Azrai, you begin to transform as you come of age...;;;;;;;;;;;;x
+EVTDESCSORCERER.0;One of your parents had sorcerous powers, and there is a chance that you have inherited this from them.;;;;;;;;;;;;x
+EVTDESCSPHINX.0;Over the years you managed to gather a large for of great cats - pumas, lions, and panthers. Some are semi-intelligent, and they form a powerful force at your command.;;;;;;;;;;;;x
+EVTDESCSPIDER.0;For decades you have built up your forces. Anyone foolish to trespass into your lands will face a mighty force of goblins - and more terrifying - hundreds of the horse-sized spiders that you also command. ;;;;;;;;;;;;x
+EVTDESCSTEALING.0;One or more of your prisoners have magic items of great power. Do you want to simply steal these items from them and claim them as your own?;;;;;;;;;;;;x
+EVTDESCSTEALING.1;On being imprisoned, your gear was taken from you. One day, the jailer cruelly informs you that his lord has seized all your magical items as his own. Laughing, he tells you that your life might be the next to be seized.;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.0;As the daughter of a succubus, you begin to transform as you come of age, growing horns, wings, and a demonic temperament.;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.1;There is a man in the realm whom you desire - he would make a fine new mate, and you think you could arrange it so that he becomes yours. What will you do?;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.2;Princess Darnae has sent her guards for you - she aims to take you as a consort! You've heard rumors that they don't last very long... what do you do?;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.3;Princess Darnae has captured one of your courtiers, and he has managed to get word to you that he desperately needs your help to secure his freedom! What do you do? If the rumors are true, being her consort is a death-sentence.;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.5;The target of your affections seems to have accepted his fate. He should cause you no trouble.;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.6;Princess Darnae has captured a noble and taken him as consort, and his liege requests that you help secure his release! What do you do? If the rumors are true, being her consort is a death-sentence.;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.7;You have not seen your consort in some time. Perhaps it is time to send for him?;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.8;Princess Darnae summons you to her chambers, but every time she does, you feel your life force getting a little weaker. Will this be the day you die?;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.9;While in the dungeons of a Succubus, she comes to you one night with a dangerous glean in her eye. Are you ready to be my play-thing, she asks in a husky voice, stroking her whip. If you please me, I'll let you go...;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.10;You torture and drain one of your prisoners almost to the point of death. You leave him passed out on the floor, with the dungeon door open. If he can walk out, he has earned the right...;;;;;;;;;;;;x
+EVTDESCSUCCUBUS.11;You have not fed for quite some time, and you feel yourself growing weaker. If you do not feed soon, there is a chance you might die.;;;;;;;;;;;;x
+EVTDESCTRANSFER.0;If you have magic items, you can transfer them to any realm character. Just be sure that they have the minor title 'Item Transfer Target'. Be warned: If you choose to transfer a sword for example, all swords will be transferred.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.1;Invisible event;;;;;;;;;;;;x
+EVTDESCUNIFICATION.2;The Anuireans have been under heavy external attack lately, and word reaches your court that there is serious impetus for a re-unifaction of the Empire, where the realms will band together under one banner for their own defense.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.3;how are you seeing this?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.4;The time has come at last; with Anuire under threat from an external foe, a great council is called and you have the opportunity to claim the throne and lead the struggle to reclaim the lost territories. What do you say?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.5;Anuire is uniting - one ruler of great prestige has stepped up and gathered enough support from the people to proclaim himself Emperor. Now it remains to be seen whether the independent rulers will follow this individual.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.6;This person has declared himself Emperor - in these troubled times, will you swear fealty to the Iron Throne, or do you wish to cling to your independence no matter what the cost?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.7;Invisible event;;;;;;;;;;;;x
+EVTDESCUNIFICATION.8;The Rjurik have been under heavy external attack lately, and word reaches your court that there is serious impetus for a new alliance, where the realms will band together under one banner for their own defense.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.9;how are you seeing this?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.10;With the Rjurik people under threat from an external foe, a great council is called and you have the opportunity to claim the throne and lead the struggle to reclaim the lost territories. What do you say?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.11;The Rjurik peoples have proclaimed a single war-leader, in response to external attacks. Now it remains to be seen whether the independent rulers will follow this individual.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.12;This person has declared himself war leader of the Rjuriks - in these troubled times, will you swear fealty to him and fight under a common Rjurik banner, or do you wish to cling to your independence no matter what the cost?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.13;Invisible event;;;;;;;;;;;;x
+EVTDESCUNIFICATION.14;The Brecht have been under heavy external attack lately, and word reaches your court that there is serious impetus for a new Brecht League, where the realms will band together under one banner for their own defense.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.15;how are you seeing this?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.16;With the Brecht people under threat from an external foe, a great council is called and you have the opportunity to claim the throne and lead the struggle to reclaim the lost territories. What do you say?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.17;The Brecht peoples have reformed the Brecht League in response to external attacks under this person. Now it remains to be seen whether the independent rulers will submit to his authority.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.18;This person has declared a new Brecht League - in these troubled times, will you swear fealty to him and fight under a common banner, or do you wish to cling to your independence no matter what the cost?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.19;Invisible event;;;;;;;;;;;;x
+EVTDESCUNIFICATION.20;The Khinasi have been under heavy attack lately, and if they continue to lose ground it is likely the realms will band together under one banner for their own defense.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.21;how are you seeing this?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.22;With the Khinasi people under threat from an external foe, a great council is called and you have the opportunity to claim the throne and lead the struggle to reclaim the lost territories. What do you say?;;;;;;;;;;;;x
+EVTDESCUNIFICATION.23;The Khinasi peoples have reformed the old Empire in response to external attacks under this person. Now it remains to be seen whether the independent rulers will submit to his authority.;;;;;;;;;;;;x
+EVTDESCUNIFICATION.24;This person has declared himself Emperor of the Khinasi - in these troubled times, will you swear fealty to him and fight under a common banner, or do you wish to cling to your independence no matter what the cost?;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.0;Though immortal, your body cannot give birth to an heir unless you use powerful magic. Who will you choose to honor to be the father of your new child in the ritual?;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.1;The ruler known as the White Witch sends you an invitation to come to her palace to discuss ending the conflict in the Northlands. She guarantess your safety, and sends you this small gift of gold as a gesture of good will.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.2;The ruler has accepted your invitation, and arrives within a forthnight, heavily escorted. With your charm aura and unmatched beauty, it should be no problem to get him to your bed after the feast!;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.3;The ruler has rejected your invitation, citing a busy schedule and security concerns for the voyage...;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.4;You arrive at the court of the White Witch, and she greets you wearing a stunning snow leopard dress. The feast begins, and you cannot help but feel that she is much more charming and beautiful than you had expected!;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.5;The feast begins, and wearing a stunning snow leopard dress, you begin the seduction of your powerful visitor. He is certainly not immune to your charms, but he still resists, holding back on the wine and acting cautiously.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.6;The feast begins, and wearing a stunning snow leopard dress, you begin the seduction of your powerful visitor. It seems you had him at 'hello', the poor fool started trying to seduce you before you even used your magic on him.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.7;The feast progresses, and while you held back on the wine and tried to remain alert, suddenly the White Witch moves to sit on your lap. Smiling, she leans into you and kisses you deeply; you feel yourself overcome with desire for her.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.8;The feast progresses, and the White Witch is amenable to your charms! She is soon sitting on your lap kissing you, and you feel yourself overcome with desire for her, unable to think clearly.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.9;Tiring of his coyness, you turn on the full power of your charm aura and move to his lap, kissing him fiercely. Shockingly, he resists you still, shakes off the spell, and rises, screaming for his guards that it is time to leave!;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.10;Tiring of his coyness, you turn on the full power of your charm aura and move to his lap, kissing him fiercely. His objections quickly give way to passion, and he has succumbed to your charms at last.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.11;You stand from the table, shoving off the White Witch, and call for your guards that it's time to leave. She is furious, staring daggers at you for humiliating her, but she keeps her temper, and merely storms off. You are free to go.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.12;You stand from the table, shoving off the White Witch, and call for your guards that it's time to leave. She is furious, staring daggers at you for humiliating her, and screams for her guards to arrest you all!;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.13;You wake up the next morning, tied to a huge silken bed. Candles burn all around, and a pentagram is drawn on the floor. Gods, last night was a blur... what happened? Did I ... did we?;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.14;Morning comes at last, and you got what you needed from your guest. He is probably still tied to your bed, and you laugh to yourself, thinking how you can in the future press claims with this new bastard child of your enemy.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.15;Your guest is determined to seduce you, and to speed up the process, you turn on your charm aura and move to his lap, kissing him fiercely. He is in a daze now, unable to resist anything you require of him.;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.16;You wake up the next morning, tied to a huge silken bed. Candles burn all around, and a pentagram is drawn on the floor. Remembering last night, you can only sigh 'That is one kinky witch...' ;;;;;;;;;;;;x
+EVTDESCWHITEWITCH.17;Over the years, you have summoned quite a large army of undead to secure your rule. They will follow you mindlessly and without fear, and can be used as the vanguard when you decide to take the North.;;;;;;;;;;;;x
+EVTNAMECLASS.19;Adventuring Class - More options;;;;;;;;;;;;x
+EXCELLENT_DRINKS_ON_ME;Excellent! Drinks on me!;;;;;;;;;;;;x
+FAME;Fame;;;;;;;;;;;;x
+FEEDING;Feeding;;;;;;;;;;;;x
+FORWARDS_TO_VICTORY;Forwards! To victory!;;;;;;;;;;;;x
+FRIENDS_FOREVER;Friends forever!;;;;;;;;;;;;x
+FROMFROM;FROMFROM;;;;;;;;;;;;x
+GETTING_SUPPORT;Getting Support;;;;;;;;;;;;x
+GHOERE;Ghoere;;;;;;;;;;;;x
+GNOLLTRAITEVENT;gnolltraitevent;;;;;;;;;;;;x
+GOBLINTRAITEVENT;goblintraitevent;;;;;;;;;;;;x
+GOBLIN_AMBUSH;Goblin Ambush;;;;;;;;;;;;x
+GODS_OF_EVIL;Gods of Evil;;;;;;;;;;;;x
+GODS_OF_GOOD;Gods of Good;;;;;;;;;;;;x
+GRANT_LANDED_TITLE_INTERACTION_4;Regency from priestly grant: §G$PIETY$§!.;;;;;;;;;;;;;x
+GREAT;Great!;;;;;;;;;;;;x
+HAHA_HAHAHAHAHA;Haha.. Hahahahaha....;;;;;;;;;;;;x
+HAIL_TO_THE_NEW_EMPEROR;Hail to the New Emperor!;;;;;;;;;;;;x
+HEALING;Healing;;;;;;;;;;;;x
+HE_MUST_CONVERT_FIRST;He must convert first.;;;;;;;;;;;;x
+HIRE_ADVENTURERS;Hire Adventurers;;;;;;;;;;;;x
+HIRE_SOMEONE_NEW_FROM_THESE_PARTS;Hire someone new from these parts...;;;;;;;;;;;;x
+HIRE_SOME_ADVENTURERS_TO_DEAL_WITH_IT;Hire some adventurers to deal with it!;;;;;;;;;;;;x
+HUH_WHAT_WAS_THAT;Huh.. What was that?;;;;;;;;;;;;x
+ILIEN;Ilien;;;;;;;;;;;;x
+ILL_STAY_THEN;I'll stay then...;;;;;;;;;;;;x
+IMPERIAL_CLAIMANT;Imperial Claimant;;;;;;;;;;;;x
+IMPERIAL_CONQUESTS;Imperial Conquests;;;;;;;;;;;;x
+IMPERIAL_TEMPLE_RESTORATION;Imperial Temple Restoration;;;;;;;;;;;;x
+IM_NEVER_COMING_BACK_HERE;I'm never coming back here!;;;;;;;;;;;;x
+INFERTILITY;Infertility;;;;;;;;;;;;x
+INSTIGATING_REBELLIONS;Instigating rebellions;;;;;;;;;;;;x
+INTERESTING_TIMES;Interesting times.;;;;;;;;;;;;x
+INVIS;invis;;;;;;;;;;;;x
+INVITATION;Invitation;;;;;;;;;;;;x
+IS_EVERYONE_OK;Is everyone ok?;;;;;;;;;;;;x
+I_AM_A_LEGEND;I am a legend!;;;;;;;;;;;;x
+I_APPROVE;I approve!;;;;;;;;;;;;x
+I_DONT_WANT_TO_DIE;I don't want to die!;;;;;;;;;;;;x
+I_HAVE_EARNED_THE_RIGHT;I have earned the right!;;;;;;;;;;;;x
+I_SEDUCED_THE_WHITE_WITCH;I seduced the White Witch!;;;;;;;;;;;;x
+I_WILL_BLESS_A_PROVINCE;I will bless a province.;;;;;;;;;;;;x
+I_WILL_CAST_A_SMALL_SUBVERSION_SPELL;I will cast a small subversion spell.;;;;;;;;;;;;x
+I_WILL_DEAL_WITH_THIS_MYSELF;I will deal with this myself!;;;;;;;;;;;;x
+I_WILL_FORGE_A_SWORD;I will forge a sword.;;;;;;;;;;;;x
+I_WILL_HUNT_DOWN_A_GREAT_MONSTER;I will hunt down a great monster!;;;;;;;;;;;;x
+I_WILL_MAKE_A_POTION;I will make a potion.;;;;;;;;;;;;x
+I_WILL_TRAIN_AS_A_RANGER;I will train as a ranger.;;;;;;;;;;;;x
+I_WILL_TRANSFER_200_GOLD;I will transfer 200 gold;;;;;;;;;;;;x
+I_WILL_TRANSFER_500_GOLD;I will transfer 500 gold;;;;;;;;;;;;x
+I_WILL_TRANSFER_GOLD_OR_PIETY_TO_HIM;I will transfer gold or piety to him.;;;;;;;;;;;;x
+I_WONT_FORGET_THIS;I won't forget this...;;;;;;;;;;;;x
+KILL;KILL;;;;;;;;;;;;x
+KILL_EM_ALL;Kill 'em all!;;;;;;;;;;;;x
+knights;Knights;;;;;;;;;;;;;x
+LEADING_ADVENTURERS;Leading Adventurers;;;;;;;;;;;;;x
+LEARNINGEFFECT;$DIRECTION$ $VALUE$ Bloodline Power\n;;;;;;;;;;;;;x
+LEARNING_MOD;Bloodline Strength;;;;;;;;;;;;;x
+LEDGER_CHARACTER_PIETY;Regency;;;;;;;;;;;;;x
+LEDGER_CHARACTER_PIETY_desc;Regency is the stored amount of personal rulership power, used for spells, diplomatic actions, and to increase your own bloodline.;;;;;;;;;;;;;x
+LEGENDS;Legends;;;;;;;;;;;;x
+LETS_GO;Let's go!;;;;;;;;;;;;x
+LETS_GO_SOMEWHERE_MORE_PRIVATE;Let's go somewhere more private...;;;;;;;;;;;;x
+LETS_SEE;Let' see!;;;;;;;;;;;;x
+LETS_TURN_THIS_LEAD_INTO_GOLD;Let's turn this lead into gold!;;;;;;;;;;;;x
+LIGHTNING_STORM;Lightning Storm;;;;;;;;;;;;x
+LIGHTNING_STORM_SPELL;Lightning Storm Spell;;;;;;;;;;;;x
+MAIMING;Maiming;;;;;;;;;;;;x
+MAYBE_ITS_FOR_THE_BEST;Maybe its for the best..;;;;;;;;;;;;x
+MEDOERE;Medoere;;;;;;;;;;;;x
+MEN_GET_ME_OUT_OF_HERE;Men, get me out of here!;;;;;;;;;;;;x
+MEN_RALLY_TO_ME;Men - rally to me!;;;;;;;;;;;;x
+MERCENARY_JOB;Mercenary Job;;;;;;;;;;;;x
+MONSTER_HUNTING;Monster Hunting;;;;;;;;;;;;x
+NECROMANCER;Necromancer;;;;;;;;;;;;x
+NEVER_MIND;Never mind.;;;;;;;;;;;;x
+NEVER_MIND_CLOSE_MENU;Never mind. Close menu.;;;;;;;;;;;;x
+NO;No!!!;;;;;;;;;;;;x
+NONHUMAN_GODS;Non-Human Gods;;;;;;;;;;;;x
+NOOOO;Noooo!;;;;;;;;;;;;x
+NOOOOOO;Noooooo!;;;;;;;;;;;;x
+NOOOO_NOT_LIKE_THIS;Noooo! Not like this!;;;;;;;;;;;;x
+NOOO_NOT_LIKE_THIS;Nooo... not like this!;;;;;;;;;;;;x
+NOTSHOWN;NotShown;;;;;;;;;;;;x
+NOT_RIGHT_NOW;Not right now.;;;;;;;;;;;;x
+NO_GODS_ILL_BE_AN_OUTLAW;No gods! I'll be an outlaw.;;;;;;;;;;;;x
+OF_COURSE;Of course!;;;;;;;;;;;;x
+OF_COURSE_WERE_ON_OUR_WAY;Of course - we're on our way.;;;;;;;;;;;;x
+OH_DEAR;Oh dear.;;;;;;;;;;;;x
+OH_NO;Oh no!;;;;;;;;;;;;x
+ONE_OF_THE_GODS_OF_GOOD;One of the Gods of Good.;;;;;;;;;;;;x
+OROGTRAITEVENT;orogtraitevent;;;;;;;;;;;;x
+OTHERS;Others;;;;;;;;;;;;x
+OUTLAWS_OFFER_YOU_A_DEAL;Outlaws offer you a Deal;;;;;;;;;;;;x
+PAY_FOR_SELF;PAY FOR SELF;;;;;;;;;;;;x
+PICK_STARTING_ERA_TEXT;Birthright covers fifteen centuries but only the Time of Change is playable.;;;;;;;;;;;;;x
+PLAGUE_SPELLS;Plague Spells;;;;;;;;;;;;x
+PRIESTLY_REALM_MAGIC;Priestly Realm Magic;;;;;;;;;;;;x
+PRINCESS_DARNAE_SUMMONS;Princess Darnae Summons;;;;;;;;;;;;x
+PRISON;Prison;;;;;;;;;;;;x
+PROVINCE_SIZE;Province Size;;;;;;;;;;;;x
+PROVINCE_SUBVERSION_SPELLS;Province Subversion Spells;;;;;;;;;;;;x
+random.1.a;Heroes indeed! They shall be richly rewarded.;;;;;;;;;;;;x
+random.1.b;Heroes indeed! They shall be richly rewarded.;;;;;;;;;;;;x
+random.1.c;Heroes indeed! They shall be richly rewarded.;;;;;;;;;;;;x
+random.5.a;Brigands and blackhearts! *charge in alone*;;;;;;;;;;;;x
+random.5.b;Brigands and blackhearts! *charge in alone*;;;;;;;;;;;;x
+random.6.c;A great victory! The loot shall go to the peasants!;;;;;;;;;;;;x
+random.6.c;For the glory of us all, men! Victory! We share the loot.;;;;;;;;;;;;x
+realmbattlemagic.3.a;I will cast a plague on their provinces.;;;;;;;;;;;;x
+realmbattlemagic.3.b;I will cast a plague on their provinces.;;;;;;;;;;;;x
+realmbattlemagic.3.b;I will stir the enemy populace to rebellion.;;;;;;;;;;;;x
+realmbattlemagic.3.c;I will cast a plague on their provinces.;;;;;;;;;;;;x
+realmbattlemagic.7.c;Summon my court mage - we must dispel it!;;;;;;;;;;;;x
+realmpriestmagic.0.b;I will cast province ward/dispel magic.;;;;;;;;;;;;x
+realmpriestmagic.0.c;I will cast a summoning spell.;;;;;;;;;;;;x
+REALM_MAGIC;Realm Magic;;;;;;;;;;;;x
+REALM_TURMOIL;Realm Turmoil;;;;;;;;;;;;x
+RELIGION;Religion;;;;;;;;;;;;x
+RETIRE_FROM_ADVENTURING;Retire from Adventuring;;;;;;;;;;;;x
+RING_OF_PERSUASION_/_TAKES_1_YEAR;Ring of Persuasion / Takes 1 year.;;;;;;;;;;;;x
+ROESONE;Roesone;;;;;;;;;;;;x
+RUN;Run!;;;;;;;;;;;;x
+SECURING_AN_HEIR;Securing an Heir;;;;;;;;;;;;x
+SEE_MORE_CLASSES;See more classes;;;;;;;;;;;;x
+SEND_FOR_A_HEALER;Send for... a healer...;;;;;;;;;;;;x
+SEND_GIFT_INTERACTION_1;Regency from priestly gift: §G$PIETY$§!.;;;;;;;;;;;;;x
+SEND_IN_THE_TROOPS;Send in the troops!;;;;;;;;;;;;x
+SORCEROUS_BLOOD;Sorcerous Blood;;;;;;;;;;;;x
+sorcerycollege.4.a;Send a carriage for my child immediately!;;;;;;;;;;;;x
+sorcerycollege.4.b;Send a carriage for my child immediately!;;;;;;;;;;;;x
+sorcerycollege.4.c;Send a carriage for my child immediately!;;;;;;;;;;;;x
+SO_BE_IT;So be it.;;;;;;;;;;;;x
+static_diplomacy_mod;Negotiation Skill;;;;;;;;;;;;;x
+static_learning_mod;Bloodline Power;;;;;;;;;;;;;x
+STAT_DIPLOMACY;State Negotiation;;;;;;;;;;;;;x
+STAT_DIPLOMACY_DESC;Negotiation skills are critical, whether one is dealing with affairs of state or matters of the faith.;;;;;;;;;;;;;x
+STAT_LEARNING;Bloodline Power;;;;;;;;;;;;;x
+STAT_LEARNING_DESC;Bloodline Power is a reflection of how much divine blood a character has, absorbed from the fall of the Gods at the great battle of Mt.Deismaar 1500 years ago.;;;;;;;;;;;;;x
+STAT_PIETY_DESC_REGENCY;Regency is the stored amount of personal rulership power, used for spells, diplomatic actions, and to increase your own bloodline.;;;;;;;;;;;;;x
+STAT_PIETY_REGENCY;Regency;;;;;;;;;;;;;x
+stealing.0.b;Maybe later... if the ransom is not paid.;;;;;;;;;;;;x
+STUBBORN_OLD_FOOL;Stubborn old fool!;;;;;;;;;;;;x
+STUDY_MAGIC_INSTEAD;Study magic instead!;;;;;;;;;;;;x
+SUBVERSION_MAGIC;Subversion Magic;;;;;;;;;;;;x
+SUBVERSION_SPELLS;Subversion Spells;;;;;;;;;;;;x
+succubus.1.a;He will become my pet whether he wants to or not!;;;;;;;;;;;;x
+succubus.1.b;He will become my pet whether he wants to or not!;;;;;;;;;;;;x
+SUMMON_ME_A_MIGHTY_ARMY;Summon me a mighty army.;;;;;;;;;;;;x
+TAEGHAS;Taeghas;;;;;;;;;;;;x
+TALINIE;Talinie;;;;;;;;;;;;x
+TEMPLE_HOLDING_PIETY;§Y$NUM$§! Priestly Buildings in Demesne: §G+$VALUE$§!;§Y$NUM$§! Priestly Buildings in Demesne: §G+$VALUE$§!;;;;;;;;;;;;;x
+TEST;test;;;;;;;;;;;;x
+THAT_BASTARD;That bastard...;;;;;;;;;;;;x
+THAT_WAS_COLD;That was cold!;;;;;;;;;;;;x
+THAT_WAS_DIVINE;That was divine!;;;;;;;;;;;;x
+THAT_WAS_FUN;That was fun!;;;;;;;;;;;;x
+THEFT;Theft!;;;;;;;;;;;;x
+THEY_ESCAPE;They escape!;;;;;;;;;;;;x
+THE_BATTLE;The Battle;;;;;;;;;;;;x
+THE_BRECHT_LEAGUE_WILL_HELP_US_ALL;The Brecht league will help us all.;;;;;;;;;;;;x
+THE_CHARGE;The Charge;;;;;;;;;;;;x
+THE_FEAST;The Feast;;;;;;;;;;;;x
+THE_SEDUCTION;The Seduction;;;;;;;;;;;;x
+THE_STAND;The Stand;;;;;;;;;;;;x
+THE_SUCCUBUS;The Succubus;;;;;;;;;;;;x
+THE_WHITE_WITCH;The White Witch;;;;;;;;;;;;x
+THIS_ARE_TROUBLED_TIMES_INDEED;This are troubled times indeed...;;;;;;;;;;;;x
+THOSE_VOICES;Those voices...;;;;;;;;;;;;x
+TIME_TO_RETURN_HOME;Time to return home!;;;;;;;;;;;;x
+TOO_BAD;Too bad!;;;;;;;;;;;;x
+TOO_BAD;Too bad!;;;;;;;;;;;;x
+TORTURE;Torture;;;;;;;;;;;;x
+TRANSFER_AMULETS;Transfer Amulets;;;;;;;;;;;;x
+TRANSFER_ITEM;Transfer Item;;;;;;;;;;;;x
+TRANSFER_SWORDS;Transfer Swords.;;;;;;;;;;;;x
+TROLL_LAIR;Troll Lair;;;;;;;;;;;;x
+TROUBLED_TIMES;Troubled Times;;;;;;;;;;;;x
+TRY_TO_GET_WORD_TO_MY_LIEGE;Try to get word to my liege!;;;;;;;;;;;;x
+unification.12.a;I will swear fealty - there is strength in numbers.;;;;;;;;;;;;x
+unification.12.b;I will swear fealty - there is strength in numbers.;;;;;;;;;;;;x
+unification.18.b;I will never bend the knee to this fool!;;;;;;;;;;;;x
+UNIFICATION;Unification;;;;;;;;;;;;x
+UP_MEN_TO_ARMS;Up men - to arms!;;;;;;;;;;;;x
+WAR;WAR!;;;;;;;;;;;;x
+WAR_MAGIC;War Magic;;;;;;;;;;;;x
+WHAT_HAPPENED;What happened...;;;;;;;;;;;;x
+whitewitch.2.a;I must find just the right thing to wear!;;;;;;;;;;;;x
+whitewitch.6.a;My beauty and power are too much for any man to resist!;;;;;;;;;;;;x
+whitewitch.14.a;When I'm good, I'm good. When I'm bad, I'm better!;;;;;;;;;;;;x
+WICHS_LAIR;Wich's Lair;;;;;;;;;;;;x
+WICKED_WITCH;Wicked Witch;;;;;;;;;;;;x
+WITCHS_LAIR;Witch's Lair;;;;;;;;;;;;x
+YES_ADVENTURE_CALLS;Yes, adventure calls!;;;;;;;;;;;;x
+YES_AT_ONCE;Yes, at once!;;;;;;;;;;;;x
+YES_GOING_HOME_SOUNDS_GOOD;Yes, going home sounds good!;;;;;;;;;;;;x
+YES_HIRE_SOME_LOCAL_ADVENTURERS;Yes, hire some local adventurers.;;;;;;;;;;;;x
+YES_I_WILL_TAKE_THE_THRONE;Yes, I will take the throne.;;;;;;;;;;;;x
+YES_LET_THE_DIVISION_END;Yes, let the division end!;;;;;;;;;;;;x
+YES_YES_OF_COURSE;Yes, yes, of course!;;;;;;;;;;;;x
+YOUR_BLOOD_POWERS;Your Blood Powers;;;;;;;;;;;;x
+YOUR_FOLLOWERS;Your followers;;;;;;;;;;;;x
+YOUR_FORCES;Your forces;;;;;;;;;;;;x
+YOUR_NEW_PET;Your new pet;;;;;;;;;;;;x
+YOUR_TREASURY;Your Treasury;;;;;;;;;;;;x
+YOUR_UNDEAD_ARMY;Your undead army;;;;;;;;;;;;x
+YOUR_WORK_IS_COMPLETE;Your work is complete;;;;;;;;;;;;x
+YOU_GROW_HUNGRY;You grow hungry;;;;;;;;;;;;x
+DEATH_BLOODLINE_SACRIFICE;was sacrificed to steal the power of their blood.;;;;;;;;;;;;x
+vampire;Vampire;;;;;;;;;;;;x
+vampire_desc;This character has been twisted by the bloodline of Azrai, and is now a creature of the night living off the blood of mortals. While powerful beings, they are nonetheless hunted down whenever they are revealed in all realms not ruled by their own kin.;;;;;;;;;;;;x
+random0b;I will deal with this myself!;;;;;;;;;;;;x
+random0c;Ignore them, and they'll go away!;;;;;;;;;;;;x
+random1b;The bandit treasury was my tax revenue - hand it over!;;;;;;;;;;;;x
+random1c;Want to stay and court my daughter, strapping young hero?;;;;;;;;;;;;x
+random2b;If you want something done, do it yourself! Saddle my horse!;;;;;;;;;;;;x
+random2c;To hell with it. Leave them alone.;;;;;;;;;;;;x
+random3b;Alright men, this is it!;;;;;;;;;;;;x
+random4b;Bribe your men to tell tales of your own heroism in the fight.;;;;;;;;;;;;x
+random4c;Excellent job men! You can keep the loot.;;;;;;;;;;;;x
+random5b;Curses! *flee to safety*;;;;;;;;;;;;x
+random6b;A great victory, I won almost singlehanded. The loot is mine!;;;;;;;;;;;;x
+random6c;A great victory! The loot shall go to the peasants!;;;;;;;;;;;;x
+random12b;Not interested...;;;;;;;;;;;;x
+random13b;I'll get out... and when I do...;;;;;;;;;;;;x
+random14c;Damnit!;;;;;;;;;;;;x
+random16a;Unacceptable!;;;;;;;;;;;;x
+random16b;They win.. this round...;;;;;;;;;;;;x
+random16c;Put a price on their heads. 20 gold bars!;;;;;;;;;;;;x
+adventurer36desc;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to instigate rebellions amongst his enemies.;;;;;;;;;;;;x
+EVTDESCADVENTURER.0;You are informed that a necromancer lives deep beneath your city's sewers, and is raising an army of undead from amongst the plague victims. The citizens are in a panic and this threat must be dealt with.;;;;;;;;;;;;x
+EVTDESCADVENTURER.1;A message arrives from a ruler, asking if you would help his land defeat a necromancer re-animating plague victims and building an army. He will pay 10 gold. What do you say?.;;;;;;;;;;;;x
+EVTDESCADVENTURER.2;The necromancer has raised hundreds of undead now, and you have no choice but to act now. Will you send in the city guard, or call for an adventurer to deal with it?;;;;;;;;;;;;x
+EVTDESCADVENTURER.3;The adventuring party arrives and is quickly briefed on the situation. For 10 gold, they will go into the sewers and attempt to defeat this necromancer before he can summon an army of undead against you.;;;;;;;;;;;;x
+EVTDESCADVENTURER.4;You reach your destination. Fighting through dozens of undead beneath the city sewers, you finally come to the necromancer's lair - it is well guarded, and your small party is already tired. Yet you cannot rest, you must press on!;;;;;;;;;;;;x
+EVTDESCADVENTURER.5;You bravely charge ahead, and just as it seems you are about to be overwhelmed by hordes of undead, you strike down the necromancer and his minions fall lifeless to the ground.;;;;;;;;;;;;x
+EVTDESCADVENTURER.6;You bravely charge ahead, but you are overwhelmed by undead - you cannot get close enough to slay the necromancer, and you find yourself surrounded and overwhelmed! The last thing you remember are sharp claws dragging you down.;;;;;;;;;;;;x
+EVTDESCADVENTURER.7;The adventuring party arrives back safely, having defeated the necromancer. Your city is safe, and they are hailed as heroes.;;;;;;;;;;;;x
+EVTDESCADVENTURER.8;By some miracle, your companions manage to save you and drag you out of the sewers. You are grievously wounded, however, and your quest has failed...;;;;;;;;;;;;x
+EVTDESCADVENTURER.9;You return triumphant, and a great feast is held in your honor. You are duly paid, and the next morning, you set off for new adventures.;;;;;;;;;;;;x
+EVTDESCADVENTURER.10;You return triumphant, only to find the gates of the castle barred to you. 'Begone ruffians, the ruler shouts from the walls - or I'll have you arrested for vagrancy!' ;;;;;;;;;;;;x
+EVTDESCADVENTURER.11;The adventurers have failed, and are either dead, wounded, or captured now. What should be done? ;;;;;;;;;;;;x
+EVTDESCADVENTURER.13;While visiting a tavern, you hear stories of a nearby cave rumored to be a troll's lair. Do you want to investigate?;;;;;;;;;;;;x
+EVTDESCADVENTURER.14;After a week of searching, you finally come upon some troll tracks which lead to a dark cave. Preparing yourself as best as you are able, you light some torches and prepare to destroy this threat to the local community.;;;;;;;;;;;;x
+EVTDESCADVENTURER.15;You march into troll the lair, and though they are strong opponents, they are no match for your party's superior skill and tactics. After slaying half a dozen of them, you find some treasure and quickly claim it.;;;;;;;;;;;;x
+EVTDESCADVENTURER.16;You march into troll the lair, and quickly find yourself in trouble. Six trolls come at you all at once, and you are hard pressed to make it back to the exit alive!;;;;;;;;;;;;x
+EVTDESCADVENTURER.17;While visiting a tavern, you hear stories of a witch, possibly a priestess of Kriesha, stealing children from the village. She lives in a cave a few days away. Do you want to investigate?;;;;;;;;;;;;x
+EVTDESCADVENTURER.18;After some searching, you finally come upon a cave with skulls decorating the entrance and the symbol of Kriesha carved with blood into the rocks. Do you enter?;;;;;;;;;;;;x
+EVTDESCADVENTURER.19;You march into the cave, and as soon as you do, are met by a hail of ice sprouting from the fingertips of a darkly beautiful woman dressed in white robes. After a quick but fierce battle, you kill her, and free the children.;;;;;;;;;;;;x
+EVTDESCADVENTURER.20;As soon as you march into the cave, you are surprised by a cone of icy cold sprouting from the fingers of a beautiful woman dressed in white, quickly followed by four of her apprentices whose chants almost bring you to your knees with pain.;;;;;;;;;;;;x
+EVTDESCADVENTURER.21;As your party travels through the wilds, you are suddenly ambused by a band of outlaws.;;;;;;;;;;;;x
+EVTDESCADVENTURER.22;You take cover from the initial ambush, and after a brief moment, take the fight to them. You slay several, and the rest flee in terror before your party's overpowering strength!;;;;;;;;;;;;x
+EVTDESCADVENTURER.23;The ambush was well set-up! Two dozen archers pin you down, and they have mounted troops and what seems to be a half-giant! If you rush them, there's a good chance you won't make it...;;;;;;;;;;;;x
+EVTDESCADVENTURER.24;Ignoring a hail of arrows, you order your party to attack! With steel, stealth, sorcery and priestly powers, you throw everything you have at them, and...;;;;;;;;;;;;x
+EVTDESCADVENTURER.25;The fight is brutal, but the ferocity and strength of your charge throws off the brigands. The archers flee as you near them, and a fierce fight follows where you personally slay their leader. The rest turn and run!;;;;;;;;;;;;x
+EVTDESCADVENTURER.26;You rush the brigands, but you take an arrow to the knee as you leave cover! Another arrow hits one of your companions through the throat. This is not going well. A man approaches with a mace, seeking to knock you out!;;;;;;;;;;;;x
+EVTDESCADVENTURER.27;While resting around the camp fire one night, your party is suddenly ambused by a band of goblins.;;;;;;;;;;;;x
+EVTDESCADVENTURER.28;Like the well trained professionals that you are, you quickly jump to arms and engage the goblins! There are almost two dozen of them, but their ambush was clumsy and loud - you swiftly defeat them.;;;;;;;;;;;;x
+EVTDESCADVENTURER.29;You seem to be under attack from an entire goblin tribe, and they have gnolls with them! Disorganized, you cannot mount a proper defense. It would be wise to let them have you gear and make a run for it...;;;;;;;;;;;;x
+EVTDESCADVENTURER.30;Gathering your party together, fighting back to back, you face the rush of dozens of goblins and gnolls!;;;;;;;;;;;;x
+EVTDESCADVENTURER.31;Your party stands firm against the onslaught, fighting as a well disciplined team against the disorganized goblins. They cannot break your line, and soon a goblin horn sounds the retreat. Cowardly creatures!;;;;;;;;;;;;x
+EVTDESCADVENTURER.32;The goblins encircle you, and the larger gnolls rush at you. Take them alive, yells the goblin chief, and your line begins to break under the pressure. Gnoll hands grasp at you, pulling you away from your party...;;;;;;;;;;;;x
+EVTDESCADVENTURER.33;While your army is fully capable of fighting the battles to come, sometimes it helps to have an extra edge. Shall you hire a band of adventurers to help you win this war? They would cost 50 gold.;;;;;;;;;;;;x
+EVTDESCADVENTURER.34;A message arrives from a ruler, asking if you would help fight a war against their enemies. You would primarily be used for special missions. It would pay 50 gold.;;;;;;;;;;;;x
+EVTDESCADVENTURER.35;The adventuring party arrives and is quickly briefed on the situation. You pay them their fee, and sit together in council deciding how best to use them in the war...;;;;;;;;;;;;x
+EVTDESCADVENTURER.36;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to instigate rebellions amongst his enemies.;;;;;;;;;;;;x
+EVTDESCADVENTURER.36.a;Great! Peasants love rebelling.;;;;;;;;;;;;x
+EVTDESCADVENTURER.36.b;I'll do it, but I don't like using peasants this way.;;;;;;;;;;;;x
+EVTDESCADVENTURER.36.c;I won't do it. The peasants will all die.;;;;;;;;;;;;x
+EVTDESCADVENTURER.37;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you assassinate enemy nobles and commanders...;;;;;;;;;;;;x
+EVTDESCADVENTURER.37.a;Great! I love killing...;;;;;;;;;;;;x
+EVTDESCADVENTURER.37.b;I'll do it, but I don't like it.;;;;;;;;;;;;x
+EVTDESCADVENTURER.37.c;I won't do it. I'm no assassin.;;;;;;;;;;;;x
+EVTDESCADVENTURER.38;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to steal from the enemy, making him unable to pay for his troops.;;;;;;;;;;;;x
+EVTDESCADVENTURER.38.a;Great! I love stealing...;;;;;;;;;;;;x
+EVTDESCADVENTURER.38.b;I'll do it, but I don't like stealing.;;;;;;;;;;;;x
+EVTDESCADVENTURER.38.c;I won't do it. I'm no thief.;;;;;;;;;;;;x
+EVTDESCADVENTURER.39;You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to lead a unit of adventurers during the battles.;;;;;;;;;;;;x
+EVTDESCADVENTURER.40;You travel behind enemy lines, and begin to work on instigating a rebellion. What will you focus your message on?;;;;;;;;;;;;x
+EVOPTAADVENTURER.40;The unfairness of hereditary monarchy!;;;;;;;;;;;;x
+EVOPTBADVENTURER.40;Taxes are too high!;;;;;;;;;;;;x
+EVOPTCADVENTURER.40;The ruler is in league with demons!;;;;;;;;;;;;x
+EVTDESCADVENTURER.41;You travel behind enemy lines, and begin to plot your assassinations of enemy notables. Who will you strike at?;;;;;;;;;;;;x
+EVOPTAADVENTURER.41;The enemy Marshall.;;;;;;;;;;;;x
+EVOPTBADVENTURER.41;A random enemy count.;;;;;;;;;;;;x
+EVOPTCADVENTURER.41;I'll just go on a general killing spree!;;;;;;;;;;;;x
+EVTDESCADVENTURER.43;As ordered, you begin assembling a band of adventurers into a proper fighting force of some fifty people with various skills and talents to use on the battlefield at critical moments. How will you lead them?;;;;;;;;;;;;x
+EVOPTAADVENTURER.43;I will lead from the front.;;;;;;;;;;;;x
+EVOPTBADVENTURER.43;I will lead from the center.;;;;;;;;;;;;x
+EVOPTCADVENTURER.43;I will lead from the rear.;;;;;;;;;;;;x
+EVTDESCADVENTURER.44;The insolence! The ragged adventurers claim to be too good for your task, and outright refuses! They return the gold, and says the job was not what they expected they would be doing. Why I'll...;;;;;;;;;;;;x
+EVOPTAADVENTURER.44;Probably be better off without them anyways...;;;;;;;;;;;;x
+EVOPTBADVENTURER.44;Let them go, but never forget this!;;;;;;;;;;;;x
+EVOPTCADVENTURER.44;Guards, arrest them!;;;;;;;;;;;;x
+EVTDESCADVENTURER.45;The ruler is enraged at your refusal, and screams for his guards to arrest you immediately! What do you do?;;;;;;;;;;;;x
+EVTOPTAADVENTURER.45;Kill the faithless fool, then run!;;;;;;;;;;;;x
+EVTOPTCADVENTURER.45;Allow the guards to arrest you.;;;;;;;;;;;;x
+EVTDESCADVENTURER.46;In an instant, you react, striking out at the ruler with all your power. He is caught off-guard, and falls quickly to the ground dead or severely wounded! You then turn to rush the guards, heading for the nearest exit!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.46;Hah! That'll show him!;;;;;;;;;;;;x
+EVTDESCADVENTURER.47;In an instant, you react, striking out at the ruler with all your power. The guards jump in front of him however, and you soon find yourself surrounded, and more reinforcements on the way. There is no way out of this...;;;;;;;;;;;;x
+EVTDESCADVENTURER.48;As soon as you call for their arrest, the adventurers spring into action, launching a furious assault upon your person! Before you can react, you are struck down, and blackness falls upon you...;;;;;;;;;;;;x
+EVTOPTAADVENTURER.48;*you fall to the ground*;;;;;;;;;;;;x
+EVTDESCADVENTURER.49;As soon as you call for their arrest, the adventurers spring into action, launching a furious assault upon your person! You and your guards react swiftly though, and soon have them surrounded - they surrender...;;;;;;;;;;;;x
+EVTOPTAADVENTURER.49;They'll pay for this...;;;;;;;;;;;;x
+EVTDESCADVENTURER.50;You are taken to the darkest dungeon, and unceremoniously dumped on the ground there, stripped of all your belongings. You'll have to hope you can pay the ransom, before they decide to execute you.;;;;;;;;;;;;x
+EVTDESCADVENTURER.51;During the last few weeks, you have been railing against the unfairness of hereditary rulers. The peasants are listening, and you have convinced them that together, they are powerful and wise enough to rule themselves!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.51;Gullible fools...;;;;;;;;;;;;x
+EVTOPTBADVENTURER.51;Solidarity, brothers!;;;;;;;;;;;;x
+EVTOPTCADVENTURER.51;Liberty! Equality! Brotherhood!;;;;;;;;;;;;x
+EVTOPTDADVENTURER.51;I'd best leave before the dying starts...;;;;;;;;;;;;x
+EVTDESCADVENTURER.52;During the last few weeks, you have been railing against the unfairness of high taxes. The peasants are listening, and you have convinced them that they should stop paying them immediately until they are lowered.;;;;;;;;;;;;x
+EVTOPTAADVENTURER.52;Hah, my peasants actually pay more...;;;;;;;;;;;;x
+EVTOPTBADVENTURER.52;No more gold for tyrants!;;;;;;;;;;;;x
+EVTOPTCADVENTURER.52;Read my lips - no new taxes!;;;;;;;;;;;;x
+EVTDESCADVENTURER.53;During the last few weeks, you have been fabricating evidence that their ruler is in league with demonic forces. They are frightened, and up in arms, vowing to burn this evil out of his castle.;;;;;;;;;;;;x
+EVTOPTAADVENTURER.53;Hah - The only demonic force here is me!;;;;;;;;;;;;x
+EVTOPTBADVENTURER.53;Kill the demons, kill them with fire!;;;;;;;;;;;;x
+EVTOPTCADVENTURER.53;Your faith will protect you - to arms!;;;;;;;;;;;;x
+EVTDESCADVENTURER.54;It seems one of your enemies has hired a band of adventurers to instigate a peasant revolt in your demesne... let's hope they have more sense than to listen to such nonsense!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.54;Cursed adventurers...;;;;;;;;;;;;x
+EVTDESCADVENTURER.55;During the last few weeks, you have been seeking ways to kill the enemy Marshall. Finally, an opportunity presents itself during a moonless night...;;;;;;;;;;;;x
+EVTOPTAADVENTURER.55;Quietly... stealthily...;;;;;;;;;;;;x
+EVTDESCADVENTURER.56;During the last few weeks, you have been seeking ways to kill an enemy count. Finally, an opportunity presents itself during a moonless night...;;;;;;;;;;;;x
+EVTDESCADVENTURER.57;During the last few weeks, you have been seeking ways to kill a large bunch of enemy notables. An opportunity presents itself, when you find a group of young enemy nobles drinking at a tavern, on the way to war.;;;;;;;;;;;;x
+EVTOPTAADVENTURER.57;I'll kill them in their sleep!;;;;;;;;;;;;x
+EVTOPTBADVENTURER.57;I'll poison their wine.;;;;;;;;;;;;x
+EVTOPTCADVENTURER.57;A well placed fireball spell, perhaps...;;;;;;;;;;;;x
+EVTDESCADVENTURER.58;During the night, you hear a thud outside your door. Like a body falling... the door creeps open, and an assassin sneaks in. Treachery!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.58;Guards! *prepare to defend yourself*;;;;;;;;;;;;x
+EVTDESCADVENTURER.59;You quietly dispatch the guard in front of the Marshall's door, and catch him unaware in bed! You rush towards him, and deliver a mortal blow before he can react, and then escape out the window.;;;;;;;;;;;;x
+EVTOPTAADVENTURER.59;Hah! Too easy!;;;;;;;;;;;;x
+EVTOPTBADVENTURER.59;Better him dead, if it helps end the war.;;;;;;;;;;;;x
+EVTDESCADVENTURER.60;As you sneak into the Marshall's quarters after dispatching the guard, he hears you, and rushes out of bed screaming for the guards! He sleeps in his armour, and comes at you wielding a longsword!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.60;Damnations! Time to run!;;;;;;;;;;;;x
+EVTOPTBADVENTURER.60;Damnations! But there's still time!;;;;;;;;;;;;x
+EVTDESCADVENTURER.61;You heard the assassin coming, and seeing that you are awake and prepared to fight, the shadowy figure quickly disappears into the night!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.61;That was a close call!;;;;;;;;;;;;x
+EVTDESCADVENTURER.62;You heard the assassin coming, and after a quick struggle where neither of you can gain the advantage, the assassin thinks better of it, and runs away!!;;;;;;;;;;;;x
+EVTDESCADVENTURER.63;The assassin enters your quarters, and comes right at you! You only see a shadowy figure clothed in black, before you feel a sharp pain and then... blackness!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.63;Nooo!;;;;;;;;;;;;x
+EVTDESCADVENTURER.64;You enter the target's quarters and decide to fight, despite being discovered. A swift and furious struggle ensues, but finally the Marshall is dealt a deadly blow just as you hear the guards come running down the corridor.;;;;;;;;;;;;x
+EVTDESCADVENTURER.65;You enter the target's quarters and decide to fight, despite being discovered. A swift and furious struggle ensues, you cannot quickly dispatch him! Guards are coming now, the castle bells are ringing...;;;;;;;;;;;;x
+EVTDESCADVENTURER.66;During the night, you hear a noise outside your door. Like a body falling... the door creaps open, and an assassin sneaks in. Treachery!;;;;;;;;;;;;x
+EVTDESCADVENTURER.67;You quietly dispatch the guard in front of the count's door, and catch him at unawares in bed! You rush towards him, and deliver a mortal blow before he can react, and then escape out the window.;;;;;;;;;;;;x
+EVTDESCADVENTURER.68;As you sneak into the count's quarters after dispatching the guard, he hears you, and rushes out of bed screaming for the guards! He sleeps in his armor, and comes at you wielding a longsword!;;;;;;;;;;;;x
+EVTDESCADVENTURER.69;After a night of drinking, you sleep in a tavern with other young nobles, on the way to the front lines of the war. A door creaks open and...;;;;;;;;;;;;x
+EVTOPTAADVENTURER.69;Assassins! I hope I survive!;;;;;;;;;;;;x
+EVTDESCADVENTURER.70;You are drinking at a tavern, and some strangers approach and engage you in talk. Suddenly you feel lightheaded, and notice a white substance in your wine... you feel faint, ill, and your heart is racing!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.70;Poison! I hope I survive!;;;;;;;;;;;;x
+EVTDESCADVENTURER.71;Suddenly you are drinking in a tavern with some friends, and a wizard starts chanting. You have only a moment to turn your head, and then a massive fireball approaches!;;;;;;;;;;;;x
+EVTDESCADVENTURER.72;After the group retires to the night, you and your party sneak into their quarters, aiming to kill them in their sleep. This one dies!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.72;Time to leave!;;;;;;;;;;;;x
+EVTDESCADVENTURER.73;You engage the group of young nobles, drinking and swapping tales, and all the while adding a deadly poison to your drinks whenever you can. It is slow acting, and the next morning, this one has died!;;;;;;;;;;;;x
+EVTDESCADVENTURER.74;You are not the subtle type. Seeing a group of enemy nobles, you or your party wizard starts casting a fireball spell directly towards them. Panic erupts in the tavern and the flames are spreadign. This one has died!;;;;;;;;;;;;x
+EVTDESCADVENTURER.75;Six months have passed, and your mercenary contract period is over. You can now return to normal adventuring, or take another contract with a different ruler.;;;;;;;;;;;;x
+EVTDESCADVENTURER.76;The campaign reaches a critical point, and your group of adventurers is needed at a key moment. Leading from the front, you rush in to plug a hole in the battle line that you can see is developing!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.76;Forward!;;;;;;;;;;;;x
+EVTDESCADVENTURER.77;The campaign reaches a critical point, and your group of adventurers is needed at a key moment. With your men forming a perimeter around you, you rush in to plug a hole in the battle line that you can see is developing!;;;;;;;;;;;;x
+EVTDESCADVENTURER.78;The campaign reaches a critical point, and your group of adventurers is needed at a key moment. Gathering your men, you order them to rush ahead to plug a hole in the battle line that you can see is developing!;;;;;;;;;;;;x
+EVTOPTAADVENTURER.78;Attack, men! I'll stay here.;;;;;;;;;;;;x
+EVTDESCADVENTURER.79;While visiting a tavern, the townspeople beg you to help them dispatch a small tribe of giants that has been stealing their cattle. This is a dangerous quest, but you will never achieve mastery without taking risks...;;;;;;;;;;;;x
+EVTOPTAADVENTURER.79;We can take em down...;;;;;;;;;;;;x
+EVTOPTBADVENTURER.79;No, giants are too much for us.;;;;;;;;;;;;x
+EVTDESCADVENTURER.80;After a week of searching, you finally come upon the giant tribe. There are a dozen of them, and they don't seem to have spotted you yet...;;;;;;;;;;;;x
+EVTOPTBADVENTURER.80;No, wait, let's not do this...;;;;;;;;;;;;x
+EVTDESCADVENTURER.81;You prepare as best you can, and then engage this most dangerous enemy. The giants quickly spring into action, but your long adventuring career has prepared you for such dangers - you finally slay the last of them!;;;;;;;;;;;;x
+EVTDESCADVENTURER.82;You engage the giants, but one of them is a priest of terrible power - Lightning cracks from the sky, and elementals are summoned to their aid - you have no chance of victory here!;;;;;;;;;;;;x
+EVTDESCADVENTURER.100;All my practice is paying off!  I feel much more confident in my abilities.;;;;;;;;;;;;x
+EVTDESCADVENTURER.100b;Woot!  That last kill gave you just enough XP to go up a level!;;;;;;;;;;;;x
+EVTDESCADVENTURER.100.b;Ding!;;;;;;;;;;;;x
+vampires0desc;A vampire has given you the Blood Gift, and you feel your body transforming, strengthening, and sharp canines begin to grow swiftly as the taint of Azrai fills you with an almost insatiable hunger for blood.;;;;;;;;;;;x
+vampire0a;I must feed... ;;;;;;;;;;;x
+turn_courtier_into_vampire;Turn this person into a Vampire;;;;;;;;;;;x
+use_potion_of_healing;Use Potion of Healing;;;;;;;;;;;x
+disfigured;Disfigured;;;;;;;;;;;x
+disfigured_desc;This character has been horribly disfigured, and while adults may try to politely look away, sometimes children and ladies of delicate dispositions faint or run away in horror at the sight.;;;;;;;;;;;x
+BRseduction0desc;A foolish mortal has tried to seduce you. It was entertaining for a while, but as your desire grows, so does your hunger. One night you can barely restrain yourself from taking your fill of their blood - perhaps it is time to end this little game?;;;;;;;;;;;;x
+BRseduction0A;Yes, I must sate my thirst! *attack your lover*;;;;;;;;;;;;x
+BRseduction0B;No, I will show restraint...;;;;;;;;;;;;x
+BRseduction1desc;You have foolishly decided to take a vampire for your lover. One night, as the passion runs high, a feral look comes over your lover. Sharp fangs snap out and clawed hands hold you down with bestial strength - then all you feel is pain as you are brutally mauled and drained of blood.;;;;;;;;;;;;x
+BRseduction1A;Oh gods, wait! Nooo - not there!!! Get off me!;;;;;;;;;;;;x
+BRseduction2desc;You have foolishly decided to take a vampire for your lover. One night, as the passion runs high, a feral look comes over your lover. Sharp fangs snap out and clawed hands hold you down with supernatural strength - then your lover smiles down at you, satisfied for the moment. 'No, you get to live another night...';;;;;;;;;;;;x
+BRseduction2A;That's it - I'm done with this vampire!;;;;;;;;;;;;x
+BRseduction2B;You had me worried there for a second...;;;;;;;;;;;;x
+BRseduction3desc;You feed greedily on your lover, but at the last moment, show some restraint. The pulse is weak, the body is mauled, but somehow, still breathing. You decide to let them live, if they can recover, and tell your minions to take this one back home in their carriage.;;;;;;;;;;;;x
+BRseduction3A;No sense completely draining good cattle, I always say.;;;;;;;;;;;;x
+awnshie0desc;Your bloodline powers have healed a grievous injury.;;;;;;;;;;;x
+# namespace = duelengine;;;;;;;;;;;;;;;
+EVTDESC_DUELENGINE_0;Across the field of battle you have spotted an enemy worth facing.;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_0A;Who shall I fight today?;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_1;As you draw closer you see your enemy is [From.GetTitledName]. Shall you engage [From.GetHerHim]?;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_1A;I shall defeat [From.GetHerHim]!;;;;;;;;;;;;;x;
+DUELENGINE_TOOLTIP_1A;The enemy reacts!;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_1B;Discretion is the better part of valour!;;;;;;;;;;;;;x;
+# tactics for next round;;;;;;;;;;;;;;;
+EVTDESC_DUELENGINE_4;The battle is not yet won... Your enemy did [From.GetHerHis] move and you may and assess the combat situation and choose a proper response:;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_4A;Continue Combat;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_4B;Cast Spell;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_4C;Counterspell or Channel Magic Power;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_4D;Continue Combat;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_4E;Try to escape!;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_4F;I cannot move!;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+EVTDESC_DUELENGINE_5;[From.GetTitledFirstName] managed to escape the battlefield, shaming [From.GetHerHim]self forever!;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_5A;The coward has escaped... for now.;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20A;Focus on defence. Let no attack through!;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20B;Focus on offence. Attack without restraint!;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20C;Balance your defence and offence. Overcompensation will lead to ruin!;;;;;;;;;;;;;x;
+# THOSE OPTIONS ARE FOR ALL EVENTS 20-23;;;;;;;;;;;;;;;
+EVTOPT_DUELENGINE_20D;Cast Offensive Spell;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20E;Cast Defensive Spell;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20F;Cast Buff Spell;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20G;Cast Lore Special Spell;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20H;Channel Magic Power;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20I;Perform Counterspell;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_20J;Wait;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+EVTDESC_DUELENGINE_20;You decided to engage in physical combat. You will fight your enemy and hopefully injure him. What stance you prefer?;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_21;You are preparing a spell - this time you won't fight your enemy in physical combat. What spell do you wish to cast?;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_22;You decided to channel magical energies to regain power and be able to cast spells, however you will not deal any damage to enemy this round.;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_23;Enemy immobilized you. You cannot do anything this round.;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_50;Unable to continue, you succumb to your wounds...;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_50A;Avenge me!;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_51;You have won! The body of [From.GetTitledName] lies before you.;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_51A;Hurray!;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_52;You have lost the battle... Wounded and weak you managed to escape...;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_52A;Run!;;;;;;;;;;;;;x;
+EVTDESC_DUELENGINE_53;You have won! However [From.GetTitledName] has managed to escape!;;;;;;;;;;;;;x;
+EVTOPT_DUELENGINE_53A;A coward through and through!;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+# DUEL TOOLTIPS TODO add character for colourful text here;;;;;;;;;;;;;;;
+TOOLTIP_attack_stance;Improves attack: 1+ Att, but lowers defence: -1 Def.;;;;;;;;;;;;;x;
+TOOLTIP_defence_stance;Lowers attack: -1 Att, but improves defence:+1 Def.;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+TOOLTIP_hysh_ds1;Burning Gaze - damages with: S=6, costs: 4 mp, may apply flare -1 Attk, -1 Def.;;;;;;;;;;;;;x;
+TOOLTIP_hysh_ds2;Body of Light - improves defence: +2 Def, costs: 3 mp.;;;;;;;;;;;;;x;
+TOOLTIP_hysh_ds3;Healing Energy - heals the character: +(1-3) hp, 4 mp .;;;;;;;;;;;;;x;
+TOOLTIP_hysh_ds4;Radiant Weapon - character weapon becomes blessed: +2 Att against Chaos, 2 mp.;;;;;;;;;;;;;x;
+TOOLTIP_ice_ds1;Shardstorm - throws ice shards at enemy: S=7, 3 mp.;;;;;;;;;;;;;x;
+TOOLTIP_ice_ds2;Crystal Cloak - creates a mist of swirling ice around character: +1 Def, -1 Att/Def for enemy, costs 3 mp.;;;;;;;;;;;;;x;
+TOOLTIP_ice_ds3;Ice Sheet - covers the terrain with slippery ice. Disturbs enemy -1 Att/Def, enemy cannot escape, 2 mp;;;;;;;;;;;;;x;
+TOOLTIP_ice_ds4;Ice Maiden Kiss - damages S=8 and immobilizes the enemy for the next round 5 mp.;;;;;;;;;;;;;x;
+TOOLTIP_necromancy_ds1;Drain Life - damages S=6 and heals caster +1 hp, 4 mp.;;;;;;;;;;;;;x;
+TOOLTIP_necromancy_ds2;Hellish Vigour - heals character +1hp and improves defence +1 Def 3 mp.;;;;;;;;;;;;;x;
+TOOLTIP_necromancy_ds3;Hand of Dust - damages S = Att, and weaken the enemy -1 Att/Def 2 mp.;;;;;;;;;;;;;x;
+TOOLTIP_necromancy_ds4;Siphon Life - damages enemy S=6, heals +1hp or gives magic points +5mp, costs 4 mp.;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+TOOLTIP_magicpoints0;Your character has 0 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints1;Your character has 1 magic point.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints2;Your character has 2 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints3;Your character has 3 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints4;Your character has 4 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints5;Your character has 5 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints6;Your character has 6 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints7;Your character has 7 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints8;Your character has 8 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints9;Your character has 9 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpoints10;Your character has 10 magic points.;;;;;;;;;;;;;x;
+TOOLTIP_magicpointsMAX;Your character more than 10 magic points.;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+TOOLTIP_duelhp0;Your character has 0 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp1;Your character has 1 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp2;Your character has 2 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp3;Your character has 3 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp4;Your character has 4 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp5;Your character has 5 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp6;Your character has 6 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp7;Your character has 7 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp8;Your character has 8 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp9;Your character has 9 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhp10;Your character has 10 hp points.;;;;;;;;;;;;;x;
+TOOLTIP_duelhpMAX;Your character has 11 hp points or more.;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+TOOLTIP_nodmg;Enemy did no damage.\n;;;;;;;;;;;;;x;
+TOOLTIP_minordmg;Enemy did minor damage (1dmg).\n;;;;;;;;;;;;;x;
+TOOLTIP_majordmg;Enemy did major damage (2 or more dmg).\n;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+TOOLTIP_enemy_magic_spell;Your enemy casted a spell.\n;;;;;;;;;;;;;x;
+TOOLTIP_enemy_combat;Enemy engaged you in physical combat.\n;;;;;;;;;;;;;x;
+TOOLTIP_enemy_magic_other;Enemy prepared themselves for magic combat.\n;;;;;;;;;;;;;x;
+TOOLTIP_enemy_nothing;Your enemy did nothing.\n;;;;;;;;;;;;;x;
+#;;;;;;;;;;;;;;;
+# Character state report for duel;;;;;;;;;;;;;;;
+#;;;;;;;;;;;;;;;
+#;;;;;;;;;;;;;;;
+#;;;;;;;;;;;;;;;
+40XP;Gain 40 experience points;;;;;;;;;;;;;;;
+25XP;Gain 25 experience points;;;;;;;;;;;;;;;
+15XP;Gain 15 experience points;;;;;;;;;;;;;;;
+Zweilunder;Zweilunder;;;;;;;;;;;;;;;
+gorgon0desc;For decades you have built up your forces to be one of the most powerful in Anuire. They await your command.;;;;;;;;;;;;;;;

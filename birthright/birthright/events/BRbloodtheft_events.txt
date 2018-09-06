@@ -1,0 +1,279 @@
+namespace = bloodtheft
+
+#bloodtheft decision is triggered#
+character_event = {
+    id = bloodtheft.0
+    title = BLOODTHEFT # Bloodtheft
+    desc = "EVTDESCBLOODTHEFT.0"
+    picture = "GFX_evt_beheading"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OF_COURSE
+		FROM = {
+			character_event = { id = bloodtheft.1 }
+		}
+	}
+	
+	option = {
+		name = bloodtheft.0.b # Maybe later... if the ransom is not paid.
+	}
+	
+}
+	
+#prisoner is informed#
+character_event = {
+    id = bloodtheft.1
+    title = BLOODTHEFT # Bloodtheft
+    desc = "EVTDESCBLOODTHEFT.1"
+    picture = "GFX_evt_beheading"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = "NOOOOOO"
+		add_trait = bloodthefted
+		death = {
+			death_reason = death_trait
+			killer = FROM
+		}
+		if = {
+			limit = { trait = bloodline_tainted }
+			FROM = { character_event = { id = bloodtheft.2 } }
+		}
+		if = {
+			limit = { trait = bloodline_minor }
+			FROM = { character_event = { id = bloodtheft.3 } }
+		}	
+		if = {
+			limit = { trait = bloodline_major }
+			FROM = { character_event = { id = bloodtheft.4 } }
+		}		
+		if = {
+			limit = { trait = bloodline_great }
+			FROM = { character_event = { id = bloodtheft.5 } }
+		}		
+		if = {
+			limit = { trait = bloodline_true }
+			FROM = { character_event = { id = bloodtheft.6 } }
+		}		
+	}
+}
+	
+#bloodtheft from tainted bloodline#
+character_event = {
+    id = bloodtheft.2
+    title = BLOODTHEFT # Bloodtheft
+    desc = "EVTDESCBLOODTHEFT.2"
+    picture = "GFX_evt_comet"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = BETTER_THAN_NOTHING # Better than nothing!
+		trigger = { trait = bloodline_tainted }
+		change_learning = 4
+	}
+	
+	option = {
+		name = BETTER_THAN_NOTHING # Better than nothing!
+		trigger = { trait = bloodline_minor }
+		change_learning = 2
+	}	
+	
+	option = {
+		name = BETTER_THAN_NOTHING # Better than nothing!
+		trigger = { trait = bloodline_major }
+		change_learning = 1
+	}		
+	
+	option = {
+		name = BETTER_THAN_NOTHING # Better than nothing!
+		trigger = { trait = bloodline_great }
+		random_list = {
+			20 = { change_learning = 1 }
+			80 = {	}
+		}
+	}
+	
+	option = {
+		name = BETTER_THAN_NOTHING # Better than nothing!
+		trigger = { trait = bloodline_true }
+		random_list = {
+			5 = { change_learning = 1 }
+			95 = { }
+		}
+	}
+}
+	
+	
+#bloodtheft from minor bloodline#
+character_event = {
+    id = bloodtheft.3
+    title = BLOODTHEFT # Bloodtheft
+    desc = "EVTDESCBLOODTHEFT.3"
+    picture = "GFX_evt_comet"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = BETTER_THAN_NOTHING # Better than nothing!
+		if = {
+			limit = { trait = bloodline_tainted }
+			change_learning = 6
+		}
+	
+		if = {
+			limit = { trait = bloodline_minor }
+			change_learning = 3
+		}
+	
+		if = {
+			limit = { trait = bloodline_major }
+			random_list = {
+				33 = { change_learning = 3 }
+				67 = { change_learning = 2 }
+			}
+		}
+	
+		if = {
+			limit = { trait = bloodline_great }
+			random_list = { 
+				10 = { change_learning = 1 }
+				90 = { }
+			}
+		}
+		
+		if = {
+			limit = { trait = bloodline_true }
+			random_list = {
+				3 = { change_learning = 1 }
+				97 = { }
+			}
+		}
+	}
+}
+
+
+#bloodtheft from major bloodline#
+character_event = {
+    id = bloodtheft.4
+    title = BLOODTHEFT # Bloodtheft
+    desc = "EVTDESCBLOODTHEFT.4"
+    picture = "GFX_evt_comet"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = THAT_WAS_DIVINE
+		
+		if = {
+			limit = { trait = bloodline_tainted }
+			change_learning = 8
+		}
+
+		if = {
+			limit = { trait = bloodline_minor }
+			change_learning = 5
+		}
+	
+		if = {
+			limit = { trait = bloodline_major }
+			change_learning = 3
+		}
+		
+		if = {
+			limit = { trait = bloodline_great }
+			change_learning = 1
+		}
+
+		if = {
+			limit = { trait = bloodline_true }
+			random_list = {
+				10 = { change_learning = 1 }
+				90 = { }
+			}
+		}
+	}
+}
+	
+
+#bloodtheft from great bloodline#
+character_event = {
+    id = bloodtheft.5
+    title = BLOODTHEFT # Bloodtheft
+    desc = "EVTDESCBLOODTHEFT.5"
+    picture = "GFX_evt_comet"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = THAT_WAS_DIVINE
+		if = {
+			limit = { trait = bloodline_tainted }
+			change_learning = 10
+		}
+	
+		if = {
+			limit = { trait = bloodline_minor }
+			change_learning = 7
+		}
+		
+		if = {
+			limit = { trait = bloodline_major }
+			change_learning = 4
+		}
+
+		if = {
+			limit = { trait = bloodline_great }
+			change_learning = 1
+		}
+
+		if = {
+			limit = { trait = bloodline_true }
+			random_list = {
+				50 = {	change_learning = 1	}
+				50 = {	}
+			}
+		}
+	}
+}
+	
+#bloodtheft from true bloodline#
+character_event = {
+    id = bloodtheft.6
+    title = BLOODTHEFT # Bloodtheft
+    desc = "EVTDESCBLOODTHEFT.6"
+    picture = "GFX_evt_comet"
+
+	is_triggered_only = yes	
+	
+	option = {
+		name = THAT_WAS_DIVINE
+		if = {
+			limit = { trait = bloodline_tainted }
+			change_learning = 30
+		}
+
+		if = {
+			limit = { trait = bloodline_minor }
+			change_learning = 20
+		}	
+	
+		if = {
+			limit = { trait = bloodline_major }
+			change_learning = 4
+		}		
+	
+		if = {
+			limit = { trait = bloodline_great }
+			change_learning = 2
+		}
+		
+		if = {
+			limit = { trait = bloodline_true }
+			change_learning = 1
+		}
+	}
+}

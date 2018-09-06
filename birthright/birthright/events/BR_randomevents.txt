@@ -1,0 +1,974 @@
+namespace = random
+
+##BANDITS IN YOUR REALM##
+
+	#bandits appear#
+	character_event = {
+    id = random.0
+    title = BANDITS # Bandits
+    desc = "EVTDESCRANDOM.0"
+    picture = "GFX_evt_burning_house"
+	
+	trigger={
+	ai = no
+    NOT = { has_character_flag = random0 }
+	OR = {
+	religion = Haelyn
+	religion = Sera
+	religion = Avani
+	religion = Erik
+	}
+	}
+	
+	mean_time_to_happen = {
+	years = 15
+	}
+	
+	option = {
+	name = HIRE_SOME_ADVENTURERS_TO_DEAL_WITH_IT # Hire some adventurers to deal with it!
+	wealth = -20
+	set_character_flag = random0
+	random_demesne_province = {
+	add_province_modifier = { name = bandit_lair days = 3600 }
+	}
+	        random_list = { 
+                50 = { character_event = { id = random.1 days = 30 } }
+				50 = { character_event = { id = random.2 days = 30 } }
+				}
+	}
+	
+	option = {
+	name = random0b #I will deal with this myself!
+	trigger = {
+	OR = {
+trait = amateur_bard 
+trait = novice_bard 
+trait = trained_bard 
+trait = master_bard 
+trait = legendary_bard 
+trait = amateur_mage 
+trait = novice_mage
+trait = trained_mage
+trait = master_mage
+trait = legendary_mage
+trait = amateur_priest
+trait = novice_priest
+trait = trained_priest
+trait = master_priest
+trait = legendary_priest
+trait = amateur_ranger
+trait = novice_ranger
+trait = trained_ranger
+trait = master_ranger
+trait = legendary_ranger
+trait = amateur_rogue
+trait = novice_rogue
+trait = trained_rogue
+trait = master_rogue
+trait = legendary_rogue
+trait = amateur_fighter
+trait = novice_fighter
+trait = trained_fighter
+trait = master_fighter
+trait = legendary_fighter
+trait = amateur_sorcerer
+trait = novice_sorcerer
+trait = trained_sorcerer
+trait = master_sorcerer
+trait = legendary_sorcerer 
+	}
+	}
+	set_character_flag = random0
+	random_demesne_province = {
+	add_province_modifier = { name = bandit_lair days = 3600 }
+	}
+	character_event = { id = random.3 days = 30 }
+	add_trait = adventuring
+	}
+	
+	option = {
+	name = random0C #Ignore them, and they'll go away!
+	trigger = { ai = no }
+	random_demesne_province = {
+	add_province_modifier = { name = bandit_lair days = 3600 }
+	}
+	}
+	
+	}
+	
+	#adventurers return victorious#
+	character_event = {
+    id = random.1
+    title = BANDITS # Bandits
+    desc = "EVTDESCRANDOM.1"
+    picture = "GFX_evt_son_asking_father"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = random.1.a # Heroes indeed! They shall be richly rewarded.
+	add_trait = just
+	wealth = -20
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	option = {
+	name = random1b #The bandit treasury was my tax revenue - hand it over!
+	add_trait = greedy
+	set_character_flag = random1
+	wealth = 50
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	option = {
+	name = random1c #Want to stay and court my daughter, strapping young hero?
+	trigger = {
+	any_child = {
+	is_female = yes
+	age = 15
+	is_married = no
+	}
+	}
+	create_character = {
+	random_traits = yes
+	dynasty = random
+	religion = ROOT
+	culture = ROOT
+	female = no
+	age = 23
+	attributes = {
+	martial = 12
+	}
+	trait = trained_fighter
+	trait = strong
+	trait = beautiful
+	trait = brave
+		}
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	}
+	
+#adventurers return defeated#
+	character_event = {
+    id = random.2
+    title = BANDITS # Bandits
+    desc = "EVTDESCRANDOM.2"
+    picture = "GFX_evt_spymaster"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = random.2.a # Curse them! Hire another party of adventurers...
+	wealth = -20
+	  random_list = { 
+        50 = { character_event = { id = random.1 days = 30 } }
+		50 = { character_event = { id = random.2 days = 30 } }
+				}
+		}
+		
+option = {
+name = random2b #If you want something done, do it yourself! Saddle my horse!
+trigger = {
+	OR = {
+age = 16
+trait = amateur_bard 
+trait = novice_bard 
+trait = trained_bard 
+trait = master_bard 
+trait = legendary_bard 
+trait = amateur_mage 
+trait = novice_mage
+trait = trained_mage
+trait = master_mage
+trait = legendary_mage
+trait = amateur_priest
+trait = novice_priest
+trait = trained_priest
+trait = master_priest
+trait = legendary_priest
+trait = amateur_ranger
+trait = novice_ranger
+trait = trained_ranger
+trait = master_ranger
+trait = legendary_ranger
+trait = amateur_rogue
+trait = novice_rogue
+trait = trained_rogue
+trait = master_rogue
+trait = legendary_rogue
+trait = amateur_fighter
+trait = novice_fighter
+trait = trained_fighter
+trait = master_fighter
+trait = legendary_fighter
+trait = amateur_sorcerer
+trait = novice_sorcerer
+trait = trained_sorcerer
+trait = master_sorcerer
+trait = legendary_sorcerer 
+	}
+	}	
+	character_event = { id = random.3 days = 30 }
+	add_trait = adventuring
+}	
+
+option = {
+name = random2c #To hell with it. Leave them alone.
+}
+}
+
+#liege sets out#
+	character_event = {
+    id = random.3
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.3"
+    picture = "GFX_evt_carriage"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = random.3.a # Men, get in there! I'll stay and guard the horses.
+	random_list = {
+        33 = { character_event = { id = random.4 days = 30 } }
+		67 = { character_event = { id = random.5 days = 30 } }
+	}
+	}
+	
+	option = {
+	name = random3b #Alright men, this is it!
+	if = {
+	    limit = {
+                    OR = {
+trait = amateur_bard 
+trait = novice_bard 
+trait = trained_bard 
+trait = amateur_mage 
+trait = novice_mage
+trait = trained_mage
+trait = amateur_priest
+trait = novice_priest
+trait = trained_priest
+trait = amateur_ranger
+trait = novice_ranger
+trait = trained_ranger
+trait = amateur_rogue
+trait = novice_rogue
+trait = trained_rogue
+trait = amateur_fighter
+trait = novice_fighter
+trait = trained_fighter
+trait = amateur_sorcerer
+trait = novice_sorcerer
+trait = trained_sorcerer
+                }
+				}
+		random_list = {
+        80 = { character_event = { id = random.6 days = 30 } }
+		20 = { character_event = { id = random.7 days = 30 } }
+	}
+}	
+	if = {
+	    limit = {
+                    OR = {
+trait = master_bard 
+trait = legendary_bard 
+trait = master_mage
+trait = legendary_mage
+trait = master_priest
+trait = legendary_priest
+trait = master_ranger
+trait = legendary_ranger
+trait = master_rogue
+trait = legendary_rogue
+trait = master_fighter
+trait = legendary_fighter
+trait = master_sorcerer
+trait = legendary_sorcerer 
+                }
+				}
+character_event = { id = random.8 days = 30 } 
+	}
+}
+}	
+
+#guards go in, successfully#
+	character_event = {
+    id = random.4
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.4"
+    picture = "GFX_evt_siege"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = random.4.a # Excellent job men! Now bring me the loot!
+	wealth = 50
+	remove_trait = adventuring
+	add_trait = greedy
+	set_character_flag = adventuringcoward
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	option = {
+	name = random4c #Excellent job men! You can keep the loot.
+	remove_trait = adventuring
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	option = {
+	name = random4b #Bribe your men to tell tales of your own heroism in the fight.
+	wealth = -50
+	remove_trait = adventuring
+	set_character_flag = adventuringhero
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	}
+	
+#guards go in, unsuccessfully#
+	character_event = {
+    id = random.5
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.5"
+    picture = "GFX_evt_siege"
+
+	is_triggered_only = yes	
+	
+	option = {
+	name = random.5.a # Brigands and blackhearts! *charge in alone*
+	character_event = { id = random.9 days = 1 }
+	}
+	
+	option = {
+	name = random5b #Curses! *flee to safety*
+	remove_trait = adventuring
+	}
+	
+	}
+	
+#regent goes in, successfully#
+	character_event = {
+    id = random.6
+	desc = "EVTDESCRANDOM.6"
+    picture = "GFX_evt_siege"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = random.6.a # For the glory of us all, men! Victory! We share the loot.
+	wealth = 5
+	remove_trait = adventuring
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	if = {
+	limit = { trait = amateur_fighter }
+	remove_trait = amateur_fighter
+	add_trait = novice_fighter
+	}
+	if = {
+	limit = { trait = novice_fighter }
+	remove_trait = novice_fighter
+	add_trait = trained_fighter
+	}
+	if = {
+	limit = { trait = amateur_rogue }
+	remove_trait = amateur_rogue
+	add_trait = novice_rogue
+	}
+	if = {
+	limit = { trait = novice_rogue }
+	remove_trait = novice_rogue
+	add_trait = trained_rogue
+	}
+	if = {
+	limit = { trait = amateur_sorcerer }
+	remove_trait = amateur_sorcerer
+	add_trait = novice_sorcerer
+	}
+	if = {
+	limit = { trait = novice_sorcerer }
+	remove_trait = novice_sorcerer
+	add_trait = trained_sorcerer
+	}
+	if = {
+	limit = { trait = amateur_priest }
+	remove_trait = amateur_priest
+	add_trait = novice_priest
+	}
+	if = {
+	limit = { trait = novice_priest }
+	remove_trait = novice_priest
+	add_trait = trained_priest
+	}
+	if = {
+	limit = { trait = amateur_ranger }
+	remove_trait = amateur_ranger
+	add_trait = novice_ranger
+	}
+	if = {
+	limit = { trait = novice_ranger }
+	remove_trait = novice_ranger
+	add_trait = trained_ranger
+	}	
+	}
+	
+	option = {
+	name = random6b #A great victory, I won almost singlehanded. The loot is mine!
+	wealth = 50
+	remove_trait = adventuring
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	if = {
+	limit = { trait = amateur_fighter }
+	remove_trait = amateur_fighter
+	add_trait = novice_fighter
+	}
+	if = {
+	limit = { trait = novice_fighter }
+	remove_trait = novice_fighter
+	add_trait = trained_fighter
+	}
+	if = {
+	limit = { trait = amateur_rogue }
+	remove_trait = amateur_rogue
+	add_trait = novice_rogue
+	}
+	if = {
+	limit = { trait = novice_rogue }
+	remove_trait = novice_rogue
+	add_trait = trained_rogue
+	}
+	if = {
+	limit = { trait = amateur_sorcerer }
+	remove_trait = amateur_sorcerer
+	add_trait = novice_sorcerer
+	}
+	if = {
+	limit = { trait = novice_sorcerer }
+	remove_trait = novice_sorcerer
+	add_trait = trained_sorcerer
+	}
+	if = {
+	limit = { trait = amateur_priest }
+	remove_trait = amateur_priest
+	add_trait = novice_priest
+	}
+	if = {
+	limit = { trait = novice_priest }
+	remove_trait = novice_priest
+	add_trait = trained_priest
+	}
+	if = {
+	limit = { trait = amateur_ranger }
+	remove_trait = amateur_ranger
+	add_trait = novice_ranger
+	}
+	if = {
+	limit = { trait = novice_ranger }
+	remove_trait = novice_ranger
+	add_trait = trained_ranger
+	}	
+	}
+	
+	option = {
+	name = random6c #"A great victory! The loot shall go to the peasants!"
+	remove_trait = adventuring
+	add_trait = just
+	set_character_flag = adventuringhero
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	if = {
+	limit = { trait = amateur_fighter }
+	remove_trait = amateur_fighter
+	add_trait = novice_fighter
+	}
+	if = {
+	limit = { trait = novice_fighter }
+	remove_trait = novice_fighter
+	add_trait = trained_fighter
+	}
+	if = {
+	limit = { trait = amateur_rogue }
+	remove_trait = amateur_rogue
+	add_trait = novice_rogue
+	}
+	if = {
+	limit = { trait = novice_rogue }
+	remove_trait = novice_rogue
+	add_trait = trained_rogue
+	}
+	if = {
+	limit = { trait = amateur_sorcerer }
+	remove_trait = amateur_sorcerer
+	add_trait = novice_sorcerer
+	}
+	if = {
+	limit = { trait = novice_sorcerer }
+	remove_trait = novice_sorcerer
+	add_trait = trained_sorcerer
+	}
+	if = {
+	limit = { trait = amateur_priest }
+	remove_trait = amateur_priest
+	add_trait = novice_priest
+	}
+	if = {
+	limit = { trait = novice_priest }
+	remove_trait = novice_priest
+	add_trait = trained_priest
+	}
+	if = {
+	limit = { trait = amateur_ranger }
+	remove_trait = amateur_ranger
+	add_trait = novice_ranger
+	}
+	if = {
+	limit = { trait = novice_ranger }
+	remove_trait = novice_ranger
+	add_trait = trained_ranger
+	}	
+	}
+	}
+	
+#regent goes in, unsuccessfully#
+	character_event = {
+    id = random.7
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.7"
+    picture = "GFX_evt_siege"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = NOOOO_NOT_LIKE_THIS # Noooo! Not like this!
+	remove_trait = adventuring
+	random_list = {
+	60 = { add_trait = wounded }
+	25 = { add_trait = maimed }
+	15 = {   death = {
+		death_reason = death_battle
+				}
+				}
+				}
+				}
+		
+		}
+		
+#high level regent goes in, successfully#
+	character_event = {
+    id = random.8
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.8"
+    picture = "GFX_evt_siege"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = random.6.a # For the glory of us all, men! Victory! We share the loot.
+	wealth = 5
+	remove_trait = adventuring
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	option = {
+	name = random6b
+	wealth = 50
+	remove_trait = adventuring
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	option = {
+	name = random6c
+	remove_trait = adventuring
+	add_trait = just
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	}
+	
+	}
+	
+#regent goes in alone after his men are dead#
+	character_event = {
+    id = random.9
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.9"
+    picture = "GFX_evt_battle"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = KILL_EM_ALL
+	if = {
+	    limit = {
+                    OR = {
+trait = amateur_bard 
+trait = novice_bard 
+trait = trained_bard 
+trait = amateur_mage 
+trait = novice_mage
+trait = trained_mage
+trait = amateur_priest
+trait = novice_priest
+trait = trained_priest
+trait = amateur_ranger
+trait = novice_ranger
+trait = trained_ranger
+trait = amateur_rogue
+trait = novice_rogue
+trait = trained_rogue
+trait = amateur_fighter
+trait = novice_fighter
+trait = trained_fighter
+trait = amateur_sorcerer
+trait = novice_sorcerer
+trait = trained_sorcerer
+                }
+				}
+		random_list = {
+        80 = { character_event = { id = random.10  } }
+		20 = { character_event = { id = random.11  } }
+	}
+}
+	
+if = {
+	    limit = {
+                    OR = {
+trait = master_bard 
+trait = legendary_bard 
+trait = master_mage
+trait = legendary_mage
+trait = master_priest
+trait = legendary_priest
+trait = master_ranger
+trait = legendary_ranger
+trait = master_rogue
+trait = legendary_rogue
+trait = master_fighter
+trait = legendary_fighter
+trait = master_sorcerer
+trait = legendary_sorcerer 
+                }
+				}
+character_event = { id = random.11 } 
+	}
+}
+}		
+
+#regent goes in alone after his men are dead, unsuccessfully#
+	character_event = {
+    id = random.10
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.10"
+    picture = "GFX_evt_battle"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = YOU_PASS_OUT_FROM_A_BLOW_TO_THE_HEAD # *you pass out from a blow to the head*
+	remove_trait = adventuring
+	add_trait = wounded
+	random_independent_ruler = {
+	limit = { 
+	is_landed = yes
+	OR = {
+	tier = DUKE
+	tier = KING
+	tier = EMPEROR
+	trait = awn_succubus
+	trait = awn_white_witch
+	trait = awn_magian
+	}
+	OR = {
+	religion = Azrai
+	religion = GoblinPantheon
+	religion = OrogPantheon
+	religion = Outlaw
+	religion = Serpent
+	religion = Lamia
+	}
+	}
+	character_event = { id = random.12 }
+	}
+	}
+	
+	}
+	
+#regent goes in alone after his men are dead, successfully#
+	character_event = {
+    id = random.11
+    title = BANDITS # Bandits
+	desc = "EVTDESCRANDOM.11"
+    picture = "GFX_evt_battle"
+
+	is_triggered_only = yes	
+	
+	option = {
+	name = HAH_MEN_YOU_ARE_AVENGED # Hah! Men - you are avenged!
+	remove_trait = adventuring
+	random_demesne_province = {
+	limit = { has_province_modifier = bandit_lair }
+	remove_province_modifier = bandit_lair 
+	}
+	if = {
+	limit = { trait = amateur_fighter }
+	remove_trait = amateur_fighter
+	add_trait = novice_fighter
+	}
+	if = {
+	limit = { trait = novice_fighter }
+	remove_trait = novice_fighter
+	add_trait = trained_fighter
+	}
+	if = {
+	limit = { trait = amateur_rogue }
+	remove_trait = amateur_rogue
+	add_trait = novice_rogue
+	}
+	if = {
+	limit = { trait = novice_rogue }
+	remove_trait = novice_rogue
+	add_trait = trained_rogue
+	}
+	if = {
+	limit = { trait = amateur_sorcerer }
+	remove_trait = amateur_sorcerer
+	add_trait = novice_sorcerer
+	}
+	if = {
+	limit = { trait = novice_sorcerer }
+	remove_trait = novice_sorcerer
+	add_trait = trained_sorcerer
+	}
+	if = {
+	limit = { trait = amateur_priest }
+	remove_trait = amateur_priest
+	add_trait = novice_priest
+	}
+	if = {
+	limit = { trait = novice_priest }
+	remove_trait = novice_priest
+	add_trait = trained_priest
+	}
+	if = {
+	limit = { trait = amateur_ranger }
+	remove_trait = amateur_ranger
+	add_trait = novice_ranger
+	}
+	if = {
+	limit = { trait = novice_ranger }
+	remove_trait = novice_ranger
+	add_trait = trained_ranger
+	}	
+	}
+	}
+	
+#Evil ruler gets offer to buy noble#
+	character_event = {
+    id = random.12
+    title = OUTLAWS_OFFER_YOU_A_DEAL # Outlaws offer you a Deal
+	desc = "EVTDESCRANDOM.12"
+    picture = "GFX_evt_into_the_dungeon"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = random.12.a # A most excellent proposition. Throw him in the cells!
+	wealth = -10
+	FROM = { character_event = { id = random.13 days = 2 } }
+	}
+	
+	option = {
+	trigger = { ai = no }
+	name = random12b #Not interested...
+	}
+	}
+	
+#ruler is imprisoned#
+	character_event = {
+    id = random.13
+    title = PRISON # Prison
+	desc = "EVTDESCRANDOM.13"
+    picture = "GFX_evt_into_the_dungeon"
+
+	is_triggered_only = yes
+	
+	option = {
+	name = I_HOPE_ITS_NOT_THE_GORGONS_REALM # I hope it's not the Gorgon's realm!
+	imprison = FROM
+	}
+	
+	option = {
+	name = random13b #"I'll get out... and when I do..."
+	imprison = FROM
+	}
+	}
+
+#If you seized the adventurer's loot, they come back later#
+
+	character_event = {
+    id = random.14
+    title = YOUR_TREASURY # Your Treasury
+	desc = "EVTDESCRANDOM.14"
+    picture = "GFX_evt_jugglers"
+	
+	trigger = {
+	has_character_flag = random1
+	age = 15
+	}
+	
+	mean_time_to_happen = {
+	days = 90
+	}
+	
+	option = {
+	name = WWHAT_SEIZE_THEM_CLOSE_THE_GATES # W-what? Seize them! Close the gates!
+	clr_character_flag = random1
+	 random_list = { 
+           50 = { character_event = { id = random.15 } }
+		   50 = { character_event = { id = random.16 } }
+				}
+	wealth = -30
+	}
+	
+	option = {
+	name = random14c #"DAMNIT"
+	clr_character_flag = random1
+	wealth = -30
+	}
+	
+	}
+	#adventurers are caught#
+	character_event = {
+    id = random.15
+    title = CAUGHT # Caught!
+	desc = "EVTDESCRANDOM.15"
+    picture = "GFX_evt_into_the_dungeon"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = random.15.a # I'll decide what to do with them later...
+	wealth = 30
+	create_character = {
+	random_traits = yes
+	dynasty = random
+	religion = ROOT
+	culture = ROOT
+	female = no
+	age = 23
+	attributes = {
+	martial = 12
+	}
+	trait = trained_fighter
+	trait = strong
+	trait = beautiful
+	trait = brave
+		}	
+	new_character = {
+	imprison = yes
+	}
+	create_character = {
+	random_traits = yes
+	dynasty = random
+	religion = ROOT
+	culture = ROOT
+	female = no
+	age = 28
+	trait = trained_mage
+	trait = genius
+	trait = ambitious
+	trait = bloodline_vorynn
+	trait = bloodline_tainted
+		}
+	new_character = {
+	imprison = yes
+	}	
+	create_character = {
+	random_traits = yes
+	dynasty = random
+	religion = Sera
+	culture = Halfling
+	female = yes
+	age = 31
+	trait = trained_rogue
+	trait = greedy
+	trait = quick
+	trait = halfling
+		}	
+	new_character = {
+	imprison = yes
+	}	
+	create_character = {
+	random_traits = yes
+	dynasty = random
+	religion = Outlaw
+	culture = Dwarven
+	female = no
+	age = 55
+	trait = trained_fighter
+	trait = greedy
+	trait = strong
+	trait = dwarven
+		}	
+	new_character = {
+	imprison = yes
+	}
+	}
+	
+	}
+	
+	#adventurers escape#
+	character_event = {
+    id = random.16
+    title = THEY_ESCAPE # They escape!
+	desc = "EVTDESCRANDOM.16"
+    picture = "GFX_evt_peasants"
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = random16a #"Unacceptable!"
+	}
+	
+	option = {
+	name = random16b #"They win.. this round..."
+	}
+	
+	option = {
+	name = random16c #"Put a price on their heads. 20 gold bars!"
+	}
+	
+	}

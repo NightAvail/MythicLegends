@@ -1,0 +1,80 @@
+#######################################################
+# Mythic Legends
+# Traits
+#######################################################
+
+# Potions
+
+# Potion to cure all sickness.
+ml_item_healing_potion_of_sickness = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Potion to mend all wounds.
+ml_item_healing_potion_of_mending = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Potion of health.
+ml_item_long_life = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Rings
+
+# Ring of strength.
+ml_ring_of_strength = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Ring of wisdom.
+ml_ring_of_wisdom = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Ring of charming.
+ml_ring_of_charming = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Ring of invisibility.
+ml_ring_of_invisibility = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Weapons
+
+# Sword that can kill any demigod or supernatural creature in a duel.
+ml_weapon_divine_sword = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Powerful ancient weapon forged by demons.
+ml_weapon_ancient_demon_sword = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Powerful ancient weapon forged by angels.
+ml_weapon_ancient_angelic_sword = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}

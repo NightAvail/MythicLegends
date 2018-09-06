@@ -1,0 +1,296 @@
+# Define mercenary types here now instead of in the static_composition.txt file
+# Also remember to tell the landed title to use this mercenary type instead.
+# Several titles can refer to the same type as well now.
+
+d_ihh_composition = {
+	levy_size = 1
+	heavy_infantry = 300
+	knights = 200
+	light_cavalry = 400
+	archers = 200
+}
+
+d_haelynaegis_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 300
+}
+
+d_milorce_composition = {
+	levy_size = 1
+	knights = 500
+	heavy_infantry = 500
+}
+
+d_haelynwarriors_composition = {
+	levy_size = 1
+	heavy_infantry = 600
+	knights = 200
+	light_cavalry = 200
+	archers = 200
+}
+
+d_stormorder_composition = {
+	levy_size = 1
+	heavy_infantry = 500
+	knights = 400
+	archers = 400
+}
+
+d_orthodoxguardians_composition = {
+	levy_size = 1
+	heavy_infantry = 300
+	knights = 200
+	light_cavalry = 200
+	archers = 200
+}
+
+d_sonsofserpent_composition = {
+	levy_size = 1
+	heavy_infantry = 1000
+	light_infantry = 750
+	knights = 250
+	light_cavalry = 200
+	archers = 500
+#	clerics = 100
+	galleys = 100
+}
+
+d_gheallie_sidhe_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 500
+	horse_archers = 500
+}
+
+d_forestguardians_composition = {
+	levy_size = 1
+	heavy_infantry = 500
+	knights = 200
+	light_cavalry = 500
+	archers = 1000
+	
+#	treants = 300
+#	fey = 300
+#	forest_spirits = 500
+}
+
+d_peaceful_nesirie_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 250
+	light_infantry = 300
+}
+
+d_tf_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 250
+	light_infantry = 300
+}
+
+c_lpa_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 250
+	light_infantry = 300
+}
+
+d_htc_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 250
+	light_infantry = 300
+}
+
+d_cjs_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 250
+	light_infantry = 300
+}
+
+d_ff_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 250
+	light_infantry = 300
+}
+
+d_bloodspears_composition = {
+	levy_size = 1
+	knights = 500
+	light_cavalry = 500
+	light_infantry = 500
+}
+
+d_tof_composition = {
+	levy_size = 1
+	knights = 200
+	light_cavalry = 100
+	light_infantry = 100
+}
+
+d_oaken_grove_composition = {
+	levy_size = 1
+	knights = 200
+	light_cavalry = 100
+	light_infantry = 100
+}
+
+d_emerald_spiral_composition = {
+	levy_size = 1
+	knights = 200
+	light_cavalry = 100
+	light_infantry = 100
+}
+
+###############
+##MERCENARIES##
+###############
+
+d_swordsofavanil_composition = {
+	levy_size = 1
+	heavy_infantry = 500
+	light_cavalry = 100
+	archers = 100
+}
+
+d_dawnlances_composition = {
+	levy_size = 1
+	light_cavalry = 500
+}
+
+d_spurbrotherhood_composition = {
+	levy_size = 1
+	heavy_infantry = 300
+	light_cavalry = 100
+	archers = 300
+}
+
+d_clan_ironbreaker_composition = {
+	levy_size = 1
+	heavy_infantry = 750
+}
+
+d_krieshawitches_composition = {
+	levy_size = 1
+	light_infantry = 500
+	knights = 100
+	light_cavalry = 150
+#	clerics = 100
+}
+
+d_zweilund_pirates_composition = {
+	levy_size = 1
+	heavy_infantry = 250
+	light_infantry = 1000
+	archers = 500
+	galleys = 50
+}
+
+c_aegilsgaard_composition = {
+	levy_size = 1
+	heavy_infantry = 25
+	light_infantry = 50
+	light_cavalry = 25
+	archers = 50
+}
+
+c_gautrakka_composition = {
+	levy_size = 1
+	light_infantry = 100
+	archers = 50
+	galleys = 5
+}
+
+c_halskorrik_composition = {
+	levy_size = 1
+	heavy_infantry = 50
+	light_infantry = 50
+	light_cavalry = 10
+}
+
+c_jarnkasspel_composition = {
+	levy_size = 1
+	light_infantry = 25
+	archers = 100
+}
+
+c_trygvaar_composition = {
+	levy_size = 1
+	heavy_infantry = 50
+	light_infantry = 100
+	light_cavalry = 50
+	archers = 100
+}
+
+c_olthrugaard_composition = {
+	levy_size = 1
+	light_infantry = 100
+	light_cavalry = 50
+	archers = 100
+}
+
+c_uguraklegion_composition = {
+	levy_size = 1
+	light_infantry = 500
+	light_cavalry = 200
+	archers = 300
+}
+
+c_kalgatorsmashers_composition = {
+	levy_size = 1
+	light_infantry = 500
+	light_cavalry = 200
+	archers = 300
+}
+
+c_malachardefilers_composition = {
+	levy_size = 1
+	light_infantry = 500
+	light_cavalry = 200
+	archers = 300
+}
+
+c_sjavaar_composition = {
+	levy_size = 1
+	heavy_infantry = 25
+	light_infantry = 50
+	light_cavalry = 25
+	archers = 50
+}
+
+d_white_goblin_company_composition = {
+	levy_size = 1
+	heavy_infantry = 75
+	light_infantry = 150
+	light_cavalry = 75
+	archers = 150
+}
+
+d_ghostlegions_composition = {
+	levy_size = 2
+	heavy_infantry = 75
+	light_infantry = 150
+	light_cavalry = 75
+	archers = 150
+}
+
+####Knightly Orders
+
+d_knightlyorder = {
+	levy_size = 1
+	knights = 100
+}
+
+## Must exist or else dynamic mercenary band might fail for nomads!
+default_culture_band_composition = {
+	levy_size = 1
+	light_infantry = 100
+}
+
+human_culture_band_composition = {
+	levy_size = 1
+	heavy_infantry = 50
+}

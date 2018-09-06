@@ -1,0 +1,78 @@
+# Orog dynasties      11000-11999
+
+# Duzumazabik
+11000 = {
+	name = Burzukanda				# Burzuk 		MM		F8	Az	major	22	NE
+	culture = Orog
+	used_for_random = no
+}
+11001 = {
+	name = Dzintarid				# Dzintar		MM		Pr8	Az	major	28	NE
+	culture = Orog
+}
+
+# Blood Skull Barony
+11050 = {
+	name = "Shazrakk"			# Thrakkazz		MM		F12	An	major	38	LE
+	culture = Orog
+}
+11051 = {
+	name = "Chur"			
+	culture = Wraith
+}
+11052 = {
+	name = "Shir'khan"
+	culture = Gnoll
+}
+11053 = {
+	name = "Vrallik"
+	culture = Orog
+}
+11054 = {
+	name = "Angarr"
+	culture = Goblin
+}
+
+# Sword Rust Tribes
+11100 = {
+	name = Redfoot					# Tolzimkur		MOrog	F12	Vo	great	12	LE
+	culture = Orog					# Negra			FOrog	F6	Vo	great	4	LE
+}
+11101 = {
+	name = Blackspire		# Zeftreg Varlshand		MOrog	F5					LE
+	culture = Orog
+}
+11102 = {
+	name = "Hooked Claw"			# Korzur		MOrog	T9	Ba	minor	14	NE
+	culture = Orog
+}
+11103 = {
+	name = Pitchblack				
+	culture = Orog
+}
+11104 = {
+	name = Skuhlzeck				# Oneg			MOrog	Pr8	Az	minor	14	NE		
+	culture = Orog
+}
+11105 = {
+	name = Bloodclaw				
+	culture = Orog
+}
+
+# Kiergard
+11150= {
+	name = Redfurrow				# Skaviks		MOr		F6/T7	Vo	minor	17				
+	culture = Orog
+}
+
+
+
+5001 = {
+	name = Yagorgalar
+	culture = Orog
+}
+
+5002 = {
+	name="Stone Axe Clan"
+	culture = Orog
+}

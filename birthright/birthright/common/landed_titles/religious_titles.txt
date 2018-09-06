@@ -1,0 +1,54 @@
+# SPECIAL TITLES #
+
+d_ruornil_celestial = {
+	color={ 218 112 214 }
+	color2={ 216 191 216 }
+
+	capital = 94 # Braeme
+
+	title = "Sacred Voice of Ruornil"
+	title_female = "Sacred Voice of Ruornil"
+	foa = "Your Eminence"
+
+	short_name = yes
+	location_ruler_title = yes
+
+	landless = yes
+
+	religion = Ruornil
+	controls_religion = Ruornil
+
+	dynasty_title_names = no
+	primary = yes
+	dignity = 100
+}
+
+
+k_imperial_temple = {
+	color={ 255 228 225 }
+	color2={ 216 191 216 }
+	
+	capital = 36 # Imperial City
+
+	allow = {
+		e_anuire = { has_holder = yes }
+	}
+
+	creation_requires_capital = yes
+
+	title = "Archprelate"
+	title_female = "Archprelate"
+	foa = "Your Eminence"
+
+	short_name = yes
+	location_ruler_title = yes
+
+	religion = Haelyn
+
+	controls_religion = Haelyn
+
+	dynasty_title_names = no
+	primary = yes
+	landless = yes
+	dignity = 100
+}

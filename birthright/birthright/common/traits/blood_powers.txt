@@ -1,0 +1,215 @@
+BPheightened_ability = {
+	martial = 1
+	stewardship = 1
+	diplomacy = 1
+	intrigue = 1
+}
+
+BPalertness = {
+	intrigue = 2
+}
+
+BPalter_appearance = {
+	intrigue = 4
+}
+
+BPanimal_affinity = {
+    command_modifier = {
+		speed = 0.1
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+}
+
+BPbattlewise = {
+	martial = 4
+	command_modifier = {
+		speed = 0.1
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+}	
+
+BPberserker_blood = {
+	command_modifier = {
+		morale_offence = 0.2
+		defence = -0.1
+		damage = 0.3
+	}
+}
+
+BPblood_history = {
+	diplomacy = 4
+	stewardship = 2
+}
+
+BPbloodform = {
+	martial = 7
+	health = 5
+	#immortal = yes
+}
+
+BPbloodmark = {
+	monthly_character_prestige = 1.0
+}
+
+BPcharacter_reading = {
+	intrigue = 3
+	stewardship = 3
+	diplomacy = 3
+}
+
+BPcharm_aura = {
+	intrigue = 6
+	stewardship = 2
+	diplomacy = 2
+}
+
+BPcourage = {
+    command_modifier = {
+		morale_offence = 0.4
+		morale_defence = 0.4
+	}
+}
+
+BPdeath_touch = {
+	command_modifier = {
+		damage = 0.2
+	}
+}
+
+BPdetect_lie = {
+	intrigue = 3
+}
+
+BPdirection_sense = {
+	command_modifier = {
+		speed = 0.1
+	}
+}	
+	
+BPdivine_aura = {
+	diplomacy = 6
+	command_modifier = {
+		morale_offence = 0.2
+		morale_defence = 0.2
+	}
+}
+
+BPdivine_wrath = {
+	command_modifier = {
+		morale_offence = 0.2
+		damage = 0.3
+	}
+}
+
+BPelemental_control = {
+	command_modifier = {
+		damage = 0.3
+	}
+}
+
+BPendurance = {
+	command_modifier = {
+		speed = 0.1
+	}
+}
+
+BPenhanced_sense = {
+	intrigue = 3
+}
+
+BPfear = {
+	command_modifier = {
+		morale_offence = 0.2
+	}
+}	
+
+BPforest_walk = {
+	command_modifier = {
+		speed = 0.2
+	}
+}
+
+BPhealing = {
+	health = 2
+}
+
+BPhome_hearkening = {
+	stewardship = 6
+}
+
+BPinvulnerability = {
+	#immortal = yes
+	command_modifier = {
+		morale_defence = 0.3
+	}
+}
+
+BPiron_will = {
+	diplomacy = 1
+	martial = 1
+	command_modifier = {
+		morale_offence = 0.1
+		morale_defence = 0.1
+	}
+}
+
+BPlightofreason = {
+	diplomacy = 3
+}
+
+##For long life, make event to kill them at age 250#
+BPlong_life = {
+	#health = 5
+	immortal = yes
+}
+
+BPmajor_regeneration = {
+	health = 2
+	#opposites = {		Having these as opposites would mean that you lose regeneration if you become blinded/maimed
+	#	blinded
+	#	maimed
+	#}
+}
+
+BPpersuasion = {
+	intrigue = 3
+	diplomacy = 3
+}
+
+BPpoison_sense = {
+	intrigue = 1
+	health = 1
+}
+ 
+BPsea_song = {
+	stewardship = 3
+	intrigue = 1
+}
+
+BPshadow_form = {
+	intrigue = 3
+}
+
+BPtouch_of_decay = {
+	command_modifier = {
+		damage = 0.3
+	}
+}
+
+BPtravel = {
+	command_modifier = {
+		speed = 0.4
+	}	
+}
+
+BPunreadable_thoughts = {
+	intrigue = 2
+}
+
+BPwither_touch = {
+	command_modifier = {
+		damage = 0.15
+	}
+}

@@ -1,0 +1,209 @@
+castle = { 
+
+##Source Holdings##
+forest_source_holding = {
+	trigger = { 
+	TECH_CITY_CONSTRUCTION = 0 
+	}
+	gold_cost = 100
+	build_time = 547
+	ai_creation_factor = 109
+	add_number_to_name = no
+    potential = {
+		AND = {
+        terrain = forest
+	    OR = {
+		FROM = { trait = amateur_mage }
+        FROM = { trait = novice_mage }
+		FROM = { trait = trained_mage }
+		FROM = { trait = master_mage }
+		FROM = { trait = legendary_mage }
+		FROM = { trait = amateur_sorcerer }
+        FROM = { trait = novice_sorcerer }
+		FROM = { trait = trained_sorcerer }
+		FROM = { trait = master_sorcerer }
+		FROM = { trait = legendary_sorcerer }		
+			}
+			}
+			}
+		liege_piety = 0.50
+		monthly_character_piety = 2.00
+		extra_tech_building_start = 2.0
+	}
+
+plains_source_holding = {
+	trigger = { 
+	TECH_CITY_CONSTRUCTION = 0 
+	}
+	gold_cost = 100
+	build_time = 547
+	ai_creation_factor = 109
+	add_number_to_name = no
+    potential = {
+		AND = {
+        terrain = plains
+	    OR = {
+		FROM = { trait = amateur_mage }
+        FROM = { trait = novice_mage }
+		FROM = { trait = trained_mage }
+		FROM = { trait = master_mage }
+		FROM = { trait = legendary_mage }
+		FROM = { trait = amateur_sorcerer }
+        FROM = { trait = novice_sorcerer }
+		FROM = { trait = trained_sorcerer }
+		FROM = { trait = master_sorcerer }
+		FROM = { trait = legendary_sorcerer }		
+			}
+			}
+			}
+		monthly_character_piety = 0.50
+		liege_piety = 0.25
+		extra_tech_building_start = 2.0
+	}
+	
+hills_source_holding = {
+	trigger = { 
+	TECH_CITY_CONSTRUCTION = 0 
+	}
+	gold_cost = 100
+	build_time = 547
+	ai_creation_factor = 109
+	add_number_to_name = no
+    potential = {
+		AND = {
+        terrain = hills
+	    OR = {
+		FROM = { trait = amateur_mage }
+        FROM = { trait = novice_mage }
+		FROM = { trait = trained_mage }
+		FROM = { trait = master_mage }
+		FROM = { trait = legendary_mage }
+		FROM = { trait = amateur_sorcerer }
+        FROM = { trait = novice_sorcerer }
+		FROM = { trait = trained_sorcerer }
+		FROM = { trait = master_sorcerer }
+		FROM = { trait = legendary_sorcerer }		
+			}
+			}
+			}
+		liege_piety = 0.40
+		monthly_character_piety = 0.80
+		extra_tech_building_start = 2.0
+	}
+
+mountains_source_holding = {
+	trigger = { 
+	TECH_CITY_CONSTRUCTION = 0 
+	}
+	gold_cost = 100
+	build_time = 547
+	ai_creation_factor = 109
+	add_number_to_name = no
+    potential = {
+		AND = {
+        terrain = mountain
+	    OR = {
+		FROM = { trait = amateur_mage }
+        FROM = { trait = novice_mage }
+		FROM = { trait = trained_mage }
+		FROM = { trait = master_mage }
+		FROM = { trait = legendary_mage }
+		FROM = { trait = amateur_sorcerer }
+        FROM = { trait = novice_sorcerer }
+		FROM = { trait = trained_sorcerer }
+		FROM = { trait = master_sorcerer }
+		FROM = { trait = legendary_sorcerer }		
+			}
+			}
+			}
+		liege_piety = 0.60
+		monthly_character_piety = 1.20
+		extra_tech_building_start = 2.0
+	}
+
+	
+law_holding_1 = {
+	trigger = { 
+	TECH_CASTLE_CONSTRUCTION = 0 
+	}
+	gold_cost = 100
+	build_time = 730
+	ai_creation_factor = 109
+	add_number_to_name = yes
+	liege_piety = 0.1
+	monthly_character_piety = 0.4
+	extra_tech_building_start = 2.0
+	}
+
+law_holding_2 = {
+	trigger = { 
+	TECH_CASTLE_CONSTRUCTION = 0 
+	}
+	gold_cost = 150
+	build_time = 730
+	ai_creation_factor = 109
+	add_number_to_name = yes
+	prerequisites = { law_holding_1 }
+	upgrades_from = law_holding_1
+	liege_piety = 0.1
+	monthly_character_piety = 0.4
+	extra_tech_building_start = 2.0
+	}
+
+law_holding_3 = {
+	trigger = { 
+	TECH_CASTLE_CONSTRUCTION = 0 
+	}
+	gold_cost = 200
+	build_time = 730
+	ai_creation_factor = 109
+	add_number_to_name = yes
+	prerequisites = { law_holding_2 }
+	upgrades_from = law_holding_2
+	liege_piety = 0.1
+	monthly_character_piety = 0.4
+	extra_tech_building_start = 2.0
+	}
+	
+}
+
+temple = {
+
+temple_holding_1 = {
+	trigger = {TECH_TEMPLE_CONSTRUCTION=0}
+	gold_cost = 200
+	build_time = 730
+	ai_creation_factor = 109
+	add_number_to_name = yes
+	liege_piety = 0.1
+	monthly_character_piety = 0.4
+	extra_tech_building_start = 2.0
+	}
+
+temple_holding_2 = {
+	trigger = {TECH_TEMPLE_CONSTRUCTION=0}
+	gold_cost = 300
+	build_time = 730
+	ai_creation_factor = 109
+	add_number_to_name = yes
+	prerequisites = { temple_holding_1 }
+	upgrades_from = temple_holding_1
+	liege_piety = 0.1
+	monthly_character_piety = 0.4
+	extra_tech_building_start = 2.0
+	}
+
+temple_holding_3 = {
+	trigger={TECH_TEMPLE_CONSTRUCTION=0}
+	gold_cost = 400
+	build_time = 730
+	ai_creation_factor = 109
+	add_number_to_name = yes
+	prerequisites = { temple_holding_2 }
+	upgrades_from = temple_holding_2
+	liege_piety = 0.1
+	monthly_character_piety = 0.4
+	extra_tech_building_start = 2.0
+	}
+
+}

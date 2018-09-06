@@ -1,0 +1,51 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+##This file, so I can find and edit stuff easely
+
+##Sorcery First
+EVTDESCsorcerycollege.0;You have decided that your child, being an amateur in the secrets of the arcane, must go to the Royal College of Sorcery in the Imperial City of Anuire.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.1;Your parent has decided that to improve your mastery of magic you must first go to the Royal College of Sorcery in the Imperial City. Studying with the best there is, and hopefully one day return home with knowledge beyond your years.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.2;After spending countless weeks studying the arcane arts you feel you have gained a new understanding of magic, your time in the Royal College of Sorcery is surely paying off.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.3;You feel the power growing stronger in you.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.4;News have reached that after several years your child has finished the studies at the Royal College of Sorcery and will come home very soon.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.5;With the current war glooming in the Imperial City of Anuire, you have decided that your child must return home, even if the apprenticeship is at stake. After all, who knows what the enemy might do with your kin in chains.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.6;Your parent has decided that you must return home, he claims the current war in the Imperial City of Anuire wouldn't bode well for your future.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.7;You are the Head Mage of the Royal College of Sorcery, and thus you carry the prestige it comes with.;;;;;;;;;;;;;x
+EVTDESCsorcerycollege.8;You are an apprentice and as such must return to your place.;;;;;;;;;;;;;x
+
+
+##Imperial Temple Restored##
+EVTDESCemperor.30;With the Anuirean Empire finaly reunified, it's only fitting that we shall mend the schism which separated the Imperial Temple unto different factions.;;;;;;;;;;;;;x
+EVTDESCemperor.31;The Emperor has decided to restore The Imperial Temple with you as its new Archprelate.;;;;;;;;;;;;;x
+
+
+##Knight Home-made##
+EVTDESCknight.8;With the wealth and prestige I have hoarded over the years, I have managed to convince some knights under my employ that it would be better if they had a leader other than me which will guide them. By obvious reasons they shall be at my employ, answering to me as their [Root.GetTitle].;;;;;;;;;;;;;x
+EVTDESCknight.9;[From.GetTitledFirstName] has seen fit that I lead [From.GetHerHis] newly formed order of knights, and thus I shall swear fealty to [From.GetHerHim] as [From.GetHerHis] Lord-Captain.;;;;;;;;;;;;;x
+EVTOPTA_KOS_HO;They shall be called the 'Order of The Hawk'!;;;;;;;;;;;;;x
+EVTOPTA_KOS_RO;They shall be called the 'Order of The Rose'!;;;;;;;;;;;;;x
+EVTOPTA_KOS_SO;They shall be called the 'Order of The Sword'!;;;;;;;;;;;;;x
+EVTDESCknight.100;You have declared that your son be sent away to serve in the Swords of Avanil. Disinherited, he will have no stand in succession.;;;;;;;;;;;;;x
+EVTDESCknight.101;Your [From.GetFromRelation] has declared that you shall be disinherited and sent away to serve the Swords of Avanil.;;;;;;;;;;;;;x
+EVTDESCknight.102;Your [From.GetFromRelation] has declared that you shall be disinherited and sent away to serve in a mercenary company.;;;;;;;;;;;;;x
+
+##Misc##
+EVTDESCmisc_events_br.0;Centuries ago, The Prince of Avanil bequeathed the lands now known as Avarien to his kin Lord Avarin, whom went on to sire a dynasty of his own. Although a cadet branch of the greater House of Avan, we retain our heritage should something happen to the Princely Line.;;;;;;;;;;;;;x
+EVTOPTAmisc_events_br.0;They are our kin!;;;;;;;;;;;;;x
+EVTDESCmisc_events_br.1;Centuries ago, The Prince of Avanil bequeathed the lands now known as Avarien to his kin Lord Avarin, whom went on to sire a dynasty of his own. Although a cadet branch of the greater House of Avan, they retain their ancestral heritage should something happen to the Princely Line.;;;;;;;;;;;;;x
+
+##Lost Possession##
+EVTDESClost_possession.0;For the last couple of months the stress has been taking a toll on my health. But it doesn't end there, as of lately, I've being hearing whispers every now and then.;;;;;;;;;;;;;x
+EVTDESClost_possession.1;It hasn't been enough to be hearing whispers around every dark corner, but to top it off, I see stuff randomly moving around like it's no ones business.;;;;;;;;;;;;;x
+EVTDESClost_possession.2;Lately, those whispers have become more than just simple murmurs in the dark. I can hear something calling my name, deep beyond the void.;;;;;;;;;;;;;x
+EVTDESClost_possession.3;You wake up this morning feeling uneasy, as if something were about to go horribly wrong. All of a sudden the candles that were previously lit go off, you stop hearing the whispers, and a figure from the void appers before you. Before you can warn your guards, you are struck with an almost un-imaginable pain.;;;;;;;;;;;;;x
+EVTDESClost_possession.4;Your guard wakes you up, explaining that he found you out cold in the floor. Before you can explain your guard what happened, you decide no to tell a soul about what just transpired, considering this may alter your status with your vassals.;;;;;;;;;;;;;x
+EVTDESClost_possession.5;Your time in the void has ended, you have successfully managed to take control over this mortal. You must start preparing for the imminent return of your one true master the mortals so foolishly call 'The Cold Rider', for I know my master's true name.;;;;;;;;;;;;;x
+EVTDESClost_possession.6;My [Root.GetLordLady], rumours from [From.Capital.GetName] speak of a darkness looming over the towns-people. They say the current [From.GetLordLady] was deeply under stress this last few months but there has been a sudden change in [From.GetHerHis] personality and has gone even as far as to deny the clergy's request for an audience, and those who manage to get an audience get an uneasy feeling. Not only that, but reports also suggest that holdings have been erected all over the realm and the taxes have been rising. People all over the land speak of troubled times and are afraid to speak ill of their [From.GetLordLady] fearing jail time or worse.;;;;;;;;;;;;;x
+
+##Some Adventurer events##
+EVTDESCadventurer.83;One of the adventuring companions of your son has arrived at court today, and requests an audience with you.\n\nAfter a brief chat, he unveils a baby in his arms. According to him, my son is the father.;;;;;;;;;;;;;x
+EVTOPTAadventurer.83;Hah that fool, thats my boy!;;;;;;;;;;;;;x
+EVTOPTBadventurer.83;What are you waiting for you fool? Show me my grandson!;;;;;;;;;;;;;x
+EVTOPTCadventurer.83;Lies! Guards, seize this fool, have him drawn and quartered!;;;;;;;;;;;;;x
+EVTOPTDadventurer.83;Get the hell away from here you fool.;;;;;;;;;;;;;x

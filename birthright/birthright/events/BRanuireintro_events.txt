@@ -1,0 +1,392 @@
+namespace = anuireintro
+
+	#avanil#
+	character_event = {
+    id = anuireintro.0
+    title = AVANIL # Avanil
+    desc = "EVTDESCANUIREINTRO.0"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = k_avanil
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 1500 1500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			archers = { 1000 1000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 500 500 }
+						}
+					}
+				}
+			}
+	}
+	}
+
+	#boeruine#
+	character_event = {
+    id = anuireintro.1
+    title = BOERUINE # Boeruine
+    desc = "EVTDESCANUIREINTRO.1"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = k_boeruine
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			heavy_infantry = { 1500 1500 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			archers = { 1000 1000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			pikemen = { 1000 1000 }
+						}
+					}
+				}
+			}
+	location = {
+			ROOT = {
+			spawn_unit = {
+			province = PREV
+			troops = {
+			light_infantry = { 1500 1500 }
+						}
+					}
+				}
+			}
+}
+	}
+
+	
+	#talinie#
+	character_event = {
+    id = anuireintro.2
+    title = TALINIE # Talinie
+    desc = "EVTDESCANUIREINTRO.2"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_talinie
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+	#brosengae#
+	character_event = {
+    id = anuireintro.3
+    title = BROSENGAE # Brosengae
+    desc = "EVTDESCANUIREINTRO.3"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_brosengae
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+	#taeghas#
+	character_event = {
+    id = anuireintro.4
+    title = TAEGHAS # Taeghas
+    desc = "EVTDESCANUIREINTRO.4"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_taeghas
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+	#endier#
+	character_event = {
+    id = anuireintro.5
+    title = ENDIER # Endier
+    desc = "EVTDESCANUIREINTRO.5"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_endier
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+	#Diemed#
+	character_event = {
+    id = anuireintro.6
+    title = DIEMED # Diemed
+    desc = "EVTDESCANUIREINTRO.6"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_diemed
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+	#Medoere#
+	character_event = {
+    id = anuireintro.7
+    title = MEDOERE # Medoere
+    desc = "EVTDESCANUIREINTRO.7"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_medoere
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+	#Ilien#
+	character_event = {
+    id = anuireintro.8
+    title = ILIEN # Ilien
+    desc = "EVTDESCANUIREINTRO.8"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_ilien
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+	#Roesone#
+	character_event = {
+    id = anuireintro.9
+    title = ROESONE # Roesone
+    desc = "EVTDESCANUIREINTRO.9"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+	year = 1524
+	NOT = { year = 1525 }
+	NOT = { has_character_flag = intro1 }
+	has_landed_title = d_roesone
+	}
+	
+	mean_time_to_happen = {
+	days = 1
+	}
+	
+	option = {
+	name = OK
+	set_character_flag = intro1
+	}
+	}
+	
+#Aerenwe#
+character_event = {
+	id = anuireintro.10
+	title = AERENWE # Aerenwe
+	desc = "EVTDESCANUIREINTRO.10"
+	picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+		year = 1524
+		NOT = { year = 1525 }
+		NOT = { has_character_flag = intro1 }
+		has_landed_title = d_aerenwe
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = OK
+		set_character_flag = intro1
+	}
+}
+
+#ghoere#
+character_event = {
+    id = anuireintro.11
+    title = GHOERE # Ghoere
+    desc = "EVTDESCANUIREINTRO.11"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	trigger={
+		year = 1524
+		NOT = { year = 1525 }
+		NOT = { has_character_flag = intro1 }
+		has_landed_title = k_ghoere
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = OK
+		set_character_flag = intro1
+		location = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					troops = { heavy_infantry = { 1500 1500 } }
+				}
+			}
+		}
+		location = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					troops = { archers = { 1000 1000 } }
+				}
+			}
+		}
+		location = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					troops = { knights = { 500 500 } }
+				}
+			}
+		}
+		location = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					troops = { light_infantry = { 1500 1500 } }
+				}
+			}
+		}
+	}
+}

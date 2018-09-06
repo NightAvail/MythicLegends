@@ -1,0 +1,150 @@
+#CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
+
+opinion_adventuring_ally;Adventuring Ally;;;;;;;;;;;;;x
+opinion_adventuring_foe;Adventuring Foe;;;;;;;;;;;;;x
+opinion_insulted_my_imperial_claim;Insulted my Imperial Claim;;;;;;;;;;;;;x
+opinion_duel_target;Duel Target;;;;;;;;;;;;;x
+opinion_battle_duel_target;Battle Duel Target;;;;;;;;;;;;;x
+opinion_thinks_insane;Thinks I am Insane;;;;;;;;;;;;;x
+opinion_disapprove_marriage;Disapproves of Marriage;;;;;;;;;;;;;x
+opinion_approves_marriage;Approves of Marriage;;;;;;;;;;;;;x
+opinion_raped_me;Raped Me!;;;;;;;;;;;;;x
+opinion_raped_family;Raped my Kin;;;;;;;;;;;;;x
+opinion_raped_spouse;Raped Spouse;;;;;;;;;;;;;x
+opinion_raped_consort;Raped Consort;;;;;;;;;;;;;x
+opinion_forced_to_relinquish_claims;Force to Relinquish my Claim;;;;;;;;;;;;;x
+opinion_tortured_friend;Tortured Fried;;;;;;;;;;;;;x
+opinion_tortured_lover;Tortured Loved;;;;;;;;;;;;;x
+opinion_tortured_kin;Tortured my Kin;;;;;;;;;;;;;x
+opinion_forced_marriage;Forced Marriage;;;;;;;;;;;;;x
+opinion_forced_marriage_child;Forced Marriage of My Child;;;;;;;;;;;;;x
+opinion_forced_marriage_kin;Forced Marriage of Kin;;;;;;;;;;;;;x
+opinion_attending_tournament;Attending Tournament;;;;;;;;;;;;;x
+opinion_squire_humiliated;Squire Humiliated;;;;;;;;;;;;;x
+kidnapped_me;Kidnapped Me!;;;;;;;;;;;;;x
+attempted_kidnapping;Attempted Kidnapping;;;;;;;;;;;;;x
+attempted_kidnapping_of_vassal;Attempted Kidnapping of Vassal;;;;;;;;;;;;;x
+attempted_kidnapping_of_kin;Attempted Kidnapping of Kin;;;;;;;;;;;;;x
+opinion_slayed_kinsman;Slayed my Kin;;;;;;;;;;;;;x
+killed_vassal;Killed Vassal;;;;;;;;;;;;;x
+attempted_murder_of_close_kin;Attempted Murder of Kin;;;;;;;;;;;;;x
+devious_plotter;Devious Plotter;;;;;;;;;;;;;x
+opinion_tortured_me;Tortured Me!;;;;;;;;;;;;;x
+opinion_knighted_me;Knighted Me;;;;;;;;;;;;;x
+opinion_sponsored_order;Sponsored Knightly Order;;;;;;;;;;;;;x
+opinion_paid_tuition;Paid my Tuition!;;;;;;;;;;;;;x
+opinion_spectating_tournament;Watching Tournament;;;;;;;;;;;;;x
+holding_epic_tournament;Holding Epic Tournament;;;;;;;;;;;;;x
+opinion_queen_love_beauty;Queen of Love and Beauty;;;;;;;;;;;;;x
+opinion_abducted_spouse;Abducted Spouse;;;;;;;;;;;;;x
+rescued_my_sorry_ass;Rescued my Sorry Ass;;;;;;;;;;;;;x
+opinion_my_abducted_spouse;My Abducted Spouse;;;;;;;;;;;;;x
+opinion_disinherited_me;Disinherited Me!;;;;;;;;;;;;;x
+rcs_headmaster;Sorcery College Headmaster;;;;;;;;;;;;;x
+opinion_restored_temple;Restored The Imperial Temple;;;;;;;;;;;;;x
+opinion_cadet_bond;Cadet House Bond;;;;;;;;;;;;;x
+opinion_accepted_my_bastard;Accepted my Bastard;;;;;;;;;;;;;x
+opinion_denied_my_bastard;Denied my Bastard;;;;;;;;;;;;;x
+in_command;In Command;;;;;;;;;;;;;x
+
+#Province Stuff
+province_ward;Province Ward;;;;;;;;;;;;;x
+province_bless;Province Bless;;;;;;;;;;;;;x
+bloodline_score;Bloodline Score;;;;;;;;;;;;;x
+bloodline_score_investiture;Investiture Bloodline Score;;;;;;;;;;;;;x
+bloodline_score_temp;Temporal Bloodline Score;;;;;;;;;;;;;x
+death_plague;Death Plague;;;;;;;;;;;;;x
+fighting_undead;Fighting Undead;;;;;;;;;;;;;x
+adventurer_subversion;Adventurer Subversion;;;;;;;;;;;;;x
+severe_realm_duress;Severe Realm Duress;;;;;;;;;;;;;x
+powerful_subversion_spell;Powerful Subversion Spell;;;;;;;;;;;;;x
+epic_subversion_spell;Epic Subversion Spell;;;;;;;;;;;;;x
+small_subversion_spell;Small Subversion Spell;;;;;;;;;;;;;x
+anuirean_fear_factor;Anuirean Fear Factor;;;;;;;;;;;;;x
+khinasi_fear_factor;Khinasi Fear Factor;;;;;;;;;;;;;x
+brecht_fear_factor;Brecht Fear Factor;;;;;;;;;;;;;x
+rjurik_fear_factor;Rjurik Fear Factor;;;;;;;;;;;;;x
+bandit_lair;Bandit Lair;;;;;;;;;;;;;x
+ransom_timer;Ransom Timer;;;;;;;;;;;;;x
+opinion_recent_plot;Plotted Recently;;;;;;;;;;;;;x
+opinion_vengeance;Demands Vengeance!;;;;;;;;;;;;;x
+opinion_prison_concubine;Prison Concubine;;;;;;;;;;;;;x
+
+#Custom Tooltips
+
+CTADVENTURING;Must NOT have an adventuring class.;;;;;;;;;;;;;x
+CTADVENTURING.1;Must have an adventuring class.;;;;;;;;;;;;;x
+CTVISITING;You will join your prisoner in her chamber when the mood strikes you, for as long as she remains in custody.;;;;;;;;;;;;;x
+
+#Portfolio of Gods
+
+haelyns_courage;Haelyn's Courage;;;;;;;;;;;;;x
+haelyns_justice;Haelyn's Justice;;;;;;;;;;;;;x
+haelyns_chivalry;Haelyn's Chivalry;;;;;;;;;;;;;x
+haelyns_rulership;Haelyn's Rulership;;;;;;;;;;;;;x
+haelyns_noble_war;Haelyn's Noble War;;;;;;;;;;;;;x
+nesiries_healing;Nesirie's Healing;;;;;;;;;;;;;x
+nesiries_grief;Nesirie's Grief;;;;;;;;;;;;;x
+nesiries_remembrance_of_the_dead;Nesirie's Remembrance of The Dead;;;;;;;;;;;;;x
+nesiries_protection;Nesirie's Protection;;;;;;;;;;;;;x
+nesiries_diplomacy;Nesirie's Diplomacy;;;;;;;;;;;;;x
+cuiraecens_storms;Cuiraecen's Storms;;;;;;;;;;;;;x
+cuiraecens_conflict;Cuiraecen's Conflict;;;;;;;;;;;;;x
+cuiraecens_battle;Cuiraecen's Battle;;;;;;;;;;;;;x
+cuiraecens_glory;Cuiraecen's Glory;;;;;;;;;;;;;x
+cuiraecens_strength;Cuiraecen's Strength;;;;;;;;;;;;;x
+avanis_law;Avani's Law;;;;;;;;;;;;;x
+avanis_knowledge;Avani's Knowledge;;;;;;;;;;;;;x
+avanis_magic;Avani's Magic;;;;;;;;;;;;;x
+avanis_reason;Avani's Reason;;;;;;;;;;;;;x
+avanis_sun;Avani's Sun;;;;;;;;;;;;;x
+seras_luck;Sera's Luck;;;;;;;;;;;;;x
+seras_trade;Sera's Trade;;;;;;;;;;;;;x
+seras_travel;Sera's Travel;;;;;;;;;;;;;x
+seras_wealth;Sera's Wealth;;;;;;;;;;;;;x
+seras_fortune;Sera's Fortune;;;;;;;;;;;;;x
+eriks_forests;Erik's Forests;;;;;;;;;;;;;x
+eriks_hunting;Erik's Hunting;;;;;;;;;;;;;x
+eriks_earth;Erik's Earth;;;;;;;;;;;;;x
+eriks_wilderness;Erik's Wilderness;;;;;;;;;;;;;x
+eriks_animals;Erik's Animals;;;;;;;;;;;;;x
+ruornils_knowledge;Ruornil's Knowledge;;;;;;;;;;;;;x
+ruornils_magic;Ruornil's Magic;;;;;;;;;;;;;x
+ruornils_moon;Ruornil's Moon;;;;;;;;;;;;;x
+ruornils_spell;Ruornil's Spell;;;;;;;;;;;;;x
+ruornils_night;Ruornil's Night;;;;;;;;;;;;;x
+eloeles_darkness;Eloele's Darkness;;;;;;;;;;;;;x
+eloeles_thieves;Eloele's Thieves;;;;;;;;;;;;;x
+eloeles_deception;Eloele's Deception;;;;;;;;;;;;;x
+eloeles_independence;Eloele's Independence;;;;;;;;;;;;;x
+eloeles_trickery;Eloele's Trickery;;;;;;;;;;;;;x
+laermes_fire;Laerme's Fire;;;;;;;;;;;;;x
+laermes_love;Laerme's Love;;;;;;;;;;;;;x
+laermes_art;Laerme's Art;;;;;;;;;;;;;x
+laermes_charm;Laerme's Charm;;;;;;;;;;;;;x
+laermes_passion;Laerme's Passion;;;;;;;;;;;;;x
+beliniks_fear;Belinik's Fear;;;;;;;;;;;;;x
+beliniks_domination;Belinik's Domination;;;;;;;;;;;;;x
+beliniks_feuds;Belinik's Feuds;;;;;;;;;;;;;x
+beliniks_battle;Belinik's Battle;;;;;;;;;;;;;x
+beliniks_strength;Belinik's Strength;;;;;;;;;;;;;x
+krieshas_winter;Kriesha's Winter;;;;;;;;;;;;;x
+krieshas_hardship;Kriesha's Hardship;;;;;;;;;;;;;x
+krieshas_horrors;Kriesha's Horrors;;;;;;;;;;;;;x
+krieshas_suffering;Kriesha's Suffering;;;;;;;;;;;;;x
+krieshas_law;Kriesha's Law;;;;;;;;;;;;;x
+azrais_lies;Azrai's Lies;;;;;;;;;;;;;x
+azrais_strength;Azrai's Strength;;;;;;;;;;;;;x
+azrais_secrets;Azrai's Secrets;;;;;;;;;;;;;x
+azrais_knowledge;Azrai's Knowledge;;;;;;;;;;;;;x
+azrais_fear;Azrai's Fear;;;;;;;;;;;;;x
+natures_forests;Nature's Forests;;;;;;;;;;;;;x
+natures_strength;Nature's Strength;;;;;;;;;;;;;x
+natures_elements;Nature's Elements;;;;;;;;;;;;;x
+natures_knowledge;Nature's Knowledge;;;;;;;;;;;;;x
+natures_understanding;Nature's Understanding;;;;;;;;;;;;;x
+moradins_earth;Moradin's Earth;;;;;;;;;;;;;x
+moradins_law;Moradin's Law;;;;;;;;;;;;;x
+moradins_protection;Moradin's Protection;;;;;;;;;;;;;x
+moradins_arts;Moradin's Arts;;;;;;;;;;;;;x
+moradins_sciences;Moradin's Sciences;;;;;;;;;;;;;x

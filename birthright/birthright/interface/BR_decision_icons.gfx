@@ -1,0 +1,180 @@
+##############################################
+####            Made by Talias            ####
+##            Integrated by Rev            ###
+## Integrated work from AGOT and JGCrusader ##
+##############################################
+
+spriteTypes = {
+	# A_toggle_decisions
+	spriteType = {
+		name = "GFX_open_employment_decisions"
+		texturefile = "gfx\\interface\\decision_icon_employment.tga"
+	}
+	spriteType = {
+		name = "GFX_close_employment_decisions"
+		texturefile = "gfx\\interface\\decision_icon_employment.tga"
+	}
+	spriteType = {
+		name = "GFX_open_prisoner_decisions"
+		texturefile = "gfx\\interface\\decision_icon_prisoners.tga"
+	}
+	spriteType = {
+		name = "GFX_close_prisoner_decisions"
+		texturefile = "gfx\\interface\\decision_icon_prisoners.tga"
+	}
+	spriteType = {
+		name = "GFX_employ_lieutenant"
+		texturefile = "gfx\\interface\\decision_icon_employ_lieutenant.dds"
+	}
+	spriteType = {
+		name = "GFX_employ_shadow"
+		texturefile = "gfx\\interface\\decision_icon_employ_shadow.dds"
+	}
+	spriteType = {
+		name = "GFX_employ_herald"
+		texturefile = "gfx\\interface\\decision_icon_employ_herald.dds"
+	}
+	spriteType = {
+		name = "GFX_vassal_relinquish_claim_decision"
+		texturefile = "gfx\\interface\\decision_icon_vassal_relinquish_claim_decision.tga"
+	}
+	spriteType = {
+		name = "GFX_steal_artifact"
+		texturefile = "gfx\\interface\\decision_icon_steal_artifact.tga"
+	}
+	spriteType = {
+		name = "GFX_perform_bloodtheft"
+		texturefile = "gfx\\interface\\decision_icon_bloodtheft.dds"
+	}
+	spriteType = {
+		name = "GFX_open_birthright_decisions"
+		texturefile = "gfx\\interface\\decision_icon_birthright.dds"
+	}
+	spriteType = {
+		name = "GFX_close_birthright_decisions"
+		texturefile = "gfx\\interface\\decision_icon_birthright.dds"
+	}
+	spriteType = {
+		name = "GFX_open_festivities_decisions"
+		texturefile = "gfx\\interface\\decision_icon_festivities.dds"
+	}
+	spriteType = {
+		name = "GFX_close_festivities_decisions"
+		texturefile = "gfx\\interface\\decision_icon_festivities.dds"
+	}
+	spriteType = {
+		name = "GFX_open_bloodline_decisions"
+		texturefile = "gfx\\interface\\decision_icon_bloodline.tga"
+	}
+	spriteType = {
+		name = "GFX_close_bloodline_decisions"
+		texturefile = "gfx\\interface\\decision_icon_bloodline.tga"
+	}
+	spriteType = {
+		name = "GFX_recover_from_maiming"
+		texturefile = "gfx\\interface\\decision_icon_recover_maiming.dds"
+	}
+	spriteType = {
+		name = "GFX_visit_prisoner"
+		texturefile = "gfx\\interface\\decision_icon_present_debutante.dds"
+	}
+	spriteType = {
+		name = "GFX_take_prisoner_as_wife"
+		texturefile = "gfx\\interface\\decision_icon_present_debutante.dds"
+	}
+	spriteType = {
+		name = "GFX_torture_prisoner"
+		texturefile = "gfx\\interface\\decision_icon_bloodtheft.dds"
+	}
+	spriteType = {
+		name = "GFX_reveal_plots_dec"
+		texturefile = "gfx\\additional_objectivesGFX\\decision_icon_exposeplot.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_request_legit_for_son"
+		texturefile = "gfx\\additional_objectivesGFX\\decision_icon_bastardlegit.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_get_married_help"
+		texturefile = "gfx\\ambitions\\obj_get_married.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_church_career_help"
+		texturefile = "gfx\\additional_objectivesGFX\\obj_church_career.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mentor_child_help"
+		texturefile = "gfx\\additional_objectivesGFX\\decision_icon_wardchild.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_amass_wealth_help"
+		texturefile = "gfx\\additional_objectivesGFX\\decision_icon_amass_help.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_forced_peace_help"
+		texturefile = "gfx\\additional_objectivesGFX\\decision_icon_peace_request.dds"
+	}
+
+	spriteType = {
+		name = "GFX_knight_son"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_knight_daughter"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_buy_knighthood"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_knight_daughter"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_knight_ward"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_knight_courtier"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_open_knighthood_decisions"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_close_knighthood_decisions"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_sponsor_knightly_order"
+		texturefile = "gfx\\interface\\decision_icon_knighthood.dds"
+	}
+	spriteType = {
+		name = "GFX_sorcery_college_children"
+		texturefile = "gfx\\interface\\decision_icon_sorcery_college_children.dds"
+	}
+	spriteType = {
+		name = "GFX_sorcery_college_children_ruornil"
+		texturefile = "gfx\\interface\\decision_icon_sorcery_college_children.dds"
+	}
+	spriteType = {
+		name = "GFX_send_son_to_soa"
+		texturefile = "gfx\\interface\\decision_icon_banish.tga"
+	}
+	spriteType = {
+		name = "GFX_send_son_merc"
+		texturefile = "gfx\\interface\\decision_icon_banish.tga"
+	}
+	spriteType = {
+		name = "GFX_recall_sorcery_college_children"
+		texturefile = "gfx\\interface\\decision_icon_sorcery_college_children.dds"
+	}
+}

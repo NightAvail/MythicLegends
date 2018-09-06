@@ -1,0 +1,96 @@
+##Most of the content here was/is originally made by the AGOT team.
+take_prisoner_as_wife;Take [Root.GetTitledFirstName] as your Wife;;;;;;;;;;;;;x
+take_prisoner_as_wife_desc;As she is your prisoner, you may take [Root.GetTitledFirstName] as your Wife.;;;;;;;;;;;;;x
+opinion_forced_marriage;Forced Marriage;;;;;;;;;;;;x
+opinion_forced_marriage_child;Forced Marriage with child;;;;;;;;;;;;;x
+opinion_forced_marriage_kin;Forced Marriage with Kin;;;;;;;;;;;;;x
+torture_prisoner;Torture [Root.GetTitledFirstName];;;;;;;;;;;;;x
+torture_prisoner_desc;Send your Head Torturer on a visit to your prisoner, [Root.GetTitledFirstName], potentially injuring them or worse.;;;;;;;;;;;;;x
+TOOLTIPTORTURE;Your torturer has some fun with [Root.GetTitledFirstName].;;;;;;;;;;;;;x
+EVT_DESC_50051;Your jailers have reported back to you that they made your prisoner know what true pain is!;;;;;;;;;;;;;x
+EVT_OPTA_50051;Very good, that'll teach them!;;;;;;;;;;;;;x
+EVT_DESC_50052;Your jailers enter your cell with a dark grin upon their faces. 'Orders from the Lord, we're to have some fun with you. Now, which part should we break first?';;;;;;;;;;;;;x
+EVT_OPTA_50052;Get away from me! GET AWAY! NOOOOOOOOOOO!;;;;;;;;;;;;;x
+EVT_DESC_50053;Hidden Event;;;;;;;;;;;;x
+EVT_OPTA_50053;You shouldn't see this;;;;;;;;;;;;;x
+crucified;Crucified;;;;;;;;;;;;;x
+crucified_desc;This character was hung from the cross and left to die;;;;;;;;;;;;;x
+EVTDESC50054;Do you wish to have your prisoner hung up on a cross and left out in the sun for many a day to die?;;;;;;;;;;;;;x
+EVTOPTA50054;Yes, to stand as a warning;;;;;;;;;;;;;x
+EVTOPTB50054;I shall giver a merciful death;;;;;;;;;;;;;x
+EVTDESC50055;Your gaoler comes in and puts a bag over your head before dragging you out into the sun, he removes the bag hangs you up onto a cross and before you know what is happening you feel pain in your hands and feet as nails are hammered into them. As you look up the man turns his back and walks away whilst you hang therein the sun.;;;;;;;;;;;;;x
+EVTOPTA50055;You aren't just going to leave me here... right?;;;;;;;;;;;;;x
+snu_snu;Snu Snu;;;;;;;;;;;;;x
+snu_snu_desc;This character died by Snu Snu;;;;;;;;;;;;;x
+EVTDESC50056;Do you wish to have many of the women go to your prisoner and engage in the sacred act of Snu Snu? A harsh punishment yet effective.;;;;;;;;;;;;;x
+EVTOPTA50056;None will withstand the Snu Snu!;;;;;;;;;;;;;x
+EVTOPTB50056;He can have a merciful death...;;;;;;;;;;;;;x
+EVTDESC50057;In the middle of the night many women enter your cell and declare thy will engage in Snu Snu with you, initially you are fearful until you discover what the act of Snu Snu entails... the night is full of activity but in the end of it...;;;;;;;;;;;;;x
+EVTOPTA50057;Your heart gives out... a lovely way to die...;;;;;;;;;;;;;x
+plot_kidnap_liege_title;Kidnap [This.GetBestName];;;;;;;;;;;;;x
+plot_kidnap_liege_desc;[From.GetTitledFirstName] has decided that kidnapping is the only way to make [This.GetTitledFirstName] give up some of [This.GetHerHis] land.;;;;;;;;;;;;;x
+plot_kidnap_character_title;Kidnap [This.GetTitledFirstName];;;;;;;;;;;;;x
+plot_kidnap_character_desc;[From.GetTitledFirstName] wants to see [This.GetTitledFirstName] brought in chains before [From.GetHerHim].;;;;;;;;;;;;;x
+EVTDESC1007000;An opportunity has arisen to attempt the kidnapping of [Root.PlotTarget.GetTitledName]. My fellow plotters are just waiting for my signal to proceed.;;;;;;;;;;;;;x
+EVTOPTA1007000;We strike after dark!;;;;;;;;;;;;;x
+EVTOPTB1007000;Wait for a better opportunity...;;;;;;;;;;;;;x
+EVTOPTC1007000;This is too dishonourable;;;;;;;;;;;;;x
+EVTDESC1007001;As I was sleeping, [From.GetTitledFirstName] broke into my bedchamber and put a dagger to my throat. I was forced out into the courtyard, where [From.GetHerHis] co-conspirators were waiting on fast horses. [From.GetTitledFirstName] now has me locked up in the basement of [From.GetHerHis] manor and is demanding that I give [From.GetHerHim] the land [From.GetSheHe] considers rightfully [From.GetHerHis]. If I refuse, [From.GetSheHe] is threatening to kill me...;;;;;;;;;;;;;x
+EVTOPTA1007001;Take the land, just don't kill me!;;;;;;;;;;;;;x
+EVTOPTB1007001;I do not give in to threats;;;;;;;;;;;;;x
+EVTTOOLTIP1007001;The kidnapping succeeds;;;;;;;;;;;;;x
+EVTDESC1007002;My guards caught [From.GetTitledFirstName] just as [From.GetSheHe] was about to break into my bedchamber, dagger in hand. Under interrogation, [From.GetSheHe] has confessed to planning to kidnap me to force me to give [From.GetHerHim] lands and a title.;;;;;;;;;;;;;x
+EVTOPTA1007002;Let [From.GetHerHim] rot in jail;;;;;;;;;;;;;x
+EVTOPTB1007002;The punishment for treason is death!;;;;;;;;;;;;;x
+EVTOPTC1007002;I will forgive [From.GetHerHim]... this time.;;;;;;;;;;;;;x
+EVTTOOLTIP1007002;The kidnapping fails!;;;;;;;;;;;;;x
+kidnapped_me;Kidnapped Me;;;;;;;;;;;;x
+obj_befriend_liege_title;Become a friend to your liege;;;;;;;;;;;;;x
+obj_befriend_liege_desc;[This.GetTitledFirstName] desires to befriend their liege.;;;;;;;;;;;;;x
+obj_five_children_title;Have many children;;;;;;;;;;;;;x
+obj_five_children_desc;[This.GetTitledFirstName] desires to have at least 5 children.;;;;;;;;;;;;;x
+obj_win_the_war_title;Win the war;;;;;;;;;;;;;x
+obj_win_the_war_desc;[This.GetTitledFirstName] desires to win the war.;;;;;;;;;;;;;x
+ruthless;Ruthless;;;;;;;;;;;;;x
+ruthless_desc;This character believes that the ends justify the means, and will stop at nothing to achieve [Root.GetHerHis] goals.;;;;;;;;;;;;;x
+EVTDESCknight.1;Knights, Paladins and Hunters have the right to style themselves 'Sir or Dame'. You being one of the aforementioned ones, reserve the honour of styling yourself a more noble title.;;;;;;;;;;;;;x
+title_prince_AGOT;Prince;Prince;;;;;;;;;;;;x
+title_prince_AGOT_female;Princess;Princesse;;;;;;;;;;;;x
+title_prince_AGOT_desc;Prince;Prince;;;;;;;;;;;;x
+EVTDESC66113;I am of the Royal Blood and should be styled as such.;;;;;;;;;;;;;x
+EVTOPTA66113;I am a Prince!;Je suis un Prince!;;;;;;;;;;;;x
+EVTOPTB66113;I am a Princess!;Je suis une Princesse!;;;;;;;;;;;;x
+EVTDESC1007030;[Root.PlotTarget.GetTitledFirstName] will soon be leaving the castle to go on a trip to the countryside with only a small guard. My co-conspirators have prepared an ambush and are only waiting for my signal to attack the carriage and abduct [Root.PlotTarget.GetHerHim].;;;;;;;;;;;;;x
+EVTOPTA1007030;Send the signal!;Envoyer le signal !;;;;;;;;;;;;x
+CUSTOMTOOLTIP33;The plot succeeds;;;;;;;;;;;;;x
+CUSTOMTOOLTIP34;The plot fails, but is not discovered;;;;;;;;;;;;;x
+CUSTOMTOOLTIP35;The plot fails and is discovered;;;;;;;;;;;;;x
+EVTOPTB1007030;Wait for a better opportunity;;;;;;;;;;;;;x
+EVTDESC1007031;As I was travelling through the countryside, a band of masked thugs on horses attacked my carriage. My guards fled or were cut down were they stood, and I found myself blindfolded, bound and thrown over the back of a horse. When my blindfold was removed, I was in the dungeons of [From.GetTitledFirstName].;;;;;;;;;;;;;x
+EVTOPTA1007031;I'll get [From.GetHerHim] for this!;;;;;;;;;;;;;x
+EVTDESC1007032;We ambushed [From.GetTitledFirstName]'s carriage on a lonely stretch of road in the countryside. The guards scattered before us, and one of my men blindfolded and bound [From.GetTitledFirstName]. [From.GetSheHeCap] is now safely locked away in my dungeon, to do with as I please.;;;;;;;;;;;;;x
+EVTOPTA1007032;Excellent!;Excellent !;;;;;;;;;;;;x
+EVTDESC1007034;As I was travelling through the countryside, a band of masked thugs on horses attacked my carriage. After a brief skirmish my guards fought them off, but unfortunately failed to take any captives.;;;;;;;;;;;;;x
+EVTOPTA1007034;Who could have sent them?!;;;;;;;;;;;;;x
+EVTOPTA1007030;Send the signal!;;;;;;;;;;;;;x
+EVTOPTB1007030;Wait for a better opportunity;;;;;;;;;;;;;x
+EVTDESC1007031;As I was travelling through the countryside, a band of masked thugs on horses attacked my carriage. My guards fled or were cut down were they stood, and I found myself blindfolded, bound and thrown over the back of a horse. When my blindfold was removed, I was in the dungeons of [From.GetTitledFirstName].;;;;;;;;;;;;;x
+EVTOPTA1007031;I'll get [From.GetHerHim] for this!;;;;;;;;;;;;;x
+EVTDESC1007032;We ambushed [From.GetTitledFirstName]'s carriage on a lonely stretch of road in the countryside. The guards scattered before us, and one of my men blindfolded and bound [From.GetTitledFirstName]. [From.GetSheHeCap] is now safely locked away in my dungeon, to do with as I please.;;;;;;;;;;;;;x
+EVTOPTA1007032;Excellent!;Excellent!;;;;;;;;;;;;x
+EVTDESC1007034;As I was travelling through the countryside, a band of masked thugs on horses attacked my carriage. After a brief skirmish my guards fought them off, but unfortunately failed to take any captives.;;;;;;;;;;;;;x
+EVTOPTA1007034;Who could have sent them?!;;;;;;;;;;;;;x
+EVTDESC1007035;We ambushed [From.GetTitledFirstName]'s carriage on a lonely stretch of road in the countryside. The guards put up a fierce resistance, and after a brief skirmish we were forced to retreat without accomplishing our objective.;;;;;;;;;;;;;x
+EVTOPTA1007035;At least there are no clues to my involvement...;;;;;;;;;;;;x
+EVTDESC1007037;As I was travelling through the countryside, a band of masked thugs on horses attacked my carriage. After a brief skirmish my guards fought them off, taking several of them prisoner. After a brief interrogation they revealed themselves to be working under orders from [From.GetTitledFirstName] to abduct me.;;;;;;;;;;;;;x
+EVTOPTA1007037;[From.GetTitledFirstName] will pay for this!;;;;;;;;;;;;;x
+EVTDESC1007038;We ambushed [From.GetTitledFirstName]'s carriage on a lonely stretch of road in the countryside. The guards put up a fierce resistance, and several of my men were captured before we could escape.;;;;;;;;;;;;;x
+EVTOPTA1007038;[From.GetTitledFirstName] must know that I sent them...;;;;;;;;;;;;x
+
+EVTDESCknight.2;Your son has proven himself to be a fine warrior. By being your son, he shall be a great knight!;;;;;;;;;;;;;x
+EVTDESCknight.3;Your parent has decided you are worthy of a knighthood.;;;;;;;;;;;;;x
+EVTDESCknight.4;Your daughter has proven herself to be a fine warrior, the equal to any male knight.;;;;;;;;;;;;;x
+EVTDESCknight.5;After a brief inquiry, you found a knight willing to sire you... for a modest donation.;;;;;;;;;;;;;x
+EVTDESCknight.6;My guardian knighted me!;;;;;;;;;;;;;x
+EVTDESCknight.7;My liege knighted me!;;;;;;;;;;;;;x
+

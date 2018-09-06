@@ -15,10 +15,10 @@ character_event = { #bless a character
 			from = { NOT = { trait = strong } }
 		}
 		from = { add_trait = strong }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #smart
 		name ="EVTOPTBthegodsbless.1"
@@ -26,10 +26,10 @@ character_event = { #bless a character
 			from = { NOT = { OR = { trait = quick trait = genius } } }
 		}
 		from = { add_trait = quick }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #attractive
 		name ="EVTOPTCthegodsbless.1"
@@ -37,10 +37,10 @@ character_event = { #bless a character
 			from = { NOT = { trait = fair } }
 		}
 		from = { add_trait = fair }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #long life
 		name ="EVTOPTDthegodsbless.1"
@@ -48,15 +48,15 @@ character_event = { #bless a character
 			from = { NOT = { has_character_flag = lifebless } }
 		}
 		from = { health = 15 set_character_flag = lifebless }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #immortal (once tapped out)
 		name ="EVTOPTEthegodsbless.1"
 		trigger = {
-			from = { 
+			from = {
 				AND = {
 					trait = strong
 					OR = {
@@ -65,19 +65,19 @@ character_event = { #bless a character
 					}
 					trait = fair
 					has_character_flag = lifebless
-				} 
+				}
 			}
 		}
 		from = { add_trait = immortal }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #demigod (once tapped out)
 		name ="EVTOPTFthegodsbless.1"
 		trigger = {
-			from = { 
+			from = {
 				AND = {
 					trait = strong
 					OR = {
@@ -86,12 +86,12 @@ character_event = { #bless a character
 					}
 					trait = fair
 					has_character_flag = lifebless
-				} 
+				}
 			}
 		}
 		from = {
-			if = { 
-				limit = { 
+			if = {
+				limit = {
 					NOT = { age = 16 }
 				}
 				if = {
@@ -107,8 +107,8 @@ character_event = { #bless a character
 					add_trait = Young_Demi_God
 				}
 			}
-			if = { 
-				limit = { 
+			if = {
+				limit = {
 					age = 16
 				}
 				if = {
@@ -125,15 +125,15 @@ character_event = { #bless a character
 				}
 			}
 		}
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #never mind
 		name ="EVTOPTGthegodsbless.1"
 		trigger = {
-			from = { 
+			from = {
 				AND = {
 					trait = strong
 					OR = {
@@ -142,7 +142,7 @@ character_event = { #bless a character
 					}
 					trait = fair
 					has_character_flag = lifebless
-				} 
+				}
 			}
 		}
 	}
@@ -162,10 +162,10 @@ character_event = { #curse a character
 			from = { NOT = { trait = weak } }
 		}
 		from = { add_trait = weak }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #slow
 		name ="EVTOPTBthegodsbless.2"
@@ -173,10 +173,10 @@ character_event = { #curse a character
 			from = { NOT = { OR = { trait = slow trait = imbecile } } }
 		}
 		from = { add_trait = slow }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #ugly
 		name ="EVTOPTCthegodsbless.2"
@@ -184,10 +184,10 @@ character_event = { #curse a character
 			from = { NOT = { trait = ugly } }
 		}
 		from = { add_trait = ugly }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 	option = { #balls
 		name ="EVTOPTDthegodsbless.2"
@@ -195,10 +195,10 @@ character_event = { #curse a character
 			from = { NOT = { trait = eunuch } is_female = no }
 		}
 		from = { add_trait = eunuch }
-		if = {
-			limit = { has_game_rule = { name = powers value = normal } }
-			from = { piety = -250 }	
-		}
+		# if = {
+		# 	limit = { has_game_rule = { name = powers value = normal } }
+		# 	from = { piety = -250 }
+		# }
 	}
 }
 character_event = { #divine visitation
@@ -209,7 +209,7 @@ character_event = { #divine visitation
 	is_triggered_only = yes
 	trigger = {
 	}
-	
+
 	option = {
 		name ="EVTOPTAthegodsbless.3"
 		trigger = {

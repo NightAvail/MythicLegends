@@ -1,3 +1,15 @@
+angelic = {
+	morale = 25
+	maintenance = 2
+	phase_skirmish_attack = 15
+	phase_melee_attack = 20
+	phase_pursue_attack = 25
+	phase_skirmish_defense = 25
+	phase_melee_defense = 20
+	phase_pursue_defense = 15
+	base_type = knights
+}
+
 youkai = {
 	morale = 25
 	maintenance = 2
@@ -23,18 +35,6 @@ jotnar = {
 }
 
 dark_angels = {
-	morale = 25
-	maintenance = 2
-	phase_skirmish_attack = 15
-	phase_melee_attack = 20
-	phase_pursue_attack = 25
-	phase_skirmish_defense = 25
-	phase_melee_defense = 20
-	phase_pursue_defense = 15
-	base_type = knights
-}
-
-angelic = {
 	morale = 25
 	maintenance = 2
 	phase_skirmish_attack = 15

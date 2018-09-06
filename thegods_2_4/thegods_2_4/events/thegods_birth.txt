@@ -1,0 +1,76 @@
+#######################################################
+# The Gods birth events.
+#######################################################
+
+namespace = thegods_birth
+
+character_event = {
+    id = "thegods_birth.0"
+    desc = "thegods_birth.0desc"
+
+    hide_window = yes
+
+    trigger = {
+        AND = {
+            age <= 5
+            trait = God_Blood
+        }
+    }
+
+    immediate = {
+        if = {
+            if = {
+                limit = {
+                    NOT = { father = { trait = Demi_God } }
+                    NOT = { mother = { trait = Demi_Goddess } }
+                }
+
+                random_list = {
+                    80 = {}
+                    20 = {
+                        remove_trait = God_Blood
+                    }
+                }
+            }
+        }
+    }
+}
+
+character_event = {
+    id = "thegods_birth.1"
+    desc = "thegods_birth.1desc"
+
+    hide_window = yes
+
+    trigger = {
+        AND = {
+            age <= 5
+            trait = Angel_Blood
+        }
+    }
+
+    immediate = {
+        if = {
+            if = {
+                limit = {
+                    NOT = { father = { trait = Angel } }
+                    NOT = { father = { trait = Arcangel } }
+                    NOT = { father = { trait = Dark_Angel } }
+                    NOT = { father = { trait = Dark_Arcangel } }
+
+                    NOT = { mother = { trait = Angel } }
+                    NOT = { mother = { trait = Arcangel } }
+                    NOT = { mother = { trait = Dark_Angel } }
+                    NOT = { mother = { trait = Dark_Arcangel } }
+                }
+
+                random_list = {
+                    80 = {}
+                    20 = {
+                        remove_trait = Angel_Blood
+                    }
+                }
+            }
+        }
+    }
+}

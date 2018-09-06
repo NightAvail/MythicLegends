@@ -1,0 +1,87 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_trait_bloodline_tainted"
+		texturefile = "gfx/traits/bloodline_tainted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_bloodline_minor"
+		texturefile = "gfx/traits/bloodline_minor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_bloodline_major"
+		texturefile = "gfx/traits/bloodline_major.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_bloodline_great"
+		texturefile = "gfx/traits/bloodline_great.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_bloodline_true"
+		texturefile = "gfx/traits/bloodline_true.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_bloodline_anduireas"
+		texturefile = "gfx/traits/anduireas_tainted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_bloodline_azrai"
+		texturefile = "gfx/traits/bloodline_azrai.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_bloodline_basaia"
+		texturefile = "gfx/traits/basaia_tainted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_bloodline_brenna"
+		texturefile = "gfx/traits/brenna_tainted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_bloodline_masela"
+		texturefile = "gfx/traits/masela_tainted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+	spriteType = {
+		name = "GFX_trait_bloodline_reynir"
+		texturefile = "gfx/traits/reynir_tainted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {
+		name = "GFX_trait_bloodline_vorynn"
+		texturefile = "gfx/traits/vorynn_tainted.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+}

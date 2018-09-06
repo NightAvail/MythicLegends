@@ -1,0 +1,51 @@
+decisions = {
+
+steal_artifact = {
+
+			is_high_prio = yes
+			potential = {
+				is_landed = yes
+				any_courtier = {
+						prisoner = yes
+							OR = {
+							trait=sword_1
+							trait=sword_2
+							trait=sword_3
+							trait=sword_4
+							trait=sword_5
+							trait=holy_avenger_sword
+							trait=sword_of_roele
+							trait=ring_of_persuasion
+							trait=ring_of_invisibility
+							trait=ring_of_speed
+							trait=ring_of_command
+							trait=amulet_of_protection_1
+							trait=amulet_of_protection_3
+							trait=amulet_of_protection_5
+							trait=ring_of_faele
+							trait=ring_of_dierdrien
+							trait=amulet_of_inspiration
+							}
+						}
+					}
+
+		allow = {
+				OR = {
+					ai = no
+					OR = {
+					trait = cruel
+					trait = impaler
+					trait = greedy
+					}
+				}
+			}
+
+		effect = {
+			ROOT = { character_event = { id = stealing.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}			
+	}
+}

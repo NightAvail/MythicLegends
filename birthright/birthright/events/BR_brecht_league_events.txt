@@ -1,0 +1,10 @@
+###Events for formation of Brecht League##
+
+##First scenario is if Gorgon takes 15 Brecht Provinces##
+
+namespace = brecht
+
+
+	
+	#Muden gets first event informing of League#
+	

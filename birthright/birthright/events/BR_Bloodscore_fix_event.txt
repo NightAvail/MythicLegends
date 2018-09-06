@@ -1,0 +1,31 @@
+namespace = bloodfix
+
+#for characters with blood traits and no learning, they get assigned a weak bloodscore via this event##
+character_event = {
+	id = bloodfix.0
+	desc = "EVTDESCBLOODFIX.0"
+	picture = GFX_evt_lovers
+	
+	
+	trigger = {
+		age = 17
+		learning = 0
+		NOT = { learning = 1 }
+		NOT = { trait = paladin }
+		OR = {
+			trait = bloodline_tainted
+			trait = bloodline_minor
+			trait = bloodline_major
+			trait = bloodline_great
+		}
+	}
+	
+	mean_time_to_happen = { days = 7 }
+	
+	option = {
+		name = "OK"
+		change_learning = 10
+		set_variable={which=bloodline_score value=10} 
+	}
+	
+	}

@@ -1,0 +1,40 @@
+decisions = {
+
+##############################
+#CRAFTING DECISIONS###########
+##############################
+
+craft_item= {
+	
+	potential = {
+		OR = {
+			trait=trained_mage
+			trait=master_mage
+			trait=legendary_mage
+			trait=novice_sorcerer
+			trait=trained_sorcerer
+			trait=master_sorcerer
+			trait=legendary_sorcerer
+			trait=novice_priest
+			trait=trained_priest
+			trait=master_priest
+			trait=legendary_priest
+			}
+			}
+		
+		allow = {
+		wealth=250
+		NOT = { trait = casting_realm_magic }
+			}
+		
+		effect = {
+		ROOT = { character_event = { id = crafting.0 } }
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}			
+			}
+		
+		
+			}

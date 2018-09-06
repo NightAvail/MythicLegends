@@ -1,0 +1,247 @@
+namespace = strength
+character_event = {
+        id = strength.0
+        desc = "EVTDESCstrength_inheritance.0"
+        picture = GFX_evt_child_playing
+    
+		is_triggered_only = yes
+					
+		immediate = {
+			set_variable = { which = genemath value = 0 }
+			if = { 
+				limit = { mother = { trait = strong } }
+				change_variable = { which = genemath value = 3 }
+			}
+			if = {
+				limit = { mother = { trait = tough } }
+				change_variable = { which = genemath value = 2 }
+			}
+			if = {
+				limit = { mother = { trait = hardy } }
+				change_variable = { which = genemath value = 1 }
+			}
+			if = {
+				limit = { mother = { trait = soft } }
+				change_variable = { which = genemath value = -1 }
+			}
+			if = {
+				limit = { mother = { trait = fragile } }
+				change_variable = { which = genemath value = -2 }
+			}
+			if = {
+				limit = { mother = { trait = weak } }
+				change_variable = { which = genemath value = -3 }
+			}
+			if = {
+				limit = { NOT = { real_father = { always = yes } } }	#Not a hidden bastard - use normal father scope
+				if = {
+					limit = { father = { trait = strong } }
+					change_variable = { which = genemath value = 3 }
+				}
+				if = {
+					limit = { father = { trait = tough } }
+					change_variable = { which = genemath value = 2 }
+				}
+				if = {
+					limit = { father = { trait = hardy } }
+					change_variable = { which = genemath value = 1 }
+				}
+				if = {
+					limit = { father = { trait = soft } }
+					change_variable = { which = genemath value = -1 }
+				}
+				if = {
+					limit = { father = { trait = fragile } }
+					change_variable = { which = genemath value = -2 }
+				}
+				if = {
+					limit = { father = { trait = weak } }
+					change_variable = { which = genemath value = -3 }
+				}
+			}
+			if = {
+				limit = { real_father = { always = yes } }	#Is a hidden bastard - use real_father scope
+				if = {
+					limit = { real_father = { trait = strong } }
+					change_variable = { which = genemath value = 3 }
+				}
+				if = {
+					limit = { real_father = { trait = tough } }
+					change_variable = { which = genemath value = 2 }
+				}
+				if = {
+					limit = { real_father = { trait = hardy } }
+					change_variable = { which = genemath value = 1 }
+				}
+				if = {
+					limit = { real_father = { trait = soft } }
+					change_variable = { which = genemath value = -1 }
+				}
+				if = {
+					limit = { real_father = { trait = fragile } }
+					change_variable = { which = genemath value = -2 }
+				}
+				if = {
+					limit = { real_father = { trait = weak } }
+					change_variable = { which = genemath value = -3 }
+				}
+			}
+		}
+		
+        option = {
+			name = "EVTOPTAstrength_inheritance.0"
+			if = {
+				limit = { is_variable_equal = { which = genemath value = 6 } }
+				random_list = {
+					25 = { add_trait = strong }
+					25 = { add_trait = tough }
+					25 = { add_trait = hardy }
+					23 = { }
+					1 = { add_trait = soft }
+					1 = { add_trait = fragile }
+				}  #23 chance of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = 5 } }
+				random_list = { 
+					21 = { add_trait = strong }
+					26 = { add_trait = tough }
+					25 = { add_trait = hardy }
+					24 = { }
+					3 = { add_trait = soft }
+					1 = { add_trait = fragile }
+				} #24 chance of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = 4 } }
+				random_list = { 
+					15 = { add_trait = strong }
+					25 = { add_trait = tough }
+					25 = { add_trait = hardy }
+					30 = { }
+					3 = { add_trait = soft }
+					1 = { add_trait = fragile }
+					1 = { add_trait = weak }
+				} #30 chance of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = 3 } }
+                random_list = { 
+					13 = { add_trait = strong }
+					20 = { add_trait = tough }
+					25 = { add_trait = hardy }
+					36 = { }
+					3 = { add_trait = soft }
+					2 = { add_trait = fragile }
+					1 = { add_trait = weak }
+				} #36 of normal
+            }
+			if = {
+				limit = { is_variable_equal = { which = genemath value = 2 } }
+				random_list = { 
+					6 = { add_trait = strong }
+					12 = { add_trait = tough }
+					25 = { add_trait = hardy }
+					50 = { }
+					4 = { add_trait = soft }
+					2 = { add_trait = fragile }
+					1 = { add_trait = weak }
+				} #50 of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = 1 } }
+				random_list = { 
+					4 = { add_trait = strong }
+					10 = { add_trait = tough }
+					18 = { add_trait = hardy }
+					58 = { }
+					6 = { add_trait = soft }
+					3 = { add_trait = fragile }
+					1 = { add_trait = weak }
+				} #45 of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = -6 } }
+				random_list = { 
+					25 = { add_trait = weak }
+					25 = { add_trait = fragile }
+					25 = { add_trait = soft }
+					23 = { }
+					1 = { add_trait = hardy }
+					1 = { add_trait = tough }
+				} #23 of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = -5 } }
+				random_list = { 
+					21 = { add_trait = weak }
+					26 = { add_trait = fragile }
+					25 = { add_trait = soft }
+					24 = { }
+					3 = { add_trait = hardy }
+					1 = { add_trait = tough }
+				} #24 chance of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = -4 } }
+				random_list = {
+					15 = { add_trait = weak }
+					25 = { add_trait = fragile }
+					25 = { add_trait = soft }
+					30 = { }
+					3 = { add_trait = hardy }
+					1 = { add_trait = tough }
+					1 = { add_trait = strong }
+				} #30 of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = -3 } }
+				random_list = { 
+					13 = { add_trait = weak }
+					20 = { add_trait = fragile }
+					25 = { add_trait = soft }
+					36 = { }
+					3 = { add_trait = hardy }
+					2 = { add_trait = tough }
+					1 = { add_trait = strong }
+				} #36 of normal
+            }
+			if = {
+				limit = { is_variable_equal = { which = genemath value = -2 } }
+				random_list = {
+					6 = { add_trait = weak }
+					12 = { add_trait = fragile }
+					25 = { add_trait = soft }
+					50 = { }
+					4 = { add_trait = hardy }
+					2 = { add_trait = tough }
+					1 = { add_trait = strong }
+				} #50 chance of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = -1 } }
+				random_list = { 
+					4 = { add_trait = weak }
+					10 = { add_trait = fragile }
+					18 = { add_trait = soft }
+					58 = { }
+					6 = { add_trait = hardy }
+					3 = { add_trait = tough }
+					1 = { add_trait = strong }
+				} #58 of normal
+			}
+			if = {
+				limit = { is_variable_equal = { which = genemath value = 0 } }
+				random_list = { 
+					1 = { add_trait = weak }
+					4 = { add_trait = fragile }
+					10 = { add_trait = soft }
+					70 = { }
+					10 = { add_trait = hardy }
+					4 = { add_trait = tough }
+					1 = { add_trait = strong }
+				} #70 of normal
+			}
+			character_event = { id = intelligence.0 }
+		}
+}

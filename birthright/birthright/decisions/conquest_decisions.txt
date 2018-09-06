@@ -1,0 +1,38 @@
+decisions = {
+
+prepare_a_mass_invasion={
+
+potential = {
+age = 15
+OR = {
+has_landed_title = e_anuire
+has_landed_title = e_vosgaard
+has_landed_title = e_brechtuer
+has_landed_title = e_khinasi
+has_landed_title = e_rjurik_highlands
+}
+}
+
+allow = {
+age = 15
+wealth = 2500
+OR = {
+has_landed_title = e_anuire
+has_landed_title = e_vosgaard
+has_landed_title = e_brechtuer
+has_landed_title = e_khinasi
+has_landed_title = e_rjurik_highlands
+}
+}
+
+effect = {
+ROOT = { character_event = { id = emperor.28 } }
+		}
+		
+	ai_will_do = {
+	factor = 1
+	}
+	
+	}
+	
+	}

@@ -1,0 +1,121 @@
+decisions = {
+
+##############################
+#CHOOSE AN ADVENTURING CLASS##
+##############################
+
+#For everything except sorcerer#
+choose_adventuring_class={
+	is_high_prio = yes
+
+	potential = {
+			AND = {
+				age = 16
+				NOT = { age = 24 }
+				NOT = { trait = amateur_bard }
+				NOT = { trait = novice_bard }
+				NOT = { trait = trained_bard }
+				NOT = { trait = master_bard }
+				NOT = { trait = legendary_bard }
+				NOT = { trait = amateur_mage }
+				NOT = { trait = novice_mage }
+				NOT = { trait = trained_mage }
+				NOT = { trait = master_mage }
+				NOT = { trait = legendary_mage }
+				NOT = { trait = amateur_priest }
+				NOT = { trait = novice_priest }
+				NOT = { trait = trained_priest }
+				NOT = { trait = master_priest }
+				NOT = { trait = legendary_priest }	
+				NOT = { trait = amateur_ranger }
+				NOT = { trait = novice_ranger }
+				NOT = { trait = trained_ranger }
+				NOT = { trait = master_ranger }
+				NOT = { trait = legendary_ranger }	
+				NOT = { trait = amateur_rogue }
+				NOT = { trait = novice_rogue }
+				NOT = { trait = trained_rogue }
+				NOT = { trait = master_rogue }
+				NOT = { trait = legendary_rogue }	
+				NOT = { trait = amateur_fighter }
+				NOT = { trait = novice_fighter }
+				NOT = { trait = trained_fighter }
+				NOT = { trait = master_fighter }
+				NOT = { trait = legendary_fighter }
+				NOT = { trait = amateur_sorcerer }
+				NOT = { trait = novice_sorcerer }
+				NOT = { trait = trained_sorcerer }
+				NOT = { trait = master_sorcerer }
+				NOT = { trait = legendary_sorcerer }
+			}
+		}
+
+	allow = {
+		AND = {
+			age = 16
+			NOT = { age = 24 }
+			NOT = { trait = amateur_bard }
+			NOT = { trait = novice_bard }
+			NOT = { trait = trained_bard }
+			NOT = { trait = master_bard }
+			NOT = { trait = legendary_bard }
+			NOT = { trait = amateur_mage }
+			NOT = { trait = novice_mage }
+			NOT = { trait = trained_mage }
+			NOT = { trait = master_mage }
+			NOT = { trait = legendary_mage }
+			NOT = { trait = amateur_priest }
+			NOT = { trait = novice_priest }
+			NOT = { trait = trained_priest }
+			NOT = { trait = master_priest }
+			NOT = { trait = legendary_priest }
+			NOT = { trait = amateur_ranger }
+			NOT = { trait = novice_ranger }
+			NOT = { trait = trained_ranger }
+			NOT = { trait = master_ranger }
+			NOT = { trait = legendary_ranger }
+			NOT = { trait = amateur_rogue }
+			NOT = { trait = novice_rogue }
+			NOT = { trait = trained_rogue }
+			NOT = { trait = master_rogue }
+			NOT = { trait = legendary_rogue }
+			NOT = { trait = amateur_fighter }
+			NOT = { trait = novice_fighter }
+			NOT = { trait = trained_fighter }
+			NOT = { trait = master_fighter }
+			NOT = { trait = legendary_fighter }
+			NOT = { trait = amateur_sorcerer }
+			NOT = { trait = novice_sorcerer }
+			NOT = { trait = trained_sorcerer }
+			NOT = { trait = master_sorcerer }
+			NOT = { trait = legendary_sorcerer }
+			}
+		}
+
+	effect = {
+		ROOT = { character_event = { id = class.0 } }
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 50
+			trait = brave
+		}
+		modifier = {
+			factor = 50
+			trait = ambitious
+		}
+		modifier = {
+			factor = 0
+			trait = craven
+		}
+		modifier = {
+			factor = 0
+			trait = content
+		}
+	}
+
+	}
+
+}

@@ -1,0 +1,694 @@
+namespace = province
+
+#LVL 0 Prov#
+province_event = {
+	id = province.0
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.0"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province0 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_0 
+				has_building = ct_province_0
+				has_building = tp_province_0
+				has_building = tr_province_0
+			}
+			NOT = {
+				has_building = ca_province_1
+				has_building = ct_province_1
+				has_building = tp_province_1
+				has_building = tr_province_1
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province0 duration = -1 }
+	}
+}
+
+#LVL 1 Prov#
+province_event = {
+	id = province.1
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.1"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province1 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_1
+				has_building = ct_province_1
+				has_building = tp_province_1
+				has_building = tr_province_1
+			}
+			NOT = {
+				has_building = ca_province_2
+				has_building = ct_province_2
+				has_building = tp_province_2
+				has_building = tr_province_2
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province1 duration = -1 }
+		remove_province_modifier = province0
+		remove_province_modifier = province2
+	}
+}
+
+
+#LVL 2 Prov#
+province_event = {
+	id = province.2
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.2"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province2 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_2
+				has_building = ct_province_2
+				has_building = tp_province_2
+				has_building = tr_province_2
+			}
+			NOT = {
+				has_building = ca_province_3
+				has_building = ct_province_3
+				has_building = tp_province_3
+				has_building = tr_province_3
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province2 duration = -1 }
+		remove_province_modifier = province1
+		remove_province_modifier = province3
+	}
+}
+
+#LVL 3 Prov#
+province_event = {
+	id = province.3
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.3"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province3 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_3
+				has_building = ct_province_3
+				has_building = tp_province_3
+				has_building = tr_province_3
+			}
+			NOT = {
+				has_building = ca_province_4
+				has_building = ct_province_4
+				has_building = tp_province_4
+				has_building = tr_province_4
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province3 duration = -1 }
+		remove_province_modifier = province2
+		remove_province_modifier = province4
+	}
+}
+
+#LVL 4 Prov#
+province_event = {
+	id = province.4
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.4"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province4 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_4
+				has_building = ct_province_4
+				has_building = tp_province_4
+				has_building = tr_province_4
+			}
+			NOT = {
+				has_building = ca_province_5
+				has_building = ct_province_5
+				has_building = tp_province_5
+				has_building = tr_province_5
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province4 duration = -1 }
+		remove_province_modifier = province3
+		remove_province_modifier = province5
+	}
+}
+
+#LVL 5 Prov#
+province_event = {
+	id = province.5
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.5"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province5 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_5
+				has_building = ct_province_5
+				has_building = tp_province_5
+				has_building = tr_province_5
+			}
+			NOT = {
+				has_building = ca_province_6
+				has_building = ct_province_6
+				has_building = tp_province_6
+				has_building = tr_province_6
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province5 duration = -1 }
+		remove_province_modifier = province4
+		remove_province_modifier = province6
+	}
+}
+
+#LVL 6 Prov#
+province_event = {
+	id = province.6
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.6"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province6 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_6
+				has_building = ct_province_6
+				has_building = tp_province_6
+				has_building = tr_province_6
+			}
+			NOT = {
+				has_building = ca_province_7
+				has_building = ct_province_7
+				has_building = tp_province_7
+				has_building = tr_province_7
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province6 duration = -1 }
+		remove_province_modifier = province5
+		remove_province_modifier = province7
+	}
+}
+
+#LVL 7 Prov#
+province_event = {
+	id = province.7
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.7"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province7 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_7
+				has_building = ct_province_7
+				has_building = tp_province_7
+				has_building = tr_province_7
+			}
+			NOT = {
+				has_building = ca_province_8
+				has_building = ct_province_8
+				has_building = tp_province_8
+				has_building = tr_province_8
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province7 duration = -1 }
+		remove_province_modifier = province6
+		remove_province_modifier = province8
+	}
+}
+
+#LVL 8 Prov#
+province_event = {
+	id = province.8
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.8"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province8 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_8
+				has_building = ct_province_8
+				has_building = tp_province_8
+				has_building = tr_province_8
+			}
+			NOT = {
+				has_building = ca_province_9
+				has_building = ct_province_9
+				has_building = tp_province_9
+				has_building = tr_province_9
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province8 duration = -1 }
+		remove_province_modifier = province7
+		remove_province_modifier = province9
+	}
+}
+
+
+#LVL 9 Prov#
+province_event = {
+	id = province.9
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.9"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province9 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_9
+				has_building = ct_province_9
+				has_building = tp_province_9
+				has_building = tr_province_9
+			}
+			NOT = {
+				has_building = ca_province_10
+				has_building = ct_province_10
+				has_building = tp_province_10
+				has_building = tr_province_10
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province9 duration = -1 }
+		remove_province_modifier = province8
+		remove_province_modifier = province10
+	}
+}
+
+#LVL 10 Prov#
+province_event = {
+	id = province.10
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.10"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { has_province_modifier = province10 }
+		capital_holding  = { 
+			OR = {
+				has_building = ca_province_10
+				has_building = ct_province_10
+				has_building = tp_province_10
+				has_building = tr_province_10
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		add_province_modifier = { name = province10 duration = -1 }
+		remove_province_modifier = province9
+	}
+}
+
+
+#No province level building in capital for some reason
+province_event = {
+	id = province.11
+	title = PROVINCE_SIZE # Province Size
+	desc = "EVTDESCPROVINCE.11"
+	picture = "good"
+	hide_window = yes
+	
+	trigger = {
+		capital_holding  = { 
+			NOT = {
+				has_building = ca_province_0
+				has_building = ct_province_0
+				has_building = tp_province_0
+				has_building = tr_province_0
+			}
+		}
+	}
+		
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "OK"
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_10
+						has_building = ct_province_10
+						has_building = tp_province_10
+						has_building = tr_province_10
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_10
+				remove_building = ct_province_10
+				remove_building = tp_province_10
+				remove_building = tr_province_10
+			}
+			capital_holding = {
+				add_building = ca_province_10
+				add_building = ct_province_10
+				add_building = tp_province_10
+				add_building = tr_province_10
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_9
+						has_building = ct_province_9
+						has_building = tp_province_9
+						has_building = tr_province_9
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_9
+				remove_building = ct_province_9
+				remove_building = tp_province_9
+				remove_building = tr_province_9
+			}
+			capital_holding = {
+				add_building = ca_province_9
+				add_building = ct_province_9
+				add_building = tp_province_9
+				add_building = tr_province_9
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_8
+						has_building = ct_province_8
+						has_building = tp_province_8
+						has_building = tr_province_8
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_8
+				remove_building = ct_province_8
+				remove_building = tp_province_8
+				remove_building = tr_province_8
+			}
+			capital_holding = {
+				add_building = ca_province_8
+				add_building = ct_province_8
+				add_building = tp_province_8
+				add_building = tr_province_8
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_7
+						has_building = ct_province_7
+						has_building = tp_province_7
+						has_building = tr_province_7
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_7
+				remove_building = ct_province_7
+				remove_building = tp_province_7
+				remove_building = tr_province_7
+			}
+			capital_holding = {
+				add_building = ca_province_7
+				add_building = ct_province_7
+				add_building = tp_province_7
+				add_building = tr_province_7
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_6
+						has_building = ct_province_6
+						has_building = tp_province_6
+						has_building = tr_province_6
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_6
+				remove_building = ct_province_6
+				remove_building = tp_province_6
+				remove_building = tr_province_6
+			}
+			capital_holding = {
+				add_building = ca_province_6
+				add_building = ct_province_6
+				add_building = tp_province_6
+				add_building = tr_province_6
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_5
+						has_building = ct_province_5
+						has_building = tp_province_5
+						has_building = tr_province_5
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_5
+				remove_building = ct_province_5
+				remove_building = tp_province_5
+				remove_building = tr_province_5
+			}
+			capital_holding = {
+				add_building = ca_province_5
+				add_building = ct_province_5
+				add_building = tp_province_5
+				add_building = tr_province_5
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_4
+						has_building = ct_province_4
+						has_building = tp_province_4
+						has_building = tr_province_4
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_4
+				remove_building = ct_province_4
+				remove_building = tp_province_4
+				remove_building = tr_province_4
+			}
+			capital_holding = {
+				add_building = ca_province_4
+				add_building = ct_province_4
+				add_building = tp_province_4
+				add_building = tr_province_4
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_3
+						has_building = ct_province_3
+						has_building = tp_province_3
+						has_building = tr_province_3
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_3
+				remove_building = ct_province_3
+				remove_building = tp_province_3
+				remove_building = tr_province_3
+			}
+			capital_holding = {
+				add_building = ca_province_3
+				add_building = ct_province_3
+				add_building = tp_province_3
+				add_building = tr_province_3
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_2
+						has_building = ct_province_2
+						has_building = tp_province_2
+						has_building = tr_province_2
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_2
+				remove_building = ct_province_2
+				remove_building = tp_province_2
+				remove_building = tr_province_2
+			}
+			capital_holding = {
+				add_building = ca_province_2
+				add_building = ct_province_2
+				add_building = tp_province_2
+				add_building = tr_province_2
+			}
+		}
+		if = {
+			limit = {	
+				any_province_holding = {
+					OR = {
+						has_building = ca_province_1
+						has_building = ct_province_1
+						has_building = tp_province_1
+						has_building = tr_province_1
+					}
+				}
+			}
+			any_province_holding = {
+				remove_building = ca_province_1
+				remove_building = ct_province_1
+				remove_building = tp_province_1
+				remove_building = tr_province_1
+			}
+			capital_holding = {
+				add_building = ca_province_1
+				add_building = ct_province_1
+				add_building = tp_province_1
+				add_building = tr_province_1
+			}
+		}
+		#Failsafe - capital holding should always have province 0 no matter what, and sub-holdings should never have it.
+		any_province_holding = {
+			remove_building = ca_province_0
+			remove_building = ct_province_0
+			remove_building = tp_province_0
+			remove_building = tr_province_0
+		}
+		capital_holding = {
+			add_building = ca_province_0
+			add_building = ct_province_0
+			add_building = tp_province_0
+			add_building = tr_province_0
+		}
+	}
+}

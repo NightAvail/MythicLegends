@@ -1,0 +1,4903 @@
+namespace = adventurer
+
+
+
+#######################################
+##LOW LEVEL EVENTS/QUESTS WITH RULERS##
+#######################################
+
+###############################
+####Necromancer quest##########
+###############################
+#NECROMANCER appear#
+character_event = {
+	id = adventurer.0
+	title = NECROMANCER # Necromancer
+	desc = "EVTDESCADVENTURER.0"
+	picture = "GFX_evt_plague_doctor"
+
+	trigger = {
+		NOT = {
+			has_character_flag = adventurer0
+		}
+		OR = {
+			religion = Haelyn
+			religion = Sera
+			religion = Avani
+			religion = Erik
+			religion = Nesirie
+		}
+		OR = {
+			tier = DUKE
+			tier = KING
+			tier = EMPEROR
+			tier = COUNT
+		}
+		any_demesne_province = {
+			has_province_modifier = death_plague
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 10
+	}
+
+	option = {
+		name = adventurer.0.a # Sewers, they say? Better hire an adventurer from these parts...
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					culture = ROOT
+					trait = adventuring
+					NOT = { trait = on_current_quest }
+					prisoner = no
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						culture = ROOT
+						trait = adventuring
+						NOT = { trait = on_current_quest }
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.0.b # Sewers, they say? Hire anyone, don't care from where.
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					trait = adventuring
+					NOT = { trait = on_current_quest }
+					prisoner = no
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.0.c # I'm too far away. Have my chancellor hire someone nearby.
+		trigger = {
+			trait = adventuring
+		}
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					trait = adventuring
+					NOT = { trait = on_current_quest }
+					prisoner = no
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.0.d # Bah - I'm too busy for this nonsense!
+		trigger = {
+			ai = no
+		}
+		character_event = {
+			id = adventurer.2 days = 30
+		}
+	}
+
+}
+
+#adventurer is informed#
+character_event = {
+	id = adventurer.1
+	title = NECROMANCER # Necromancer
+	desc = "EVTDESCADVENTURER.1"
+	picture = "GFX_evt_plague_doctor"
+
+	is_triggered_only = yes
+
+	option = {
+		name = OF_COURSE_WERE_ON_OUR_WAY # Of course - we're on our way.
+		add_trait = on_current_quest
+		FROM = {
+			character_event = {
+				id = adventurer.3 days = 7
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.1.b # No, killing undead is disgusting work...
+	}
+
+}
+
+#the necromancer terrorises the province for a while#
+character_event = {
+	id = adventurer.2
+	title = NECROMANCER # Necromancer
+	desc = "EVTDESCADVENTURER.2"
+	picture = "GFX_evt_plague_doctor"
+
+	is_triggered_only = yes
+
+	option = {
+		name = adventurer.2.a # Better hire an adventurer from these parts...
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					culture = ROOT
+					trait = adventuring
+					NOT = { trait = on_current_quest }
+					prisoner = no
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						culture = ROOT
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+					}
+				}
+				character_event = {
+					id = adventurer.1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.2.b # Hire anyone, don't care from where.
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					trait = adventuring
+					NOT = { trait = on_current_quest }
+					prisoner = no
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+					}
+				}
+				character_event = {
+					id = adventurer.1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.2.c # Have my chancellor hire someone nearby.
+		trigger = {
+			trait = adventuring
+		}
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					trait = adventuring
+					NOT = { trait = on_current_quest }
+					prisoner = no
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+					}
+				}
+				character_event = {
+					id = adventurer.1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = SEND_IN_THE_TROOPS
+		random_demesne_province = {
+			add_province_modifier = {
+				name = fighting_undead days = 700
+			}
+		}
+	}
+
+}
+
+#adventurer arrives to court of ruler with the problem#
+character_event = {
+	id = adventurer.3
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.3"
+	picture = "GFX_evt_council"
+
+	is_triggered_only = yes
+
+	option = {
+		name = adventurer.3.a # Very well, go forth then and slay this monster.
+		FROM = {
+			character_event = {
+				id = adventurer.4 days = 1
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.3.b # No, that is too much. Show them the door.
+		trigger = {
+			ai = no
+		}
+	}
+
+}
+
+#adventurer sets off to the sewers#
+character_event = {
+	id = adventurer.4
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.4"
+	picture = "GFX_evt_plague_doctor"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "CHARGE"
+		random_list = {
+			80 = {
+				modifier = {
+					factor = 0.25
+					OR = {
+						trait = amateur_bard
+						trait = amateur_mage
+						trait = amateur_priest
+						trait = amateur_ranger
+						trait = amateur_rogue
+						trait = amateur_fighter
+						trait = amateur_sorcerer
+					}
+				}
+				modifier = {
+					factor = 0.5
+					OR = {
+						trait = novice_bard
+						trait = novice_mage
+						trait = novice_priest
+						trait = novice_ranger
+						trait = novice_rogue
+						trait = novice_fighter
+						trait = novice_sorcerer
+					}
+				}
+				character_event = { id = adventurer.5 tooltip = IS_SUCCESSFUL }
+			}
+			20 = {
+				modifier = {
+					factor = 0.5
+					OR = {
+						trait = master_bard
+						trait = master_mage
+						trait = master_priest
+						trait = master_ranger
+						trait = master_rogue
+						trait = master_fighter
+						trait = master_sorcerer
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						trait = legendary_bard
+						trait = legendary_mage
+						trait = legendary_priest
+						trait = legendary_ranger
+						trait = legendary_rogue
+						trait = legendary_fighter
+						trait = legendary_sorcerer
+					}
+				}
+				character_event = { id = adventurer.6 tooltip = IS_DEFEATED }
+			}
+		}
+	}
+
+}
+
+#successful against necromancer#
+character_event = {
+	id = adventurer.5
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.5"
+	picture = "GFX_evt_plague_doctor"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VICTORY"
+		wealth = 5
+		prestige = 5
+		FROMFROM = {
+			character_event = {
+				id = adventurer.7 days = 7
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				40 = {
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 50 }
+				}
+				30 = { 
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+							trait = novice_bard
+							trait = novice_mage
+							trait = novice_priest
+							trait = novice_ranger
+							trait = novice_rogue
+							trait = novice_fighter
+							trait = novice_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 30 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				10 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+
+}
+
+#defeated by necromancer#
+character_event = {
+	id = adventurer.6
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.6"
+	picture = "GFX_evt_plague_doctor"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "NOOOO"
+		random_list = {
+			40 = {
+				add_trait = wounded
+				character_event = {
+					id = adventurer.8
+				}
+			}
+			20 = {
+				add_trait = maimed
+				character_event = {
+					id = adventurer.8
+				}
+			}
+			10 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+			30 = {
+				add_trait = wounded
+				remove_trait = adventuring
+				remove_trait = on_current_quest
+				random_independent_ruler = {
+					limit = {
+						is_landed = yes
+						OR = {
+							tier = DUKE
+							tier = KING
+							tier = EMPEROR
+						}
+						OR = {
+							religion = Azrai
+							religion = GoblinPantheon
+							religion = OrogPantheon
+							religion = Outlaw
+							religion = Serpent
+							religion = Lamia
+							trait = awn_succubus
+						}
+					}
+					character_event = {
+						id = random.12
+					}
+				}
+			}
+		}
+		if = {		#Still get a little XP on defeat
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+			10 = { 
+				change_variable = { which = XP value = 20 }
+			}
+			20 = { 
+				change_variable = { which = XP value = 10 }
+			}
+			20 = {
+				change_variable = { which = XP value = 5 }
+			}
+			}
+		}
+	}
+
+}
+
+#adventurer arrives to court of ruler with the problem#
+character_event = {
+	id = adventurer.7
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.7"
+	picture = "GFX_evt_feast"
+
+	is_triggered_only = yes
+
+	option = {
+		name = adventurer.7.a # Pay them, and throw a feast in their honor!
+		wealth = -10
+		FROM = {
+			character_event = {
+				id = adventurer.9
+			}
+		}
+		reverse_opinion = {
+			modifier = opinion_adventuring_ally
+			who = FROM
+			years = 40
+		}
+	}
+
+	option = {
+		name = adventurer.7.b # I refuse to pay. Send them off!
+		trigger = {
+			OR = {
+				trait = greedy
+				trait = cruel
+				trait = lunatic
+			}
+		}
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+		FROM = {
+			character_event = {
+				id = adventurer.10
+			}
+		}
+	}
+}
+
+#defeated by necromancer#
+character_event = {
+	id = adventurer.8
+	title = DEFEAT # Defeat!
+	desc = "EVTDESCADVENTURER.8"
+	picture = "GFX_evt_illness"
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEND_FOR_A_HEALER # Send for... a healer...
+		remove_trait = on_current_quest
+		FROMFROM = {
+			character_event = {
+				id = adventurer.11 days = 7
+			}
+		}
+	}
+
+}
+
+#adventurers are treated as heroes on the victorious return#
+character_event = {
+	id = adventurer.9
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.9"
+	picture = "GFX_evt_feast"
+
+	is_triggered_only = yes
+
+	option = {
+		name = ADVENTURE_AWAITS
+		remove_trait = on_current_quest
+		wealth = 10
+		reverse_opinion = {
+			modifier = opinion_adventuring_ally
+			who = FROM
+			years = 40
+		}
+	}
+
+}
+
+#adventurers are treated as lepers on the victorious return#
+character_event = {
+	id = adventurer.10
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.10"
+	picture = "GFX_evt_lunatic"
+
+	is_triggered_only = yes
+
+	option = {
+		name = THAT_BASTARD_I_WONT_FORGET_THIS # That bastard! I won't forget this...
+		remove_trait = on_current_quest
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+	}
+
+}
+
+#ruler is informed that they have failed#
+character_event = {
+	id = adventurer.11
+	title = ADVENTURERS_FAIL # Adventurers Fail
+	desc = "EVTDESCADVENTURER.11"
+	picture = "GFX_evt_plague_doctor"
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = HIRE_SOMEONE_NEW_FROM_THESE_PARTS # Hire someone new from these parts...
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					culture = ROOT
+					trait = adventuring
+					NOT = { trait = on_current_quest }
+					prisoner = no
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						culture = ROOT
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.11.b # Hire someone new, don't care from where.
+		random_playable_ruler = {
+			limit = {
+				trait = adventuring
+				NOT = { trait = on_current_quest }
+				prisoner = no
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.1 days = 7
+				}
+			}
+		}
+	}
+
+
+	option = {
+		name = adventurer.0.d # Bah - I'm too busy for this nonsense!
+		trigger = {
+			ai = no
+		}
+		character_event = {
+			id = adventurer.2 days = 30
+		}
+	}
+
+}
+
+
+#####################################
+##Low Level Dungeon Events###########
+#####################################
+
+## troll lair quest##
+character_event = {
+	id = adventurer.13
+	title = DUNGEON_EXPLORATION # Dungeon Exploration
+	desc = "EVTDESCADVENTURER.13"
+	picture = "GFX_evt_feast"
+
+	trigger = {
+		AND = {
+			trait = adventuring
+			NOT = {
+				trait = on_current_quest
+			}
+			prisoner = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 3
+		modifier = {
+			factor = 20
+			has_character_flag = adventurer13
+		}
+	}
+
+	option = {
+		name = "LETS_GO"
+		set_character_flag = adventurer13
+		add_trait = on_current_quest
+		character_event = {
+			id = adventurer.14 days = 7
+		}
+	}
+
+	option = {
+		name = NO_TROLLS_ARE_TOO_DANGEROUS
+		set_character_flag = adventurer13
+	}
+
+}
+
+character_event = {
+	id = adventurer.14
+	title = TROLL_LAIR # Troll Lair
+	desc = "EVTDESCADVENTURER.14"
+	picture = "GFX_evt_bandits"
+
+	is_triggered_only = yes
+
+	option = {
+		name = FORWARD_INTO_THE_DARKNESS # Forward, into the darkness!
+		remove_trait = on_current_quest
+		wealth = 10
+		if = {
+		limit = {
+					OR = {
+						trait = amateur_bard
+						trait = amateur_mage
+						trait = amateur_priest
+						trait = amateur_ranger
+						trait = amateur_rogue
+						trait = amateur_fighter
+						trait = amateur_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 40 }
+		}
+		if = {
+		limit = {
+					OR = {
+						trait = novice_bard
+						trait = novice_mage
+						trait = novice_priest
+						trait = novice_ranger
+						trait = novice_rogue
+						trait = novice_fighter
+						trait = novice_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 25 }
+		}
+		if = {
+		limit = {
+					OR = {
+						trait = trained_bard
+						trait = trained_mage
+						trait = trained_priest
+						trait = trained_ranger
+						trait = trained_rogue
+						trait = trained_fighter
+						trait = trained_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 15 }
+		}
+		# THE START
+		#Create the character to fight with
+		
+		create_random_soldier = {
+			name = "Gnoll"
+			random_traits = yes
+			dynasty = none
+			religion = GnollPantheon
+			culture = Gnoll
+			female = no
+			age = 30
+		}
+		#scope to character we created and send him duel init event
+		new_character = {
+			set_character_flag = tempchar
+			character_event = {id = duelengine.1 days = 1}
+			add_trait = novice_fighter
+		}
+			}
+
+	option = {
+		name = adventurer.14.b # No, wait, let's not do this...
+		trigger = {
+			ai = no
+		}
+		remove_trait = on_current_quest
+		prestige = -50
+	}
+
+}
+
+
+###wicked witch###
+character_event = {
+	id = adventurer.17
+	title = WICKED_WITCH # Wicked Witch
+	desc = "EVTDESCADVENTURER.17"
+	picture = "GFX_evt_feast"
+
+	trigger = {
+		AND = {
+			trait = adventuring
+			NOT = {
+				trait = on_current_quest
+			}
+			prisoner = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 20
+			has_character_flag = adventurer17
+		}
+	}
+
+	option = {
+		name = "LETS_GO"
+		set_character_flag = adventurer17
+		add_trait = on_current_quest
+		character_event = {
+			id = adventurer.18 days = 3
+		}
+	}
+
+	option = {
+		name = adventurer.17.b # No, witches do not interest me.
+		set_character_flag = adventurer17
+	}
+
+}
+
+character_event = {
+	id = adventurer.18
+	title = WITCHS_LAIR # Witch's Lair
+	desc = "EVTDESCADVENTURER.18"
+	picture = "GFX_evt_bandits"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "LETS_GO"
+		remove_trait = on_current_quest
+		wealth = 10
+			if = {
+		limit = {
+					OR = {
+						trait = amateur_bard
+						trait = amateur_mage
+						trait = amateur_priest
+						trait = amateur_ranger
+						trait = amateur_rogue
+						trait = amateur_fighter
+						trait = amateur_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 40 }
+		}
+		if = {
+		limit = {
+					OR = {
+						trait = novice_bard
+						trait = novice_mage
+						trait = novice_priest
+						trait = novice_ranger
+						trait = novice_rogue
+						trait = novice_fighter
+						trait = novice_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 25 }
+		}
+		if = {
+		limit = {
+					OR = {
+						trait = trained_bard
+						trait = trained_mage
+						trait = trained_priest
+						trait = trained_ranger
+						trait = trained_rogue
+						trait = trained_fighter
+						trait = trained_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 15 }
+		}
+		# THE START
+		#Create the character to fight with
+		
+		create_random_soldier = {
+			name = "Witch"
+			random_traits = yes
+			dynasty = none
+			religion = Kriesha
+			culture = Vos
+			female = yes
+			age = 40
+		}
+		#scope to character we created and send him duel init event
+		new_character = {
+			set_character_flag = tempchar
+			character_event = {id = duelengine.1 days = 1}
+			add_trait = trained_priest
+		}
+			}
+
+	option = {
+		name = adventurer.18.b # No, wait, let's leave her alone.
+		trigger = {
+			ai = no
+		}
+		remove_trait = on_current_quest
+		prestige = -50
+	}
+
+}
+
+
+## random attack by brigands##
+character_event = {
+	id = adventurer.21
+	title = AMBUSH # Ambush!
+	desc = "EVTDESCADVENTURER.21"
+	picture = "GFX_evt_hunt"
+
+	trigger = {
+		AND = {
+			trait = adventuring
+			NOT = {
+				trait = on_current_quest
+			}
+			prisoner = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 5
+			has_character_flag = adventurer21
+		}
+	}
+
+	option = {
+		name = MEN_RALLY_TO_ME
+		set_character_flag = adventurer21
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 0.25
+					OR = {
+						trait = amateur_bard
+						trait = amateur_mage
+						trait = amateur_priest
+						trait = amateur_ranger
+						trait = amateur_rogue
+						trait = amateur_fighter
+						trait = amateur_sorcerer
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = trained_bard
+						trait = trained_mage
+						trait = trained_priest
+						trait = trained_ranger
+						trait = trained_rogue
+						trait = trained_fighter
+						trait = trained_sorcerer
+					}
+				}
+				character_event = {
+					id = adventurer.22
+					tooltip = IS_SUCCESSFUL
+				}
+			}
+			20 = {
+				modifier = {
+					factor = 0.2
+					OR = {
+						trait = master_bard
+						trait = master_mage
+						trait = master_priest
+						trait = master_ranger
+						trait = master_rogue
+						trait = master_fighter
+						trait = master_sorcerer
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						trait = legendary_bard
+						trait = legendary_mage
+						trait = legendary_priest
+						trait = legendary_ranger
+						trait = legendary_rogue
+						trait = legendary_fighter
+						trait = legendary_sorcerer
+					}
+				}
+				character_event = {
+					id = adventurer.23
+					tooltip = IS_DEFEATED
+				}
+			}
+		}
+	}
+
+}
+
+#brigand ambush success#
+character_event = {
+	id = adventurer.22
+	title = BRIGAND_AMBUSH # Brigand Ambush
+	desc = "EVTDESCADVENTURER.22"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = IS_EVERYONE_OK
+		wealth = 5
+		prestige = 10
+		random = {
+			chance = 5
+			add_trait = wounded
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				40 = {
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 50 }
+				}
+				30 = { 
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+							trait = novice_bard
+							trait = novice_mage
+							trait = novice_priest
+							trait = novice_ranger
+							trait = novice_rogue
+							trait = novice_fighter
+							trait = novice_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 30 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				10 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+
+}
+
+#brigand ambush defeat#
+character_event = {
+	id = adventurer.23
+	title = BRIGAND_AMBUSH # Brigand Ambush
+	desc = "EVTDESCADVENTURER.23"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = FALL_BACK_LEAVE_OUR_PACKS_BEHIND # Fall back! Leave our packs behind!
+		wealth = -20
+		prestige = -50
+		random_list = {
+			60 = {}
+			25 = {
+				add_trait = wounded
+			}
+			10 = {
+				add_trait = maimed
+			}
+			5 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				10 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.23.b # I won't run from these scum! Chaaarge!
+		trigger = {
+			ai = no
+		}
+		character_event = {
+			id = adventurer.24
+		}
+	}
+
+}
+
+#brigand ambush charge#
+character_event = {
+	id = adventurer.24
+	title = THE_CHARGE # The Charge
+	desc = "EVTDESCADVENTURER.24"
+	picture = "GFX_evt_peasants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = FORWARDS_TO_VICTORY # Forwards! To victory!
+		random_list = {
+			50 = {
+				character_event = {
+					id = adventurer.25
+				}
+			}
+			50 = {
+				character_event = {
+					id = adventurer.26
+				}
+			}
+		}
+	}
+
+}
+
+#brigand ambush charge, success#
+character_event = {
+	id = adventurer.25
+	title = THE_CHARGE # The Charge
+	desc = "EVTDESCADVENTURER.25"
+	picture = "GFX_evt_peasants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VICTORY"
+		wealth = 5
+		prestige = 25
+		random_list = {
+			50 = {
+				add_trait = wounded
+			}
+			50 = {}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				40 = {
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 50 }
+				}
+				30 = { 
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+							trait = novice_bard
+							trait = novice_mage
+							trait = novice_priest
+							trait = novice_ranger
+							trait = novice_rogue
+							trait = novice_fighter
+							trait = novice_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 30 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				10 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+
+}
+
+#brigand ambush charge, failure#
+character_event = {
+	id = adventurer.26
+	title = THE_CHARGE # The Charge
+	desc = "EVTDESCADVENTURER.26"
+	picture = "GFX_evt_peasants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MEN_GET_ME_OUT_OF_HERE # Men, get me out of here!
+		wealth = -20
+		random_list = {
+			30 = {
+				add_trait = wounded
+				random_independent_ruler = {
+					limit = {
+						is_landed = yes
+						OR = {
+							tier = DUKE
+							tier = KING
+							tier = EMPEROR
+							trait = awn_succubus
+							trait = awn_white_witch
+							trait = awn_magian
+						}
+						OR = {
+							religion = Azrai
+							religion = GoblinPantheon
+							religion = OrogPantheon
+							religion = Outlaw
+							religion = Serpent
+							religion = Lamia
+						}
+					}
+					character_event = {
+						id = random.12
+					}
+				}
+			}
+			55 = {
+				add_trait = maimed
+				random_independent_ruler = {
+					limit = {
+						is_landed = yes
+						OR = {
+							tier = DUKE
+							tier = KING
+							tier = EMPEROR
+							trait = awn_succubus
+							trait = awn_white_witch
+							trait = awn_magian
+						}
+						OR = {
+							religion = Azrai
+							religion = GoblinPantheon
+							religion = OrogPantheon
+							religion = Outlaw
+							religion = Serpent
+							religion = Lamia
+						}
+					}
+					character_event = {
+						id = random.12
+					}
+				}
+			}
+			15 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				10 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+}
+
+
+##random attack by goblins##
+character_event = {
+	id = adventurer.27
+	title = AMBUSH # Ambush!
+	desc = "EVTDESCADVENTURER.27"
+	picture = "GFX_evt_hunt"
+
+	trigger = {
+		AND = {
+			trait = adventuring
+			NOT = {
+				trait = on_current_quest
+			}
+			prisoner = no
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 9
+		modifier = {
+			factor = 5
+			AND = {
+				age = 15
+				has_character_flag = adventurer27
+			}
+		}
+	}
+
+	option = {
+		name = UP_MEN_TO_ARMS
+		set_character_flag = adventurer27
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 0.25
+					OR = {
+						trait = amateur_bard
+						trait = amateur_mage
+						trait = amateur_priest
+						trait = amateur_ranger
+						trait = amateur_rogue
+						trait = amateur_fighter
+						trait = amateur_sorcerer
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = trained_bard
+						trait = trained_mage
+						trait = trained_priest
+						trait = trained_ranger
+						trait = trained_rogue
+						trait = trained_fighter
+						trait = trained_sorcerer
+					}
+				}
+				character_event = {
+					id = adventurer.28
+					tooltip = IS_SUCCESSFUL
+				}
+			}
+			20 = {
+				modifier = {
+					factor = 0.2
+					OR = {
+						trait = master_bard
+						trait = master_mage
+						trait = master_priest
+						trait = master_ranger
+						trait = master_rogue
+						trait = master_fighter
+						trait = master_sorcerer
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						trait = legendary_bard
+						trait = legendary_mage
+						trait = legendary_priest
+						trait = legendary_ranger
+						trait = legendary_rogue
+						trait = legendary_fighter
+						trait = legendary_sorcerer
+					}
+				}
+				character_event = {
+					id = adventurer.29
+					tooltip = IS_DEFEATED
+				}
+			}
+		}
+	}
+}
+
+#goblin ambush success#
+character_event = {
+	id = adventurer.28
+	title = GOBLIN_AMBUSH # Goblin Ambush
+	desc = "EVTDESCADVENTURER.28"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = IS_EVERYONE_OK
+		wealth = 5
+		prestige = 10
+		random = {
+			chance = 5
+			add_trait = wounded
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				40 = {
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 50 }
+				}
+				30 = { 
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+							trait = novice_bard
+							trait = novice_mage
+							trait = novice_priest
+							trait = novice_ranger
+							trait = novice_rogue
+							trait = novice_fighter
+							trait = novice_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 30 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				10 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+
+}
+
+#goblin ambush defeat#
+character_event = {
+	id = adventurer.29
+	title = GOBLIN_AMBUSH # Goblin Ambush
+	desc = "EVTDESCADVENTURER.29"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = FALL_BACK_LEAVE_OUR_PACKS_BEHIND # Fall back! Leave our packs behind!
+		wealth = -20
+		prestige = -50
+		random_list = {
+			60 = {}
+			25 = {
+				add_trait = wounded
+			}
+			10 = {
+				add_trait = maimed
+			}
+			5 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				10 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.29.b # I won't run from goblins! Stand and fight!
+		trigger = {
+			ai = no
+		}
+		character_event = {
+			id = adventurer.30
+		}
+	}
+
+}
+
+#goblin ambush charge#
+character_event = {
+	id = adventurer.30
+	title = THE_STAND # The Stand
+	desc = "EVTDESCADVENTURER.30"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = STAND_FIRM_HOOOOLD_THE_LINE # Stand firm! Hoooold the line!
+		random_list = {
+			50 = {
+				character_event = {
+					id = adventurer.31
+				}
+			}
+			50 = {
+				character_event = {
+					id = adventurer.32
+				}
+			}
+		}
+	}
+
+}
+
+#goblin ambush charge, success#
+character_event = {
+	id = adventurer.31
+	title = THE_STAND # The Stand
+	desc = "EVTDESCADVENTURER.31"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "VICTORY"
+		wealth = 5
+		prestige = 25
+		random_list = {
+			50 = {
+				add_trait = wounded
+			}
+			50 = {}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				40 = {
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 50 }
+				}
+				30 = { 
+					modifier = {
+						factor = 0
+						NOT = { 
+							trait = amateur_bard
+							trait = amateur_mage
+							trait = amateur_priest
+							trait = amateur_ranger
+							trait = amateur_rogue
+							trait = amateur_fighter
+							trait = amateur_sorcerer
+							trait = novice_bard
+							trait = novice_mage
+							trait = novice_priest
+							trait = novice_ranger
+							trait = novice_rogue
+							trait = novice_fighter
+							trait = novice_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 30 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				10 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+
+}
+
+#goblin ambush charge, failure#
+character_event = {
+	id = adventurer.32
+	title = THE_STAND # The Stand
+	desc = "EVTDESCADVENTURER.32"
+	picture = "GFX_evt_hunt"
+
+	is_triggered_only = yes
+
+	option = {
+		name = NOOO_NOT_LIKE_THIS # Nooo... not like this!
+		wealth = -20
+		random_list = {
+			30 = {
+				add_trait = wounded
+				random_independent_ruler = {
+					limit = {
+						is_landed = yes
+						OR = {
+							tier = DUKE
+							tier = KING
+							tier = EMPEROR
+							trait = awn_succubus
+							trait = awn_white_witch
+							trait = awn_magian
+						}
+						OR = {
+							religion = Azrai
+							religion = GoblinPantheon
+							religion = OrogPantheon
+							religion = Outlaw
+							religion = Serpent
+							religion = Lamia
+						}
+					}
+					character_event = {
+						id = random.12
+					}
+				}
+			}
+			55 = {
+				add_trait = maimed
+				random_independent_ruler = {
+					limit = {
+						is_landed = yes
+						OR = {
+							tier = DUKE
+							tier = KING
+							tier = EMPEROR
+							trait = awn_succubus
+							trait = awn_white_witch
+							trait = awn_magian
+						}
+						OR = {
+							religion = Azrai
+							religion = GoblinPantheon
+							religion = OrogPantheon
+							religion = Outlaw
+							religion = Serpent
+							religion = Lamia
+						}
+					}
+					character_event = {
+						id = random.12
+					}
+				}
+			}
+			15 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				10 = { 
+					change_variable = { which = XP value = 20 }
+				}
+				20 = { 
+					change_variable = { which = XP value = 10 }
+				}
+				20 = {
+					modifier = {
+						factor = 2
+						OR = {
+							trait = trained_bard
+							trait = trained_mage
+							trait = trained_priest
+							trait = trained_ranger
+							trait = trained_rogue
+							trait = trained_fighter
+							trait = trained_sorcerer
+						}
+					}
+					change_variable = { which = XP value = 5 }
+				}
+			}
+		}
+	}
+}
+
+##mercenary jobs##
+
+# Ruler can choose to hire an adventurer to aid in the war#
+character_event = {
+	id = adventurer.33
+	title = HIRE_ADVENTURERS # Hire Adventurers
+	desc = "EVTDESCADVENTURER.33"
+	picture = "GFX_evt_large_army"
+
+	trigger = {
+		war = yes
+		NOT = { trait = awn_gorgon }
+		NOT = { trait = awn_succubus }
+		NOT = { trait = awn_brute }
+		NOT = { trait = awn_raven }
+		NOT = { trait = awn_serpent }
+		NOT = { trait = awn_magian }
+		OR = {
+			religion = Haelyn
+			religion = Sera
+			religion = Avani
+			religion = Nesirie
+			religion = Erik
+			religion = Kriesha
+			religion = Belinik
+			religion = Azrai
+		}
+		OR = {
+			tier = DUKE
+			tier = KING
+			tier = EMPEROR
+			tier = COUNT
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+
+	option = {
+		name = YES_HIRE_SOME_LOCAL_ADVENTURERS # Yes, hire some local adventurers.
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					trait = adventuring
+					NOT = {
+						trait = on_current_quest
+					}
+					religion = ROOT
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						religion = ROOT
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+						NOT = {
+							has_character_flag = adventurer34
+						}
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.34 days = 7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.33.b # Yes, hire anyone who wants the job.
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					trait = adventuring
+					NOT = {
+						trait = on_current_quest
+					}
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+						NOT = {
+							has_character_flag = adventurer34
+						}
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.34 days = 7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.0.c # I'm too far away. Have my chancellor hire someone nearby.
+		trigger = {
+			trait = adventuring
+		}
+		random_playable_ruler = {
+			limit = {
+				any_courtier = {
+					trait = adventuring
+					NOT = {
+						trait = on_current_quest
+					}
+					religion = ROOT
+				}
+			}
+			random_courtier = {
+				limit = {
+					AND = {
+						trait = adventuring
+						NOT = {
+							trait = on_current_quest
+						}
+						NOT = {
+							has_character_flag = adventurer34
+						}
+						prisoner = no
+					}
+				}
+				character_event = {
+					id = adventurer.34 days = 7
+				}
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.33.d # No, I don't trust adventurers.
+	}
+
+}
+
+#adventurer is informed#
+character_event = {
+	id = adventurer.34
+	title = MERCENARY_JOB # Mercenary Job
+	desc = "EVTDESCADVENTURER.34"
+	picture = "GFX_evt_large_army"
+
+	is_triggered_only = yes
+
+	option = {
+		name = OF_COURSE_WERE_ON_OUR_WAY # Of course - we're on our way.
+		add_trait = on_current_quest
+		FROM = {
+			character_event = {
+				id = adventurer.35 days = 7
+			}
+		}
+	}
+
+	option = {
+		name = NO_NOT_NOW
+		trigger = {
+			ai = no
+		}
+	}
+
+	option = {
+		name = FOR_THAT_RULER_I_THINK_NOT
+		trigger = {
+			ai = no
+		}
+	}
+
+	option = {
+		name = adventurer.34.d # No, I won't ever do mercenary work.
+		trigger = {
+			ai = no
+		}
+		set_character_flag = adventurer34
+	}
+}
+
+#adventurer arrives to court of ruler with the problem - rulers pov#
+character_event = {
+	id = adventurer.35
+	title = ADVENTURER
+	desc = "EVTDESCADVENTURER.35"
+	picture = "GFX_evt_council"
+
+	is_triggered_only = yes
+
+	option = {
+		name = I_WANT_THEM_TO_INSTIGATE_REBELLIONS # I want them to instigate rebellions.
+		wealth = -50
+		FROM = {
+			character_event = {
+				id = adventurer.36 days = 1
+			}
+		}
+	}
+
+	option = {
+		name = adventurer.35.b # I want them to assassinate my enemies.
+		wealth = -50
+		FROM = {
+			character_event = {
+				id = adventurer.37 days = 1
+			}
+		}
+	}
+
+	#
+	#option = {#
+	#	name = adventurer.35.c # I want them to steal from my enemies.#
+	#	wealth = -50 
+    #   FROM = {
+	#		character_event = {
+	#			id = adventurer.38 days = 1
+	#		}
+	#	}#
+	#}
+
+	option = {
+		name = "adventurer.35.d" #I want them as a special forces unit.
+		wealth = -50
+		FROM = {
+			character_event = {
+				id = adventurer.39 days = 1
+			}
+		}
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					owner = ROOT
+					disband_on_peace = yes
+					troops = {
+						knights = {
+							200 200
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#adventurer arrives to court of ruler with the problem - adventurers pov#
+character_event = {
+	id = adventurer.36
+	title = MERCENARY_JOB # Mercenary Job
+	desc = "EVTDESCADVENTURER.36"
+	picture = "GFX_evt_council"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTDESCADVENTURER.36.a"
+		wealth = 50
+		character_event = {
+			id = adventurer.40 days = 30
+		}
+		character_event = {
+			id = adventurer.75 days = 180
+		}
+	}
+
+	option = {
+		name = "EVTDESCADVENTURER.36.b"
+		wealth = 50
+		character_event = {
+			id = adventurer.40 days = 30
+		}
+		character_event = {
+			id = adventurer.75 days = 180
+		}
+	}
+
+	option = {
+		name = "EVTDESCADVENTURER.36.c"
+		remove_trait = on_current_quest
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+		FROM = {
+			character_event = {
+				id = adventurer.44
+			}
+		}
+	}
+}
+
+#adventurer arrives to court of ruler with the problem - adventurers pov#
+character_event = {
+	id = adventurer.37
+	title = MERCENARY_JOB # Mercenary Job
+	desc = "EVTDESCADVENTURER.37"
+	picture = "GFX_evt_council"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTDESCADVENTURER.37.a"
+		wealth = 50
+		character_event = {
+			id = adventurer.41 days = 30
+		}
+		character_event = {
+			id = adventurer.75 days = 180
+		}
+	}
+
+	option = {
+		name = "EVTDESCADVENTURER.37.b"
+		wealth = 50
+		character_event = {
+			id = adventurer.41 days = 30
+		}
+		character_event = {
+			id = adventurer.75 days = 180
+		}
+	}
+
+	option = {
+		name = "EVTDESCADVENTURER.37.c"
+		remove_trait = on_current_quest
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+		FROM = {
+			character_event = {
+				id = adventurer.44
+			}
+		}
+	}
+
+}
+
+
+#adventurer arrives to court of ruler with the problem - adventurers pov#
+character_event = {
+	id = adventurer.39
+	title = MERCENARY_JOB # Mercenary Job
+	desc = EVTDESCADVENTURER.39
+      #You arrive at the court of the ruler who has hired you, and sit together discussing how best to use you in the battles ahead. The ruler wants you to lead a unit of adventurers during the battles.
+	picture = GFX_evt_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = GREAT
+		wealth = 50
+		character_event = {
+			id = adventurer.43 days = 30
+		}
+		character_event = {
+			id = adventurer.75 days = 180
+		}
+	}
+
+}
+
+#adventurers begin to instigate rebellions#
+character_event = {
+	id = adventurer.40
+	title = INSTIGATING_REBELLIONS  #Instigating rebellions
+	desc = EVTDESCADVENTURER.40
+    #You travel behind enemy lines, and begin to work on instigating a rebellion. What will you focus your message on?
+	picture = GFX_evt_peasants
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVOPTAADVENTURER.40 #The unfairness of hereditary monarchy!
+		character_event = {
+			id = adventurer.51 days = 30
+		}
+	}
+
+	option = {
+		name = EVOPTBADVENTURER.40 #Taxes are too high!
+		character_event = {
+			id = adventurer.52 days = 30
+		}
+	}
+
+	option = {
+		name = EVOPTCADVENTURER.40 #The ruler is in league with demons!
+		character_event = {
+			id = adventurer.53 days = 30
+		}
+	}
+
+}
+
+#adventurers begin to plot assassinations#
+character_event = {
+	id = adventurer.41
+	title = ASSASSINATIONS #Assassinations
+	desc = EVTDESCADVENTURER.41   #You travel behind enemy lines, and begin to plot your assassinations of enemy notables. Who will you strike at?
+	picture = GFX_evt_shadow
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVOPTAADVENTURER.41 #The enemy Marshall.
+		character_event = {
+			id = adventurer.55 days = 30
+		}
+	}
+
+	option = {
+		name = EVOPTBADVENTURER.41 #A random enemy count.
+		character_event = {
+			id = adventurer.56 days = 30
+		}
+	}
+
+	option = {
+		name = EVOPTCADVENTURER.41 #I'll just go on a general killing spree!
+		character_event = {
+			id = adventurer.57 days = 30
+		}
+	}
+
+}
+
+#adventurers begin to gather their adventuring force#
+character_event = {
+	id = adventurer.43
+	title = LEADING_ADVENTURERS #Leading Adventurers
+	desc = EVTDESCADVENTURER.43
+   #As ordered, you begin assembling a band of adventurers into a proper fighting force of some fifty people with various skills and talents to use on the battlefield at critical moments. How will you lead them?
+	picture = GFX_evt_large_army
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVOPTAADVENTURER.43 #I will lead from the front.
+		character_event = {
+			id = adventurer.76 days = 90
+		}
+		prestige = 200
+	}
+
+	option = {
+		name = EVOPTBADVENTURER.43 #I will lead from the center.
+		character_event = {
+			id = adventurer.77 days = 90
+		}
+		prestige = 50
+	}
+
+
+	option = {
+		name = EVOPTCADVENTURER.43 #I will lead from the rear.
+		character_event = {
+			id = adventurer.78 days = 90
+		}
+	}
+
+}
+
+#adventurer arrives to court of ruler with the problem - adventurers pov#
+character_event = {
+	id = adventurer.44
+	title = "Refusal"
+	desc = EVTDESCADVENTURER.44
+	picture = "GFX_evt_scandal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVOPTAADVENTURER.44		#"Probably be better off without them anyways..."
+		wealth = 50
+	}
+
+	option = {
+		name = EVOPTBADVENTURER.44		#"Let them go, but never forget this!"
+		wealth = 50
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+	}
+
+	option = {
+		name = EVOPTCADVENTURER.44		#"Guards, arrest them!"
+		reverse_opinion = {
+			modifier = opinion_adventuring_foe
+			who = FROM
+			years = 40
+		}
+		FROM = {
+			character_event = {
+				id = adventurer.45
+			}
+		}
+	}
+
+}
+
+#adventurer are told they would be arrested#
+character_event = {
+	id = adventurer.45
+	title = "Ruler Enraged"
+	desc = EVTDESCADVENTURER.45
+	picture = "GFX_evt_scandal"
+
+	is_triggered_only = yes
+
+	option = {
+		trigger = {
+			ai = no
+		}
+		name = EVTOPTAADVENTURER.45		#"Kill the faithless fool, then run!"
+		random_list = {
+			50 = {
+				modifier = {
+					factor = 0.25
+					OR = {
+						trait = amateur_bard
+						trait = amateur_mage
+						trait = amateur_priest
+						trait = amateur_ranger
+						trait = amateur_rogue
+						trait = amateur_fighter
+						trait = amateur_sorcerer
+					}
+				}
+				modifier = {
+					factor = 1.5
+					OR = {
+						trait = trained_bard
+						trait = trained_mage
+						trait = trained_priest
+						trait = trained_ranger
+						trait = trained_rogue
+						trait = trained_fighter
+						trait = trained_sorcerer
+					}
+				}
+				character_event = {
+					id = adventurer.46
+					tooltip = IS_SUCCESSFUL
+				}
+			}
+			50 = {
+				modifier = {
+					factor = 0.2
+					OR = {
+						trait = master_bard
+						trait = master_mage
+						trait = master_priest
+						trait = master_ranger
+						trait = master_rogue
+						trait = master_fighter
+						trait = master_sorcerer
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						trait = legendary_bard
+						trait = legendary_mage
+						trait = legendary_priest
+						trait = legendary_ranger
+						trait = legendary_rogue
+						trait = legendary_fighter
+						trait = legendary_sorcerer
+					}
+				}
+				character_event = {
+					id = adventurer.47
+					tooltip = IS_DEFEATED
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "RUN"
+	}
+
+	option = {
+		name = EVTOPTCADVENTURER.45		#"Allow the guards to arrest you."
+	}
+
+}
+
+## adventurers succeed in killing the ruler and escape##
+character_event = {
+	id = adventurer.46
+	title = "Success!"
+	desc = EVTDESCADVENTURER.46
+	picture = "GFX_evt_scandal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.46		#"Hah! That'll show him!"
+		FROMFROM = {
+			character_event = {
+				id = adventurer.48
+			}
+		}
+		random_list = {
+			25 = {
+				add_trait = wounded
+			}
+			10 = {
+				add_trait = maimed
+			}
+			65 = {}
+		}
+	}
+}
+
+##adventurers fail in killing the ruler and are caught##
+character_event = {
+	id = adventurer.47
+	title = "Failure!"
+	desc = EVTDESCADVENTURER.47
+	picture = "GFX_evt_scandal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "CURSES"
+		FROMFROM = {
+			character_event = {
+				id = adventurer.49
+			}
+		}
+		random_list = {
+			25 = {
+				add_trait = wounded
+			}
+			10 = {
+				add_trait = maimed
+			}
+			65 = {}
+		}
+	}
+}
+
+#adventurers kill or injure the ruler.ruler pov##
+character_event = {
+	id = adventurer.48
+	title = "Treason!"
+	desc = EVTDESCADVENTURER.48
+	picture = "GFX_evt_scandal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.48		#"*you fall to the ground*"
+		random_list = {
+			25 = {
+				add_trait = wounded
+			}
+			25 = {
+				add_trait = maimed
+			}
+			50 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+	}
+
+}
+
+#adventurers kill or injure the ruler.ruler pov##
+character_event = {       
+	id = adventurer.49
+	title = "Treason!"
+	desc = EVTDESCADVENTURER.49
+	picture = "GFX_evt_scandal"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.49
+		FROM = {
+			character_event = {
+				id = adventurer.50
+			}
+		}
+	}
+
+}
+
+#adventurers are imprisoned, their pov##
+character_event = {
+	id = adventurer.50
+	title = "The Dungeons"
+	desc = EVTDESCADVENTURER.50	
+	picture = "GFX_evt_into_the_dungeon"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.49
+		wealth = -50
+		imprison = FROM
+	}
+
+}
+
+#adventurers are instigating rebellions##
+character_event = {
+	id = adventurer.51
+	title = "The Revolt"
+	desc = EVTDESCADVENTURER.51
+	picture = "GFX_evt_peasants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.51		#"Gullible fools..."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.51		#"Solidarity, brothers!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTCADVENTURER.51		#"Liberty! Equality! Brotherhood!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTDADVENTURER.51		#"I'd best leave before the dying starts..."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+#adventurers are instigating rebellions - taxes##
+character_event = {
+	id = adventurer.52
+	title = "The Revolt"
+	desc = EVTDESCADVENTURER.52
+	picture = "GFX_evt_peasants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.52		#"Hah, my peasants actually pay more..."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.52		#"No more gold for tyrants!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTCADVENTURER.52		#"Read my lips - no new taxes!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTDADVENTURER.51		#"I'd best leave before the dying starts..."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#adventurers are instigating rebellions - demons##
+character_event = {
+	id = adventurer.53
+	title = "The Revolt"
+	desc = EVTDESCADVENTURER.53
+	picture = "GFX_evt_peasants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.53		#"Hah - The only demonic force here is me!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.53		#"Kill the demons, kill them with fire!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTCADVENTURER.53		#"Your faith will protect you - to arms!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTDADVENTURER.51		#"I'd best leave before the dying starts..."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					OR = {
+						tier = COUNT
+						tier = DUKE
+						tier = KING
+						tier = EMPEROR
+					}
+				}
+				random_realm_province = {
+					add_province_modifier = {
+						name = adventurer_subversion duration = 180
+					}
+					owner = {
+						character_event = {
+							id = adventurer.54 days = 7
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#ruler is informed adventurers are spreading revolt#
+character_event = {
+	id = adventurer.54
+	title = "Revolts"
+	desc = EVTDESCADVENTURER.54
+	picture = "GFX_evt_peasants"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.54		#"Cursed adventurers..."
+	}
+
+}
+
+#adventurers are assassinating the enemy Marshall##
+character_event = {
+	id = adventurer.55
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.55
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.55		#"Quietly... stealthily..."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					independent = yes
+				}
+				random_courtier = {
+					limit = {
+						has_job_title = job_marshal
+					}
+					character_event = {
+						id = adventurer.58
+					}
+				}
+			}
+		}
+	}
+
+}
+
+#adventurers are assassinating an enemy count##
+character_event = {
+	id = adventurer.56
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.56
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.55		#"Quietly... stealthily..."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					independent = yes
+				}
+				random_vassal = {
+					limit = {
+						tier = COUNT
+					}
+					character_event = {
+						id = adventurer.66
+					}
+				}
+			}
+		}
+	}
+
+}
+
+#adventurers are assassinating an enemy count##
+character_event = {
+	id = adventurer.57
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.57
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.57		#"I'll kill them in their sleep!"
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					independent = yes
+				}
+				any_vassal = {
+					any_courtier = {
+						limit = {
+							AND = {
+								age = 16
+								NOT = {
+									age = 19
+								}
+							}
+						}
+						character_event = {
+							id = adventurer.69
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.57		#"I'll poison their wine."
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					independent = yes
+				}
+				any_vassal = {
+					any_courtier = {
+						limit = {
+							AND = {
+								age = 16
+								NOT = {
+									age = 19
+								}
+							}
+						}
+						character_event = {
+							id = adventurer.70
+						}
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTCADVENTURER.57		#"A well placed fireball spell, perhaps..."
+		trigger = {
+			OR = {
+				trait = trained_mage
+				trait = master_mage
+				trait = legendary_mage
+				trait = trained_sorcerer
+				trait = master_sorcerer
+				trait = legendary_sorcerer
+			}
+		}
+		FROMFROMFROM = {
+			random_current_enemy = {
+				limit = {
+					independent = yes
+				}
+				any_vassal = {
+					any_courtier = {
+						limit = {
+							AND = {
+								age = 16
+								NOT = {
+									age = 19
+								}
+							}
+						}
+						character_event = {
+							id = adventurer.71
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+#adventurers are assassinating the enemy marshal - marshal is informed##
+character_event = {
+	id = adventurer.58
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.58
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.58		#"Guards! *prepare to defend yourself*"
+		random_list = {
+			50 = {
+				FROM = {
+					character_event = {
+						id = adventurer.59
+					}
+				}
+				random_list = {
+					5 = {
+						add_trait = wounded
+					}
+					20 = {
+						add_trait = maimed
+					}
+					75 = {
+						modifier = {
+							factor = 0.05
+							trait = BPinvulnerability
+						}
+						death = {
+							death_reason = death_battle
+						}
+					}
+				}
+			}
+			50 = {
+				FROM = {
+					character_event = {
+						id = adventurer.60
+					}
+				}
+			}
+		}
+	}
+}
+
+#adventurers are assassinating the enemy Marshall - success, adventurers pov##
+character_event = {
+	id = adventurer.59
+	title = "The Assassination "
+	desc = EVTDESCADVENTURER.59
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.59		#"Hah! Too easy!"
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.59		#"Better him dead, if it helps end the war."
+	}
+
+}
+
+#adventurers are assasinating the enemy marshall - failure, adventurers pov##
+character_event = {
+	id = adventurer.60
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.60
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.60		#"Damnations! Time to run!"
+		random_list = {
+			70 = {}
+			25 = {
+				add_trait = wounded
+			}
+			5 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+		FROM = {
+			character_event = {
+				id = adventurer.61
+			}
+		}## event where Marshall is told he will live because assassin ran##
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.60		#"Damnations! But there's still time!"
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				80 = {
+					FROM = {
+						character_event = {
+							id = adventurer.62
+						}
+					}
+				}## marshall survives after a fight, assassin gets away##
+				20 = {
+					character_event = {
+						id = adventurer.64
+					}## assassin kills marshall, and gets away, adventurer pov##
+					FROM = {
+						character_event = {
+							id = adventurer.63
+						}
+					}## assassin kills marshall, and gets away, marshall pov##
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				15 = {
+					FROM = {
+						character_event = {
+							id = adventurer.62	##marshall survives fight, assassin gets away##
+						}
+					}
+				}
+				85 = {
+					character_event = {
+						id = adventurer.64		## assassin kills marshall, and gets away, adventurer pov##
+					}
+					FROM = {
+						character_event = {
+							id = adventurer.63	## marshall dies, assassin gets away, marshall pov##
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+#adventurers are assasinating the enemy marshall - failure, adventurers run away, marshall pov##
+character_event = {
+	id = adventurer.61
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.61
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.61		#"That was a close call!"
+	}
+
+}
+
+#adventurers are assasinating the enemy marshall - discovered, adventurers fight, marshall pov##
+character_event = {
+	id = adventurer.62
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.62
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.61		#"That was a close call!"
+		FROM = {
+			character_event = {
+				id = adventurer.65	## adventurer is told he has lost the fight, and flees#
+			}
+		}
+	}
+
+}
+
+#adventurers are assasinating the enemy marshall - discovered, adventurers fight, marshall pov##
+character_event = {
+	id = adventurer.63
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.63
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.63		#"Nooo!"
+		random_list = {
+			15 = {
+				add_trait = maimed
+			}
+			85 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+	}
+
+}
+
+#adventurers are assasinating the enemy marshall - discovered, adventurers fight, adventurer pov##
+character_event = {
+	id = adventurer.64
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.64
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "RUN"
+		random_list = {
+			15 = {
+				add_trait = wounded
+			}
+			5 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+			80 = {
+				add_trait = wounded
+			}
+		}
+	}
+
+}
+
+#adventurers are assasinating the enemy marshall - discovered, adventurers fight, adventurer pov, loss##
+character_event = {
+	id = adventurer.65
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.65
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "RUN"
+		random_list = {
+			15 = {
+				add_trait = wounded
+			}
+			5 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+			80 = {
+				add_trait = wounded
+			}
+		}
+	}
+}
+
+#adventurers are assasinating the enemy COUNT - count is informed##
+character_event = {
+	id = adventurer.66
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.66
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.58		#"Guards! *prepare to defend yourself*"
+		random_list = {
+			50 = {
+				FROM = {
+					character_event = {
+						id = adventurer.67
+					}
+				}
+				random_list = {
+					5 = {
+						add_trait = wounded
+					}
+					20 = {
+						add_trait = maimed
+					}
+					75 = {
+						modifier = {
+							factor = 0.05
+							trait = BPinvulnerability
+						}
+						death = {
+							death_reason = death_battle
+						}
+					}
+				}
+			}
+			50 = {
+				FROM = {
+					character_event = {
+						id = adventurer.68
+					}
+				}
+			}
+		}
+	}
+}
+
+#adventurers are assasinating the enemy counts - success, adventurers pov##
+character_event = {
+	id = adventurer.67
+	title = "The Assassination "
+	desc = EVTDESCADVENTURER.67
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.59		#"Hah! Too easy!"
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.59		#"Better him dead, if it helps end the war."
+	}
+
+}
+
+#adventurers are assasinating the enemy count - failure, adventurers pov##
+character_event = {
+	id = adventurer.68
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.68
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.60		#"Damnations! Time to run!"
+		random_list = {
+			70 = {}
+			25 = {
+				add_trait = wounded
+			}
+			5 = {
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+		FROM = {
+			character_event = {
+				id = adventurer.61
+			}
+		}##		event where marshall is told he will live because assassin ran##
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.60		#"Damnations! But there's still time!"
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				80 = {
+					FROM = {
+						character_event = {
+							id = adventurer.62
+						}
+					}
+				}##				marshall survives after a fight, assassin gets away##
+				20 = {
+					character_event = {
+						id = adventurer.64
+					}##					assassin kills marshall, and gets away, adventurer pov##
+					FROM = {
+						character_event = {
+							id = adventurer.63
+						}
+					}##					assassin kills marshall, and gets away, marshall pov##
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				15 = {
+					FROM = {
+						character_event = {
+							id = adventurer.62
+						}
+					}##					marshall survives fight, assassin gets away##
+				}
+				85 = {
+					character_event = {
+						id = adventurer.64
+					}##					assassin kills marshall, and gets away, adventurer pov##
+					FROM = {
+						character_event = {
+							id = adventurer.63
+						}
+					}##					marshall dies, assassin gets away, marshall pov##
+				}
+			}
+		}
+	}
+}
+
+#adventurers are assasinating random nobles - enemy pov, kill during night##
+character_event = {
+	id = adventurer.69
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.69
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.69		#"Assassins! I hope I survive!"
+		random_list = {
+			10 = {
+				add_trait = wounded
+			}
+			20 = {
+				add_trait = maimed
+			}
+			70 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+				FROM = {
+					character_event = {
+						id = adventurer.72
+					}
+				}
+
+			}
+		}
+	}
+
+}
+
+
+#adventurers are assasinating random nobles - enemy pov, poison##
+character_event = {
+	id = adventurer.70
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.70
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.70		#"Poison! I hope I survive!"
+		random_list = {
+			30 = {}
+			70 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				modifier = {
+					factor = 0
+					trait = BPpoison_sense
+				}
+				FROM = {
+					character_event = {
+						id = adventurer.73
+					}
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+	}
+}
+
+
+#adventurers are assasinating random nobles - enemy pov, poison##
+character_event = {
+	id = adventurer.71
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.71
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.69		#"Assassins! I hope I survive!"
+		random_list = {
+			20 = {}
+			80 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				FROM = {
+					character_event = {
+						id = adventurer.74
+					}
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+	}
+}
+
+
+#adventurers are assasinating random nobles - player pov, kill during night##
+character_event = {
+	id = adventurer.72
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.72
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.72		#"Time to leave!"
+	}
+
+}
+
+#adventurers are assasinating random nobles - player pov, poison##
+character_event = {
+	id = adventurer.73
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.73
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.72		#"Time to leave!"
+	}
+
+}
+
+#adventurers are assasinating random nobles - player pov, fireball##
+character_event = {
+	id = adventurer.74
+	title = "The Assassination"
+	desc = EVTDESCADVENTURER.74
+	picture = "GFX_evt_shadow"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.72		#"Time to leave!"
+		add_trait = cruel
+	}
+
+}
+
+#end of contract after 6 months##
+character_event = {
+	id = adventurer.75
+	title = "End of the Contract"
+	desc = EVTDESCADVENTURER.75
+	picture = "GFX_evt_council"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "OK"
+		remove_trait = on_current_quest
+	}
+
+}
+
+#special forces, lead from front##
+character_event = {
+	id = adventurer.76
+	title = "Battles Ahead"
+	desc = EVTDESCADVENTURER.76
+	picture = "GFX_evt_battle"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.76		#"Forwards!"
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				75 = {}
+				15 = {
+					add_trait = wounded
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				5 = {
+					add_trait = maimed
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				5 = {
+					modifier = {
+						factor = 0.05
+						trait = BPinvulnerability
+					}
+					death = {
+						death_reason = death_battle
+					}
+				}
+			}
+		
+		}
+		if = {
+			limit = {
+				OR = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				85 = {}
+				10 = {
+					add_trait = wounded
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				3 = {
+					add_trait = maimed
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				2 = {
+					modifier = {
+						factor = 0.05
+						trait = BPinvulnerability
+					}
+					death = {
+						death_reason = death_battle
+					}
+				}
+			}
+		}
+	}
+
+}
+
+	#special forces, lead from center##
+character_event = {
+	id = adventurer.77
+	title = "Battles Ahead"
+	desc = EVTDESCADVENTURER.77
+	picture = "GFX_evt_battle"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.76		#"Forward!"
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				75 = {}
+				20 = {
+					add_trait = wounded
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				3 = {
+					add_trait = maimed
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				2 = {
+					modifier = {
+						factor = 0.05
+						trait = BPinvulnerability
+					}
+					death = {
+						death_reason = death_battle
+					}
+				}
+			}
+			break = yes
+		}
+		random_list = {
+			85 = {}
+			12 = {
+				add_trait = wounded
+				character_event = {
+					id = adventurer.8
+				}
+			}
+			2 = {
+				add_trait = maimed
+				character_event = {
+					id = adventurer.8
+				}
+			}
+	}
+
+}
+}
+
+#special forces, lead from rear##
+character_event = {
+	id = adventurer.78
+	title = "Battles Ahead"
+	desc = EVTDESCADVENTURER.78
+	picture = "GFX_evt_battle"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAADVENTURER.78		#"Attack, men! I'll stay here."
+		if = {
+			limit = {
+				NOT = {
+					trait = master_bard
+					trait = legendary_bard
+					trait = master_mage
+					trait = legendary_mage
+					trait = master_priest
+					trait = legendary_priest
+					trait = master_ranger
+					trait = legendary_ranger
+					trait = master_rogue
+					trait = legendary_rogue
+					trait = master_fighter
+					trait = legendary_fighter
+					trait = master_sorcerer
+					trait = legendary_sorcerer
+				}
+			}
+			random_list = {
+				92 = {}
+				5 = {
+					add_trait = wounded
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				2 = {
+					add_trait = maimed
+					character_event = {
+						id = adventurer.8
+					}
+				}
+				1 = {
+					modifier = {
+						factor = 0.05
+						trait = BPinvulnerability
+					}
+					death = {
+						death_reason = death_battle
+					}
+				}
+			}
+			break = yes
+		}
+		random_list = {
+			92 = {}
+			5 = {
+				add_trait = wounded
+				character_event = {
+					id = adventurer.8
+				}
+			}
+			3 = {
+				add_trait = maimed
+				character_event = {
+					id = adventurer.8
+				}
+			}
+			1 = {
+				modifier = {
+					factor = 0.05
+					trait = BPinvulnerability
+				}
+				death = {
+					death_reason = death_battle
+				}
+			}
+		}
+	}
+
+}
+
+#######################################
+####Trained to Master Difficulty Quests#########
+#######################################
+
+## giant tribe quest##
+character_event = {
+	id = adventurer.79
+	title = "Giant Tribe"
+	desc = EVTDESCADVENTURER.79
+	picture = "GFX_evt_feast"
+
+	trigger = {
+		AND = {
+			trait = adventuring
+			NOT = {
+				trait = on_current_quest
+			}
+			prisoner = no
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 2
+			has_character_flag = adventurer79
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				trait = amateur_bard
+				trait = amateur_mage
+				trait = amateur_priest
+				trait = amateur_ranger
+				trait = amateur_rogue
+				trait = amateur_fighter
+				trait = amateur_sorcerer
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				trait = novice_bard
+				trait = novice_mage
+				trait = novice_priest
+				trait = novice_ranger
+				trait = novice_rogue
+				trait = novice_fighter
+				trait = novice_sorcerer
+			}
+		}
+		modifier = {
+			factor = 0.2
+			OR = {
+				trait = trained_bard
+				trait = trained_mage
+				trait = trained_priest
+				trait = trained_ranger
+				trait = trained_rogue
+				trait = trained_fighter
+				trait = trained_sorcerer
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTAADVENTURER.79		#"We can take em down..."
+		trigger = {
+			OR = {
+			ai = no
+			AND = {
+			NOT = { trait = amateur_bard }
+			NOT = { trait = amateur_mage }
+			NOT = { trait = amateur_priest }
+			NOT = { trait = amateur_ranger }
+			NOT = { trait = amateur_rogue }
+			NOT = { trait = amateur_fighter }
+			NOT = { trait = amateur_sorcerer }	
+			NOT = { trait = novice_bard }
+			NOT = { trait = novice_mage }
+			NOT = { trait = novice_priest }
+			NOT = { trait = novice_ranger }
+			NOT = { trait = novice_rogue }
+			NOT = { trait = novice_fighter }
+			NOT = { trait = novice_sorcerer }				
+		}
+		}
+		}
+		set_character_flag = adventurer79
+		add_trait = on_current_quest
+		character_event = {
+			id = adventurer.80 days = 7
+		}
+	}
+
+	option = {
+		name = EVTOPTBADVENTURER.79		#"No, giants are too much for us."
+		trigger = {
+			OR = {
+			ai = no
+			trait = amateur_bard
+			trait = amateur_mage
+			trait = amateur_priest
+			trait = amateur_ranger
+			trait = amateur_rogue
+			trait = amateur_fighter
+			trait = amateur_sorcerer	
+			trait = novice_bard
+			trait = novice_mage
+			trait = novice_priest
+			trait = novice_ranger
+			trait = novice_rogue
+			trait = novice_fighter
+			trait = novice_sorcerer				
+		}
+		}
+		set_character_flag = adventurer79
+	}
+
+}
+
+character_event = {
+	id = adventurer.80
+	title = "Giant Tribe"
+	desc = EVTDESCADVENTURER.80
+	picture = "GFX_evt_bandits"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "CHARGE"
+		remove_trait = on_current_quest
+		wealth = 50
+					if = {
+		limit = {
+					OR = {
+						trait = amateur_bard
+						trait = amateur_mage
+						trait = amateur_priest
+						trait = amateur_ranger
+						trait = amateur_rogue
+						trait = amateur_fighter
+						trait = amateur_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 40 }
+		}
+		if = {
+		limit = {
+					OR = {
+						trait = novice_bard
+						trait = novice_mage
+						trait = novice_priest
+						trait = novice_ranger
+						trait = novice_rogue
+						trait = novice_fighter
+						trait = novice_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 25 }
+		}
+		if = {
+		limit = {
+					OR = {
+						trait = trained_bard
+						trait = trained_mage
+						trait = trained_priest
+						trait = trained_ranger
+						trait = trained_rogue
+						trait = trained_fighter
+						trait = trained_sorcerer
+					}
+				}
+		change_variable = { which = XP value = 15 }
+		}
+		# THE START
+		#Create the character to fight with
+		
+		create_random_soldier = {
+			name = "Giant"
+			random_traits = yes
+			dynasty = none
+			religion = GiantPantheon
+			culture = Giant
+			female = no
+			age = 40
+		}
+		#scope to character we created and send him duel init event
+		new_character = {
+			set_character_flag = tempchar
+			character_event = {id = duelengine.1 days = 1}
+			add_trait = novice_fighter
+		}
+			}
+
+	option = {
+		name = EVTOPTBADVENTURER.80 # No, wait, let's not do this...
+		trigger = {
+			ai = no
+		}
+		remove_trait = on_current_quest
+		prestige = -50
+	}
+
+}
+
+
+#CLEAN UP EVENT TO GET RID OF TEMP CHARS
+character_event = {
+	id = adventurer.104
+	title = THE_BATTLE # The Battle
+	desc = EVTDESCADVENTURER.82
+	picture = "GFX_evt_battle"
+	hide_window = yes
+	
+	trigger = {
+	has_character_flag = tempchar
+	age = 16
+	}
+	
+	mean_time_to_happen = {
+	months = 1
+	}
+
+	option = {
+		name = "RUN"
+		death = {
+					death_reason = death_battle
+				}
+			}
+}
+
+#######################################
+####Class specific events##############
+#######################################
+
+
+
+##########################################
+####Random adventurer flavor events#######
+##########################################
+
+#Your son got a random girl pregnant while adventuring
+
+character_event = {
+	id = adventurer.83
+	desc = EVTDESCadventurer.83
+	picture = GFX_evt_pregnancy
+
+
+	min_age = 15
+	prisoner = no
+	only_men = yes
+
+	mean_time_to_happen = { years = 6 }
+
+	trigger = {
+		any_child = {
+			is_female = no
+			age = 15
+			NOT = { age = 30 }
+			trait = adventuring
+			NOT = { trait = chaste }
+			NOT = { trait = celibate }
+			NOT = { trait = eunuch }
+		}
+	}
+
+	immediate = {
+		random_child = {
+			limit = {
+				is_female = no
+				age = 15
+				NOT = { age = 30 }
+				trait = adventuring
+				NOT = { trait = chaste }
+				NOT = { trait = celibate }
+				NOT = { trait = eunuch }
+			}
+			set_character_flag = sent_bastard_home
+		}
+	}
+
+	option = {
+		name = EVTOPTAadventurer.83# That 's my boy
+		trigger = {
+			NOT = { trait = chaste }
+			NOT = { trait = celibate }
+		}
+		prestige = 10
+		random_child = {
+			limit = { has_character_flag = sent_bastard_home }
+			opinion = {
+				modifier = approves_of_my_behaviour
+				who = ROOT
+				years = 2
+			}
+			add_trait = lustful
+			clr_character_flag = sent_bastard_home
+		}
+	}
+	option = {
+		name = EVTOPTBadventurer.83# You shall give him home
+		prestige = 10
+		treasury = -3
+		random_child = {
+			limit = { has_character_flag = sent_bastard_home }
+			opinion = {
+				modifier = opinion_accepted_my_bastard
+				who = ROOT
+				years = 4
+			}
+			create_character = {
+				age = 0
+				trait = bastard
+			}
+			new_character = {
+				set_father = prev
+				dynasty = father_bastard
+				set_character_flag = bastard_of_adventure
+			}
+			clr_character_flag = sent_bastard_home
+		}
+	}
+	option = {
+		name = EVTOPTCadventurer.83# Liers
+		random_child = {
+			limit = { has_character_flag = sent_bastard_home }
+			opinion = {
+				modifier = opinion_denied_my_bastard
+				who = ROOT
+				years = 2
+			}
+			add_trait = wroth
+			add_trait = ambitious
+			clr_character_flag = sent_bastard_home
+		}
+	}
+	option = {
+		name = EVTOPTDadventurer.83# Send him away
+	}
+}
+
+
+####################################
+###         LEVEL UP!!!			 ###
+####################################
+
+#level up from amateur to novice
+character_event = {
+	id = adventurer.100
+	title = LEVELUP
+	picture = "GFX_evt_hunt"
+	
+	desc = {
+		text = "EVTDESCADVENTURER.100"		#normal
+		trigger = {
+			NOT = { trait = lunatic }
+		}
+	}
+	
+	desc = {
+		text = "EVTDESCADVENTURER.100b"		#Fourth-wall-breaking
+		trigger = {
+			trait = lunatic
+		}
+	}
+	
+	trigger = {
+		check_variable = { which = XP value = 100 }
+		OR = {
+				trait = amateur_bard
+				trait = amateur_mage
+				trait = amateur_priest
+				trait = amateur_ranger
+				trait = amateur_rogue
+				trait = amateur_fighter
+				trait = amateur_sorcerer
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 20
+	}
+	
+	option = {
+		name = EXCELLENT
+		if = {
+			limit = {
+				trait = amateur_bard
+			}
+			hidden_tooltip = { remove_trait = amateur_bard }
+			add_trait = novice_bard
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				trait = amateur_mage
+			}
+			hidden_tooltip = { remove_trait = amateur_mage }
+			add_trait = novice_mage
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				trait = amateur_priest
+			}
+			hidden_tooltip = { remove_trait = amateur_priest }
+			add_trait = novice_priest
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = amateur_ranger
+			}
+			hidden_tooltip = { remove_trait = amateur_ranger }
+			add_trait = novice_ranger
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = amateur_rogue
+			}
+			hidden_tooltip = { remove_trait = amateur_rogue }
+			add_trait = novice_rogue
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = amateur_fighter
+			}
+			hidden_tooltip = { remove_trait = amateur_fighter }
+			add_trait = novice_fighter
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = amateur_sorcerer
+			}
+			hidden_tooltip = { remove_trait = amateur_sorcerer }
+			add_trait = novice_sorcerer
+			break = yes
+		}
+	}
+	
+}
+
+#level up from novice to trained
+character_event = {
+	id = adventurer.101
+	title = LEVELUP
+	picture = "GFX_evt_hunt"
+	desc = "EVTDESCADVENTURER.100"
+
+	
+	trigger = {
+		check_variable = { which = XP value = 200 }
+		OR = {
+				trait = novice_bard
+				trait = novice_mage
+				trait = novice_priest
+				trait = novice_ranger
+				trait = novice_rogue
+				trait = novice_fighter
+				trait = novice_sorcerer
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 20
+	}
+	
+	option = {
+		name = EXCELLENT
+		if = {
+			limit = {
+				trait = novice_bard
+			}
+			hidden_tooltip = { remove_trait = novice_bard }
+			add_trait = trained_bard
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				trait = novice_mage
+			}
+			hidden_tooltip = { remove_trait = novice_mage }
+			add_trait = trained_mage
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				trait = novice_priest
+			}
+			hidden_tooltip = { remove_trait = novice_priest }
+			add_trait = trained_priest
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = novice_ranger
+			}
+			hidden_tooltip = { remove_trait = novice_ranger }
+			add_trait = trained_ranger
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = novice_rogue
+			}
+			hidden_tooltip = { remove_trait = novice_rogue }
+			add_trait = trained_rogue
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = novice_fighter
+			}
+			hidden_tooltip = { remove_trait = novice_fighter }
+			add_trait = trained_fighter
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = novice_sorcerer
+			}
+			hidden_tooltip = { remove_trait = novice_sorcerer }
+			add_trait = trained_sorcerer
+			break = yes
+		}
+	}
+	
+}
+
+#level up from novice to trained
+character_event = {
+	id = adventurer.102
+	title = LEVELUP
+	picture = "GFX_evt_hunt"
+	desc = "EVTDESCADVENTURER.100"
+
+	
+	trigger = {
+		check_variable = { which = XP value = 500 }
+		OR = {
+				trait = trained_bard
+				trait = trained_mage
+				trait = trained_priest
+				trait = trained_ranger
+				trait = trained_rogue
+				trait = trained_fighter
+				trait = trained_sorcerer
+	}
+	}
+	
+	mean_time_to_happen = {
+	days = 20
+	}
+	
+	option = {
+		name = EXCELLENT
+		if = {
+			limit = {
+				trait = trained_bard
+			}
+			hidden_tooltip = { remove_trait = trained_bard }
+			add_trait = master_bard
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				trait = trained_mage
+			}
+			hidden_tooltip = { remove_trait = trained_mage }
+			add_trait = master_mage
+			break = yes
+		}
+		
+		if = {
+			limit = {
+				trait = trained_priest
+			}
+			hidden_tooltip = { remove_trait = trained_priest }
+			add_trait = master_priest
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = trained_ranger
+			}
+			hidden_tooltip = { remove_trait = trained_ranger }
+			add_trait = master_ranger
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = trained_rogue
+			}
+			hidden_tooltip = { remove_trait = trained_rogue }
+			add_trait = master_rogue
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = trained_fighter
+			}
+			hidden_tooltip = { remove_trait = trained_fighter }
+			add_trait = master_fighter
+			break = yes
+		}
+		if = {
+			limit = {
+				trait = trained_sorcerer
+			}
+			hidden_tooltip = { remove_trait = trained_sorcerer }
+			add_trait = master_sorcerer
+			break = yes
+		}
+	}
+	
+}
+
+#kill all temp chars
+character_event = {
+	id = adventurer.103
+	title = LEVELUP
+	picture = "GFX_evt_hunt"
+	desc = "EVTDESCADVENTURER.100"
+	hide_window = yes
+	
+	trigger = {
+		age = 1
+		has_character_flag = temp_char
+	}
+	
+	mean_time_to_happen = {
+	months = 2
+	}
+	
+	option = {
+		name = EXCELLENT
+				death = {
+					death_reason = death_battle
+				}
+	}
+	
+}
+
+
+#104 userd above

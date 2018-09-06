@@ -1,0 +1,364 @@
+namespace = health
+
+##menopause for mortal women##
+character_event = {
+id = health.0
+title = INFERTILITY # Infertility
+desc = "EVTDESCHEALTH.0"
+picture = "GFX_evt_plague_doctor"
+
+	min_age = 45
+	only_women = yes
+
+	trigger = {
+		NOT = { 
+			trait = infertile
+			trait = awn_succubus
+			trait = awn_succubus2
+			trait = awn_lahmia
+			trait = elf
+			trait = dwarven
+			trait = half_elf
+			trait = BPlong_life
+			trait = elixir_of_eternal_youth
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 4
+	}
+
+	option = {
+		name = OK
+		add_trait = infertile
+	}
+}
+
+
+#elven/dwarven infertility#
+character_event = {
+	id = health.1
+	title = INFERTILITY # Infertility
+	picture = "GFX_evt_pregnancy"
+	
+	is_triggered_only = yes
+
+	desc = {
+		text = "EVTDESCHEALTH.1"
+		trigger = {
+			trait = elf
+		}
+	}
+	
+	desc = {
+		text = "EVTDESCHEALTH.3"
+		trigger = {
+			trait = dwarven
+		}
+	}
+	
+	trigger = {
+		NOT = { trait = infertile }
+		is_pregnant = yes
+		OR = {
+			trait = elf
+			AND = {
+				trait = dwarven
+				num_of_children = 1
+				random = 88		#12% chance
+			}
+		}
+	}
+
+	option = {
+		name = OK
+		trigger = {
+			trait = elf
+		}
+		add_trait = infertile
+		hidden_tooltip = {	character_event = { id = health.2 days = 10000 } }	#Remove infertility some 30 years later
+	}
+	
+	option = {
+		name = OK
+		trigger = {
+			trait = dwarven
+		}
+		add_trait = infertile
+	}
+}
+
+#elven fertility again#
+character_event = {
+	id = health.2
+	title = INFERTILITY # Infertility
+	desc = "EVTDESCHEALTH.2"
+	picture = "GFX_evt_pregnancy"
+
+	trigger = {
+		trait = infertile
+		trait = elf
+	}
+
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		remove_trait = infertile
+	}
+}
+
+
+###Universalized aging system for immortal=yes races
+#	After age 100, characters lose health in chunks of .2 in events with 5 year MTTH (25 year for elves)
+#	Each full point of health then provides approximately 25 years of lifespan after this point, or 125 years for elves
+#	Upon reaching negative health, they qualify for an event becoming infirm (basically just to know you're close to death)
+#	Which in turn allows an event to kill them
+
+
+character_event = {
+	id = health.3
+	desc = "EVTDESCHEALTH.4"
+	picture = "GFX_evt_illness"
+	
+	hide_window = yes
+	
+	min_age = 100
+		
+	trigger = {
+		NOT = { 
+			trait = infirm
+			trait = BPbloodform
+			trait = awn_succubus2
+			trait = vampire
+			trait = awn_succubus
+			trait = awn_brute
+			trait = awn_magian
+			trait = awn_white_witch
+			trait = awn_gorgon
+			trait = awn_spider
+			trait = awn_rhuobhe
+			trait = awn_lahmia
+			trait = awn_lahmia2
+			trait = awn_serpent
+			trait = awn_raven		
+			trait = awn_hag
+			trait = awn_chimaera
+			trait = awn_basilisk
+			trait = awn_banshegh
+			trait = awn_kraken
+			trait = awn_manticore
+			trait = awn_sphinx
+			trait = awn_swordhawk
+			trait = awn_harpy
+			trait = elf		#don't age even if BPlong_life
+			trait = elixir_of_eternal_youth
+		}
+		OR = {
+			trait = dwarven
+			trait = half_elf
+			trait = BPlong_life
+		}
+	}
+		  
+	mean_time_to_happen = {
+		years = 5
+		
+		modifier = {
+			factor = 5
+			trait = elf
+		}
+		modifier = {
+			factor = 1.5	#Dwarves live 100yr longer, to ~350 on average
+			trait = dwarven
+		}
+		modifier = {
+			factor = 1.5
+			AND = {
+				trait = BPlong_life
+				OR = {
+					trait = dwarven
+					trait = half_elf
+					trait = elf
+				}
+			}
+		}
+		modifier = {	#Significantly faster once they pass typical death point
+			factor = 0.5
+			OR = {
+				AND = {
+					trait = dwarven
+					age = 350
+				}
+				AND = {
+					age = 250
+					OR = {
+						trait = half_elf
+						trait = BPlong_life
+					}
+				}
+			}
+		}			
+	}
+
+	option = {
+		name = "OK"
+		
+		if = {
+			limit = { NOT = { health = 0 } }
+			character_event = { id = health.4 }
+		}
+		health = -0.2		#Put this after the check for negative health, just to be nice
+	}
+}
+
+
+character_event = {
+	id = health.4
+	picture = "GFX_evt_illness"
+	
+	desc = {
+		text = "EVTDESCHEALTH.4"
+		trigger = {
+			OR = {
+				trait = half_elf
+				trait = dwarven
+			}
+		}
+	}
+	
+	desc = {
+		text = "EVTDESCHEALTH.8"
+		trigger = {
+			NOT = {
+				trait = elf
+				trait = half_elf
+				trait = dwarven
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	min_age = 100
+		
+	option = {
+		name = "OK"
+
+		add_trait = infirm
+	}
+}
+
+
+character_event = {
+	id = health.5
+	picture = "GFX_evt_illness"
+	
+	desc = {
+		text = "EVTDESCHEALTH.5"
+		trigger = {
+			OR = {
+				trait = half_elf
+				trait = dwarven
+			}
+		}
+	}
+	
+	desc = {
+		text = "EVTDESCHEALTH.9"
+		trigger = {
+			NOT = {
+				trait = elf
+				trait = half_elf
+				trait = dwarven
+			}
+		}
+	}
+	
+	min_age = 100
+		
+	trigger = {
+		trait = infirm
+		OR = {
+			trait = dwarven
+			trait = half_elf
+#			trait = elf
+			trait = BPlong_life
+		}
+	}
+		  
+	mean_time_to_happen = {
+		years = 10
+		
+		modifier = {
+			factor = 5
+			trait = elf
+		}
+	}
+
+	option = {
+		name = "OK"
+		death = {
+			death_reason = death_by_nature
+		}
+	}
+}
+
+
+character_event = {
+	id = health.6
+	desc = "EVTDESCHEALTH.6"
+	picture = "GFX_evt_recovery"
+		
+	trigger = {
+		trait = BPmajor_regeneration
+		OR = {
+			trait = maimed
+			trait = blinded
+			trait = eunuch
+		}
+	}
+		  
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = EXCELLENT
+		if = {
+			limit = { trait = maimed }
+			remove_trait = maimed
+		}
+		if = {
+			limit = { trait = blinded }
+			remove_trait = blinded
+		}
+		if = {
+			limit = { trait = eunuch }
+			remove_trait = eunuch
+		}
+	}
+}
+
+#safety event to kill chars with negative health, as it can cause CTD subtracting from someone with a minus already it seems... BR NOTE
+character_event = {
+	id = health.7
+	desc = "EVTDESCHEALTH.6"
+	picture = "GFX_evt_recovery"
+	hide_window = yes
+	
+	trigger = {
+		NOT = { health = 0.1 }
+	}
+		  
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	option = {
+		name = EXCELLENT
+		death = {
+			death_reason = death_by_nature
+		}
+	}
+}

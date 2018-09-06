@@ -1,0 +1,641 @@
+namespace = unification
+
+character_event = {
+    id = unification.0
+    title = TEST # test
+    desc = TEST # test
+    picture = "GFX_evt_busy_trading_dock_republic"
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {  
+		has_landed_title = b_bayview
+		NOT = {		#Cease calculations if everyone already unified
+			AND = {
+				has_global_flag = anuirean_unified
+				has_global_flag = rjurik_unified
+				has_global_flag = khinasi_unified
+				has_global_flag = brecht_unified
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	#mean_time_to_happen = {
+	#	days = 30
+	#}
+	
+	option = {
+		name = "OK"
+		set_variable = { which = anuirean_fear_factor value = 0 }
+		set_variable = { which = rjurik_fear_factor value = 0 }
+		set_variable = { which = khinasi_fear_factor value = 0 }
+		set_variable = { which = brecht_fear_factor value = 0 }				#Initialize all to zero, then
+		any_independent_ruler = {											#for each top ruler
+			if = {
+				limit = { NOT = { religion_group = gods_of_good } }			#If not a believer in the gods of good, then
+				any_realm_province = {										#for each province in their realm
+					if = {													#Add one to the fear factor of that province's de-jure empire, if a human empire
+						limit = { empire = { title = e_anuire } }
+						ROOT = { change_variable = { which = anuirean_fear_factor value = 1 } }
+					}
+					if = {
+						limit = { empire = { title = e_rjurik_highlands } }
+						ROOT = { change_variable = { which = rjurik_fear_factor value = 1 } }
+					}
+					if = {
+						limit = { empire = { title = e_khinasi } }
+						ROOT = { change_variable = { which = khinasi_fear_factor value = 1 } }
+					}
+					if = {
+						limit = { empire = { title = e_brechtuer } }
+						ROOT = { change_variable = { which = brecht_fear_factor value = 1 } }
+					}
+				}
+			}
+		}
+		#40 provinces start out wrong-religion in Anuirean, mostly gorgon's crown.  Warning at 65, unification at 70.
+		if = {
+			limit = {
+				check_variable = { which = anuirean_fear_factor value = 65 }
+				NOT = { has_global_flag = anuirean_warning }
+			}
+			any_playable_ruler = {
+				limit = { ai = no }
+				character_event = { id = unification.2 days = 7 }
+			}
+			set_global_flag = anuirean_warning
+		}
+		if = {
+			limit = {
+				check_variable = { which = anuirean_fear_factor value = 70 }
+				NOT = { has_global_flag = anuirean_unify_allowed }
+			}
+			set_global_flag = anuirean_unify_allowed
+		}
+		
+		#51 provinces start out wrong-religion in rjurik highlands, out of 117.  Warning at 66, unification at 71.
+		if = {
+			limit = {
+				check_variable = { which = rjurik_fear_factor value = 66 }	#66
+				NOT = { has_global_flag = rjurik_warning }
+			}
+			any_playable_ruler = {
+				limit = { ai = no }
+				character_event = { id = unification.8 days = 7 }
+			}
+			set_global_flag = rjurik_warning
+		}
+		if = {
+			limit = {
+				check_variable = { which = rjurik_fear_factor value = 71 }	#71
+				NOT = { has_global_flag = rjurik_unify_allowed }
+			}
+			set_global_flag = rjurik_unify_allowed
+		}
+		#66 provinces start out wrong-religion in e_khinasi.  warning at 101, unification at 106
+		if = {
+			limit = {
+				check_variable = { which = khinasi_fear_factor value = 101 }
+				NOT = { has_global_flag = khinasi_warning }
+			}
+			any_playable_ruler = {
+				limit = { ai = no }
+				character_event = { id = unification.20 days = 7 }
+			}
+			set_global_flag = khinasi_warning
+		}
+		if = {
+			limit = {
+				check_variable = { which = khinasi_fear_factor value = 106 }
+				NOT = { has_global_flag = khinasi_unify_allowed }
+			}
+			set_global_flag = khinasi_unify_allowed
+		}
+		#31 provinces start out wrong-religion in brecht.  warning at 56, unify at 61
+		if = {
+			limit = {
+				check_variable = { which = brecht_fear_factor value = 56 }
+				NOT = { has_global_flag = brecht_warning }
+			}
+			any_playable_ruler = {
+				limit = { ai = no }
+				character_event = { id = unification.14 days = 7 }
+			}
+			set_global_flag = brecht_warning
+		}
+		if = {
+			limit = {
+				check_variable = { which = brecht_fear_factor value = 61 }
+				NOT = { has_global_flag = brecht_unify_allowed }
+			}
+			set_global_flag = brecht_unify_allowed
+		}
+	}
+}
+
+##the event is sent from  a non playable barony ruler to all non AI rulers##
+character_event = {
+    id = unification.2
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.2"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	hide_from = yes
+		
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+	
+}
+	
+##Anuire decides to finally crown an Emperor##
+character_event = {
+    id = unification.4
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.4"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	only_rulers = yes
+	min_age = 18
+	
+	trigger = {
+		has_global_flag = anuirean_unify_allowed
+		NOT = { has_global_flag = anuirean_unified }
+		prestige = 3000
+		culture = Anuirean
+		religion_group = gods_of_good
+		independent = yes
+		is_landed = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	immediate = {
+		set_global_flag = anuirean_unified 
+	}
+	
+	option = {
+		name = YES_I_WILL_TAKE_THE_THRONE # Yes, I will take the throne.
+		primary_title = {
+			e_anuire = {
+				grant_title = ROOT
+				if = {
+					limit = { PREV = { is_crown_law_title = yes } }
+					copy_title_laws = PREV
+				}
+			}
+		}
+		any_playable_ruler = {
+			limit = { ai = no }
+			character_event = { id = unification.5 days = 7 }
+		}
+		any_playable_ruler = {
+			limit = { 
+				AND = {
+					independent = yes
+					culture = Anuirean
+					religion_group = gods_of_good
+				}
+			}
+			character_event = { id = unification.6 days = 21 }
+		}
+	}
+	
+	option = {
+		name = NO_I_DONT_WANT_THE_THRONE
+		trigger = { ai = no }
+	}
+}
+	
+##players are informed Anuire is uniting##
+character_event = {
+    id = unification.5
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.5"
+    picture = "GFX_evt_busy_trading_dock_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+}
+	
+
+##Anuirean rulers have the choice of following or not##
+character_event = {
+    id = unification.6
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.6"
+    picture = "GFX_evt_busy_trading_dock_republic"	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = unification.6.a # I will swear fealty - Anuire must be strong again.
+		trigger = {
+			OR = {
+				ai = no
+				opinion = { who = FROM value = 1 }
+			}
+		}
+		ROOT = { 
+			set_defacto_liege = FROM 
+		}
+	}
+	
+	option = {
+		name = unification.6.b # I will never bend the knee to this fool!
+		trigger = {
+			OR = {
+				ai = no
+				NOT = { opinion = { who = FROM value = 1 } }
+			}
+		}
+	}
+}
+
+##Now for the Rjurik unification events##
+  
+##the event is sent from  a non playable barony ruler to all non AI rulers##
+character_event = {
+    id = unification.8
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.8"
+    picture = "GFX_evt_council"
+	
+	is_triggered_only = yes
+	hide_from = yes
+	
+	option = {
+		name = "OK"
+	}
+	
+}
+	
+character_event = {
+    id = unification.10
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.10"
+    picture = "GFX_evt_council"	
+	
+	only_rulers = yes
+	min_age = 18
+	
+	trigger = {
+		has_global_flag = rjurik_unify_allowed
+		NOT = { has_global_flag = rjurik_unified }
+		prestige = 2000
+		culture = Rjurik
+		religion_group = gods_of_good
+		independent = yes
+		is_landed = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	immediate = {
+		set_global_flag = rjurik_unified 
+	}
+	
+	option = {
+		name = YES_I_WILL_BECOME_WARLEADER # Yes, I will take the throne.
+		primary_title = {
+			e_rjurik_highlands = {
+				grant_title = ROOT
+				if = {
+					limit = { PREV = { is_crown_law_title = yes } }
+					copy_title_laws = PREV
+				}
+			}
+		}
+		any_playable_ruler = {
+			limit = { ai = no }
+			character_event = { id = unification.11 days = 7 }
+		}
+		any_playable_ruler = {
+			limit = { 
+				AND = {
+					independent = yes
+					culture = Rjurik
+					religion_group = gods_of_good
+				}
+			}
+			character_event = { id = unification.12 days = 21 }
+		}
+	}
+	
+	option = {
+		name = NO_I_DONT_WANT_THE_THRONE
+		trigger = { ai = no }
+	}
+}
+	
+##players are informed Rjurik is uniting##
+character_event = {
+    id = unification.11
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.11"
+    picture = "GFX_evt_viking_battle_oldgods"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+}
+	
+##Rjurik rulers have the choice of following or not##
+character_event = {
+    id = unification.12
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.12"
+    picture = "GFX_evt_viking_battle_oldgods"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = unification.12.a # I will swear fealty - there is strength in numbers.
+		trigger = {
+			OR = {
+				ai = no
+				opinion = { who = FROM value = 1 }
+			}
+		}
+		ROOT = { 
+			set_defacto_liege = FROM 
+		}
+	}
+	
+	option = {
+		name = unification.6.b # I will never bend the knee to this fool!
+		trigger = {
+			OR = {
+				ai = no
+				NOT = { opinion = { who = FROM value = 1 } }
+			}
+		}
+	}
+}
+
+##Now for the Brecht unification events##
+  
+##The world gets warned that the brecht are close to uniting out of fear##
+##the event is sent from  a non playable barony ruler to all non AI rulers##
+
+character_event = {
+    id = unification.14
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.14"
+    picture = "GFX_evt_council"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+	
+}
+	
+
+character_event = {
+    id = unification.16
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.16"
+    picture = "GFX_evt_council"	
+	
+	only_rulers = yes
+	min_age = 18
+	
+	trigger = {
+		has_global_flag = brecht_unify_allowed
+		NOT = { has_global_flag = brecht_unified }
+		prestige = 3000
+		culture = Brecht
+		religion_group = gods_of_good
+		independent = yes
+		is_landed = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	immediate = {
+		set_global_flag = brecht_unified 
+	}
+	
+	option = {
+		name = YES_I_WILL_LEAD_THE_BRECHT_LEAGUE # Yes, I will take the throne.
+		primary_title = {
+			e_brechtuer = {
+				grant_title = ROOT
+				if = {
+					limit = { PREV = { is_crown_law_title = yes } }
+					copy_title_laws = PREV
+				}
+			}
+		}
+		any_playable_ruler = {
+			limit = { ai = no }
+			character_event = { id = unification.17 days = 7 }
+		}
+		any_playable_ruler = {
+			limit = { 
+				AND = {
+					independent = yes
+					culture = Brecht
+					religion_group = gods_of_good
+				}
+			}
+			character_event = { id = unification.18 days = 21 }
+		}
+	}
+	
+	option = {
+		name = NO_I_DONT_WANT_THE_THRONE
+		trigger = { ai = no }
+	}
+}
+
+##players are informed brechtur is uniting##
+character_event = {
+    id = unification.17
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.17"
+    picture = "GFX_evt_trade_post_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+}
+	
+
+##brecht rulers have the choice of following or not##
+character_event = {
+    id = unification.18
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.18"
+    picture = "GFX_evt_trade_post_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = THE_BRECHT_LEAGUE_WILL_HELP_US_ALL # The Brecht league will help us all.
+		trigger = {
+			OR = {
+				ai = no
+				opinion = { who = FROM value = 1 }
+			}
+		}
+		ROOT = { 
+			set_defacto_liege = FROM 
+		}
+	}
+	
+	option = {
+		name = unification.6.b # I will never bend the knee to this fool!
+		trigger = {
+			OR = {
+				ai = no
+				NOT = { opinion = { who = FROM value = 1 } }
+			}
+		}
+	}
+	
+}
+
+	
+##Now for the Khinasi unification events##
+##The world gets warned that the brecht are close to uniting out of fear##
+##the event is sent from  a non playable barony ruler to all non AI rulers##
+character_event = {
+    id = unification.20
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.20"
+    picture = "GFX_evt_council"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+}
+
+
+character_event = {
+    id = unification.22
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.22"
+    picture = "GFX_evt_council"	
+	
+	only_rulers = yes
+	min_age = 18
+	
+	trigger = {
+		has_global_flag = khinasi_unify_allowed
+		NOT = { has_global_flag = khinasi_unified }
+		prestige = 3000
+		culture = Khinasi
+		religion_group = gods_of_good
+		independent = yes
+		is_landed = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	immediate = {
+		set_global_flag = khinasi_unified 
+	}
+	
+	option = {
+		name = YES_I_WILL_LEAD_THE_KHINASI # Yes, I will take the throne.
+		primary_title = {
+			e_khinasi = {
+				grant_title = ROOT
+				if = {
+					limit = { PREV = { is_crown_law_title = yes } }
+					copy_title_laws = PREV
+				}
+			}
+		}
+		any_playable_ruler = {
+			limit = { ai = no }
+			character_event = { id = unification.23 days = 7 }
+		}
+		any_playable_ruler = {
+			limit = { 
+				AND = {
+					independent = yes
+					culture = Khinasi
+					religion_group = gods_of_good
+				}
+			}
+			character_event = { id = unification.24 days = 21 }
+		}
+	}
+	
+	option = {
+		name = NO_I_DONT_WANT_THE_THRONE
+		trigger = { ai = no }
+	}
+}
+
+##players are informed Khinasi is uniting##
+character_event = {
+    id = unification.23
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.23"
+    picture = "GFX_evt_trade_post_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+	}
+}
+	
+##Khinasi rulers have the choice of following or not##
+character_event = {
+    id = unification.24
+    title = UNIFICATION
+    desc = "EVTDESCUNIFICATION.24"
+    picture = "GFX_evt_trade_post_republic"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = UNIFICATION_WILL_HELP_US_ALL # Unification will help us all.
+		trigger = {
+			OR = {
+				ai = no
+				opinion = { who = FROM value = 1 }
+			}
+		}
+		ROOT = { 
+			set_defacto_liege = FROM 
+		}
+	}
+	
+	option = {
+		name = unification.6.b # I will never bend the knee to this fool!
+		trigger = {
+			OR = {
+				ai = no
+				NOT = { opinion = { who = FROM value = 1 } }
+			}
+		}
+	}
+}

@@ -11,6 +11,13 @@ character_event = {
 	only_men = yes
 	trigger = {
 		trait = Young_God
+		OR = {
+			trait = Divine_Assassin
+			trait = Divine_Diplomat
+			trait = Divine_Steward
+			trait = Divine_Warrior
+			trait = Divine_Theologian
+		}
 	}
 
 	mean_time_to_happen = {
@@ -31,6 +38,13 @@ character_event = {
 	only_men = yes
 	trigger = {
 		trait = Young_Fallen_God
+		OR = {
+			trait = Divine_Assassin
+			trait = Divine_Diplomat
+			trait = Divine_Steward
+			trait = Divine_Warrior
+			trait = Divine_Theologian
+		}
 	}
 
 	mean_time_to_happen = {
@@ -71,6 +85,13 @@ character_event = {
 	only_women = yes
 	trigger = {
 		trait = Young_Goddess
+		OR = {
+			trait = Divine_Assassin
+			trait = Divine_Diplomat
+			trait = Divine_Steward
+			trait = Divine_Warrior
+			trait = Divine_Theologian
+		}
 	}
 
 	mean_time_to_happen = {
@@ -91,6 +112,13 @@ character_event = {
 	only_women = yes
 	trigger = {
 		trait = Young_Fallen_Goddess
+		OR = {
+			trait = Divine_Assassin
+			trait = Divine_Diplomat
+			trait = Divine_Steward
+			trait = Divine_Warrior
+			trait = Divine_Theologian
+		}
 	}
 	mean_time_to_happen = {
 		days = 30

@@ -1,7 +1,7 @@
 #######################################################
 # Mythic Legends
 #
-# Training Mage Events (inspired by Elder Kings)
+# Magic Effects (inspired by Elder Kings)
 #######################################################
 
 ml_setup_magic = {

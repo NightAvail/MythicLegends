@@ -1,0 +1,128 @@
+#######################################################
+# Mythic Legends
+#
+# XP Effects
+#######################################################
+
+ml_setup_xp = {
+    if = {
+        limit = { NOT = { has_character_flag = mlflag_magic_xp } }
+
+        set_variable = { which = current_xp value = 0 }
+        set_character_flag = mlflag_magic_xp
+    }
+}
+
+ml_check_mage_xp = {
+    if = {
+        limit = {
+            AND = {
+                check_variable = { which = current_xp value = 40 }
+                NOT = { trait = ml_mage_level_legendary }
+            }
+        }
+
+        if = {
+            limit = { trait = ml_mage_level_neophyte }
+            remove_trait = ml_mage_level_neophyte
+            add_trait = ml_mage_level_apprentice
+        }
+
+        if = {
+            limit = { trait = ml_mage_level_apprentice }
+            remove_trait = ml_mage_level_apprentice
+            add_trait = ml_mage_level_trained
+        }
+
+        if = {
+            limit = { trait = ml_mage_level_trained }
+            remove_trait = ml_mage_level_trained
+            add_trait = ml_mage_level_master
+        }
+
+        set_variable = { which = current_xp value = 0 }
+        character_event = {
+            id = mlevent_xp.0
+        }
+    }
+    else_if = {
+        limit = {
+            AND = {
+                check_variable = { which = current_xp value = 100 }
+                trait = ml_mage_level_master
+            }
+        }
+
+        remove_trait = ml_mage_level_master
+        add_trait = ml_mage_level_legendary
+
+        set_variable = { which = current_xp value = 0 }
+        character_event = {
+            id = mlevent_xp.0
+        }
+    }
+}
+
+ml_check_warrior_xp = {
+    if = {
+        limit = {
+            AND = {
+                check_variable = { which = current_xp value = 40 }
+                NOT = { trait = ml_warrior_level_legendary }
+            }
+        }
+
+        if = {
+            limit = { trait = ml_warrior_level_novice }
+            remove_trait = ml_warrior_level_novice
+            add_trait = ml_warrior_level_apprentice
+        }
+
+        if = {
+            limit = { trait = ml_warrior_level_apprentice }
+            remove_trait = ml_warrior_level_apprentice
+            add_trait = ml_warrior_level_trained
+        }
+
+        if = {
+            limit = { trait = ml_warrior_level_trained }
+            remove_trait = ml_warrior_level_trained
+            add_trait = ml_warrior_level_master
+        }
+
+        set_variable = { which = current_xp value = 0 }
+        character_event = {
+            id = mlevent_xp.1
+        }
+    }
+    else_if = {
+        limit = {
+            AND = {
+                check_variable = { which = current_xp value = 100 }
+                trait = ml_warrior_level_master
+            }
+        }
+
+        remove_trait = ml_warrior_level_master
+        add_trait = ml_warrior_level_legendary
+
+        set_variable = { which = current_xp value = 0 }
+        character_event = {
+            id = mlevent_xp.1
+        }
+    }
+}
+
+# Increase our xp.
+ml_xp_add_1 = {
+    set_variable = { which = current_xp value = 1 }
+}
+ml_xp_add_2 = {
+    set_variable = { which = current_xp value = 2 }
+}
+ml_xp_add_3 = {
+    set_variable = { which = current_xp value = 3 }
+}
+ml_xp_add_4 = {
+    set_variable = { which = current_xp value = 4 }
+}

@@ -43,6 +43,7 @@ character_event = {
     }
 
     immediate = {
+        ml_setup_xp = yes
         add_trait = ml_trait_adventure
     }
 }
@@ -58,6 +59,7 @@ character_event = {
 
     option = {
         name = "mlevent_adventure.letsbegin"
+        ml_setup_xp = yes
         add_trait = ml_trait_adventure
     }
 

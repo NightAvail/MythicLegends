@@ -1,0 +1,35 @@
+#######################################################
+# Mythic Legends
+#
+# Training Mage Events
+#######################################################
+
+namespace = mlevent_xp
+
+# Level up the mage
+character_event = {
+    id = "mlevent_xp.0"
+    desc = "mlevent_xp.0desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    option = {
+        name = "mlevent_xp.iascend_mage"
+    }
+}
+
+# Level up the warrior
+character_event = {
+    id = "mlevent_xp.1"
+    desc = "mlevent_xp.1desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    option = {
+        name = "mlevent_xp.iascend_warrior"
+    }
+}

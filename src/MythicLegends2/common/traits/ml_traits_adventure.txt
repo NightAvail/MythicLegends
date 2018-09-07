@@ -1,0 +1,20 @@
+#######################################################
+# Mythic Legends
+#
+# Traits
+#######################################################
+
+# Adventuring traits.
+
+# Base away trait given when adventuring/training.
+ml_trait_adventure = {
+    pilgrimage = yes
+    random = no
+    customizer = no
+}
+
+ml_trait_training = {
+    pilgrimage = yes
+    random = no
+    customizer = no
+}

@@ -1,0 +1,115 @@
+#######################################################
+# Mythic Legends
+#
+# Training Mage Events
+#######################################################
+
+namespace = mlevent_adventure
+
+#######################################################
+# Start Adventure
+#######################################################
+
+# AI begins an adventure.
+character_event = {
+    id = "mlevent_adventure.0"
+    desc = "mlevent_adventure.0desc"
+
+    hide_window = yes
+
+    ai = yes
+
+    trigger = {
+        AND = {
+            age >= 20
+            war = no
+            prisoner = no
+            trait = ambitious
+            OR = {
+                is_mage_class = yes
+                is_warrior_class = yes
+            }
+            NOT = {
+                OR = {
+                    trait = craven
+                    trait = content
+                }
+            }
+        }
+    }
+
+    mean_time_to_happen = {
+        years = 5
+    }
+
+    immediate = {
+        add_trait = ml_trait_adventure
+    }
+}
+
+# Player begins an adventure.
+character_event = {
+    id = "mlevent_adventure.1"
+    desc = "mlevent_adventure.1desc"
+
+    picture = GFX_evt_desert
+
+    is_triggered_only = yes
+
+    option = {
+        name = "mlevent_adventure.letsbegin"
+        add_trait = ml_trait_adventure
+    }
+
+    option = {
+        name = "mlevent_adventure.nothanks"
+    }
+}
+
+#######################################################
+# Encounter rouge wizard!
+#######################################################
+character_event = {
+    id = "mlevent_adventure.2"
+    desc = "mlevent_adventure.2desc"
+
+    picture = GFX_evt_feast
+
+    trigger = {
+        NOT = {
+            has_character_flag = mlflag_encounter
+        }
+        trait = ml_trait_adventure
+    }
+
+    mean_time_to_happen = {
+        years = 5
+    }
+
+    option = {
+        name = "mlevent_adventure.2a"
+        set_character_flag = mlflag_encounter
+
+        character_event = {
+            id = mlevent_adventure.3 days = 7
+        }
+    }
+
+    option = {
+        name = "mlevent_adventure.walkaway"
+    }
+}
+
+character_event = {
+    id = "mlevent_adventure.3"
+    desc = "mlevent_adventure.3desc"
+
+    picture = GFX_evt_bandits
+
+    is_triggered_only = yes
+
+    option = {
+        name = "mlevent_adventure.3a"
+    }
+}
+

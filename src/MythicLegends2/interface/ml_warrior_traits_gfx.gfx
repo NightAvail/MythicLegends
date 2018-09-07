@@ -1,0 +1,71 @@
+#######################################################
+# Mythic Legends
+#
+# Interface
+#######################################################
+
+spriteTypes = {
+    spriteType = {
+        name = "GFX_trait_ml_warrior_level_novice"
+        texturefile = "gfx/traits/warrior_level_novice.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_warrior_level_apprentice"
+        texturefile = "gfx/traits/warrior_level_apprentice.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_warrior_level_trained"
+        texturefile = "gfx/traits/warrior_level_trained.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_warrior_level_master"
+        texturefile = "gfx/traits/warrior_level_master.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_warrior_level_legendary"
+        texturefile = "gfx/traits/warrior_level_legendary.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_warrior_bloodline_great"
+        texturefile = "gfx/traits/warrior_bloodline_great.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_warrior_bloodline_major"
+        texturefile = "gfx/traits/warrior_bloodline_major.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_warrior_bloodline_minor"
+        texturefile = "gfx/traits/warrior_bloodline_minor.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

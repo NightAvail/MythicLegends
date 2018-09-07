@@ -1,0 +1,71 @@
+#######################################################
+# Mythic Legends
+#
+# Interface
+#######################################################
+
+spriteTypes = {
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_demi_god"
+        texturefile = "gfx/traits/demi_god.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_god"
+        texturefile = "gfx/traits/god.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_angel"
+        texturefile = "gfx/traits/angel.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_arcangel"
+        texturefile = "gfx/traits/arcangel.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_ancient_demon_possessed"
+        texturefile = "gfx/traits/ancient_demon_possessed.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_vampire"
+        texturefile = "gfx/traits/vampire.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_werewolf"
+        texturefile = "gfx/traits/werewolf.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_lich_king"
+        texturefile = "gfx/traits/lich_king.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ultra_level_hunter"
+        texturefile = "gfx/traits/monster_hunter.png"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

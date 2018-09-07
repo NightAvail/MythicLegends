@@ -1,0 +1,40 @@
+#######################################################
+# Mythic Legends
+#
+# Scripted Triggers
+#######################################################
+
+is_mage_bloodline = {
+    custom_tooltip = {
+        text = has_mage_bloodline
+        hidden_tooltip = {
+            OR = {
+                trait = ml_mage_bloodline_great
+                trait = ml_mage_bloodline_major
+                trait = ml_mage_bloodline_minor
+            }
+        }
+    }
+}
+
+is_warrior_bloodline = {
+    custom_tooltip = {
+        text = has_warrior_bloodline
+        hidden_tooltip = {
+            OR = {
+                trait = ml_warrior_bloodline_great
+                trait = ml_warrior_bloodline_major
+                trait = ml_warrior_bloodline_minor
+            }
+        }
+    }
+}
+
+is_smart = {
+}
+
+is_immortal = {
+}
+
+is_supernatural = {
+}

@@ -1,0 +1,48 @@
+#######################################################
+# Mythic Legends
+# Traits
+#######################################################
+
+# Warrior levels.
+ml_warrior_level_novice = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_warrior_level_apprentice = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_warrior_level_trained = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_warrior_level_master = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_warrior_level_legendary = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Warrior bloodlines.
+ml_warrior_bloodline_great = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_warrior_bloodline_major = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+ml_warrior_bloodline_minor = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}

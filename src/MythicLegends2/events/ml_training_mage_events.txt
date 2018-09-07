@@ -1,0 +1,247 @@
+#######################################################
+# Mythic Legends
+#
+# Training Mage Events
+#######################################################
+
+namespace = mlevent_training_mage
+
+# Start our mage training.
+character_event = {
+    id = "mlevent_training_mage.0"
+    desc = "mlevent_training_mage.0desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    immediate = {
+        ml_setup_magic = yes
+        set_character_flag = mlflag_mage_training
+    }
+
+    option = {
+        name = "mlevent_training_mage.letsbegin"
+    }
+}
+
+# End our mage training.
+character_event = {
+    id = "mlevent_training_mage.1"
+    desc = "mlevent_training_mage.1desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    immediate = {
+        ml_remove_magic = yes
+        clr_character_flag = mlflag_mage_training
+        clr_character_flag = mlflag_menu_training
+        remove_trait = ml_trait_training
+    }
+
+    option = {
+        name = "mlevent_training_mage.end"
+    }
+}
+
+#######################################################
+# Training events for the mage.
+#######################################################
+
+# You attempt to master spells.
+character_event = {
+    id = "mlevent_training_mage.2"
+    desc = "mlevent_training_mage.2desc"
+
+    trigger = {
+        has_character_flag = mlflag_mage_training
+    }
+
+    mean_time_to_happen = {
+        days = 30
+    }
+
+    option = {
+        name = "mlevent_training_mage.2.a"
+
+        random_list = {
+            # Training failed, and we hurt ourselves.
+            5 = {
+                custom_tooltip = {
+                    text = mlevent_training_tooltip_1
+                    hidden_tooltip = {
+                        character_event = {
+                            id = "mlevent_training_mage.3"
+                        }
+                    }
+                }
+            }
+
+            # Training failed, but we have increased our magic!
+            5 = {
+                custom_tooltip = {
+                    text = mlevent_training_tooltip_2
+                    hidden_tooltip = {
+                        character_event = {
+                            id = "mlevent_training_mage.4"
+                        }
+                    }
+                }
+            }
+
+            # Training failed, and we didn't learn anything, but we didn't hurt ourselves.
+            80 = {
+                custom_tooltip = {
+                    text = mlevent_training_tooltip_3
+                    hidden_tooltip = {
+                        character_event = {
+                            id = "mlevent_training_mage.5"
+                        }
+                    }
+                }
+            }
+
+            # Increase skill of the mage
+            10 = {
+                custom_tooltip = {
+                    text = mlevent_training_tooltip_4
+                    hidden_tooltip = {
+                        character_event = {
+                            id = "mlevent_training_mage.6"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Training failed, and we hurt ourselves.
+character_event = {
+    id = "mlevent_training_mage.3"
+    desc = "mlevent_training_mage.3desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    option = {
+        name = "mlevent_training_mage.failed"
+        random_list = {
+            # We maimed ourselves...
+            5 = {
+                add_trait = maimed
+            }
+
+            # We've recieved a nasty wound...
+            5 = {
+                if = {
+                    limit = {
+                        NOT = { trait = maimed }
+                    }
+                    add_trait = wounded
+                }
+            }
+
+            # We've become ugly...
+            5 = {
+                add_trait = ugly
+            }
+
+            # We've become disfigured...
+            5 = {
+                add_trait = disfigured
+            }
+
+            # We've become mangled...
+            5 = {
+                add_trait = mangled
+            }
+
+            # We've lost an eye...
+            5 = {
+                add_trait = one_eyed
+            }
+
+            # We've lost an arm...
+            5 = {
+                add_trait = one_handed
+            }
+
+            # We've become one legged...
+            5 = {
+                add_trait = one_legged
+            }
+
+            # We've become blind...
+            5 = {
+                add_trait = blinded
+            }
+
+            # We've gotten ourselves sick...
+            55 = {
+                add_trait = ill
+            }
+        }
+    }
+}
+
+# Training failed, but we have increased our magic!
+character_event = {
+    id = "mlevent_training_mage.4"
+    desc = "mlevent_training_mage.4desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    immediate = {
+        ml_max_magic_add_1 = yes
+    }
+
+    option = {
+        name = "mlevent_training_mage.failed"
+
+    }
+}
+
+# Training failed, and we didn't learn anything, but we didn't hurt ourselves.
+character_event = {
+    id = "mlevent_training_mage.5"
+    desc = "mlevent_training_mage.5desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    option = {
+        name = "mlevent_training_mage.failed"
+    }
+}
+
+# Increase skill of the mage
+character_event = {
+    id = "mlevent_training_mage.6"
+    desc = "mlevent_training_mage.6desc"
+
+    picture = GFX_evt_apprentice
+
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = { NOT = { is_mage_bloodline = yes } }
+            add_trait = ml_mage_bloodline_minor
+        }
+        add_trait = ml_mage_level_neophyte
+        remove_trait = ml_trait_training
+        clr_character_flag = mlflag_mage_training
+        clr_character_flag = mlflag_menu_training
+    }
+
+    option = {
+        name = "mlevent_training_mage.success"
+    }
+}

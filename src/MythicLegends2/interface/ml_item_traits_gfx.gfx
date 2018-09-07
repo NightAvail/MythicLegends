@@ -1,0 +1,71 @@
+#######################################################
+# Mythic Legends
+#
+# Interface
+#######################################################
+
+spriteTypes = {
+    spriteType = {
+        name = "GFX_trait_ml_item_healing_potion_of_sickness"
+        texturefile = "gfx/traits/potion_of_sickness.tga"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_item_healing_potion_of_mending"
+        texturefile = "gfx/traits/potion_of_mending.tga"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ring_of_power"
+        texturefile = "gfx/traits/ring_of_power.tga"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ring_of_wisdom"
+        texturefile = "gfx/traits/ring_of_wisdom.tga"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ring_of_charming"
+        texturefile = "gfx/traits/ring_of_charming.tga"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ring_of_invisibility"
+        texturefile = "gfx/traits/ring_of_invisibility.tga"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_ring_of_immortality"
+        texturefile = "gfx/traits/ring_of_immortality.tga"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_sword_of_the_divine"
+        texturefile = "gfx/traits/sword_of_the_divine.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+    spriteType = {
+        name = "GFX_trait_ml_sword_of_the_ancients"
+        texturefile = "gfx/traits/sword_of_the_ancients.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

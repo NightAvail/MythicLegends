@@ -1,0 +1,47 @@
+#######################################################
+# Mythic Legends
+#
+# Scripted Triggers
+#######################################################
+
+is_mage_class = {
+    custom_tooltip = {
+        text = has_mage_specialization
+        hidden_tooltip = {
+            OR = {
+                trait = ml_mage_level_neophyte
+                trait = ml_mage_level_apprentice
+                trait = ml_mage_level_trained
+                trait = ml_mage_level_master
+                trait = ml_mage_level_legendary
+            }
+        }
+    }
+}
+
+is_warrior_class = {
+    custom_tooltip = {
+        text = has_warrior_specialization
+        hidden_tooltip = {
+            OR = {
+                trait = ml_warrior_level_novice
+                trait = ml_warrior_level_apprentice
+                trait = ml_warrior_level_trained
+                trait = ml_warrior_level_master
+                trait = ml_warrior_level_legendary
+            }
+        }
+    }
+}
+
+is_training_class = {
+    custom_tooltip = {
+        text = is_current_in_training
+        hidden_tooltip = {
+            OR = {
+                has_character_flag = mlflag_mage_training
+                has_character_flag = mlflag_warrior_training
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+#######################################################
+# Mythic Legends
+#
+# Training Mage Events (inspired by Elder Kings)
+#######################################################
+
+ml_setup_magic = {
+    if = {
+        limit = { NOT = { has_character_flag = mlflag_magic_setup } }
+
+        # Initial magic value is determined by our learning attribute.
+        set_variable = { which = magic_max_amount value = 0 }
+        export_to_variable = { which = magic_max_amount value = learning }
+        divide_variable = { which = magic_max_amount value = 2 }
+        set_variable = { which = magic_current_amount value = 0 }
+
+        set_character_flag = mlflag_magic_setup
+
+        add_trait = ml_mage_magic
+    }
+}
+
+ml_remove_magic = {
+    set_variable = { which = magic_max_amount value = 0 }
+    set_variable = { which = magic_current_amount value = 0 }
+    clr_character_flag = mlflag_magic_setup
+    remove_trait = ml_mage_magic
+    remove_trait = ml_mage_bloodline_minor
+    remove_trait = ml_mage_bloodline_major
+    remove_trait = ml_mage_bloodline_great
+}
+
+# Update our magic store.
+ml_magic_update = {
+    # Ensure we haven't reached our max magic ability.
+    if = {
+        limit = { NOT = { check_variable = { which = magic_current_amount value = magic_max_amount } } }
+
+        trigger_switch = {
+            on_trigger = learning
+            30 = { change_variable = { which = magic_current_amount value = 4 } }
+            20 = { change_variable = { which = magic_current_amount value = 3 } }
+            10 = { change_variable = { which = magic_current_amount value = 2 } }
+            0 = { change_variable = { which = magic_current_amount value = 1 } }
+        }
+    }
+    else_if = {
+        limit = { check_variable = { which = magic_current_amount value = magic_max_amount } }
+        set_variable = { which = magic_current_amount value = magic_max_amount }
+    }
+}
+
+# Increase our max magic.
+ml_max_magic_add_1 = {
+    set_variable = { which = magic_current_amount value = 1 }
+}
+ml_max_magic_add_2 = {
+    set_variable = { which = magic_current_amount value = 2 }
+}
+ml_max_magic_add_3 = {
+    set_variable = { which = magic_current_amount value = 3 }
+}
+ml_max_magic_add_4 = {
+    set_variable = { which = magic_current_amount value = 4 }
+}
+
+# Subtract from our current magic based on the spell cost.
+ml_magic_cost_1 = {
+    subtract_variable = { which = magic_current_amount value = 1 }
+}
+ml_magic_cost_2 = {
+    subtract_variable = { which = magic_current_amount value = 2 }
+}
+ml_magic_cost_3 = {
+    subtract_variable = { which = magic_current_amount value = 3 }
+}
+ml_magic_cost_4 = {
+    subtract_variable = { which = magic_current_amount value = 4 }
+}
+ml_magic_cost_5 = {
+    subtract_variable = { which = magic_current_amount value = 5 }
+}
+ml_magic_cost_6 = {
+    subtract_variable = { which = magic_current_amount value = 6 }
+}
+ml_magic_cost_7 = {
+    subtract_variable = { which = magic_current_amount value = 7 }
+}
+ml_magic_cost_8 = {
+    subtract_variable = { which = magic_current_amount value = 8 }
+}
+ml_magic_cost_9 = {
+    subtract_variable = { which = magic_current_amount value = 9 }
+}
+ml_magic_cost_10 = {
+    subtract_variable = { which = magic_current_amount value = 10 }
+}

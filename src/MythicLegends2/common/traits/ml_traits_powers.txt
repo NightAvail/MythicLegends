@@ -1,0 +1,26 @@
+#######################################################
+# Mythic Legends
+#
+# Traits
+#######################################################
+
+# Minor mage buff spell.
+ml_mage_minor_buff = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Major mage buff spell.
+ml_mage_major_buff = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}
+
+# Powerful mage buff spell.
+ml_mage_powerful_buff = {
+    random = no
+    inherit_chance = 0
+    customizer = no
+}

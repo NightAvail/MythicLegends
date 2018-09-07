@@ -1,0 +1,110 @@
+#######################################################
+# Mythic Legends
+#
+# Menu Decisions
+#######################################################
+
+decisions = {
+    # Open Training Menu
+    ml_open_training_menu = {
+        potential = {
+            NOT = {
+                OR = {
+                    has_character_flag = mlflag_menu_spellbook
+                    has_character_flag = mlflag_menu_training
+                    has_character_flag = mlflag_menu_crafting
+                    is_mage_class = yes
+                    is_warrior_class = yes
+                    prisoner = yes
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            set_character_flag = mlflag_menu_training
+        }
+    }
+
+    # Open Spellbook Menu
+    ml_open_spellbook_menu = {
+        potential = {
+            AND = {
+                NOT = {
+                    OR = {
+                        has_character_flag = mlflag_menu_spellbook
+                        has_character_flag = mlflag_menu_training
+                        has_character_flag = mlflag_menu_crafting
+                    }
+                }
+                is_mage_class = yes
+                prisoner = no
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            set_character_flag = mlflag_menu_spellbook
+        }
+    }
+
+    # Open Crafting Menu
+    ml_open_craft_menu = {
+        potential = {
+            AND = {
+                NOT = {
+                    OR = {
+                        has_character_flag = mlflag_menu_spellbook
+                        has_character_flag = mlflag_menu_training
+                        has_character_flag = mlflag_menu_crafting
+                    }
+                }
+                is_training_class = no
+                is_mage_class = yes
+                prisoner = no
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            set_character_flag = mlflag_menu_crafting
+        }
+    }
+
+    # Open Adventure Menu
+    ml_open_adventure_menu = {
+        potential = {
+            AND = {
+                NOT = {
+                    OR = {
+                        has_character_flag = mlflag_menu_adventure
+                        has_character_flag = mlflag_menu_spellbook
+                        has_character_flag = mlflag_menu_training
+                        has_character_flag = mlflag_menu_crafting
+                    }
+                }
+                is_training_class = no
+                prisoner = no
+            }
+        }
+        allow = {
+            OR = {
+                is_mage_class = yes
+                is_warrior_class = yes
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+
+        effect = {
+            ROOT = { character_event = { id = mlevent_adventure.0 } }
+        }
+    }
+}

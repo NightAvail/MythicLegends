@@ -1,0 +1,79 @@
+#######################################################
+# Mythic Legends
+#
+# Interface
+#######################################################
+
+spriteTypes = {
+    spriteType = {
+        name = "GFX_trait_ml_mage_magic"
+        texturefile = "gfx/traits/mage_magic.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_level_neophyte"
+        texturefile = "gfx/traits/mage_level_neophyte.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_level_apprentice"
+        texturefile = "gfx/traits/mage_level_apprentice.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_level_trained"
+        texturefile = "gfx/traits/mage_level_trained.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_level_master"
+        texturefile = "gfx/traits/mage_level_master.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_level_legendary"
+        texturefile = "gfx/traits/mage_level_legendary.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_bloodline_great"
+        texturefile = "gfx/traits/mage_bloodline_great.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_bloodline_major"
+        texturefile = "gfx/traits/mage_bloodline_major.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+
+    spriteType = {
+        name = "GFX_trait_ml_mage_bloodline_minor"
+        texturefile = "gfx/traits/mage_bloodline_minor.dds"
+        noOfFrames = 1
+        norefcount = yes
+        effectFile = "gfx/FX/buttonstate.lua"
+    }
+}

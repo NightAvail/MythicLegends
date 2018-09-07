@@ -1,0 +1,19 @@
+mlevent_training_mage.letsbegin;Let us begin our magic training!;;;;;;;;;;;;;x
+mlevent_training_mage.end;I will end my training for now;;;;;;;;;;;;;x
+mlevent_training_mage.failed;I have failed in my magic training;;;;;;;;;;;;;x
+mlevent_training_mage.success;The masters of magic favors me this day! I have become a mage!;;;;;;;;;;;;;x
+mlevent_training_mage.0;I'm off to train as a mage!;;;;;;;;;;;;;x
+mlevent_training_mage.0desc;I am off to train as a mage! This will be hard work, and dangerous, but I know I can do it!;;;;;;;;;;;;;x
+mlevent_training_mage.1;I must stop for now.;;;;;;;;;;;;;x
+mlevent_training_mage.1desc;I must sadly end my training with failure. I'm sure I will try once more when the right time arises!;;;;;;;;;;;;;x
+mlevent_training_mage.2;After days of learning how to control my magic, I will attempt a new spell!;;;;;;;;;;;;;x
+mlevent_training_mage.2desc;I am now ready to put my knowledge of magic to the test. Lets hope this goes well!;;;;;;;;;;;;;x
+mlevent_training_mage.2.a;It is time to put my magic training to the test!;;;;;;;;;;;;;x
+mlevent_training_mage.3;Oh no! My magic training has failed!;;;;;;;;;;;;;x
+mlevent_training_mage.3desc;What have I done?! I've completed failed in my training!;;;;;;;;;;;;;x
+mlevent_training_mage.4;I've failed my magic training!;;;;;;;;;;;;;x
+mlevent_training_mage.4desc;I may have failed in my magic training, however, I was able to increase my magic ability in the process!;;;;;;;;;;;;;x
+mlevent_training_mage.5;I've failed my magic training!;;;;;;;;;;;;;x
+mlevent_training_mage.5desc;I may have failed, but thank goodness I have not harmed myself in the process!;;;;;;;;;;;;;x
+mlevent_training_mage.6;I was successful in magic training!;;;;;;;;;;;;;x
+mlevent_training_mage.6desc;I have succeded in my magic training after weeks of hard work!;;;;;;;;;;;;;x

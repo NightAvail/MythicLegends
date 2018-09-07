@@ -1,0 +1,84 @@
+#######################################################
+# Mythic Legends
+#
+# Training Decisions
+#######################################################
+
+decisions = {
+    # Train to become a mage.
+    ml_train_become_a_mage = {
+        potential = {
+            AND = {
+                has_character_flag = mlflag_menu_training
+                NOR = {
+                    has_character_flag = mlflag_mage_training
+                    has_character_flag = mlflag_warrior_training
+                    is_mage_class = yes
+                    is_warrior_class = yes
+                }
+            }
+        }
+
+        effect = {
+            ROOT = { character_event = { id = mlevent_training_mage.0 } }
+        }
+    }
+
+    # Stop our mage training.
+    ml_train_stop_mage_training = {
+        potential = {
+            AND = {
+                has_character_flag = mlflag_mage_training
+            }
+        }
+
+        effect = {
+            ROOT = { character_event = { id = mlevent_training_mage.1 } }
+        }
+    }
+
+    # Train to become a warrior.
+    ml_train_become_a_warrior = {
+        potential = {
+            AND = {
+                has_character_flag = mlflag_menu_training
+                NOR = {
+                    has_character_flag = mlflag_mage_training
+                    has_character_flag = mlflag_warrior_training
+                    is_mage_class = yes
+                    is_warrior_class = yes
+                }
+            }
+        }
+
+        effect = {
+            ROOT = { character_event = { id = mlevent_training_warrior.0 } }
+        }
+    }
+
+    # Stop our warrior training.
+    ml_train_stop_warrior_training = {
+        potential = {
+            AND = {
+                has_character_flag = mlflag_warrior_training
+            }
+        }
+
+        effect = {
+            ROOT = { character_event = { id = mlevent_training_warrior.1 } }
+        }
+    }
+
+    # Close out the menu option.
+    ml_close_training_menu = {
+        potential = {
+            AND = {
+                has_character_flag = mlflag_menu_training
+            }
+        }
+
+        effect = {
+            clr_character_flag = mlflag_menu_training
+        }
+    }
+}

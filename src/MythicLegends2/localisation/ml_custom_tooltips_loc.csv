@@ -1,0 +1,9 @@
+has_mage_specialization;Has the mage class specialization;;;;;;;;;;;;;x
+has_warrior_specialization;Has the warrior class specialization;;;;;;;;;;;;;x
+is_current_in_training;Currently in training;;;;;;;;;;;;;x
+has_mage_bloodline;Has the mage bloodline;;;;;;;;;;;;;x
+has_warrior_bloodline;Has the warrior bloodline;;;;;;;;;;;;;x
+mlevent_training_tooltip_1;failed horribly, with a dangerous side-effect!;;;;;;;;;;;;;x
+mlevent_training_tooltip_2;failed, but rewarded with increased magic!;;;;;;;;;;;;;x
+mlevent_training_tooltip_3;failed, but safe!;;;;;;;;;;;;;x
+mlevent_training_tooltip_4;success, you are a mage now!;;;;;;;;;;;;;x

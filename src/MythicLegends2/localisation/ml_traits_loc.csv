@@ -1,0 +1,6 @@
+ml_mage_magic;Magic Power: [Root.magic_current_amount.GetValue]/[Root.magic_max_amount.GetValue];;;;;;;;;;;;;x
+ml_mage_magic_desc;Magic is the power mages use to perform powerful buffs and healing feats. The most powerful mages come from strong magic bloodlines.;;;;;;;;;;;;;x
+ml_trait_adventure;Adventuring;;;;;;;;;;;;;x
+ml_trait_adventure_desc;This character is currently adventuring around the world.;;;;;;;;;;;;;x
+ml_trait_training;Training;;;;;;;;;;;;;x
+ml_trait_training_desc;This character is currently in training.;;;;;;;;;;;;;x
